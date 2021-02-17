@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-17T10:01:12.005Z</updated>
+  <updated>2021-02-17T13:16:33.503Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>c# 高级编程(10th) 前言</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c-10th/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c-10th/</id>
-    <published>2021-02-17T01:25:00.000Z</published>
-    <updated>2021-02-17T10:01:12.005Z</updated>
+    <title>c# 高级编程(10th)第三章 对象和类型</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-03/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-03/</id>
+    <published>2021-02-17T12:32:00.000Z</published>
+    <updated>2021-02-17T13:16:33.503Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;c-是专门用于-net-的语言&quot;&gt;&lt;a href=&quot;#c-是专门用于-net-的语言&quot; class=&quot;headerlink&quot; title=&quot;c# 是专门用于 .net 的语言&quot;&gt;&lt;/a&gt;c# 是专门用于 .net 的语言&lt;/h1&gt;&lt;p&gt;web</summary>
+    <summary type="html">&lt;h1 id=&quot;c-语言-第三章-对象和类型&quot;&gt;&lt;a href=&quot;#c-语言-第三章-对象和类型&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第三章 对象和类型&quot;&gt;&lt;/a&gt;c#语言 第三章 对象和类型&lt;/h1&gt;&lt;h2 id=&quot;3-2-类和结构的区别&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c# 高级编程(10th)第二章 核心C#</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/</id>
+    <published>2021-02-17T10:32:00.000Z</published>
+    <updated>2021-02-17T12:34:39.592Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;c-语言-2-核心c&quot;&gt;&lt;a href=&quot;#c-语言-2-核心c&quot; class=&quot;headerlink&quot; title=&quot;c#语言 2 核心c#&quot;&gt;&lt;/a&gt;c#语言 2 核心c#&lt;/h1&gt;&lt;h2 id=&quot;2-3变量&quot;&gt;&lt;a href=&quot;#2-3变量&quot;</summary>
         
       
     
@@ -92,6 +117,56 @@
     <category term="hexo" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/hexo/"/>
     
     <category term="github gage" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/github-gage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-01/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-01/</id>
+    <published>2021-02-17T01:25:00.000Z</published>
+    <updated>2021-02-17T12:18:35.468Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;c-语言-第一章-net-应用程序体系结构&quot;&gt;&lt;a href=&quot;#c-语言-第一章-net-应用程序体系结构&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第一章 .net 应用程序体系结构&quot;&gt;&lt;/a&gt;c#语言 第一章 .net</summary>
+        
+      
+    
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>c# 高级编程(10th) 前言</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th/</id>
+    <published>2021-02-17T01:25:00.000Z</published>
+    <updated>2021-02-17T10:16:08.171Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;c-是专门用于-net-的语言&quot;&gt;&lt;a href=&quot;#c-是专门用于-net-的语言&quot; class=&quot;headerlink&quot; title=&quot;c# 是专门用于 .net 的语言&quot;&gt;&lt;/a&gt;c# 是专门用于 .net 的语言&lt;/h1&gt;&lt;p&gt;web</summary>
+        
+      
+    
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
     
   </entry>
   

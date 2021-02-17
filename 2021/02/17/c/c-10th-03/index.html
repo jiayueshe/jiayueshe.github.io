@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello MyBlog, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
+    <meta name="keywords" content="c# 高级编程(10th)第三章 对象和类型, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta name="description" content="IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello MyBlog | IT 学习 资源站</title>
+    <title>c# 高级编程(10th)第三章 对象和类型 | IT 学习 资源站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello MyBlog</h1>
+                    <h1 class="description center-align post-title">c# 高级编程(10th)第三章 对象和类型</h1>
                 </div>
             </div>
         </div>
@@ -338,16 +338,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/blog/">
-                                <span class="chip bg-color">blog</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                            <a href="/tags/github-gage/">
-                                <span class="chip bg-color">github gage</span>
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c#</span>
                             </a>
                         
                     </div>
@@ -358,8 +350,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/blog/" class="post-category">
-                                blog
+                            <a href="/categories/c/" class="post-category">
+                                c#
                             </a>
                         
                     </div>
@@ -392,10 +384,88 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用github-page-和hexo搭建第一个网站"><a href="#使用github-page-和hexo搭建第一个网站" class="headerlink" title="使用github page 和hexo搭建第一个网站"></a>使用github page 和hexo搭建第一个网站</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22197688">https://www.zhihu.com/question/22197688</a></p>
-<h2 id="博客美化-博客主题之hexo-theme-matery的介绍"><a href="#博客美化-博客主题之hexo-theme-matery的介绍" class="headerlink" title="博客美化 博客主题之hexo-theme-matery的介绍"></a>博客美化 博客主题之hexo-theme-matery的介绍</h2><p><a target="_blank" rel="noopener" href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay</a></p>
-<h3 id="hexo扩展学习"><a href="#hexo扩展学习" class="headerlink" title="hexo扩展学习"></a>hexo扩展学习</h3><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a></p>
-<h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+                <h1 id="c-语言-第三章-对象和类型"><a href="#c-语言-第三章-对象和类型" class="headerlink" title="c#语言 第三章 对象和类型"></a>c#语言 第三章 对象和类型</h1><h2 id="3-2-类和结构的区别"><a href="#3-2-类和结构的区别" class="headerlink" title="3.2 类和结构的区别"></a>3.2 类和结构的区别</h2><p>​    类和结构实际上都是常见对象的模板</p>
+<p>​    类是引用类型</p>
+<p>​    结构是值类型</p>
+<p>​    较小的数据类型使用结构可以提高性能</p>
+<p>​    类和结构都用new来声明实例</p>
+<h2 id="3-3-类"><a href="#3-3-类" class="headerlink" title="3.3 类"></a>3.3 类</h2><p>类包含成员。成员可以是静态成员或实例成员，static静态成员属于类；实例成员属于对象</p>
+<p>成员：字段、常量、方法、属性、构造函数、索引器、运算符、事件、析构函数、类型</p>
+<h3 id="3-3-1字段"><a href="#3-3-1字段" class="headerlink" title="3.3.1字段"></a>3.3.1字段</h3><p>​       const 常量 公开 public</p>
+<p>​      最好把字段声明为private</p>
+<h3 id="2-3-2属性"><a href="#2-3-2属性" class="headerlink" title="2.3.2属性"></a>2.3.2属性</h3><p> 一个方法或一对方法，看起来是一个字段</p>
+<h4 id="自动实现的属性："><a href="#自动实现的属性：" class="headerlink" title="自动实现的属性："></a>自动实现的属性：</h4><p>​    set；get；访问器没有任何逻辑，属性会自动实现后备成员变量</p>
+<p>​    属性初始化器来初始化 public int Age {get;set;}=42;</p>
+<h4 id="属性的访问修饰符"><a href="#属性的访问修饰符" class="headerlink" title="属性的访问修饰符"></a>属性的访问修饰符</h4><p>​    public get private set</p>
+<h3 id="3-3-3方法"><a href="#3-3-3方法" class="headerlink" title="3.3.3方法"></a>3.3.3方法</h3><p>非数据成员</p>
+<p>​      正式的c#术语区分函数和方法，在c#术语中，函数成员不仅包含方法，也包含类或结构的一些非数据成员，如索引器、运算符、构造函数、析构函数等，还有属性，这些事非数据成员</p>
+<p>数据成员</p>
+<p>​    字段、常量、事件才是数据成员</p>
+<h4 id="方法的声明"><a href="#方法的声明" class="headerlink" title="方法的声明"></a>方法的声明</h4><p>​    表达式体方法：  =&gt; 区分操作符左边的声明和右边的实现代码</p>
+<p>​    调用方法</p>
+<h4 id="方法的重载："><a href="#方法的重载：" class="headerlink" title="方法的重载："></a>方法的重载：</h4><p>​    方法名相同，但是参数的数量和/或数据类型不同</p>
+<h4 id="命名的参数："><a href="#命名的参数：" class="headerlink" title="命名的参数："></a>命名的参数：</h4><p>​    任何方法都可以使用命名的参数调用，编译器会去掉变量名</p>
+<p>这种方式更改变量的顺序，编译器会重新安排，获得正确的顺序</p>
+<h4 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h4><p>​    一个或多个，可选参数置后</p>
+<h4 id="个数可变的参数-params关键字"><a href="#个数可变的参数-params关键字" class="headerlink" title="个数可变的参数 params关键字"></a>个数可变的参数 params关键字</h4><p>​    如果params关键字与方法签名定义的多个参数一起使用，params只能使用一次，且必须是最后一个参数</p>
+<h3 id="3-3-4构造函数"><a href="#3-3-4构造函数" class="headerlink" title="3.3.4构造函数"></a>3.3.4构造函数</h3><p>​    如果没有构造函数，编译器会默认生成一个默认的构造函数（引用类型为空引用，数值类型为0，bool为false）</p>
+<p>构造函数的重载遵循与其他方法相同的规则 ；</p>
+<p>​    构造函数的重载遵循与其他方法相同的</p>
+<p>​    如果提供了带参数的构造函数，编译器就不会自动提供默认的构造函数</p>
+<p>​    可以把构造函数定义为private或者protected，这样不相关的类就不能访问他们</p>
+<p><strong>没有公有或受保护的构造函数的用法</strong></p>
+<p>​    类仅仅是静态成员或属性的容器，永远不会实例化，static修饰类，只能包含静态成员，不能实例化</p>
+<p>​    希望仅通过条用个某个静态成员函数来实例化（对象实例化的类工厂方法）（单例模式的实现）</p>
+<h4 id="从构造函数中调用其他构造函数"><a href="#从构造函数中调用其他构造函数" class="headerlink" title="从构造函数中调用其他构造函数"></a>从构造函数中调用其他构造函数</h4><p>​    this关键字仅条用参数最匹配的那个构造函数</p>
+<p>​    c#构造函数初始化器可以包含对同一个类的另一个构造函数的调用，也可以对直接基类的构造函数的调用应使用base代替this关键字，初始化器不能有多个调用</p>
+<h4 id="静态构造函数"><a href="#静态构造函数" class="headerlink" title="静态构造函数"></a>静态构造函数</h4><p>​    无参数的静态构造函数</p>
+<p>​        不能带任何参数，一个类只有一个静态构造函数</p>
+<h4 id="只读成员-readonly"><a href="#只读成员-readonly" class="headerlink" title="只读成员 readonly"></a>只读成员 readonly</h4><h4 id="只读字段-readonly"><a href="#只读字段-readonly" class="headerlink" title="只读字段 readonly"></a>只读字段 readonly</h4><h4 id="只读readonly与const的区别"><a href="#只读readonly与const的区别" class="headerlink" title="只读readonly与const的区别"></a>只读readonly与const的区别</h4><p>​        const 编译器通过值取代了使用它的变量，编译器知道它的值</p>
+<p>​        readonly在运行期间通过构造函数制定，与常量字段相反，只读字段可以是实例成员，使用只读字段作为类成员时，需要把static修饰符分配给该字段</p>
+<p>只读字段，不能在构造函数外部赋值</p>
+<p>只读属性{get}</p>
+<p>​    自动实现的只读属性</p>
+<p>​    只读属性也可以在构造函数中初始化</p>
+<p>表达式体属性</p>
+<blockquote>
+<p>public string FullName =&gt; $”{FirstName} {LastName}”;</p>
+</blockquote>
+<p>不可变的类型</p>
+<p>​        例如String，，任何改变总会返回一个新的字符串</p>
+<h2 id="3-4匿名类型"><a href="#3-4匿名类型" class="headerlink" title="3.4匿名类型"></a>3.4匿名类型</h2><h2 id="3-5结构-struct"><a href="#3-5结构-struct" class="headerlink" title="3.5结构 struct"></a>3.5结构 struct</h2><h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>​    数据小 提升性能</p>
+<p>​    值类型</p>
+<p>​    不支持继承</p>
+<p>​    分配内存非常快，销毁也快</p>
+<p>​    互相赋予时，会复制一份，有性能损失</p>
+<p>​    当把结构作为参数传递时，应把它作为ref参数传递---避免性能损失，只传递地址；被调用的方法可以改变结构的值</p>
+<h3 id="结构和继承"><a href="#结构和继承" class="headerlink" title="结构和继承"></a>结构和继承</h3><p>​    不能从一个结构中继承</p>
+<p>​    例外： 结构最终派生于类System.Object ,因此可以访问System.Object 的方法</p>
+<p>​    结构 &lt;= System.ValueType&lt;= System.Object</p>
+<h3 id="结构的构造函数"><a href="#结构的构造函数" class="headerlink" title="结构的构造函数"></a>结构的构造函数</h3><h2 id="3-6按值和按引用传递参数"><a href="#3-6按值和按引用传递参数" class="headerlink" title="3.6按值和按引用传递参数"></a>3.6按值和按引用传递参数</h2><h3 id="ref参数-gt-可以通过引用传递结构"><a href="#ref参数-gt-可以通过引用传递结构" class="headerlink" title="ref参数 -&gt;可以通过引用传递结构"></a>ref参数 -&gt;可以通过引用传递结构</h3><p>out参数 -&gt;</p>
+<p>​    如果一个方法返回多个值，可能类型还不同</p>
+<h2 id="3-7可空类型-int-x2-null"><a href="#3-7可空类型-int-x2-null" class="headerlink" title="3.7可空类型  int? x2=null;"></a>3.7可空类型  int? x2=null;</h2><h2 id="3-8枚举-enum"><a href="#3-8枚举-enum" class="headerlink" title="3.8枚举 enum"></a>3.8枚举 enum</h2><p>​    默认enum的类型是int</p>
+<p>​    使用强制类型转换可以把数字改为枚举值，把枚举改为数字</p>
+<p>​    Flags</p>
+<h2 id="3-9-部分类-partial"><a href="#3-9-部分类-partial" class="headerlink" title="3.9 部分类 partial"></a>3.9 部分类 partial</h2><p>​    可以把类分开放在两个文件中</p>
+<p>声明类和结构，返回信息都是类成员</p>
+<p>元组类型</p>
+<h2 id="3-10-扩展方法"><a href="#3-10-扩展方法" class="headerlink" title="3.10 扩展方法"></a>3.10 扩展方法</h2><p>扩展</p>
+<p>​    继承给对象添加功能的好方法</p>
+<p>​    扩展方法是给对象添加功能的另一个选项，在不能使用继承时，可以使用这个选项（例如类是密封的）</p>
+<p>扩展方法是静态方法，是类的一部分，但实际上没有放在类的源代码中</p>
+<p>使用this关键字和第一个参数来扩展字符串，这个关键字定义了要扩展的类型</p>
+<blockquote>
+<p>public static class StringExtension{ public static int<br>GetWordCount(this string s)=&gt; s.Split().Length; ​} ​</p>
+</blockquote>
+<p>好处：</p>
+<p>​    可以使用实例方法的语法，而不是从代码中直接调用静态方法</p>
+<p>​    该方法的实现可以用另一个类取代，而不需要更改代码</p>
+<p>编译器如何找到某个类型的扩展方法？</p>
+<p>​    this关键字必须匹配类型的扩展方法</p>
+<p>​    而且需要打开定义扩展方法的静态类所在名称空间</p>
+<p>​    如果类型还定义了同名的实例方法，扩展方法就永远不会使用</p>
+<p>​    类中已有的实例方法都优先</p>
+<p>Object类，其他类型都从该类派生而来</p>
 
                 
             </div>
@@ -422,7 +492,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-03/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-03/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -460,16 +530,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/blog/">
-                                    <span class="chip bg-color">blog</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/tags/github-gage/">
-                                    <span class="chip bg-color">github gage</span>
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c#</span>
                                 </a>
                             
                         </div>
@@ -641,46 +703,47 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2021/02/17/good-blogs/">
+                <a href="/2021/02/17/c/c-10th-03/">
                     <div class="card-image">
                         
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="c# 高级编程(10th)第三章 对象和类型">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="博客资源站收集">
-                        
-                        <span class="card-title">博客资源站收集</span>
+                        <span class="card-title">c# 高级编程(10th)第三章 对象和类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            个人平时收藏的博客资源集
+                            c# 高级编程(10th)  读书笔记系列
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
+                            <a href="/categories/c/" class="post-category">
+                                    c#
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c#</span>
                     </a>
                     
                 </div>
@@ -694,12 +757,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/17/c/c-10th-01/">
+                <a href="/2021/02/17/c/c-10th-02/">
                     <div class="card-image">
                         
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="c# 高级编程(10th)第一章 .net 应用程序体系结构">
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="c# 高级编程(10th)第二章 核心C#">
                         
-                        <span class="card-title">c# 高级编程(10th)第一章 .net 应用程序体系结构</span>
+                        <span class="card-title">c# 高级编程(10th)第二章 核心C#</span>
                     </div>
                 </a>
                 <div class="card-content article-content">

@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello MyBlog, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
+    <meta name="keywords" content="c# 高级编程(10th)第二章 核心C#, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta name="description" content="IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello MyBlog | IT 学习 资源站</title>
+    <title>c# 高级编程(10th)第二章 核心C# | IT 学习 资源站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -316,7 +316,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello MyBlog</h1>
+                    <h1 class="description center-align post-title">c# 高级编程(10th)第二章 核心C#</h1>
                 </div>
             </div>
         </div>
@@ -338,16 +338,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/blog/">
-                                <span class="chip bg-color">blog</span>
-                            </a>
-                        
-                            <a href="/tags/hexo/">
-                                <span class="chip bg-color">hexo</span>
-                            </a>
-                        
-                            <a href="/tags/github-gage/">
-                                <span class="chip bg-color">github gage</span>
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c#</span>
                             </a>
                         
                     </div>
@@ -358,8 +350,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/blog/" class="post-category">
-                                blog
+                            <a href="/categories/c/" class="post-category">
+                                c#
                             </a>
                         
                     </div>
@@ -392,10 +384,82 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="使用github-page-和hexo搭建第一个网站"><a href="#使用github-page-和hexo搭建第一个网站" class="headerlink" title="使用github page 和hexo搭建第一个网站"></a>使用github page 和hexo搭建第一个网站</h2><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22197688">https://www.zhihu.com/question/22197688</a></p>
-<h2 id="博客美化-博客主题之hexo-theme-matery的介绍"><a href="#博客美化-博客主题之hexo-theme-matery的介绍" class="headerlink" title="博客美化 博客主题之hexo-theme-matery的介绍"></a>博客美化 博客主题之hexo-theme-matery的介绍</h2><p><a target="_blank" rel="noopener" href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay</a></p>
-<h3 id="hexo扩展学习"><a href="#hexo扩展学习" class="headerlink" title="hexo扩展学习"></a>hexo扩展学习</h3><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a></p>
-<h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+                <h1 id="c-语言-2-核心c"><a href="#c-语言-2-核心c" class="headerlink" title="c#语言 2 核心c#"></a>c#语言 2 核心c#</h1><h2 id="2-3变量"><a href="#2-3变量" class="headerlink" title="2.3变量"></a>2.3变量</h2><p>c# 区分大小写</p>
+<h3 id="2-3-1初始化变量"><a href="#2-3-1初始化变量" class="headerlink" title="2.3.1初始化变量"></a>2.3.1初始化变量</h3><p>​    c#编译器需要用某个初始值对变量进行初始化，之后才能在操作中引用变量；c#中有两个方法可确保变量使用前进行了初始化</p>
+<p>​        变量是类或结构中的字段，如果没有显示初始化，则创建这些变量时，其默认值就是0</p>
+<p>​        方法的局部变量必须在代码中显示初始化，变量初始化之前就使用了其值，编译器就会标记错误</p>
+<h3 id="2-3-2类型推断"><a href="#2-3-2类型推断" class="headerlink" title="2.3.2类型推断"></a>2.3.2类型推断</h3><p>​    变量必须初始化，编译器推断类型的依据</p>
+<p>​    初始化器不能为空</p>
+<p>​    初始化器必须放在表达式中</p>
+<p>​    不能把初始化器设置为一个对象，除非在初始化器中创建了一个新对象</p>
+<h3 id="2-3-3变量的作用域"><a href="#2-3-3变量的作用域" class="headerlink" title="2.3.3变量的作用域"></a>2.3.3变量的作用域</h3><p>定义或规则</p>
+<p>​    只要类在某个作用域内，其字段也在该作用域内</p>
+<p>​    局部变量存在于表示声明该变量的块语句或方法结束的右花括号之前的作用域内</p>
+<p>​    在 for whild 或类似语句中声明的局部变量存在于该循环体内</p>
+<h4 id="局部变量的作用域冲突"><a href="#局部变量的作用域冲突" class="headerlink" title="局部变量的作用域冲突"></a>局部变量的作用域冲突</h4><h4 id="字段和局部变量的作用域冲突"><a href="#字段和局部变量的作用域冲突" class="headerlink" title="字段和局部变量的作用域冲突"></a>字段和局部变量的作用域冲突</h4><blockquote>
+<p>class program{ static int j=20; static void Main(){ int<br>j=30;WriteLine(j); WriteLine(program.j) } ​}</p>
+</blockquote>
+<h3 id="2-3-4常量"><a href="#2-3-4常量" class="headerlink" title="2.3.4常量"></a>2.3.4常量</h3><p>特点</p>
+<p>​    常量声明时必须初始化，指定其值后，就不能再改写了、</p>
+<p>​    常量的值必须在编译时用于计算，因此不能用从变量中提取的值来初始化常亮</p>
+<p>​    常量总是隐式静态的</p>
+<p>好处</p>
+<p>​    易于读取的名称</p>
+<p>​    是程序更易于修改</p>
+<p>​    更容易避免程序出现错误</p>
+<h2 id="2-4预定义数据类型"><a href="#2-4预定义数据类型" class="headerlink" title="2.4预定义数据类型"></a>2.4预定义数据类型</h2><h3 id="2-4-1-值类型和引用类型"><a href="#2-4-1-值类型和引用类型" class="headerlink" title="2.4.1 值类型和引用类型"></a>2.4.1 值类型和引用类型</h3><p>堆栈</p>
+<p>​    值类型存储在堆栈中stack</p>
+<p>​    引用各类型存储在托管堆中 managed heap</p>
+<p>bool 和long等都是值类型，值类型的赋予是通过值复制的</p>
+<p>大多数更复杂的c#数据类型，包括自己声明的类，都是引用类型</p>
+<p>​    CLR实现一种精细的算法，来跟踪哪些引用变量是可以访问的，哪些不能访问，CLR会定期删除不能访问的对象，把占用的内存返回给操作系统，垃圾回收器</p>
+<p>​    如果要把自己的类型定义为值类型，就应把它声明为一个结构</p>
+<h3 id="2-4-2-net-类型"><a href="#2-4-2-net-类型" class="headerlink" title="2.4.2 .net 类型"></a>2.4.2 .net 类型</h3><p>​    15个预定义类型，13个值类型，两个引用类型string 和 object</p>
+<h3 id="2-4-3预定义的值类型"><a href="#2-4-3预定义的值类型" class="headerlink" title="2.4.3预定义的值类型"></a>2.4.3预定义的值类型</h3><p>整型 sbyte 8 short 16 int32 long64</p>
+<p>浮点类型 float32位单精度浮点，double 64位双精度浮点 15/16</p>
+<p>decimal类型 128位高精度十进制数表示法<br>（decimal类型不是基本类型，计算时有性能损失）(高精度计算)</p>
+<blockquote>
+<p>decimal d =12.30M;</p>
+</blockquote>
+<p>bool类型</p>
+<p>字符类型 char 表示一个16位的Unicode字符</p>
+<p>​    转义字符\</p>
+<h3 id="2-4-4预定义的引用类型"><a href="#2-4-4预定义的引用类型" class="headerlink" title="2.4.4预定义的引用类型"></a>2.4.4预定义的引用类型</h3><h4 id="object-类型"><a href="#object-类型" class="headerlink" title="object 类型"></a>object 类型</h4><p>​     可以使用object引用来绑定任何特定子类型的对象;如值类型装箱，再移动到堆中，object引用也可以用于反射，此时必须有代码来处理类型未知的对象</p>
+<p>​    object类型实现了许多一般用途的基本方法，包括Equals(),GetHashCode(),GetType()和ToString()用户定义的类型需要使用一种面向对象技术---重写</p>
+<h4 id="string类型"><a href="#string类型" class="headerlink" title="string类型"></a>string类型</h4><p>​    字符串不可修改，修改会产生新的string对象</p>
+<p>​    @的使用，看做所有字符保持原来的含义</p>
+<p>​    字符串插值功能 $</p>
+<h2 id="2-5程序流控制"><a href="#2-5程序流控制" class="headerlink" title="2.5程序流控制"></a>2.5程序流控制</h2><p>if</p>
+<p>for</p>
+<p>while</p>
+<p>do while</p>
+<p>foreach 不能改变集合中各项的值</p>
+<p>跳转语句</p>
+<p>goto语句<br>不能跳转像for循环这样的代码块中，也不能跳出类的范围，不能退出try<br>catch后面的finally</p>
+<p>break语句</p>
+<p>switch 中退出某个语句</p>
+<p>也可用于for foreach whild do...while</p>
+<p>continue语句 只能退出循环的当前迭代</p>
+<p>return 语句 退出类的方法</p>
+<h2 id="2-6-枚举"><a href="#2-6-枚举" class="headerlink" title="2.6 枚举"></a>2.6 枚举</h2><h3 id="枚举是用户定义的整数类型"><a href="#枚举是用户定义的整数类型" class="headerlink" title="枚举是用户定义的整数类型"></a>枚举是用户定义的整数类型</h3><p>优势</p>
+<p>​    代码易于维护，有助于确保给变量制定合法的期望的值</p>
+<p>​    枚举使代码更清晰，允许描述性的蒙城表示整数值，而不是含义模糊的数</p>
+<p>​    更易于输入</p>
+<p>​    枚举真正强大之处，在于实例化为派生自积累system.enum的结构，不会造成性能损失</p>
+<h2 id="2-7名称空间"><a href="#2-7名称空间" class="headerlink" title="2.7名称空间"></a>2.7名称空间</h2><p>using语句</p>
+<h3 id="2-7-2名称空间的别名"><a href="#2-7-2名称空间的别名" class="headerlink" title="2.7.2名称空间的别名"></a>2.7.2名称空间的别名</h3><h2 id="2-8main方法"><a href="#2-8main方法" class="headerlink" title="2.8main方法"></a>2.8main方法</h2><h2 id="2-9使用注释"><a href="#2-9使用注释" class="headerlink" title="2.9使用注释"></a>2.9使用注释</h2><h2 id="2-10-c-预处理指令"><a href="#2-10-c-预处理指令" class="headerlink" title="2.10 c#预处理指令"></a>2.10 c#预处理指令</h2><p>#define 和#undef</p>
+<p>#if #elif #else #endif</p>
+<p>#warning 和#ERROR</p>
+<p>#region 和 #endregion</p>
+<p>#LINE</p>
+<p>#pragma</p>
+<h2 id="2-11c-编程准则"><a href="#2-11c-编程准则" class="headerlink" title="2.11c#编程准则"></a>2.11c#编程准则</h2><h3 id="标识符的规则"><a href="#标识符的规则" class="headerlink" title="标识符的规则"></a>标识符的规则</h3><p>​    尽管可以包含数字字符，但他们必须以字母或下划线开头</p>
+<p>​    不能把c#关键字用作标识符</p>
+<p>用法约定</p>
+<p>命名约定</p>
+<p>​    名称的大小写 Pascal camel</p>
+<p>​    名称的风格统一</p>
+<p>​    名称和关键字</p>
 
                 
             </div>
@@ -422,7 +486,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -460,16 +524,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/blog/">
-                                    <span class="chip bg-color">blog</span>
-                                </a>
-                            
-                                <a href="/tags/hexo/">
-                                    <span class="chip bg-color">hexo</span>
-                                </a>
-                            
-                                <a href="/tags/github-gage/">
-                                    <span class="chip bg-color">github gage</span>
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c#</span>
                                 </a>
                             
                         </div>
@@ -645,61 +701,12 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/17/good-blogs/">
+                <a href="/2021/02/17/c/c-10th-03/">
                     <div class="card-image">
                         
+                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="c# 高级编程(10th)第三章 对象和类型">
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="博客资源站收集">
-                        
-                        <span class="card-title">博客资源站收集</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            个人平时收藏的博客资源集
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/blog/" class="post-category">
-                                    blog
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/blog/">
-                        <span class="chip bg-color">blog</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/17/c/c-10th-01/">
-                    <div class="card-image">
-                        
-                        <img src="/source/images/xxx.jpg" class="responsive-img" alt="c# 高级编程(10th)第一章 .net 应用程序体系结构">
-                        
-                        <span class="card-title">c# 高级编程(10th)第一章 .net 应用程序体系结构</span>
+                        <span class="card-title">c# 高级编程(10th)第三章 对象和类型</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -709,9 +716,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -729,6 +736,55 @@
                     
                     <a href="/tags/c/">
                         <span class="chip bg-color">c#</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/17/good-blogs/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="博客资源站收集">
+                        
+                        <span class="card-title">博客资源站收集</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            个人平时收藏的博客资源集
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/blog/" class="post-category">
+                                    blog
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/blog/">
+                        <span class="chip bg-color">blog</span>
                     </a>
                     
                 </div>
