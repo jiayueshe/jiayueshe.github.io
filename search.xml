@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>c# 高级编程(10th)第四章 继承</title>
+      <link href="2021/02/17/c/c-10th-04/"/>
+      <url>2021/02/17/c/c-10th-04/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第四章-继承"><a href="#c-语言-第四章-继承" class="headerlink" title="c#语言 第四章 继承"></a>c#语言 第四章 继承</h1><h2 id="4-1继承"><a href="#4-1继承" class="headerlink" title="4.1继承"></a>4.1继承</h2><p>面向对象的三个重要概念：继承、封装、多态</p><h2 id="4-2继承的类型"><a href="#4-2继承的类型" class="headerlink" title="4.2继承的类型"></a>4.2继承的类型</h2><p>面向对象（Object-Oriented,OO）术语，c#的继承</p><p>单重继承：c#</p><p>多重继承：一个类可以派生自多个类，c#不支持</p><p>多层继承：B派生自A，C派生自B，c#支持</p><p>接口继承：c#允许接口多继承</p><h3 id="4-2-1-多重继承-c"><a href="#4-2-1-多重继承-c" class="headerlink" title="4.2.1 多重继承 c++"></a>4.2.1 多重继承 c++</h3><p>多重继承会给生成的代码增加复杂性，还会带来一些开销。c#决定不支持多重继承。</p><p>c#允许派生自多个接口，一个类型可以实现多个接口。System.Object 是一个公共的基类，每个c#类（除了Object类之外）都有一个基类，还可以有人以多个基接口</p><h3 id="4-2-2-结构和类"><a href="#4-2-2-结构和类" class="headerlink" title="4.2.2 结构和类"></a>4.2.2 结构和类</h3><p>使用结构的一个限制是结构不支持继承，但每个结构都派生自system.ValueType . 但接口可以实现接口</p><h2 id="4-3实现继承-class-A：B"><a href="#4-3实现继承-class-A：B" class="headerlink" title="4.3实现继承 class A：B{}"></a>4.3实现继承 class A：B{}</h2><p>如果类和接口都用于派生，则类总是必须放在接口的前面</p><p>结构只能实现接口继承</p><p>类定义中更没有指定基类，c#编译器就假定 System.Object是基类</p><h3 id="4-3-1虚方法"><a href="#4-3-1虚方法" class="headerlink" title="4.3.1虚方法"></a>4.3.1虚方法</h3><p>  virtual </p><p>​    把一个基类方法声明为virtual，就可以在任何派生类中重写该方法</p><p>​    也可以把属性声明为virtual</p><p>​    成员字段和静态函数不能声明为virtual，因为这个概念只对类中实例函数成员有意义</p><p>override 显示声明重写</p><h3 id="4-3-2-多态性"><a href="#4-3-2-多态性" class="headerlink" title="4.3.2 多态性"></a>4.3.2 多态性</h3><p>多态性，动态地定义调用的方法，而不是在编译期间定义</p><h3 id="4-3-3隐藏方法"><a href="#4-3-3隐藏方法" class="headerlink" title="4.3.3隐藏方法"></a>4.3.3隐藏方法</h3><p>如果签名相同的方法在基类和派生类中都进行了声明，但该方法没有分别声明为virtual和override，派生类方法就会隐藏基类方法</p><p>用new关键词隐藏方法，避免出现编译器警告</p><h3 id="4-3-4调用基类版本方法base-fn"><a href="#4-3-4调用基类版本方法base-fn" class="headerlink" title="4.3.4调用基类版本方法base.fn()"></a>4.3.4调用基类版本方法base.fn()</h3><h3 id="4-3-5抽象类和抽象方法"><a href="#4-3-5抽象类和抽象方法" class="headerlink" title="4.3.5抽象类和抽象方法"></a>4.3.5抽象类和抽象方法</h3><p>abstract 抽象类不能实例化，抽象法法不能直接实现，必须在非抽象类的派生类中重写； 如果类包含抽象方法，则该类也是抽象的，也必须声明为抽象的</p><h3 id="4-3-6密封类和密封方法sealed"><a href="#4-3-6密封类和密封方法sealed" class="headerlink" title="4.3.6密封类和密封方法sealed"></a>4.3.6密封类和密封方法sealed</h3><p>对于密封类，编译器知道不能派生类</p><p>string是密封的</p><h3 id="4-3-7派生类的构造函数"><a href="#4-3-7派生类的构造函数" class="headerlink" title="4.3.7派生类的构造函数"></a>4.3.7派生类的构造函数</h3><p>​        创建派生类实例时，会有多个构造函数起作用个，要实例化类的构造函数本身不能初始化类，还必须调用其基类中的构造函数，通过层级结构进行构造</p><p>​        如果派生类没必要定义新的构造函数，仍可以提供一个构造函数，条用基构造函数base()</p><h2 id="4-4修饰符"><a href="#4-4修饰符" class="headerlink" title="4.4修饰符"></a>4.4修饰符</h2><p>4.4.1访问修饰符</p><p>逻辑访问修饰符  public protected private</p><p>物理访问修饰符 internal</p><p>不能把类型定义为protected、private或 protected internal，因为这些修饰符对包含在命名空间中的类型没有意义，这些只能用于成员。但可以修饰嵌套的类型，类型也具有成员的状态</p><p>如果有嵌套的类型，内部的类型总是可以访问外部类型的所有成员</p><p>4.4.2其他修饰符</p><p>new static virtual abstract override sealed  extern</p><h2 id="4-5接口"><a href="#4-5接口" class="headerlink" title="4.5接口"></a>4.5接口</h2><p>Microsoft 预定义的一个几口System.IDisposable的完整定义，包含一个方法Dispose（），该方法由类实现，用于清理代码</p><p>声明接口在于发生和声明抽象类完全相同，但不允许提供接口中任何成员的实现方式，一般情况下，接口只能包含方法、属性、索引器、和事件的声明</p><p>抽象类： 可以有实现代码或没有实现代码的抽象成员，</p><p>接口：不能有任何实现代码，纯粹抽象的；所以接口不需要abstract关键字</p><p>接口不能有构造函数，也不能有字段，不能声明为virtual</p><p>4.5.1定义和实现接口</p><p>从接口中派生独立于从类中派生</p><p>4.5.2派生的接口</p><h2 id="4-6-is-和as-运算符"><a href="#4-6-is-和as-运算符" class="headerlink" title="4.6 is 和as 运算符"></a>4.6 is 和as 运算符</h2><p>as返回对象的引用，如果对象不是所要求的的类型，则返回null</p><p>is运算符，判读是否满足，true则继续进行强制转换</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th)第三章 对象和类型</title>
       <link href="2021/02/17/c/c-10th-03/"/>
       <url>2021/02/17/c/c-10th-03/</url>
