@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-17T14:36:22.485Z</updated>
+  <updated>2021-02-17T17:14:04.831Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>c# 高级编程(10th)第五章 托管和非托管的资源</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/</id>
+    <published>2021-02-18T02:32:00.000Z</published>
+    <updated>2021-02-17T17:14:04.831Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;c-语言-第五章-托管和非托管的资源&quot;&gt;&lt;a href=&quot;#c-语言-第五章-托管和非托管的资源&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第五章 托管和非托管的资源&quot;&gt;&lt;/a&gt;c#语言 第五章</summary>
+        
+      
+    
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
+    
+  </entry>
   
   <entry>
     <title>c# 高级编程(10th)第四章 继承</title>

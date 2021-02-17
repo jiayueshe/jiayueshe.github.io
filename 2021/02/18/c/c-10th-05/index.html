@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="c# 高级编程(10th)第四章 继承, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
+    <meta name="keywords" content="c# 高级编程(10th)第五章 托管和非托管的资源, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta name="description" content="IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>c# 高级编程(10th)第四章 继承 | IT 学习 资源站</title>
+    <title>c# 高级编程(10th)第五章 托管和非托管的资源 | IT 学习 资源站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">c# 高级编程(10th)第四章 继承</h1>
+                    <h1 class="description center-align post-title">c# 高级编程(10th)第五章 托管和非托管的资源</h1>
                 </div>
             </div>
         </div>
@@ -363,7 +363,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-17
+                    2021-02-18
                 </div>
                 
 
@@ -384,48 +384,42 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="c-语言-第四章-继承"><a href="#c-语言-第四章-继承" class="headerlink" title="c#语言 第四章 继承"></a>c#语言 第四章 继承</h1><h2 id="4-1继承"><a href="#4-1继承" class="headerlink" title="4.1继承"></a>4.1继承</h2><p>面向对象的三个重要概念：继承、封装、多态</p>
-<h2 id="4-2继承的类型"><a href="#4-2继承的类型" class="headerlink" title="4.2继承的类型"></a>4.2继承的类型</h2><p>面向对象（Object-Oriented,OO）术语，c#的继承</p>
-<p>单重继承：c#</p>
-<p>多重继承：一个类可以派生自多个类，c#不支持</p>
-<p>多层继承：B派生自A，C派生自B，c#支持</p>
-<p>接口继承：c#允许接口多继承</p>
-<h3 id="4-2-1-多重继承-c"><a href="#4-2-1-多重继承-c" class="headerlink" title="4.2.1 多重继承 c++"></a>4.2.1 多重继承 c++</h3><p>多重继承会给生成的代码增加复杂性，还会带来一些开销。c#决定不支持多重继承。</p>
-<p>c#允许派生自多个接口，一个类型可以实现多个接口。System.Object 是一个公共的基类，每个c#类（除了Object类之外）都有一个基类，还可以有人以多个基接口</p>
-<h3 id="4-2-2-结构和类"><a href="#4-2-2-结构和类" class="headerlink" title="4.2.2 结构和类"></a>4.2.2 结构和类</h3><p>使用结构的一个限制是结构不支持继承，但每个结构都派生自system.ValueType . 但接口可以实现接口</p>
-<h2 id="4-3实现继承-class-A：B"><a href="#4-3实现继承-class-A：B" class="headerlink" title="4.3实现继承 class A：B{}"></a>4.3实现继承 class A：B{}</h2><p>如果类和接口都用于派生，则类总是必须放在接口的前面</p>
-<p>结构只能实现接口继承</p>
-<p>类定义中更没有指定基类，c#编译器就假定 System.Object是基类</p>
-<h3 id="4-3-1虚方法"><a href="#4-3-1虚方法" class="headerlink" title="4.3.1虚方法"></a>4.3.1虚方法</h3><p>  virtual </p>
-<p>​    把一个基类方法声明为virtual，就可以在任何派生类中重写该方法</p>
-<p>​    也可以把属性声明为virtual</p>
-<p>​    成员字段和静态函数不能声明为virtual，因为这个概念只对类中实例函数成员有意义</p>
-<p>override 显示声明重写</p>
-<h3 id="4-3-2-多态性"><a href="#4-3-2-多态性" class="headerlink" title="4.3.2 多态性"></a>4.3.2 多态性</h3><p>多态性，动态地定义调用的方法，而不是在编译期间定义</p>
-<h3 id="4-3-3隐藏方法"><a href="#4-3-3隐藏方法" class="headerlink" title="4.3.3隐藏方法"></a>4.3.3隐藏方法</h3><p>如果签名相同的方法在基类和派生类中都进行了声明，但该方法没有分别声明为virtual和override，派生类方法就会隐藏基类方法</p>
-<p>用new关键词隐藏方法，避免出现编译器警告</p>
-<h3 id="4-3-4调用基类版本方法base-fn"><a href="#4-3-4调用基类版本方法base-fn" class="headerlink" title="4.3.4调用基类版本方法base.fn()"></a>4.3.4调用基类版本方法base.fn()</h3><h3 id="4-3-5抽象类和抽象方法"><a href="#4-3-5抽象类和抽象方法" class="headerlink" title="4.3.5抽象类和抽象方法"></a>4.3.5抽象类和抽象方法</h3><p>abstract 抽象类不能实例化，抽象法法不能直接实现，必须在非抽象类的派生类中重写； 如果类包含抽象方法，则该类也是抽象的，也必须声明为抽象的</p>
-<h3 id="4-3-6密封类和密封方法sealed"><a href="#4-3-6密封类和密封方法sealed" class="headerlink" title="4.3.6密封类和密封方法sealed"></a>4.3.6密封类和密封方法sealed</h3><p>对于密封类，编译器知道不能派生类</p>
-<p>string是密封的</p>
-<h3 id="4-3-7派生类的构造函数"><a href="#4-3-7派生类的构造函数" class="headerlink" title="4.3.7派生类的构造函数"></a>4.3.7派生类的构造函数</h3><p>​        创建派生类实例时，会有多个构造函数起作用个，要实例化类的构造函数本身不能初始化类，还必须调用其基类中的构造函数，通过层级结构进行构造</p>
-<p>​        如果派生类没必要定义新的构造函数，仍可以提供一个构造函数，条用基构造函数base()</p>
-<h2 id="4-4修饰符"><a href="#4-4修饰符" class="headerlink" title="4.4修饰符"></a>4.4修饰符</h2><p>4.4.1访问修饰符</p>
-<p>逻辑访问修饰符  public protected private</p>
-<p>物理访问修饰符 internal</p>
-<p>不能把类型定义为protected、private或 protected internal，因为这些修饰符对包含在命名空间中的类型没有意义，这些只能用于成员。但可以修饰嵌套的类型，类型也具有成员的状态</p>
-<p>如果有嵌套的类型，内部的类型总是可以访问外部类型的所有成员</p>
-<p>4.4.2其他修饰符</p>
-<p>new static virtual abstract override sealed  extern</p>
-<h2 id="4-5接口"><a href="#4-5接口" class="headerlink" title="4.5接口"></a>4.5接口</h2><p>Microsoft 预定义的一个几口System.IDisposable的完整定义，包含一个方法Dispose（），该方法由类实现，用于清理代码</p>
-<p>声明接口在于发生和声明抽象类完全相同，但不允许提供接口中任何成员的实现方式，一般情况下，接口只能包含方法、属性、索引器、和事件的声明</p>
-<p>抽象类： 可以有实现代码或没有实现代码的抽象成员，</p>
-<p>接口：不能有任何实现代码，纯粹抽象的；所以接口不需要abstract关键字</p>
-<p>接口不能有构造函数，也不能有字段，不能声明为virtual</p>
-<p>4.5.1定义和实现接口</p>
-<p>从接口中派生独立于从类中派生</p>
-<p>4.5.2派生的接口</p>
-<h2 id="4-6-is-和as-运算符"><a href="#4-6-is-和as-运算符" class="headerlink" title="4.6 is 和as 运算符"></a>4.6 is 和as 运算符</h2><p>as返回对象的引用，如果对象不是所要求的的类型，则返回null</p>
-<p>is运算符，判读是否满足，true则继续进行强制转换</p>
+                <h1 id="c-语言-第五章-托管和非托管的资源"><a href="#c-语言-第五章-托管和非托管的资源" class="headerlink" title="c#语言 第五章 托管和非托管的资源"></a>c#语言 第五章 托管和非托管的资源</h1><p>5.1资源</p>
+<p>使用托管和非托管的资源—存储在托管或本机堆中的对象，尽管垃圾收集齐释放存储在托管堆中的托管对象，但不释放本机堆中的对象，必须由开发人员自己释放</p>
+<p>什么是大小对象堆？</p>
+<p>什么数据类型存储在堆栈上是非常有益的？</p>
+<p>垃圾收集器处理托管的资源，那么非托管的资源呢？</p>
+<p>5.2后台内存管理</p>
+<p>5.2.1值类型数据</p>
+<p>虚拟内存：执行代码、代码加载的所有DLL、以及程序运行时使用的所有变量</p>
+<p>栈–值类型数据</p>
+<p>​    块作用域或结构作用域：生存期嵌套</p>
+<p>​    编译器在内部确保先放在内存中的那个变量后删除</p>
+<p>5.2.2引用数据类型</p>
+<p>​    所有引用类型，托管堆</p>
+<p>首先创建对象时，分配堆上的内存以存储对象（真正的对象），然后把变量的值设置为分配给新对象的内存地址</p>
+<p>把一个引用变量的值赋予两一个相同类型的变量，就有两个变量引用内存中的同一对象了；当一个引用变量超出作用域时，它会从栈中删除，但是引用对象的数据让保留在堆中</p>
+<p>只有到程序停止，或垃圾回收器删除为止。只有数据不再被任何变量引用时，它才会被删除</p>
+<p>5.2.3 垃圾回收  System.GC.Collect()</p>
+<p>​    在垃圾回收器运行时，它会从堆中删除不再引用的所有对象</p>
+<p>​    只要释放了能释放的所有对象，就会把其它对象移动回堆的端部，再次形成一个连续的内存块</p>
+<p>​    垃圾回收器的这个压缩操作是托管的堆与非托管的堆的区别所在，使用托管的堆，就只需要读取指针的值即可，而不需要遍历地址的链表，来查找一个地方放置新数据</p>
+<p>​    大对象堆：在.net 下，较大对象有自己的托管堆，使用大于85000个字节的对象时，就会放在这个特殊的堆上</p>
+<p>5.3强引用 和弱引用</p>
+<p>​    垃圾回收器不能回收仍在引用的对象的内存 —-这是一个强引用</p>
+<p>​    弱引用WeakPeference：允许创建和使用对象，但垃圾回收器碰巧在运行，就会回收对象并释放内存，由于潜在的bug和性能问题，一般不这么做</p>
+<p>5.4处理非托管的资源</p>
+<p>​    垃圾回收器不知道如何释放非托管的资源，例如：文件句柄、网络连接、和数据库连接</p>
+<p>​    定义一个类时，可以使用两种机制来自动释放非托管的资源</p>
+<p>​            声明一个析构函数（终结器），作为类的一个成员</p>
+<p>​            在类中实现System.IDispossable接口</p>
+<p>5.4.1析构函数或终结器finalizer</p>
+<p>​    c#编译器在编译析构函数时，会隐式的把析构函数的代码编译为等价于重写Finalize（）方法的代码，从而确保执行父类的Finalize（）方法</p>
+<p>缺点：</p>
+<p>​    无法确定c#对象的析构函数何时执行，所以不能再析构函数中放置需要在某一时刻运行的代码</p>
+<p>​    c#析构函数的实现会延迟对象最终从内存中删除的时间</p>
+<p>5.4.2IDispossable接口</p>
+<p>​    </p>
 
                 
             </div>
@@ -452,7 +446,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-04/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-04/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -663,9 +657,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/02/18/c/c-10th-05/">
                     <div class="card-image">
@@ -683,9 +678,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -698,6 +693,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -716,13 +712,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/17/c/c-10th-03/">
+                <a href="/2021/02/17/c/c-10th-04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c# 高级编程(10th)第三章 对象和类型">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="c# 高级编程(10th)第四章 继承">
                         
-                        <span class="card-title">c# 高级编程(10th)第三章 对象和类型</span>
+                        <span class="card-title">c# 高级编程(10th)第四章 继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
