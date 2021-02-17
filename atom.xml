@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-17T07:19:50.077Z</updated>
+  <updated>2021-02-17T09:37:53.348Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -17,42 +17,73 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-world/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-world/</id>
-    <published>2021-02-17T07:19:50.077Z</published>
-    <updated>2021-02-17T07:19:50.077Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <title>c# 高级编程(10th) 前言</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c-10th/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c-10th/</id>
+    <published>2021-02-17T01:25:00.000Z</published>
+    <updated>2021-02-17T09:37:53.348Z</updated>
     
     
     
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
     
   </entry>
   
   <entry>
-    <title>typora-vue-theme主题介绍</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2018/09/07/front-matter/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2018/09/07/front-matter/</id>
-    <published>2018-09-07T01:25:00.000Z</published>
-    <updated>2021-02-17T08:44:38.499Z</updated>
+    <title>博客资源站收集</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/good-blogs/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/good-blogs/</id>
+    <published>2021-02-17T01:25:00.000Z</published>
+    <updated>2021-02-17T09:36:33.112Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;一个不错的博客-算法-leet-code&quot;&gt;&lt;a href=&quot;#一个不错的博客-算法-leet-code&quot; class=&quot;headerlink&quot; title=&quot;一个不错的博客  算法 leet code&quot;&gt;&lt;/a&gt;一个不错的博客  算法 leet</summary>
+        
+      
     
     
     
+    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/blog/"/>
     
-    <category term="Markdown" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/Markdown/"/>
+    
+    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello MyBlog</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/hello-myblog/</id>
+    <published>2021-02-17T01:25:00.000Z</published>
+    <updated>2021-02-17T09:34:11.414Z</updated>
     
     
-    <category term="Typora" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/Typora/"/>
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;使用github-page-和hexo搭建第一个网站&quot;&gt;&lt;a href=&quot;#使用github-page-和hexo搭建第一个网站&quot; class=&quot;headerlink&quot; title=&quot;使用github page</summary>
+        
+      
     
-    <category term="Markdown" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/Markdown/"/>
+    
+    
+    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/blog/"/>
+    
+    
+    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/blog/"/>
+    
+    <category term="hexo" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/hexo/"/>
+    
+    <category term="github gage" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/github-gage/"/>
     
   </entry>
   
