@@ -22,6 +22,8 @@
             
             <tag> c# </tag>
             
+            <tag> 泛型 </tag>
+            
         </tags>
       
     </entry>
@@ -46,6 +48,8 @@
         <tags>
             
             <tag> c# </tag>
+            
+            <tag> 托管 </tag>
             
         </tags>
       
@@ -72,6 +76,8 @@
             
             <tag> c# </tag>
             
+            <tag> 继承 </tag>
+            
         </tags>
       
     </entry>
@@ -96,6 +102,8 @@
         <tags>
             
             <tag> c# </tag>
+            
+            <tag> 对象和类型 </tag>
             
         </tags>
       
