@@ -58,11 +58,11 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 第八章 运算符和强制类型转换</title>
-      <link href="2021/02/18/c/c-10th-08/"/>
-      <url>2021/02/18/c/c-10th-08/</url>
+      <title>c# 高级编程(10th) 第七章 数组和元祖</title>
+      <link href="2021/02/18/c/c-10th-07/"/>
+      <url>2021/02/18/c/c-10th-07/</url>
       
-        <content type="html"><![CDATA[<h1 id="c-语言-第八章-运算符和强制类型转换"><a href="#c-语言-第八章-运算符和强制类型转换" class="headerlink" title="c#语言 第八章 运算符和强制类型转换"></a>c#语言 第八章 运算符和强制类型转换</h1><p>8.1运算符和类型转换</p><p>8.2运算符</p><p>8.2.1运算符的简化操作</p><p>条件运算符</p><p>checked和unchecked运算符</p><p>is运算符</p><p>as运算符</p><p>sizefof运算符</p><p>typeof运算符</p><p>namefo运算符</p><p>index运算符</p><p>可控类型和运算符</p><p>空合并运算符</p><p>空值传播运算符</p><p>8.2.2运算符的优先级和关联性</p><p>8.3类型的安全性</p><p>8.3.1类型转换</p><p>隐式转换</p><p>显示转换</p><p>8.3.2装箱和拆箱</p><p>8.4比较对象的相等性</p><p>8.4.1比较引用类型的相等性</p><p>8.4.2比较值类型的相等性</p><p>8.5运算符重载</p><p>8.5.1运算符的工作方式</p><p>8.5.2运算符重载的示例</p><p>8.5.3比较运算符的重载</p><p>8.5.4可以重载的运算符</p><p>8.6实现自定义的额索引运算符</p><p>8.7实现用户定义的类型强制转换</p><p>8.7.1实现用户定义的类型强制转换</p><p>类之间的强制转换</p><p>基类和派生类之间的类型强制转换</p><p>装箱和拆箱类型强制转换</p><p>8.7.2多重类型强制转换</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="c-语言-第七章-数组和元祖"><a href="#c-语言-第七章-数组和元祖" class="headerlink" title="c#语言 第七章 数组和元祖"></a>c#语言 第七章 数组和元祖</h1><p>7.1 同一类型Array和不同类型Tuple的多个对象</p><p>7.2简单数组</p><p>7.2.1数组的声明</p><p>7.2.2数组的初始化</p><p>7.2.3访问数组元素</p><p>7.2.4使用引用类型</p><p>7.3多维数组</p><p>7.4锯齿数组</p><p>7.5Array类</p><p>7.5.1创建数组</p><p>7.5.2复制数组</p><p>7.5.3排序</p><p>7.6数组作为参数</p><p>7.6.1数组协变</p><p>7.6.2ArraySegment<T></p><p>7.7枚举</p><p>7.7.1IEnumrtator接口</p><p>7.7.2foreach语句</p><p>7.7.3yield语句</p><p>7.8元祖</p><p>7.9结构比较</p>]]></content>
       
       
       <categories>
@@ -85,11 +85,11 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 第七章 数组和元祖</title>
-      <link href="2021/02/18/c/c-10th-07/"/>
-      <url>2021/02/18/c/c-10th-07/</url>
+      <title>c# 高级编程(10th) 第八章 运算符和强制类型转换</title>
+      <link href="2021/02/18/c/c-10th-08/"/>
+      <url>2021/02/18/c/c-10th-08/</url>
       
-        <content type="html"><![CDATA[<h1 id="c-语言-第七章-数组和元祖"><a href="#c-语言-第七章-数组和元祖" class="headerlink" title="c#语言 第七章 数组和元祖"></a>c#语言 第七章 数组和元祖</h1><p>7.1 同一类型Array和不同类型Tuple的多个对象</p><p>7.2简单数组</p><p>7.2.1数组的声明</p><p>7.2.2数组的初始化</p><p>7.2.3访问数组元素</p><p>7.2.4使用引用类型</p><p>7.3多维数组</p><p>7.4锯齿数组</p><p>7.5Array类</p><p>7.5.1创建数组</p><p>7.5.2复制数组</p><p>7.5.3排序</p><p>7.6数组作为参数</p><p>7.6.1数组协变</p><p>7.6.2ArraySegment<T></p><p>7.7枚举</p><p>7.7.1IEnumrtator接口</p><p>7.7.2foreach语句</p><p>7.7.3yield语句</p><p>7.8元祖</p><p>7.9结构比较</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="c-语言-第八章-运算符和强制类型转换"><a href="#c-语言-第八章-运算符和强制类型转换" class="headerlink" title="c#语言 第八章 运算符和强制类型转换"></a>c#语言 第八章 运算符和强制类型转换</h1><p>8.1运算符和类型转换</p><p>8.2运算符</p><p>8.2.1运算符的简化操作</p><p>条件运算符</p><p>checked和unchecked运算符</p><p>is运算符</p><p>as运算符</p><p>sizefof运算符</p><p>typeof运算符</p><p>namefo运算符</p><p>index运算符</p><p>可控类型和运算符</p><p>空合并运算符</p><p>空值传播运算符</p><p>8.2.2运算符的优先级和关联性</p><p>8.3类型的安全性</p><p>8.3.1类型转换</p><p>隐式转换</p><p>显示转换</p><p>8.3.2装箱和拆箱</p><p>8.4比较对象的相等性</p><p>8.4.1比较引用类型的相等性</p><p>8.4.2比较值类型的相等性</p><p>8.5运算符重载</p><p>8.5.1运算符的工作方式</p><p>8.5.2运算符重载的示例</p><p>8.5.3比较运算符的重载</p><p>8.5.4可以重载的运算符</p><p>8.6实现自定义的额索引运算符</p><p>8.7实现用户定义的类型强制转换</p><p>8.7.1实现用户定义的类型强制转换</p><p>类之间的强制转换</p><p>基类和派生类之间的类型强制转换</p><p>装箱和拆箱类型强制转换</p><p>8.7.2多重类型强制转换</p>]]></content>
       
       
       <categories>
@@ -299,31 +299,6 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c/c-10th/"/>
-      <url>2021/02/17/c/c-10th/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c/c-10th-01/"/>
       <url>2021/02/17/c/c-10th-01/</url>
@@ -366,6 +341,31 @@
         <tags>
             
             <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c/c-10th/"/>
+      <url>2021/02/17/c/c-10th/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
             
         </tags>
       
