@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-17T17:14:04.831Z</updated>
+  <updated>2021-02-18T05:55:10.022Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -17,18 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>c# 高级编程(10th) 第六章 泛型</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/</id>
+    <published>2021-02-18T06:32:00.000Z</published>
+    <updated>2021-02-18T05:55:10.022Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;c-语言-第六章-泛型&quot;&gt;&lt;a href=&quot;#c-语言-第六章-泛型&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第六章 泛型&quot;&gt;&lt;/a&gt;c#语言 第六章 泛型&lt;/h1&gt;&lt;h2 id=&quot;6-1泛型概述&quot;&gt;&lt;a href=&quot;#6-1泛型概述&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    
+    
+    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
     <title>c# 高级编程(10th)第五章 托管和非托管的资源</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-05/</id>
     <published>2021-02-18T02:32:00.000Z</published>
-    <updated>2021-02-17T17:14:04.831Z</updated>
+    <updated>2021-02-18T03:01:41.537Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;c-语言-第五章-托管和非托管的资源&quot;&gt;&lt;a href=&quot;#c-语言-第五章-托管和非托管的资源&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第五章 托管和非托管的资源&quot;&gt;&lt;/a&gt;c#语言 第五章</summary>
+    <summary type="html">&lt;h1 id=&quot;c-语言-第五章-托管和非托管的资源&quot;&gt;&lt;a href=&quot;#c-语言-第五章-托管和非托管的资源&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第五章 托管和非托管的资源&quot;&gt;&lt;/a&gt;c#语言 第五章 托管和非托管的资源&lt;/h1&gt;&lt;h2</summary>
         
       
     

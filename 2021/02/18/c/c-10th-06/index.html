@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签: hexo, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
+    <meta name="keywords" content="c# 高级编程(10th) 第六章 泛型, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta name="description" content="IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签: hexo | IT 学习 资源站</title>
+    <title>c# 高级编程(10th) 第六章 泛型 | IT 学习 资源站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -307,146 +307,485 @@
 
 </header>
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
-    <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                    subtitle
-                
-            </div>
+    
 
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">c# 高级编程(10th) 第六章 泛型</h1>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
 
 
-    </div>
-</div>
-
-<main class="content">
+<main class="container content">
 
     
-
-<div id="tags" class="container chip-container">
+    <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/c/">
+                                <span class="chip bg-color">c#</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/c/" class="post-category">
+                                c#
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-18
+                </div>
                 
-                <a href="/tags/blog/" title="blog: 2">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="blog" style="background-color: #F9EBEA;">blog
-                        <span class="tag-length">2</span>
-                    </span>
-                </a>
+
                 
+
                 
-                <a href="/tags/hexo/" title="hexo: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            data-tagname="hexo" style="background-color: #F5EEF8;">hexo
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
+
                 
-                
-                <a href="/tags/github-gage/" title="github gage: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="github gage" style="background-color: #D5F5E3;">github gage
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/c/" title="c#: 7">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="c#" style="background-color: #E8F8F5;">c#
-                        <span class="tag-length">7</span>
-                    </span>
-                </a>
+
                 
             </div>
         </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="c-语言-第六章-泛型"><a href="#c-语言-第六章-泛型" class="headerlink" title="c#语言 第六章 泛型"></a>c#语言 第六章 泛型</h1><h2 id="6-1泛型概述"><a href="#6-1泛型概述" class="headerlink" title="6.1泛型概述"></a>6.1泛型概述</h2><p>​        有了泛型就可以创建独立于被包含类型的类和方法，不必给不同的类型编写功能相同的许多方法或类，只创建一个方法和类即可</p>
+<p>​        另一个减少代码的选项是使用object类，但使用派生自object类的类型进行传递不是类型安全的</p>
+<p>​        泛型使用泛型类型，根据需要用特定的类型替换泛型类型，保证了类型安全性</p>
+<h3 id="6-1-1-性能"><a href="#6-1-1-性能" class="headerlink" title="6.1.1 性能"></a>6.1.1 性能</h3><p>​        对值类型使用非泛型集合类，则在把值类型转换为引用类型和把引用类型转换为值类型时，需要进行装箱和拆箱操作。操作很容易，但是性能损失比较大，遍历许多项时尤其如此。</p>
+<p>​        使用List<T>定义泛型为int时，就不需要再进行装箱和拆箱操作。</p>
+<h3 id="6-1-2类型安全"><a href="#6-1-2类型安全" class="headerlink" title="6.1.2类型安全"></a>6.1.2类型安全</h3><p>​        泛型类List<T>中，泛型类型T定义了允许使用过的类型，有了List<int> 的定义，就只能把证书类型添加到集合中。</p>
+<h3 id="6-1-3二进制代码的重用"><a href="#6-1-3二进制代码的重用" class="headerlink" title="#6.1.3二进制代码的重用"></a>#6.1.3二进制代码的重用</h3><p>​        泛型允许更好的重用二进制代码，泛型类可以定义一次，并且可以用许多不同的类型实例化。</p>
+<h3 id="6-1-4代码的扩展"><a href="#6-1-4代码的扩展" class="headerlink" title="6.1.4代码的扩展"></a>6.1.4代码的扩展</h3><p>​        JIT编译器会把泛型类型编译为本地代码时，会给每个值类型创建一个新类</p>
+<h3 id="6-1-5命名约定"><a href="#6-1-5命名约定" class="headerlink" title="6.1.5命名约定"></a>6.1.5命名约定</h3><p>​        泛型类型的命名名称用字母T作为前缀</p>
+<p>​        如果没有特需要求，泛型类型允许用任意类代替</p>
+<p>​        如果泛型类型有特殊要求，（必须实现一个借口）或使用多个泛型类型，就应给泛型类型使用描述性的名称</p>
+<h2 id="6-2创建泛型类"><a href="#6-2创建泛型类" class="headerlink" title="6.2创建泛型类"></a>6.2创建泛型类</h2><p>​    每个处理兑现类型的类都可以有泛型的实现方式，另外，如果类使用了层次结构，泛型就非常有助于消除类型强制转换操作</p>
+<h2 id="6-3泛型类的功能"><a href="#6-3泛型类的功能" class="headerlink" title="6.3泛型类的功能"></a>6.3泛型类的功能</h2><h3 id="6-3-1默认值"><a href="#6-3-1默认值" class="headerlink" title="6.3.1默认值"></a>6.3.1默认值</h3><p>​    不能把null赋值非泛型类型，因为泛型类型也可以实例化为值类型，而null只能用于引用;</p>
+<p>​    使用default关键字，将null值赋予引用类型，将0赋予值类型</p>
+<h3 id="6-3-2约束"><a href="#6-3-2约束" class="headerlink" title="6.3.2约束"></a>6.3.2约束</h3><p>​    如果泛型需要调用泛型类型中的方法，就必须添加约束</p>
+<p>​    泛型支持的几种约束</p>
+<p>​        where T:struct  必须是值类型</p>
+<p>​        where T:class 必须是引用类型</p>
+<p>​        where T:IFoo 必须是实现接口IFoo</p>
+<p>​        where T:Foo 必须是派生自Foo</p>
+<p>​        where T:new() 构造函数约束，指定T必须有一个默认构造函数</p>
+<p>​        where T1:T2  类型T1派生自泛型类型T2</p>
+<h3 id="6-3-3-继承"><a href="#6-3-3-继承" class="headerlink" title="6.3.3 继承"></a>6.3.3 继承</h3><p>​        泛型类可以实现泛型接口，也可以派生自一个类，泛型类可以派生自泛型类</p>
+<p>​        要求必须重复接口的泛型类型，或者必须制定基类的类型</p>
+<p>​        派生类可以是泛型类型或非泛型类型</p>
+<h3 id="6-3-4静态成员"><a href="#6-3-4静态成员" class="headerlink" title="6.3.4静态成员"></a>6.3.4静态成员</h3><h2 id="6-4泛型接口"><a href="#6-4泛型接口" class="headerlink" title="6.4泛型接口"></a>6.4泛型接口</h2><p>6.4.1协变和抗变</p>
+<p>.net 4之前泛型接口是不变的，。net4通过协变和抗变为泛型接口和泛型委托添加了一个重要的扩展。</p>
+<p>协变和抗变指对参数和返回值的类型进行转换</p>
+<p>6.4.2泛型接口的协变</p>
+<p>​        如果泛型类型用out关键字标注，泛型接口是协变得。这也意味着返回类型只能是T</p>
+<p>6.4.3泛型接口的抗变</p>
+<p>​        如果泛型类型用in关键字标注，泛型接口是抗变的。这也意味着输入只能是T</p>
+<h2 id="6-5泛型结构"><a href="#6-5泛型结构" class="headerlink" title="6.5泛型结构"></a>6.5泛型结构</h2><p>Nullable<T>  =&gt;Nullable<int> =&gt; int?</p>
+<blockquote>
+<p>int y1 = x1??0; </p>
+</blockquote>
+<h2 id="6-6泛型方法"><a href="#6-6泛型方法" class="headerlink" title="6.6泛型方法"></a>6.6泛型方法</h2><p>6.6.1泛型方法示例</p>
+<p>6.6.2带约束的泛型方法</p>
+<p>6.6.3带委托的泛型方法</p>
+<p>6.6.4泛型方法规范</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
     </div>
-</div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/c/">
+                                    <span class="chip bg-color">c#</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            
-            <div class="article tag-post col s12 m6 l4" data-tags="blog, hexo, github gage" data-aos="fade-up">
-                <div class="card">
-                    <a href="/2021/02/17/hello-myblog/">
-                        <div class="card-image tag-image">
-                            
-                            
-                            <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello MyBlog">
-                            
-                            <span class="card-title">Hello MyBlog</span>
-                        </div>
-                    </a>
-                    <div class="card-content article-content">
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/blog/" class="post-category">
-                                blog
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
+</div>
+
                 </div>
             </div>
             
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
         </div>
-    </article>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/02/18/c/c-10th-06/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="c# 高级编程(10th) 第六章 泛型">
+                        
+                        <span class="card-title">c# 高级编程(10th) 第六章 泛型</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            c# 高级编程(10th)  读书笔记系列
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c#
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c#</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/18/c/c-10th-05/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="c# 高级编程(10th)第五章 托管和非托管的资源">
+                        
+                        <span class="card-title">c# 高级编程(10th)第五章 托管和非托管的资源</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            c# 高级编程(10th)  读书笔记系列
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c#
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c/">
+                        <span class="chip bg-color">c#</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
 </main>
 
 
