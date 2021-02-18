@@ -4,6 +4,114 @@
   
     
     <entry>
+      <title>c# 高级编程(10th) 第十章 字符串和正则表达式</title>
+      <link href="2021/02/18/c/c-10th-10/"/>
+      <url>2021/02/18/c/c-10th-10/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第十章-字符串和正则表达式"><a href="#c-语言-第十章-字符串和正则表达式" class="headerlink" title="c#语言 第十章 字符串和正则表达式"></a>c#语言 第十章 字符串和正则表达式</h1><p>10.1 System.String类</p><p>10.1.1构建字符串</p><p>10.1.2 StringBuilder成员</p><p>10.2字符串格式</p><p>10.2.1字符串插值</p><p>10.2.2日期事件和数字格式</p><p>10.2.3自定义字符串格式</p><p>10.3正则表达式</p><p>10.3.1正则表达式概述</p><p>10.3.2RegularExpressionsPlayaround示例</p><p>10.3.3显示结果</p><p>10.3.4匹配、组合捕获</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> 泛型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 第九章 委托、lambda表达式和事件</title>
+      <link href="2021/02/18/c/c-10th-09/"/>
+      <url>2021/02/18/c/c-10th-09/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第九章-委托、lambda表达式和事件"><a href="#c-语言-第九章-委托、lambda表达式和事件" class="headerlink" title="c#语言 第九章 委托、lambda表达式和事件"></a>c#语言 第九章 委托、lambda表达式和事件</h1><p>9.1引用方法</p><p>9.2委托</p><p>9.2.1声明委托</p><p>9.2.2使用委托</p><p>9.2.3简单的委托示例</p><p>9.2.4action<T>和Func<T>委托</p><p>9.2.5BubbleSorter示例</p><p>9.2.6 多播委托</p><p>9.2.7匿名方法</p><p>9.3lambda表达式</p><p>9.3.1参数</p><p>9.3.2多行代码</p><p>9.3.3闭包</p><p>9.4事件</p><p>9.4.1事件发布程序</p><p>9.4.2事件侦听器</p><p>9.4.3弱事件</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> 泛型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 第八章 运算符和强制类型转换</title>
+      <link href="2021/02/18/c/c-10th-08/"/>
+      <url>2021/02/18/c/c-10th-08/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第八章-运算符和强制类型转换"><a href="#c-语言-第八章-运算符和强制类型转换" class="headerlink" title="c#语言 第八章 运算符和强制类型转换"></a>c#语言 第八章 运算符和强制类型转换</h1><p>8.1运算符和类型转换</p><p>8.2运算符</p><p>8.2.1运算符的简化操作</p><p>条件运算符</p><p>checked和unchecked运算符</p><p>is运算符</p><p>as运算符</p><p>sizefof运算符</p><p>typeof运算符</p><p>namefo运算符</p><p>index运算符</p><p>可控类型和运算符</p><p>空合并运算符</p><p>空值传播运算符</p><p>8.2.2运算符的优先级和关联性</p><p>8.3类型的安全性</p><p>8.3.1类型转换</p><p>隐式转换</p><p>显示转换</p><p>8.3.2装箱和拆箱</p><p>8.4比较对象的相等性</p><p>8.4.1比较引用类型的相等性</p><p>8.4.2比较值类型的相等性</p><p>8.5运算符重载</p><p>8.5.1运算符的工作方式</p><p>8.5.2运算符重载的示例</p><p>8.5.3比较运算符的重载</p><p>8.5.4可以重载的运算符</p><p>8.6实现自定义的额索引运算符</p><p>8.7实现用户定义的类型强制转换</p><p>8.7.1实现用户定义的类型强制转换</p><p>类之间的强制转换</p><p>基类和派生类之间的类型强制转换</p><p>装箱和拆箱类型强制转换</p><p>8.7.2多重类型强制转换</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> 泛型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 第七章 数组和元祖</title>
+      <link href="2021/02/18/c/c-10th-07/"/>
+      <url>2021/02/18/c/c-10th-07/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第七章-数组和元祖"><a href="#c-语言-第七章-数组和元祖" class="headerlink" title="c#语言 第七章 数组和元祖"></a>c#语言 第七章 数组和元祖</h1><p>7.1 同一类型Array和不同类型Tuple的多个对象</p><p>7.2简单数组</p><p>7.2.1数组的声明</p><p>7.2.2数组的初始化</p><p>7.2.3访问数组元素</p><p>7.2.4使用引用类型</p><p>7.3多维数组</p><p>7.4锯齿数组</p><p>7.5Array类</p><p>7.5.1创建数组</p><p>7.5.2复制数组</p><p>7.5.3排序</p><p>7.6数组作为参数</p><p>7.6.1数组协变</p><p>7.6.2ArraySegment<T></p><p>7.7枚举</p><p>7.7.1IEnumrtator接口</p><p>7.7.2foreach语句</p><p>7.7.3yield语句</p><p>7.8元祖</p><p>7.9结构比较</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
+            
+            <tag> 泛型 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th) 第六章 泛型</title>
       <link href="2021/02/18/c/c-10th-06/"/>
       <url>2021/02/18/c/c-10th-06/</url>
@@ -50,6 +158,31 @@
             <tag> c# </tag>
             
             <tag> 托管 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>RabbitMQ</title>
+      <link href="2021/02/18/rabbitmq/rabbitmq/"/>
+      <url>2021/02/18/rabbitmq/rabbitmq/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章-RabbitMQ简介"><a href="#第一章-RabbitMQ简介" class="headerlink" title="第一章 RabbitMQ简介"></a>第一章 RabbitMQ简介</h1><h2 id="1-1-什么是消息中间件"><a href="#1-1-什么是消息中间件" class="headerlink" title="1.1 什么是消息中间件"></a>1.1 什么是消息中间件</h2><p> 　　消息是指在应用间传送的数据。消息可以非常简单，比如只包含文本字符串、Json等，也可以很复杂，比如内嵌对象。</p><p> 　　消息队列中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</p><p>　　一般有两种传递模式：点对点模式和发布/订阅模式。点对点模式是基于队列的，消息生产者发送消息到队列，消息消费者从队列中接收消息，队列的存在使得消息的异步传输称为可能。发布订阅模式定义了如何向一个内容节点发布和订阅消息，这个内容节点称为主题，主题可以认为是消息传递的中介，消息发布者将消息发布到某个主题，而消息订阅者从主题中订阅想消息。主题使得消息订阅者与消息的发布者互相保持独立，不需要进行接触即可保证消息的传递，发布/订阅模式在消息的一对多广播时采用。</p><p>　　比较流行的消息中间件有：RabbitMQ、Kafka、ActiveMQ、RocketMQ等。</p><p>　　消息中间件适用于需要可靠的数据传送的分布式环境。采用消息中间件的系统中，不同的对象之间通过传递消息来激活对方的事件，已完成相应的操作。发送者将消息发送给消息服务器，消息服务器将消息存放在若干队列中，在合适的时候，再将消息转发给接收者。</p><h2 id="1-2-消息中间件的作用"><a href="#1-2-消息中间件的作用" class="headerlink" title="1.2 消息中间件的作用"></a>1.2 消息中间件的作用</h2><p>　　解耦：在项目启动之初来预测将来会碰到什么需求是极其困难的。消息中间件在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口，这允许你独立地扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束即可。</p><p>　　冗余（存储）：有些情况下，处理数据的过程会失败。消息中间件可以把数据进行持久化直到它们已经被完全处理，通过这一方式规避了数据丢失风险。</p><p> 　　扩展性：因为消息中间件解耦了应用程序的处理过程，所以提高消息入队和处理的效率是很容易的，只要另外增加处理过程即可，不需要改变代码，也不需要调节参数。</p><p>　　削峰：在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流量并不常见。如果以能处理这类峰值为标准而投入资源，无疑是巨大的浪费。使用消息中间件能够使关键组件支撑突发方访压力，不会因为突发的超负荷请求而完全奔溃。</p><p>　　可恢复性：当系统一部分组件失效时，不会影响到整个系统，消息中间件降低了进程间的耦合度，所以即使一个处理消息的进程挂掉，加入消息中间件中的消息仍然可以在系统恢复后进行处理。</p><p>　　顺序保证：在大多数情景下，数据处理的顺序很重要，大部分消息中间件支持一定程度上的顺序性。</p><p>　　缓冲：在任何重要的系统中，都会存在需要不同处理时间的元素。消息中间件通过一个缓冲层来帮助任务最高效率地执行，写入消息中间件的处理会尽可能快速。该缓冲层有助于控制和优化数据流经过系统的速度。</p><p>　　异步通信：在很多时候应用不想在不需要立即处理消息。消息中间件提供了异步处理机制，允许应用把一些消息放入消息中间件中，但不立即处理它，在之后需要的时候再慢慢处理。</p><h2 id="1-3-RabbitMQ的起源"><a href="#1-3-RabbitMQ的起源" class="headerlink" title="1.3 RabbitMQ的起源"></a>1.3 RabbitMQ的起源</h2><p>　　RabbitMQ是采用Erlang语言实现的AMQP（Advanced Message Queuing Protocol，高级消息队列协议）的消息 中间件，它最初起源于金融系统，用于在分布式系统中存储转发消息。</p><h2 id="1-4-RabbitMQ的安装及简单实用"><a href="#1-4-RabbitMQ的安装及简单实用" class="headerlink" title="1.4 RabbitMQ的安装及简单实用"></a>1.4 RabbitMQ的安装及简单实用</h2><p>　　本示例演示在ubuntu18.04.3中安装和使用rabbitMQ</p><blockquote><p>sudo apt-get update -y<br>sudo apt-get install erlang-nox rabbitmq-server -y<br>sudo rabbitmq-server start<br>sudo rabbitmq-server stop<br>sudo rabbitmq-server restart<br>sudo rabbitmqctl status</p><p>添加用户并且赋予权限</p><p>sudo rabbitmqctl add_user admin admin<br>sudo rabbitmqctl set_user_tags admin administrator<br>sudo rabbitmqctl  set_permissions -p / admin ‘.<em>‘ ‘.</em>‘ ‘.*’<br>sudo rabbitmq-plugins enable rabbitmq_management</p><p>sudo rabbitmqctl change_password admin ‘admin’</p></blockquote><h1 id="第二章-RabbitMQ-入门"><a href="#第二章-RabbitMQ-入门" class="headerlink" title="第二章 RabbitMQ 入门"></a>第二章 RabbitMQ 入门</h1><h2 id="2-1-相关概念介绍"><a href="#2-1-相关概念介绍" class="headerlink" title="2.1 相关概念介绍"></a>2.1 相关概念介绍</h2><p>　　RabbitMQ整体上市一个是生产者与消费者模型。主要负责接收、存储和转发消息。</p><p>　　RabbitMQ的整体模型架构如下图所示：</p><p>　　<img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200116100133957-524774026.png" alt="img"></p><h2 id="2-1-1-生产者和消费者"><a href="#2-1-1-生产者和消费者" class="headerlink" title="2.1.1 生产者和消费者"></a>2.1.1 生产者和消费者</h2><p>　　Producer：生产者，就是投递消息的一方。消息一般可以包含2个部分：消息体和标签（Label）。消息体也可以称之为payload，在实际应用中，消息体一般是一个带有业务逻辑结构的数据，比如一个JSON字符串。</p><p>　　Consumer：消费者，就算是接收消息的一方。</p><p>　　Broker：消息中间件的服务节点。</p><p>　　对于RabbitMQ来说，一个RabbitMQ Broker可以简单地看作一个RabbitMQ服务节点，或者RabbitMQ服务实例。大多数情况下也可以将一个RabbitMQ Broker看作一台RabbitMQ服务器。</p><p>　　下图展示了生产者将消息存入RabbitMQ Broker，以及消费者从Broker中消费数据的整个流程。</p><p>　　<img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200116101001502-1945693905.png" alt="img"></p><p> 2.1.2 队列</p><p>Queue：队列，是RabbitMQ的内部对象，用于存储消息。</p><p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117113432130-466580577.png" alt="img"></p><p> RabbitMQ中消息都只能存储在队列中。U盾讴歌消费者可以订阅同一个队列，这时队列中的消息会被平均分摊（Round-Robin，即轮询）给多个消费者进行处理，而不是每个消费者都收到所有的消息并处理。</p><p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117114049922-590796568.png" alt="img"></p><p> RabbitMQ不支持队列层面的广播消息，如果需要广播消息，需要在其上进行二次开发，处理逻辑会变得异常复杂，同时也不建议这么做。</p><p>2.1.3 交换器、路由件、绑定</p><p>Exchange：交换器。生产者将消息发送到Exchange（交换器，通常也可以用大写的“X”来表示）。由交换器将消息路由到一个或者多个队列中。如果路由不到，或许会返回给生产者，或许直接丢弃。</p><p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117114708911-1388748529.png" alt="img"></p><p> RoutingKey：路右键。生产者将消息发给交换器的时候，一般会指定一个RoutingKey，用来指定这个消息的路由规则，而这个Routing Key需要与交换器类型和绑定建（BindingKey）联合使用才能最终生效。</p><p>在交换器类型和绑定建（BindingKey）固定的情况下，生产者可以发送消息给交换器时，通过指定RoutingKey来决定消息流向哪里。</p><p>备注：本文转载于<a href="https://www.cnblogs.com/yuzhou133/p/12197311.html">https://www.cnblogs.com/yuzhou133/p/12197311.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> RabbitMQ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RabbitMQ </tag>
             
         </tags>
       
@@ -137,31 +270,6 @@
     
     
     <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Hello MyBlog</title>
       <link href="2021/02/17/hello-myblog/"/>
       <url>2021/02/17/hello-myblog/</url>
@@ -183,6 +291,31 @@
             <tag> hexo </tag>
             
             <tag> github gage </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c/c-10th/"/>
+      <url>2021/02/17/c/c-10th/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# </tag>
             
         </tags>
       
@@ -216,23 +349,23 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c/c-10th/"/>
-      <url>2021/02/17/c/c-10th/</url>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
       
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
       
       
       <categories>
           
-          <category> c# </category>
+          <category> blog </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> c# </tag>
+            <tag> blog </tag>
             
         </tags>
       

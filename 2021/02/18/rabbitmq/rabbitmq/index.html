@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="c# 高级编程(10th) 第六章 泛型, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
+    <meta name="keywords" content="RabbitMQ, IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta name="description" content="IT 学习 资源站 C# .net core EF Javascript Flutter TypeScript 数据结构 算法 网络">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>c# 高级编程(10th) 第六章 泛型 | IT 学习 资源站</title>
+    <title>RabbitMQ | IT 学习 资源站</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">c# 高级编程(10th) 第六章 泛型</h1>
+                    <h1 class="description center-align post-title">RabbitMQ</h1>
                 </div>
             </div>
         </div>
@@ -338,12 +338,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/c/">
-                                <span class="chip bg-color">c#</span>
-                            </a>
-                        
-                            <a href="/tags/%E6%B3%9B%E5%9E%8B/">
-                                <span class="chip bg-color">泛型</span>
+                            <a href="/tags/RabbitMQ/">
+                                <span class="chip bg-color">RabbitMQ</span>
                             </a>
                         
                     </div>
@@ -354,8 +350,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/c/" class="post-category">
-                                c#
+                            <a href="/categories/RabbitMQ/" class="post-category">
+                                RabbitMQ
                             </a>
                         
                     </div>
@@ -388,46 +384,48 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="c-语言-第六章-泛型"><a href="#c-语言-第六章-泛型" class="headerlink" title="c#语言 第六章 泛型"></a>c#语言 第六章 泛型</h1><h2 id="6-1泛型概述"><a href="#6-1泛型概述" class="headerlink" title="6.1泛型概述"></a>6.1泛型概述</h2><p>​        有了泛型就可以创建独立于被包含类型的类和方法，不必给不同的类型编写功能相同的许多方法或类，只创建一个方法和类即可</p>
-<p>​        另一个减少代码的选项是使用object类，但使用派生自object类的类型进行传递不是类型安全的</p>
-<p>​        泛型使用泛型类型，根据需要用特定的类型替换泛型类型，保证了类型安全性</p>
-<h3 id="6-1-1-性能"><a href="#6-1-1-性能" class="headerlink" title="6.1.1 性能"></a>6.1.1 性能</h3><p>​        对值类型使用非泛型集合类，则在把值类型转换为引用类型和把引用类型转换为值类型时，需要进行装箱和拆箱操作。操作很容易，但是性能损失比较大，遍历许多项时尤其如此。</p>
-<p>​        使用List<T>定义泛型为int时，就不需要再进行装箱和拆箱操作。</p>
-<h3 id="6-1-2类型安全"><a href="#6-1-2类型安全" class="headerlink" title="6.1.2类型安全"></a>6.1.2类型安全</h3><p>​        泛型类List<T>中，泛型类型T定义了允许使用过的类型，有了List<int> 的定义，就只能把证书类型添加到集合中。</p>
-<h3 id="6-1-3二进制代码的重用"><a href="#6-1-3二进制代码的重用" class="headerlink" title="#6.1.3二进制代码的重用"></a>#6.1.3二进制代码的重用</h3><p>​        泛型允许更好的重用二进制代码，泛型类可以定义一次，并且可以用许多不同的类型实例化。</p>
-<h3 id="6-1-4代码的扩展"><a href="#6-1-4代码的扩展" class="headerlink" title="6.1.4代码的扩展"></a>6.1.4代码的扩展</h3><p>​        JIT编译器会把泛型类型编译为本地代码时，会给每个值类型创建一个新类</p>
-<h3 id="6-1-5命名约定"><a href="#6-1-5命名约定" class="headerlink" title="6.1.5命名约定"></a>6.1.5命名约定</h3><p>​        泛型类型的命名名称用字母T作为前缀</p>
-<p>​        如果没有特需要求，泛型类型允许用任意类代替</p>
-<p>​        如果泛型类型有特殊要求，（必须实现一个借口）或使用多个泛型类型，就应给泛型类型使用描述性的名称</p>
-<h2 id="6-2创建泛型类"><a href="#6-2创建泛型类" class="headerlink" title="6.2创建泛型类"></a>6.2创建泛型类</h2><p>​    每个处理兑现类型的类都可以有泛型的实现方式，另外，如果类使用了层次结构，泛型就非常有助于消除类型强制转换操作</p>
-<h2 id="6-3泛型类的功能"><a href="#6-3泛型类的功能" class="headerlink" title="6.3泛型类的功能"></a>6.3泛型类的功能</h2><h3 id="6-3-1默认值"><a href="#6-3-1默认值" class="headerlink" title="6.3.1默认值"></a>6.3.1默认值</h3><p>​    不能把null赋值非泛型类型，因为泛型类型也可以实例化为值类型，而null只能用于引用;</p>
-<p>​    使用default关键字，将null值赋予引用类型，将0赋予值类型</p>
-<h3 id="6-3-2约束"><a href="#6-3-2约束" class="headerlink" title="6.3.2约束"></a>6.3.2约束</h3><p>​    如果泛型需要调用泛型类型中的方法，就必须添加约束</p>
-<p>​    泛型支持的几种约束</p>
-<p>​        where T:struct  必须是值类型</p>
-<p>​        where T:class 必须是引用类型</p>
-<p>​        where T:IFoo 必须是实现接口IFoo</p>
-<p>​        where T:Foo 必须是派生自Foo</p>
-<p>​        where T:new() 构造函数约束，指定T必须有一个默认构造函数</p>
-<p>​        where T1:T2  类型T1派生自泛型类型T2</p>
-<h3 id="6-3-3-继承"><a href="#6-3-3-继承" class="headerlink" title="6.3.3 继承"></a>6.3.3 继承</h3><p>​        泛型类可以实现泛型接口，也可以派生自一个类，泛型类可以派生自泛型类</p>
-<p>​        要求必须重复接口的泛型类型，或者必须制定基类的类型</p>
-<p>​        派生类可以是泛型类型或非泛型类型</p>
-<h3 id="6-3-4静态成员"><a href="#6-3-4静态成员" class="headerlink" title="6.3.4静态成员"></a>6.3.4静态成员</h3><h2 id="6-4泛型接口"><a href="#6-4泛型接口" class="headerlink" title="6.4泛型接口"></a>6.4泛型接口</h2><p>6.4.1协变和抗变</p>
-<p>.net 4之前泛型接口是不变的，。net4通过协变和抗变为泛型接口和泛型委托添加了一个重要的扩展。</p>
-<p>协变和抗变指对参数和返回值的类型进行转换</p>
-<p>6.4.2泛型接口的协变</p>
-<p>​        如果泛型类型用out关键字标注，泛型接口是协变得。这也意味着返回类型只能是T</p>
-<p>6.4.3泛型接口的抗变</p>
-<p>​        如果泛型类型用in关键字标注，泛型接口是抗变的。这也意味着输入只能是T</p>
-<h2 id="6-5泛型结构"><a href="#6-5泛型结构" class="headerlink" title="6.5泛型结构"></a>6.5泛型结构</h2><p>Nullable<T>  =&gt;Nullable<int> =&gt; int?</p>
+                <h1 id="第一章-RabbitMQ简介"><a href="#第一章-RabbitMQ简介" class="headerlink" title="第一章 RabbitMQ简介"></a>第一章 RabbitMQ简介</h1><h2 id="1-1-什么是消息中间件"><a href="#1-1-什么是消息中间件" class="headerlink" title="1.1 什么是消息中间件"></a>1.1 什么是消息中间件</h2><p> 　　消息是指在应用间传送的数据。消息可以非常简单，比如只包含文本字符串、Json等，也可以很复杂，比如内嵌对象。</p>
+<p> 　　消息队列中间件是指利用高效可靠的消息传递机制进行与平台无关的数据交流，并基于数据通信来进行分布式系统的集成。通过提供消息传递和消息排队模型，它可以在分布式环境下扩展进程间的通信。</p>
+<p>　　一般有两种传递模式：点对点模式和发布/订阅模式。点对点模式是基于队列的，消息生产者发送消息到队列，消息消费者从队列中接收消息，队列的存在使得消息的异步传输称为可能。发布订阅模式定义了如何向一个内容节点发布和订阅消息，这个内容节点称为主题，主题可以认为是消息传递的中介，消息发布者将消息发布到某个主题，而消息订阅者从主题中订阅想消息。主题使得消息订阅者与消息的发布者互相保持独立，不需要进行接触即可保证消息的传递，发布/订阅模式在消息的一对多广播时采用。</p>
+<p>　　比较流行的消息中间件有：RabbitMQ、Kafka、ActiveMQ、RocketMQ等。</p>
+<p>　　消息中间件适用于需要可靠的数据传送的分布式环境。采用消息中间件的系统中，不同的对象之间通过传递消息来激活对方的事件，已完成相应的操作。发送者将消息发送给消息服务器，消息服务器将消息存放在若干队列中，在合适的时候，再将消息转发给接收者。</p>
+<h2 id="1-2-消息中间件的作用"><a href="#1-2-消息中间件的作用" class="headerlink" title="1.2 消息中间件的作用"></a>1.2 消息中间件的作用</h2><p>　　解耦：在项目启动之初来预测将来会碰到什么需求是极其困难的。消息中间件在处理过程中间插入了一个隐含的、基于数据的接口层，两边的处理过程都要实现这一接口，这允许你独立地扩展或修改两边的处理过程，只要确保它们遵守同样的接口约束即可。</p>
+<p>　　冗余（存储）：有些情况下，处理数据的过程会失败。消息中间件可以把数据进行持久化直到它们已经被完全处理，通过这一方式规避了数据丢失风险。</p>
+<p> 　　扩展性：因为消息中间件解耦了应用程序的处理过程，所以提高消息入队和处理的效率是很容易的，只要另外增加处理过程即可，不需要改变代码，也不需要调节参数。</p>
+<p>　　削峰：在访问量剧增的情况下，应用仍然需要继续发挥作用，但是这样的突发流量并不常见。如果以能处理这类峰值为标准而投入资源，无疑是巨大的浪费。使用消息中间件能够使关键组件支撑突发方访压力，不会因为突发的超负荷请求而完全奔溃。</p>
+<p>　　可恢复性：当系统一部分组件失效时，不会影响到整个系统，消息中间件降低了进程间的耦合度，所以即使一个处理消息的进程挂掉，加入消息中间件中的消息仍然可以在系统恢复后进行处理。</p>
+<p>　　顺序保证：在大多数情景下，数据处理的顺序很重要，大部分消息中间件支持一定程度上的顺序性。</p>
+<p>　　缓冲：在任何重要的系统中，都会存在需要不同处理时间的元素。消息中间件通过一个缓冲层来帮助任务最高效率地执行，写入消息中间件的处理会尽可能快速。该缓冲层有助于控制和优化数据流经过系统的速度。</p>
+<p>　　异步通信：在很多时候应用不想在不需要立即处理消息。消息中间件提供了异步处理机制，允许应用把一些消息放入消息中间件中，但不立即处理它，在之后需要的时候再慢慢处理。</p>
+<h2 id="1-3-RabbitMQ的起源"><a href="#1-3-RabbitMQ的起源" class="headerlink" title="1.3 RabbitMQ的起源"></a>1.3 RabbitMQ的起源</h2><p>　　RabbitMQ是采用Erlang语言实现的AMQP（Advanced Message Queuing Protocol，高级消息队列协议）的消息 中间件，它最初起源于金融系统，用于在分布式系统中存储转发消息。</p>
+<h2 id="1-4-RabbitMQ的安装及简单实用"><a href="#1-4-RabbitMQ的安装及简单实用" class="headerlink" title="1.4 RabbitMQ的安装及简单实用"></a>1.4 RabbitMQ的安装及简单实用</h2><p>　　本示例演示在ubuntu18.04.3中安装和使用rabbitMQ</p>
 <blockquote>
-<p>int y1 = x1??0; </p>
+<p>sudo apt-get update -y<br>sudo apt-get install erlang-nox rabbitmq-server -y<br>sudo rabbitmq-server start<br>sudo rabbitmq-server stop<br>sudo rabbitmq-server restart<br>sudo rabbitmqctl status</p>
+<p>添加用户并且赋予权限</p>
+<p>sudo rabbitmqctl add_user admin admin<br>sudo rabbitmqctl set_user_tags admin administrator<br>sudo rabbitmqctl  set_permissions -p / admin ‘.<em>‘ ‘.</em>‘ ‘.*’<br>sudo rabbitmq-plugins enable rabbitmq_management</p>
+<p>sudo rabbitmqctl change_password admin ‘admin’</p>
 </blockquote>
-<h2 id="6-6泛型方法"><a href="#6-6泛型方法" class="headerlink" title="6.6泛型方法"></a>6.6泛型方法</h2><p>6.6.1泛型方法示例</p>
-<p>6.6.2带约束的泛型方法</p>
-<p>6.6.3带委托的泛型方法</p>
-<p>6.6.4泛型方法规范</p>
+<h1 id="第二章-RabbitMQ-入门"><a href="#第二章-RabbitMQ-入门" class="headerlink" title="第二章 RabbitMQ 入门"></a>第二章 RabbitMQ 入门</h1><h2 id="2-1-相关概念介绍"><a href="#2-1-相关概念介绍" class="headerlink" title="2.1 相关概念介绍"></a>2.1 相关概念介绍</h2><p>　　RabbitMQ整体上市一个是生产者与消费者模型。主要负责接收、存储和转发消息。</p>
+<p>　　RabbitMQ的整体模型架构如下图所示：</p>
+<p>　　<img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200116100133957-524774026.png" alt="img"></p>
+<h2 id="2-1-1-生产者和消费者"><a href="#2-1-1-生产者和消费者" class="headerlink" title="2.1.1 生产者和消费者"></a>2.1.1 生产者和消费者</h2><p>　　Producer：生产者，就是投递消息的一方。消息一般可以包含2个部分：消息体和标签（Label）。消息体也可以称之为payload，在实际应用中，消息体一般是一个带有业务逻辑结构的数据，比如一个JSON字符串。</p>
+<p>　　Consumer：消费者，就算是接收消息的一方。</p>
+<p>　　Broker：消息中间件的服务节点。</p>
+<p>　　对于RabbitMQ来说，一个RabbitMQ Broker可以简单地看作一个RabbitMQ服务节点，或者RabbitMQ服务实例。大多数情况下也可以将一个RabbitMQ Broker看作一台RabbitMQ服务器。</p>
+<p>　　下图展示了生产者将消息存入RabbitMQ Broker，以及消费者从Broker中消费数据的整个流程。</p>
+<p>　　<img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200116101001502-1945693905.png" alt="img"></p>
+<p> 2.1.2 队列</p>
+<p>Queue：队列，是RabbitMQ的内部对象，用于存储消息。</p>
+<p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117113432130-466580577.png" alt="img"></p>
+<p> RabbitMQ中消息都只能存储在队列中。U盾讴歌消费者可以订阅同一个队列，这时队列中的消息会被平均分摊（Round-Robin，即轮询）给多个消费者进行处理，而不是每个消费者都收到所有的消息并处理。</p>
+<p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117114049922-590796568.png" alt="img"></p>
+<p> RabbitMQ不支持队列层面的广播消息，如果需要广播消息，需要在其上进行二次开发，处理逻辑会变得异常复杂，同时也不建议这么做。</p>
+<p>2.1.3 交换器、路由件、绑定</p>
+<p>Exchange：交换器。生产者将消息发送到Exchange（交换器，通常也可以用大写的“X”来表示）。由交换器将消息路由到一个或者多个队列中。如果路由不到，或许会返回给生产者，或许直接丢弃。</p>
+<p><img src="https://img2018.cnblogs.com/blog/228038/202001/228038-20200117114708911-1388748529.png" alt="img"></p>
+<p> RoutingKey：路右键。生产者将消息发给交换器的时候，一般会指定一个RoutingKey，用来指定这个消息的路由规则，而这个Routing Key需要与交换器类型和绑定建（BindingKey）联合使用才能最终生效。</p>
+<p>在交换器类型和绑定建（BindingKey）固定的情况下，生产者可以发送消息给交换器时，通过指定RoutingKey来决定消息流向哪里。</p>
+<p>备注：本文转载于<a target="_blank" rel="noopener" href="https://www.cnblogs.com/yuzhou133/p/12197311.html">https://www.cnblogs.com/yuzhou133/p/12197311.html</a></p>
 
                 
             </div>
@@ -444,7 +442,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                    <a href="/about" rel="external nofollow noreferrer">JiangYuesheng</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -454,7 +452,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-06/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/rabbitmq/rabbitmq/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/rabbitmq/rabbitmq/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -467,7 +465,7 @@
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">蒋岳生</a>
+                    <a href="/about" target="_blank">JiangYuesheng</a>
                     !
                 </span>
             </div>
@@ -492,12 +490,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/c/">
-                                    <span class="chip bg-color">c#</span>
-                                </a>
-                            
-                                <a href="/tags/%E6%B3%9B%E5%9E%8B/">
-                                    <span class="chip bg-color">泛型</span>
+                                <a href="/tags/RabbitMQ/">
+                                    <span class="chip bg-color">RabbitMQ</span>
                                 </a>
                             
                         </div>
@@ -673,13 +667,13 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/18/c/c-10th-07/">
+                <a href="/2021/02/18/c/c-10th-05/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="c# 高级编程(10th) 第七章 数组和元祖">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="c# 高级编程(10th)第五章 托管和非托管的资源">
                         
-                        <span class="card-title">c# 高级编程(10th) 第七章 数组和元祖</span>
+                        <span class="card-title">c# 高级编程(10th)第五章 托管和非托管的资源</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -711,8 +705,8 @@
                         <span class="chip bg-color">c#</span>
                     </a>
                     
-                    <a href="/tags/%E6%B3%9B%E5%9E%8B/">
-                        <span class="chip bg-color">泛型</span>
+                    <a href="/tags/%E6%89%98%E7%AE%A1/">
+                        <span class="chip bg-color">托管</span>
                     </a>
                     
                 </div>
@@ -726,13 +720,13 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/18/c/c-10th-05/">
+                <a href="/2021/02/17/c/c-10th-04/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="c# 高级编程(10th)第五章 托管和非托管的资源">
+                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="c# 高级编程(10th)第四章 继承">
                         
-                        <span class="card-title">c# 高级编程(10th)第五章 托管和非托管的资源</span>
+                        <span class="card-title">c# 高级编程(10th)第四章 继承</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -743,7 +737,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-17
                             </span>
                         <span class="publish-author">
                             
@@ -764,8 +758,8 @@
                         <span class="chip bg-color">c#</span>
                     </a>
                     
-                    <a href="/tags/%E6%89%98%E7%AE%A1/">
-                        <span class="chip bg-color">托管</span>
+                    <a href="/tags/%E7%BB%A7%E6%89%BF/">
+                        <span class="chip bg-color">继承</span>
                     </a>
                     
                 </div>
