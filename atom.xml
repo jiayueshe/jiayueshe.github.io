@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-18T06:18:29.035Z</updated>
+  <updated>2021-02-19T12:41:08.102Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-10/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-10/</id>
     <published>2021-02-18T15:32:00.000Z</published>
-    <updated>2021-02-18T06:18:29.035Z</updated>
+    <updated>2021-02-19T12:41:08.102Z</updated>
     
     
       
@@ -39,16 +39,16 @@
     
     <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
     
-    <category term="泛型" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    <category term="字符串和正则表达式" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
   <entry>
-    <title>c# 高级编程(10th) 第九章 委托、lambda表达式和事件</title>
+    <title>c# 高级编程(10th) 第九章 运算符和强制类型转换</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-09/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-09/</id>
     <published>2021-02-18T13:32:00.000Z</published>
-    <updated>2021-02-18T06:14:16.709Z</updated>
+    <updated>2021-02-19T12:41:03.574Z</updated>
     
     
       
@@ -66,7 +66,7 @@
     
     <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
     
-    <category term="泛型" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    <category term="运算符和强制类型转换" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
     
   </entry>
   
@@ -102,7 +102,7 @@
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-08/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c/c-10th-08/</id>
     <published>2021-02-18T10:32:00.000Z</published>
-    <updated>2021-02-18T06:10:13.473Z</updated>
+    <updated>2021-02-19T12:40:58.736Z</updated>
     
     
       
@@ -120,7 +120,7 @@
     
     <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
     
-    <category term="泛型" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%B3%9B%E5%9E%8B/"/>
+    <category term="运算符和强制类型转换" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/"/>
     
   </entry>
   
@@ -316,7 +316,7 @@
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-01/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-01/</id>
     <published>2021-02-17T01:25:00.000Z</published>
-    <updated>2021-02-17T13:22:50.553Z</updated>
+    <updated>2021-02-19T12:40:44.904Z</updated>
     
     
       
@@ -333,6 +333,8 @@
     
     
     <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c/"/>
+    
+    <category term=".net 应用程序体系结构" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/net-%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/"/>
     
   </entry>
   

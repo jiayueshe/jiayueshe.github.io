@@ -22,7 +22,7 @@
             
             <tag> c# </tag>
             
-            <tag> 泛型 </tag>
+            <tag> 字符串和正则表达式 </tag>
             
         </tags>
       
@@ -31,7 +31,7 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 第九章 委托、lambda表达式和事件</title>
+      <title>c# 高级编程(10th) 第九章 运算符和强制类型转换</title>
       <link href="2021/02/18/c/c-10th-09/"/>
       <url>2021/02/18/c/c-10th-09/</url>
       
@@ -49,7 +49,7 @@
             
             <tag> c# </tag>
             
-            <tag> 泛型 </tag>
+            <tag> 运算符和强制类型转换 </tag>
             
         </tags>
       
@@ -103,7 +103,7 @@
             
             <tag> c# </tag>
             
-            <tag> 泛型 </tag>
+            <tag> 运算符和强制类型转换 </tag>
             
         </tags>
       
@@ -316,6 +316,8 @@
         <tags>
             
             <tag> c# </tag>
+            
+            <tag> .net 应用程序体系结构 </tag>
             
         </tags>
       
