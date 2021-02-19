@@ -58,33 +58,6 @@
     
     
     <entry>
-      <title>c# 高级编程(10th) 第七章 数组和元祖</title>
-      <link href="2021/02/18/c/c-10th-07/"/>
-      <url>2021/02/18/c/c-10th-07/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-语言-第七章-数组和元祖"><a href="#c-语言-第七章-数组和元祖" class="headerlink" title="c#语言 第七章 数组和元祖"></a>c#语言 第七章 数组和元祖</h1><p>7.1 同一类型Array和不同类型Tuple的多个对象</p><p>7.2简单数组</p><p>7.2.1数组的声明</p><p>7.2.2数组的初始化</p><p>7.2.3访问数组元素</p><p>7.2.4使用引用类型</p><p>7.3多维数组</p><p>7.4锯齿数组</p><p>7.5Array类</p><p>7.5.1创建数组</p><p>7.5.2复制数组</p><p>7.5.3排序</p><p>7.6数组作为参数</p><p>7.6.1数组协变</p><p>7.6.2ArraySegment<T></p><p>7.7枚举</p><p>7.7.1IEnumrtator接口</p><p>7.7.2foreach语句</p><p>7.7.3yield语句</p><p>7.8元祖</p><p>7.9结构比较</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# </tag>
-            
-            <tag> 泛型 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>c# 高级编程(10th) 第八章 运算符和强制类型转换</title>
       <link href="2021/02/18/c/c-10th-08/"/>
       <url>2021/02/18/c/c-10th-08/</url>
@@ -299,6 +272,31 @@
     
     
     <entry>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c/c-10th-01/"/>
       <url>2021/02/17/c/c-10th-01/</url>
@@ -318,31 +316,6 @@
             <tag> c# </tag>
             
             <tag> .net 应用程序体系结构 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
             
         </tags>
       
