@@ -381,14 +381,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    318
+                    3.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    13 分
                 </div>
                 
 
@@ -408,36 +408,476 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="c-语言-第八章-运算符和强制类型转换"><a href="#c-语言-第八章-运算符和强制类型转换" class="headerlink" title="c#语言 第八章 运算符和强制类型转换"></a>c#语言 第八章 运算符和强制类型转换</h1><p>8.1运算符和类型转换</p>
-<p>8.2运算符</p>
-<p>8.2.1运算符的简化操作</p>
-<p>条件运算符</p>
-<p>checked和unchecked运算符</p>
-<p>is运算符</p>
-<p>as运算符</p>
-<p>sizefof运算符</p>
-<p>typeof运算符</p>
-<p>namefo运算符</p>
-<p>index运算符</p>
-<p>可控类型和运算符</p>
-<p>空合并运算符</p>
-<p>空值传播运算符</p>
-<p>8.2.2运算符的优先级和关联性</p>
-<p>8.3类型的安全性</p>
-<p>8.3.1类型转换</p>
-<p>隐式转换</p>
-<p>显示转换</p>
-<p>8.3.2装箱和拆箱</p>
-<p>8.4比较对象的相等性</p>
-<p>8.4.1比较引用类型的相等性</p>
-<p>8.4.2比较值类型的相等性</p>
-<p>8.5运算符重载</p>
-<p>8.5.1运算符的工作方式</p>
-<p>8.5.2运算符重载的示例</p>
-<p>8.5.3比较运算符的重载</p>
-<p>8.5.4可以重载的运算符</p>
-<p>8.6实现自定义的额索引运算符</p>
+                <h1 id="c-语言-第八章-运算符和强制类型转换"><a href="#c-语言-第八章-运算符和强制类型转换" class="headerlink" title="c#语言 第八章 运算符和强制类型转换"></a>c#语言 第八章 运算符和强制类型转换</h1><h2 id="本章要点："><a href="#本章要点：" class="headerlink" title="本章要点："></a>本章要点：</h2><p>​    c#中的运算符</p>
+<p>​    使用c#6的新运算符nameof和控制传播</p>
+<p>​    隐式和显示转换</p>
+<p>​    使用装箱技术把值类型转换为引用类型</p>
+<p>​    比较值类型和引用类型</p>
+<p>​    重载标准的运算符以支持自定义类型</p>
+<p>​    实现索引运算符</p>
+<p>​    通过类型强制转换在引用类型之间的转换</p>
+<h2 id="8-1运算符和类型转换"><a href="#8-1运算符和类型转换" class="headerlink" title="8.1运算符和类型转换"></a>8.1运算符和类型转换</h2><h2 id="8-2运算符"><a href="#8-2运算符" class="headerlink" title="8.2运算符"></a>8.2运算符</h2><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>运算符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>算术运算符</td>
+<td>+ - * / %</td>
+</tr>
+<tr>
+<td>逻辑运算符</td>
+<td>&amp; | ^ ~ &amp;&amp; || !</td>
+</tr>
+<tr>
+<td>字符串连接运算符</td>
+<td>+</td>
+</tr>
+<tr>
+<td>增量和减量运算符</td>
+<td>++ –</td>
+</tr>
+<tr>
+<td>移位运算符</td>
+<td>&lt;&lt; &gt;&gt;</td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td>== != &lt; &gt; &lt;= &gt;=</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>= += -= *= /= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;=</td>
+</tr>
+<tr>
+<td>成员访问运算符（用于对象和结构）</td>
+<td>.</td>
+</tr>
+<tr>
+<td>索引运算符（用于数组和索引器）</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>类型转换运算符</td>
+<td>()</td>
+</tr>
+<tr>
+<td>条件运算符（三元运算符）</td>
+<td>?:</td>
+</tr>
+<tr>
+<td>委托连接和删除运算符</td>
+<td>+ -</td>
+</tr>
+<tr>
+<td>对象创建运算符</td>
+<td>new</td>
+</tr>
+<tr>
+<td>类型信息运算符</td>
+<td>sizeof is typeof as</td>
+</tr>
+<tr>
+<td>溢出异常控制运算符</td>
+<td>checked unchecked</td>
+</tr>
+<tr>
+<td>间接寻址运算符</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>名称空间别名限定符</td>
+<td>::</td>
+</tr>
+<tr>
+<td>空合并运算符</td>
+<td>??</td>
+</tr>
+</tbody></table>
+<p>​        有4个运算符（sizeof()、*、-&gt;和&amp;）只能用于不安全的代码（这些代码忽略了c#的类型安全性检查），这些不安全的代码见第五章细节</p>
+<p>​        c#中很少用到指针，因此很少用到间接寻址运算符（-&gt;）。</p>
+<h3 id="8-2-1运算符的简化操作"><a href="#8-2-1运算符的简化操作" class="headerlink" title="8.2.1运算符的简化操作"></a>8.2.1运算符的简化操作</h3><p>​        x+=y等同于x=x+y，赋值运算符中（+= -= *= /= %= &amp;= |= ^= &lt;&lt;= &gt;&gt;=）都是相同的模式。</p>
+<p>​        当x++和++x单独一行时等同于x=x+1。当他们用于较长的表达式内部时，运算符放在前面（++x）会在计算表达式之前增加x。</p>
+<blockquote>
+<p>int x = 0,y=0;</p>
+<p>x++;</p>
+<p>++y;</p>
+<p>if (x==y)</p>
+<p>{</p>
+<p>   Console.WriteLine(“单独一行++在前在后结果一样”);</p>
+<p>}</p>
+<p>if (++x==2)</p>
+<p>{</p>
+<p>   Console.WriteLine(“++在前提前计算”);</p>
+<p>}</p>
+<p>if (y++==2)</p>
+<p>{</p>
+<pre class=" language-c#"><code class="language-c#">Console.WriteLine("++在后没有提前计算");
+</code></pre>
+<p>}</p>
+</blockquote>
+<h4 id="（1）条件运算符"><a href="#（1）条件运算符" class="headerlink" title="（1）条件运算符"></a>（1）<strong>条件运算符</strong></h4><p>​        条件运算符（?:）也称单元运算符，是if…else的简化形式。它判断一个条件真假来返回对应的值（为真返回:之前的值，为假返回:之后的值）。</p>
+<blockquote>
+<pre><code>int x = 0;
+
+string str = x == 0 ? &quot;x等于0&quot; : &quot;x不等于0&quot;;
+
+Console.WriteLine(str)
+</code></pre>
+</blockquote>
+<h4 id="（2）checked运算符和unchecked运算符"><a href="#（2）checked运算符和unchecked运算符" class="headerlink" title="（2）checked运算符和unchecked运算符"></a>（2）<strong>checked运算符和unchecked运算符</strong></h4><p>​        C#提供checked运算符和unchecked运算符，来对一个代码块进行标记，是否执行溢出检查。</p>
+<blockquote>
+<pre><code>byte x = 255;
+
+x++;
+
+Console.WriteLine(x);
+</code></pre>
+</blockquote>
+<p>​        运行以上代码，结果如下：</p>
+<p> <img src="https://images2015.cnblogs.com/blog/682781/201703/682781-20170327225436358-244304394.png" alt="img"></p>
+<p>​        这是因为，C#默认使用unchecked运算符不对溢出执行检查，这会导致数据丢失（byte不能超过255，溢出的位会丢失，所以结果为0）。</p>
+<p>​        如果要防止溢出导致的数据丢失，可以使用checked运算符对代码块进行标记。</p>
+<blockquote>
+<p>byte x = 255;</p>
+<p>checked</p>
+<p>{</p>
+<p>   x++;</p>
+<p>}</p>
+<p>Console.WriteLine(x);</p>
+</blockquote>
+<p>​    运行以上代码，结果如下：</p>
+<p> <img src="https://images2015.cnblogs.com/blog/682781/201703/682781-20170327225448951-1311569589.png" alt="img"></p>
+<p>​    程序会抛出异常，这个时候我们就能捕捉异常，来防止溢出丢失数据。</p>
+<h4 id="（3）is运算符"><a href="#（3）is运算符" class="headerlink" title="（3）is运算符"></a><strong>（3）is运算符</strong></h4><p>​        Is运算符检查对象是否与特定类型兼容（是该类型或者派生自该类型）。</p>
+<blockquote>
+<p>int x = 0;</p>
+<p>if (x is object)</p>
+<p>{</p>
+<p>   Console.WriteLine(“x是object类型或派生自object的类型”);</p>
+<p>}</p>
+</blockquote>
+<h4 id="（4）as运算符"><a href="#（4）as运算符" class="headerlink" title="（4）as运算符"></a>（4）<strong>as运算符</strong></h4><p>​        as运算符用于执行引用类型的显式类型转换。如果要转换的类型与指定的类型兼容，转换就会成功；如果不兼容，as运算符就会返回null。</p>
+<blockquote>
+<p>object obj1 = “字符串”;</p>
+<p>object obj2 = 0;</p>
+<p>string str1 = obj1 as string;</p>
+<p>string str2 = obj2 as string;</p>
+<p>Console.WriteLine(“obj1 as string转换结果：” + str1);</p>
+<p>Console.WriteLine(“obj2 as string转换结果：” + str2);</p>
+</blockquote>
+<p>​        运行以上代码，结果如下：</p>
+<p> <img src="https://images2015.cnblogs.com/blog/682781/201703/682781-20170327225525951-930522724.png" alt="img"></p>
+<p>​        as运算符允许在一步中执行安全的类型转换，不需要先使用is运算符测试类型，再执行转换。</p>
+<h4 id="（5）sizeof运算符"><a href="#（5）sizeof运算符" class="headerlink" title="（5）sizeof运算符"></a>（5）<strong>sizeof运算符</strong></h4><p>​        使用sizeof运算符可以确定栈中值类型的长度（单位是字节）：</p>
+<blockquote>
+<pre><code>Console.WriteLine(sizeof(int));//4
+</code></pre>
+</blockquote>
+<h4 id="（6）typeof运算符"><a href="#（6）typeof运算符" class="headerlink" title="（6）typeof运算符"></a>（6）<strong>typeof运算符</strong></h4><p>​        typeof运算符返回一个表示特定类型的System.Type对象。例如，typeof(string)返回表示System.String类型的Type类型。在使用反射技术动态地查找对象的信息时，这个运算符很有用。</p>
+<h4 id="7-nameof运算符"><a href="#7-nameof运算符" class="headerlink" title="(7)nameof运算符"></a>(7)nameof运算符</h4><p>​        nameof是新的c#6运算符，该运算符接受一个符号、属性或方法，并返回其名称</p>
+<h4 id="8-index运算符"><a href="#8-index运算符" class="headerlink" title="(8)index运算符[]"></a>(8)index运算符[]</h4><blockquote>
+<p>int x = arr[2];</p>
+</blockquote>
+<h4 id="9-可空类型和运算符"><a href="#9-可空类型和运算符" class="headerlink" title="(9)可空类型和运算符"></a>(9)可空类型和运算符</h4><p>如果在程序中使用可空类型，就必须考虑null值与各种运算符一起使用时的影响。</p>
+<blockquote>
+<pre><code>int? x = null;
+
+int? y = x + 1;//null
+</code></pre>
+</blockquote>
+<h4 id="10-空合并运算符"><a href="#10-空合并运算符" class="headerlink" title="(10)空合并运算符"></a>(10)<strong>空合并运算符</strong></h4><p>​        空合并运算符（??）提供了一种快捷方式，可以在处理可空类型和引用类型时表示null可能的值。</p>
+<p>例子：</p>
+<blockquote>
+<p>int? x = null;</p>
+<p>int y;</p>
+<p>y = x ?? 0;</p>
+<p>Console.WriteLine(y);</p>
+</blockquote>
+<h4 id="11-空值传播运算符"><a href="#11-空值传播运算符" class="headerlink" title="(11)空值传播运算符"></a>(11)空值传播运算符</h4><blockquote>
+<p>public void ShowPerson(Person p){</p>
+<p>​    string firstName = p?.FirstName;</p>
+<p>}</p>
+</blockquote>
+<h3 id="8-2-2运算符的优先级和关联性"><a href="#8-2-2运算符的优先级和关联性" class="headerlink" title="8.2.2运算符的优先级和关联性"></a>8.2.2运算符的优先级和关联性</h3><p>优先级由上到下依次递减</p>
+<table>
+<thead>
+<tr>
+<th>组</th>
+<th>运算符</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>初级运算符</td>
+<td>() . [] x++ x– new typeof sizeof checked unchecked</td>
+</tr>
+<tr>
+<td>一元运算符</td>
+<td>+ - ! ~ ++x –x 和数据类型强制转换</td>
+</tr>
+<tr>
+<td>乘除运算符</td>
+<td>* / %</td>
+</tr>
+<tr>
+<td>加减运算符</td>
+<td>+ -</td>
+</tr>
+<tr>
+<td>移位运算符</td>
+<td>&lt;&lt; &gt;&gt;</td>
+</tr>
+<tr>
+<td>关系运算符</td>
+<td>&lt; &gt; &gt;= &lt;= is as</td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td>== !=</td>
+</tr>
+<tr>
+<td>按位AND运算符</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>按位XOR运算符</td>
+<td>^</td>
+</tr>
+<tr>
+<td>按位OR运算符</td>
+<td>|</td>
+</tr>
+<tr>
+<td>布尔AND运算符</td>
+<td>&amp;&amp;</td>
+</tr>
+<tr>
+<td>布尔OR运算符</td>
+<td>||</td>
+</tr>
+<tr>
+<td>条件运算符</td>
+<td>?:</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>= += -= *= /= %= &amp;= |= ^= &lt;&lt;== &gt;&gt;= &gt;&gt;&gt;=</td>
+</tr>
+</tbody></table>
+<p>​        除了运算符优先级外，对于二元运算符，需要注意运算符是从左到右还是从右到左计算，除了少数运算符外，所有的运算符都是做关联的。例如</p>
+<blockquote>
+<p>x+y+z  就等于 （x+y）+z</p>
+</blockquote>
+<p>​        <strong>关联性的重要例外就是赋值运算符，他们是右关联的</strong>。例如</p>
+<blockquote>
+<p>x=y=z=3  从右向左赋值，所以x、y、z的值都是3</p>
+</blockquote>
+<p>​        <strong>一个重要的，可能误导的有关联运算符是条件运算符</strong></p>
+<blockquote>
+<p>a?b:c?d:e   </p>
+<p>等于</p>
+<p>a=b:(c?d:e)</p>
+</blockquote>
+<p>​        在复杂的表达式中，应避免利用运算符优先级来生成正确的结果，使用圆括号制定运算符的执行顺序，可以是代码更整洁，避免出现潜在的冲突。</p>
+<h2 id="8-3类型的安全性"><a href="#8-3类型的安全性" class="headerlink" title="8.3类型的安全性"></a>8.3类型的安全性</h2><p>​        c#也支持不同引用类型之间的转换，在与其他类型相互转换时还允许定义所创建的数据类型的行为方式，</p>
+<h3 id="8-3-1类型转换"><a href="#8-3-1类型转换" class="headerlink" title="8.3.1类型转换"></a>8.3.1类型转换</h3><h4 id="隐式转换"><a href="#隐式转换" class="headerlink" title="隐式转换"></a>隐式转换</h4><p>​        只要保证值不会发生任何变化，类型转换就可以自动（隐式）进行。当值的数量级不受影响，而精度可能受到影响时，也可以进行隐式转换，因为编译器认为这是可以接受的错误。</p>
+<h4 id="显示转换"><a href="#显示转换" class="headerlink" title="显示转换"></a>显示转换</h4><p>​        当无法保证值不会发生任何变化时，就需要使用显式转换，否则编译器会报错。</p>
+<p>例子：</p>
+<p>​        long类型无法隐式的转换为int，但我们可以显式地进行转换</p>
+<blockquote>
+<pre><code>long lon = 1;
+
+int i = (int)lon;
+</code></pre>
+</blockquote>
+<p>​        显式转换是一种比较危险的操作，因为有可能造成溢出，这样导致结果与正确值不同。在进行隐式转换时，应使用checked运算符进行检查。</p>
+<h3 id="8-3-2装箱和拆箱"><a href="#8-3-2装箱和拆箱" class="headerlink" title="8.3.2装箱和拆箱"></a>8.3.2装箱和拆箱</h3><p>​    装箱用于描述一个值类型转换为引用类型</p>
+<blockquote>
+<pre><code>int i = 100;
+
+object obj = i;
+</code></pre>
+</blockquote>
+<p>​    拆箱用于描述相反的过程，其中以前装箱的值类型强制转换回值类型</p>
+<blockquote>
+<pre><code>int i = 100;
+
+object obj = i;
+
+int _i = (int)obj;
+</code></pre>
+</blockquote>
+<h2 id="8-4比较对象的相等性"><a href="#8-4比较对象的相等性" class="headerlink" title="8.4比较对象的相等性"></a>8.4比较对象的相等性</h2><p>​        对象相等的机制有所不同，这取决于比较的是引用类型（类的实例）还是值类型（基本数据类型、结构或枚举的实例）</p>
+<h3 id="8-4-1比较引用类型的相等性"><a href="#8-4-1比较引用类型的相等性" class="headerlink" title="8.4.1比较引用类型的相等性"></a>8.4.1比较引用类型的相等性</h3><p>（1）<strong>ReferenceEquals()方法</strong></p>
+<p>​        ReferenceEquals()是一个静态方法，测试两个引用是否引用类的同一个实例，特别是两个引用是否包含内存中的相同地址。最为静态方法，它不可重写。</p>
+<blockquote>
+<p>Person p1, p2;</p>
+<p>p1 = new Person();</p>
+<p>p2 = new Person();</p>
+<p>bool b1 = ReferenceEquals(null, null);</p>
+<p>bool b2 = ReferenceEquals(null, p1);</p>
+<p>bool b3 = ReferenceEquals(p1, p2);</p>
+<p>Console.WriteLine(“ReferenceEquals(null, null) 的结果：{0}”, b1);</p>
+<p>Console.WriteLine(“ReferenceEquals(null, p1) 的结果：{0}”, b2);</p>
+<p>Console.WriteLine(“ReferenceEquals(p1, p2) 的结果：{0}”, b3);</p>
+</blockquote>
+<p>（2）<strong>虚拟的Equals()方法</strong></p>
+<p>​        Equals()方法是虚拟方法，所以可以在自己的类中重写，从而按值来比较对象。</p>
+<p>（3）<strong>静态的Equals()方法</strong></p>
+<p>Equals()静态版本与其虚拟实例版本的作用相同，其区别是静态版本带有两个参数，并对它们进行相等性比较。</p>
+<p>（4）<strong>比较运算符==</strong></p>
+<p>​    最好将比较运算符看作严格的值比较和严格的引用比较之间的中间选项</p>
+<h3 id="8-4-2比较值类型的相等性"><a href="#8-4-2比较值类型的相等性" class="headerlink" title="8.4.2比较值类型的相等性"></a>8.4.2比较值类型的相等性</h3><p>​        在比较值类型的相等性时，采用与引用类型相同的规则：ReferenceEquals()用于比较引用，Equals()用于比较值，比较运算符可以看作一个中间选项。但最大的区别是值类型需要进行装箱，才能把它们转换为引用类型，进而才能对它们执行方法。</p>
+<p>​        在System.ValueType类中重载了实例方法Equals()，以便对值类型进行合适的相等性测试。</p>
+<h2 id="8-5运算符重载"><a href="#8-5运算符重载" class="headerlink" title="8.5运算符重载"></a>8.5运算符重载</h2><p>​        如果要对自定义的类使用运算符，就必须告诉编译器相关的运算符在这个类的上下文中的含义，此时就需要使用运算符重载。</p>
+<p>​        C#要求所有的运算符重载都声明为public和static，这表示它们与它们的类相关联而不是特定实例。重载运算符需要使用operator关键字。编译器处理运算符重载和处理方法重载是一样的。C#要求成对的重载比较运算符，且必须返回布尔值。</p>
+<blockquote>
+<p>public static decimal operator +(Person lhs, Person rhs)</p>
+<p>{</p>
+<pre><code>return lhs.Money + rhs.Money;
+</code></pre>
+<p>}</p>
+</blockquote>
+<h3 id="8-5-1运算符的工作方式"><a href="#8-5-1运算符的工作方式" class="headerlink" title="8.5.1运算符的工作方式"></a>8.5.1运算符的工作方式</h3><p>​        它们会根据参数类型查找最匹配的运算符重载。</p>
+<h3 id="8-5-2运算符重载的示例"><a href="#8-5-2运算符重载的示例" class="headerlink" title="8.5.2运算符重载的示例"></a>8.5.2运算符重载的示例</h3><h3 id="8-5-3比较运算符的重载"><a href="#8-5-3比较运算符的重载" class="headerlink" title="8.5.3比较运算符的重载"></a>8.5.3比较运算符的重载</h3><h3 id="8-5-4可以重载的运算符"><a href="#8-5-4可以重载的运算符" class="headerlink" title="8.5.4可以重载的运算符"></a>8.5.4可以重载的运算符</h3><table>
+<thead>
+<tr>
+<th>类别</th>
+<th>运算符</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>算术二元运算符</td>
+<td>+、*、/、-、%</td>
+<td>无</td>
+</tr>
+<tr>
+<td>算术一元运算符</td>
+<td>+、-、++、–</td>
+<td>无</td>
+</tr>
+<tr>
+<td>按位二元运算符</td>
+<td>&amp;、|、^、&lt;&lt;、&gt;&gt;</td>
+<td>无</td>
+</tr>
+<tr>
+<td>按位一元运算符</td>
+<td>!、~、true、false</td>
+<td>true和false运算符必须成对重载</td>
+</tr>
+<tr>
+<td>比较运算符</td>
+<td>==、!=、&gt;=、&lt;、&lt;=、&gt;</td>
+<td>比较运算符必须成对重载</td>
+</tr>
+<tr>
+<td>赋值运算符</td>
+<td>+=、-=、*=、/=、&gt;&gt;=、&lt;&lt;=、%=、&amp;=、|=、^=</td>
+<td>不能显式地重载这些运算符，在重写单个运算符（如+、-等）时，它们会被隐式地重写</td>
+</tr>
+<tr>
+<td>索引运算符</td>
+<td>[]</td>
+<td>不能直接重载索引运算符。索引器成员类型允许在类和结构上支持索引运算符。</td>
+</tr>
+<tr>
+<td>数据类型强制转换运算符</td>
+<td>()</td>
+<td>不能直接重载类型强制运算符。用户定义的类型强制转换允许定义定制的类型强制转换。</td>
+</tr>
+</tbody></table>
+<p>8.6实现自定义的索引运算符</p>
+<p>​    可以给自定义类创建一个索引器，索引器看起来非常类似于属性，因为它也包含get和set访问器。指定索引器要使用this关键字，this关键字后面的括号指定索引使用的类型。数组体用int类型的索引器，所以这里使用int类型直接把信息传递给包含的数组people。</p>
+<blockquote>
+<p>public Person this[int index]{</p>
+<p>​    get{return _people[index];}</p>
+<p>​    set{_people[index]=value;}</p>
+<p>}</p>
+</blockquote>
+<p>​        对于索引器，不能仅定义int类型作为索引类型。任何类型都是有效的。例如：</p>
+<blockquote>
+<p>public IEnumerable<Person> this[DateTime birthday]{</p>
+<p>​    get{ return _people.where(p=&gt;p.Birthday ==birthday);}</p>
+<p>}</p>
+</blockquote>
 <p>8.7实现用户定义的类型强制转换</p>
+<p>​        C#允许定义自己的数据类型（结构和类），这意味着需要某些工具支持在自定义的数据类型之间进行类型转换。方法是把类型强制转换运算符定义为相关类的成员运算符，类型强制装换运算符必须标记为隐式或显式，以说明希望如何使用它。我们应遵守与预定义的类型强制转换相同的规则，如果知道无论在元变量中存储什么值，类型强制转换总是安全的，就可以把它定义为隐式强制转换。然而，如果某些数值可能会出错，如丢失数据或抛出异常，就应把数据类型转换定义为显式强制转换。</p>
+<p>例子：</p>
+<p>显式关键字explicit，隐式关键字implicit</p>
+<blockquote>
+<p>class Program</p>
+<p>{</p>
+<pre><code>static void Main(string[] args)
+
+&#123;
+
+
+
+
+    Water water = new Water(100);
+
+    Ice ice = (Ice)water;//Water显示转换为Ice
+
+    Water water2 = ice;//Ice隐式转换为Water
+
+    Console.ReadKey();
+
+&#125;
+</code></pre>
+<p>}</p>
+<p>public class Water</p>
+<p>{</p>
+<pre><code>public int Volume &#123; get; set; &#125;
+
+public Water(int volume)
+
+&#123;
+
+    this.Volume = volume;
+
+&#125;
+
+public static explicit operator Ice(Water lhs)
+
+&#123;
+
+    return new Ice(lhs.Volume+1);
+
+&#125;
+</code></pre>
+<p>}</p>
+<p>public class Ice</p>
+<p>{</p>
+<pre><code>public int Volume &#123; get; set; &#125;
+
+public Ice(int volume)
+
+&#123;
+
+    this.Volume = volume;
+
+&#125;
+
+public static implicit operator Water(Ice lhs)
+
+&#123;
+
+    return new Water(lhs.Volume-1);
+
+&#125;
+</code></pre>
+<p>}</p>
+</blockquote>
+<p>​    定义不同结构或类的实例之间的类型强制转换时完全合法的，但有两个限制：</p>
+<ul>
+<li>如果某个类派生自另一个类，就不能定义这两个类之间的类型强制转换（这些类型的类型转换已经存在）。</li>
+<li>类型强制转换必须在源数据类型或目标数据类型的内部定义。</li>
+</ul>
+<p>​     C#要求把类型强制转换的定义放置在源类（或结构）或目标类（或结构）的内部。它的副作用是不能定义两个类之间的类型强制转换，除非至少可以编辑其中一个类的源代码。这是因为，这样可以防止第三方把类型转换引入类中。</p>
 <p>8.7.1实现用户定义的类型强制转换</p>
 <p>类之间的强制转换</p>
 <p>基类和派生类之间的类型强制转换</p>
@@ -889,7 +1329,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">13.4k</span>&nbsp;字
+                class="white-color">17.9k</span>&nbsp;字
             
             
             
