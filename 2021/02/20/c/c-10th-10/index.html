@@ -338,12 +338,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/c/">
-                                <span class="chip bg-color">c#</span>
-                            </a>
-                        
                             <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                                 <span class="chip bg-color">字符串和正则表达式</span>
+                            </a>
+                        
+                            <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                <span class="chip bg-color">c# 高级编程(10th)</span>
                             </a>
                         
                     </div>
@@ -374,21 +374,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-19
+                    2021-02-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    110
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    5 分
                 </div>
                 
 
@@ -409,15 +409,195 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h1 id="c-语言-第十章-字符串和正则表达式"><a href="#c-语言-第十章-字符串和正则表达式" class="headerlink" title="c#语言 第十章 字符串和正则表达式"></a>c#语言 第十章 字符串和正则表达式</h1><p>10.1 System.String类</p>
+<p>​        System.String是一个类，专门用于存储字符串，允许对字符串进行许多操作。C#提供了关键字string和相关的语法，以便使用这个类更轻松。</p>
+<blockquote>
+<pre><code>你可以通过运算符重载连接字符串
+string message1 = &quot;hello&quot;;
+message1 += &quot; world&quot;;
+Console.WriteLine(message1);
+</code></pre>
+</blockquote>
+<blockquote>
+<pre><code>C#还允许通过使用类似索引器的语法来提取字符串中的指定字符：
+string message1 = &quot;hello&quot;;
+char char1 = message1[0];
+Console.WriteLine(char1);
+</code></pre>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Compare</td>
+<td>比较字符串的内容，考虑区域设置之间的某些字符的等价性。</td>
+</tr>
+<tr>
+<td>CompareOrdinal</td>
+<td>比较字符串的内容，但不考虑区域设置。</td>
+</tr>
+<tr>
+<td>Concat</td>
+<td>将不同的字符串实例合并成一个字符串实例。</td>
+</tr>
+<tr>
+<td>CopyTo</td>
+<td>将指定序号，指定长度的字符拷贝到另外一个新建的数组中。</td>
+</tr>
+<tr>
+<td>Format</td>
+<td>根据指定的格式格式化一个含有多种数值的字符串。</td>
+</tr>
+<tr>
+<td>IndexOf</td>
+<td>定位某个字符或者子串在字符串中首次出现的位置。</td>
+</tr>
+<tr>
+<td>IndexOfAny</td>
+<td>定位一组字符中任意一个字符在字符串中首次出现的位置。</td>
+</tr>
+<tr>
+<td>Insert</td>
+<td>在指定位置插入另外一个字符串。</td>
+</tr>
+<tr>
+<td>Join</td>
+<td>按照要求将一个字符串数组合并成一个字符串实例。</td>
+</tr>
+<tr>
+<td>LastIndexOf</td>
+<td>跟IndexOf一样，但返回最后一次出现的位置。</td>
+</tr>
+<tr>
+<td>LastIndexOfAny</td>
+<td>跟IndexOfAny一样，但返回最后一次出现的位置。</td>
+</tr>
+<tr>
+<td>PadLeft</td>
+<td>如果字符串不够指定位数，则在其左侧按给定字符补全位数。</td>
+</tr>
+<tr>
+<td>PadRight</td>
+<td>如果字符串不够指定位数，则在其右侧按给定字符补全位数。</td>
+</tr>
+<tr>
+<td>Replace</td>
+<td>将指定字符或者子串替换成另外一个字符或者子串。</td>
+</tr>
+<tr>
+<td>Split</td>
+<td>根据指定字符分隔成若干子串。</td>
+</tr>
+<tr>
+<td>Substring</td>
+<td>根据指定位置和长度获取一个子串。</td>
+</tr>
+<tr>
+<td>ToLower</td>
+<td>转成小写。</td>
+</tr>
+<tr>
+<td>ToUpper</td>
+<td>转成大写。</td>
+</tr>
+<tr>
+<td>Trim</td>
+<td>移除字符串开头与结尾的空格。</td>
+</tr>
+</tbody></table>
 <p>10.1.1构建字符串</p>
+<p>​        String类存在一个问题：重复修改给定的字符串，效率会很低，它实际上是一个不可变的数据类型，一旦对字符串对象进行了初始化，该字符串对象就不能改变了</p>
+<blockquote>
+<pre><code>string message1 = &quot;hello&quot;;
+message1 = &quot;hello world&quot;;
+</code></pre>
+</blockquote>
+<p>​        表面上message1修改了字符串的内容，实际上是创建了一个新的字符串hello world然后将其指向meesage1，原来的hello字符串就没有变量引用它，下一次垃圾收集器清理时就会删除它</p>
 <p>10.1.2 StringBuilder成员</p>
+<p>​        实例化StringBuilder时有很多重载可以选择，其中就有提供一个字符串和给定容量</p>
+<blockquote>
+<pre><code>StringBuilder strb1 = new StringBuilder(&quot;hello&quot;);
+StringBuilder strb2 = new StringBuilder(100);
+</code></pre>
+</blockquote>
+<p>​        还可以随时显示地设置容量，当字符串长度超出时，就会抛出异常：</p>
+<blockquote>
+<pre><code>StringBuilder strb = new StringBuilder(&quot;1个字符&quot;);
+strb.Capacity = 1;
+</code></pre>
+</blockquote>
+<p>​        StringBuilder类上可以进行的处理仅限于替换和追加或删除字符串中的文本。StringBuilder转换为string的唯一方法就是使用ToString()方法。StringBuilder类基本上应在处理多个字符串时使用。</p>
 <p>10.2字符串格式</p>
+<p><strong>格式字符串</strong></p>
+<p>例子：</p>
+<pre><code>Console.WriteLine(&quot;张三有存款：&#123;0,10:C&#125;&quot;,1000);
+
+Console.WriteLine(&quot;李四有存款：&#123;0,10:C&#125;&quot;, 800);
+
+Console.WriteLine(&quot;赵六有存款：&#123;0,10:C&#125;&quot;, 20000);
+</code></pre>
+<p>运行以上代码，结果如下：</p>
+<p>​        解释一下{0,10:C}的作用，其中{0}是占位符，逗号后的数字是表示该项字符串要占用的字符宽度，冒号后面的字母是格式说明符。在使用格式说明符时，会检查占位符替换内容的类型是否实现IFormattable接口，如果没有则调用对象的ToString()方法。</p>
+<p>​        在自定义类中实现IFormattable</p>
+<blockquote>
+<pre><code>1 class Program
+2 &#123;
+3     static void Main(string[] args)
+4     &#123;
+5         Person p = new Person();
+6         p.FirstName = &quot;zhang&quot;;
+7         p.SecondName = &quot;san&quot;;
+8         Console.WriteLine(&quot;无格式说明符：&#123;0&#125;&quot;, p);
+9         Console.WriteLine(&quot;格式说明符C：&#123;0:C&#125;&quot;, p);
+10         Console.WriteLine(&quot;格式说明符A：&#123;0:A&#125;&quot;, p);
+11     &#125;
+12 
+13 &#125;
+14 public class Person : IFormattable
+15 &#123;
+16     public string FirstName &#123; get; set; &#125;
+17     public string SecondName &#123; get; set; &#125;
+18     public string ToString(string format, IFormatProvider formatProvider)
+19     &#123;
+20         //当没有传入格式说明符时，直接调用ToString()
+21         if (format == null)
+22         &#123;
+23             return ToString();
+24         &#125;
+25         //C表示返回中国格式名字  A表示返回美国格式名字
+26         switch (format.ToUpper())
+27         &#123;
+28             case &quot;C&quot;:
+29                 return FirstName + SecondName;
+30             case &quot;A&quot;:
+31                 return SecondName + FirstName;
+32             default:
+33                 return ToString();
+34         &#125;
+35     &#125;
+36 &#125;
+</code></pre>
+</blockquote>
 <p>10.2.1字符串插值</p>
 <p>10.2.2日期事件和数字格式</p>
 <p>10.2.3自定义字符串格式</p>
 <p>10.3正则表达式</p>
+<p>​        .NET正则表达式引擎用于兼容Perl 5 的正则表达式</p>
 <p>10.3.1正则表达式概述</p>
+<p>​        正则表达式是一种专门用于字符串处理的语言</p>
 <p>10.3.2RegularExpressionsPlayaround示例</p>
+<blockquote>
+<pre><code>MatchCollection match = Regex.Matches(&quot;happy hapy hay&quot;, &quot;ha.+?y&quot;);
+foreach (Match item in match)
+&#123;
+    Console.WriteLine(&quot;&#123;0&#125;位置，匹配到&#123;1&#125;&quot;, item.Index, item.Value);
+&#125;
+Console.ReadKey();
+</code></pre>
+</blockquote>
 <p>10.3.3显示结果</p>
 <p>10.3.4匹配、组合捕获</p>
 
@@ -484,12 +664,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/c/">
-                                    <span class="chip bg-color">c#</span>
-                                </a>
-                            
                                 <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
                                     <span class="chip bg-color">字符串和正则表达式</span>
+                                </a>
+                            
+                                <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                    <span class="chip bg-color">c# 高级编程(10th)</span>
                                 </a>
                             
                         </div>
@@ -661,18 +841,17 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/20/c/c-10th-10/">
+                <a href="/2021/02/23/c/c-10th-11/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="c# 高级编程(10th) 第十章 字符串和正则表达式">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="c# 高级编程(10th) 第十一章 字符串和正则表达式">
                         
-                        <span class="card-title">c# 高级编程(10th) 第十章 字符串和正则表达式</span>
+                        <span class="card-title">c# 高级编程(10th) 第十一章 字符串和正则表达式</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -682,9 +861,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-23
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -697,16 +876,15 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c/">
-                        <span class="chip bg-color">c#</span>
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
-                        <span class="chip bg-color">字符串和正则表达式</span>
+                    <a href="/tags/%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">集合</span>
                     </a>
                     
                 </div>
@@ -754,12 +932,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c/">
-                        <span class="chip bg-color">c#</span>
-                    </a>
-                    
                     <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
                         <span class="chip bg-color">运算符和强制类型转换</span>
+                    </a>
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
                     </a>
                     
                 </div>
@@ -868,7 +1046,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">27k</span>&nbsp;字
             
             
             

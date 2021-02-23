@@ -338,12 +338,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/c/">
-                                <span class="chip bg-color">c#</span>
-                            </a>
-                        
                             <a href="/tags/%E6%95%B0%E7%BB%84%E5%92%8C%E5%85%83%E7%A5%96/">
                                 <span class="chip bg-color">数组和元祖</span>
+                            </a>
+                        
+                            <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                <span class="chip bg-color">c# 高级编程(10th)</span>
                             </a>
                         
                     </div>
@@ -374,7 +374,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-19
+                    2021-02-23
                 </div>
                 
 
@@ -531,7 +531,7 @@ public int CompareTo(Class1 other)
 <p>public class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        Class1[] arr = new Class1[]<br>        {<br>            new Class1 { FirstName=”马”, LastName=”云” },<br>            new Class1 { FirstName=”马”, LastName=”化腾” },<br>            new Class1 { FirstName=”李”, LastName=”庆国” },<br>            new Class1 { FirstName=”董”, LastName=”明珠” },<br>            new Class1 { FirstName=”宗”, LastName=”庆后” }<br>        }</p>
 <pre><code>    // 进行排序，会触发CompareTo
     Array.Sort(arr);
- 
+     
     // 输出结果
     foreach (var a in arr)
     &#123;
@@ -558,7 +558,7 @@ public int CompareTo(Class1 other)
         new ArraySegment&lt;int&gt;(ar1, 0, 3),
         new ArraySegment&lt;int&gt;(ar2, 3, 3)
     &#125;
- 
+     
     SumOfSegments(segments);
 &#125;
  
@@ -579,9 +579,9 @@ static void SumOfSegments(ArraySegment&lt;int&gt;[] segments)
 <blockquote>
 <p>// 接着上面的代码，我们改一下：<br>{<br>        static void SumOfSegments(ArraySegment<int>[] segments)<br>        {<br>            foreach (var segment in segments)<br>            {<br>                for (int i = segment.Offset; i &lt; segment.Offset + segment.Count; i++)<br>                {<br>                    // 改一下这里，改一下数组的值<br>                    segment.Array[i] = 998 ;<br>                }</p>
 <pre><code>        &#125;
-        
+            
     &#125;
- 
+     
     // 在最后
     foreach (var a in ar1)
     &#123;
@@ -698,12 +698,12 @@ static Tuple&lt;int[], string&gt; SumOfSegments(int[] a,string b)
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/c/">
-                                    <span class="chip bg-color">c#</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%95%B0%E7%BB%84%E5%92%8C%E5%85%83%E7%A5%96/">
                                     <span class="chip bg-color">数组和元祖</span>
+                                </a>
+                            
+                                <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                    <span class="chip bg-color">c# 高级编程(10th)</span>
                                 </a>
                             
                         </div>
@@ -913,12 +913,12 @@ static Tuple&lt;int[], string&gt; SumOfSegments(int[] a,string b)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c/">
-                        <span class="chip bg-color">c#</span>
-                    </a>
-                    
                     <a href="/tags/%E8%BF%90%E7%AE%97%E7%AC%A6%E5%92%8C%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
                         <span class="chip bg-color">运算符和强制类型转换</span>
+                    </a>
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
                     </a>
                     
                 </div>
@@ -966,12 +966,12 @@ static Tuple&lt;int[], string&gt; SumOfSegments(int[] a,string b)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/c/">
-                        <span class="chip bg-color">c#</span>
-                    </a>
-                    
                     <a href="/tags/%E6%B3%9B%E5%9E%8B/">
                         <span class="chip bg-color">泛型</span>
+                    </a>
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
                     </a>
                     
                 </div>
@@ -1080,7 +1080,7 @@ static Tuple&lt;int[], string&gt; SumOfSegments(int[] a,string b)
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">17.9k</span>&nbsp;字
+                class="white-color">27k</span>&nbsp;字
             
             
             
