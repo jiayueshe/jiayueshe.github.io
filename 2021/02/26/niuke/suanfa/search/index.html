@@ -362,6 +362,14 @@
                                 <span class="chip bg-color">算法</span>
                             </a>
                         
+                            <a href="/tags/AVL%E6%A0%91/">
+                                <span class="chip bg-color">AVL树</span>
+                            </a>
+                        
+                            <a href="/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/">
+                                <span class="chip bg-color">红黑树</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -397,14 +405,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.9k
+                    4.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    15 分
                 </div>
                 
 
@@ -554,6 +562,29 @@
 <p>解析  画出查找路径图，因为折半查找的判定树是一棵二叉排序树，看其是否满足二叉排序树的要求。</p>
 <p>  很显然，选项  A  的查找路径不满足</p>
 <p><img src="https://uploadfiles.nowcoder.com/images/20170408/7031383_1491662188654_B034E3196CEA908FE6A93789F835033F" alt="img"></p>
+<p><strong>在ASC算法team日常开发中，常常面临一些数据结构的抉择，令人纠结。目前大家在策划一个FBI项目（Fast Binary  Indexing），其中用到的词汇有6200条，词汇长度在10-15之间，词汇字符是英文字母，区分大小写。请在下面几个数据结构中选择一个使检索速度最快的：（D）</strong></p>
+<p>A:二叉搜索树，比较函数开销：1次运算/每字符</p>
+<p>B:哈希表，hash算法开销：10次运算/每字符</p>
+<p>C:链表，比较函数开销：1次运算/每字符</p>
+<p>D:TRIE树，寻找子节点开销：1次运算/每字符</p>
+<p>解析：又称单词查找树，Trie树，是一种树形结构，是一种哈希树的变种。典型应用是用于统计，排序和保存大量的字符串（但不仅限于字符串），所以经常被搜索引擎系统用于文本词频统计。它的优点是：利用字符串的公共前缀来减少查询时间，最大限度地减少无谓的字符串比较，查询效率比哈希表高。</p>
+<p><strong>关于红黑树和AVL树，以下哪种说法不正确？（D）</strong></p>
+<p>A:两者都属于自平衡二叉树</p>
+<p>B:两者查找,插入，删除的时间复杂度相同</p>
+<p>C:包含n个内部节点的红黑树的高度是O(log(n))</p>
+<p>D:JDK的TreeMap是一个AVL的实现</p>
+<p>解析：</p>
+<p>​                  <strong><em>1 好处 及 用途\</em></strong>            </p>
+<p>​       红黑树      <strong>并不追求“完全平衡</strong>    ”——它只要求部分地达到平衡要求，降低了对旋转的要求，从而提高了性能。  </p>
+<p>​      红黑树能够以      <strong>O(*log2*         n)</strong>      的时间复杂度进行搜索、插入、删除操作。此外，由于它的设计，任何不平衡都会在三次旋转之内解决。当然，还有一些更好的，但实现起来更复杂的数据结构    能够做到一步旋转之内达到平衡，但红黑树能够给我们一个比较“便宜”的解决方案。红黑树的算法时间复杂度和AVL相同，但统计性能比AVL树更高。  </p>
+<p>​        当然，红黑树并不适应所有应用树的领域。如果数据基本上是静态的，那么让他们待在他们能够插入，并且不影响平衡的地方会具有更好的性能。如果数据完全是静态的，例如，做一个哈希表，性能可能会更好一些。  </p>
+<p>​    在实际的系统中，例如，需要使用动态规则的防火墙系统，使用红黑树而不是散列表被实践证明具有更好的伸缩性。  </p>
+<p>​          <em>典型的用途是实现关联数组</em>      </p>
+<p>​          <strong><em>2\</em></strong>     AVL树是最先发明的自平衡二叉查    找树。在AVL树中任何节点的两个儿子子树的高度最大差别为一，所以它也被称为高度平衡树。查找、插入和删除在平均和最坏情况下都是O(log    n)。增加和删除可能需要通过一次或多次树旋转来重新平衡这个树。AVL树得名于它的发明者 G.M. Adelson-Velsky 和    E.M. Landis，他们在 1962 年的论文 “An algorithm for the organization of    information” 中发表了它。  </p>
+<p>   引入二叉树的目的是为了提高二叉树的搜索的效率,减少树的平均搜索长度.为此,就必须每向二叉树插入一个结点时调整树的结构,使得二叉树搜索保持平衡,从而可能降低树的高度,减少的平均树的搜索长度. </p>
+<p> AVL树的定义:<br> 一棵AVL树满足以下的条件:<br> 1&gt;它的左子树和右子树都是AVL树<br>    2&gt;左子树和右子树的高度差不能超过1<br> 从条件1可能看出是个递归定义,如GNU一样. </p>
+<p> 性质:<br>    1&gt;一棵n个结点的AVL树的其高度保持在0(log2(n)),不会超过3/2log2(n+1)<br>      2&gt;一棵n个结点的AVL树的平均搜索长度保持在0(log2(n)).<br> 3&gt;一棵n个结点的AVL树删除一个结点做平衡化旋转所需要的时间为0(log2(n)). </p>
+<p> 从1这点来看              <strong><em>红黑树是牺牲了严格的高度平衡的优越条件</em></strong>          为 代价红黑树能够以O(log2    n)的时间复杂度进行搜索、插入、删除操作。此外，由于它的设计，任何不平衡都会在三次旋转之内解决。当然，还有一些更好的，但实现起来更复杂的数据结构    能够做到一步旋转之内达到平衡，但红黑树能够给我们一个比较“便宜”的解决方案。红黑树的算法时间复杂度和AVL相同，但统计性能比AVL树更高.  </p>
 
                 
             </div>
@@ -640,6 +671,14 @@
                             
                                 <a href="/tags/%E7%AE%97%E6%B3%95/">
                                     <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                                <a href="/tags/AVL%E6%A0%91/">
+                                    <span class="chip bg-color">AVL树</span>
+                                </a>
+                            
+                                <a href="/tags/%E7%BA%A2%E9%BB%91%E6%A0%91/">
+                                    <span class="chip bg-color">红黑树</span>
                                 </a>
                             
                         </div>
@@ -811,30 +850,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/26/niuke/suanfa/search/">
+                <a href="/2021/02/27/niuke/suanfa/sort/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="查找算法">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="排序算法">
                         
-                        <span class="card-title">查找算法</span>
+                        <span class="card-title">排序算法</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            查找
+                            排序算法
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -847,32 +885,19 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">查找</span>
+                    <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">归并排序</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%AF%94%E8%BE%83/">
-                        <span class="chip bg-color">字符串比较</span>
+                    <a href="/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">堆排序</span>
                     </a>
                     
-                    <a href="/tags/kmp/">
-                        <span class="chip bg-color">kmp</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%88%86%E5%9D%97%E6%9F%A5%E6%89%BE/">
-                        <span class="chip bg-color">分块查找</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BA%8C%E5%88%86%E6%B3%95/">
-                        <span class="chip bg-color">二分法</span>
-                    </a>
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
+                    <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">
+                        <span class="chip bg-color">拓扑排序</span>
                     </a>
                     
                 </div>
@@ -1034,7 +1059,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">30k</span>&nbsp;字
+                class="white-color">33.2k</span>&nbsp;字
             
             
             
