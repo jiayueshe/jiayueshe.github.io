@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>IT 学习 资源站</title>
+  <title>IT 学习 资源</title>
   
-  
+  <subtitle>欢迎光临</subtitle>
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
@@ -50,7 +50,7 @@
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/qianduan/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/qianduan/</id>
     <published>2021-02-26T15:25:00.000Z</published>
-    <updated>2021-02-26T15:11:33.635Z</updated>
+    <updated>2021-02-26T15:15:50.650Z</updated>
     
     
       
@@ -114,7 +114,7 @@
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js/</id>
     <published>2021-02-26T14:25:00.000Z</published>
-    <updated>2021-02-26T15:11:24.377Z</updated>
+    <updated>2021-02-26T15:16:35.618Z</updated>
     
     
       
@@ -537,27 +537,27 @@
   </entry>
   
   <entry>
-    <title>c# 高级编程(10th) 前言</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-00/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-00/</id>
+    <title>c# AutoCAD开发</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/autocad-c/c-autocad/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/autocad-c/c-autocad/</id>
     <published>2021-02-17T01:00:00.000Z</published>
-    <updated>2021-02-23T08:19:55.230Z</updated>
+    <updated>2021-02-26T15:43:30.300Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;c-是专门用于-net-的语言&quot;&gt;&lt;a href=&quot;#c-是专门用于-net-的语言&quot; class=&quot;headerlink&quot; title=&quot;c# 是专门用于 .net 的语言&quot;&gt;&lt;/a&gt;c# 是专门用于 .net 的语言&lt;/h1&gt;&lt;p&gt;web</summary>
+    <summary type="html">&lt;h1 id=&quot;c-AutoCAD开发&quot;&gt;&lt;a href=&quot;#c-AutoCAD开发&quot; class=&quot;headerlink&quot; title=&quot;c# AutoCAD开发&quot;&gt;&lt;/a&gt;c# AutoCAD开发&lt;/h1&gt;&lt;h1 id=&quot;第一章-AutoCAD-C-开发基础&quot;&gt;&lt;a</summary>
         
       
     
     
     
-    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
+    <category term="c# AutoCAD开发" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c-AutoCAD%E5%BC%80%E5%8F%91/"/>
     
     
-    <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
+    <category term="c# AutoCAD开发" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-AutoCAD%E5%BC%80%E5%8F%91/"/>
     
   </entry>
   
