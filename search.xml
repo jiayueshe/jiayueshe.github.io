@@ -4,11 +4,38 @@
   
     
     <entry>
+      <title>牛客网华为机试</title>
+      <link href="2021/02/28/niuke/suanfa/huaweijs/"/>
+      <url>2021/02/28/niuke/suanfa/huaweijs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="牛客网华为机试在线训练JavaScript-V8-版"><a href="#牛客网华为机试在线训练JavaScript-V8-版" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版"></a>牛客网华为机试在线训练JavaScript(V8)版</h1><h2 id="注意！输入得到的都是字符串"><a href="#注意！输入得到的都是字符串" class="headerlink" title="注意！输入得到的都是字符串"></a>注意！输入得到的都是字符串</h2><blockquote><p>// 单行<br>var line = readline(); //获得的是一个字符串<br>//如果需要对其进行处理，比如 “1 2 3 4 5”，我们想以数组形式获取每个数字<br>var arr = line.split(“ “); // 数组内元素为字符串，eg: arr[0]=”1”</p><p>// 多行<br>// 如果每一行的操作相同<br>while(line = readline()){<br>    // 代码<br>}<br>/<em>如果每一行操作不同<br>eg: 第一行给数组长度<br>     第二行给用空格分开的字符串<br>那就每一次按照单行输入的方式来获取即可</em>/<br>var num = parseInt(readline()); // 获得数组长度<br>var arr = readline().split(“ “); // 获得数组</p></blockquote><h2 id="1-字符串-split（易）"><a href="#1-字符串-split（易）" class="headerlink" title="1.(字符串) split（易）"></a>1.(字符串) split（易）</h2><p><strong>计算字符串最后一个单词的长度，单词以空格隔开。(<a href="https://www.nowcoder.com/questionCenter?questionTypes=000100&mutiTagIds=579">字符串</a>)</strong><br>输入描述:<br>输入一行，代表要计算的字符串，非空，长度小于5000。<br>输出描述:<br>输出一个整数，表示输入字符串最后一个单词的长度。<br>示例1<br>输入:hello nowcoder<br>输出:8<br>解答：</p><blockquote><p>while (line = readline()){<br>   var stringlist  = line.split(‘ ‘);<br>   var lastlen =stringlist[stringlist.length-1].length;<br>   print(lastlen);<br>}</p></blockquote><h2 id="2-字符串-toLowerCase（易）"><a href="#2-字符串-toLowerCase（易）" class="headerlink" title="2.(字符串)toLowerCase（易）"></a>2.(字符串)toLowerCase（易）</h2><p><strong>写出一个程序，接受一个由字母、数字和空格组成的字符串，和一个字母，然后输出输入字符串中该字母的出现次数。不区分大小写。 (字符串，哈希）</strong><br>输入描述:第一行输入一个由字母和数字以及空格组成的字符串，第二行输入一个字母。<br>输出描述:输出输入字符串中含有该字符的个数。<br>示例1<br>输入<br>ABCabc<br>A<br>输出2<br>解答</p><blockquote><p>var aStr = readline().toLowerCase();<br>var bStr = readline().toLowerCase();<br>var count = 0;<br>for (var i = 0 ; i &lt; aStr.length; i++){<br>   if(aStr[i] == bStr){<br>       count = count + 1;<br>   }<br>}<br>print(count);</p></blockquote><h2 id="3-数组-sort-set（中）"><a href="#3-数组-sort-set（中）" class="headerlink" title="3.(数组)sort set（中）"></a>3.(数组)sort set（中）</h2><p><strong>题目描述</strong><br>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据，希望大家能正确处理)。 </p><p>  注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。 当没有新的输入时，说明输入结束。<br><strong>输入描述:</strong></p><pre><code>注意：输入可能有多组数据。每组数据都包括多行，第一行先输入随机整数的个数N，接下来的N行再输入相应个数的整数。具体格式请看下面的&quot;示例&quot;。</code></pre><p><strong>输出描述:</strong></p><pre><code>返回多行，处理后的结果</code></pre><p>示例1<br><strong>输入</strong></p><pre><code>322111102040326740208930040015</code></pre><p><strong>输出</strong></p><pre><code>1210152032406789300400</code></pre><p>说明</p><pre><code>样例输入解释：样例有两组测试第一组是3个数字，分别是：2，2，1。第二组是11个数字，分别是：10，20，40，32，67，40，20，89，300，400，15。 </code></pre><p>解答：<br>每组分段返回</p><blockquote><p>var lines = 0;<br>var scoreList = [];<br>while(line = readline()){<br>    if(lines ==0 ){<br>        lines = parseInt(line);<br>        outPut(scoreList);<br>    }else{<br>        lines–;<br>        scoreList.push(parseInt(line));<br>    }<br>}<br>function outPut(arr){<br>    arr = unique(arr).sort((a,b)=&gt;{return a-b});<br>    for(var i=0;i&lt; arr.length;i++){<br>        print(arr[i]);<br>    }<br>}</p><p>function unique(arr) {<br>    return Array.from(new Set(arr))<br>}</p></blockquote><p>通过解答</p><blockquote><p>while(line=readline()){<br>    var arr=[];<br>    for(var i=0;i&lt;line;i++){<br>        arr.push(readline());<br>    }<br>    var tSet=[…new Set(arr)];<br>    var setSort=tSet.sort(function(a,b){<br>        return a-b;<br>    })</p><p>​    for(var j=0;j&lt;setSort.length;j++){<br>        console.log(setSort[j]);<br>​    }</p><p>}</p></blockquote><h2 id="4-字符串-字符串分隔（中）"><a href="#4-字符串-字符串分隔（中）" class="headerlink" title="4(字符串) 字符串分隔（中）"></a>4(字符串) <strong>字符串分隔</strong>（中）</h2><p><strong>题目描述</strong></p><p>  •连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br> •长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。  </p><p><strong>输入描述:</strong></p><pre><code>连续输入字符串(输入多次,每个字符串长度小于100)</code></pre><p>输出描述:</p><pre><code>输出到长度为8的新字符串数组</code></pre><p>输入</p><pre><code>abc123456789</code></pre><p>输出</p><pre><code>abc000001234567890000000</code></pre><p> 解答：</p><p>第一次</p><blockquote><p>while(line=readline()){<br>    var strLength =line.length;<br>    var N = Math.floor(strLength/8);<br>    var mLast =strLength-N*8;<br>    var addnum =8-mLast;<br>    for(i=0;i&lt;N;i++){<br>       print(line.substring(i*8,8*(i+1)))<br>    }<br>    if(addnum&gt;0){<br>        var sstr=’0’;<br>        for(i=1;i&lt;addnum;i++){<br>           sstr+=’0’;<br>        }<br>        var firstr = line.substring((N)*8,strLength);<br>        print( firstr + sstr)<br>    }<br>}</p></blockquote><p>第二次</p><blockquote><p>var arr=[];<br>while(line=readline()){<br>    arr.push(line);<br>}<br>for(var j=0;j&lt;arr.length;j++){<br>    var strLength = arr[j].length;<br>    var N = Math.floor(strLength/8);<br>    var mLast = strLength-N*8;<br>    var addnum =8-mLast;<br>    for(i=0;i&lt;N;i++){<br>       print(arr[j].substring(i*8,8*(i+1)))<br>    }<br>    if(mLast&gt;0){<br>        var sstr=’0’;<br>        for(i=1;i&lt;addnum;i++){<br>           sstr+=’0’;<br>        }<br>        var firstr = arr[j].substring((N)*8,strLength);<br>        print( firstr + sstr)<br>    }<br>}</p></blockquote><p>参考</p><blockquote><p>var q=’00000000’;<br>var arr=[];<br>for(var i=0;i&lt;2;i++){<br>    arr.push(readline());</p><p>}<br>for(var j=0;j&lt;arr.length;j++){<br>    if(arr[j].length&lt;=8){<br>        var t=arr[j]+q;<br>        console.log(t.slice(0,8));<br>    }else{<br>        var len=arr[j].length;<br>        for(var i=0;i&lt;len;i+=8){<br>            var s=arr[j].slice(i,i+8);<br>            if(s.length&lt;8){<br>                var p=s+q;<br>                console.log(p.slice(0,8));</p><pre><code>        &#125;else&#123;            console.log(s);        &#125;    &#125;&#125;</code></pre><p>}</p></blockquote><h2 id="5-字符串-进制转换（易）"><a href="#5-字符串-进制转换（易）" class="headerlink" title="5(字符串)进制转换（易）"></a>5(字符串)进制转换（易）</h2><p><strong>题目描述</strong></p><p>  写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。 </p><p><strong>输入描述:</strong></p><pre><code>输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。</code></pre><p>输出描述:</p><pre><code>输出该数值的十进制字符串。不同组的测试用例用\n隔开。</code></pre><p>输入</p><pre><code>0xA0xAA</code></pre><p>输出</p><pre><code>10170</code></pre><blockquote><p>while(line=readline()){<br>   var output = parseInt(line, 16);<br>   print(output);<br>}</p></blockquote><h2 id="6质数因子（难）"><a href="#6质数因子（难）" class="headerlink" title="6质数因子（难）"></a>6<strong>质数因子</strong>（难）</h2><p><strong>题目描述</strong></p><p>  功能:输入一个正整数，按照从小到大的顺序输出它的所有质因子（重复的也要列举）（如180的质因子为2 2 3 3 5 ） </p><p>  最后一个数后面也要有空格  </p><p>输入描述:</p><pre><code>输入一个long型整数</code></pre><p>输出描述:</p><pre><code>按照从小到大的顺序输出它的所有质数的因子，以空格隔开。最后一个数后面也要有空格。</code></pre><p>输入</p><pre><code>180</code></pre><p>输出</p><pre><code>2 2 3 3 5</code></pre><p>解析:</p><p> 查找质数的方法，从2开始除,不能被2除，则尝试3，不能被3除，也不能被4除，尝试5。。。 每除一次进行一次循环。从小到大找出所有质数</p><blockquote><p>while(line=readline()){<br>   var num = parseInt(line);<br>   var arr=[];<br>   for(i=2;i&lt;=num;i++){<br>       if(num%i==0){<br>           num=num/i;<br>           arr.push(i)<br>           i=1;<br>       }<br>   }<br>   print(arr.join(“ “)+ ‘ ‘);<br>}</p></blockquote><p><strong>优化解法：</strong></p><p>扩展补充：就分解的质数：</p><blockquote><p>function getPrimGens(a)<br>{<br>    var arr = getGens(a);<br>    var c = [];<br>    for(var i=0;i&lt;arr.length;i++){<br>        var t = getGens(arr[i]);<br>        if(t.length==0) c.push(arr[i]);<br>    }<br>    return c;</p><p>}</p><p>function getGens(a)<br>{<br>    var arr = [];<br>    var n = a/2 + 1;<br>    for(var i=2; i&lt;n; i++){<br>        if(a%i == 0) arr.push(i)<br>    }<br>    return arr;<br>}</p></blockquote><p>优化解:运行时间减少一半</p><blockquote><p>while(line=readline()){<br>    var num = parseInt(line);<br>    var result = getPreGens(num);<br>    print(result.join(“ “)+ ‘ ‘);<br>}</p><p>function getPreGens(a)<br>{<br>    var arr = [];<br>    var n = Math.floor(a/2)+ 1;<br>    var t = n;<br>    var i;<br>    while(1==1)<br>    {<br>        if(i==t)<br>        {<br>            arr.push(a);<br>            break;<br>        }<br>        for(i=2; i&lt;t; i++)<br>        {<br>            if(a%i == 0)<br>            {<br>                arr.push(i);<br>                a = a/i;<br>                t = Math.floor(a/2 )+ 1;<br>                break;<br>            }<br>        }<br>    }<br>    return arr;<br>}</p></blockquote><h2 id="7-取近似值（易）"><a href="#7-取近似值（易）" class="headerlink" title="7 取近似值（易）"></a>7 取近似值（易）</h2><p>题目描述</p><p>  写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于5,向上取整；小于5，则向下取整。 </p><p>输入描述:</p><pre><code>输入一个正浮点数值</code></pre><p>输出描述:</p><pre><code>输出该数值的近似整数值</code></pre><p>输入</p><pre><code>5.5</code></pre><p>输出</p><pre><code>6</code></pre><p>解析</p><blockquote><p>while(line=readline()){<br>    var num = Math.round(line);<br>    print(num);<br>}</p></blockquote><p>扩展</p><ul><li>只保留整数部分（丢弃小数部分）parseInt(5.1234); </li><li>向下取整（&lt;= 该数值的最大整数，和parseInt()一样)Math.floor(5.1234); </li><li>向上取整（有小数，整数部分就+1）Math.ceil(5.1234);  </li><li>四舍五入（小数部分）Math.round(5.1234)；</li><li>取绝对值Math.abs(-1);   </li><li>返回两数中的较大者Math.max(1,2);   Math.min(1,2);  </li><li>随机数（0-1）Math.random();</li></ul><h2 id="8合并表记录-中"><a href="#8合并表记录-中" class="headerlink" title="8合并表记录(中)"></a>8合并表记录(中)</h2><p>题目描述</p><p>  数据表记录包含表索引和数值（int范围的正整数），请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。 </p><p>输入描述:</p><pre><code>先输入键值对的个数然后输入成对的index和value值，以空格隔开</code></pre><p>输出描述:</p><pre><code>输出合并后的键值对（多行）</code></pre><p>输入</p><pre><code>40 10 21 23 4</code></pre><p>输出</p><pre><code>0 31 23 4</code></pre><p> 解析</p><blockquote><p>while(line=readline()){<br>    let lines = Math.round(line);<br>    let arrs =[];<br>    let m = new Map();<br>    for(i=0;i&lt;lines;i++){<br>       let arr = readline().split(‘ ‘);<br>       if(m.has(arr[0])){<br>           m.set(arr[0],m.get(arr[0])+parseInt(arr[1]));<br>       }else{<br>            m.set(arr[0],parseInt(arr[1]));<br>       }<br>    }<br>    let keys = new Array();<br>    for (var key of m.keys()) {<br>        keys.push(key)<br>    }<br>    keys.sort(function(key1, key2) {<br>      return key1 - key2<br>    });<br>    keys.forEach(key =&gt; {<br>        print(key +’ ‘ + m.get(key));<br>    })<br>}</p></blockquote><p>9</p><p>题目描述</p><p>  输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。 </p><p>  保证输入的整数最后一位不是0。</p><p>输入描述:</p><pre><code>输入一个int型整数</code></pre><p>输出描述:</p><pre><code>按照从右向左的阅读顺序，返回一个不含重复数字的新的整数</code></pre><p>输入</p><pre><code>9876673</code></pre><p>输出</p><pre><code>37689</code></pre><p>解析</p><blockquote><p>while(line=readline()){<br>   var s1 = new Set(); // 空Set<br>   for( i = line.length - 1; i &gt;= 0 ; i–){<br>       s1.add(line[i]);<br>   }<br>   var result= Array.from(s1).join(‘’);<br>   print(result);<br>}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> 牛客网华为机试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机试 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>排序算法</title>
       <link href="2021/02/27/niuke/suanfa/sort/"/>
       <url>2021/02/27/niuke/suanfa/sort/</url>
       
-        <content type="html"><![CDATA[<h1 id="第一章-算法-排序"><a href="#第一章-算法-排序" class="headerlink" title="第一章 算法-排序"></a>第一章 算法-排序</h1><p><strong>归并排序的时间复杂度（B ）</strong></p><p>A:O(log(N))</p><p>B:O(N*log(N))</p><p>C:O(N)</p><p>D:O(N^2)</p><p>解答：</p><p><img src="https://uploadfiles.nowcoder.com/images/20170825/838172_1503666046674_C5D4F39E60A08C51D0B825E76F6E68BC" alt="img"></p><h2 id="归并排序（Merge-Sort）"><a href="#归并排序（Merge-Sort）" class="headerlink" title="归并排序（Merge Sort）"></a>归并排序（Merge Sort）</h2><p>​    和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。   </p><h4 id="1-算法简介"><a href="#1-算法简介" class="headerlink" title="(1)算法简介"></a>(1)算法简介</h4><blockquote><p>​      归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and  Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。     </p></blockquote><h4 id="2-算法描述和实现"><a href="#2-算法描述和实现" class="headerlink" title="(2)算法描述和实现"></a>(2)算法描述和实现</h4><p>​     具体算法描述如下：    </p><ul><li>​      &lt;1&gt;.把长度为n的输入序列分成两个长度为n/2的子序列；          </li><li>​      &lt;2&gt;.对这两个子序列分别采用归并排序；          </li><li>​      &lt;3&gt;.将两个排序好的子序列合并成一个最终的排序序列。         </li></ul><p>​     <strong>Javscript代码实现:</strong>   </p><blockquote><p>function mergeSort(arr) {  </p><p>​    //采用自上而下的递归方法     </p><p>​    ar len = arr.length;     </p><p>​    if(len &lt; 2) {         return arr;     }    </p><pre><code> var middle =  Math.floor(len / 2),         left = arr.slice(0, middle),        </code></pre><p>​     right = arr.slice(middle);    </p><p>​     return merge(mergeSort(left), mergeSort(right)); </p><p>}</p><p> function merge(left, right) {     </p><p>var result = [];    </p><p>  console.time(‘归并排序耗时’);     </p><p>while (left.length &amp;&amp; right.length) { </p><p>​        if (left[0] &lt;= right[0]) { result.push(left.shift()); } </p><p>​        else result.push(right.shift()); </p><p>while (left.length) (right.length) console.timeend(‘归并排序耗时’);</p><p> return result; </p><p>var arr=”[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];” console.log(mergesort(arr));</p></blockquote><p><strong>一组记录的值为(12,38,35,25,74,50,63,90),按2路归并排序方法对序列进行一趟归并后的结果为(  A  )</strong></p><p>A:12,38,25,35,50,74,63,90</p><p>B:12,38,35,25,74,50,63,90</p><p>C:12,25,35,38,50,74,63,90</p><p>D:12,35,38,25,63,50,74,90</p><p>解析：</p><p><img src="https://uploadfiles.nowcoder.com/images/20181213/530580337_1544714285748_772E62849C030C48EBF52D9B1548A428" alt="img"></p><p><img src="https://uploadfiles.nowcoder.com/images/20170701/6428287_1498913261898_265C7FA7B7393A64D86043C1E57DD398" alt="img"></p><p>将两个相邻位置的有序子列，归并为一个有序列的序列，是典型的 <strong>分治法</strong> 应用 </p><h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>数据表A中有10000个元案，如果仅要求求出其中最大的10个元素，则采用()排序算法最节省时间。</strong>   </p><p>A:简单选择排序</p><p>B:希尔排序</p><p>C:堆排序</p><p>D:快速排序</p><p>解析：堆排序，利用到了树的结构，树的顶端就是最大值，很快就能找到，最值</p><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p><strong>下面的哪种排序算法在算复杂度平均不是O(nlogn)的?（B）</strong></p><p>A:快速排序</p><p>B:桶排序</p><p>C:合并排序</p><p>D:二叉树排序树排序</p><p>E:堆排序</p><p>解答：  </p><p><img src="http://uploadfiles.nowcoder.com/images/20160507/426198_1462607057516_67578A2B2E254243415482C36347C471" alt="img"></p><p>  桶排序的平均时间复杂度为线性的O(N+C)，其中C=N*(logN-logM)。如果相对于同样的N，桶数量M越大，其效率越高，最好的时间复杂度达到O(N)。  当然桶排序的空间复杂度 为O(N+M)，如果输入数据非常庞大，而桶的数量也非常多，则空间代价无疑是昂贵的。此外，桶排序是稳定的。</p><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>桶排序的时间复杂度是线性的，即O(n)的。比如：对n个数排序，这n个数的值在一定范围内（比如在1到100之间），那么直接构建一个大小为100的数组arr，在遍历包含n个数的数组num时，令arr[num[i]]++即可，最后从头到尾遍历arr，若arr[i]=m，则输出m个i即可。</p><p>  <strong>对  n  个记录的文件进行快速排序，所需要的辅助存储空间大致为(C)</strong></p><p>A:O（1）</p><p>B:O（n）</p><p>C:O（1og2n）</p><p>D:O（n2）</p><p>解析：</p><p>  辅助存储空间 = 时间复杂度 </p><p>  额外存储空间 = 空间复杂度</p><p>快速排序对待排序序列得划分大约是log2n次，因为快速排序是通过递归算法来实现的，递归深度大约是log2n，所以所需得辅助空间为log2n</p><p>如果选取的主元使得枢纽值将T(n)划分成T(n - 1)和一个T(0)，并且接下来的递归都是这样划分，那么就要递归n -  1次，需要n-1个栈空间单元(?)，考虑选取枢纽值用去的O(n)代价，总复杂度：T(n) = T(n - 1) +  O(n),用递归树得到T(n) = O(n ^ 2), ；如果主元使得T(n)恰好划分成T(n) = 2T(n / 2) +  O(n)，递归树共lgn层，T(n) = O(nlgn)，需要的栈空间：O(lgn)。</p><p>  对图B-2进行拓扑排序，可以得到不同的拓扑序列的个数是（B）。</p><p><img src="https://uploadfiles.nowcoder.com/images/20180512/7574500_1526106876774_1739550CD29F99D6FC52E3E6A49E8DFF" alt="img"> </p><p>A:4</p><p>B:3</p><p>C:2</p><p>D:1</p><p>解析</p><h2 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h2><p>  拓扑排序的过程如下图所示。 </p><p>  <img src="https://uploadfiles.nowcoder.com/images/20180512/7574500_1526106976712_CA170FCB84F41A75AE0AF731CA65B4C7" alt="img"></p><p>   可以得到3个不同的拓扑序列，分别为：abced、abecd、aebcd。  </p><p><img src="https://uploadfiles.nowcoder.com/images/20190826/591802503_1566796873401_90C481E22DA191B81E3913D8E3698AB8" alt="img"></p><p><strong>设一组初始记录关键字序列为（49,38,65,97,76,13,27,49），则以第一个关键字49为基准而得到的一趟快速排序结果是：（）</strong></p><p>A:38，13，27，49，49，65，97，76</p><p>B:13，27，38，49，65，76，97，49</p><p>C:27，38，13，49，76，97，65，49</p><p>D:27，38，13，49，97，76，65，49</p><p>解析：</p><p>基本思想： </p><p> 第一步：(初始化)设置两个指针i和j，它们的初值分别为区间的下界和上界，即i=low，i=high；选取无序区的第一个记录R<a href="%E5%8D%B3R%5Blow%5D">i</a>作为基准记录，并将它保存在变量pivot中；<br>  第二步：令j自high起向左扫描，直到找到第1个关键字小于pivot.key的记录R[j]，将R[j])移至i所指的位置上，这相当于R[j]和基准R<a href="%E5%8D%B3pivot">i</a>进行了交换，使关键字小于基准关键字pivot.key的记录移到了基准的左边，交换后R[j]中相当于是pivot；然后，令i指针自i+1位置开始向右扫描，直至找到第1个关键字大于pivot.key的记录R[i]，将R[i]移到i所指的位置上，这相当于交换了R[i]和基准R[j]，使关键字大于基准关键字的记录移到了基准的右边，交换后R[i]中又相当于存放了pivot；接着令指针j自位置j-1开始向左扫描，如此交替改变扫描方向，从两端各自往中间靠拢，直至i=j时，i便是基准pivot最终的位置，将pivot放在此位置上就完成了一次划分。</p><p> 排序过程：<br> [49 38 65 97 76 13 27 49] //初始关键字<br> [27 38 13] 49 [76 97 65 49] //第1次划分完成之后，对应递归树第2层</p><p>以49为基准，取出49，两个指针，前指针指向38，后指针指向最后一个49<br> 首先移动后指针，找到27&lt;49，将27放在 0 位置，后指针前移<br> 再根据前指针查找，65&gt;49，将65放在原27的位置<br> 现在结果是 27,38, ,97,76,13,65,49<br> 继续用后指针查找，13&lt;49,放在空位中，后指针前移，<br> 结果是 27,38,13,97,76, ,65,49<br> 继续前指针查找，97&gt;49，放在空位，变成27,38,13, ,76,97,65,49<br> 然后前后指针都指向76，结束，将49放入空位中，得到27,38,13,49,76,97,65,49</p><p><strong>下列排序算法的常规实现中，哪些空间复杂度是O(1)(A B E)</strong></p><p>A:冒泡</p><p>B:选择</p><p>C:归并</p><p>D:快排</p><p>E:堆排序</p><p>解析：  冒泡排序,选择排序,堆排序的空间复杂度为O(1),因为需要一个临时变量来交换元素位置,(另外遍历序列时自然少不了用一个变量来做索引). </p><p>  快速排序空间复杂度为logn(因为递归调用了) ,归并排序空间复杂是O(n),需要一个大小为n的临时数组.</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="第一章-算法-排序"><a href="#第一章-算法-排序" class="headerlink" title="第一章 算法-排序"></a>第一章 算法-排序</h1><p><strong>归并排序的时间复杂度（B ）</strong></p><p>A:O(log(N))</p><p>B:O(N*log(N))</p><p>C:O(N)</p><p>D:O(N^2)</p><p>解答：</p><p><img src="https://uploadfiles.nowcoder.com/images/20170825/838172_1503666046674_C5D4F39E60A08C51D0B825E76F6E68BC" alt="img"></p><h2 id="归并排序（Merge-Sort）"><a href="#归并排序（Merge-Sort）" class="headerlink" title="归并排序（Merge Sort）"></a>归并排序（Merge Sort）</h2><p>​    和选择排序一样，归并排序的性能不受输入数据的影响，但表现比选择排序好的多，因为始终都是O(n log n）的时间复杂度。代价是需要额外的内存空间。   </p><h4 id="1-算法简介"><a href="#1-算法简介" class="headerlink" title="(1)算法简介"></a>(1)算法简介</h4><blockquote><p>​      归并排序是建立在归并操作上的一种有效的排序算法。该算法是采用分治法（Divide and  Conquer）的一个非常典型的应用。归并排序是一种稳定的排序方法。将已有序的子序列合并，得到完全有序的序列；即先使每个子序列有序，再使子序列段间有序。若将两个有序表合并成一个有序表，称为2-路归并。     </p></blockquote><h4 id="2-算法描述和实现"><a href="#2-算法描述和实现" class="headerlink" title="(2)算法描述和实现"></a>(2)算法描述和实现</h4><p>​     具体算法描述如下：    </p><ul><li>​      &lt;1&gt;.把长度为n的输入序列分成两个长度为n/2的子序列；          </li><li>​      &lt;2&gt;.对这两个子序列分别采用归并排序；          </li><li>​      &lt;3&gt;.将两个排序好的子序列合并成一个最终的排序序列。         </li></ul><p>​     <strong>Javscript代码实现:</strong>   </p><blockquote><p>function mergeSort(arr) {  </p><p>​    //采用自上而下的递归方法     </p><p>​    ar len = arr.length;     </p><p>​    if(len &lt; 2) {         return arr;     }    </p><pre><code> var middle =  Math.floor(len / 2),            left = arr.slice(0, middle),        </code></pre><p>​     right = arr.slice(middle);    </p><p>​     return merge(mergeSort(left), mergeSort(right)); </p><p>}</p><p> function merge(left, right) {     </p><p>var result = [];    </p><p>  console.time(‘归并排序耗时’);     </p><p>while (left.length &amp;&amp; right.length) { </p><p>​        if (left[0] &lt;= right[0]) { result.push(left.shift()); } </p><p>​        else result.push(right.shift()); </p><p>while (left.length) (right.length) console.timeend(‘归并排序耗时’);</p><p> return result; </p><p>var arr=”[3,44,38,5,47,15,36,26,27,2,46,4,19,50,48];” console.log(mergesort(arr));</p></blockquote><p><strong>一组记录的值为(12,38,35,25,74,50,63,90),按2路归并排序方法对序列进行一趟归并后的结果为(  A  )</strong></p><p>A:12,38,25,35,50,74,63,90</p><p>B:12,38,35,25,74,50,63,90</p><p>C:12,25,35,38,50,74,63,90</p><p>D:12,35,38,25,63,50,74,90</p><p>解析：</p><p><img src="https://uploadfiles.nowcoder.com/images/20181213/530580337_1544714285748_772E62849C030C48EBF52D9B1548A428" alt="img"></p><p><img src="https://uploadfiles.nowcoder.com/images/20170701/6428287_1498913261898_265C7FA7B7393A64D86043C1E57DD398" alt="img"></p><p>将两个相邻位置的有序子列，归并为一个有序列的序列，是典型的 <strong>分治法</strong> 应用 </p><h3 id=""><a href="#" class="headerlink" title=""></a></h3><p><strong>数据表A中有10000个元案，如果仅要求求出其中最大的10个元素，则采用()排序算法最节省时间。</strong>   </p><p>A:简单选择排序</p><p>B:希尔排序</p><p>C:堆排序</p><p>D:快速排序</p><p>解析：堆排序，利用到了树的结构，树的顶端就是最大值，很快就能找到，最值</p><h2 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h2><p><strong>下面的哪种排序算法在算复杂度平均不是O(nlogn)的?（B）</strong></p><p>A:快速排序</p><p>B:桶排序</p><p>C:合并排序</p><p>D:二叉树排序树排序</p><p>E:堆排序</p><p>解答：  </p><p><img src="http://uploadfiles.nowcoder.com/images/20160507/426198_1462607057516_67578A2B2E254243415482C36347C471" alt="img"></p><p>  桶排序的平均时间复杂度为线性的O(N+C)，其中C=N*(logN-logM)。如果相对于同样的N，桶数量M越大，其效率越高，最好的时间复杂度达到O(N)。  当然桶排序的空间复杂度 为O(N+M)，如果输入数据非常庞大，而桶的数量也非常多，则空间代价无疑是昂贵的。此外，桶排序是稳定的。</p><h2 id="桶排序"><a href="#桶排序" class="headerlink" title="桶排序"></a>桶排序</h2><p>桶排序的时间复杂度是线性的，即O(n)的。比如：对n个数排序，这n个数的值在一定范围内（比如在1到100之间），那么直接构建一个大小为100的数组arr，在遍历包含n个数的数组num时，令arr[num[i]]++即可，最后从头到尾遍历arr，若arr[i]=m，则输出m个i即可。</p><p>  <strong>对  n  个记录的文件进行快速排序，所需要的辅助存储空间大致为(C)</strong></p><p>A:O（1）</p><p>B:O（n）</p><p>C:O（1og2n）</p><p>D:O（n2）</p><p>解析：</p><p>  辅助存储空间 = 时间复杂度 </p><p>  额外存储空间 = 空间复杂度</p><p>快速排序对待排序序列得划分大约是log2n次，因为快速排序是通过递归算法来实现的，递归深度大约是log2n，所以所需得辅助空间为log2n</p><p>如果选取的主元使得枢纽值将T(n)划分成T(n - 1)和一个T(0)，并且接下来的递归都是这样划分，那么就要递归n -  1次，需要n-1个栈空间单元(?)，考虑选取枢纽值用去的O(n)代价，总复杂度：T(n) = T(n - 1) +  O(n),用递归树得到T(n) = O(n ^ 2), ；如果主元使得T(n)恰好划分成T(n) = 2T(n / 2) +  O(n)，递归树共lgn层，T(n) = O(nlgn)，需要的栈空间：O(lgn)。</p><p>  对图B-2进行拓扑排序，可以得到不同的拓扑序列的个数是（B）。</p><p><img src="https://uploadfiles.nowcoder.com/images/20180512/7574500_1526106876774_1739550CD29F99D6FC52E3E6A49E8DFF" alt="img"> </p><p>A:4</p><p>B:3</p><p>C:2</p><p>D:1</p><p>解析</p><h2 id="拓扑排序"><a href="#拓扑排序" class="headerlink" title="拓扑排序"></a>拓扑排序</h2><p>  拓扑排序的过程如下图所示。 </p><p>  <img src="https://uploadfiles.nowcoder.com/images/20180512/7574500_1526106976712_CA170FCB84F41A75AE0AF731CA65B4C7" alt="img"></p><p>   可以得到3个不同的拓扑序列，分别为：abced、abecd、aebcd。  </p><p><img src="https://uploadfiles.nowcoder.com/images/20190826/591802503_1566796873401_90C481E22DA191B81E3913D8E3698AB8" alt="img"></p><p><strong>设一组初始记录关键字序列为（49,38,65,97,76,13,27,49），则以第一个关键字49为基准而得到的一趟快速排序结果是：（）</strong></p><p>A:38，13，27，49，49，65，97，76</p><p>B:13，27，38，49，65，76，97，49</p><p>C:27，38，13，49，76，97，65，49</p><p>D:27，38，13，49，97，76，65，49</p><p>解析：</p><p>基本思想： </p><p> 第一步：(初始化)设置两个指针i和j，它们的初值分别为区间的下界和上界，即i=low，i=high；选取无序区的第一个记录R<a href="%E5%8D%B3R%5Blow%5D">i</a>作为基准记录，并将它保存在变量pivot中；<br>  第二步：令j自high起向左扫描，直到找到第1个关键字小于pivot.key的记录R[j]，将R[j])移至i所指的位置上，这相当于R[j]和基准R<a href="%E5%8D%B3pivot">i</a>进行了交换，使关键字小于基准关键字pivot.key的记录移到了基准的左边，交换后R[j]中相当于是pivot；然后，令i指针自i+1位置开始向右扫描，直至找到第1个关键字大于pivot.key的记录R[i]，将R[i]移到i所指的位置上，这相当于交换了R[i]和基准R[j]，使关键字大于基准关键字的记录移到了基准的右边，交换后R[i]中又相当于存放了pivot；接着令指针j自位置j-1开始向左扫描，如此交替改变扫描方向，从两端各自往中间靠拢，直至i=j时，i便是基准pivot最终的位置，将pivot放在此位置上就完成了一次划分。</p><p> 排序过程：<br> [49 38 65 97 76 13 27 49] //初始关键字<br> [27 38 13] 49 [76 97 65 49] //第1次划分完成之后，对应递归树第2层</p><p>以49为基准，取出49，两个指针，前指针指向38，后指针指向最后一个49<br> 首先移动后指针，找到27&lt;49，将27放在 0 位置，后指针前移<br> 再根据前指针查找，65&gt;49，将65放在原27的位置<br> 现在结果是 27,38, ,97,76,13,65,49<br> 继续用后指针查找，13&lt;49,放在空位中，后指针前移，<br> 结果是 27,38,13,97,76, ,65,49<br> 继续前指针查找，97&gt;49，放在空位，变成27,38,13, ,76,97,65,49<br> 然后前后指针都指向76，结束，将49放入空位中，得到27,38,13,49,76,97,65,49</p><p><strong>下列排序算法的常规实现中，哪些空间复杂度是O(1)(A B E)</strong></p><p>A:冒泡</p><p>B:选择</p><p>C:归并</p><p>D:快排</p><p>E:堆排序</p><p>解析：  冒泡排序,选择排序,堆排序的空间复杂度为O(1),因为需要一个临时变量来交换元素位置,(另外遍历序列时自然少不了用一个变量来做索引). </p><p>  快速排序空间复杂度为logn(因为递归调用了) ,归并排序空间复杂是O(n),需要一个大小为n的临时数组.</p>]]></content>
       
       
       <categories>
@@ -471,6 +498,31 @@
     
     
     <entry>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c/c-10th-01/"/>
       <url>2021/02/17/c/c-10th-01/</url>
@@ -498,56 +550,6 @@
     
     
     <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# AutoCAD开发</title>
-      <link href="2021/02/17/autocad-c/c-autocad/"/>
-      <url>2021/02/17/autocad-c/c-autocad/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-AutoCAD开发"><a href="#c-AutoCAD开发" class="headerlink" title="c# AutoCAD开发"></a>c# AutoCAD开发</h1><h1 id="第一章-AutoCAD-C-开发基础"><a href="#第一章-AutoCAD-C-开发基础" class="headerlink" title="第一章 AutoCAD C#开发基础"></a>第一章 AutoCAD C#开发基础</h1><h2 id="AutoCAD二次开发语言"><a href="#AutoCAD二次开发语言" class="headerlink" title="AutoCAD二次开发语言"></a>AutoCAD二次开发语言</h2><p>1.ObjectARX：优点：功能强大，编程效率高。缺点：必须掌握VC++</p><p>2.Lisp,VBA  优点：简单易上手，缺点：对于程序开发，很难</p><p>3.c# 结合了ObjectARX功能强大，效率高，以及简单易学</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232629971.png" alt="image-20210226232629971"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232718389.png" alt="image-20210226232718389"></p><h2 id="项目中添加cad引用"><a href="#项目中添加cad引用" class="headerlink" title="项目中添加cad引用"></a>项目中添加cad引用</h2><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232851361.png" alt="image-20210226232851361"></p><p>引用之后修改属性</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232919860.png" alt="image-20210226232919860"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233032206.png" alt="image-20210226233032206"></p><p>程序集引入以及命名空间</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233432913.png" alt="image-20210226233432913"></p><p>调用方法 标注</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233554713.png" alt="image-20210226233554713"></p><p>AUTOCAD  netload  dll引用，可以命令行输入命令</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233834674.png" alt="image-20210226233834674"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226234328640.png" alt="image-20210226234328640"></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# AutoCAD开发 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# AutoCAD开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>c# 高级编程(10th) 前言</title>
       <link href="2021/02/17/c/c-10th-00/"/>
       <url>2021/02/17/c/c-10th-00/</url>
@@ -565,6 +567,56 @@
         <tags>
             
             <tag> c# 高级编程(10th) </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AutoCAD开发</title>
+      <link href="2021/02/17/autocad-c/c-autocad-00/"/>
+      <url>2021/02/17/autocad-c/c-autocad-00/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-AutoCAD开发"><a href="#c-AutoCAD开发" class="headerlink" title="c# AutoCAD开发"></a>c# AutoCAD开发</h1><h1 id="第一章-AutoCAD-C-开发基础"><a href="#第一章-AutoCAD-C-开发基础" class="headerlink" title="第一章 AutoCAD C#开发基础"></a>第一章 AutoCAD C#开发基础</h1><h2 id="AutoCAD二次开发语言"><a href="#AutoCAD二次开发语言" class="headerlink" title="AutoCAD二次开发语言"></a>AutoCAD二次开发语言</h2><p>1.ObjectARX：优点：功能强大，编程效率高。缺点：必须掌握VC++</p><p>2.Lisp,VBA  优点：简单易上手，缺点：对于程序开发，很难</p><p>3.c# 结合了ObjectARX功能强大，效率高，以及简单易学</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232629971.png" alt="image-20210226232629971"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232718389.png" alt="image-20210226232718389"></p><h2 id="项目中添加cad引用"><a href="#项目中添加cad引用" class="headerlink" title="项目中添加cad引用"></a>项目中添加cad引用</h2><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232851361.png" alt="image-20210226232851361"></p><p>引用之后修改属性</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226232919860.png" alt="image-20210226232919860"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233032206.png" alt="image-20210226233032206"></p><p>程序集引入以及命名空间</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233432913.png" alt="image-20210226233432913"></p><p>调用方法 标注</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233554713.png" alt="image-20210226233554713"></p><p>AUTOCAD  netload  dll引用，可以命令行输入命令</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226233834674.png" alt="image-20210226233834674"></p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210226234328640.png" alt="image-20210226234328640"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AutoCAD开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AutoCAD开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>AutoCAD开发</title>
+      <link href="2021/02/17/autocad-c/c-autocad-01/"/>
+      <url>2021/02/17/autocad-c/c-autocad-01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-AutoCAD开发"><a href="#c-AutoCAD开发" class="headerlink" title="c# AutoCAD开发"></a>c# AutoCAD开发</h1><h1 id="第二章-AutoCAD-创建实体-C-基本概念"><a href="#第二章-AutoCAD-创建实体-C-基本概念" class="headerlink" title="第二章 AutoCAD 创建实体 C#基本概念"></a>第二章 AutoCAD 创建实体 C#基本概念</h1><p>AutoCAD的常用命名空间</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210227102402285.png" alt="image-20210227102402285"></p><p>新建项目</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210227102533248.png" alt="image-20210227102533248"></p><p>注册方法</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210227102707034.png" alt="image-20210227102707034"></p><p>定义</p><p><img src="C:\Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210227103116149.png" alt="image-20210227103116149"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AutoCAD开发 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> AutoCAD开发 </tag>
             
         </tags>
       
