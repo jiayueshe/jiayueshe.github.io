@@ -359,6 +359,10 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
+                            <a href="/tags/set/">
+                                <span class="chip bg-color">set</span>
+                            </a>
+                        
                     </div>
                     
                 </div>
@@ -394,14 +398,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.4k
+                    2.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    11 分
                 </div>
                 
 
@@ -426,13 +430,23 @@
 <p>// 多行<br>// 如果每一行的操作相同<br>while(line = readline()){<br>    // 代码<br>}<br>/<em>如果每一行操作不同<br>eg: 第一行给数组长度<br>     第二行给用空格分开的字符串<br>那就每一次按照单行输入的方式来获取即可</em>/<br>var num = parseInt(readline()); // 获得数组长度<br>var arr = readline().split(“ “); // 获得数组</p>
 </blockquote>
 <h2 id="1-字符串-split（易）"><a href="#1-字符串-split（易）" class="headerlink" title="1.(字符串) split（易）"></a>1.(字符串) split（易）</h2><p><strong>计算字符串最后一个单词的长度，单词以空格隔开。(<a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionCenter?questionTypes=000100&mutiTagIds=579">字符串</a>)</strong><br>输入描述:<br>输入一行，代表要计算的字符串，非空，长度小于5000。<br>输出描述:<br>输出一个整数，表示输入字符串最后一个单词的长度。<br>示例1<br>输入:hello nowcoder<br>输出:8<br>解答：</p>
-<blockquote>
-<p>while (line = readline()){<br>   var stringlist  = line.split(‘ ‘);<br>   var lastlen =stringlist[stringlist.length-1].length;<br>   print(lastlen);<br>}</p>
-</blockquote>
+<pre><code>while (line = readline())&#123;
+    var stringlist  = line.split(&#39; &#39;);
+    var lastlen =stringlist[stringlist.length-1].length;
+    print(lastlen);
+&#125;
+</code></pre>
 <h2 id="2-字符串-toLowerCase（易）"><a href="#2-字符串-toLowerCase（易）" class="headerlink" title="2.(字符串)toLowerCase（易）"></a>2.(字符串)toLowerCase（易）</h2><p><strong>写出一个程序，接受一个由字母、数字和空格组成的字符串，和一个字母，然后输出输入字符串中该字母的出现次数。不区分大小写。 (字符串，哈希）</strong><br>输入描述:第一行输入一个由字母和数字以及空格组成的字符串，第二行输入一个字母。<br>输出描述:输出输入字符串中含有该字符的个数。<br>示例1<br>输入<br>ABCabc<br>A<br>输出2<br>解答</p>
-<blockquote>
-<p>var aStr = readline().toLowerCase();<br>var bStr = readline().toLowerCase();<br>var count = 0;<br>for (var i = 0 ; i &lt; aStr.length; i++){<br>   if(aStr[i] == bStr){<br>       count = count + 1;<br>   }<br>}<br>print(count);</p>
-</blockquote>
+<pre><code>var aStr = readline().toLowerCase();
+var bStr = readline().toLowerCase();
+var count = 0;
+for (var i = 0 ; i &lt; aStr.length; i++)&#123;
+    if(aStr[i] == bStr)&#123;
+    count = count + 1;
+    &#125;
+&#125;
+print(count);
+</code></pre>
 <h2 id="3-数组-sort-set（中）"><a href="#3-数组-sort-set（中）" class="headerlink" title="3.(数组)sort set（中）"></a>3.(数组)sort set（中）</h2><p><strong>题目描述</strong><br>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据，希望大家能正确处理)。 </p>
 <p>  注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。 当没有新的输入时，说明输入结束。<br><strong>输入描述:</strong></p>
 <pre><code>注意：输入可能有多组数据。每组数据都包括多行，第一行先输入随机整数的个数N，接下来的N行再输入相应个数的整数。具体格式请看下面的&quot;示例&quot;。
@@ -478,16 +492,44 @@
 第二组是11个数字，分别是：10，20，40，32，67，40，20，89，300，400，15。 
 </code></pre>
 <p>解答：<br>每组分段返回</p>
-<blockquote>
-<p>var lines = 0;<br>var scoreList = [];<br>while(line = readline()){<br>    if(lines ==0 ){<br>        lines = parseInt(line);<br>        outPut(scoreList);<br>    }else{<br>        lines–;<br>        scoreList.push(parseInt(line));<br>    }<br>}<br>function outPut(arr){<br>    arr = unique(arr).sort((a,b)=&gt;{return a-b});<br>    for(var i=0;i&lt; arr.length;i++){<br>        print(arr[i]);<br>    }<br>}</p>
-<p>function unique(arr) {<br>    return Array.from(new Set(arr))<br>}</p>
-</blockquote>
+<pre><code>var lines = 0;
+var scoreList = [];
+while(line = readline())&#123;
+ if(lines ==0 )&#123;
+     lines = parseInt(line);
+     outPut(scoreList);
+ &#125;else&#123;
+     lines--;
+     scoreList.push(parseInt(line));
+ &#125;
+&#125;
+function outPut(arr)&#123;
+ arr = unique(arr).sort((a,b)=&gt;&#123;return a-b&#125;);
+ for(var i=0;i&lt; arr.length;i++)&#123;
+     print(arr[i]);
+ &#125;
+&#125;
+
+function unique(arr) &#123;
+ return Array.from(new Set(arr))
+&#125;
+</code></pre>
 <p>通过解答</p>
-<blockquote>
-<p>while(line=readline()){<br>    var arr=[];<br>    for(var i=0;i&lt;line;i++){<br>        arr.push(readline());<br>    }<br>    var tSet=[…new Set(arr)];<br>    var setSort=tSet.sort(function(a,b){<br>        return a-b;<br>    })</p>
-<p>​    for(var j=0;j&lt;setSort.length;j++){<br>        console.log(setSort[j]);<br>​    }</p>
-<p>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+ var arr=[];
+ for(var i=0;i&lt;line;i++)&#123;
+     arr.push(readline());        
+ &#125;
+ var tSet=[...new Set(arr)];
+ var setSort=tSet.sort(function(a,b)&#123;
+     return a-b;
+ &#125;)
+
+​for(var j=0;j&lt;setSort.length;j++)&#123;
+​    console.log(setSort[j]);
+​&#125;
+&#125;
+</code></pre>
 <h2 id="4-字符串-字符串分隔（中）"><a href="#4-字符串-字符串分隔（中）" class="headerlink" title="4(字符串) 字符串分隔（中）"></a>4(字符串) <strong>字符串分隔</strong>（中）</h2><p><strong>题目描述</strong></p>
 <p>  •连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br> •长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。  </p>
 <p><strong>输入描述:</strong></p>
@@ -507,27 +549,71 @@
 </code></pre>
 <p> 解答：</p>
 <p>第一次</p>
-<blockquote>
-<p>while(line=readline()){<br>    var strLength =line.length;<br>    var N = Math.floor(strLength/8);<br>    var mLast =strLength-N*8;<br>    var addnum =8-mLast;<br>    for(i=0;i&lt;N;i++){<br>       print(line.substring(i*8,8*(i+1)))<br>    }<br>    if(addnum&gt;0){<br>        var sstr=’0’;<br>        for(i=1;i&lt;addnum;i++){<br>           sstr+=’0’;<br>        }<br>        var firstr = line.substring((N)*8,strLength);<br>        print( firstr + sstr)<br>    }<br>}</p>
-</blockquote>
-<p>第二次</p>
-<blockquote>
-<p>var arr=[];<br>while(line=readline()){<br>    arr.push(line);<br>}<br>for(var j=0;j&lt;arr.length;j++){<br>    var strLength = arr[j].length;<br>    var N = Math.floor(strLength/8);<br>    var mLast = strLength-N*8;<br>    var addnum =8-mLast;<br>    for(i=0;i&lt;N;i++){<br>       print(arr[j].substring(i*8,8*(i+1)))<br>    }<br>    if(mLast&gt;0){<br>        var sstr=’0’;<br>        for(i=1;i&lt;addnum;i++){<br>           sstr+=’0’;<br>        }<br>        var firstr = arr[j].substring((N)*8,strLength);<br>        print( firstr + sstr)<br>    }<br>}</p>
-</blockquote>
-<p>参考</p>
-<blockquote>
-<p>var q=’00000000’;<br>var arr=[];<br>for(var i=0;i&lt;2;i++){<br>    arr.push(readline());</p>
-<p>}<br>for(var j=0;j&lt;arr.length;j++){<br>    if(arr[j].length&lt;=8){<br>        var t=arr[j]+q;<br>        console.log(t.slice(0,8));<br>    }else{<br>        var len=arr[j].length;<br>        for(var i=0;i&lt;len;i+=8){<br>            var s=arr[j].slice(i,i+8);<br>            if(s.length&lt;8){<br>                var p=s+q;<br>                console.log(p.slice(0,8));</p>
-<pre><code>        &#125;else&#123;
-            console.log(s);
-        &#125;
-
-    &#125;
-
+<pre><code>while(line=readline())&#123;
+ var strLength =line.length;
+ var N = Math.floor(strLength/8);
+ var mLast =strLength-N*8;
+ var addnum =8-mLast;
+ for(i=0;i&lt;N;i++)&#123;
+    print(line.substring(i*8,8*(i+1)))
+ &#125;
+ if(addnum&gt;0)&#123;
+     var sstr=&#39;0&#39;;
+     for(i=1;i&lt;addnum;i++)&#123;
+        sstr+=&#39;0&#39;;
+     &#125;
+     var firstr = line.substring((N)*8,strLength);
+     print( firstr + sstr)
+ &#125;
 &#125;
 </code></pre>
-<p>}</p>
-</blockquote>
+<p>第二次</p>
+<pre><code>var arr=[];
+while(line=readline())&#123;
+ arr.push(line);
+&#125;
+for(var j=0;j&lt;arr.length;j++)&#123;
+ var strLength = arr[j].length;
+ var N = Math.floor(strLength/8);
+ var mLast = strLength-N*8;
+ var addnum =8-mLast;
+ for(i=0;i&lt;N;i++)&#123;
+    print(arr[j].substring(i*8,8*(i+1)))
+ &#125;
+ if(mLast&gt;0)&#123;
+     var sstr=&#39;0&#39;;
+     for(i=1;i&lt;addnum;i++)&#123;
+        sstr+=&#39;0&#39;;
+     &#125;
+     var firstr = arr[j].substring((N)*8,strLength);
+     print( firstr + sstr)
+ &#125;
+&#125;
+</code></pre>
+<p>参考</p>
+<pre><code>var q=&#39;00000000&#39;;
+var arr=[];
+for(var i=0;i&lt;2;i++)&#123;
+     arr.push(readline());
+&#125;
+for(var j=0;j&lt;arr.length;j++)&#123;
+     if(arr[j].length&lt;=8)&#123;
+    var t=arr[j]+q;
+    console.log(t.slice(0,8)); 
+ &#125;else&#123;
+     var len=arr[j].length;
+     for(var i=0;i&lt;len;i+=8)&#123;
+         var s=arr[j].slice(i,i+8);
+         if(s.length&lt;8)&#123;
+             var p=s+q;
+             console.log(p.slice(0,8)); 
+         &#125;else&#123;
+         console.log(s);
+          &#125;
+      &#125;
+  &#125;
+&#125;
+</code></pre>
 <h2 id="5-字符串-进制转换（易）"><a href="#5-字符串-进制转换（易）" class="headerlink" title="5(字符串)进制转换（易）"></a>5(字符串)进制转换（易）</h2><p><strong>题目描述</strong></p>
 <p>  写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。 </p>
 <p><strong>输入描述:</strong></p>
@@ -544,9 +630,11 @@
 <pre><code>10
 170
 </code></pre>
-<blockquote>
-<p>while(line=readline()){<br>   var output = parseInt(line, 16);<br>   print(output);<br>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+    var output = parseInt(line, 16);
+    print(output);
+&#125;
+</code></pre>
 <h2 id="6质数因子（难）"><a href="#6质数因子（难）" class="headerlink" title="6质数因子（难）"></a>6<strong>质数因子</strong>（难）</h2><p><strong>题目描述</strong></p>
 <p>  功能:输入一个正整数，按照从小到大的顺序输出它的所有质因子（重复的也要列举）（如180的质因子为2 2 3 3 5 ） </p>
 <p>  最后一个数后面也要有空格  </p>
@@ -564,21 +652,78 @@
 </code></pre>
 <p>解析:</p>
 <p> 查找质数的方法，从2开始除,不能被2除，则尝试3，不能被3除，也不能被4除，尝试5。。。 每除一次进行一次循环。从小到大找出所有质数</p>
-<blockquote>
-<p>while(line=readline()){<br>   var num = parseInt(line);<br>   var arr=[];<br>   for(i=2;i&lt;=num;i++){<br>       if(num%i==0){<br>           num=num/i;<br>           arr.push(i)<br>           i=1;<br>       }<br>   }<br>   print(arr.join(“ “)+ ‘ ‘);<br>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+var num = parseInt(line);
+var arr=[];
+for(i=2;i&lt;=num;i++)&#123;
+   if(num%i==0)&#123;
+       num=num/i;
+       arr.push(i)
+       i=1;
+   &#125;
+&#125;
+print(arr.join(&quot; &quot;)+ &#39; &#39;);
+&#125;
+
+</code></pre>
 <p><strong>优化解法：</strong></p>
 <p>扩展补充：就分解的质数：</p>
-<blockquote>
-<p>function getPrimGens(a)<br>{<br>    var arr = getGens(a);<br>    var c = [];<br>    for(var i=0;i&lt;arr.length;i++){<br>        var t = getGens(arr[i]);<br>        if(t.length==0) c.push(arr[i]);<br>    }<br>    return c;</p>
-<p>}</p>
-<p>function getGens(a)<br>{<br>    var arr = [];<br>    var n = a/2 + 1;<br>    for(var i=2; i&lt;n; i++){<br>        if(a%i == 0) arr.push(i)<br>    }<br>    return arr;<br>}</p>
-</blockquote>
+<pre><code>function getPrimGens(a)
+&#123;
+ var arr = getGens(a);
+ var c = [];
+ for(var i=0;i&lt;arr.length;i++)&#123;
+     var t = getGens(arr[i]);
+     if(t.length==0) c.push(arr[i]);
+ &#125;
+ return c;
+
+&#125;
+
+function getGens(a)
+&#123;
+ var arr = [];
+ var n = a/2 + 1;
+ for(var i=2; i&lt;n; i++)&#123;
+     if(a%i == 0) arr.push(i)
+ &#125;
+ return arr;
+&#125;
+</code></pre>
 <p>优化解:运行时间减少一半</p>
-<blockquote>
-<p>while(line=readline()){<br>    var num = parseInt(line);<br>    var result = getPreGens(num);<br>    print(result.join(“ “)+ ‘ ‘);<br>}</p>
-<p>function getPreGens(a)<br>{<br>    var arr = [];<br>    var n = Math.floor(a/2)+ 1;<br>    var t = n;<br>    var i;<br>    while(1==1)<br>    {<br>        if(i==t)<br>        {<br>            arr.push(a);<br>            break;<br>        }<br>        for(i=2; i&lt;t; i++)<br>        {<br>            if(a%i == 0)<br>            {<br>                arr.push(i);<br>                a = a/i;<br>                t = Math.floor(a/2 )+ 1;<br>                break;<br>            }<br>        }<br>    }<br>    return arr;<br>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+ var num = parseInt(line);
+ var result = getPreGens(num);
+ print(result.join(&quot; &quot;)+ &#39; &#39;);
+&#125;
+
+function getPreGens(a)
+&#123;
+ var arr = [];
+ var n = Math.floor(a/2)+ 1;
+ var t = n;
+ var i;
+ while(1==1)
+ &#123;
+     if(i==t)
+     &#123;
+         arr.push(a);
+         break;
+     &#125;
+     for(i=2; i&lt;t; i++)
+     &#123;
+         if(a%i == 0) 
+         &#123;
+             arr.push(i);
+             a = a/i;
+             t = Math.floor(a/2 )+ 1;
+             break;
+         &#125;
+     &#125;
+ &#125;
+ return arr;
+&#125;
+</code></pre>
 <h2 id="7-取近似值（易）"><a href="#7-取近似值（易）" class="headerlink" title="7 取近似值（易）"></a>7 取近似值（易）</h2><p>题目描述</p>
 <p>  写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于5,向上取整；小于5，则向下取整。 </p>
 <p>输入描述:</p>
@@ -594,9 +739,11 @@
 <pre><code>6
 </code></pre>
 <p>解析</p>
-<blockquote>
-<p>while(line=readline()){<br>    var num = Math.round(line);<br>    print(num);<br>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+ var num = Math.round(line);
+ print(num);
+&#125;
+</code></pre>
 <p>扩展</p>
 <ul>
 <li>只保留整数部分（丢弃小数部分）parseInt(5.1234); </li>
@@ -629,9 +776,30 @@
 3 4
 </code></pre>
 <p> 解析</p>
-<blockquote>
-<p>while(line=readline()){<br>    let lines = Math.round(line);<br>    let arrs =[];<br>    let m = new Map();<br>    for(i=0;i&lt;lines;i++){<br>       let arr = readline().split(‘ ‘);<br>       if(m.has(arr[0])){<br>           m.set(arr[0],m.get(arr[0])+parseInt(arr[1]));<br>       }else{<br>            m.set(arr[0],parseInt(arr[1]));<br>       }<br>    }<br>    let keys = new Array();<br>    for (var key of m.keys()) {<br>        keys.push(key)<br>    }<br>    keys.sort(function(key1, key2) {<br>      return key1 - key2<br>    });<br>    keys.forEach(key =&gt; {<br>        print(key +’ ‘ + m.get(key));<br>    })<br>}</p>
-</blockquote>
+<pre><code>while(line=readline())&#123;
+ let lines = Math.round(line);
+ let arrs =[];
+ let m = new Map();
+ for(i=0;i&lt;lines;i++)&#123;
+    let arr = readline().split(&#39; &#39;);
+    if(m.has(arr[0]))&#123;
+        m.set(arr[0],m.get(arr[0])+parseInt(arr[1]));
+    &#125;else&#123;
+         m.set(arr[0],parseInt(arr[1]));
+    &#125;
+ &#125;
+ let keys = new Array();
+ for (var key of m.keys()) &#123;
+     keys.push(key)
+ &#125;
+ keys.sort(function(key1, key2) &#123;
+   return key1 - key2
+ &#125;);
+ keys.forEach(key =&gt; &#123;
+     print(key +&#39; &#39; + m.get(key));
+ &#125;)
+&#125;
+</code></pre>
 <p>9</p>
 <p>题目描述</p>
 <p>  输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。 </p>
@@ -649,9 +817,15 @@
 <pre><code>37689
 </code></pre>
 <p>解析</p>
-<blockquote>
-<p>while(line=readline()){<br>   var s1 = new Set(); // 空Set<br>   for( i = line.length - 1; i &gt;= 0 ; i–){<br>       s1.add(line[i]);<br>   }<br>   var result= Array.from(s1).join(‘’);<br>   print(result);<br>}</p>
-</blockquote>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 空Set</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span> i <span class="token operator">=</span> line<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+           s1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>line<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> result<span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+</code></pre>
 
                 
             </div>
@@ -722,6 +896,10 @@
                             
                                 <a href="/tags/JavaScript/">
                                     <span class="chip bg-color">JavaScript</span>
+                                </a>
+                            
+                                <a href="/tags/set/">
+                                    <span class="chip bg-color">set</span>
                                 </a>
                             
                         </div>
@@ -941,6 +1119,10 @@
                         <span class="chip bg-color">JavaScript</span>
                     </a>
                     
+                    <a href="/tags/set/">
+                        <span class="chip bg-color">set</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1104,7 +1286,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">37.9k</span>&nbsp;字
+                class="white-color">38k</span>&nbsp;字
             
             
             
