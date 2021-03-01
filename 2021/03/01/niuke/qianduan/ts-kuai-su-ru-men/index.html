@@ -390,7 +390,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    299
+                    336
                 </div>
                 
 
@@ -479,14 +479,24 @@ play(666);
 <h2 id="9-class创建、实例化、属性、方法"><a href="#9-class创建、实例化、属性、方法" class="headerlink" title="9.class创建、实例化、属性、方法"></a>9.class创建、实例化、属性、方法</h2><pre><code>class Person&#123;
     name:string;
     age:number;
+    food:string =&#39;剁椒鱼头&#39;;
+    private money:nummber=2000;
     constructor(name:string,age:number)&#123;
         this.name =name;
         this.age=age;
     &#125;
+    favoriteFood()&#123;
+        return this.food;
+    &#125;
+    makeMoney(salary:number):number&#123;
+        return this.money +=salary;
+    &#125;
 &#125;
 //实例化
 let dabingge =new Person(&#39;dabing&#39;,28);
+console.log(dabingge.makeMoney(99));
 </code></pre>
+<p>10.类继承</p>
 
                 
             </div>
@@ -724,9 +734,60 @@ let dabingge =new Person(&#39;dabing&#39;,28);
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="TypeScript入门">
+                        
+                        <span class="card-title">TypeScript入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            TypeScript入门
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/TypeScrip/" class="post-category">
+                                    TypeScrip
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/TypeScrip/">
+                        <span class="chip bg-color">TypeScrip</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2021/03/01/niuke/sql/sql-you-hua-jian-yi/">
                     <div class="card-image">
@@ -744,9 +805,9 @@ let dabingge =new Person(&#39;dabing&#39;,28);
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -764,55 +825,6 @@ let dabingge =new Person(&#39;dabing&#39;,28);
                     
                     <a href="/tags/SQL-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
                         <span class="chip bg-color">SQL 性能优化</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/02/28/niuke/qianduan/js-oo/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js面向对象">
-                        
-                        <span class="card-title">js面向对象</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            js面向对象
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-category">
-                                    js面向对象
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">js面向对象</span>
                     </a>
                     
                 </div>

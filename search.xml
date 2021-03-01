@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>TypeScript入门</title>
+      <link href="2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/"/>
+      <url>2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/</url>
+      
+        <content type="html"><![CDATA[<h1 id="TypeScript入门"><a href="#TypeScript入门" class="headerlink" title="TypeScript入门"></a>TypeScript入门</h1><h2 id="1：TypeScript简介"><a href="#1：TypeScript简介" class="headerlink" title="1：TypeScript简介"></a>1：TypeScript简介</h2><p>中文官网：<a href="http://www.tslang.cn/">http://www.tslang.cn</a></p><p>英文官网<a href="http://www.typescriptlang.org/">http://www.typescriptlang.org</a></p><p>学习前景：</p><ol><li><p>Egret游戏开发工程师20-40K  h5游戏开发</p></li><li><p>angular  vue</p></li><li><p>typescript-&gt;  ES6 ES7  ES8</p></li><li><p>后台协作</p></li><li><p>大幅度提升工作效率，减少错误</p></li></ol><h2 id="2：开始使用ts"><a href="#2：开始使用ts" class="headerlink" title="2：开始使用ts"></a>2：开始使用ts</h2><p>安装node</p><p>安装TypeScript编译环境 npm install -g typescript</p><p>tsc helloworld.ts</p><h2 id="3-class导入-import-“-second”"><a href="#3-class导入-import-“-second”" class="headerlink" title="3.class导入 import “./second”"></a>3.class导入 import “./second”</h2><h2 id="4-ts项目开发编译配置"><a href="#4-ts项目开发编译配置" class="headerlink" title="4.ts项目开发编译配置"></a>4.ts项目开发编译配置</h2><pre><code>tsc --init</code></pre><p>tsconfig.json</p><pre><code>&quot;files&quot;:[    &quot;helloworld.ts&quot;,    &quot;main.ts&quot;],//编译的文件&quot;outDir&quot;:&quot;./dist&quot;, //输出目录</code></pre><h2 id="5-使用ts操作html"><a href="#5-使用ts操作html" class="headerlink" title="5.使用ts操作html"></a>5.使用ts操作html</h2><pre><code>document.body.innerHtml();</code></pre><h2 id="6-常见数据类型：-类型检查严格"><a href="#6-常见数据类型：-类型检查严格" class="headerlink" title="6.常见数据类型： 类型检查严格"></a>6.常见数据类型： 类型检查严格</h2><pre><code>//先定义let username:string =&quot;dabing&quot;;let age:number=12;//默认 any类型</code></pre><h2 id="7-枚举类型"><a href="#7-枚举类型" class="headerlink" title="7.枚举类型"></a>7.枚举类型</h2><pre><code>let arrNum:number[]=[12,3,,6,9];//混合let MixArr:(number|string)[] =[&#39;123&#39;,&#39;hah&#39;,15]//枚举enum Direction &#123;    up =38;    down, //39    left, //40    right //41&#125;//自动赋值function paly(dir:Direction)&#123;    if(dir==38)&#123;        console.log(&quot;向上&quot;)    &#125;else&#123;        connsole.log(dir);    &#125;&#125;play(666);</code></pre><h2 id="8-函数参数与强类型"><a href="#8-函数参数与强类型" class="headerlink" title="8.函数参数与强类型"></a>8.函数参数与强类型</h2><pre><code>function showIfno(age:number):number&#123;    return age;&#125;</code></pre><h2 id="9-class创建、实例化、属性、方法"><a href="#9-class创建、实例化、属性、方法" class="headerlink" title="9.class创建、实例化、属性、方法"></a>9.class创建、实例化、属性、方法</h2><pre><code>class Person&#123;    name:string;    age:number;    food:string =&#39;剁椒鱼头&#39;;    private money:nummber=2000;    constructor(name:string,age:number)&#123;        this.name =name;        this.age=age;    &#125;    favoriteFood()&#123;        return this.food;    &#125;    makeMoney(salary:number):number&#123;        return this.money +=salary;    &#125;&#125;//实例化let dabingge =new Person(&#39;dabing&#39;,28);console.log(dabingge.makeMoney(99));</code></pre><p>10.类继承</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> TypeScrip </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> TypeScrip </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>52 条 SQL 语句性能优化策略</title>
       <link href="2021/03/01/niuke/sql/sql-you-hua-jian-yi/"/>
       <url>2021/03/01/niuke/sql/sql-you-hua-jian-yi/</url>
@@ -21,31 +46,6 @@
         <tags>
             
             <tag> SQL 性能优化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>TypeScript入门</title>
-      <link href="2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/"/>
-      <url>2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/</url>
-      
-        <content type="html"><![CDATA[<h1 id="TypeScript入门"><a href="#TypeScript入门" class="headerlink" title="TypeScript入门"></a>TypeScript入门</h1><h2 id="1：TypeScript简介"><a href="#1：TypeScript简介" class="headerlink" title="1：TypeScript简介"></a>1：TypeScript简介</h2><p>中文官网：<a href="http://www.tslang.cn/">http://www.tslang.cn</a></p><p>英文官网<a href="http://www.typescriptlang.org/">http://www.typescriptlang.org</a></p><p>学习前景：</p><ol><li><p>Egret游戏开发工程师20-40K  h5游戏开发</p></li><li><p>angular  vue</p></li><li><p>typescript-&gt;  ES6 ES7  ES8</p></li><li><p>后台协作</p></li><li><p>大幅度提升工作效率，减少错误</p></li></ol><h2 id="2：开始使用ts"><a href="#2：开始使用ts" class="headerlink" title="2：开始使用ts"></a>2：开始使用ts</h2><p>安装node</p><p>安装TypeScript编译环境 npm install -g typescript</p><p>tsc helloworld.ts</p><h2 id="3-class导入-import-“-second”"><a href="#3-class导入-import-“-second”" class="headerlink" title="3.class导入 import “./second”"></a>3.class导入 import “./second”</h2><h2 id="4-ts项目开发编译配置"><a href="#4-ts项目开发编译配置" class="headerlink" title="4.ts项目开发编译配置"></a>4.ts项目开发编译配置</h2><pre><code>tsc --init</code></pre><p>tsconfig.json</p><pre><code>&quot;files&quot;:[    &quot;helloworld.ts&quot;,    &quot;main.ts&quot;],//编译的文件&quot;outDir&quot;:&quot;./dist&quot;, //输出目录</code></pre><h2 id="5-使用ts操作html"><a href="#5-使用ts操作html" class="headerlink" title="5.使用ts操作html"></a>5.使用ts操作html</h2><pre><code>document.body.innerHtml();</code></pre><h2 id="6-常见数据类型：-类型检查严格"><a href="#6-常见数据类型：-类型检查严格" class="headerlink" title="6.常见数据类型： 类型检查严格"></a>6.常见数据类型： 类型检查严格</h2><pre><code>//先定义let username:string =&quot;dabing&quot;;let age:number=12;//默认 any类型</code></pre><h2 id="7-枚举类型"><a href="#7-枚举类型" class="headerlink" title="7.枚举类型"></a>7.枚举类型</h2><pre><code>let arrNum:number[]=[12,3,,6,9];//混合let MixArr:(number|string)[] =[&#39;123&#39;,&#39;hah&#39;,15]//枚举enum Direction &#123;    up =38;    down, //39    left, //40    right //41&#125;//自动赋值function paly(dir:Direction)&#123;    if(dir==38)&#123;        console.log(&quot;向上&quot;)    &#125;else&#123;        connsole.log(dir);    &#125;&#125;play(666);</code></pre><h2 id="8-函数参数与强类型"><a href="#8-函数参数与强类型" class="headerlink" title="8.函数参数与强类型"></a>8.函数参数与强类型</h2><pre><code>function showIfno(age:number):number&#123;    return age;&#125;</code></pre><h2 id="9-class创建、实例化、属性、方法"><a href="#9-class创建、实例化、属性、方法" class="headerlink" title="9.class创建、实例化、属性、方法"></a>9.class创建、实例化、属性、方法</h2><pre><code>class Person&#123;    name:string;    age:number;    constructor(name:string,age:number)&#123;        this.name =name;        this.age=age;    &#125;&#125;//实例化let dabingge =new Person(&#39;dabing&#39;,28);</code></pre>]]></content>
-      
-      
-      <categories>
-          
-          <category> TypeScrip </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> TypeScrip </tag>
             
         </tags>
       
@@ -162,31 +162,6 @@
     
     
     <entry>
-      <title>js试题</title>
-      <link href="2021/02/26/niuke/qianduan/js-shi-ti/"/>
-      <url>2021/02/26/niuke/qianduan/js-shi-ti/</url>
-      
-        <content type="html"><![CDATA[<h1 id="js试题"><a href="#js试题" class="headerlink" title="js试题"></a>js试题</h1><p><strong>下面这个JS程序的输出是什么：</strong> </p><pre><code>function Foo() &#123;  var i = 0;  return function() &#123;    console.log(i++);  &#125;&#125;</code></pre><pre><code>var f1 = Foo(),  f2 = Foo();f1();f1();f2();</code></pre><p>正确答案: A</p><p>A:0 1 0</p><p>B:0 1 2</p><p>C:0 0 0</p><p>D:0 0 2</p><p>解析：</p><p>这道题考察<strong>闭包</strong>和<strong>引用类型对象</strong>的知识点：<br>1.一般来说函数执行完后它的局部变量就会随着函数调用结束被销毁，但是此题foo函数返回了一个匿名函数的引用（即一个<strong>闭包</strong>），它可以访问到foo()被调用产生的环境，而局部变量i一直处在这个环境中，只要一个环境有可能被访问到，它就不会被销毁，所以说闭包有延续变量作用域的功能。这就好理解为什么：</p><pre><code>f1();//0f1();//1</code></pre><p>2.我一开始认为f1和f2都=foo()是都指向了同一个function引用类型，所以顺理成章就会答错认为：</p><pre><code>f2();//2</code></pre><p>但其实foo()返回的是一个匿名函数，所以f1,f2相当于指向了两个不同的函数对象，所以结果也就顺理成章的变为：</p><p><a href="https://www.nowcoder.com/test/question/done?tid=41312304&qid=14899#">复制代码</a></p><pre><code>f2();//0</code></pre><p>下面有关JavaScript中 call和apply的描述，错误的是？</p><p>都是非正确答案: B </p><p>A:call与apply都属于Function.prototype的一个方法，所以每个function实例都有call、apply属性</p><p>B:两者传递的参数不同，call函数第一个参数都是要传入给当前对象的对象，apply不是</p><p>C:apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入</p><p>D:call传入的则是直接的参数列表。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> js试题 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> js试题 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>查找算法</title>
       <link href="2021/02/26/niuke/suanfa/search/"/>
       <url>2021/02/26/niuke/suanfa/search/</url>
@@ -218,6 +193,31 @@
             <tag> AVL树 </tag>
             
             <tag> 红黑树 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>js试题</title>
+      <link href="2021/02/26/niuke/qianduan/js-shi-ti/"/>
+      <url>2021/02/26/niuke/qianduan/js-shi-ti/</url>
+      
+        <content type="html"><![CDATA[<h1 id="js试题"><a href="#js试题" class="headerlink" title="js试题"></a>js试题</h1><p><strong>下面这个JS程序的输出是什么：</strong> </p><pre><code>function Foo() &#123;  var i = 0;  return function() &#123;    console.log(i++);  &#125;&#125;</code></pre><pre><code>var f1 = Foo(),  f2 = Foo();f1();f1();f2();</code></pre><p>正确答案: A</p><p>A:0 1 0</p><p>B:0 1 2</p><p>C:0 0 0</p><p>D:0 0 2</p><p>解析：</p><p>这道题考察<strong>闭包</strong>和<strong>引用类型对象</strong>的知识点：<br>1.一般来说函数执行完后它的局部变量就会随着函数调用结束被销毁，但是此题foo函数返回了一个匿名函数的引用（即一个<strong>闭包</strong>），它可以访问到foo()被调用产生的环境，而局部变量i一直处在这个环境中，只要一个环境有可能被访问到，它就不会被销毁，所以说闭包有延续变量作用域的功能。这就好理解为什么：</p><pre><code>f1();//0f1();//1</code></pre><p>2.我一开始认为f1和f2都=foo()是都指向了同一个function引用类型，所以顺理成章就会答错认为：</p><pre><code>f2();//2</code></pre><p>但其实foo()返回的是一个匿名函数，所以f1,f2相当于指向了两个不同的函数对象，所以结果也就顺理成章的变为：</p><p><a href="https://www.nowcoder.com/test/question/done?tid=41312304&qid=14899#">复制代码</a></p><pre><code>f2();//0</code></pre><p>下面有关JavaScript中 call和apply的描述，错误的是？</p><p>都是非正确答案: B </p><p>A:call与apply都属于Function.prototype的一个方法，所以每个function实例都有call、apply属性</p><p>B:两者传递的参数不同，call函数第一个参数都是要传入给当前对象的对象，apply不是</p><p>C:apply传入的是一个参数数组，也就是将多个参数组合成为一个数组传入</p><p>D:call传入的则是直接的参数列表。call 方法可将一个函数的对象上下文从初始的上下文改变为由 thisObj 指定的新对象。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> js试题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> js试题 </tag>
             
         </tags>
       
@@ -546,6 +546,31 @@
     
     
     <entry>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello MyBlog</title>
       <link href="2021/02/17/hello-myblog/"/>
       <url>2021/02/17/hello-myblog/</url>
@@ -575,31 +600,6 @@
     
     
     <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h1><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h1 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h1><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c/c-10th-01/"/>
       <url>2021/02/17/c/c-10th-01/</url>
@@ -619,31 +619,6 @@
             <tag> c# 高级编程(10th) </tag>
             
             <tag> .net 应用程序体系结构 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c/c-10th-00/"/>
-      <url>2021/02/17/c/c-10th-00/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
@@ -694,6 +669,31 @@
         <tags>
             
             <tag> AutoCAD开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c/c-10th-00/"/>
+      <url>2021/02/17/c/c-10th-00/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
