@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-02-28T13:58:10.117Z</updated>
+  <updated>2021-03-01T13:52:26.998Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -17,27 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>TypeScript入门</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/</id>
-    <published>2021-03-01T14:25:00.000Z</published>
-    <updated>2021-02-28T13:58:10.117Z</updated>
+    <title>ES6、ES7、ES8、ES9、ES10、ES11、ES12新特性</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/ziliao/javascript/es6/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/ziliao/javascript/es6/</id>
+    <published>2021-03-01T14:00:00.000Z</published>
+    <updated>2021-03-01T13:52:26.998Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;TypeScript入门&quot;&gt;&lt;a href=&quot;#TypeScript入门&quot; class=&quot;headerlink&quot; title=&quot;TypeScript入门&quot;&gt;&lt;/a&gt;TypeScript入门&lt;/h1&gt;&lt;h2 id=&quot;1：TypeScript简介&quot;&gt;&lt;a</summary>
+    <summary type="html">&lt;h2 id=&quot;ES6、ES7、ES8、ES9、ES10、ES11、ES12新特性&quot;&gt;&lt;a href=&quot;#ES6、ES7、ES8、ES9、ES10、ES11、ES12新特性&quot; class=&quot;headerlink&quot;</summary>
         
       
     
     
     
-    <category term="TypeScrip" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/TypeScrip/"/>
+    <category term="JavaScript" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/JavaScript/"/>
     
     
-    <category term="TypeScrip" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/TypeScrip/"/>
+    <category term="ES6" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/ES6/"/>
+    
+    <category term="ES7" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/ES7/"/>
     
   </entry>
   
@@ -45,8 +47,8 @@
     <title>52 条 SQL 语句性能优化策略</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/sql/sql-you-hua-jian-yi/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/sql/sql-you-hua-jian-yi/</id>
-    <published>2021-03-01T14:25:00.000Z</published>
-    <updated>2021-02-28T13:48:10.052Z</updated>
+    <published>2021-03-01T07:25:00.000Z</published>
+    <updated>2021-03-01T00:25:55.882Z</updated>
     
     
       
@@ -63,6 +65,31 @@
     
     
     <category term="SQL 性能优化" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/SQL-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>TypeScript入门</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/</id>
+    <published>2021-03-01T00:25:00.000Z</published>
+    <updated>2021-03-01T00:24:31.049Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;TypeScript入门&quot;&gt;&lt;a href=&quot;#TypeScript入门&quot; class=&quot;headerlink&quot; title=&quot;TypeScript入门&quot;&gt;&lt;/a&gt;TypeScript入门&lt;/h1&gt;&lt;h2 id=&quot;1：TypeScript简介&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="TypeScrip" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/TypeScrip/"/>
+    
+    
+    <category term="TypeScrip" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/TypeScrip/"/>
     
   </entry>
   
@@ -531,31 +558,6 @@
     <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
     
     <category term="对象和类型" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%AF%B9%E8%B1%A1%E5%92%8C%E7%B1%BB%E5%9E%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c# 高级编程(10th)第二章 核心C#</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/17/c/c-10th-02/</id>
-    <published>2021-02-17T10:32:00.000Z</published>
-    <updated>2021-02-23T08:19:50.568Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;c-语言-2-核心c&quot;&gt;&lt;a href=&quot;#c-语言-2-核心c&quot; class=&quot;headerlink&quot; title=&quot;c#语言 2 核心c#&quot;&gt;&lt;/a&gt;c#语言 2 核心c#&lt;/h1&gt;&lt;h2 id=&quot;2-3变量&quot;&gt;&lt;a href=&quot;#2-3变量&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
-    
-    
-    <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
     
   </entry>
   

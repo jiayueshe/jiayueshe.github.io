@@ -383,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-28
+                    2021-03-01
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    336
+                    649
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -496,7 +496,90 @@ play(666);
 let dabingge =new Person(&#39;dabing&#39;,28);
 console.log(dabingge.makeMoney(99));
 </code></pre>
-<p>10.类继承</p>
+<h2 id="10-类继承"><a href="#10-类继承" class="headerlink" title="10.类继承"></a>10.类继承</h2><pre><code>
+class binSons extends Person&#123;
+    isRich:boolean =true;
+    constructor(name:string,age:number)&#123;
+        suber(name,age);
+    &#125;
+&#125;
+let bigSon = new bigSons(&#39;dabing&#39;,20)
+console.log(bigSon.favariteFood());
+</code></pre>
+<h2 id="11-抽象类"><a href="#11-抽象类" class="headerlink" title="11.抽象类"></a>11.抽象类</h2><pre><code>abstract class Jigoubiaozhun&#123;
+    abstract jigouName:string;
+    age:number =50;
+    abstract showMoney(money:number):number;
+&#125;
+
+class shamoChild extends Jigoubiaozhun&#123;
+    public jigouName =&quot;沙漠挖金基金协会&quot;；
+    private money :number=50000;
+    shouwMoney():number&#123;
+        return this.money;
+    &#125;
+    constructor(name:string,age:number)&#123;
+        super(name,age);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="12-接口-约束"><a href="#12-接口-约束" class="headerlink" title="12.接口  约束"></a>12.接口  约束</h2><pre><code>interface girl&#123;
+    dongshi:boolean;
+    job:string;
+    tenNi():boolean;
+&#125;
+class girlFriend implements girl&#123;
+    dongshi =true;
+    job=&quot;good&quot;;
+    tenNi():boolean&#123;
+        return true;
+    &#125;
+&#125;
+let CuiHua = new girlFriend();
+console.log(CuiHua.job);
+</code></pre>
+<h2 id="13-泛型-gt-安全"><a href="#13-泛型-gt-安全" class="headerlink" title="13.泛型-&gt; 安全"></a>13.泛型-&gt; 安全</h2><pre><code>function showData(person any)&#123;
+    return person;
+&#125;//不安全
+
+function shoWData&lt;T&gt;(person T)&#123;
+    return person;
+&#125;
+shoWData([21,32,4]).length;
+const arr:Array&lt;number&gt; = [12,5,6];
+
+function showArr&lt;T&gt;(data:T[])&#123;
+    for(let i =0;i&lt;data.length;i++)&#123;
+        console.log(data);
+    &#125;
+&#125;
+</code></pre>
+<h2 id="14-装饰器-decorator"><a href="#14-装饰器-decorator" class="headerlink" title="14.装饰器  decorator"></a>14.装饰器  decorator</h2><pre><code>tsconfig.json
+&#123;
+    &quot;compilerOpeions&quot;:&#123;
+        &quot;experimentalDecorators&quot;:true,
+    &#125;
+&#125;
+</code></pre>
+<pre><code>function hasKey(constructor:Function)&#123;
+    console.log(&#39;kkkkk&#39;);
+&#125;
+@hasKey
+class Person&#123;
+    name:string;
+    age:number;
+    constructor(name:string,age:number)&#123;
+        this.name=name;
+        this.age=age;
+        console.log(&#39;我是‘+name+&#39;今年&#39;+age+&#39;岁&#39;);
+    &#125;
+&#125;
+const baifumei = new Person(&#39;baifumei&#39;,18);
+console.log(baifumei);
+</code></pre>
+<h2 id="15-模块化的定义与导入"><a href="#15-模块化的定义与导入" class="headerlink" title="15.模块化的定义与导入"></a>15.模块化的定义与导入</h2><p>为了代码的简洁</p>
+<p>参考视频：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Wt411V7yc?p=12&amp;spm_id_from=pageDriver">https://www.bilibili.com/video/BV1Wt411V7yc?p=12&amp;spm_id_from=pageDriver</a></p>
+<p>根据参数学习视频总结</p>
 
                 
             </div>
@@ -734,60 +817,9 @@ console.log(dabingge.makeMoney(99));
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
-            <div class="card">
-                <a href="/2021/03/01/niuke/qianduan/ts-kuai-su-ru-men/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="TypeScript入门">
-                        
-                        <span class="card-title">TypeScript入门</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            TypeScript入门
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/TypeScrip/" class="post-category">
-                                    TypeScrip
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/TypeScrip/">
-                        <span class="chip bg-color">TypeScrip</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
         <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/03/01/niuke/sql/sql-you-hua-jian-yi/">
                     <div class="card-image">
@@ -805,9 +837,9 @@ console.log(dabingge.makeMoney(99));
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-01
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -825,6 +857,55 @@ console.log(dabingge.makeMoney(99));
                     
                     <a href="/tags/SQL-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
                         <span class="chip bg-color">SQL 性能优化</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/28/niuke/qianduan/js-oo/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js面向对象">
+                        
+                        <span class="card-title">js面向对象</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            js面向对象
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-category">
+                                    js面向对象
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+                        <span class="chip bg-color">js面向对象</span>
                     </a>
                     
                 </div>
@@ -933,7 +1014,7 @@ console.log(dabingge.makeMoney(99));
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">43.9k</span>&nbsp;字
+                class="white-color">45.9k</span>&nbsp;字
             
             
             
