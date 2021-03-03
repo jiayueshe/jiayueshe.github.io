@@ -440,10 +440,10 @@
 <p>delegate int CalculateMethodInvoker(int x, int y);<br>class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        CalculateMethodInvoker calculateMethodInvoker = CalculateMethodHelper.Sum;<br>        int x = 100, y = 200;<br>        Console.WriteLine(“x,y相加：{0}”, Calculate(calculateMethodInvoker, x, y));<br>        calculateMethodInvoker = CalculateMethodHelper.Multiply;<br>        Console.WriteLine(“x,y相乘：{0}”, Calculate(calculateMethodInvoker, x, y));<br>        Console.ReadKey();<br>    }<br>    public static int Calculate(CalculateMethodInvoker calculateMethodInvoker, int x, int y)<br>    {<br>        return calculateMethodInvoker(x, y);<br>    }<br>}<br>public class CalculateMethodHelper<br>{<br>    public static int Sum(int x, int y)<br>    {<br>        return x + y;<br>    }<br>    public static int Multiply(int x, int y)<br>    {<br>        return x * y;<br>    }<br>}</p>
 </blockquote>
 <p>​        为了减少输入量，只需要委托实例，就可以只传递地址的名称。这称为委托推断。</p>
-<p>9.2.4action<T>和Func<T>委托</p>
-<p>​        除了为每个参数和返回类型定义一个新的委托类型外，还可以使用Action<T>和Func<T>委托。</p>
-<p>​        泛型Action<T>委托表示引用一个void返回类型的方法，没有泛型参数的Action类可调用没有参数的方法。</p>
-<p>​        泛型Func<T>委托表示引用一个有返回值的方法</p>
+<p>9.2.4action<T>和Func<T>委托</T></T></p>
+<p>​        除了为每个参数和返回类型定义一个新的委托类型外，还可以使用Action<T>和Func<T>委托。</T></T></p>
+<p>​        泛型Action<T>委托表示引用一个void返回类型的方法，没有泛型参数的Action类可调用没有参数的方法。</T></p>
+<p>​        泛型Func<T>委托表示引用一个有返回值的方法</T></p>
 <p>9.2.5BubbleSorter示例</p>
 <p>9.2.6 多播委托</p>
 <p>​        委托也可以包含多个方法。这种委托成为多播委托。如果调用多播委托，就可以按顺序连续调用多个方法。为此，委托的签名就必须返回void；否则，就只能得到委托调用的最后一个方法的结果。多播委托识别运算符“-”、“+”、“-=”、“+=”以从委托中增加或删除方法调用。</p>
@@ -473,7 +473,7 @@
 <p>9.3.1参数</p>
 <p>lambda表达式有几种定义参数的方式。如果只有一个参数，只写出参数名就足够了。如果除一个参数以外，需要圆括号把参数名括起来。</p>
 <blockquote>
-<p>Action<int> one = i =&gt;<br>{<br>    //方法内容<br>};<br>Action&lt;int, int&gt; two = (i, j) =&gt;<br>{<br>    //方法内容<br>};</p>
+<p>Action<int> one = i =&gt;<br>{<br>    //方法内容<br>};<br>Action&lt;int, int&gt; two = (i, j) =&gt;<br>{<br>    //方法内容<br>};</int></p>
 </blockquote>
 <p>9.3.2多行代码</p>
 <p>如果lambda表示只有一条语句，在方法块内就不需要花括号和return语句，因为编译器会隐式添加return</p>
@@ -483,18 +483,18 @@
 </blockquote>
 <p>如果实现代码超过一行，就需要使用return语句显式返回</p>
 <blockquote>
-<p>Func<int> lambdaOne = () =&gt;<br>{<br>    int i = 0;<br>    i++;<br>    ++i;<br>    return i;<br>};</p>
+<p>Func<int> lambdaOne = () =&gt;<br>{<br>    int i = 0;<br>    i++;<br>    ++i;<br>    return i;<br>};</int></p>
 </blockquote>
 <p>9.3.3闭包</p>
 <p>通过lambda表达式可以访问lambda表达式块外部的变量。这称为闭包。</p>
 <blockquote>
-<p>int param = 10;<br>Action<int> lambdaSecond = (i) =&gt;<br>{<br>    Console.WriteLine(i + param);<br>};<br>lambdaSecond(3);<br>Console.ReadKey();</p>
+<p>int param = 10;<br>Action<int> lambdaSecond = (i) =&gt;<br>{<br>    Console.WriteLine(i + param);<br>};<br>lambdaSecond(3);<br>Console.ReadKey();</int></p>
 </blockquote>
 <p>9.4事件</p>
 <p>事件基于委托，为委托提供了一种发布/订阅机制。</p>
 <blockquote>
 <p>class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        AlarmClock alarmClock = new AlarmClock();<br>        Student zsStudent = new Student(“张三”);<br>        alarmClock.ItsGetUpClockEvent += zsStudent.ItsGetUpClock;<br>        alarmClock.ItsGetUpClock();<br>        Student lsStudent = new Student(“李四”);<br>        WeakEventManager&lt;AlarmClock, EventArgs&gt;.AddHandler(alarmClock, “ItsGetUpClockEvent”, lsStudent.ItsGetUpClock);//弱事件<br>        alarmClock.ItsGetUpClock();<br>        Console.ReadKey();<br>    }</p>
-<p>}<br>//事件发布类<br>public class AlarmClock<br>{<br>    public event EventHandler<EventArgs> ItsGetUpClockEvent;<br>    public void ItsGetUpClock()<br>    {<br>        Console.WriteLine(“时间到，起床了！”);<br>        ItsGetUpClockEvent?.Invoke(this, new EventArgs());<br>    }<br>}<br>//事件侦听类<br>public class Student<br>{<br>    public string Name { get; set; }<br>    public Student(string name)<br>    {<br>        this.Name = name;<br>    }<br>    public void ItsGetUpClock(object sender, EventArgs e)<br>    {<br>        Console.WriteLine(“{0}关掉闹钟，起床了。”,Name);<br>    }<br>}</p>
+<p>}<br>//事件发布类<br>public class AlarmClock<br>{<br>    public event EventHandler<EventArgs> ItsGetUpClockEvent;<br>    public void ItsGetUpClock()<br>    {<br>        Console.WriteLine(“时间到，起床了！”);<br>        ItsGetUpClockEvent?.Invoke(this, new EventArgs());<br>    }<br>}<br>//事件侦听类<br>public class Student<br>{<br>    public string Name { get; set; }<br>    public Student(string name)<br>    {<br>        this.Name = name;<br>    }<br>    public void ItsGetUpClock(object sender, EventArgs e)<br>    {<br>        Console.WriteLine(“{0}关掉闹钟，起床了。”,Name);<br>    }<br>}</EventArgs></p>
 </blockquote>
 <p>9.4.1事件发布程序</p>
 <p>9.4.2事件侦听器</p>

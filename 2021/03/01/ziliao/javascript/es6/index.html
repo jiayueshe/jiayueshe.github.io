@@ -500,7 +500,7 @@ new SharedArrayBuffer(10)
 <p>Atomics 对象提供了一组静态方法用来对 SharedArrayBuffer 对象进行原子操作。</p>
 </blockquote>
 <hr>
-<h2 id=""><a href="#" class="headerlink" title=""></a></h2><h2 id="ES9（2018）"><a href="#ES9（2018）" class="headerlink" title="ES9（2018）"></a><strong>ES9（2018）</strong></h2><h3 id="1-异步迭代"><a href="#1-异步迭代" class="headerlink" title="1. 异步迭代"></a><strong>1. 异步迭代</strong></h3><p>await可以和for…of循环一起使用，以串行的方式运行异步操作</p>
+<h2 id><a href="#" class="headerlink" title></a></h2><h2 id="ES9（2018）"><a href="#ES9（2018）" class="headerlink" title="ES9（2018）"></a><strong>ES9（2018）</strong></h2><h3 id="1-异步迭代"><a href="#1-异步迭代" class="headerlink" title="1. 异步迭代"></a><strong>1. 异步迭代</strong></h3><p>await可以和for…of循环一起使用，以串行的方式运行异步操作</p>
 <pre><code>async function process(array) &#123;
   for await (let i of array) &#123;
     // doSomething(i);
@@ -529,7 +529,7 @@ const match = reg.exec(&#39;2021-02-23&#39;);
 <pre><code>/hello.world/.test(&#39;hello\nworld&#39;); // false
 </code></pre>
 <p><img src="https://mmbiz.qpic.cn/mmbiz_png/aVp1YC8UV0eXyeV3DhlcSziaeQOfC1BD4AfQsEJ47aG753VYERIeNDH0n4ZH66RWiaOtYibXzPfGsl0ibHXbt023mg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
-<h2 id="-1"><a href="#-1" class="headerlink" title=""></a></h2><h2 id="ES10（2019）"><a href="#ES10（2019）" class="headerlink" title="ES10（2019）"></a><strong>ES10（2019）</strong></h2><h3 id="1-Array-flat-和Array-flatMap"><a href="#1-Array-flat-和Array-flatMap" class="headerlink" title="1. Array.flat()和Array.flatMap()"></a><strong>1. Array.flat()和Array.flatMap()</strong></h3><p>flat()</p>
+<h2 id="-1"><a href="#-1" class="headerlink" title></a></h2><h2 id="ES10（2019）"><a href="#ES10（2019）" class="headerlink" title="ES10（2019）"></a><strong>ES10（2019）</strong></h2><h3 id="1-Array-flat-和Array-flatMap"><a href="#1-Array-flat-和Array-flatMap" class="headerlink" title="1. Array.flat()和Array.flatMap()"></a><strong>1. Array.flat()和Array.flatMap()</strong></h3><p>flat()</p>
 <pre><code>[1, 2, [3, 4]].flat(Infinity); // [1, 2, 3, 4]
 </code></pre>
 <p>flatMap()</p>

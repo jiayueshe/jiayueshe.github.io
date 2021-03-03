@@ -429,20 +429,20 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>IEnumerable<T></td>
+<td>IEnumerable<T></T></td>
 <td>如果foreach语句用于集合,就需要IEnumerable接口.这个借口定义了方法GetEnumerator(),他返回一个实现了IEnumerator接口的枚举</td>
 </tr>
 <tr>
-<td>ICollection<T></td>
-<td>ICollection<T>接口有泛型集合类实现.使用这个借口可以获得集合中的元素个数(Count属性),把集合复制到数组中(CopyTo()方法),还可以从集合中添加和删除元素(Add(),Remove(),Clear())</td>
+<td>ICollection<T></T></td>
+<td>ICollection<T>接口有泛型集合类实现.使用这个借口可以获得集合中的元素个数(Count属性),把集合复制到数组中(CopyTo()方法),还可以从集合中添加和删除元素(Add(),Remove(),Clear())</T></td>
 </tr>
 <tr>
-<td>List<T></td>
-<td>IList<T>接口用于可通过位置访问其中的元素列表,这个接口定义了一个 索引器,可以在集合的指定位置插入或删除 mount些项(Insert()和Remove()方法).IList<T>接口派生自ICollection<T>接口</td>
+<td>List<T></T></td>
+<td>IList<T>接口用于可通过位置访问其中的元素列表,这个接口定义了一个 索引器,可以在集合的指定位置插入或删除 mount些项(Insert()和Remove()方法).IList<T>接口派生自ICollection<T>接口</T></T></T></td>
 </tr>
 <tr>
-<td>ISet<T></td>
-<td>ISet<T>接口是.NET4中新增的.实现这个接口的集允许合并不同的集.获得两个集的交集,检查两个集合是否重叠.ISet<T>接口派生自ICollection<T>接口</td>
+<td>ISet<T></T></td>
+<td>ISet<T>接口是.NET4中新增的.实现这个接口的集允许合并不同的集.获得两个集的交集,检查两个集合是否重叠.ISet<T>接口派生自ICollection<T>接口</T></T></T></td>
 </tr>
 <tr>
 <td>IDictionary&lt;TKey,TValue&gt;</td>
@@ -453,19 +453,19 @@
 <td>ILookup&lt;TKey,TValue&gt;接口类似于IDictionary&lt;TKey,TValue&gt;接口,实现该接口的集合有键和值,且可以通过一个键包含多个值</td>
 </tr>
 <tr>
-<td>IComparer<T></td>
-<td>接口ICommparer<T>由比较器实现,通过Comparer()方法给集合中的元素排序</td>
+<td>IComparer<T></T></td>
+<td>接口ICommparer<T>由比较器实现,通过Comparer()方法给集合中的元素排序</T></td>
 </tr>
 <tr>
-<td>IEqualityComparer<T></td>
-<td>接口IEqualityComparer<T>由一个比较器实现,该比较器可用于字典中的键.使用这个接口,可以对对象进行相等性比较.在.NET中,这个接口也由数组和元组实现</td>
+<td>IEqualityComparer<T></T></td>
+<td>接口IEqualityComparer<T>由一个比较器实现,该比较器可用于字典中的键.使用这个接口,可以对对象进行相等性比较.在.NET中,这个接口也由数组和元组实现</T></td>
 </tr>
 <tr>
-<td>IProducerConsumerColllection<T></td>
-<td>IProducerConsumerCollection<T>接口是.NET4中新增的,它支持新的线程安全的集合类</td>
+<td>IProducerConsumerColllection<T></T></td>
+<td>IProducerConsumerCollection<T>接口是.NET4中新增的,它支持新的线程安全的集合类</T></td>
 </tr>
 <tr>
-<td>IReadOnlyList<T>、 IReadOnlyDictionary<T>、 IReadOnlyCollection<T></td>
+<td>IReadOnlyList<T>、 IReadOnlyDictionary<T>、 IReadOnlyCollection<T></T></T></T></td>
 <td>初始化后不能修改的集合，只能检索对象，不能添加和删除.</td>
 </tr>
 </tbody></table>
@@ -608,7 +608,7 @@ var intList = new List&lt;int&gt;(arr) ;
 <p>FindIndex通过匹配元素值，获得索引：</p>
 <pre><code>intList.FindIndex(m =&gt; m==4);
 </code></pre>
-<p>FindIndex方法参数Predicate<T>传入匹配的表达式，返回匹配的元素索引值,Predicate<T>委托表示定义一组条件并确定指定对象是否符合这些条件的方法</p>
+<p>FindIndex方法参数Predicate<T>传入匹配的表达式，返回匹配的元素索引值,Predicate<T>委托表示定义一组条件并确定指定对象是否符合这些条件的方法</T></T></p>
 <pre><code>intList.Find(m =&gt; m == 4);
 intList.FindAll(m =&gt; m &gt; 2);
 </code></pre>
@@ -617,8 +617,8 @@ intList.FindAll(m =&gt; m &gt; 2);
 <pre><code>intList.Sort();
 intList.Sort((m, n) =&gt; m);
 </code></pre>
-<p>Sort(Comparison<T> comparison)方法参数中的委托Comparison含有2个参数,方法将这2个元素进行比较，然后返回绝对值,如果返回-1的，元素需要排前面，返回1的元素需要排后面.</p>
-<p>Sort(IComparer<T> comparer)方法参数中是一个比较接口，接口实现Comparer方法</p>
+<p>Sort(Comparison<T> comparison)方法参数中的委托Comparison含有2个参数,方法将这2个元素进行比较，然后返回绝对值,如果返回-1的，元素需要排前面，返回1的元素需要排后面.</T></p>
+<p>Sort(IComparer<T> comparer)方法参数中是一个比较接口，接口实现Comparer方法</T></p>
 <pre><code>public enum CompareType
   &#123;
     FirstName,
@@ -845,7 +845,7 @@ The removed value: M
         &#125;
     &#125;
 </code></pre>
-<h2 id="5-链表"><a href="#5-链表" class="headerlink" title="5.链表"></a>5.链表</h2><p>LinkedList<T>是一个双向链表，其元素指向它前面和后面的元素，这样通过移动下一个元素就可以正向遍历整个链表。通过移动到前一个元素可以反向遍历这个链表</p>
+<h2 id="5-链表"><a href="#5-链表" class="headerlink" title="5.链表"></a>5.链表</h2><p>LinkedList<T>是一个双向链表，其元素指向它前面和后面的元素，这样通过移动下一个元素就可以正向遍历整个链表。通过移动到前一个元素可以反向遍历这个链表</T></p>
 <p>链表的优点是，如果将元素插入列表的中间位置，使用链表会很快，在插入一个元素时，只需要修改上一个元素的Next引用和下一个元素的Previous引用，使他们引用所插入的元素。</p>
 <pre><code>public class Document
   &#123;
@@ -1011,10 +1011,10 @@ The removed value: M
 <li>如果使用排序数据一次性填充列表，则 <strong>SortedList</strong> 比 <strong>SortedDictionary</strong> 快。</li>
 <li></li>
 </ul>
-<h2 id="8-集"><a href="#8-集" class="headerlink" title="8.集"></a>8.集</h2><p>包含不重复元素的集合，叫“集”。.NET包含2个集。HashSet<T>和SortedSet<T>，它们继承ISet;SortedSet是一个有序集.</p>
+<h2 id="8-集"><a href="#8-集" class="headerlink" title="8.集"></a>8.集</h2><p>包含不重复元素的集合，叫“集”。.NET包含2个集。HashSet<T>和SortedSet<T>，它们继承ISet;SortedSet是一个有序集.</T></T></p>
 <p>ISet提供了Add方法,如果HashSet中存在这个元素，再次使用Add方法不会抛出异常，返回bool值是否添加</p>
 <blockquote>
-<p>var companyTeams = new HashSet<string>() { “Ferrari”, “McLaren”, “Mercedes” };<br>var traditionalTeams = new HashSet<string>() { “Ferrari”, “McLaren” };<br>var privateTeams = new HashSet<string>() { “Red Bull”, “Lotus”, “Toro Rosso”, “Force India”, “Sauber” };</p>
+<p>var companyTeams = new HashSet<string>() { “Ferrari”, “McLaren”, “Mercedes” };<br>var traditionalTeams = new HashSet<string>() { “Ferrari”, “McLaren” };<br>var privateTeams = new HashSet<string>() { “Red Bull”, “Lotus”, “Toro Rosso”, “Force India”, “Sauber” };</string></string></string></p>
 <p>if (privateTeams.Add(“Williams”))<br>    Console.WriteLine(“Williams added”);<br>if (!companyTeams.Add(“McLaren”))<br>    Console.WriteLine(“McLaren was already in this set”);</p>
 </blockquote>
 <pre><code>IsSubsetOf方法判断了traditionalTeams集合是否companyTeams的子集
@@ -1038,8 +1038,8 @@ var allTeams = new SortedSet&lt;string&gt;(companyTeams);
 allTeams.UnionWith(privateTeams);
 allTeams.UnionWith(traditionalTeams);
 </code></pre>
-<h2 id="9-可视察的集合"><a href="#9-可视察的集合" class="headerlink" title="9.可视察的集合"></a>9.可视察的集合</h2><p>如果需要记录集合何时添加和删除元素的信息，可以使用ObservableCollection<T>,这个本身是为WPF定制的。</p>
-<p>ObservableCollection<T>类用于创建自定义集合，在内部使用List<T>类,重写虚方法RemoveItem和SetItem()方法触发CollectionChanged事件。</p>
+<h2 id="9-可视察的集合"><a href="#9-可视察的集合" class="headerlink" title="9.可视察的集合"></a>9.可视察的集合</h2><p>如果需要记录集合何时添加和删除元素的信息，可以使用ObservableCollection<T>,这个本身是为WPF定制的。</T></p>
+<p>ObservableCollection<T>类用于创建自定义集合，在内部使用List<T>类,重写虚方法RemoveItem和SetItem()方法触发CollectionChanged事件。</T></T></p>
 <pre><code>class Program
   &#123;
     static void Main()
@@ -1644,7 +1644,7 @@ a1 = a1.Push(10); //需要将新栈重新赋值给a1
   &#125;
 </code></pre>
 <p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523162341117-33389163.png" alt="img"></p>
-<p>在完成第3个阶段后，第4到6阶段也可以并行运行，TransferContentAsync从字典中获取数据，进行类型转换，输出到BlockingCollection<string>中</p>
+<p>在完成第3个阶段后，第4到6阶段也可以并行运行，TransferContentAsync从字典中获取数据，进行类型转换，输出到BlockingCollection<string>中</string></p>
 <pre><code>public static Task ProcessContentAsync(BlockingCollection&lt;string&gt; input, ConcurrentDictionary&lt;string, int&gt; output)
     &#123;
       return Task.Run(() =&gt;
@@ -1720,8 +1720,8 @@ a1 = a1.Push(10); //需要将新栈重新赋值给a1
 <p>O(1)表示无论集合中有多少数据项，这个操作需要的时间都不变。<br>O(n)表示对于集合执行一个操作需要的事件在最坏情况时是N.<br>O(log n)表示操作需要的时间随集合中元素的增加而增加</p>
 <p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523163051320-952892312.png" alt="img"></p>
 <h3 id="非泛型类集合"><a href="#非泛型类集合" class="headerlink" title="非泛型类集合"></a>非泛型类集合</h3><p>泛型集合类是在.NET2.0的时候出来的,也就是说在1.0的时候是没有这么方便的东西的。现在基本上我们已经不使用这些集合类了，除非在做一些和老代码保持兼容的工作的时候。来看看1.0时代的.NET程序员们都有哪些集合类可以用。</p>
-<p>ArraryList后来被List<T>替代。</p>
-<p>HashTable 后来被Dictionary&lt;TKey,TValue&gt;替代。<br>Queue 后来被Queue<T>替代。<br>SortedList 后来被SortedList<T>替代。<br>Stack 后来被Stack<T>替代。</p>
+<p>ArraryList后来被List<T>替代。</T></p>
+<p>HashTable 后来被Dictionary&lt;TKey,TValue&gt;替代。<br>Queue 后来被Queue<T>替代。<br>SortedList 后来被SortedList<T>替代。<br>Stack 后来被Stack<T>替代。</T></T></T></p>
 <h3 id="线程安全的集合类"><a href="#线程安全的集合类" class="headerlink" title="线程安全的集合类"></a>线程安全的集合类</h3><p>ConcurrentQueue 线程安全版本的Queue<br>ConcurrentStack线程安全版本的Stack<br>ConcurrentBag线程安全的对象集合<br>ConcurrentDictionary线程安全的Dictionary<br>BlockingCollection</p>
 
                 

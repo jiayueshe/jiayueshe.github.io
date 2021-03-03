@@ -519,7 +519,7 @@ Array.Sort(brr);
 </blockquote>
 <p>​        对于我们自定义的类类型数组也是可以排序的，但是一定要注意，使用自定义类做排序，那么这个自定义类一定要是实现Icomparable&lt;自定义类名&gt; 这个接口的</p>
 <blockquote>
-<p>public  class Class1: IComparable<Class1><br>{<br>     // 姓<br>     public string FirstName { get; set; }</p>
+<p>public  class Class1: IComparable<Class1><br>{<br>     // 姓<br>     public string FirstName { get; set; }</Class1></p>
 <pre><code>// 名
 public string LastName &#123; get; set; &#125;
  
@@ -562,7 +562,7 @@ public int CompareTo(Class1 other)
 </code></pre>
 <p>}</p>
 </blockquote>
-<h3 id="7-6-2ArraySegment"><a href="#7-6-2ArraySegment" class="headerlink" title="7.6.2ArraySegment"></a>7.6.2ArraySegment<T></h3><p>​        结构ArraySegment<T>表示数组的一个部分。如果需要使用不同的方法处理某个大型数组的不同部分，那么可以把相应的数组部分传到各个方法中。具体的使用如下：</p>
+<h3 id="7-6-2ArraySegment"><a href="#7-6-2ArraySegment" class="headerlink" title="7.6.2ArraySegment"></a>7.6.2ArraySegment<T></T></h3><p>​        结构ArraySegment<T>表示数组的一个部分。如果需要使用不同的方法处理某个大型数组的不同部分，那么可以把相应的数组部分传到各个方法中。具体的使用如下：</T></p>
 <blockquote>
 <p>public class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        int[] ar1 = { 1, 4, 5, 11, 13, 18 };<br>        int[] ar2 = { 3, 4, 5, 18, 21, 27, 33 };</p>
 <pre><code>    // 我们可以将一个数组或者多个数组的部分传给某个函数做处理
@@ -588,9 +588,9 @@ static void SumOfSegments(ArraySegment&lt;int&gt;[] segments)
 </code></pre>
 <p>}</p>
 </blockquote>
-<p>​        来了来了，动脑的地方来了，数组段不复制原数组的元素，但是原数组可以通过ArraySegment<T>访问。如果数组段中的元素改变了，这些变化就会反映到原数组中。如：</p>
+<p>​        来了来了，动脑的地方来了，数组段不复制原数组的元素，但是原数组可以通过ArraySegment<T>访问。如果数组段中的元素改变了，这些变化就会反映到原数组中。如：</T></p>
 <blockquote>
-<p>// 接着上面的代码，我们改一下：<br>{<br>        static void SumOfSegments(ArraySegment<int>[] segments)<br>        {<br>            foreach (var segment in segments)<br>            {<br>                for (int i = segment.Offset; i &lt; segment.Offset + segment.Count; i++)<br>                {<br>                    // 改一下这里，改一下数组的值<br>                    segment.Array[i] = 998 ;<br>                }</p>
+<p>// 接着上面的代码，我们改一下：<br>{<br>        static void SumOfSegments(ArraySegment<int>[] segments)<br>        {<br>            foreach (var segment in segments)<br>            {<br>                for (int i = segment.Offset; i &lt; segment.Offset + segment.Count; i++)<br>                {<br>                    // 改一下这里，改一下数组的值<br>                    segment.Array[i] = 998 ;<br>                }</int></p>
 <pre><code>        &#125;
             
     &#125;
@@ -607,7 +607,7 @@ static void SumOfSegments(ArraySegment&lt;int&gt;[] segments)
 <h2 id="7-7枚举-foreach"><a href="#7-7枚举-foreach" class="headerlink" title="7.7枚举 foreach"></a>7.7枚举 foreach</h2><h3 id="7-7-1IEnumrtator接口"><a href="#7-7-1IEnumrtator接口" class="headerlink" title="7.7.1IEnumrtator接口"></a>7.7.1IEnumrtator接口</h3><p>​        在上面谈Array类的时候，代码中我们有用到这么一个方法——GetEnumerator( )，数组或集合都有实现带GetEnumerator()方法的IEumerator接口。调用了foreach方法的客户端和集合之间的关系显示如下图：</p>
 <p><img src="https://img-blog.csdnimg.cn/20200509104613177.png" alt="img"></p>
 <p>​    IEumerator定义了current属性，来返回光标所在的元素，改接口的MoveNext( )方法移动到集合的下一个元素上，如果有这个元素，就返回true，否则返回false。</p>
-<p>​    这个接口的泛型版本IEnumerator<T>派生自IDispossable,因此定义了Dispose()方法，来清理给枚举器分配的资源。</p>
+<p>​    这个接口的泛型版本IEnumerator<T>派生自IDispossable,因此定义了Dispose()方法，来清理给枚举器分配的资源。</T></p>
 <h3 id="7-7-2foreach语句"><a href="#7-7-2foreach语句" class="headerlink" title="7.7.2foreach语句"></a>7.7.2foreach语句</h3><p>​        foreach语句的实现并不真的需要在集合类中实现这个接口，它只需要通过一个名为GetEnumerator( )的方法，它返回实现了IEumerator接口就足够了</p>
 <h3 id="7-7-3yield语句"><a href="#7-7-3yield语句" class="headerlink" title="7.7.3yield语句"></a>7.7.3yield语句</h3><p>​        c#2.0添加了yield语句，以便于创建枚举器。</p>
 <p>​        yield return 语句返回集合的一个元素，并移动到下一个元素上，yield break可停止迭代。</p>
@@ -616,7 +616,7 @@ static void SumOfSegments(ArraySegment&lt;int&gt;[] segments)
 <p>using System.Collections;</p>
 <p>namespace Wrox.ProCSarp.Arrays{</p>
 <p>​    public class HelloCollection{</p>
-<p>​        public IEnumerator<string>  GetEnumerator(){</p>
+<p>​        public IEnumerator<string>  GetEnumerator(){</string></p>
 <p>​            yield return “Hello”,</p>
 <p>​            yield return “world”,</p>
 <p>​        }</p>
@@ -626,7 +626,7 @@ static void SumOfSegments(ArraySegment&lt;int&gt;[] segments)
 <p>​        迭代集合的不同方式</p>
 <p>​        用yield return返回枚举器</p>
 <h2 id="7-8元祖"><a href="#7-8元祖" class="headerlink" title="7.8元祖"></a>7.8元祖</h2><p>​        来讲讲元组吧，前面一直在说数组(同类型)，元组就是支持不同类型的元素。</p>
-<p>​        元组的使用和数组不同，数组是new创建的，元组不是，且元组一直都是作为方法的类型。例如Tuple<T1>包含一个元素，Tuple&lt;T1,T2&gt;包含两个元素，以此类推。元组用静态的Create( )方法创建。Create( )方法的泛型参数定义了要实例化的元组类型。如：</p>
+<p>​        元组的使用和数组不同，数组是new创建的，元组不是，且元组一直都是作为方法的类型。例如Tuple<T1>包含一个元素，Tuple&lt;T1,T2&gt;包含两个元素，以此类推。元组用静态的Create( )方法创建。Create( )方法的泛型参数定义了要实例化的元组类型。如：</T1></p>
 <blockquote>
 <p> public class Program<br>{<br>    static void Main(string[] args)<br>    {<br>        int[] a = { 1, 2, 3, 4, 5 };<br>        string b = “HeeloWorld!”;</p>
 <pre><code>    var result = TT(a,b);
