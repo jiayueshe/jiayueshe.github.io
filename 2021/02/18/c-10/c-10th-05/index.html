@@ -1,0 +1,1172 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="c# 高级编程(10th)第五章 托管和非托管的资源, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>c# 高级编程(10th)第五章 托管和非托管的资源 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">c# 高级编程(10th)第五章 托管和非托管的资源</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                <span class="chip bg-color">c# 高级编程(10th)</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%89%98%E7%AE%A1/">
+                                <span class="chip bg-color">托管</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/c/" class="post-category">
+                                c#
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-18
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-23
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    7 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="c-语言-第五章-托管和非托管的资源"><a href="#c-语言-第五章-托管和非托管的资源" class="headerlink" title="c#语言 第五章 托管和非托管的资源"></a>c#语言 第五章 托管和非托管的资源</h1><h2 id="5-1资源"><a href="#5-1资源" class="headerlink" title="5.1资源"></a>5.1资源</h2><p>使用托管和非托管的资源—存储在托管或本机堆中的对象，尽管垃圾收集齐释放存储在托管堆中的托管对象，但不释放本机堆中的对象，必须由开发人员自己释放</p>
+<p>什么是大小对象堆？</p>
+<p>什么数据类型存储在堆栈上是非常有益的？</p>
+<p>垃圾收集器处理托管的资源，那么非托管的资源呢？</p>
+<h2 id="5-2后台内存管理"><a href="#5-2后台内存管理" class="headerlink" title="5.2后台内存管理"></a>5.2后台内存管理</h2><h3 id="5-2-1值类型数据"><a href="#5-2-1值类型数据" class="headerlink" title="5.2.1值类型数据"></a>5.2.1值类型数据</h3><p>虚拟内存：执行代码、代码加载的所有DLL、以及程序运行时使用的所有变量</p>
+<p>栈–值类型数据</p>
+<p>​    块作用域或结构作用域：生存期嵌套</p>
+<p>​    编译器在内部确保先放在内存中的那个变量后删除</p>
+<h3 id="5-2-2引用数据类型"><a href="#5-2-2引用数据类型" class="headerlink" title="5.2.2引用数据类型"></a>5.2.2引用数据类型</h3><p>​    所有引用类型，托管堆</p>
+<p>首先创建对象时，分配堆上的内存以存储对象（真正的对象），然后把变量的值设置为分配给新对象的内存地址</p>
+<p>把一个引用变量的值赋予两一个相同类型的变量，就有两个变量引用内存中的同一对象了；当一个引用变量超出作用域时，它会从栈中删除，但是引用对象的数据让保留在堆中</p>
+<p>只有到程序停止，或垃圾回收器删除为止。只有数据不再被任何变量引用时，它才会被删除</p>
+<h3 id="5-2-3-垃圾回收-System-GC-Collect"><a href="#5-2-3-垃圾回收-System-GC-Collect" class="headerlink" title="5.2.3 垃圾回收  System.GC.Collect()"></a>5.2.3 垃圾回收  System.GC.Collect()</h3><p>​    在垃圾回收器运行时，它会从堆中删除不再引用的所有对象</p>
+<p>​    只要释放了能释放的所有对象，就会把其它对象移动回堆的端部，再次形成一个连续的内存块</p>
+<p>​    垃圾回收器的这个压缩操作是托管的堆与非托管的堆的区别所在，使用托管的堆，就只需要读取指针的值即可，而不需要遍历地址的链表，来查找一个地方放置新数据</p>
+<p>​    大对象堆：在.net 下，较大对象有自己的托管堆，使用大于85000个字节的对象时，就会放在这个特殊的堆上</p>
+<h2 id="5-3强引用-和弱引用"><a href="#5-3强引用-和弱引用" class="headerlink" title="5.3强引用 和弱引用"></a>5.3强引用 和弱引用</h2><p>​    垃圾回收器不能回收仍在引用的对象的内存 —-这是一个强引用</p>
+<p>​    弱引用WeakPeference：允许创建和使用对象，但垃圾回收器碰巧在运行，就会回收对象并释放内存，由于潜在的bug和性能问题，一般不这么做</p>
+<h2 id="5-4处理非托管的资源"><a href="#5-4处理非托管的资源" class="headerlink" title="5.4处理非托管的资源"></a>5.4处理非托管的资源</h2><p>​    垃圾回收器不知道如何释放非托管的资源，例如：文件句柄、网络连接、和数据库连接</p>
+<p>​    定义一个类时，可以使用两种机制来自动释放非托管的资源</p>
+<p>​            声明一个析构函数（终结器），作为类的一个成员</p>
+<p>​            在类中实现System.IDispossable接口</p>
+<h3 id="5-4-1析构函数或终结器finalizer"><a href="#5-4-1析构函数或终结器finalizer" class="headerlink" title="5.4.1析构函数或终结器finalizer"></a>5.4.1析构函数或终结器finalizer</h3><p>​    c#编译器在编译析构函数时，会隐式的把析构函数的代码编译为等价于重写Finalize（）方法的代码，从而确保执行父类的Finalize（）方法</p>
+<p>缺点：</p>
+<p>​    无法确定c#对象的析构函数何时执行，所以不能再析构函数中放置需要在某一时刻运行的代码</p>
+<p>​    c#析构函数的实现会延迟对象最终从内存中删除的时间</p>
+<p>5.4.2IDispossable接口</p>
+<pre><code> 在c#中，推荐使用System.IDispossable接口代替析构函数，接口定义了一种模式（具有语言级的支持）该模式为释放非托管资源提供了确定的机制，并避免产生析构函数固有的与垃圾回收器相关的问题。
+</code></pre>
+<p>​    IDispossable接口声明了一个Dispose()方法，不带参数，返回void。显示的释放有对象直接使用的所有非托管资源</p>
+<blockquote>
+<p>ResourceGobbler theInstance =null;</p>
+<p>try{</p>
+<p>​    theInstance = new ResourceGobbler ()</p>
+<p> }</p>
+<p>finally{</p>
+<p>theInstance ?.Dispose()</p>
+<p>}</p>
+</blockquote>
+<p>​    </p>
+<h3 id="5-4-3using语句"><a href="#5-4-3using语句" class="headerlink" title="5.4.3using语句"></a>5.4.3using语句</h3><p>​    使用try/finally，即使处理过程中出现异常，也可以确保总是在调用Dispose方法释放了资源，但是每个都需要这样重复度的结构；</p>
+<p>​        c#提供另一种语法using，实现IDispossable接口的对象在超出作用域时，自动调用Dipose方法；</p>
+<blockquote>
+<p>using(var    theInstance = new ResourceGobbler ()){</p>
+<p>//do something()</p>
+<p>}</p>
+</blockquote>
+<h3 id="5-4-4-实现IDispossable接口和析构函数"><a href="#5-4-4-实现IDispossable接口和析构函数" class="headerlink" title="5.4.4 实现IDispossable接口和析构函数"></a>5.4.4 实现IDispossable接口和析构函数</h3><p>总结资源释放的两种方式：</p>
+<p>​        利用运行库强制执行的析构函数，但它的执行是不确定的，而且由于垃圾回收的工作方式，会给运行库增加不可接受的系统开销</p>
+<p>​        IDispossable接口提供了一种机制，允许类的用户控制释放资源的时间，但需要确保调用Dispose()方法</p>
+<p>双重实现，创建终结器，实现IDispossabe结构，同时把析构函数作为一种安全机制，以防没有调用Dispose方法</p>
+<h3 id="5-4-5IDispossable和终结器的规则"><a href="#5-4-5IDispossable和终结器的规则" class="headerlink" title="5.4.5IDispossable和终结器的规则"></a>5.4.5IDispossable和终结器的规则</h3><p>​    如果类定义实现了IDispossable的成员，该类也应该实现IDispossable</p>
+<p>​    实现IDispossable并不以为也应该实现一个终结器，终结器会带来额外的开销</p>
+<p>​    如果实现了终结器，也应该实现IDispossable接口，这样可以早些释放资源，不必等GC回收</p>
+<p>​    如果使用的一个对象实现了IDispossable接口，就不在需要对象时调用Dispose方法。如果在方法中使用这个对象，using语句比较方便。如果对象时类的一个成员，就让类也实现IDispossable</p>
+<h2 id="5-5不安全的代码"><a href="#5-5不安全的代码" class="headerlink" title="5.5不安全的代码"></a>5.5不安全的代码</h2><p>​    由于性能问题，要在外部的DLL中访问一个函数，该函数需要把一个指针当做参数来传递（WindowsAPI）,本节将讨论c#直接访问内存的内容的功能</p>
+<h3 id="5-5-1用指针直接访问内存"><a href="#5-5-1用指针直接访问内存" class="headerlink" title="5.5.1用指针直接访问内存"></a>5.5.1用指针直接访问内存</h3><p>​    指针是一个以与引用相同的方式存储地址的变量；其区别是c#不允许直接访问在引用变量中包含的地址。</p>
+<p>​    使用指针，就可以访问实际内存地址，执行新类型的操作</p>
+<p>使用指针的两个原因：</p>
+<p>​        向后兼容性：调用windowsAPI函数，这些函数都是用c++或c#语言编写的，通常要求把指针作为其参数，</p>
+<p>​        性能：在一些情况下，速度是最重要的，而指针可以提供最优性能，</p>
+<p>这种地接别的访问也是有代价的</p>
+<p>​        指针使用起来比较困难，需要非常高的变成技巧和很强的能力</p>
+<pre><code>     很容易重写其他变量，导致栈溢出，访问某些没有存储变量的内存区域，甚至重写.net运行库，使程序崩溃
+</code></pre>
+<p>​        另外，如果使用指针，就必须授予代码运行库的代码访问安全机制的最高级别</p>
+<p>强烈建议轻易不要使用指针，不仅难以编写，还无法通过CLR施加的内存类型和安全检查</p>
+<h4 id="用unsafe编写不安全的代码"><a href="#用unsafe编写不安全的代码" class="headerlink" title="用unsafe编写不安全的代码"></a>用unsafe编写不安全的代码</h4><p>​    任何方法都可以标记为unsafe，还允许把指针作为参数，也可以把整个类或结构标记为unsafe，假定所有的成员都是不安全的</p>
+<p>​    也可以把方法中的一块代码标记为unsafe；不能把局部变量本身标记为unsafe</p>
+<h4 id="指针的语法"><a href="#指针的语法" class="headerlink" title="指针的语法 *"></a>指针的语法 *</h4><p>指针可以声明为任意一种值类型，也可以声明为一个结构</p>
+<p>int* pWidth,pHeight;</p>
+<p>&amp;表示取地址</p>
+<p>*表示获取地址的内容</p>
+<h4 id="将指针强制转换为整数类型"><a href="#将指针强制转换为整数类型" class="headerlink" title="将指针强制转换为整数类型"></a>将指针强制转换为整数类型</h4><h4 id="指针类型之间的强制转换"><a href="#指针类型之间的强制转换" class="headerlink" title="指针类型之间的强制转换"></a>指针类型之间的强制转换</h4><h4 id="void指针"><a href="#void指针" class="headerlink" title="void指针"></a>void指针</h4><h4 id="指针算术的运算"><a href="#指针算术的运算" class="headerlink" title="指针算术的运算"></a>指针算术的运算</h4><h4 id="sizeof运算符"><a href="#sizeof运算符" class="headerlink" title="sizeof运算符"></a>sizeof运算符</h4><h4 id="结构指针，指针成员访问运算符"><a href="#结构指针，指针成员访问运算符" class="headerlink" title="结构指针，指针成员访问运算符"></a>结构指针，指针成员访问运算符</h4><h4 id="类成员指针"><a href="#类成员指针" class="headerlink" title="类成员指针"></a>类成员指针</h4><h3 id="5-5-2指针实例-：PointerPlayground"><a href="#5-5-2指针实例-：PointerPlayground" class="headerlink" title="5.5.2指针实例  ：PointerPlayground"></a>5.5.2指针实例  ：PointerPlayground</h3><h3 id="5-5-3使用指针优化性能"><a href="#5-5-3使用指针优化性能" class="headerlink" title="5.5.3使用指针优化性能"></a>5.5.3使用指针优化性能</h3><p>创建一个基于栈的数组</p>
+<p>QuickArray示例</p>
+<h2 id="5-6平台调用"><a href="#5-6平台调用" class="headerlink" title="5.6平台调用"></a>5.6平台调用</h2>
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c-10/c-10th-05/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/18/c-10/c-10th-05/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                    <span class="chip bg-color">c# 高级编程(10th)</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%89%98%E7%AE%A1/">
+                                    <span class="chip bg-color">托管</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02/18/c-10/c-10th-06/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="c# 高级编程(10th) 第六章 泛型">
+                        
+                        <span class="card-title">c# 高级编程(10th) 第六章 泛型</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            c# 高级编程(10th)  读书笔记系列
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c#
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%B3%9B%E5%9E%8B/">
+                        <span class="chip bg-color">泛型</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/18/rabbitmq/rabbitmq/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="RabbitMQ">
+                        
+                        <span class="card-title">RabbitMQ</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            RabbitMQ简介
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/RabbitMQ/" class="post-category">
+                                    RabbitMQ
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/RabbitMQ/">
+                        <span class="chip bg-color">RabbitMQ</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">60.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
+
+</html>

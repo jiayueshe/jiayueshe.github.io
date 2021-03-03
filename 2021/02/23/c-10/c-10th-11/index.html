@@ -1,0 +1,2403 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="c# 高级编程(10th) 第十一章 集合, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>c# 高级编程(10th) 第十一章 集合 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">c# 高级编程(10th) 第十一章 集合</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                <span class="chip bg-color">c# 高级编程(10th)</span>
+                            </a>
+                        
+                            <a href="/tags/%E9%9B%86%E5%90%88/">
+                                <span class="chip bg-color">集合</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/c/" class="post-category">
+                                c#
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-02-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-02-25
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.9k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    38 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="c-语言-第十一章-集合"><a href="#c-语言-第十一章-集合" class="headerlink" title="c#语言 第十一章 集合"></a>c#语言 第十一章 集合</h1><h2 id="1-集合接口和类型"><a href="#1-集合接口和类型" class="headerlink" title="1.集合接口和类型"></a>1.集合接口和类型</h2><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IEnumerable<T></td>
+<td>如果foreach语句用于集合,就需要IEnumerable接口.这个借口定义了方法GetEnumerator(),他返回一个实现了IEnumerator接口的枚举</td>
+</tr>
+<tr>
+<td>ICollection<T></td>
+<td>ICollection<T>接口有泛型集合类实现.使用这个借口可以获得集合中的元素个数(Count属性),把集合复制到数组中(CopyTo()方法),还可以从集合中添加和删除元素(Add(),Remove(),Clear())</td>
+</tr>
+<tr>
+<td>List<T></td>
+<td>IList<T>接口用于可通过位置访问其中的元素列表,这个接口定义了一个 索引器,可以在集合的指定位置插入或删除 mount些项(Insert()和Remove()方法).IList<T>接口派生自ICollection<T>接口</td>
+</tr>
+<tr>
+<td>ISet<T></td>
+<td>ISet<T>接口是.NET4中新增的.实现这个接口的集允许合并不同的集.获得两个集的交集,检查两个集合是否重叠.ISet<T>接口派生自ICollection<T>接口</td>
+</tr>
+<tr>
+<td>IDictionary&lt;TKey,TValue&gt;</td>
+<td>IDictionary&lt;TKey,TValue&gt;接口由包含键和值的泛型集合类 实现.使用这个接口可以访问所有的键和值,使用键类型的索引器可以访问某些项,还可以添加或删除某些项</td>
+</tr>
+<tr>
+<td>ILookup&lt;TKey,TValue&gt;</td>
+<td>ILookup&lt;TKey,TValue&gt;接口类似于IDictionary&lt;TKey,TValue&gt;接口,实现该接口的集合有键和值,且可以通过一个键包含多个值</td>
+</tr>
+<tr>
+<td>IComparer<T></td>
+<td>接口ICommparer<T>由比较器实现,通过Comparer()方法给集合中的元素排序</td>
+</tr>
+<tr>
+<td>IEqualityComparer<T></td>
+<td>接口IEqualityComparer<T>由一个比较器实现,该比较器可用于字典中的键.使用这个接口,可以对对象进行相等性比较.在.NET中,这个接口也由数组和元组实现</td>
+</tr>
+<tr>
+<td>IProducerConsumerColllection<T></td>
+<td>IProducerConsumerCollection<T>接口是.NET4中新增的,它支持新的线程安全的集合类</td>
+</tr>
+<tr>
+<td>IReadOnlyList<T>、 IReadOnlyDictionary<T>、 IReadOnlyCollection<T></td>
+<td>初始化后不能修改的集合，只能检索对象，不能添加和删除.</td>
+</tr>
+</tbody></table>
+<h2 id="2-列表"><a href="#2-列表" class="headerlink" title="2.列表"></a>2.列表</h2><blockquote>
+<pre><code>[Serializable]
+  public class Racer : IComparable&lt;Racer&gt;, IFormattable
+  &#123;
+    public int Id &#123; get; private set; &#125;
+    public string FirstName &#123; get; set; &#125;
+    public string LastName &#123; get; set; &#125;
+    public string Country &#123; get; set; &#125;
+    public int Wins &#123; get; set; &#125;
+
+    public Racer(int id, string firstName, string lastName, string country)
+      : this(id, firstName, lastName, country, wins: 0)
+    &#123;
+    &#125;
+    public Racer(int id, string firstName, string lastName, string country, int wins)
+    &#123;
+      this.Id = id;
+      this.FirstName = firstName;
+      this.LastName = lastName;
+      this.Country = country;
+      this.Wins = wins;
+    &#125;
+
+    public override string ToString()
+    &#123;
+      return String.Format(&quot;&#123;0&#125; &#123;1&#125;&quot;, FirstName, LastName);
+    &#125;
+
+    public string ToString(string format, IFormatProvider formatProvider)
+    &#123;
+      if (format == null) format = &quot;N&quot;;
+      switch (format.ToUpper())
+      &#123;
+        case null:
+        case &quot;N&quot;: // name
+          return ToString();
+        case &quot;F&quot;: // first name
+          return FirstName;
+        case &quot;L&quot;: // last name
+          return LastName;
+        case &quot;W&quot;: // Wins
+          return String.Format(&quot;&#123;0&#125;, Wins: &#123;1&#125;&quot;, ToString(), Wins);
+        case &quot;C&quot;: // Country
+          return String.Format(&quot;&#123;0&#125;, Country: &#123;1&#125;&quot;, ToString(), Country);
+        case &quot;A&quot;: // All
+          return String.Format(&quot;&#123;0&#125;, &#123;1&#125; Wins: &#123;2&#125;&quot;, ToString(), Country, Wins);
+        default:
+          throw new FormatException(String.Format(formatProvider,
+                &quot;Format &#123;0&#125; is not supported&quot;, format));
+      &#125;
+    &#125;
+
+    public string ToString(string format)
+    &#123;
+      return ToString(format, null);
+    &#125;
+
+    public int CompareTo(Racer other)
+    &#123;
+      if (other == null) return -1;
+      int compare = string.Compare(this.LastName, other.LastName);
+      if (compare == 0)
+        return string.Compare(this.FirstName, other.FirstName);
+      return compare;
+    &#125;
+  &#125;
+</code></pre>
+</blockquote>
+<p>​        使用默认的构造函数创建一个空列表，元素添加到列表后，列表容量会扩大到可接纳4个元素。<br>​        如果添加了第5个元素，列表大小会重新设置为8个元素。每次都会将列表的容量重新设置为原来的2倍.</p>
+<blockquote>
+<pre><code>var intList=new List&lt;int&gt;();
+</code></pre>
+</blockquote>
+<p>​        如果列表的容量变了，整个集合就要重新分配到新的内存块中，我们可以在初始化时设置它的容量：</p>
+<blockquote>
+<pre><code>List&lt;int&gt; intList=new List&lt;int&gt;(10);
+</code></pre>
+</blockquote>
+<p>如果列表的个数超过10个，可以设置容量Capacity：</p>
+<blockquote>
+<pre><code>intList.Capacity = 20;
+</code></pre>
+</blockquote>
+<p>如果列表的元素已经添加完了，列表会存在多余的容量空间。可以使用TrimExcess方法去除不要的容量:</p>
+<blockquote>
+<pre><code>intList.TrimExcess();
+</code></pre>
+</blockquote>
+<h3 id="a-集合初始值设定项"><a href="#a-集合初始值设定项" class="headerlink" title="a.集合初始值设定项"></a>a.集合初始值设定项</h3><p>使用初始化构造器初始化设定项</p>
+<blockquote>
+<pre><code>int[] arr = &#123; 1, 2, 3 &#125;;
+var intList = new List&lt;int&gt;(arr) ;
+</code></pre>
+</blockquote>
+<p>括号中初始化</p>
+<pre><code>var intList = new List&lt;int&gt;() &#123; 4, 5 &#125;;
+</code></pre>
+<h3 id="b-添加元素"><a href="#b-添加元素" class="headerlink" title="b.添加元素"></a>b.添加元素</h3><pre><code>intList.Add(5);
+</code></pre>
+<h3 id="添加数组"><a href="#添加数组" class="headerlink" title="添加数组"></a>添加数组</h3><pre><code>intList.AddRange(new int[] &#123; 3, 5 &#125;);
+</code></pre>
+<h3 id="c-插入元素"><a href="#c-插入元素" class="headerlink" title="c.插入元素"></a>c.插入元素</h3><pre><code>intList.Insert(3, 4);
+</code></pre>
+<h3 id="d-访问元素"><a href="#d-访问元素" class="headerlink" title="d.访问元素"></a>d.访问元素</h3><p>使用索引获取：</p>
+<pre><code>var value = intList[3];
+</code></pre>
+<p>循环遍历：</p>
+<pre><code>foreach (var item in intList)
+&#123;
+     var res = item;
+&#125;
+</code></pre>
+<p>forEach方法：</p>
+<pre><code>class List&lt;T&gt; : IList&lt;T&gt;
+&#123;
+    private T[] items;
+    public void forEach(Action&lt;T&gt; action)
+    &#123;
+        if (action == null) throw new ArgumentNullException(&quot;action&quot;);
+        foreach (var item in items)
+        &#123;
+            action(item);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>然后我们可以这样调用：</p>
+<pre><code>intList.ForEach(m =&gt; Console.WriteLine(m));
+</code></pre>
+<h3 id="e-删除元素"><a href="#e-删除元素" class="headerlink" title="e.删除元素"></a>e.删除元素</h3><p>按索引删除,比较快</p>
+<pre><code>intList.RemoveAt(3);
+</code></pre>
+<p>按元素值删除</p>
+<pre><code>intList.Remove(4);
+</code></pre>
+<h3 id="f-搜索"><a href="#f-搜索" class="headerlink" title="f.搜索"></a>f.搜索</h3><p>在集合中搜索元素。可以查找索引和元素。</p>
+<p>FindIndex通过匹配元素值，获得索引：</p>
+<pre><code>intList.FindIndex(m =&gt; m==4);
+</code></pre>
+<p>FindIndex方法参数Predicate<T>传入匹配的表达式，返回匹配的元素索引值,Predicate<T>委托表示定义一组条件并确定指定对象是否符合这些条件的方法</p>
+<pre><code>intList.Find(m =&gt; m == 4);
+intList.FindAll(m =&gt; m &gt; 2);
+</code></pre>
+<p>Find返回了匹配条件的元素值，FindAll返回了匹配条件的所有元素</p>
+<h3 id="g-排序"><a href="#g-排序" class="headerlink" title="g.排序"></a>g.排序</h3><p>列表使用Sort方法进行元素排序</p>
+<pre><code>intList.Sort();
+intList.Sort((m, n) =&gt; m);
+</code></pre>
+<p>Sort(Comparison<T> comparison)方法参数中的委托Comparison含有2个参数,方法将这2个元素进行比较，然后返回绝对值,如果返回-1的，元素需要排前面，返回1的元素需要排后面.</p>
+<p>Sort(IComparer<T> comparer)方法参数中是一个比较接口，接口实现Comparer方法</p>
+<pre><code>public enum CompareType
+  &#123;
+    FirstName,
+    LastName,
+    Country,
+    Wins
+  &#125;
+
+  public class RacerComparer : IComparer&lt;Racer&gt;
+  &#123;
+    private CompareType compareType;
+    public RacerComparer(CompareType compareType)
+    &#123;
+      this.compareType = compareType;
+    &#125;
+
+    public int Compare(Racer x, Racer y)
+    &#123;
+      if (x == null &amp;&amp; y == null) return 0;
+      if (x == null) return -1;
+      if (y == null) return 1;
+
+      int result;
+      switch (compareType)
+      &#123;
+        case CompareType.FirstName:
+          return string.Compare(x.FirstName, y.FirstName);
+        case CompareType.LastName:
+          return string.Compare(x.LastName, y.LastName);
+        case CompareType.Country:
+          result = string.Compare(x.Country, y.Country);
+          if (result == 0)
+            return string.Compare(x.LastName, y.LastName);
+          else
+            return result;
+        case CompareType.Wins:
+          return x.Wins.CompareTo(y.Wins);
+        default:
+          throw new ArgumentException(&quot;Invalid Compare Type&quot;);
+      &#125;
+    &#125;
+  &#125;
+</code></pre>
+<h3 id="h-类型转换"><a href="#h-类型转换" class="headerlink" title="h.类型转换"></a>h.类型转换</h3><p> Converter委托</p>
+<pre><code>public delegate TOutput Converter&lt;in TInput, out TOutput&gt;(TInput input);
+ConvertAll可以将一种类型的集合转换为另一种类型的集合。
+intList.ConvertAll(m =&gt; m.ToString());
+</code></pre>
+<h6 id="只读集合"><a href="#只读集合" class="headerlink" title="只读集合"></a>只读集合</h6><p>创建集合后，它们是只读的。</p>
+<h2 id="3-队列"><a href="#3-队列" class="headerlink" title="3.队列"></a>3.队列</h2><p>代表了一个<strong>先进先出</strong>的对象集合。当您需要对各项进行先进先出的访问时，则使用队列。当您在列表中添加一项，称为<strong>入队</strong>，当您从列表中移除一项时，称为<strong>出队</strong>。</p>
+<p>添加队列元素时加上lock,因为多线程可以同时访问，所以对队列进行锁定访问。</p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523112249101-324688636.png" alt="img"></p>
+<pre><code>using System;
+using System.Collections;
+
+namespace CollectionsApplication
+&#123;
+   class Program
+   &#123;
+      static void Main(string[] args)
+      &#123;
+         Queue q = new Queue();
+
+         q.Enqueue(&#39;A&#39;);
+         q.Enqueue(&#39;M&#39;);
+         q.Enqueue(&#39;G&#39;);
+         q.Enqueue(&#39;W&#39;);
+         
+         Console.WriteLine(&quot;Current queue: &quot;);
+         foreach (char c in q)
+            Console.Write(c + &quot; &quot;);
+         Console.WriteLine();
+         q.Enqueue(&#39;V&#39;);
+         q.Enqueue(&#39;H&#39;);
+         Console.WriteLine(&quot;Current queue: &quot;);         
+         foreach (char c in q)
+            Console.Write(c + &quot; &quot;);
+         Console.WriteLine();
+         Console.WriteLine(&quot;Removing some values &quot;);
+         char ch = (char)q.Dequeue();
+         Console.WriteLine(&quot;The removed value: &#123;0&#125;&quot;, ch);
+         ch = (char)q.Dequeue();
+         Console.WriteLine(&quot;The removed value: &#123;0&#125;&quot;, ch);
+         Console.ReadKey();
+      &#125;
+   &#125;
+&#125;
+</code></pre>
+<p>当上面的代码被编译和执行时，它会产生下列结果：</p>
+<pre><code>Current queue: 
+A M G W 
+Current queue: 
+A M G W V H 
+Removing values
+The removed value: A
+The removed value: M
+</code></pre>
+<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"><img src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="img"></p>
+<pre><code>class Program
+    &#123;
+        static void Main()
+        &#123;
+            var dm = new DocumentManager();
+
+            ProcessDocuments.Start(dm);
+
+            // Create documents and add them to the DocumentManager
+            for (int i = 0; i &lt; 1000; i++)
+            &#123;
+                Document doc = new Document(&quot;Doc &quot; + i.ToString(), &quot;content&quot;);
+                dm.AddDocument(doc);
+                Console.WriteLine(&quot;Added document &#123;0&#125;&quot;, doc.Title);
+                Thread.Sleep(new Random().Next(20));
+            &#125;
+
+        &#125;
+    &#125;
+</code></pre>
+<p>Program</p>
+<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"><img src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="img"></p>
+<pre><code>public class ProcessDocuments
+  &#123;
+    public static void Start(DocumentManager dm)
+    &#123;
+      Task.Factory.StartNew(new ProcessDocuments(dm).Run);
+    &#125;
+
+    protected ProcessDocuments(DocumentManager dm)
+    &#123;
+      if (dm == null)
+        throw new ArgumentNullException(&quot;dm&quot;);
+      documentManager = dm;
+    &#125;
+
+    private DocumentManager documentManager;
+
+    protected void Run()
+    &#123;
+      while (true)
+      &#123;
+        if (documentManager.IsDocumentAvailable)
+        &#123;
+          Document doc = documentManager.GetDocument();
+          Console.WriteLine(&quot;Processing document &#123;0&#125;&quot;, doc.Title);
+        &#125;
+        Thread.Sleep(new Random().Next(20));
+      &#125;
+    &#125;
+  &#125;
+</code></pre>
+<p>ProcessDocuments</p>
+<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"><img src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="img"></p>
+<pre><code>public class DocumentManager
+  &#123;
+    private readonly Queue&lt;Document&gt; documentQueue = new Queue&lt;Document&gt;();
+
+    public void AddDocument(Document doc)
+    &#123;
+      lock (this)
+      &#123;
+        documentQueue.Enqueue(doc);
+      &#125;
+    &#125;
+
+    public Document GetDocument()
+    &#123;
+      Document doc = null;
+      lock (this)
+      &#123;
+        doc = documentQueue.Dequeue();
+      &#125;
+      return doc;
+    &#125;
+
+    public bool IsDocumentAvailable
+    &#123;
+      get
+      &#123;
+        return documentQueue.Count &gt; 0;
+      &#125;
+    &#125;
+  &#125;
+</code></pre>
+<p>DocumentManager</p>
+<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"><img src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="img"></p>
+<pre><code>public class Document
+  &#123;
+    public string Title &#123; get; private set; &#125;
+    public string Content &#123; get; private set; &#125;
+
+    public Document(string title, string content)
+    &#123;
+      this.Title = title;
+      this.Content = content;
+    &#125;
+  &#125;
+</code></pre>
+<h2 id="4-栈"><a href="#4-栈" class="headerlink" title="4.栈"></a>4.栈</h2><p>代表了一个<strong>后进先出</strong>的对象集合。当您需要对各项进行后进先出的访问时，则使用堆栈。当您在列表中添加一项，称为<strong>推入</strong>元素，当您从列表中移除一项时，称为<strong>弹出</strong>元素。</p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523134233945-207787536.png" alt="img"></p>
+<pre><code>class Program
+    &#123;
+        static void Main()
+        &#123;
+            var alphabet = new Stack&lt;char&gt;();
+            alphabet.Push(&#39;A&#39;);
+            alphabet.Push(&#39;B&#39;);
+            alphabet.Push(&#39;C&#39;);
+
+            Console.Write(&quot;First iteration: &quot;);
+            foreach (char item in alphabet)
+            &#123;
+                Console.Write(item);
+            &#125;
+            Console.WriteLine();
+
+            Console.Write(&quot;Second iteration: &quot;);
+            while (alphabet.Count &gt; 0)
+            &#123;
+                Console.Write(alphabet.Pop());
+            &#125;
+            Console.WriteLine();
+
+
+        &#125;
+    &#125;
+</code></pre>
+<h2 id="5-链表"><a href="#5-链表" class="headerlink" title="5.链表"></a>5.链表</h2><p>LinkedList<T>是一个双向链表，其元素指向它前面和后面的元素，这样通过移动下一个元素就可以正向遍历整个链表。通过移动到前一个元素可以反向遍历这个链表</p>
+<p>链表的优点是，如果将元素插入列表的中间位置，使用链表会很快，在插入一个元素时，只需要修改上一个元素的Next引用和下一个元素的Previous引用，使他们引用所插入的元素。</p>
+<pre><code>public class Document
+  &#123;
+    public string Title &#123; get; private set; &#125;
+    public string Content &#123; get; private set; &#125;
+    public byte Priority &#123; get; private set; &#125;
+
+    public Document(string title, string content, byte priority)
+    &#123;
+      this.Title = title;
+      this.Content = content;
+      this.Priority = priority;
+    &#125;
+  &#125;
+</code></pre>
+<pre><code>public class PriorityDocumentManager
+  &#123;
+    private readonly LinkedList&lt;Document&gt; documentList;
+
+    // priorities 0.9
+    private readonly List&lt;LinkedListNode&lt;Document&gt;&gt; priorityNodes;
+
+    public PriorityDocumentManager()
+    &#123;
+      documentList = new LinkedList&lt;Document&gt;();
+
+      priorityNodes = new List&lt;LinkedListNode&lt;Document&gt;&gt;(10);
+      for (int i = 0; i &lt; 10; i++)
+      &#123;
+        priorityNodes.Add(new LinkedListNode&lt;Document&gt;(null));
+      &#125;
+    &#125;
+
+    public void AddDocument(Document d)
+    &#123;
+      Contract.Requires&lt;ArgumentNullException&gt;(d != null, &quot;argument d must not be null&quot;);
+      //  if (d == null) throw new ArgumentNullException(&quot;d&quot;);
+
+      AddDocumentToPriorityNode(d, d.Priority);
+    &#125;
+
+    private void AddDocumentToPriorityNode(Document doc, int priority)
+    &#123;
+      Contract.Requires&lt;ArgumentException&gt;(priority &gt;= 0 &amp;&amp; priority &lt; 10, &quot;priority value must be between 0 and 9&quot;);
+      //if (priority &gt; 9 || priority &lt; 0)
+      //    throw new ArgumentException(&quot;Priority must be between 0 and 9&quot;);
+
+      if (priorityNodes[priority].Value == null)
+      &#123;
+        --priority;
+        if (priority &gt;= 0)
+        &#123;
+          // check for the next lower priority
+          AddDocumentToPriorityNode(doc, priority);
+        &#125;
+        else // now no priority node exists with the same priority or lower
+        // add the new document to the end
+        &#123;
+          documentList.AddLast(doc);
+          priorityNodes[doc.Priority] = documentList.Last;
+        &#125;
+        return;
+      &#125;
+      else // a priority node exists
+      &#123;
+        LinkedListNode&lt;Document&gt; prioNode = priorityNodes[priority];
+        if (priority == doc.Priority)
+        // priority node with the same priority exists
+        &#123;
+          documentList.AddAfter(prioNode, doc);
+
+          // set the priority node to the last document with the same priority
+          priorityNodes[doc.Priority] = prioNode.Next;
+        &#125;
+        else // only priority node with a lower priority exists
+        &#123;
+          // get the first node of the lower priority
+          LinkedListNode&lt;Document&gt; firstPrioNode = prioNode;
+
+          while (firstPrioNode.Previous != null &amp;&amp;
+             firstPrioNode.Previous.Value.Priority == prioNode.Value.Priority)
+          &#123;
+            firstPrioNode = prioNode.Previous;
+            prioNode = firstPrioNode;
+          &#125;
+
+          documentList.AddBefore(firstPrioNode, doc);
+
+          // set the priority node to the new value
+          priorityNodes[doc.Priority] = firstPrioNode.Previous;
+        &#125;
+      &#125;
+    &#125;
+
+    public void DisplayAllNodes()
+    &#123;
+      foreach (Document doc in documentList)
+      &#123;
+        Console.WriteLine(&quot;priority: &#123;0&#125;, title &#123;1&#125;&quot;, doc.Priority, doc.Title);
+      &#125;
+    &#125;
+
+    // returns the document with the highest priority
+    // (that&#39;s first in the linked list)
+    public Document GetDocument()
+    &#123;
+      Document doc = documentList.First.Value;
+      documentList.RemoveFirst();
+      return doc;
+    &#125;
+
+  &#125;
+</code></pre>
+<pre><code> class Program
+  &#123;
+    static void Main()
+    &#123;
+        PriorityDocumentManager pdm = new PriorityDocumentManager();
+        pdm.AddDocument(new Document(&quot;one&quot;, &quot;Sample&quot;, 8));
+        pdm.AddDocument(new Document(&quot;two&quot;, &quot;Sample&quot;, 3));
+        pdm.AddDocument(new Document(&quot;three&quot;, &quot;Sample&quot;, 4));
+        pdm.AddDocument(new Document(&quot;four&quot;, &quot;Sample&quot;, 8));
+        pdm.AddDocument(new Document(&quot;five&quot;, &quot;Sample&quot;, 1));
+        pdm.AddDocument(new Document(&quot;six&quot;, &quot;Sample&quot;, 9));
+        pdm.AddDocument(new Document(&quot;seven&quot;, &quot;Sample&quot;, 1));
+        pdm.AddDocument(new Document(&quot;eight&quot;, &quot;Sample&quot;, 1));
+
+        pdm.DisplayAllNodes();
+
+    &#125;
+  &#125;
+</code></pre>
+<h2 id="6-有序列表"><a href="#6-有序列表" class="headerlink" title="6.有序列表"></a>6.有序列表</h2><p>SortedList基于键对集合进行排序.</p>
+<pre><code>class Program
+  &#123;
+    static void Main()
+    &#123;
+      var books = new SortedList&lt;string, string&gt;();
+      books.Add(&quot;sty&quot;, &quot;&quot;);
+      books.Add(&quot;abc&quot;, &quot;&quot;);
+      books.Add(&quot;123&quot;, &quot;&quot;);
+      foreach (var item in books.Keys)
+      &#123;
+          Console.WriteLine(item);
+      &#125;
+
+    &#125;
+  &#125;
+</code></pre>
+<h2 id="7-字典"><a href="#7-字典" class="headerlink" title="7.字典"></a>7.字典</h2><p>字典：用于在名称/值对中存储信息，字典的名称即键不能重复.</p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523142813132-1598220317.png" alt="img"></p>
+<p>HashTable和Dictionary</p>
+<p>1.HashTable大数据量插入数据时需要花费比Dictionary大的多的时间。</p>
+<p>2.for方式遍历HashTable和Dictionary速度最快。</p>
+<p>3.在foreach方式遍历时Dictionary遍历速度更快。</p>
+<p>4.HashTable在取值时需要进行类型转换,Dictionary不用做类型转换。</p>
+<p>在单线程的时候使用Dictionary更好一些，多线程的时候使用HashTable更好。</p>
+<p>有序字典SortedList和SortedDictionary</p>
+<p><strong>SortedDictionary</strong> 泛型类是检索运算复杂度为 O(log n) 的二叉搜索树，其中 n 是字典中的元素数。就这一点而言，它与 <a target="_blank" rel="noopener" href="http://blog.csdn.net/nma_123456/article/details/7298343">SortedList</a> 泛型类相似。这两个类具有相似的对象模型，并且都具有 O(log n) 的检索运算复杂度。这两个类的区别在于内存的使用以及插入和移除元素的速度：</p>
+<ul>
+<li><strong>SortedList</strong> 使用的内存比 <strong>SortedDictionary</strong> 少。</li>
+<li><strong>SortedDictionary</strong> 可对未排序的数据执行更快的插入和移除操作：它的时间复杂度为 O(log n)，而<strong>SortedList</strong> 为 O(n)。</li>
+<li>如果使用排序数据一次性填充列表，则 <strong>SortedList</strong> 比 <strong>SortedDictionary</strong> 快。</li>
+<li></li>
+</ul>
+<h2 id="8-集"><a href="#8-集" class="headerlink" title="8.集"></a>8.集</h2><p>包含不重复元素的集合，叫“集”。.NET包含2个集。HashSet<T>和SortedSet<T>，它们继承ISet;SortedSet是一个有序集.</p>
+<p>ISet提供了Add方法,如果HashSet中存在这个元素，再次使用Add方法不会抛出异常，返回bool值是否添加</p>
+<blockquote>
+<p>var companyTeams = new HashSet<string>() { “Ferrari”, “McLaren”, “Mercedes” };<br>var traditionalTeams = new HashSet<string>() { “Ferrari”, “McLaren” };<br>var privateTeams = new HashSet<string>() { “Red Bull”, “Lotus”, “Toro Rosso”, “Force India”, “Sauber” };</p>
+<p>if (privateTeams.Add(“Williams”))<br>    Console.WriteLine(“Williams added”);<br>if (!companyTeams.Add(“McLaren”))<br>    Console.WriteLine(“McLaren was already in this set”);</p>
+</blockquote>
+<pre><code>IsSubsetOf方法判断了traditionalTeams集合是否companyTeams的子集
+IsSupersetOf方法判断了companyTeams集合是否traditionalTeams的超集(包含它拥有的所有元素，并且多余它的元素)
+</code></pre>
+<pre><code>var companyTeams = new HashSet&lt;string&gt;() &#123; &quot;Ferrari&quot;, &quot;McLaren&quot;, &quot;Mercedes&quot; &#125;;
+var traditionalTeams = new HashSet&lt;string&gt;() &#123; &quot;Ferrari&quot;, &quot;McLaren&quot; &#125;;
+var privateTeams = new HashSet&lt;string&gt;() &#123; &quot;Red Bull&quot;, &quot;Lotus&quot;, &quot;Toro Rosso&quot;, &quot;Force India&quot;, &quot;Sauber&quot; &#125;;
+
+if (traditionalTeams.IsSubsetOf(companyTeams))
+&#123;
+  Console.WriteLine(&quot;traditionalTeams is subset of companyTeams&quot;);
+&#125;
+
+if (companyTeams.IsSupersetOf(traditionalTeams))
+&#123;
+   Console.WriteLine(&quot;companyTeams is a superset of traditionalTeams&quot;);
+&#125;
+SortedSet的UnionWith方法可以修改这个集合，并且包含传入的集合
+var allTeams = new SortedSet&lt;string&gt;(companyTeams);
+allTeams.UnionWith(privateTeams);
+allTeams.UnionWith(traditionalTeams);
+</code></pre>
+<h2 id="9-可视察的集合"><a href="#9-可视察的集合" class="headerlink" title="9.可视察的集合"></a>9.可视察的集合</h2><p>如果需要记录集合何时添加和删除元素的信息，可以使用ObservableCollection<T>,这个本身是为WPF定制的。</p>
+<p>ObservableCollection<T>类用于创建自定义集合，在内部使用List<T>类,重写虚方法RemoveItem和SetItem()方法触发CollectionChanged事件。</p>
+<pre><code>class Program
+  &#123;
+    static void Main()
+    &#123;
+      var data = new ObservableCollection&lt;string&gt;();
+      data.CollectionChanged += Data_CollectionChanged;
+      data.Add(&quot;One&quot;);
+      data.Add(&quot;Two&quot;);
+      data.Insert(1, &quot;Three&quot;);
+      data.Remove(&quot;One&quot;);
+
+    &#125;
+
+    static void Data_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+    &#123;
+      Console.WriteLine(&quot;action: &#123;0&#125;&quot;, e.Action.ToString());
+
+      if (e.OldItems != null)
+      &#123;
+        Console.WriteLine(&quot;starting index for old item(s): &#123;0&#125;&quot;, e.OldStartingIndex);
+        Console.WriteLine(&quot;old item(s):&quot;);
+        foreach (var item in e.OldItems)
+        &#123;
+          Console.WriteLine(item);
+        &#125;
+      &#125;
+      if (e.NewItems != null)
+      &#123;
+        Console.WriteLine(&quot;starting index for new item(s): &#123;0&#125;&quot;, e.NewStartingIndex);
+        Console.WriteLine(&quot;new item(s): &quot;);
+        foreach (var item in e.NewItems)
+        &#123;
+          Console.WriteLine(item);
+        &#125;
+      &#125;
+
+
+      Console.WriteLine();
+
+    &#125;
+  &#125;
+</code></pre>
+<p>Data_CollectionChanged方法接收了NotifyCollectionChangedEventArgs，包含了集合的变化信息，Action属性给出了是否添加或删除一项的信息，对于删除的项，会设置OldItems属性，列出删除的项</p>
+<p>对于添加的项，会设置NewItems属性，列出添加的项。</p>
+<pre><code>action: Add
+starting index for new item(s): 0
+new item(s):
+One
+
+action: Add
+starting index for new item(s): 1
+new item(s):
+Two
+
+action: Add
+starting index for new item(s): 1
+new item(s):
+Three
+
+action: Remove
+starting index for old item(s): 0
+old item(s):
+One
+</code></pre>
+<h2 id="10-位数组"><a href="#10-位数组" class="headerlink" title="10.位数组"></a>10.位数组</h2><h3 id="BitArray类的方法和属性"><a href="#BitArray类的方法和属性" class="headerlink" title="BitArray类的方法和属性"></a>BitArray类的方法和属性</h3><p>下表列出了一些BitArray类的常用属性：</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Count</td>
+<td>获取包含在BitArray元素的数量</td>
+</tr>
+<tr>
+<td>IsReadOnly</td>
+<td>获取一个值，指示BitArray是否是只读</td>
+</tr>
+<tr>
+<td>Item</td>
+<td>获取或设置在所述BitArray的特定位置的比特的值</td>
+</tr>
+<tr>
+<td>Length</td>
+<td>获取或设置在BitArray元素的数量</td>
+</tr>
+</tbody></table>
+<p>下表列出了一些BitArray类的常用方法：</p>
+<table>
+<thead>
+<tr>
+<th>S.N</th>
+<th>方法名称及用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td><strong>public BitArray And( BitArray value );</strong>  执行对指定BitArray的相应元素在当前BitArray元素的按位与运算</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>public bool Get( int index );</strong>  获取在所述BitArray的特定位置的比特的值</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>public BitArray Not();</strong> 反转当前BitArray所有的位值，使设置为true的元素被更改为false，并设置为false元素更改为true</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>public BitArray Or( BitArray value );</strong>  在执行对指定BitArray的相应元素在当前BitArray的元素的按位或操作</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>public void Set( int index, bool value );</strong>  设置在所述BitArray为指定值的特定位置的比特值</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>public void SetAll( bool value );</strong>  设置在BitArray所有位设置为指定值</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>public BitArray Xor( BitArray value );</strong>  执行关于对在指定BitArray的相应元素中的当前BitArray的元素按位异或运算</td>
+</tr>
+</tbody></table>
+<p>当需要存储位，但不知道事先比特数就使用它。您可以通过使用一个整数索引，它从零开始访问BitArray集合中的项。</p>
+<pre><code>using System;
+using System.Collections;
+
+namespace CollectionsApplication
+&#123;
+    class Program
+    &#123;
+        static void Main(string[] args)
+        &#123;
+            //creating two  bit arrays of size 8
+            BitArray ba1 = new BitArray(8);
+            BitArray ba2 = new BitArray(8);
+            byte[] a = &#123; 60 &#125;;
+            byte[] b = &#123; 13 &#125;;
+            
+            //storing the values 60, and 13 into the bit arrays
+            ba1 = new BitArray(a);
+            ba2 = new BitArray(b);
+
+            //content of ba1
+            Console.WriteLine(&quot;Bit array ba1: 60&quot;);
+            for (int i = 0; i &lt; ba1.Count; i++)
+            &#123;
+                Console.Write(&quot;&#123;0, -6&#125; &quot;, ba1[i]);
+            &#125;
+            Console.WriteLine();
+            
+            //content of ba2
+            Console.WriteLine(&quot;Bit array ba2: 13&quot;);
+            for (int i = 0; i &lt; ba2.Count; i++)
+            &#123;
+                Console.Write(&quot;&#123;0, -6&#125; &quot;, ba2[i]);
+            &#125;
+            Console.WriteLine();
+           
+            
+            BitArray ba3 = new BitArray(8);
+            ba3 = ba1.And(ba2);
+
+            //content of ba3
+            Console.WriteLine(&quot;Bit array ba3 after AND operation: 12&quot;);
+            for (int i = 0; i &lt; ba3.Count; i++)
+            &#123;
+                Console.Write(&quot;&#123;0, -6&#125; &quot;, ba3[i]);
+            &#125;
+            Console.WriteLine();
+
+            ba3 = ba1.Or(ba2);
+            //content of ba3
+            Console.WriteLine(&quot;Bit array ba3 after OR operation: 61&quot;);
+            for (int i = 0; i &lt; ba3.Count; i++)
+            &#123;
+                Console.Write(&quot;&#123;0, -6&#125; &quot;, ba3[i]);
+            &#125;
+            Console.WriteLine();
+            
+            Console.ReadKey();
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>让我们编译和运行上面的程序，这将产生以下结果：</p>
+<pre><code>Bit array ba1: 60 
+False False True True True True False False 
+Bit array ba2: 13
+True False True True False False False False 
+Bit array ba3 after AND operation: 12
+False False True True False False False False 
+Bit array ba3 after OR operation: 61
+True False True True False False False False 
+</code></pre>
+<h6 id="BitVector32"><a href="#BitVector32" class="headerlink" title="BitVector32"></a><a target="_blank" rel="noopener" href="http://www.cnblogs.com/kingdom_0/articles/2024941.html">BitVector32</a></h6><p>提供了一个简单结构，该结构以32位内存存储布尔和小数值</p>
+<p>对于内部使用的布尔值和小整数，BitVector32 比 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.bitarray.aspx">BitArray</a> 更有效。 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.bitarray.aspx">BitArray</a> 可以按需要无限地扩大，但它有内存和性能方面的系统开销，这是类实例所要求的。 相比之下，BitVector32 只使用 32 位。</p>
+<p>BitVector32 结构可以设置成包含小整数的若干节或包含布尔值的若干位标志，但不能同时包含两者。<a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.section.aspx">BitVector32.Section</a> 是 BitVector32 中的窗口，且由最小数量的连续位构成，连续位可以包含 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.createsection.aspx">CreateSection</a> 中指定的最大值。 例如，带有最大值 1 的节只由一个位构成，而带有最大值 5 的节由三个位构成。 可以创建带有最大值 1 的 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.section.aspx">BitVector32.Section</a> 作为布尔值，从而使您能够在同一 BitVector32 中存储整数和布尔值。</p>
+<p>BitVector32 既可以设置为节，也可以设置为位标志，分别有成员可以应用于这两种情形。 例如，<a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.item.aspx">BitVector32.Item</a> 属性是作为节设置的 BitVector32 的索引器，而 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.item.aspx">BitVector32.Item</a> 属性是作为位标志设置的BitVector32 的索引器。 <a target="_blank" rel="noopener" href="http://msdn.microsoft.com/zh-cn/library/system.collections.specialized.bitvector32.createmask.aspx">CreateMask</a> 创建一系列屏蔽，这些屏蔽可用于访问作为位标志设置的 BitVector32 中的单个位。</p>
+<p>在作为节设置的 BitVector32 上使用屏蔽可能会导致意外的结果</p>
+<pre><code>using System;
+using System.Collections.Specialized;
+
+
+public class SamplesBitVector32  &#123;
+
+   public static void Main()  &#123;
+
+      // Creates and initializes a BitVector32 with all bit flags set to FALSE.
+      BitVector32 myBV = new BitVector32( 0 );
+
+      // Creates masks to isolate each of the first five bit flags.
+      int myBit1 = BitVector32.CreateMask();
+      int myBit2 = BitVector32.CreateMask( myBit1 );
+      int myBit3 = BitVector32.CreateMask( myBit2 );
+      int myBit4 = BitVector32.CreateMask( myBit3 );
+      int myBit5 = BitVector32.CreateMask( myBit4 );
+
+      // Sets the alternating bits to TRUE.
+      Console.WriteLine( &quot;Setting alternating bits to TRUE:&quot; );
+      Console.WriteLine( &quot;   Initial:         &#123;0&#125;&quot;, myBV.ToString() );
+      myBV[myBit1] = true;
+      Console.WriteLine( &quot;   myBit1 = TRUE:   &#123;0&#125;&quot;, myBV.ToString() );
+      myBV[myBit3] = true;
+      Console.WriteLine( &quot;   myBit3 = TRUE:   &#123;0&#125;&quot;, myBV.ToString() );
+      myBV[myBit5] = true;
+      Console.WriteLine( &quot;   myBit5 = TRUE:   &#123;0&#125;&quot;, myBV.ToString() );
+
+   &#125;
+
+&#125;
+
+/*
+This code produces the following output.
+
+Setting alternating bits to TRUE:
+   Initial:         BitVector32&#123;00000000000000000000000000000000&#125;
+   myBit1 = TRUE:   BitVector32&#123;00000000000000000000000000000001&#125;
+   myBit3 = TRUE:   BitVector32&#123;00000000000000000000000000000101&#125;
+   myBit5 = TRUE:   BitVector32&#123;00000000000000000000000000010101&#125;
+
+
+*/
+BitVector用作节集合
+
+using System;
+using System.Collections.Specialized;
+
+
+public class SamplesBitVector32  &#123;
+
+   public static void Main()  &#123;
+
+      // Creates and initializes a BitVector32.
+      BitVector32 myBV = new BitVector32( 0 );
+
+      // Creates four sections in the BitVector32 with maximum values 6, 3, 1, and 15.
+      // mySect3, which uses exactly one bit, can also be used as a bit flag.
+      BitVector32.Section mySect1 = BitVector32.CreateSection( 6 );
+      BitVector32.Section mySect2 = BitVector32.CreateSection( 3, mySect1 );
+      BitVector32.Section mySect3 = BitVector32.CreateSection( 1, mySect2 );
+      BitVector32.Section mySect4 = BitVector32.CreateSection( 15, mySect3 );
+
+      // Displays the values of the sections.
+      Console.WriteLine( &quot;Initial values:&quot; );
+      Console.WriteLine( &quot;\tmySect1: &#123;0&#125;&quot;, myBV[mySect1] );
+      Console.WriteLine( &quot;\tmySect2: &#123;0&#125;&quot;, myBV[mySect2] );
+      Console.WriteLine( &quot;\tmySect3: &#123;0&#125;&quot;, myBV[mySect3] );
+      Console.WriteLine( &quot;\tmySect4: &#123;0&#125;&quot;, myBV[mySect4] );
+
+      // Sets each section to a new value and displays the value of the BitVector32 at each step.
+      Console.WriteLine( &quot;Changing the values of each section:&quot; );
+      Console.WriteLine( &quot;\tInitial:    \t&#123;0&#125;&quot;, myBV.ToString() );
+      myBV[mySect1] = 5;
+      Console.WriteLine( &quot;\tmySect1 = 5:\t&#123;0&#125;&quot;, myBV.ToString() );
+      myBV[mySect2] = 3;
+      Console.WriteLine( &quot;\tmySect2 = 3:\t&#123;0&#125;&quot;, myBV.ToString() );
+      myBV[mySect3] = 1;
+      Console.WriteLine( &quot;\tmySect3 = 1:\t&#123;0&#125;&quot;, myBV.ToString() );
+      myBV[mySect4] = 9;
+      Console.WriteLine( &quot;\tmySect4 = 9:\t&#123;0&#125;&quot;, myBV.ToString() );
+
+      // Displays the values of the sections.
+      Console.WriteLine( &quot;New values:&quot; );
+      Console.WriteLine( &quot;\tmySect1: &#123;0&#125;&quot;, myBV[mySect1] );
+      Console.WriteLine( &quot;\tmySect2: &#123;0&#125;&quot;, myBV[mySect2] );
+      Console.WriteLine( &quot;\tmySect3: &#123;0&#125;&quot;, myBV[mySect3] );
+      Console.WriteLine( &quot;\tmySect4: &#123;0&#125;&quot;, myBV[mySect4] );
+
+   &#125;
+
+&#125;
+</code></pre>
+<h2 id="11-不变的集合"><a href="#11-不变的集合" class="headerlink" title="11.不变的集合"></a>11.不变的集合</h2><p><strong>Net提供的不可变集合</strong></p>
+<pre><code>ImmutableStack&lt;int&gt; a1 = ImmutableStack&lt;int&gt;.Empty;
+ImmutableStack&lt;int&gt; a2 = a1.Push(10);
+ImmutableStack&lt;int&gt; a3 = a2.Push(20);
+ImmutableStack&lt;int&gt; a4 = a3.Push(30);
+ImmutableStack&lt;int&gt; iv3 = a4.Pop(); 
+</code></pre>
+<p>使用Net不可变列表集合有一点要注意的是，当我们Push值时要重新赋值给原变量才正确，因为push后会生成一个新对象，原a1只是旧值：</p>
+<pre><code>ImmutableStack&lt;int&gt; a1 = ImmutableStack&lt;int&gt;.Empty;
+a1.Push(10); //不正确，a1仍是空值值，push会生成新的栈。
+a1 = a1.Push(10); //需要将新栈重新赋值给a1
+</code></pre>
+<p><strong>NET提供的常用数据结构</strong></p>
+<p>1.ImmutableStack<br>2.ImmutableQueue<br>3.ImmutableList<br>4.ImmutableHashSet<br>5.ImmutableSortedSet<br>6.ImmutableDictionary&lt;K, V&gt;<br>7.ImmutableSortedDictionary&lt;K, V&gt;</p>
+<p><strong>不可变优点</strong></p>
+<p>1.集合共享安全，从不被改变<br>2.访问集合时，不需要锁集合（线程安全）<br>3.修改集合不担心旧集合被改变<br>4.书写更简洁，函数式风格。 var list = ImmutableList.Empty.Add(10).Add(20).Add(30);<br>5.保证数据完整性，安全性</p>
+<p><strong>不可变对象缺点</strong></p>
+<p>不可变本身的优点即是缺点，当每次对象/集合操作都会返回个新值。而旧值依旧会保留一段时间，这会使内存有极大开销，也会给GC造成回收负担，性能也比可变集合差的多。</p>
+<h2 id="12-并发集合"><a href="#12-并发集合" class="headerlink" title="12.并发集合"></a>12.并发集合</h2><p>线程安全的集合可防止多个线程以相互冲突的方式访问集合</p>
+<p>.NET 的System.Collections.Concurrent提供了几个安全的类和功能：</p>
+<table>
+<thead>
+<tr>
+<th>类</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd267312.aspx">BlockingCollection</a></td>
+<td>为实现 <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd287147.aspx">IProducerConsumerCollection</a> 的线程安全集合提供阻塞和限制功能。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd381779.aspx">ConcurrentBag</a></td>
+<td>表示对象的线程安全的无序集合。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd287191.aspx">ConcurrentDictionary</a></td>
+<td>表示可由多个线程同时访问的键/值对的线程安全集合。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd267265.aspx">ConcurrentQueue</a></td>
+<td>表示线程安全的先进先出 (FIFO) 集合。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd267331.aspx">ConcurrentStack</a></td>
+<td>表示线程安全的后进先出 (LIFO) 集合。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd394988.aspx">OrderablePartitioner</a></td>
+<td>表示将可排序数据源拆分为多个分区的特定方式。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/system.collections.concurrent.partitioner.aspx">Partitioner</a></td>
+<td>为数组、列表和可枚举对象提供常见的分区策略。</td>
+</tr>
+<tr>
+<td><a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd381768.aspx">Partitioner</a></td>
+<td>表示将数据源拆分为多个分区的特定方式。</td>
+</tr>
+</tbody></table>
+<h3 id="1-创建管道"><a href="#1-创建管道" class="headerlink" title="1)创建管道"></a>1)创建管道</h3><p>将这些并发集合类用于管道,一个任务向一个集合类写入一些内容，同时另一个任务从该集合中读取内容</p>
+<p>示例中多个任务形成一个管道.<br>第一个管道，<br>第1阶段的任务读取文件名，添加到队列，这个任务运行同时，<br>第2阶段的任务已经开始从队列中读取文件名并加载它们的程序,结果被写入另一个队列。<br>第3阶段同时启动，读取并处理第2个队列的内容，结果被写入一个字典。</p>
+<p>第3阶段完成，并且内容已被最终处理，字典得到完整结果时，下一阶段才开始。<br>第4阶段从字典中读取内容，转换数据，然后写入队列中<br>第5阶段在项中添加颜色信息，然后把它们添加到另一个队列中，最后一个阶段显示信息。<br>第4到第6阶段也可以并发运行.</p>
+<pre><code>class Program
+  &#123;
+    static void Main(string[] args)
+    &#123;
+      StartPipeline();
+      Console.ReadLine();
+    &#125;
+
+    private static async void StartPipeline()
+    &#123;
+      var fileNames = new BlockingCollection&lt;string&gt;();
+      var lines = new BlockingCollection&lt;string&gt;();
+      var words = new ConcurrentDictionary&lt;string, int&gt;();
+      var items = new BlockingCollection&lt;Info&gt;();
+      var coloredItems = new BlockingCollection&lt;Info&gt;();
+
+      Task t1 = PipelineStages.ReadFilenamesAsync(@&quot;../../..&quot;, fileNames);
+      ConsoleHelper.WriteLine(&quot;started stage 1&quot;);
+      Task t2 = PipelineStages.LoadContentAsync(fileNames, lines);
+      ConsoleHelper.WriteLine(&quot;started stage 2&quot;);
+      Task t3 = PipelineStages.ProcessContentAsync(lines, words);
+      await Task.WhenAll(t1, t2, t3);
+      ConsoleHelper.WriteLine(&quot;stages 1, 2, 3 completed&quot;);
+
+      Task t4 = PipelineStages.TransferContentAsync(words, items);
+      Task t5 = PipelineStages.AddColorAsync(items, coloredItems);
+      Task t6 = PipelineStages.ShowContentAsync(coloredItems);
+      ConsoleHelper.WriteLine(&quot;stages 4, 5, 6 started&quot;);
+
+      await Task.WhenAll(t4, t5, t6);
+
+      ConsoleHelper.WriteLine(&quot;all stages finished&quot;);
+    &#125;
+  &#125;
+</code></pre>
+<pre><code>public class ConsoleHelper
+  &#123;
+    private static object syncOutput = new object();
+
+    public static void WriteLine(string message)
+    &#123;
+      lock (syncOutput)
+      &#123;
+        Console.WriteLine(message);
+      &#125;
+    &#125;
+
+    public static void WriteLine(string message, string color)
+    &#123;
+      lock (syncOutput)
+      &#123;
+        Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color);
+        Console.WriteLine(message);
+        Console.ResetColor();
+      &#125;
+    &#125;
+  &#125;
+</code></pre>
+<pre><code>public static class PipelineStages
+  &#123;
+    public static Task ReadFilenamesAsync(string path, BlockingCollection&lt;string&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (string filename in Directory.EnumerateFiles(path, &quot;*.cs&quot;, SearchOption.AllDirectories))
+          &#123;
+            output.Add(filename);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 1: added &#123;0&#125;&quot;, filename));
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+
+    public static async Task LoadContentAsync(BlockingCollection&lt;string&gt; input, BlockingCollection&lt;string&gt; output)
+    &#123;
+      foreach (var filename in input.GetConsumingEnumerable())
+      &#123;
+        using (FileStream stream = File.OpenRead(filename))
+        &#123;
+          var reader = new StreamReader(stream);
+          string line = null;
+          while ((line = await reader.ReadLineAsync()) != null)
+          &#123;
+            output.Add(line);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 2: added &#123;0&#125;&quot;, line));
+          &#125;
+        &#125;
+      &#125;
+      output.CompleteAdding();
+    &#125;
+
+    public static Task ProcessContentAsync(BlockingCollection&lt;string&gt; input, ConcurrentDictionary&lt;string, int&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var line in input.GetConsumingEnumerable())
+          &#123;
+            string[] words = line.Split(&#39; &#39;, &#39;;&#39;, &#39;\t&#39;, &#39;&#123;&#39;, &#39;&#125;&#39;, &#39;(&#39;, &#39;)&#39;, &#39;:&#39;, &#39;,&#39;, &#39;&quot;&#39;);
+            foreach (var word in words.Where(w =&gt; !string.IsNullOrEmpty(w)))
+            &#123;
+              output.AddOrIncrementValue(word);
+              ConsoleHelper.WriteLine(string.Format(&quot;stage 3: added &#123;0&#125;&quot;, word));
+            &#125;
+          &#125;
+        &#125;);
+    &#125;
+
+    public static Task TransferContentAsync(ConcurrentDictionary&lt;string, int&gt; input, BlockingCollection&lt;Info&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var word in input.Keys)
+          &#123;
+            int value;
+            if (input.TryGetValue(word, out value))
+            &#123;
+              var info = new Info &#123; Word = word, Count = value &#125;;
+              output.Add(info);
+              ConsoleHelper.WriteLine(string.Format(&quot;stage 4: added &#123;0&#125;&quot;, info));
+            &#125;
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+
+    public static Task AddColorAsync(BlockingCollection&lt;Info&gt; input, BlockingCollection&lt;Info&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var item in input.GetConsumingEnumerable())
+          &#123;
+            if (item.Count &gt; 40)
+            &#123;
+              item.Color = &quot;Red&quot;;
+            &#125;
+            else if (item.Count &gt; 20)
+            &#123;
+              item.Color = &quot;Yellow&quot;;
+            &#125;
+            else
+            &#123;
+              item.Color = &quot;Green&quot;;
+            &#125;
+            output.Add(item);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 5: added color &#123;1&#125; to &#123;0&#125;&quot;, item, item.Color));
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+
+    public static Task ShowContentAsync(BlockingCollection&lt;Info&gt; input)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var item in input.GetConsumingEnumerable())
+          &#123;
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 6: &#123;0&#125;&quot;, item), item.Color);
+          &#125;
+        &#125;);
+    &#125;
+  &#125;
+</code></pre>
+<p>2)使用<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd267312.aspx">BlockingCollection</a></p>
+<p>第1阶段的ReadFilenamesAsync方法，实现了迭代目录文件名。在完成文件名添加后调用output.CompleteAdding();用以通知所有读取器不再等待集合中任何额外的项.如果没有调用的话，循环中读取器会添加等待更多的项.</p>
+<p><img src="https://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="img"><img src="https://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="img"></p>
+<pre><code>public static Task ReadFilenamesAsync(string path, BlockingCollection&lt;string&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (string filename in Directory.EnumerateFiles(path, &quot;*.cs&quot;, SearchOption.AllDirectories))
+          &#123;
+            output.Add(filename);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 1: added &#123;0&#125;&quot;, filename));
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+</code></pre>
+<p>ReadFilenamesAsync </p>
+<p>下一阶段读取文件并将器内容添加到另一个集合中，由LoadContentAsync方法完成，该方法使用了输入集合传递的文件名，打开文件，把文件中的所有行添加到输出的集合中。在循环中用输入阻塞集合调用GetConsumingEnumerable()方法，以迭代各项，不使用也是可以的，但是值会迭代当前状态的集合。不会迭代以后添加的项。</p>
+<p>如果在填充集合的同时，使用读取器读取集合，则需要使用GetConsumingEnumerable()方法获取阻塞集合的枚举器，而不是直接迭代集合</p>
+<pre><code>public static async Task LoadContentAsync(BlockingCollection&lt;string&gt; input, BlockingCollection&lt;string&gt; output)
+    &#123;
+      foreach (var filename in input.GetConsumingEnumerable())
+      &#123;
+        using (FileStream stream = File.OpenRead(filename))
+        &#123;
+          var reader = new StreamReader(stream);
+          string line = null;
+          while ((line = await reader.ReadLineAsync()) != null)
+          &#123;
+            output.Add(line);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 2: added &#123;0&#125;&quot;, line));
+          &#125;
+        &#125;
+      &#125;
+      output.CompleteAdding();
+    &#125;
+</code></pre>
+<p>3)使用<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/zh-cn/library/dd287191.aspx">ConcurrentDictionary</a></p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523162236413-845354975.png" alt="img"></p>
+<pre><code>public static Task ProcessContentAsync(BlockingCollection&lt;string&gt; input, ConcurrentDictionary&lt;string, int&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var line in input.GetConsumingEnumerable())
+          &#123;
+            string[] words = line.Split(&#39; &#39;, &#39;;&#39;, &#39;\t&#39;, &#39;&#123;&#39;, &#39;&#125;&#39;, &#39;(&#39;, &#39;)&#39;, &#39;:&#39;, &#39;,&#39;, &#39;&quot;&#39;);
+            foreach (var word in words.Where(w =&gt; !string.IsNullOrEmpty(w)))
+            &#123;
+              output.AddOrIncrementValue(word);
+              ConsoleHelper.WriteLine(string.Format(&quot;stage 3: added &#123;0&#125;&quot;, word));
+            &#125;
+          &#125;
+        &#125;);
+    &#125;
+</code></pre>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523162311476-1014974724.png" alt="img"></p>
+<pre><code>public static class ConcurrentDictionaryExtension
+  &#123;
+    public static void AddOrIncrementValue(this ConcurrentDictionary&lt;string, int&gt; dict, string key)
+    &#123;
+      bool success = false;
+      while (!success)
+      &#123;
+        int value;
+        if (dict.TryGetValue(key, out value))
+        &#123;
+          if (dict.TryUpdate(key, value + 1, value))
+          &#123;
+            success = true;
+          &#125;
+        &#125;
+        else
+        &#123;
+          if (dict.TryAdd(key, 1))
+          &#123;
+            success = true;
+          &#125;
+        &#125;
+      &#125;
+    &#125;
+  &#125;
+</code></pre>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523162341117-33389163.png" alt="img"></p>
+<p>在完成第3个阶段后，第4到6阶段也可以并行运行，TransferContentAsync从字典中获取数据，进行类型转换，输出到BlockingCollection<string>中</p>
+<pre><code>public static Task ProcessContentAsync(BlockingCollection&lt;string&gt; input, ConcurrentDictionary&lt;string, int&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var line in input.GetConsumingEnumerable())
+          &#123;
+            string[] words = line.Split(&#39; &#39;, &#39;;&#39;, &#39;\t&#39;, &#39;&#123;&#39;, &#39;&#125;&#39;, &#39;(&#39;, &#39;)&#39;, &#39;:&#39;, &#39;,&#39;, &#39;&quot;&#39;);
+            foreach (var word in words.Where(w =&gt; !string.IsNullOrEmpty(w)))
+            &#123;
+              output.AddOrIncrementValue(word);
+              ConsoleHelper.WriteLine(string.Format(&quot;stage 3: added &#123;0&#125;&quot;, word));
+            &#125;
+          &#125;
+        &#125;);
+    &#125;
+
+    public static Task TransferContentAsync(ConcurrentDictionary&lt;string, int&gt; input, BlockingCollection&lt;Info&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var word in input.Keys)
+          &#123;
+            int value;
+            if (input.TryGetValue(word, out value))
+            &#123;
+              var info = new Info &#123; Word = word, Count = value &#125;;
+              output.Add(info);
+              ConsoleHelper.WriteLine(string.Format(&quot;stage 4: added &#123;0&#125;&quot;, info));
+            &#125;
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+
+    public static Task AddColorAsync(BlockingCollection&lt;Info&gt; input, BlockingCollection&lt;Info&gt; output)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var item in input.GetConsumingEnumerable())
+          &#123;
+            if (item.Count &gt; 40)
+            &#123;
+              item.Color = &quot;Red&quot;;
+            &#125;
+            else if (item.Count &gt; 20)
+            &#123;
+              item.Color = &quot;Yellow&quot;;
+            &#125;
+            else
+            &#123;
+              item.Color = &quot;Green&quot;;
+            &#125;
+            output.Add(item);
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 5: added color &#123;1&#125; to &#123;0&#125;&quot;, item, item.Color));
+          &#125;
+          output.CompleteAdding();
+        &#125;);
+    &#125;
+
+    public static Task ShowContentAsync(BlockingCollection&lt;Info&gt; input)
+    &#123;
+      return Task.Run(() =&gt;
+        &#123;
+          foreach (var item in input.GetConsumingEnumerable())
+          &#123;
+            ConsoleHelper.WriteLine(string.Format(&quot;stage 6: &#123;0&#125;&quot;, item), item.Color);
+          &#125;
+        &#125;);
+    &#125;
+</code></pre>
+<h2 id="13-性能"><a href="#13-性能" class="headerlink" title="13.性能"></a>13.性能</h2><p>集合的方法常常有性能提示，给出大写O记录操作时间。</p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523162826570-2112606748.png" alt="img"></p>
+<p>O(1)表示无论集合中有多少数据项，这个操作需要的时间都不变。<br>O(n)表示对于集合执行一个操作需要的事件在最坏情况时是N.<br>O(log n)表示操作需要的时间随集合中元素的增加而增加</p>
+<p><img src="https://images2015.cnblogs.com/blog/618680/201705/618680-20170523163051320-952892312.png" alt="img"></p>
+<h3 id="非泛型类集合"><a href="#非泛型类集合" class="headerlink" title="非泛型类集合"></a>非泛型类集合</h3><p>泛型集合类是在.NET2.0的时候出来的,也就是说在1.0的时候是没有这么方便的东西的。现在基本上我们已经不使用这些集合类了，除非在做一些和老代码保持兼容的工作的时候。来看看1.0时代的.NET程序员们都有哪些集合类可以用。</p>
+<p>ArraryList后来被List<T>替代。</p>
+<p>HashTable 后来被Dictionary&lt;TKey,TValue&gt;替代。<br>Queue 后来被Queue<T>替代。<br>SortedList 后来被SortedList<T>替代。<br>Stack 后来被Stack<T>替代。</p>
+<h3 id="线程安全的集合类"><a href="#线程安全的集合类" class="headerlink" title="线程安全的集合类"></a>线程安全的集合类</h3><p>ConcurrentQueue 线程安全版本的Queue<br>ConcurrentStack线程安全版本的Stack<br>ConcurrentBag线程安全的对象集合<br>ConcurrentDictionary线程安全的Dictionary<br>BlockingCollection</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/23/c-10/c-10th-11/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/23/c-10/c-10th-11/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                                    <span class="chip bg-color">c# 高级编程(10th)</span>
+                                </a>
+                            
+                                <a href="/tags/%E9%9B%86%E5%90%88/">
+                                    <span class="chip bg-color">集合</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/02/25/c-10/c-10th-12/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="c# 高级编程(10th) 第十二章 特殊集合">
+                        
+                        <span class="card-title">c# 高级编程(10th) 第十二章 特殊集合</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            c# 高级编程(10th)  读书笔记系列
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-25
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c#
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%89%B9%E6%AE%8A%E7%9A%84%E9%9B%86%E5%90%88/">
+                        <span class="chip bg-color">特殊的集合</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/02/20/c-10/c-10th-10/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="c# 高级编程(10th) 第十章 字符串和正则表达式">
+                        
+                        <span class="card-title">c# 高级编程(10th) 第十章 字符串和正则表达式</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            c# 高级编程(10th)  读书笔记系列
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-20
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/c/" class="post-category">
+                                    c#
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/">
+                        <span class="chip bg-color">c# 高级编程(10th)</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+                        <span class="chip bg-color">字符串和正则表达式</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">60.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true,"react":{"opacity":0.7}}});</script></body>
+
+</html>
