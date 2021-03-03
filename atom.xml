@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-03-03T15:27:15.948Z</updated>
+  <updated>2021-03-03T16:13:29.209Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>前端性能优化【进阶篇】</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/ziliao/javascript/qian-duan-xing-neng-you-hua-jin-jie/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/ziliao/javascript/qian-duan-xing-neng-you-hua-jin-jie/</id>
+    <published>2021-03-03T15:55:00.000Z</published>
+    <updated>2021-03-03T16:13:29.209Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;前端性能优化【进阶篇】&quot;&gt;&lt;a href=&quot;#前端性能优化【进阶篇】&quot; class=&quot;headerlink&quot; title=&quot;前端性能优化【进阶篇】&quot;&gt;&lt;/a&gt;前端性能优化【进阶篇】&lt;/h2&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="性能优化" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
+    
+    
+    <category term="前端" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>速度与激情之 Vite 初体验（最佳入门）</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/ziliao/javascript/vite-ti-yan/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/ziliao/javascript/vite-ti-yan/</id>
+    <published>2021-03-03T15:50:00.000Z</published>
+    <updated>2021-03-03T16:10:44.651Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;大家最近学习 Vue3 学废了吗？尤雨溪尤大大马不停蹄地又给大家送来了专门为 Vue3 打造的开发利器 — Vite。你是否在开发过程中使用 Webpack 觉得不那么丝滑，是否等待启动编译可以喝好几口热水？本文将带领大家简单了解 Vite</summary>
+        
+      
+    
+    
+    
+    <category term="框架" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E6%A1%86%E6%9E%B6/"/>
+    
+    
+    <category term="vite" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/vite/"/>
+    
+  </entry>
   
   <entry>
     <title>前端拓展：如何开发一个 Chrome 插件？</title>
@@ -406,6 +456,32 @@
   </entry>
   
   <entry>
+    <title>js试题</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js-shi-ti/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js-shi-ti/</id>
+    <published>2021-02-26T14:25:00.000Z</published>
+    <updated>2021-02-26T15:16:35.618Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;js试题&quot;&gt;&lt;a href=&quot;#js试题&quot; class=&quot;headerlink&quot; title=&quot;js试题&quot;&gt;&lt;/a&gt;js试题&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下面这个JS程序的输出是什么：&lt;/strong&gt; &lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;function</summary>
+        
+      
+    
+    
+    
+    <category term="js试题" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/js%E8%AF%95%E9%A2%98/"/>
+    
+    
+    <category term="js试题" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/js%E8%AF%95%E9%A2%98/"/>
+    
+  </entry>
+  
+  <entry>
     <title>查找算法</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/suanfa/search/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/suanfa/search/</id>
@@ -445,32 +521,6 @@
   </entry>
   
   <entry>
-    <title>js试题</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js-shi-ti/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/26/niuke/qianduan/js-shi-ti/</id>
-    <published>2021-02-26T14:25:00.000Z</published>
-    <updated>2021-02-26T15:16:35.618Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;js试题&quot;&gt;&lt;a href=&quot;#js试题&quot; class=&quot;headerlink&quot; title=&quot;js试题&quot;&gt;&lt;/a&gt;js试题&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下面这个JS程序的输出是什么：&lt;/strong&gt; &lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;function</summary>
-        
-      
-    
-    
-    
-    <category term="js试题" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/js%E8%AF%95%E9%A2%98/"/>
-    
-    
-    <category term="js试题" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/js%E8%AF%95%E9%A2%98/"/>
-    
-  </entry>
-  
-  <entry>
     <title>c# 高级编程(10th) 第十二章 特殊集合</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/25/c-10/c-10th-12/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/25/c-10/c-10th-12/</id>
@@ -494,60 +544,6 @@
     <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
     
     <category term="特殊的集合" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E7%89%B9%E6%AE%8A%E7%9A%84%E9%9B%86%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c# 高级编程(10th) 第十一章 集合</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/23/c-10/c-10th-11/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/23/c-10/c-10th-11/</id>
-    <published>2021-02-23T12:32:00.000Z</published>
-    <updated>2021-02-25T15:17:34.725Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;c-语言-第十一章-集合&quot;&gt;&lt;a href=&quot;#c-语言-第十一章-集合&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第十一章 集合&quot;&gt;&lt;/a&gt;c#语言 第十一章 集合&lt;/h1&gt;&lt;h2 id=&quot;1-集合接口和类型&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
-    
-    
-    <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
-    
-    <category term="集合" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E9%9B%86%E5%90%88/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>c# 高级编程(10th) 第十章 字符串和正则表达式</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/20/c-10/c-10th-10/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/02/20/c-10/c-10th-10/</id>
-    <published>2021-02-20T12:32:00.000Z</published>
-    <updated>2021-02-23T08:19:26.308Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;c-语言-第十章-字符串和正则表达式&quot;&gt;&lt;a href=&quot;#c-语言-第十章-字符串和正则表达式&quot; class=&quot;headerlink&quot; title=&quot;c#语言 第十章 字符串和正则表达式&quot;&gt;&lt;/a&gt;c#语言 第十章 字符串和正则表达式&lt;/h1&gt;&lt;p&gt;10.1</summary>
-        
-      
-    
-    
-    
-    <category term="c#" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/c/"/>
-    
-    
-    <category term="c# 高级编程(10th)" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/c-%E9%AB%98%E7%BA%A7%E7%BC%96%E7%A8%8B-10th/"/>
-    
-    <category term="字符串和正则表达式" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%92%8C%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/"/>
     
   </entry>
   
