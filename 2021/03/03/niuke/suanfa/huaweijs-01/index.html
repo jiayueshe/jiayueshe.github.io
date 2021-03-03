@@ -359,10 +359,6 @@
                                 <span class="chip bg-color">JavaScript</span>
                             </a>
                         
-                            <a href="/tags/set/">
-                                <span class="chip bg-color">set</span>
-                            </a>
-                        
                     </div>
                     
                 </div>
@@ -384,28 +380,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-02-28
+                    2021-03-03
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-28
+                    2021-03-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.5k
+                    1.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    7 分
                 </div>
                 
 
@@ -425,406 +421,244 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="牛客网华为机试在线训练JavaScript-V8-版"><a href="#牛客网华为机试在线训练JavaScript-V8-版" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版"></a>牛客网华为机试在线训练JavaScript(V8)版</h1><h2 id="注意！输入得到的都是字符串"><a href="#注意！输入得到的都是字符串" class="headerlink" title="注意！输入得到的都是字符串"></a>注意！输入得到的都是字符串</h2><blockquote>
-<p>// 单行<br>var line = readline(); //获得的是一个字符串<br>//如果需要对其进行处理，比如 “1 2 3 4 5”，我们想以数组形式获取每个数字<br>var arr = line.split(“ “); // 数组内元素为字符串，eg: arr[0]=”1”</p>
-<p>// 多行<br>// 如果每一行的操作相同<br>while(line = readline()){<br>    // 代码<br>}<br>/<em>如果每一行操作不同<br>eg: 第一行给数组长度<br>     第二行给用空格分开的字符串<br>那就每一次按照单行输入的方式来获取即可</em>/<br>var num = parseInt(readline()); // 获得数组长度<br>var arr = readline().split(“ “); // 获得数组</p>
-</blockquote>
-<h2 id="1-字符串-split（易）"><a href="#1-字符串-split（易）" class="headerlink" title="1.(字符串) split（易）"></a>1.(字符串) split（易）</h2><p><strong>计算字符串最后一个单词的长度，单词以空格隔开。(<a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionCenter?questionTypes=000100&mutiTagIds=579">字符串</a>)</strong><br>输入描述:<br>输入一行，代表要计算的字符串，非空，长度小于5000。<br>输出描述:<br>输出一个整数，表示输入字符串最后一个单词的长度。<br>示例1<br>输入:hello nowcoder<br>输出:8<br>解答：</p>
-<pre><code>while (line = readline())&#123;
-    var stringlist  = line.split(&#39; &#39;);
-    var lastlen =stringlist[stringlist.length-1].length;
-    print(lastlen);
-&#125;
-</code></pre>
-<h2 id="2-字符串-toLowerCase（易）"><a href="#2-字符串-toLowerCase（易）" class="headerlink" title="2.(字符串)toLowerCase（易）"></a>2.(字符串)toLowerCase（易）</h2><p><strong>写出一个程序，接受一个由字母、数字和空格组成的字符串，和一个字母，然后输出输入字符串中该字母的出现次数。不区分大小写。 (字符串，哈希）</strong><br>输入描述:第一行输入一个由字母和数字以及空格组成的字符串，第二行输入一个字母。<br>输出描述:输出输入字符串中含有该字符的个数。<br>示例1<br>输入<br>ABCabc<br>A<br>输出2<br>解答</p>
-<pre><code>var aStr = readline().toLowerCase();
-var bStr = readline().toLowerCase();
-var count = 0;
-for (var i = 0 ; i &lt; aStr.length; i++)&#123;
-    if(aStr[i] == bStr)&#123;
-    count = count + 1;
-    &#125;
-&#125;
-print(count);
-</code></pre>
-<h2 id="3-数组-sort-set（中）"><a href="#3-数组-sort-set（中）" class="headerlink" title="3.(数组)sort set（中）"></a>3.(数组)sort set（中）</h2><p><strong>题目描述</strong><br>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据，希望大家能正确处理)。 </p>
-<p>  注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。 当没有新的输入时，说明输入结束。<br><strong>输入描述:</strong></p>
-<pre><code>注意：输入可能有多组数据。每组数据都包括多行，第一行先输入随机整数的个数N，接下来的N行再输入相应个数的整数。具体格式请看下面的&quot;示例&quot;。
-</code></pre>
-<p><strong>输出描述:</strong></p>
-<pre><code>返回多行，处理后的结果
-</code></pre>
-<p>示例1<br><strong>输入</strong></p>
-<pre><code>3
-2
-2
-1
-11
-10
-20
-40
-32
-67
-40
-20
-89
-300
-400
-15
-</code></pre>
-<p><strong>输出</strong></p>
-<pre><code>1
-2
-10
-15
-20
-32
-40
-67
-89
-300
-400
-</code></pre>
-<p>说明</p>
-<pre><code>样例输入解释：
-样例有两组测试
-第一组是3个数字，分别是：2，2，1。
-第二组是11个数字，分别是：10，20，40，32，67，40，20，89，300，400，15。 
-</code></pre>
-<p>解答：<br>每组分段返回</p>
-<pre><code>var lines = 0;
-var scoreList = [];
-while(line = readline())&#123;
- if(lines ==0 )&#123;
-     lines = parseInt(line);
-     outPut(scoreList);
- &#125;else&#123;
-     lines--;
-     scoreList.push(parseInt(line));
- &#125;
-&#125;
-function outPut(arr)&#123;
- arr = unique(arr).sort((a,b)=&gt;&#123;return a-b&#125;);
- for(var i=0;i&lt; arr.length;i++)&#123;
-     print(arr[i]);
- &#125;
-&#125;
-
-function unique(arr) &#123;
- return Array.from(new Set(arr))
-&#125;
-</code></pre>
-<p>通过解答</p>
-<pre><code>while(line=readline())&#123;
- var arr=[];
- for(var i=0;i&lt;line;i++)&#123;
-     arr.push(readline());        
- &#125;
- var tSet=[...new Set(arr)];
- var setSort=tSet.sort(function(a,b)&#123;
-     return a-b;
- &#125;)
-
-​for(var j=0;j&lt;setSort.length;j++)&#123;
-​    console.log(setSort[j]);
-​&#125;
-&#125;
-</code></pre>
-<h2 id="4-字符串-字符串分隔（中）"><a href="#4-字符串-字符串分隔（中）" class="headerlink" title="4(字符串) 字符串分隔（中）"></a>4(字符串) <strong>字符串分隔</strong>（中）</h2><p><strong>题目描述</strong></p>
-<p>  •连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br> •长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。  </p>
-<p><strong>输入描述:</strong></p>
-<pre><code>连续输入字符串(输入多次,每个字符串长度小于100)
+                <h1 id="牛客网华为机试在线训练JavaScript-V8-版2"><a href="#牛客网华为机试在线训练JavaScript-V8-版2" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版2"></a>牛客网华为机试在线训练JavaScript(V8)版2</h1><h2 id="1-易"><a href="#1-易" class="headerlink" title="1.(易)"></a>1.(易)</h2><p>  编写一个函数，计算字符串中含有的不同字符的个数。字符在ACSII码范围内(0~127)，换行表示结束符，不算在字符里。不在范围内的不作统计。多个相同的字符只计算一次 </p>
+<p>  例如，对于字符串abaca而言，有a、b、c三种不同的字符，因此输出3。 </p>
+<p>输入描述:</p>
+<pre><code>输入一行没有空格的字符串。
 </code></pre>
 <p>输出描述:</p>
-<pre><code>输出到长度为8的新字符串数组
+<pre><code>输出范围在(0~127)字符的个数。
 </code></pre>
 <p>输入</p>
 <pre><code>abc
-123456789
 </code></pre>
 <p>输出</p>
-<pre><code>abc00000
-12345678
-90000000
+<pre><code>3
 </code></pre>
-<p> 解答：</p>
-<p>第一次</p>
-<pre><code>while(line=readline())&#123;
- var strLength =line.length;
- var N = Math.floor(strLength/8);
- var mLast =strLength-N*8;
- var addnum =8-mLast;
- for(i=0;i&lt;N;i++)&#123;
-    print(line.substring(i*8,8*(i+1)))
- &#125;
- if(addnum&gt;0)&#123;
-     var sstr=&#39;0&#39;;
-     for(i=1;i&lt;addnum;i++)&#123;
-        sstr+=&#39;0&#39;;
-     &#125;
-     var firstr = line.substring((N)*8,strLength);
-     print( firstr + sstr)
- &#125;
-&#125;
-</code></pre>
-<p>第二次</p>
-<pre><code>var arr=[];
-while(line=readline())&#123;
- arr.push(line);
-&#125;
-for(var j=0;j&lt;arr.length;j++)&#123;
- var strLength = arr[j].length;
- var N = Math.floor(strLength/8);
- var mLast = strLength-N*8;
- var addnum =8-mLast;
- for(i=0;i&lt;N;i++)&#123;
-    print(arr[j].substring(i*8,8*(i+1)))
- &#125;
- if(mLast&gt;0)&#123;
-     var sstr=&#39;0&#39;;
-     for(i=1;i&lt;addnum;i++)&#123;
-        sstr+=&#39;0&#39;;
-     &#125;
-     var firstr = arr[j].substring((N)*8,strLength);
-     print( firstr + sstr)
- &#125;
-&#125;
-</code></pre>
-<p>参考</p>
-<pre><code>var q=&#39;00000000&#39;;
-var arr=[];
-for(var i=0;i&lt;2;i++)&#123;
-     arr.push(readline());
-&#125;
-for(var j=0;j&lt;arr.length;j++)&#123;
-     if(arr[j].length&lt;=8)&#123;
-    var t=arr[j]+q;
-    console.log(t.slice(0,8)); 
- &#125;else&#123;
-     var len=arr[j].length;
-     for(var i=0;i&lt;len;i+=8)&#123;
-         var s=arr[j].slice(i,i+8);
-         if(s.length&lt;8)&#123;
-             var p=s+q;
-             console.log(p.slice(0,8)); 
-         &#125;else&#123;
-         console.log(s);
-          &#125;
-      &#125;
-  &#125;
-&#125;
-</code></pre>
-<h2 id="5-字符串-进制转换（易）"><a href="#5-字符串-进制转换（易）" class="headerlink" title="5(字符串)进制转换（易）"></a>5(字符串)进制转换（易）</h2><p><strong>题目描述</strong></p>
-<p>  写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。 </p>
-<p><strong>输入描述:</strong></p>
-<pre><code>输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
-</code></pre>
-<p>输出描述:</p>
-<pre><code>输出该数值的十进制字符串。不同组的测试用例用\n隔开。
-</code></pre>
-<p>输入</p>
-<pre><code>0xA
-0xAA
-</code></pre>
-<p>输出</p>
-<pre><code>10
-170
-</code></pre>
-<pre><code>while(line=readline())&#123;
-    var output = parseInt(line, 16);
-    print(output);
-&#125;
-</code></pre>
-<h2 id="6质数因子（难）"><a href="#6质数因子（难）" class="headerlink" title="6质数因子（难）"></a>6<strong>质数因子</strong>（难）</h2><p><strong>题目描述</strong></p>
-<p>  功能:输入一个正整数，按照从小到大的顺序输出它的所有质因子（重复的也要列举）（如180的质因子为2 2 3 3 5 ） </p>
-<p>  最后一个数后面也要有空格  </p>
-<p>输入描述:</p>
-<pre><code>输入一个long型整数
-</code></pre>
-<p>输出描述:</p>
-<pre><code>按照从小到大的顺序输出它的所有质数的因子，以空格隔开。最后一个数后面也要有空格。
-</code></pre>
-<p>输入</p>
-<pre><code>180
-</code></pre>
-<p>输出</p>
-<pre><code>2 2 3 3 5
-</code></pre>
-<p>解析:</p>
-<p> 查找质数的方法，从2开始除,不能被2除，则尝试3，不能被3除，也不能被4除，尝试5。。。 每除一次进行一次循环。从小到大找出所有质数</p>
-<pre><code>while(line=readline())&#123;
-var num = parseInt(line);
-var arr=[];
-for(i=2;i&lt;=num;i++)&#123;
-   if(num%i==0)&#123;
-       num=num/i;
-       arr.push(i)
-       i=1;
-   &#125;
-&#125;
-print(arr.join(&quot; &quot;)+ &#39; &#39;);
-&#125;
-
-</code></pre>
-<p><strong>优化解法：</strong></p>
-<p>扩展补充：就分解的质数：</p>
-<pre><code>function getPrimGens(a)
-&#123;
- var arr = getGens(a);
- var c = [];
- for(var i=0;i&lt;arr.length;i++)&#123;
-     var t = getGens(arr[i]);
-     if(t.length==0) c.push(arr[i]);
- &#125;
- return c;
-
-&#125;
-
-function getGens(a)
-&#123;
- var arr = [];
- var n = a/2 + 1;
- for(var i=2; i&lt;n; i++)&#123;
-     if(a%i == 0) arr.push(i)
- &#125;
- return arr;
-&#125;
-</code></pre>
-<p>优化解:运行时间减少一半</p>
-<pre><code>while(line=readline())&#123;
- var num = parseInt(line);
- var result = getPreGens(num);
- print(result.join(&quot; &quot;)+ &#39; &#39;);
-&#125;
-
-function getPreGens(a)
-&#123;
- var arr = [];
- var n = Math.floor(a/2)+ 1;
- var t = n;
- var i;
- while(1==1)
- &#123;
-     if(i==t)
-     &#123;
-         arr.push(a);
-         break;
-     &#125;
-     for(i=2; i&lt;t; i++)
-     &#123;
-         if(a%i == 0) 
-         &#123;
-             arr.push(i);
-             a = a/i;
-             t = Math.floor(a/2 )+ 1;
-             break;
-         &#125;
-     &#125;
- &#125;
- return arr;
-&#125;
-</code></pre>
-<h2 id="7-取近似值（易）"><a href="#7-取近似值（易）" class="headerlink" title="7 取近似值（易）"></a>7 取近似值（易）</h2><p>题目描述</p>
-<p>  写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于5,向上取整；小于5，则向下取整。 </p>
-<p>输入描述:</p>
-<pre><code>输入一个正浮点数值
-</code></pre>
-<p>输出描述:</p>
-<pre><code>输出该数值的近似整数值
-</code></pre>
-<p>输入</p>
-<pre><code>5.5
-</code></pre>
-<p>输出</p>
-<pre><code>6
-</code></pre>
-<p>解析</p>
-<pre><code>while(line=readline())&#123;
- var num = Math.round(line);
- print(num);
-&#125;
-</code></pre>
-<p>扩展</p>
-<ul>
-<li>只保留整数部分（丢弃小数部分）parseInt(5.1234); </li>
-<li>向下取整（&lt;= 该数值的最大整数，和parseInt()一样)Math.floor(5.1234); </li>
-<li>向上取整（有小数，整数部分就+1）Math.ceil(5.1234);  </li>
-<li>四舍五入（小数部分）Math.round(5.1234)；</li>
-<li>取绝对值Math.abs(-1);   </li>
-<li>返回两数中的较大者Math.max(1,2);   Math.min(1,2);  </li>
-<li>随机数（0-1）Math.random();</li>
-</ul>
-<h2 id="8合并表记录-中"><a href="#8合并表记录-中" class="headerlink" title="8合并表记录(中)"></a>8合并表记录(中)</h2><p>题目描述</p>
-<p>  数据表记录包含表索引和数值（int范围的正整数），请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。 </p>
-<p>输入描述:</p>
-<pre><code>先输入键值对的个数
-然后输入成对的index和value值，以空格隔开
-</code></pre>
-<p>输出描述:</p>
-<pre><code>输出合并后的键值对（多行）
-</code></pre>
-<p>输入</p>
-<pre><code>4
-0 1
-0 2
-1 2
-3 4
-</code></pre>
-<p>输出</p>
-<pre><code>0 3
-1 2
-3 4
-</code></pre>
-<p> 解析</p>
-<pre><code>while(line=readline())&#123;
- let lines = Math.round(line);
- let arrs =[];
- let m = new Map();
- for(i=0;i&lt;lines;i++)&#123;
-    let arr = readline().split(&#39; &#39;);
-    if(m.has(arr[0]))&#123;
-        m.set(arr[0],m.get(arr[0])+parseInt(arr[1]));
-    &#125;else&#123;
-         m.set(arr[0],parseInt(arr[1]));
+<p>解析：</p>
+<pre><code>while (line = readline()) &#123;
+    let s1 = new Set();
+    for(let i =0; i&lt;line.length; i++)&#123;
+        s1.add(line[i]);
     &#125;
- &#125;
- let keys = new Array();
- for (var key of m.keys()) &#123;
-     keys.push(key)
- &#125;
- keys.sort(function(key1, key2) &#123;
-   return key1 - key2
- &#125;);
- keys.forEach(key =&gt; &#123;
-     print(key +&#39; &#39; + m.get(key));
- &#125;)
+    print(Array.from(s1).length);
 &#125;
 </code></pre>
-<p>9</p>
-<p>题目描述</p>
-<p>  输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。 </p>
-<p>  保证输入的整数最后一位不是0。</p>
+<h1 id="2-易"><a href="#2-易" class="headerlink" title="2(易)"></a>2(易)</h1><p>题目描述</p>
+<p>给定n个字符串，请对n个字符串按照字典序排列。</p>
 <p>输入描述:</p>
-<pre><code>输入一个int型整数
+<pre><code>输入第一行为一个正整数n(1≤n≤1000),下面n行为n个字符串(字符串长度≤100),字符串中只含有大小写字母。
 </code></pre>
 <p>输出描述:</p>
-<pre><code>按照从右向左的阅读顺序，返回一个不含重复数字的新的整数
+<pre><code>数据输出n行，输出结果为按照字典序排列的字符串。
 </code></pre>
 <p>输入</p>
-<pre><code>9876673
+<pre><code>9
+cap
+to
+cat
+card
+two
+too
+up
+boat
+boot
 </code></pre>
 <p>输出</p>
-<pre><code>37689
+<pre><code>boat
+boot
+cap
+card
+cat
+to
+too
+two
+up
 </code></pre>
-<p>解析</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Set</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 空Set</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span> i <span class="token operator">=</span> line<span class="token punctuation">.</span>length <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">>=</span> <span class="token number">0</span> <span class="token punctuation">;</span> i<span class="token operator">--</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-           s1<span class="token punctuation">.</span><span class="token function">add</span><span class="token punctuation">(</span>line<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-    <span class="token keyword">var</span> result<span class="token operator">=</span> Array<span class="token punctuation">.</span><span class="token keyword">from</span><span class="token punctuation">(</span>s1<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">print</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<p>解答：</p>
+<pre><code>while (line = readline()) &#123;
+   var num = parseInt(line);
+   var list =[];
+   for(i=0;i&lt;num;i++)&#123;
+        list.push(readline());
+   &#125;
+   list =list.sort();
+    for(i=0;i&lt;num;i++)&#123;
+        print(list[i]);
+   &#125; 
+&#125;
+</code></pre>
+<h2 id="3-易"><a href="#3-易" class="headerlink" title="3:(易)"></a>3:(易)</h2><p>  输入一个int型的正整数，计算出该int型数据在内存中存储时1的个数。 </p>
+<p>输入描述:</p>
+<pre><code> 输入一个整数（int类型）
+</code></pre>
+<p>输出描述:</p>
+<pre><code> 这个数转换成2进制后，输出1的个数
+</code></pre>
+<p>输入</p>
+<pre><code>5
+</code></pre>
+<p>输出</p>
+<pre><code>2
+</code></pre>
+<p>解析：</p>
+<pre><code>while (line = readline()) &#123;
+    var a = parseInt(line);
+    var b = a.toString(2);
+    var count =0;
+    for( i=0 ; i&lt;b.length ;i++)&#123;
+        if(b[i]==1)&#123;
+            count =count +1;
+        &#125;
+    &#125;
+    print(count);
+&#125;
+</code></pre>
+<h2 id="4（难）"><a href="#4（难）" class="headerlink" title="4（难）"></a>4（难）</h2><h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>王强今天很开心，公司发给N元的年终奖。王强决定把年终奖用于购物，他把想买的物品分为两类：主件与附件，附件是从属于某个主件的，下表就是一些主件与附件的例子：</p>
+<table>
+<thead>
+<tr>
+<th>主件</th>
+<th>附件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>电脑</td>
+<td>打印机，扫描仪</td>
+</tr>
+<tr>
+<td>书柜</td>
+<td>图书</td>
+</tr>
+<tr>
+<td>书桌</td>
+<td>台灯，文具</td>
+</tr>
+<tr>
+<td>工作椅</td>
+<td>无</td>
+</tr>
+</tbody></table>
+<p>如果要买归类为附件的物品，必须先买该附件所属的主件。每个主件可以有 0 个、 1 个或 2 个附件。附件不再有从属于自己的附件。王强想买的东西很多，为了不超出预算，他把每件物品规定了一个重要度，分为 5 等：用整数 1 <strong>~</strong> 5 表示，第 5 等最重要。他还从因特网上查到了每件物品的价格（都是 10 元的整数倍）。他希望在不超过 N 元（可以等于 N 元）的前提下，使每件物品的价格与重要度的乘积的总和最大。</p>
+<p>  设第 j 件物品的价格为 v[j] ，重要度为 w[j] ，共选中了 k 件物品，编号依次为 j 1 ， j 2 ，……， j k ，则所求的总和为：</p>
+<p>v[j 1 ]*w[j 1 ]+v[j 2 ]*w[j 2 ]+ … +v[j k ]*w[j k ] 。（其中 * 为乘号）</p>
+<p>  请你帮助王强设计一个满足要求的购物单。</p>
+<h2 id="输入描述"><a href="#输入描述" class="headerlink" title="输入描述:"></a>输入描述:</h2><pre><code>输入的第 1 行，为两个正整数，用一个空格隔开：N m
+
+（其中 N （ &lt;32000 ）表示总钱数， m （ &lt;60 ）为希望购买物品的个数。）
+
+从第 2 行到第 m+1 行，第 j 行给出了编号为 j-1 的物品的基本数据，每行有 3 个非负整数 v p q
+
+（其中 v 表示该物品的价格（ v&lt;10000 ）， p 表示该物品的重要度（ 1 ~ 5 ）， q 表示该物品是主件还是附件。如果 q=0 ，表示该物品为主件，如果 q&gt;0 ，表示该物品为附件， q 是所属主件的编号） 
+</code></pre>
+<h2 id="输出描述"><a href="#输出描述" class="headerlink" title="输出描述:"></a>输出描述:</h2><pre><code> 输出文件只有一个正整数，为不超过总钱数的物品的价格与重要度乘积的总和的最大值（ &lt;200000 ）。
+</code></pre>
+<h2 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h2><pre><code>1000 5
+800 2 0
+400 5 1
+300 5 1
+400 3 0
+500 2 0
+</code></pre>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><pre><code>2200
+</code></pre>
+<p>初步解题思路：</p>
+<pre><code>
+//输入
+//总金额   物品个数
+//价格  重要度  0主件/q附件 主件编号
+//输出 max（价格* 重要程度）&lt;总金额
+
+//解题思路：
+//接受输入 总金额money   物品个数 num
+//循环接受多行输入  价格price  重要度inport   0主件/q附件 主件编号 q
+while (line = readline()) &#123;
+    var lines = line.split(&#39; &#39;);
+    var money = parseInt(lines[0]);
+    var num = parseInt(lines[1]);
+    var zjlist =[];
+    for(i=1; i&lt;num+1; i++)&#123;
+       let lineitem = readline().split(&#39; &#39;);
+       let price =parseInt(lineitem[0]);
+       let inport =parseInt(lineitem[1]);
+       let fj =parseInt(lineitem[2]);
+       if(fj)&#123;
+          var item = zjlist.findIndex()(x=&gt;x.ID==fj);
+          zjlist[item].allimpt += inport；
+          zjlist[item].alln += 1；
+          zjlist[item].price += price；         
+       &#125;else&#123;
+          var zj = new CreateFoo(i,price,inport);
+          zjlist.push(zj);
+       &#125;
+    &#125;
+    
+&#125;
+//定义一个主件列表  加入主件
+//对象  ID  ，价格price  ，重要度 inport，总重要度allimpt，总数量 n
+//下一个是附件时，添加到主件信息 ，价格累计，重要度累计（价格乘以重要度）
+function CreateFoo(ID,price,inport)&#123;//构造函数首字母大写
+    this.ID = ID;
+    this.price = price;
+    this.goal = price*inport;
+    this.allimpt = inport;
+    this.alln = 1;
+&#125;
+// 计算最大总和
+// 物品总数量k[i] 主件数量n[i]*k[i]的和&lt;=num
+// 物品总价格v[i] 主件总价格 n[i]*v[i] 的和&lt;=money
+function SumMaxImp(arr)&#123;
+    
+&#125;
+//求最大重要度  allimpt[i]*n[i] 最大
+//求值思路   总重要度/总数量  重要比 优先给重要比大的物件购买数量 
+//  例如  总金额处理 金额  最大数如果小于总数量限制，则设定最大值，如果大于最大值，则取最大数量限制数
+//  剩余金额迭代
+//
+</code></pre>
+<h3 id="参考解析："><a href="#参考解析：" class="headerlink" title="参考解析："></a>参考解析：</h3><pre><code>while (str1 = readline()) &#123;
+    var arr = str1.split(&#39; &#39;);
+    //总钱数
+    var m = parseInt(arr[0])/10;
+    //希望购买物品的件数
+    var n = parseInt(arr[1]);
+    var goods = [], count=1;
+    // 第j行数据表示编号j-1的物品的基本数据 价格 重要度 主附件（0 主件 &gt;0 附件值为其所属主件的编号）
+    while (count&lt;=n) &#123;
+        var item = readline().split(&#39; &#39;).map(val =&gt; parseInt(val));
+        // 是主件
+        if (item[2] == 0) &#123;
+            goods[count] = [&#123;v:item[0]/10, w:item[0]/10*item[1]&#125;];
+        // 是附件， 同时必须购买相应的主件
+        &#125; else &#123;
+            var add = goods[item[2]].map(val =&gt; &#123;
+                return &#123;
+                    v: item[0]/10 + val.v,
+                    w: item[0]/10*item[1] +val.w
+                &#125;
+            &#125;);
+            goods[item[2]] = [...goods[item[2]], ...add];
+        &#125;
+        count++;
+    &#125;
+    console.log(choose(goods));
+&#125;
+function choose(goods) &#123;
+    var res = Array(m+1).fill(0);
+    for (var i=0;i&lt;goods.length;i++) &#123;
+        for (var j=m;j&gt;=0;j--) &#123;
+            if (goods[i]) &#123;
+                goods[i].forEach(val =&gt; &#123;
+                    if (val.v &lt;= j) &#123;
+                        // 买权重较高的物品
+                        res[j] = Math.max(res[j], res[j-val.v]+val.w);
+                    &#125;
+                &#125;)
+            &#125;
+        &#125;
+    &#125;
+    return res[m] * 10;
+&#125;
 </code></pre>
 
                 
@@ -852,7 +686,7 @@ function getPreGens(a)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/02/28/niuke/suanfa/huaweijs/">https://github.com/jiayueshe/jiayueshe.github.io/2021/02/28/niuke/suanfa/huaweijs/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/niuke/suanfa/huaweijs-01/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/03/niuke/suanfa/huaweijs-01/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -896,10 +730,6 @@ function getPreGens(a)
                             
                                 <a href="/tags/JavaScript/">
                                     <span class="chip bg-color">JavaScript</span>
-                                </a>
-                            
-                                <a href="/tags/set/">
-                                    <span class="chip bg-color">set</span>
                                 </a>
                             
                         </div>
@@ -1075,31 +905,31 @@ function getPreGens(a)
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/02/28/niuke/qianduan/js-oo/">
+                <a href="/2021/03/03/niuke/sql/mysql-suo-yin-xiang-guan-mian-shi-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="js面向对象">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="因为会MySQL查询优化，领导给我升职了">
                         
-                        <span class="card-title">js面向对象</span>
+                        <span class="card-title">因为会MySQL查询优化，领导给我升职了</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            js面向对象
+                            因为会MySQL查询优化，领导给我升职了
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-02-28
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
                         </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="post-category">
-                                    js面向对象
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
@@ -1109,8 +939,8 @@ function getPreGens(a)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/js%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
-                        <span class="chip bg-color">js面向对象</span>
+                    <a href="/tags/SQL%E6%9F%A5%E8%AF%A2%E4%BC%98%E5%8C%96/">
+                        <span class="chip bg-color">SQL查询优化</span>
                     </a>
                     
                 </div>
@@ -1124,31 +954,31 @@ function getPreGens(a)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/02/27/niuke/suanfa/sort/">
+                <a href="/2021/03/03/niuke/sql/mysql-cha-xun-you-hua/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="排序算法">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="MySQL索引相关面试题">
                         
-                        <span class="card-title">排序算法</span>
+                        <span class="card-title">MySQL索引相关面试题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            排序算法
+                            MySQL索引相关面试题
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-02-27
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%AE%97%E6%B3%95/" class="post-category">
-                                    算法
+                            <a href="/categories/MySQL/" class="post-category">
+                                    MySQL
                                 </a>
                             
                             
@@ -1158,16 +988,8 @@ function getPreGens(a)
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">归并排序</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A0%86%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">堆排序</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%8B%93%E6%89%91%E6%8E%92%E5%BA%8F/">
-                        <span class="chip bg-color">拓扑排序</span>
+                    <a href="/tags/%E7%B4%A2%E5%BC%95/">
+                        <span class="chip bg-color">索引</span>
                     </a>
                     
                 </div>
@@ -1274,7 +1096,7 @@ function getPreGens(a)
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">61.1k</span>&nbsp;字
+                class="white-color">72.8k</span>&nbsp;字
             
             
             
