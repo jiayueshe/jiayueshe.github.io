@@ -906,6 +906,33 @@
     
     
     <entry>
+      <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
+      <link href="2021/02/17/c-10/c-10th-01/"/>
+      <url>2021/02/17/c-10/c-10th-01/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-语言-第一章-net-应用程序体系结构"><a href="#c-语言-第一章-net-应用程序体系结构" class="headerlink" title="c#语言 第一章 .net 应用程序体系结构"></a>c#语言 第一章 .net 应用程序体系结构</h1><h2 id="1-2-回顾net-历史"><a href="#1-2-回顾net-历史" class="headerlink" title="1.2.回顾net 历史"></a>1.2.回顾net 历史</h2><h3 id="net-版本"><a href="#net-版本" class="headerlink" title=".net 版本"></a>.net 版本</h3><p>​    CLR(Common Language Runtime) 公共语言运行库</p><p>​    c#</p><p>​    Visual Studio</p><h3 id="1-2-1c-1-0-新语言"><a href="#1-2-1c-1-0-新语言" class="headerlink" title="1.2.1c#1.0 新语言"></a>1.2.1c#1.0 新语言</h3><h4 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h4><p>​        面向对象编程语言，具备继承，封装和多态性等特性</p><p>​        也提供了基于组件的变成改造，如委托和事件</p><h4 id="CLR"><a href="#CLR" class="headerlink" title="CLR"></a>CLR</h4><p>​     .net 编程语言都使用的运行库，类似java虚拟机</p><p>​     中间语言Intermediate Language IL代码，编译器生成IL代码，当程序运行时，JIT编译器会从IL代码生成本地代码</p><p>​     GC垃圾回收</p><p>​     调试器扩展</p><p>​     线程实用工具</p><p>​    CLR还负责线程的处理，C#中创建托管的线程不一定来自底层操作系统，线程的虚拟化和管理有CLR负责</p><h3 id="1-2-2带有泛型的c-2-和-net-2"><a href="#1-2-2带有泛型的c-2-和-net-2" class="headerlink" title="1.2.2带有泛型的c#2 和.net 2"></a>1.2.2带有泛型的c#2 和.net 2</h3><h3 id="1-2-3-net-3-0-WPF"><a href="#1-2-3-net-3-0-WPF" class="headerlink" title="1.2.3 .net 3.0 WPF"></a>1.2.3 .net 3.0 WPF</h3><p>​    WPF 矢量图形控件</p><p>​     WCF 通用通信</p><h3 id="1-2-4-c-LINQ-EF"><a href="#1-2-4-c-LINQ-EF" class="headerlink" title="1.2.4 c##  LINQ   EF"></a>1.2.4 c##  LINQ   EF</h3><h3 id="1-2-5-c-4-dynamic-TPL-任务并行库"><a href="#1-2-5-c-4-dynamic-TPL-任务并行库" class="headerlink" title="1.2.5  c# 4 dynamic TPL(任务并行库)"></a>1.2.5  c# 4 dynamic TPL(任务并行库)</h3><p>​    使用Task 和 Parallel 类抽象出线程</p><h3 id="1-2-6c-5-异步编程-async-和await"><a href="#1-2-6c-5-异步编程-async-和await" class="headerlink" title="1.2.6c#5 异步编程  async 和await"></a>1.2.6c#5 异步编程  async 和await</h3><h3 id="1-2-7-c-6-新的编译器引擎-Roslyn"><a href="#1-2-7-c-6-新的编译器引擎-Roslyn" class="headerlink" title="1.2.7 c#6 新的编译器引擎 Roslyn"></a>1.2.7 c#6 新的编译器引擎 Roslyn</h3><h4 id="1-3-2-net-core-1-0-CORE-CLI"><a href="#1-3-2-net-core-1-0-CORE-CLI" class="headerlink" title="1.3.2 .net core 1.0   CORE CLI"></a>1.3.2 .net core 1.0   CORE CLI</h4><p>特性：</p><p>​    开源</p><p>​    模块化的方式设计</p><p>​    可以很快更新</p><p>程序集 assembly：编译好的，面向.net framework的代码逻辑单元</p><p>​        私有程序集</p><p>​        共享程序集（Global Assembly Cache）</p><h3 id="1-3-5-公共语言运行库"><a href="#1-3-5-公共语言运行库" class="headerlink" title="1.3.5 公共语言运行库"></a>1.3.5 公共语言运行库</h3><p>​       编译器将源代码编译为Microsoft中间语言(Intermediate Language, IL)生成IL代码，当程序运行时，JIT编译器会从IL代码生成本地代码</p><p>​       CLR还负责线程的处理，C#中创建托管的线程不一定来自底层操作系统，线程的虚拟化和管理有CLR负责</p><h3 id="1-3-7windows运行库-windows-runtime"><a href="#1-3-7windows运行库-windows-runtime" class="headerlink" title="1.3.7windows运行库 windows runtime"></a>1.3.7windows运行库 windows runtime</h3><h2 id="net-2015"><a href="#net-2015" class="headerlink" title=".net 2015"></a>.net 2015</h2><h3 id="1-5-net-4-6编译"><a href="#1-5-net-4-6编译" class="headerlink" title="1.5.net 4.6编译"></a>1.5.net 4.6编译</h3><p>​    c# 命令行编译器（csc.exe）: csc HelloWorld.cs -&gt; 中间语言代码</p><p>​    DASM中间语言反汇编程序 （ildasm.exe）</p><p>.net core cli编译</p><p>​    repl学习 ： dotnet repl</p><h2 id="1-7应用程序类型与技术"><a href="#1-7应用程序类型与技术" class="headerlink" title="1.7应用程序类型与技术"></a>1.7应用程序类型与技术</h2><h3 id="1-7-1数据访问"><a href="#1-7-1数据访问" class="headerlink" title="1.7.1数据访问"></a>1.7.1数据访问</h3><pre><code>Database FirstModel First</code></pre><p>CodeFirst:<br>   代码优先有一定意味着数据库不能事先存在；数据库可以动态创建，属性和流利的API可以以编程方式定义映射</p><h3 id="1-7-2桌面应用程序"><a href="#1-7-2桌面应用程序" class="headerlink" title="1.7.2桌面应用程序"></a>1.7.2桌面应用程序</h3><p>WF WPF</p><h3 id="1-7-3-UWP"><a href="#1-7-3-UWP" class="headerlink" title="1.7.3 UWP"></a>1.7.3 UWP</h3><h3 id="1-7-4soap服务和WCF"><a href="#1-7-4soap服务和WCF" class="headerlink" title="1.7.4soap服务和WCF"></a>1.7.4soap服务和WCF</h3><h3 id="1-7-5WEB服务-WEB-API-基于REST"><a href="#1-7-5WEB服务-WEB-API-基于REST" class="headerlink" title="1.7.5WEB服务 WEB API 基于REST"></a>1.7.5WEB服务 WEB API 基于REST</h3><h3 id="1-7-6WebHooks-和SignalR-基于-webSocket"><a href="#1-7-6WebHooks-和SignalR-基于-webSocket" class="headerlink" title="1.7.6WebHooks 和SignalR 基于 webSocket"></a>1.7.6WebHooks 和SignalR 基于 webSocket</h3><h3 id="1-7-7windows服务"><a href="#1-7-7windows服务" class="headerlink" title="1.7.7windows服务"></a>1.7.7windows服务</h3><pre><code>world wide web服务 可以监听客户端的web请求</code></pre><h3 id="Microsoft-Azure服务"><a href="#Microsoft-Azure服务" class="headerlink" title="Microsoft Azure服务"></a>Microsoft Azure服务</h3><p>​    SaaS IaaS PaaS</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# 高级编程(10th) </tag>
+            
+            <tag> .net 应用程序体系结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello MyBlog</title>
       <link href="2021/02/17/hello-myblog/"/>
       <url>2021/02/17/hello-myblog/</url>
@@ -935,33 +962,6 @@
     
     
     <entry>
-      <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
-      <link href="2021/02/17/c-10/c-10th-01/"/>
-      <url>2021/02/17/c-10/c-10th-01/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-语言-第一章-net-应用程序体系结构"><a href="#c-语言-第一章-net-应用程序体系结构" class="headerlink" title="c#语言 第一章 .net 应用程序体系结构"></a>c#语言 第一章 .net 应用程序体系结构</h1><h2 id="1-2-回顾net-历史"><a href="#1-2-回顾net-历史" class="headerlink" title="1.2.回顾net 历史"></a>1.2.回顾net 历史</h2><h3 id="net-版本"><a href="#net-版本" class="headerlink" title=".net 版本"></a>.net 版本</h3><p>​    CLR(Common Language Runtime) 公共语言运行库</p><p>​    c#</p><p>​    Visual Studio</p><h3 id="1-2-1c-1-0-新语言"><a href="#1-2-1c-1-0-新语言" class="headerlink" title="1.2.1c#1.0 新语言"></a>1.2.1c#1.0 新语言</h3><h4 id="特性："><a href="#特性：" class="headerlink" title="特性："></a>特性：</h4><p>​        面向对象编程语言，具备继承，封装和多态性等特性</p><p>​        也提供了基于组件的变成改造，如委托和事件</p><h4 id="CLR"><a href="#CLR" class="headerlink" title="CLR"></a>CLR</h4><p>​     .net 编程语言都使用的运行库，类似java虚拟机</p><p>​     中间语言Intermediate Language IL代码，编译器生成IL代码，当程序运行时，JIT编译器会从IL代码生成本地代码</p><p>​     GC垃圾回收</p><p>​     调试器扩展</p><p>​     线程实用工具</p><p>​    CLR还负责线程的处理，C#中创建托管的线程不一定来自底层操作系统，线程的虚拟化和管理有CLR负责</p><h3 id="1-2-2带有泛型的c-2-和-net-2"><a href="#1-2-2带有泛型的c-2-和-net-2" class="headerlink" title="1.2.2带有泛型的c#2 和.net 2"></a>1.2.2带有泛型的c#2 和.net 2</h3><h3 id="1-2-3-net-3-0-WPF"><a href="#1-2-3-net-3-0-WPF" class="headerlink" title="1.2.3 .net 3.0 WPF"></a>1.2.3 .net 3.0 WPF</h3><p>​    WPF 矢量图形控件</p><p>​     WCF 通用通信</p><h3 id="1-2-4-c-LINQ-EF"><a href="#1-2-4-c-LINQ-EF" class="headerlink" title="1.2.4 c##  LINQ   EF"></a>1.2.4 c##  LINQ   EF</h3><h3 id="1-2-5-c-4-dynamic-TPL-任务并行库"><a href="#1-2-5-c-4-dynamic-TPL-任务并行库" class="headerlink" title="1.2.5  c# 4 dynamic TPL(任务并行库)"></a>1.2.5  c# 4 dynamic TPL(任务并行库)</h3><p>​    使用Task 和 Parallel 类抽象出线程</p><h3 id="1-2-6c-5-异步编程-async-和await"><a href="#1-2-6c-5-异步编程-async-和await" class="headerlink" title="1.2.6c#5 异步编程  async 和await"></a>1.2.6c#5 异步编程  async 和await</h3><h3 id="1-2-7-c-6-新的编译器引擎-Roslyn"><a href="#1-2-7-c-6-新的编译器引擎-Roslyn" class="headerlink" title="1.2.7 c#6 新的编译器引擎 Roslyn"></a>1.2.7 c#6 新的编译器引擎 Roslyn</h3><h4 id="1-3-2-net-core-1-0-CORE-CLI"><a href="#1-3-2-net-core-1-0-CORE-CLI" class="headerlink" title="1.3.2 .net core 1.0   CORE CLI"></a>1.3.2 .net core 1.0   CORE CLI</h4><p>特性：</p><p>​    开源</p><p>​    模块化的方式设计</p><p>​    可以很快更新</p><p>程序集 assembly：编译好的，面向.net framework的代码逻辑单元</p><p>​        私有程序集</p><p>​        共享程序集（Global Assembly Cache）</p><h3 id="1-3-5-公共语言运行库"><a href="#1-3-5-公共语言运行库" class="headerlink" title="1.3.5 公共语言运行库"></a>1.3.5 公共语言运行库</h3><p>​       编译器将源代码编译为Microsoft中间语言(Intermediate Language, IL)生成IL代码，当程序运行时，JIT编译器会从IL代码生成本地代码</p><p>​       CLR还负责线程的处理，C#中创建托管的线程不一定来自底层操作系统，线程的虚拟化和管理有CLR负责</p><h3 id="1-3-7windows运行库-windows-runtime"><a href="#1-3-7windows运行库-windows-runtime" class="headerlink" title="1.3.7windows运行库 windows runtime"></a>1.3.7windows运行库 windows runtime</h3><h2 id="net-2015"><a href="#net-2015" class="headerlink" title=".net 2015"></a>.net 2015</h2><h3 id="1-5-net-4-6编译"><a href="#1-5-net-4-6编译" class="headerlink" title="1.5.net 4.6编译"></a>1.5.net 4.6编译</h3><p>​    c# 命令行编译器（csc.exe）: csc HelloWorld.cs -&gt; 中间语言代码</p><p>​    DASM中间语言反汇编程序 （ildasm.exe）</p><p>.net core cli编译</p><p>​    repl学习 ： dotnet repl</p><h2 id="1-7应用程序类型与技术"><a href="#1-7应用程序类型与技术" class="headerlink" title="1.7应用程序类型与技术"></a>1.7应用程序类型与技术</h2><h3 id="1-7-1数据访问"><a href="#1-7-1数据访问" class="headerlink" title="1.7.1数据访问"></a>1.7.1数据访问</h3><pre><code>Database FirstModel First</code></pre><p>CodeFirst:<br>   代码优先有一定意味着数据库不能事先存在；数据库可以动态创建，属性和流利的API可以以编程方式定义映射</p><h3 id="1-7-2桌面应用程序"><a href="#1-7-2桌面应用程序" class="headerlink" title="1.7.2桌面应用程序"></a>1.7.2桌面应用程序</h3><p>WF WPF</p><h3 id="1-7-3-UWP"><a href="#1-7-3-UWP" class="headerlink" title="1.7.3 UWP"></a>1.7.3 UWP</h3><h3 id="1-7-4soap服务和WCF"><a href="#1-7-4soap服务和WCF" class="headerlink" title="1.7.4soap服务和WCF"></a>1.7.4soap服务和WCF</h3><h3 id="1-7-5WEB服务-WEB-API-基于REST"><a href="#1-7-5WEB服务-WEB-API-基于REST" class="headerlink" title="1.7.5WEB服务 WEB API 基于REST"></a>1.7.5WEB服务 WEB API 基于REST</h3><h3 id="1-7-6WebHooks-和SignalR-基于-webSocket"><a href="#1-7-6WebHooks-和SignalR-基于-webSocket" class="headerlink" title="1.7.6WebHooks 和SignalR 基于 webSocket"></a>1.7.6WebHooks 和SignalR 基于 webSocket</h3><h3 id="1-7-7windows服务"><a href="#1-7-7windows服务" class="headerlink" title="1.7.7windows服务"></a>1.7.7windows服务</h3><pre><code>world wide web服务 可以监听客户端的web请求</code></pre><h3 id="Microsoft-Azure服务"><a href="#Microsoft-Azure服务" class="headerlink" title="Microsoft Azure服务"></a>Microsoft Azure服务</h3><p>​    SaaS IaaS PaaS</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
-            
-            <tag> .net 应用程序体系结构 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>博客资源站收集</title>
       <link href="2021/02/17/good-blogs/"/>
       <url>2021/02/17/good-blogs/</url>
@@ -979,31 +979,6 @@
         <tags>
             
             <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c-10/c-10th-00/"/>
-      <url>2021/02/17/c-10/c-10th-00/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
@@ -1054,6 +1029,31 @@
         <tags>
             
             <tag> AutoCAD开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c-10/c-10th-00/"/>
+      <url>2021/02/17/c-10/c-10th-00/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
