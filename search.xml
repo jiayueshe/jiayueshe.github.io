@@ -8,7 +8,7 @@
       <link href="2021/03/06/ziliao/c/xi-shuo-mian-xiang-dui-xiang-cheng-xu-she-ji-c-ban/"/>
       <url>2021/03/06/ziliao/c/xi-shuo-mian-xiang-dui-xiang-cheng-xu-she-ji-c-ban/</url>
       
-        <content type="html"><![CDATA[<h1 id="戏说面向对象程序设计C＃版"><a href="#戏说面向对象程序设计C＃版" class="headerlink" title="戏说面向对象程序设计Ｃ＃版"></a>戏说面向对象程序设计Ｃ＃版</h1><div class="row">    <embed src="C#.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
+        <content type="html"><![CDATA[<h1 id="戏说面向对象程序设计C＃版"><a href="#戏说面向对象程序设计C＃版" class="headerlink" title="戏说面向对象程序设计Ｃ＃版"></a>戏说面向对象程序设计Ｃ＃版</h1><div class="row">    <embed src="./C#.pdf" width="100%" height="550" type="application/pdf"></div>]]></content>
       
       
       <categories>
@@ -906,6 +906,35 @@
     
     
     <entry>
+      <title>Hello MyBlog</title>
+      <link href="2021/02/17/hello-myblog/"/>
+      <url>2021/02/17/hello-myblog/</url>
+      
+        <content type="html"><![CDATA[<h2 id="使用github-page-和hexo搭建第一个网站"><a href="#使用github-page-和hexo搭建第一个网站" class="headerlink" title="使用github page 和hexo搭建第一个网站"></a>使用github page 和hexo搭建第一个网站</h2><p><a href="https://www.zhihu.com/question/22197688">https://www.zhihu.com/question/22197688</a></p><h2 id="博客美化-博客主题之hexo-theme-matery的介绍"><a href="#博客美化-博客主题之hexo-theme-matery的介绍" class="headerlink" title="博客美化 博客主题之hexo-theme-matery的介绍"></a>博客美化 博客主题之hexo-theme-matery的介绍</h2><p><a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay</a></p><p>pdf展示</p><p><a href="https://blog.csdn.net/qq_43701912/article/details/107291518">https://blog.csdn.net/qq_43701912/article/details/107291518</a></p><h3 id="hexo扩展学习"><a href="#hexo扩展学习" class="headerlink" title="hexo扩展学习"></a>hexo扩展学习</h3><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a></p><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p><h3 id="window下pandoc的如何使用-文档类型转换"><a href="#window下pandoc的如何使用-文档类型转换" class="headerlink" title="window下pandoc的如何使用 文档类型转换"></a>window下pandoc的如何使用 文档类型转换</h3><p><a href="https://www.jianshu.com/p/f4a9ceb68088">https://www.jianshu.com/p/f4a9ceb68088</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+            <tag> hexo </tag>
+            
+            <tag> github gage </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c-10/c-10th-01/"/>
       <url>2021/02/17/c-10/c-10th-01/</url>
@@ -958,27 +987,23 @@
     
     
     <entry>
-      <title>Hello MyBlog</title>
-      <link href="2021/02/17/hello-myblog/"/>
-      <url>2021/02/17/hello-myblog/</url>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c-10/c-10th-00/"/>
+      <url>2021/02/17/c-10/c-10th-00/</url>
       
-        <content type="html"><![CDATA[<h2 id="使用github-page-和hexo搭建第一个网站"><a href="#使用github-page-和hexo搭建第一个网站" class="headerlink" title="使用github page 和hexo搭建第一个网站"></a>使用github page 和hexo搭建第一个网站</h2><p><a href="https://www.zhihu.com/question/22197688">https://www.zhihu.com/question/22197688</a></p><h2 id="博客美化-博客主题之hexo-theme-matery的介绍"><a href="#博客美化-博客主题之hexo-theme-matery的介绍" class="headerlink" title="博客美化 博客主题之hexo-theme-matery的介绍"></a>博客美化 博客主题之hexo-theme-matery的介绍</h2><p><a href="https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay">https://blinkfox.github.io/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#alipay</a></p><p>pdf展示</p><p><a href="https://blog.csdn.net/qq_43701912/article/details/107291518">https://blog.csdn.net/qq_43701912/article/details/107291518</a></p><h3 id="hexo扩展学习"><a href="#hexo扩展学习" class="headerlink" title="hexo扩展学习"></a>hexo扩展学习</h3><h4 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h4><p><a href="https://hexo.io/themes/index.html">https://hexo.io/themes/index.html</a></p><h4 id="文档"><a href="#文档" class="headerlink" title="文档"></a>文档</h4><p><a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p><h3 id="window下pandoc的如何使用-文档类型转换"><a href="#window下pandoc的如何使用-文档类型转换" class="headerlink" title="window下pandoc的如何使用 文档类型转换"></a>window下pandoc的如何使用 文档类型转换</h3><p><a href="https://www.jianshu.com/p/f4a9ceb68088">https://www.jianshu.com/p/f4a9ceb68088</a></p>]]></content>
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
       
       
       <categories>
           
-          <category> blog </category>
+          <category> c# </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> blog </tag>
-            
-            <tag> hexo </tag>
-            
-            <tag> github gage </tag>
+            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
@@ -1004,31 +1029,6 @@
         <tags>
             
             <tag> AutoCAD开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c-10/c-10th-00/"/>
-      <url>2021/02/17/c-10/c-10th-00/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
