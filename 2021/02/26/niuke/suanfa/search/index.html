@@ -476,7 +476,7 @@
 <h3 id="next数组计算"><a href="#next数组计算" class="headerlink" title="next数组计算"></a>next数组计算</h3><p>理解了kmp算法的基本原理，下一步就是要获得字符串f每一个位置的最大公共长度。这个最大公共长度在算法导论里面被记为next数组。在这里要注意一点，      next      数组表示的是长度，下标从      1      开始；但是在遍历原字符串时，下标还是从      0      开始。假设我们现在已经求得next[1]、next[2]、……next[i]，分别表示长度为1到i的字符串的前缀和后缀最大公共长度，现在要求next[i+1]。由上图我们可以看到，如果位置i和位置next[i]处的两个字符相同（下标从零开始），      则next[i+1]等于next[i]加1。如果两个位置的字符不相同，我们可以将长度为next[i]的字符串继续分割，获得其最大公共长度      next[next[i]]，然后再和位置i的字符比较。这是因为长度为next[i]前缀和后缀都可以分割成上部的构造，如果位置      next[next[i]]和位置i的字符相同，则next[i+1]就等于next[next[i]]加1。如果不相等，就可以继续分割长度为        next[next[i]]的字符串，直到字符串长度为0为止。由此我们可以写出求next数组的代码（<a target="_blank" rel="noopener" href="http://lib.csdn.net/base/17">Java</a>版）：</p>
 <blockquote>
 <pre class=" language-java"><code class="language-java">publicint<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token function">getNext</span><span class="token punctuation">(</span>String b<span class="token punctuation">)</span> 
-<span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> 
+<span class="token punctuation">{</span> 
   <span class="token keyword">int</span> len<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token function">length</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
   <span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
      
@@ -484,14 +484,14 @@
   next<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span>next<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> 
      
   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>len<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//i表示字符串的下标，从0开始 </span>
-  <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//j在每次循环开始都表示next[i]的值，同时也表示需要比较的下一个位置 </span>
+  <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//j在每次循环开始都表示next[i]的值，同时也表示需要比较的下一个位置 </span>
     <span class="token keyword">while</span><span class="token punctuation">(</span>j<span class="token operator">></span><span class="token number">0</span><span class="token operator">&amp;&amp;</span>b<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">!=</span>b<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>j<span class="token operator">=</span>next<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span> 
     <span class="token keyword">if</span><span class="token punctuation">(</span>b<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token operator">==</span>b<span class="token punctuation">.</span><span class="token function">charAt</span><span class="token punctuation">(</span>j<span class="token punctuation">)</span><span class="token punctuation">)</span>j<span class="token operator">++</span><span class="token punctuation">;</span> 
     next<span class="token punctuation">[</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>j<span class="token punctuation">;</span> 
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> 
+  <span class="token punctuation">}</span> 
      
   retur nnext<span class="token punctuation">;</span> 
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span> 
+<span class="token punctuation">}</span> 
 </code></pre>
 </blockquote>
 <p>上述代码需要注意的问题是，我们求取的next数组表示长度为1      到m的字符串f前缀的最大公共长度，所以需要多分配一个空间。而在遍历字符串f的时候，还是从下标0开始(位置0和1的next值为0，所以放在循环外 面)，到m-1为止。代码的结构和上面的讲解一致，都是利用前面的next值去求下一个next值。</p>
@@ -1062,7 +1062,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">101.9k</span>&nbsp;字
+                class="white-color">101.2k</span>&nbsp;字
             
             
             
