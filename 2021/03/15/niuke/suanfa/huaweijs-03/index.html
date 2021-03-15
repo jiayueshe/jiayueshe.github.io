@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="牛客网华为机试04, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="keywords" content="牛客网机试在线训练JavaScript(V8)版04, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
     <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>牛客网华为机试04 | IT 学习 资源</title>
+    <title>牛客网机试在线训练JavaScript(V8)版04 | IT 学习 资源</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">牛客网华为机试04</h1>
+                    <h1 class="description center-align post-title">牛客网机试在线训练JavaScript(V8)版04</h1>
                 </div>
             </div>
         </div>
@@ -367,8 +367,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%89%9B%E5%AE%A2%E7%BD%91%E5%8D%8E%E4%B8%BA%E6%9C%BA%E8%AF%95/" class="post-category">
-                                牛客网华为机试
+                            <a href="/categories/%E6%9C%BA%E8%AF%95/" class="post-category">
+                                机试
                             </a>
                         
                     </div>
@@ -394,7 +394,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    330
+                    342
                 </div>
                 
 
@@ -421,7 +421,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="牛客网华为机试在线训练JavaScript-V8-版04"><a href="#牛客网华为机试在线训练JavaScript-V8-版04" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版04"></a>牛客网华为机试在线训练JavaScript(V8)版04</h1><h2 id="1：-编程题-数串"><a href="#1：-编程题-数串" class="headerlink" title="1：[编程题]数串"></a>1：[编程题]数串</h2><p>设有n个正整数，将他们连接成一排，组成一个最大的多位整数。<br> 如:n=3时，3个整数13,312,343,连成的最大整数为34331213。<br> 如:n=4时,4个整数7,13,4,246连接成的最大整数为7424613。</p>
+                <h1 id="牛客网机试在线训练JavaScript-V8-版04"><a href="#牛客网机试在线训练JavaScript-V8-版04" class="headerlink" title="牛客网机试在线训练JavaScript(V8)版04"></a>牛客网机试在线训练JavaScript(V8)版04</h1><h2 id="1：-编程题-数串"><a href="#1：-编程题-数串" class="headerlink" title="1：[编程题]数串"></a>1：[编程题]数串</h2><p>设有n个正整数，将他们连接成一排，组成一个最大的多位整数。<br> 如:n=3时，3个整数13,312,343,连成的最大整数为34331213。<br> 如:n=4时,4个整数7,13,4,246连接成的最大整数为7424613。</p>
 <p><strong>输入描述:</strong></p>
 <pre><code>有多组测试样例，每组测试样例包含两行，第一行为一个整数N（N&lt;=100），第二行包含N个数(每个数不超过1000，空格分开)。
 </code></pre>
@@ -439,27 +439,31 @@
 7424613
 </code></pre>
 <p>解析</p>
-<p>第一次的想法是，对比排序，按照相同位数，大者居前，不同的，比较相同的位数，大者居前</p>
-<p>相同的。。。  </p>
-<p>哎，找到网站比较巧妙的比较方法，然后冒泡排序</p>
+<p>第一次的想法是，对比排序，按照相同位数，大者居前</p>
+<p>不同的，比较相同的位数，大者居前</p>
+<p>相同的。。。 </p>
+<p>最后反复比了好几次，只过了70% </p>
+<p>哎，然后找到网站百度了下，看到一个比较巧妙的比较方法</p>
+<p>然后自己排序写了下</p>
 <p>参考答案（自己写得）  ：两数比较，就比较两者拼接后的结果大小</p>
-<pre><code>while(line = readline())&#123;
-    let n = parseInt(line);
-    let lines = readline().split(&quot; &quot;);
-    for(var i=0;i&lt;n;i++)&#123;
-        for(var j=n-1;j&gt;0;j--)&#123;
-            if(compare(lines[j],lines[j-1]))&#123;
-                let temp = lines[j];
-                lines[j] =lines[j-1];
-                lines[j-1] =temp;
-            &#125;
-        &#125;
-    &#125;
-    print(lines.join(&quot;&quot;));
-&#125;
-function compare(a,b)&#123;
-    return (a+b)&gt;(b+a);
-&#125;
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">let</span> n <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">let</span> lines <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span>n<span class="token number">-1</span><span class="token punctuation">;</span>j<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token function">compare</span><span class="token punctuation">(</span>lines<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span>lines<span class="token punctuation">[</span>j<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                <span class="token keyword">let</span> temp <span class="token operator">=</span> lines<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">;</span>
+                lines<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span>lines<span class="token punctuation">[</span>j<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+                lines<span class="token punctuation">[</span>j<span class="token number">-1</span><span class="token punctuation">]</span> <span class="token operator">=</span>temp<span class="token punctuation">;</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token function">print</span><span class="token punctuation">(</span>lines<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//重点在这。。。。</span>
+<span class="token keyword">function</span> <span class="token function">compare</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token punctuation">)</span><span class="token operator">></span><span class="token punctuation">(</span>b<span class="token operator">+</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
 </code></pre>
 
                 
@@ -711,15 +715,15 @@ function compare(a,b)&#123;
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="牛客网华为机试04">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="牛客网机试在线训练JavaScript(V8)版04">
                         
-                        <span class="card-title">牛客网华为机试04</span>
+                        <span class="card-title">牛客网机试在线训练JavaScript(V8)版04</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            牛客网华为机试在线训练JavaScript版
+                            牛客网机试在线训练JavaScript(V8)版04
                         
                     </div>
                     <div class="publish-info">
@@ -730,8 +734,8 @@ function compare(a,b)&#123;
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E7%89%9B%E5%AE%A2%E7%BD%91%E5%8D%8E%E4%B8%BA%E6%9C%BA%E8%AF%95/" class="post-category">
-                                    牛客网华为机试
+                            <a href="/categories/%E6%9C%BA%E8%AF%95/" class="post-category">
+                                    机试
                                 </a>
                             
                             
