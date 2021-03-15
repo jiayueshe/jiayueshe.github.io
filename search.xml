@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>牛客网华为机试04</title>
+      <link href="2021/03/15/niuke/suanfa/huaweijs-03/"/>
+      <url>2021/03/15/niuke/suanfa/huaweijs-03/</url>
+      
+        <content type="html"><![CDATA[<h1 id="牛客网华为机试在线训练JavaScript-V8-版04"><a href="#牛客网华为机试在线训练JavaScript-V8-版04" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版04"></a>牛客网华为机试在线训练JavaScript(V8)版04</h1><h2 id="1：-编程题-数串"><a href="#1：-编程题-数串" class="headerlink" title="1：[编程题]数串"></a>1：[编程题]数串</h2><p>设有n个正整数，将他们连接成一排，组成一个最大的多位整数。<br> 如:n=3时，3个整数13,312,343,连成的最大整数为34331213。<br> 如:n=4时,4个整数7,13,4,246连接成的最大整数为7424613。</p><p><strong>输入描述:</strong></p><pre><code>有多组测试样例，每组测试样例包含两行，第一行为一个整数N（N&lt;=100），第二行包含N个数(每个数不超过1000，空格分开)。</code></pre><p><strong>输出描述:</strong></p><pre><code>每组数据输出一个表示最大的整数。</code></pre><p><strong>输入</strong></p><pre><code>212 12347 13 4 246</code></pre><p><strong>输出</strong></p><pre><code>123127424613</code></pre><p>解析</p><p>第一次的想法是，对比排序，按照相同位数，大者居前，不同的，比较相同的位数，大者居前</p><p>相同的。。。  </p><p>哎，找到网站比较巧妙的比较方法，然后冒泡排序</p><p>参考答案（自己写得）  ：两数比较，就比较两者拼接后的结果大小</p><pre><code>while(line = readline())&#123;    let n = parseInt(line);    let lines = readline().split(&quot; &quot;);    for(var i=0;i&lt;n;i++)&#123;        for(var j=n-1;j&gt;0;j--)&#123;            if(compare(lines[j],lines[j-1]))&#123;                let temp = lines[j];                lines[j] =lines[j-1];                lines[j-1] =temp;            &#125;        &#125;    &#125;    print(lines.join(&quot;&quot;));&#125;function compare(a,b)&#123;    return (a+b)&gt;(b+a);&#125;</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 牛客网华为机试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 机试 </tag>
+            
+            <tag> JavaScript </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>我用了两个月的时间才理解 let</title>
       <link href="2021/03/15/ziliao/javascript/liu-lan-qi-cha-jian/"/>
       <url>2021/03/15/ziliao/javascript/liu-lan-qi-cha-jian/</url>
@@ -1060,6 +1087,31 @@
     
     
     <entry>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Github收集"><a href="#Github收集" class="headerlink" title="Github收集"></a>Github收集</h1><p><a href="https://github.com/iamshuaidi/algo-basic">https://github.com/iamshuaidi/algo-basic</a></p><p>这个Github将会分享数据结构，算法，计算机基础，我的学习经验等文章，无论你是要应付面试，特别是校招，还是想提升自己的<strong>内功</strong>，我想，我的这些文章都会对你有所帮助，这些文章基本都是获得各大博客平台一直好评</p><h2 id="免费编程练习"><a href="#免费编程练习" class="headerlink" title="免费编程练习"></a>免费编程练习</h2><p><a href="https://chinese.freecodecamp.org/learn/">https://chinese.freecodecamp.org/learn/</a></p><h2 id="WebGL教程"><a href="#WebGL教程" class="headerlink" title="WebGL教程"></a>WebGL教程</h2><p><a href="http://www.webgl3d.cn/WebGL/">http://www.webgl3d.cn/WebGL/</a></p><p>Three教程</p><p><a href="http://www.webgl3d.cn/Three.js/">http://www.webgl3d.cn/Three.js/</a></p><h2 id="Node学习"><a href="#Node学习" class="headerlink" title="Node学习"></a>Node学习</h2><p><a href="http://nqdeng.github.io/7-days-nodejs/#1">http://nqdeng.github.io/7-days-nodejs/#1</a></p><h2 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h2><p>饥人谷前端学习指南 <a href="https://www.zhihu.com/column/study-fe">https://www.zhihu.com/column/study-fe</a></p><p> Postbird博客 <a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p><p>javascript的内存管理 <a href="https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA">https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA</a></p><p>Abp Vnext Pro 的 Vue 实现版本  <a href="https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ">https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ</a></p><p>2021年Node.js开发人员学习路线图  <a href="https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ">https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ</a></p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>一个不错的博客  算法 leet code  <a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h2 id="net"><a href="#net" class="headerlink" title=".net"></a>.net</h2><p>使用 Tye 辅助开发 dotnet 应用程序 <a href="https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA">https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA</a></p><p>C# 手把手教你爬取优酷电影信息-进阶 <a href="https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ">https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ</a></p><h2 id="软件设计模式和架构"><a href="#软件设计模式和架构" class="headerlink" title="软件设计模式和架构"></a>软件设计模式和架构</h2><p>几种常见的软件架构模式总结 <a href="https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA">https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c-10/c-10th-01/"/>
       <url>2021/02/17/c-10/c-10th-01/</url>
@@ -1116,56 +1168,6 @@
     
     
     <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Github收集"><a href="#Github收集" class="headerlink" title="Github收集"></a>Github收集</h1><p><a href="https://github.com/iamshuaidi/algo-basic">https://github.com/iamshuaidi/algo-basic</a></p><p>这个Github将会分享数据结构，算法，计算机基础，我的学习经验等文章，无论你是要应付面试，特别是校招，还是想提升自己的<strong>内功</strong>，我想，我的这些文章都会对你有所帮助，这些文章基本都是获得各大博客平台一直好评</p><h2 id="免费编程练习"><a href="#免费编程练习" class="headerlink" title="免费编程练习"></a>免费编程练习</h2><p><a href="https://chinese.freecodecamp.org/learn/">https://chinese.freecodecamp.org/learn/</a></p><h2 id="WebGL教程"><a href="#WebGL教程" class="headerlink" title="WebGL教程"></a>WebGL教程</h2><p><a href="http://www.webgl3d.cn/WebGL/">http://www.webgl3d.cn/WebGL/</a></p><h2 id="Three教程"><a href="#Three教程" class="headerlink" title="Three教程"></a>Three教程</h2><p><a href="http://www.webgl3d.cn/Three.js/">http://www.webgl3d.cn/Three.js/</a></p><p>Node学习</p><p><a href="http://nqdeng.github.io/7-days-nodejs/#1">http://nqdeng.github.io/7-days-nodejs/#1</a></p><h3 id="一个不错的博客-算法-leet-code"><a href="#一个不错的博客-算法-leet-code" class="headerlink" title="一个不错的博客  算法 leet code"></a>一个不错的博客  算法 leet code</h3><p><a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h3 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h3><p><a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p><h3 id="javascript的内存管理"><a href="#javascript的内存管理" class="headerlink" title="javascript的内存管理"></a>javascript的内存管理</h3><p><a href="https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA">https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA</a></p><h3 id="Abp-Vnext-Pro-的-Vue-实现版本"><a href="#Abp-Vnext-Pro-的-Vue-实现版本" class="headerlink" title="Abp Vnext Pro 的 Vue 实现版本"></a>Abp Vnext Pro 的 Vue 实现版本</h3><p><a href="https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ">https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ</a></p><h3 id="2021年Node-js开发人员学习路线图"><a href="#2021年Node-js开发人员学习路线图" class="headerlink" title="2021年Node.js开发人员学习路线图"></a>2021年Node.js开发人员学习路线图</h3><p><a href="https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ">https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ</a></p><h3 id="几种常见的软件架构模式总结"><a href="#几种常见的软件架构模式总结" class="headerlink" title="几种常见的软件架构模式总结"></a>几种常见的软件架构模式总结</h3><p><a href="https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA">https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA</a></p><h3 id="使用-Tye-辅助开发-dotnet-应用程序"><a href="#使用-Tye-辅助开发-dotnet-应用程序" class="headerlink" title="使用 Tye 辅助开发 dotnet 应用程序"></a>使用 Tye 辅助开发 dotnet 应用程序</h3><p><a href="https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA">https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA</a></p><h3 id="C-手把手教你爬取优酷电影信息-进阶"><a href="#C-手把手教你爬取优酷电影信息-进阶" class="headerlink" title="C# 手把手教你爬取优酷电影信息-进阶"></a>C# 手把手教你爬取优酷电影信息-进阶</h3><p><a href="https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ">https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c-10/c-10th-00/"/>
-      <url>2021/02/17/c-10/c-10th-00/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>AutoCAD开发</title>
       <link href="2021/02/17/autocad-c/c-autocad-01/"/>
       <url>2021/02/17/autocad-c/c-autocad-01/</url>
@@ -1208,6 +1210,31 @@
         <tags>
             
             <tag> AutoCAD开发 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c-10/c-10th-00/"/>
+      <url>2021/02/17/c-10/c-10th-00/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
