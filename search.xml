@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>三面谷歌前，熬夜总结了玩转 Leetcode 的办法</title>
+      <link href="2021/03/16/ziliao/suanfa/san-mian-gu-ge-qian-ao-ye-zong-jie-wan-zhuan-leetcode-de-ban-fa/"/>
+      <url>2021/03/16/ziliao/suanfa/san-mian-gu-ge-qian-ao-ye-zong-jie-wan-zhuan-leetcode-de-ban-fa/</url>
+      
+        <content type="html"><![CDATA[<p>大家好，我是小齐。</p><p>最近在网上看到了篇关于算法解题套路，作者总结了 14 种算法模式，我看完了觉得太赞了，所以特此分享给大家一起学习。</p><p>后面我也会继续出算法系列的文章，比如搜索算法、DP，大家有什么特别想看的也可以留言告诉我。</p><p>现在也是拿完年终奖跳槽面试的季节，大家在面试之前配合这份解题套路复习，以及我的算法系列文章，定能让你事半功倍。</p><p>点击这里回顾我的算法系列👉：**<a href="https://mp.weixin.qq.com/mp/appmsgalbum?action=getalbum&album_id=1337155274347692033&__biz=MzIzNDQ3MzgxMw==#wechat_redirect">齐姐聊算法</a>系列**</p><p><strong>作者：Fahim ul Haq</strong></p><p>咱们在面试时通常需要通过算法面试的过程，然而这些问题往往与日常工作没有太大的关系，只会额外增添压力。</p><p>曾在 Facebook 和微软工作过的 Educative.io 创始人 Fahim ul Haq 近日发文总结了编程<strong>面试所遇到的问题的 14 种最常见的模式</strong>，也许能帮你看清各种编程面试问题「背后的真相」。</p><p>这种现状导致了一个后果：现在的开发者往往需要花费数周时间在 LeetCode 等网站上了解综合数百个问题。与我谈过的开发者在面试前的一个常见焦虑问题是：我是否已经解决过足够多的实际问题？我本可以做到更多吗？</p><p>这就是我想要帮助开发者了解每个问题背后的底层模式的原因——这样他们就<strong>不必担忧解决数百个问题以及被 LeetCode 整得疲惫不堪了</strong>。如果你理解面试的通用模式，你就可以将其用作模板，从而解决各种层级的稍有不同的问题。</p><p>这里我将列出最常见的 14 种模式，它们可被用于解决任何编程面试问题。另外我还会说明如何识别每种模式，并会为每种模式提供一些问题示例。</p><p>我们今天将说明以下 14 种模式：</p><p>1．滑动窗口<br>2．二指针或迭代器<br>3．快速和慢速指针或迭代器<br>4．合并区间<br>5．循环排序<br>6．原地反转链表<br>7．树的宽度优先搜索（Tree BFS）<br>8．树的深度优先搜索（Tree DFS）<br>9．Two Heaps<br>10．子集<br>11．经过修改的二叉搜索<br>12． 前 K 个元素<br>13． K 路合并<br>14．拓扑排序</p><p>开始吧！</p><p><strong>1．滑动窗口</strong></p><p>滑动窗口模式是用于在给定数组或链表的特定窗口大小上执行所需的操作，比如寻找包含所有 1 的最长子数组。从第一个元素开始滑动窗口并逐个元素地向右滑，并根据你所求解的问题调整窗口的长度。在某些情况下窗口大小会保持恒定，在其它情况下窗口大小会增大或减小。</p><p><img src="../../../../../../images/image-20210316081228540.png" alt="image-20210316081228540"></p><p>下面是一些你可以用来确定给定问题可能需要滑动窗口的方法：</p><ul><li>问题的输入是一种线性数据结构，比如链表、数组或字符串</li><li>你被要求查找最长/最短的子字符串、子数组或所需的值</li></ul><p>你可以使用滑动窗口模式处理的常见问题：</p><ul><li>大小为 K 的子数组的最大和（简单）</li><li>带有 K 个不同字符的最长子字符串（中等）</li><li>寻找字符相同但排序不一样的字符串（困难）</li></ul><p><strong>2．二指针或迭代器</strong></p><p>二指针（Two Pointers）是这样一种模式：两个指针以一前一后的模式在数据结构中迭代，直到一个或两个指针达到某种特定条件。二指针通常在排序数组或链表中搜索配对时很有用；比如当你必须将一个数组的每个元素与其它元素做比较时。</p><p>二指针是很有用的，因为如果只有一个指针，你必须继续在数组中循环回来才能找到答案。这种使用单个迭代器进行来回在时间和空间复杂度上都很低效——这个概念被称为「渐进分析（asymptotic analysis）」。尽管使用 1 个指针进行暴力搜索或简单普通的解决方案也有效果，但这会沿 O(n²) 线得到一些东西。在很多情况中，二指针有助于你寻找有更好空间或运行时间复杂度的解决方案。</p><p><img src="../../../../../../images/image-20210316081249265.png" alt="image-20210316081249265"></p><p>用于识别使用二指针的时机的方法：</p><ul><li>可用于你要处理排序数组（或链接列表）并需要查找满足某些约束的一组元素的问题</li><li>数组中的元素集是配对、三元组甚至子数组</li></ul><p>下面是一些满足二指针模式的问题：</p><ul><li>求一个排序数组的平方（简单）</li><li>求总和为零的三元组（中等）</li><li>比较包含回退（backspace）的字符串（中等）</li></ul><p><strong>3．快速和慢速指针</strong></p><p>快速和慢速指针方法也被称为 Hare &amp; Tortoise 算法，该算法会使用两个在数组（或序列/链表）中以不同速度移动的指针。该方法在处理循环链表或数组时非常有用。</p><p>通过以不同的速度进行移动（比如在一个循环链表中），该算法证明这两个指针注定会相遇。只要这两个指针在同一个循环中，快速指针就会追赶上慢速指针。</p><p><img src="../../../../../../images/image-20210316081306812.png" alt="image-20210316081306812"></p><p>如何判别使用快速和慢速模式的时机？</p><ul><li>处理链表或数组中的循环的问题</li><li>当你需要知道特定元素的位置或链表的总长度时</li></ul><p>何时应该优先选择这种方法，而不是上面提到的二指针方法？</p><ul><li>有些情况不适合使用二指针方法，比如在不能反向移动的单链接链表中。使用快速和慢速模式的一个案例是当你想要确定一个链表是否为回文（palindrome）时。</li></ul><p>下面是一些满足快速和慢速指针模式的问题：</p><ul><li>链表循环（简单）</li><li>回文链表（中等）</li><li>环形数组中的循环（困难）</li></ul><p><strong>4．合并区间</strong></p><p>合并区间模式是一种处理重叠区间的有效技术。在很多涉及区间的问题中，你既需要找到重叠的区间，也需要在这些区间重叠时合并它们。该模式的工作方式为：</p><p>给定两个区间（a 和 b），这两个区间有 6 种不同的互相关联的方式：</p><p><img src="../../../../../../images/image-20210316081321397.png" alt="image-20210316081321397"></p><p>理解并识别这六种情况有助于你求解范围广泛的问题，从插入区间到优化区间合并等。</p><p>那么如何确定何时该使用合并区间模式呢？</p><ul><li>如果你被要求得到一个仅含互斥区间的列表</li><li>如果你听到了术语「重叠区间（overlapping intervals）」</li></ul><p>合并区间模式的问题：</p><ul><li>区间交叉（中等）</li><li>最大 CPU 负载（困难）</li></ul><p><strong>5. 循环排序</strong></p><p>这一模式描述了一种有趣的方法，处理的是涉及包含给定范围内数值的数组的问题。循环排序模式一次会在数组上迭代一个数值，如果所迭代的当前数值不在正确的索引处，就将其与其正确索引处的数值交换。你可以尝试替换其正确索引处的数值，但这会带来 O(n^2) 的复杂度，这不是最优的，因此要用循环排序模式。</p><p><img src="../../../../../../images/image-20210316081344715.png" alt="image-20210316081344715"></p><p>如何识别这种模式？</p><ul><li>涉及数值在给定范围内的排序数组的问题</li><li>如果问题要求你在一个排序/旋转的数组中找到缺失值/重复值/最小值</li></ul><p>循环排序模式的问题：</p><ul><li>找到缺失值（简单）</li><li>找到最小的缺失的正数值（中等）</li></ul><p><strong>6．原地反转链表</strong></p><p>在很多问题中，你可能会被要求反转一个链表中一组节点之间的链接。通常而言，你需要原地完成这一任务，即使用已有的节点对象且不占用额外的内存。这就是这个模式的用武之地。该模式会从一个指向链表头的变量（current）开始一次反转一个节点，然后一个变量（previous）将指向已经处理过的前一个节点。以锁步的方式，在移动到下一个节点之前将其指向前一个节点，可实现对当前节点的反转。另外，也将更新变量「previous」，使其总是指向已经处理过的前一个节点。</p><p><img src="../../../../../../images/image-20210316081359530.png" alt="image-20210316081359530"></p><p>如何识别使用该模式的时机：</p><ul><li>如果你被要求在不使用额外内存的前提下反转一个链表</li></ul><p>原地反转链表模式的问题：</p><ul><li>反转一个子列表（中等）</li><li>反转每个 K 个元素的子列表（中等）</li></ul><p><strong>7．树的宽度优先搜索（Tree BFS）</strong></p><p>该模式基于宽度优先搜索（BFS）技术，可遍历一个树并使用一个队列来跟踪一个层级的所有节点，之后再跳转到下一个层级。任何涉及到以逐层级方式遍历树的问题都可以使用这种方法有效解决。</p><p>Tree BFS 模式的工作方式是：将根节点推至队列，然后连续迭代知道队列为空。在每次迭代中，我们移除队列头部的节点并「访问」该节点。在移除了队列中的每个节点之后，我们还将其所有子节点插入到队列中。</p><p>如何识别 Tree BFS 模式：</p><ul><li>如果你被要求以逐层级方式遍历（或按层级顺序遍历）一个树</li></ul><p>Tree BFS 模式的问题：</p><ul><li>二叉树层级顺序遍历（简单）</li><li>之字型遍历（Zigzag Traversal）（中等）</li></ul><p><strong>8．树的深度优先搜索（Tree DFS）</strong></p><p>Tree DFS 是基于深度优先搜索（DFS）技术来遍历树。</p><p>你可以使用递归（或该迭代方法的技术栈）来在遍历期间保持对所有之前的（父）节点的跟踪。</p><p>Tree DFS 模式的工作方式是从树的根部开始，如果这个节点不是一个叶节点，则需要做三件事：</p><p>1．决定现在是处理当前的节点（pre-order），或是在处理两个子节点之间（in-order），还是在处理两个子节点之后（post-order）</p><ol><li>为当前节点的两个子节点执行两次递归调用以处理它们</li></ol><p>如何识别 Tree DFS 模式：</p><ul><li>如果你被要求用 in-order、pre-order 或 post-order DFS 来遍历一个树</li><li>如果问题需要搜索其中节点更接近叶节点的东西</li></ul><p>Tree DFS 模式的问题：</p><ul><li>路径数量之和（中等）</li><li>一个和的所有路径（中等）</li></ul><p><strong>9. Two Heaps</strong></p><p>在很多问题中，我们要将给定的一组元素分为两部分。为了求解这个问题，我们感兴趣的是了解一部分的最小元素以及另一部分的最大元素。这一模式是求解这类问题的一种有效方法。该模式要使用两个堆（heap）：一个用于寻找最小元素的 Min Heap 和一个用于寻找最大元素的 Max Heap。该模式的工作方式是：先将前一半的数值存储到 Max Heap，这是由于你要寻找前一半中的最大数值。然后再将另一半存储到 Min Heap，因为你要寻找第二半的最小数值。在任何时候，当前数值列表的中间值都可以根据这两个 heap 的顶部元素计算得到。</p><p>识别 Two Heaps 模式的方法：</p><ul><li>在优先级队列、调度等场景中有用</li><li>如果问题说你需要找到一个集合的最小/最大/中间元素</li><li>有时候可用于具有二叉树数据结构的问题</li></ul><p>Two Heaps 模式的问题：</p><ul><li>查找一个数值流的中间值（中等）</li></ul><p><strong>10. 子集</strong></p><p>很多编程面试问题都涉及到处理给定元素集合的排列和组合。子集（Subsets）模式描述了一种用于有效处理所有这些问题的宽度优先搜索（BFS）方法。</p><p>该模式看起来是这样：</p><p>给定一个集合 [1, 5, 3]</p><p>1． 从一个空集开始：[[]]<br>2．向所有已有子集添加第一个数 (1)，从而创造新的子集：[[], [1]]<br>3．向所有已有子集添加第二个数 (5)：[[], [1], [5], [1,5]]<br>4．向所有已有子集添加第三个数 (3)：[[], [1], [5], [1,5], [3], [1,3], [5,3], [1,5,3]]</p><p>下面是这种子集模式的一种视觉表示：</p><p><img src="../../../../../../images/image-20210316081414056.png" alt="image-20210316081414056"></p><p>如何识别子集模式：</p><ul><li>你需要找到给定集合的组合或排列的问题</li></ul><p>子集模式的问题：</p><ul><li>带有重复项的子集（简单）</li><li>通过改变大小写的字符串排列（中等）</li></ul><p><strong>11. 经过修改的二叉搜索</strong></p><p>只要给定了排序数组、链表或矩阵，并要求寻找一个特定元素，你可以使用的最佳算法就是二叉搜索。这一模式描述了一种用于处理所有涉及二叉搜索的问题的有效方法。</p><p>对于一个升序的集合，该模式看起来是这样的：</p><p>1．首先，找到起点和终点的中间位置。寻找中间位置的一种简单方法是：middle = (start + end) / 2。但这很有可能造成整数溢出，所以推荐你这样表示中间位置：middle = start + (end — start) / 2。<br>2．如果键值（key）等于中间索引处的值，那么返回这个中间位置。<br>3．如果键值不等于中间索引处的值：<br>4．检查 key &lt; arr[middle] 是否成立。如果成立，将搜索约简到 end = middle — 15．检查 key &gt; arr[middle] 是否成立。如果成立，将搜索约简到 end = middle + 1</p><p>下面给出了这种经过修改的二叉搜索模式的视觉表示：</p><p><img src="../../../../../../images/image-20210316081428005.png" alt="image-20210316081428005"></p><p>经过修改的二叉搜索模式的问题：</p><ul><li>与顺序无关的二叉搜索（简单）</li><li>在经过排序的无限数组中搜索（中等）</li></ul><p><strong>12. 前 K 个元素</strong></p><p>任何要求我们找到一个给定集合中前面的/最小的/最常出现的 K 的元素的问题都在这一模式的范围内。</p><p>跟踪 K 个元素的最佳的数据结构是 Heap。这一模式会使用 Heap 来求解多个一次性处理一个给定元素集中 K 个元素的问题。该模式是这样工作的：</p><p>1． 根据问题的不同，将 K 个元素插入到 min-heap 或 max-heap 中<br>2．迭代处理剩余的数，如果你找到一个比 heap 中数更大的数，那么就移除那个数并插入这个更大的数</p><p><img src="../../../../../../images/image-20210316081642101.png" alt="image-20210316081642101"></p><p>这里无需排序算法，因为 heap 将为你跟踪这些元素。</p><p>如何识别前 K 个元素模式：</p><ul><li>如果你被要求寻找一个给定集合中前面的/最小的/最常出现的 K 的元素</li><li>如果你被要求对一个数值进行排序以找到一个确定元素</li></ul><p>前 K 个元素模式的问题：</p><ul><li>前面的 K 个数（简单）</li><li>最常出现的 K 个数（中等）</li></ul><p><strong>13. K 路合并</strong></p><p>K 路合并能帮助你求解涉及一组经过排序的数组的问题。</p><p>当你被给出了 K 个经过排序的数组时，你可以使用 Heap 来有效地执行所有数组的所有元素的排序遍历。你可以将每个数组的最小元素推送至 Min Heap 以获得整体最小值。在获得了整体最小值后，将来自同一个数组的下一个元素推送至 heap。然后，重复这一过程以得到所有元素的排序遍历结果。</p><p><img src="../../../../../../images/image-20210316081541080.png"></p><p>该模式看起来像这样：</p><p>1．将每个数组的第一个元素插入 Min Heap<br>2．之后，从该 Heap 取出最小（顶部的）元素，将其加入到合并的列表。<br>3．在从 Heap 移除了最小的元素之后，将同一列表的下一个元素插入该 Heap<br>4．重复步骤 2 和 3，以排序的顺序填充合并的列表</p><p>如何识别 K 路合并模式：</p><ul><li>具有排序数组、列表或矩阵的问题</li><li>如果问题要求你合并排序的列表，找到一个排序列表中的最小元素</li></ul><p>K 路合并模式的问题：</p><ul><li>合并 K 个排序的列表（中等）</li><li>找到和最大的 K 个配对（困难）</li></ul><p><strong>14. 拓扑排序</strong></p><p>拓扑排序可用于寻找互相依赖的元素的线性顺序。比如，如果事件 B 依赖于事件 A，那么 A 在拓扑排序时位于 B 之前。</p><p>这个模式定义了一种简单方法来理解执行一组元素的拓扑排序的技术。</p><p>该模式看起来是这样的：</p><p>1．初始化。a）使用 HashMap 将图（graph）存储到邻接的列表中；b）为了查找所有源，使用 HashMap 记录 in-degree 的数量<br>2．构建图并找到所有顶点的 in-degree。a）根据输入构建图并填充 in-degree HashMap<br>3．寻找所有的源。a）所有 in-degree 为 0 的顶点都是源，并会被存入一个队列<br>4．排序。a）对于每个源，执行以下操作：i）将其加入到排序的列表；ii）根据图获取其所有子节点；iii）将每个子节点的 in-degree 减少 1；iv）如果一个子节点的 in-degree 变为 0，将其加入到源队列。b）重复 (a)，直到源队列为空。</p><p><img src="../../../../../../images/image-20210316081709288.png" alt="image-20210316081709288"></p><p>如何识别拓扑排序模式：</p><ul><li>处理无向有环图的问题</li><li>如果你被要求以排序顺序更新所有对象</li><li>如果你有一类遵循特定顺序的对象</li></ul><p>拓扑排序模式的问题：</p><ul><li>任务调度（中等）</li><li>一个树的最小高度</li></ul><p>转载：<a href="https://mp.weixin.qq.com/s/CoIRjOITAHZI9jmEYiGPtQ">https://mp.weixin.qq.com/s/CoIRjOITAHZI9jmEYiGPtQ</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法分析与设计 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>牛客网机试在线训练JavaScript(V8)版04</title>
       <link href="2021/03/15/niuke/suanfa/huaweijs-03/"/>
       <url>2021/03/15/niuke/suanfa/huaweijs-03/</url>
@@ -1087,31 +1112,6 @@
     
     
     <entry>
-      <title>博客资源站收集</title>
-      <link href="2021/02/17/good-blogs/"/>
-      <url>2021/02/17/good-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Github收集"><a href="#Github收集" class="headerlink" title="Github收集"></a>Github收集</h1><p><a href="https://github.com/iamshuaidi/algo-basic">https://github.com/iamshuaidi/algo-basic</a></p><p>这个Github将会分享数据结构，算法，计算机基础，我的学习经验等文章，无论你是要应付面试，特别是校招，还是想提升自己的<strong>内功</strong>，我想，我的这些文章都会对你有所帮助，这些文章基本都是获得各大博客平台一直好评</p><h2 id="免费编程练习"><a href="#免费编程练习" class="headerlink" title="免费编程练习"></a>免费编程练习</h2><p><a href="https://chinese.freecodecamp.org/learn/">https://chinese.freecodecamp.org/learn/</a></p><h2 id="WebGL教程"><a href="#WebGL教程" class="headerlink" title="WebGL教程"></a>WebGL教程</h2><p><a href="http://www.webgl3d.cn/WebGL/">http://www.webgl3d.cn/WebGL/</a></p><p>Three教程</p><p><a href="http://www.webgl3d.cn/Three.js/">http://www.webgl3d.cn/Three.js/</a></p><h2 id="Node学习"><a href="#Node学习" class="headerlink" title="Node学习"></a>Node学习</h2><p><a href="http://nqdeng.github.io/7-days-nodejs/#1">http://nqdeng.github.io/7-days-nodejs/#1</a></p><h2 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h2><p>饥人谷前端学习指南 <a href="https://www.zhihu.com/column/study-fe">https://www.zhihu.com/column/study-fe</a></p><p> Postbird博客 <a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p><p>javascript的内存管理 <a href="https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA">https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA</a></p><p>Abp Vnext Pro 的 Vue 实现版本  <a href="https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ">https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ</a></p><p>2021年Node.js开发人员学习路线图  <a href="https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ">https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ</a></p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>一个不错的博客  算法 leet code  <a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h2 id="net"><a href="#net" class="headerlink" title=".net"></a>.net</h2><p>使用 Tye 辅助开发 dotnet 应用程序 <a href="https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA">https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA</a></p><p>C# 手把手教你爬取优酷电影信息-进阶 <a href="https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ">https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ</a></p><h2 id="软件设计模式和架构"><a href="#软件设计模式和架构" class="headerlink" title="软件设计模式和架构"></a>软件设计模式和架构</h2><p>几种常见的软件架构模式总结 <a href="https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA">https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA</a></p>]]></content>
-      
-      
-      <categories>
-          
-          <category> blog </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> blog </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>c# 高级编程(10th)第一章 .net 应用程序体系结构</title>
       <link href="2021/02/17/c-10/c-10th-01/"/>
       <url>2021/02/17/c-10/c-10th-01/</url>
@@ -1131,6 +1131,31 @@
             <tag> c# 高级编程(10th) </tag>
             
             <tag> .net 应用程序体系结构 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>博客资源站收集</title>
+      <link href="2021/02/17/good-blogs/"/>
+      <url>2021/02/17/good-blogs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Github收集"><a href="#Github收集" class="headerlink" title="Github收集"></a>Github收集</h1><p><a href="https://github.com/iamshuaidi/algo-basic">https://github.com/iamshuaidi/algo-basic</a></p><p>这个Github将会分享数据结构，算法，计算机基础，我的学习经验等文章，无论你是要应付面试，特别是校招，还是想提升自己的<strong>内功</strong>，我想，我的这些文章都会对你有所帮助，这些文章基本都是获得各大博客平台一直好评</p><h2 id="免费编程练习"><a href="#免费编程练习" class="headerlink" title="免费编程练习"></a>免费编程练习</h2><p><a href="https://chinese.freecodecamp.org/learn/">https://chinese.freecodecamp.org/learn/</a></p><h2 id="WebGL教程"><a href="#WebGL教程" class="headerlink" title="WebGL教程"></a>WebGL教程</h2><p><a href="http://www.webgl3d.cn/WebGL/">http://www.webgl3d.cn/WebGL/</a></p><p>Three教程</p><p><a href="http://www.webgl3d.cn/Three.js/">http://www.webgl3d.cn/Three.js/</a></p><h2 id="Node学习"><a href="#Node学习" class="headerlink" title="Node学习"></a>Node学习</h2><p><a href="http://nqdeng.github.io/7-days-nodejs/#1">http://nqdeng.github.io/7-days-nodejs/#1</a></p><h2 id="前端学习"><a href="#前端学习" class="headerlink" title="前端学习"></a>前端学习</h2><p>饥人谷前端学习指南 <a href="https://www.zhihu.com/column/study-fe">https://www.zhihu.com/column/study-fe</a></p><p> Postbird博客 <a href="http://www.ptbird.cn/list.html">http://www.ptbird.cn/list.html</a></p><p>javascript的内存管理 <a href="https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA">https://mp.weixin.qq.com/s/aNm6Fp-E1TJX0Mzb_amjVA</a></p><p>Abp Vnext Pro 的 Vue 实现版本  <a href="https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ">https://mp.weixin.qq.com/s/MtoTzaJYFVcZA5keeyABqQ</a></p><p>2021年Node.js开发人员学习路线图  <a href="https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ">https://mp.weixin.qq.com/s/oDQNwvXNgnaLYgWZAUM0NQ</a></p><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><p>一个不错的博客  算法 leet code  <a href="https://www.cxyxiaowu.com/">https://www.cxyxiaowu.com/</a></p><h2 id="net"><a href="#net" class="headerlink" title=".net"></a>.net</h2><p>使用 Tye 辅助开发 dotnet 应用程序 <a href="https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA">https://mp.weixin.qq.com/s/I_dT4tBIrq4edGZOxe5qtA</a></p><p>C# 手把手教你爬取优酷电影信息-进阶 <a href="https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ">https://mp.weixin.qq.com/s/AvBzqPHr6ADIl6alEkqICQ</a></p><h2 id="软件设计模式和架构"><a href="#软件设计模式和架构" class="headerlink" title="软件设计模式和架构"></a>软件设计模式和架构</h2><p>几种常见的软件架构模式总结 <a href="https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA">https://mp.weixin.qq.com/s/PBRRpAcNB82sCzQvholRJA</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> blog </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> blog </tag>
             
         </tags>
       
@@ -1160,6 +1185,31 @@
             <tag> hexo </tag>
             
             <tag> github gage </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>c# 高级编程(10th) 前言</title>
+      <link href="2021/02/17/c-10/c-10th-00/"/>
+      <url>2021/02/17/c-10/c-10th-00/</url>
+      
+        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> c# </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
@@ -1210,31 +1260,6 @@
         <tags>
             
             <tag> AutoCAD开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>c# 高级编程(10th) 前言</title>
-      <link href="2021/02/17/c-10/c-10th-00/"/>
-      <url>2021/02/17/c-10/c-10th-00/</url>
-      
-        <content type="html"><![CDATA[<h1 id="c-是专门用于-net-的语言"><a href="#c-是专门用于-net-的语言" class="headerlink" title="c# 是专门用于 .net 的语言"></a>c# 是专门用于 .net 的语言</h1><p>web 页面<br>WPF<br>REST WEB服务<br>分布式应用程序的组件<br>数据库访问组件<br>桌面应用程序<br>UWP</p><h1 id="net-core-重要性"><a href="#net-core-重要性" class="headerlink" title=".net core 重要性"></a>.net core 重要性</h1><p>.net framework<br><a href="http://asp.net/">asp.net</a> web forms ？ MVC<br>WIN form /UWP<br>EF / LINQ</p><h1 id="NET-CORE"><a href="#NET-CORE" class="headerlink" title=".NET CORE"></a>.NET CORE</h1><p>开源<br>包较小，更快的创新<br>支持多个平台<br>可以编译为本地代码<br>Xamarin</p><h1 id="C-重要性"><a href="#C-重要性" class="headerlink" title="C# 重要性"></a>C# 重要性</h1><p>设计思想来源于C++ 、java、Pascal<br>面向对象的通用编程语言<br>给予组件的变成语言，支持属性、时间、特性和构建程序集<br>函数数编程理念<br>增加了泛型、语言集成查询linq、lambda表达式、动态特性、更简单的异步编程</p><h1 id="c-6-新特性"><a href="#c-6-新特性" class="headerlink" title="c#6 新特性"></a>c#6 新特性</h1><h2 id="静态using声明："><a href="#静态using声明：" class="headerlink" title="静态using声明："></a>静态using声明：</h2><p>静态的声明允许调用静态方式时不适用类名</p><blockquote><p>using static sysytem.console； Writeline(&quot;hello world&quot;) ​</p></blockquote><h2 id="表达式体方法"><a href="#表达式体方法" class="headerlink" title="表达式体方法:"></a>表达式体方法:</h2><p>表达式方法只包括一个可以用lambda语法编写的语句</p><blockquote><p>public bool isSquare（Rectangle rect）=&gt;rect.Height == rect.Width;</p></blockquote><h2 id="表达式体属性："><a href="#表达式体属性：" class="headerlink" title="表达式体属性："></a>表达式体属性：</h2><p>与表达式方法类似，只有get存取器的单行属性可以用lamabda语法编写</p><blockquote><p>public string FullName =&gt; FirstName +&quot;&quot;+ LastName;</p></blockquote><h2 id="自动实现的属性初始化器"><a href="#自动实现的属性初始化器" class="headerlink" title="自动实现的属性初始化器:"></a>自动实现的属性初始化器:</h2><p>自动实现的属性可以用属性初始化器来初始化</p><blockquote><p>public class Person{ public int Age{get;set;}=42; ​}</p></blockquote><h2 id="只读的自动属性"><a href="#只读的自动属性" class="headerlink" title="只读的自动属性"></a>只读的自动属性</h2><blockquote><p>public BookId {get;} </p></blockquote><h2 id="ameof-运算符："><a href="#ameof-运算符：" class="headerlink" title="ameof 运算符："></a>ameof 运算符：</h2><p>使用此运算符，可以访问字段名、属性名、方法名、类型名</p><h2 id="空值传播运算符"><a href="#空值传播运算符" class="headerlink" title="空值传播运算符"></a>空值传播运算符</h2><blockquote><p>int? age =p?.Age; handler?.Invoke(source,e)</p></blockquote><h2 id="字符串插值-占位符可以直接是表达式"><a href="#字符串插值-占位符可以直接是表达式" class="headerlink" title="字符串插值: 占位符可以直接是表达式"></a>字符串插值: 占位符可以直接是表达式</h2><blockquote><p>public override ToString() =&gt; $&quot;{Title} {Publisher}&quot;</p></blockquote><h2 id="字典初始化器"><a href="#字典初始化器" class="headerlink" title="字典初始化器"></a>字典初始化器</h2><blockquote><p>var dict = new Dictionary&lt;int,string&gt;(){<br>    2 =”three”,<br>  3=”seven”<br> ​}</p></blockquote><h2 id="异常过滤器"><a href="#异常过滤器" class="headerlink" title="异常过滤器"></a>异常过滤器</h2><h2 id="Catch-中的await"><a href="#Catch-中的await" class="headerlink" title="Catch 中的await"></a>Catch 中的await</h2><blockquote><p>try{ // }Catch(MyException ex){ await new<br>MessageDialog().showAsync(ex.Message); ​}</p></blockquote>]]></content>
-      
-      
-      <categories>
-          
-          <category> c# </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> c# 高级编程(10th) </tag>
             
         </tags>
       
