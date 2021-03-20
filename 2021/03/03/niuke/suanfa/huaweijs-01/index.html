@@ -387,21 +387,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-11
+                    2021-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.8k
+                    3.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    12 分
+                    16 分
                 </div>
                 
 
@@ -421,7 +421,121 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="牛客网华为机试在线训练JavaScript-V8-版02"><a href="#牛客网华为机试在线训练JavaScript-V8-版02" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版02"></a>牛客网华为机试在线训练JavaScript(V8)版02</h1><h2 id="1-易"><a href="#1-易" class="headerlink" title="1.(易)"></a>1.(易)</h2><p>  编写一个函数，计算字符串中含有的不同字符的个数。字符在ACSII码范围内(0~127)，换行表示结束符，不算在字符里。不在范围内的不作统计。多个相同的字符只计算一次 </p>
+                <h1 id="牛客网华为机试在线训练JavaScript-V8-版02"><a href="#牛客网华为机试在线训练JavaScript-V8-版02" class="headerlink" title="牛客网华为机试在线训练JavaScript(V8)版02"></a>牛客网华为机试在线训练JavaScript(V8)版02</h1><h2 id="HJ3-易-明明的随机数-数组，排序，去重"><a href="#HJ3-易-明明的随机数-数组，排序，去重" class="headerlink" title="HJ3.[易]明明的随机数 [数组，排序，去重]"></a>HJ3.[易]明明的随机数 [数组，排序，去重]</h2><p><strong>题目描述</strong></p>
+<p>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据(用于不同的调查)，希望大家能正确处理)。  </p>
+<p>  注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。 </p>
+<p>  当没有新的输入时，说明输入结束。 </p>
+<p>输入描述:</p>
+<pre><code>注意：输入可能有多组数据(用于不同的调查)。每组数据都包括多行，第一行先输入随机整数的个数N，接下来的N行再输入相应个数的整数。具体格式请看下面的&quot;示例&quot;。
+</code></pre>
+<p>输出描述:</p>
+<pre><code>返回多行，处理后的结果
+</code></pre>
+<p>输入</p>
+<pre><code>3
+2
+2
+1
+11
+10
+20
+40
+32
+67
+40
+20
+89
+300
+400
+15
+</code></pre>
+<p>输出</p>
+<pre><code>1
+2
+10
+15
+20
+32
+40
+67
+89
+300
+400
+</code></pre>
+<p>说明</p>
+<pre><code>样例输入解释：
+样例有两组测试
+第一组是3个数字，分别是：2，2，1。
+第二组是11个数字，分别是：10，20，40，32，67，40，20，89，300，400，15。  
+</code></pre>
+<p>自己首次解析</p>
+<pre><code>while( line = readline())&#123;
+    //保存原始数据
+    var arr=[];
+    for(var i=0;i&lt; line;i++)&#123;
+        arr.push( readline());        
+    &#125;
+    //利用set特性去重
+    var tSet=[...new Set(arr)];
+    //排序方法
+    var setSort=tSet.sort(function(a,b)&#123;
+        return a-b;
+    &#125;)
+    //结果输出
+    for(var j=0;j&lt;setSort.length;j++)&#123;
+        console.log(setSort[j]);
+    &#125;
+
+&#125;
+</code></pre>
+<p><strong>查看其他解法</strong>：总体利用一个数组，很好的利用数组下标排序的</p>
+<pre><code>while(num = parseInt(readline()))&#123;
+    //利用数组下标的特性，存入数据表示有此数值
+    let arr =[];
+    for(let i = 0;i&lt;num;i++)&#123;
+        let temp = parseInt(readline());
+           arr[temp] = 1;
+    &#125;
+    //遍历数组，如果有标记，则输出下标
+    arr.forEach((val,index)=&gt;&#123;
+        if(val===1)&#123;
+            console.log(index)
+        &#125;
+    &#125;)
+&#125;
+</code></pre>
+<pre><code>while(num = readline())&#123;
+    //利用对象的属性
+    const obj = &#123;&#125;;
+    while(num--)&#123;
+       const number = readline();
+       if(!obj[number])&#123;
+           obj[number]=1;
+       &#125;
+    &#125;
+    for(let result in obj)&#123;
+        console.log(result)
+    &#125; 
+&#125;
+</code></pre>
+<p>题目描述</p>
+<p>  •连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br> •长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。  </p>
+<p>输入描述:</p>
+<pre><code>连续输入字符串(输入多次,每个字符串长度小于100)
+</code></pre>
+<p>输出描述:</p>
+<pre><code>输出到长度为8的新字符串数组
+</code></pre>
+<p>输入</p>
+<pre><code>abc
+123456789
+</code></pre>
+<p>输出</p>
+<pre><code>abc00000
+12345678
+90000000
+</code></pre>
+<h2 id="HJ4-易"><a href="#HJ4-易" class="headerlink" title="HJ4.[易]"></a>HJ4.[易]</h2><p>  编写一个函数，计算字符串中含有的不同字符的个数。字符在ACSII码范围内(0~127)，换行表示结束符，不算在字符里。不在范围内的不作统计。多个相同的字符只计算一次 </p>
 <p>  例如，对于字符串abaca而言，有a、b、c三种不同的字符，因此输出3。 </p>
 <p>输入描述:</p>
 <pre><code>输入一行没有空格的字符串。
@@ -487,6 +601,61 @@ up
         <span class="token function">print</span><span class="token punctuation">(</span>list<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
    <span class="token punctuation">}</span> 
 <span class="token punctuation">}</span>
+</code></pre>
+<p>自己解析</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> strLength <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//取整取完整的行数</span>
+    <span class="token keyword">var</span> N <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>strLength<span class="token operator">/</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> mLast <span class="token operator">=</span> strLength<span class="token operator">%</span><span class="token number">8</span><span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//最后需要补充的数目</span>
+    <span class="token keyword">var</span> addnum <span class="token operator">=</span><span class="token number">8</span><span class="token operator">-</span>mLast<span class="token punctuation">;</span>
+    <span class="token comment" spellcheck="true">//输出整行的数据</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>N<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token function">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment" spellcheck="true">//输出补充的数据</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>mLast<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> sstr<span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>addnum<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+           sstr<span class="token operator">+</span><span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">var</span> firstr <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">,</span>strLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token function">print</span><span class="token punctuation">(</span> firstr <span class="token operator">+</span> sstr<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+   <span class="token comment" spellcheck="true">//N整次的</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> ans <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> line<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ans <span class="token operator">=</span> ans <span class="token operator">+</span> line<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">>=</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+           
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">8</span> <span class="token operator">&amp;&amp;</span> ans<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">)</span> ans <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'0'</span>
+        <span class="token function">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+       
+<span class="token punctuation">}</span>
+
+</code></pre>
+<p>最佳：先加8位0，然后只取前面整除的部分</p>
+<pre><code>while(str=readline())&#123;
+    str +=&#39;0000000&#39;
+    const length = Math.floor(str.length/8)
+    for(i=0;i&lt;length;i++)&#123;
+        console.log(str.substr(i*8,8))
+    &#125;
+&#125;
 </code></pre>
 <h2 id="3-易"><a href="#3-易" class="headerlink" title="3:(易)"></a>3:(易)</h2><p>  输入一个int型的正整数，计算出该int型数据在内存中存储时1的个数。 </p>
 <p>输入描述:</p>
@@ -1317,7 +1486,7 @@ rl<span class="token punctuation">.</span><span class="token function">on</span>
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">120.2k</span>&nbsp;字
+                class="white-color">169.8k</span>&nbsp;字
             
             
             

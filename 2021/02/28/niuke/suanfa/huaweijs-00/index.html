@@ -391,21 +391,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-11
+                    2021-03-18
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    12 分
                 </div>
                 
 
@@ -429,14 +429,14 @@
 <p>// 单行<br>var line = readline(); //获得的是一个字符串<br>//如果需要对其进行处理，比如 “1 2 3 4 5”，我们想以数组形式获取每个数字<br>var arr = line.split(“ “); // 数组内元素为字符串，eg: arr[0]=”1”</p>
 <p>// 多行<br>// 如果每一行的操作相同<br>while(line = readline()){<br>    // 代码<br>}<br>/<em>如果每一行操作不同<br>eg: 第一行给数组长度<br>     第二行给用空格分开的字符串<br>那就每一次按照单行输入的方式来获取即可</em>/<br>var num = parseInt(readline()); // 获得数组长度<br>var arr = readline().split(“ “); // 获得数组</p>
 </blockquote>
-<h2 id="1-字符串-split（易）"><a href="#1-字符串-split（易）" class="headerlink" title="1.(字符串) split（易）"></a>1.(字符串) split（易）</h2><p><strong>计算字符串最后一个单词的长度，单词以空格隔开。(<a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionCenter?questionTypes=000100&mutiTagIds=579">字符串</a>)</strong><br>输入描述:<br>输入一行，代表要计算的字符串，非空，长度小于5000。<br>输出描述:<br>输出一个整数，表示输入字符串最后一个单词的长度。<br>示例1<br>输入:hello nowcoder<br>输出:8<br>解答：</p>
+<h2 id="HJ1-计算字符串最后一个单词的长度（易）-字符串-split"><a href="#HJ1-计算字符串最后一个单词的长度（易）-字符串-split" class="headerlink" title="HJ1.计算字符串最后一个单词的长度（易）(字符串) split"></a>HJ1.计算字符串最后一个单词的长度（易）(字符串) split</h2><p><strong>计算字符串最后一个单词的长度，单词以空格隔开。(<a target="_blank" rel="noopener" href="https://www.nowcoder.com/questionCenter?questionTypes=000100&mutiTagIds=579">字符串</a>)</strong><br>输入描述:<br>输入一行，代表要计算的字符串，非空，长度小于5000。<br>输出描述:<br>输出一个整数，表示输入字符串最后一个单词的长度。<br>示例1<br>输入:hello nowcoder<br>输出:8<br>解答：</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span> <span class="token punctuation">(</span>line <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">var</span> stringlist  <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">var</span> lastlen <span class="token operator">=</span>stringlist<span class="token punctuation">[</span>stringlist<span class="token punctuation">.</span>length<span class="token number">-1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
     <span class="token function">print</span><span class="token punctuation">(</span>lastlen<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="2-字符串-toLowerCase（易）"><a href="#2-字符串-toLowerCase（易）" class="headerlink" title="2.(字符串)toLowerCase（易）"></a>2.(字符串)toLowerCase（易）</h2><p><strong>写出一个程序，接受一个由字母、数字和空格组成的字符串，和一个字母，然后输出输入字符串中该字母的出现次数。不区分大小写。 (字符串，哈希）</strong><br>输入描述:第一行输入一个由字母和数字以及空格组成的字符串，第二行输入一个字母。<br>输出描述:输出输入字符串中含有该字符的个数。<br>示例1<br>输入<br>ABCabc<br>A<br>输出2<br>解答</p>
+<h2 id="HJ2-计算字符个数-字符串-toLowerCase（易）"><a href="#HJ2-计算字符个数-字符串-toLowerCase（易）" class="headerlink" title="HJ2.计算字符个数(字符串)toLowerCase（易）"></a>HJ2.计算字符个数(字符串)toLowerCase（易）</h2><p><strong>写出一个程序，接受一个由字母、数字和空格组成的字符串，和一个字母，然后输出输入字符串中该字母的出现次数。不区分大小写。 (字符串，哈希）</strong><br>输入描述:第一行输入一个由字母和数字以及空格组成的字符串，第二行输入一个字母。<br>输出描述:输出输入字符串中含有该字符的个数。<br>示例1<br>输入<br>ABCabc<br>A<br>输出2<br>解答</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> aStr <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> bStr <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLowerCase</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
@@ -447,7 +447,7 @@
 <span class="token punctuation">}</span>
 <span class="token function">print</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
 </code></pre>
-<h2 id="3-数组-sort-set（中）"><a href="#3-数组-sort-set（中）" class="headerlink" title="3.(数组)sort set（中）"></a>3.(数组)sort set（中）</h2><p><strong>题目描述</strong><br>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据，希望大家能正确处理)。 </p>
+<h2 id="HJ3-易-明明的随机数-数组，排序，去重"><a href="#HJ3-易-明明的随机数-数组，排序，去重" class="headerlink" title="HJ3.[易]明明的随机数 数组，排序，去重"></a>HJ3.[易]明明的随机数 <a href="%E6%95%B0%E7%BB%84">数组，排序，去重</a></h2><p><strong>题目描述</strong><br>   明明想在学校中请一些同学一起做一项问卷调查，为了实验的客观性，他先用计算机生成了N个1到1000之间的随机整数（N≤1000），对于其中重复的数字，只保留一个，把其余相同的数去掉，不同的数对应着不同的学生的学号。然后再把这些数从小到大排序，按照排好的顺序去找同学做调查。请你协助明明完成“去重”与“排序”的工作(同一个测试用例里可能会有多组数据，希望大家能正确处理)。 </p>
 <p>  注：测试用例保证输入参数的正确性，答题者无需验证。测试用例不止一组。 当没有新的输入时，说明输入结束。<br><strong>输入描述:</strong></p>
 <pre><code>注意：输入可能有多组数据。每组数据都包括多行，第一行先输入随机整数的个数N，接下来的N行再输入相应个数的整数。具体格式请看下面的&quot;示例&quot;。
 </code></pre>
@@ -530,7 +530,37 @@
  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="4-字符串-字符串分隔（中）"><a href="#4-字符串-字符串分隔（中）" class="headerlink" title="4(字符串) 字符串分隔（中）"></a>4(字符串) <strong>字符串分隔</strong>（中）</h2><p><strong>题目描述</strong></p>
+<p><strong>查看其他解法</strong>：总体利用一个数组，很好的利用数组下标排序的</p>
+<pre><code>while(num = parseInt(readline()))&#123;
+    //利用数组下标的特性，存入数据表示有此数值
+    let arr =[];
+    for(let i = 0;i&lt;num;i++)&#123;
+        let temp = parseInt(readline());
+           arr[temp] = 1;
+    &#125;
+    //遍历数组，如果有标记，则输出下标
+    arr.forEach((val,index)=&gt;&#123;
+        if(val===1)&#123;
+            console.log(index)
+        &#125;
+    &#125;)
+&#125;
+</code></pre>
+<pre><code>while(num = readline())&#123;
+    //利用对象的属性
+    const obj = &#123;&#125;;
+    while(num--)&#123;
+       const number = readline();
+       if(!obj[number])&#123;
+           obj[number]=1;
+       &#125;
+    &#125;
+    for(let result in obj)&#123;
+        console.log(result)
+    &#125; 
+&#125;
+</code></pre>
+<h2 id="HJ4-字符串-字符串分隔（中）"><a href="#HJ4-字符串-字符串分隔（中）" class="headerlink" title="HJ4(字符串) 字符串分隔（中）"></a>HJ4(字符串) <strong>字符串分隔</strong>（中）</h2><p><strong>题目描述</strong></p>
 <p>  •连续输入字符串，请按长度为8拆分每个字符串后输出到新的字符串数组；<br> •长度不是8整数倍的字符串请在后面补数字0，空字符串不处理。  </p>
 <p><strong>输入描述:</strong></p>
 <pre><code>连续输入字符串(输入多次,每个字符串长度小于100)
@@ -549,37 +579,22 @@
 </code></pre>
 <p> 解答：</p>
 <p>第一次</p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
- <span class="token keyword">var</span> strLength <span class="token operator">=</span>line<span class="token punctuation">.</span>length<span class="token punctuation">;</span>
- <span class="token keyword">var</span> N <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>strLength<span class="token operator">/</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token keyword">var</span> mLast <span class="token operator">=</span>strLength<span class="token operator">-</span>N<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">;</span>
- <span class="token keyword">var</span> addnum <span class="token operator">=</span><span class="token number">8</span><span class="token operator">-</span>mLast<span class="token punctuation">;</span>
- <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>N<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">print</span><span class="token punctuation">(</span>line<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
- <span class="token punctuation">}</span>
- <span class="token keyword">if</span><span class="token punctuation">(</span>addnum<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-     <span class="token keyword">var</span> sstr<span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
-     <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>addnum<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        sstr<span class="token operator">+</span><span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
-     <span class="token punctuation">}</span>
-     <span class="token keyword">var</span> firstr <span class="token operator">=</span> line<span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span><span class="token punctuation">(</span>N<span class="token punctuation">)</span><span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">,</span>strLength<span class="token punctuation">)</span><span class="token punctuation">;</span>
-     <span class="token function">print</span><span class="token punctuation">(</span> firstr <span class="token operator">+</span> sstr<span class="token punctuation">)</span>
- <span class="token punctuation">}</span>
-<span class="token punctuation">}</span>
-</code></pre>
-<p>第二次</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> arr<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
 <span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
  arr<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> j<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">&lt;</span>arr<span class="token punctuation">.</span>length<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
  <span class="token keyword">var</span> strLength <span class="token operator">=</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span>length<span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">//取整取完整的行数</span>
  <span class="token keyword">var</span> N <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>strLength<span class="token operator">/</span><span class="token number">8</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token keyword">var</span> mLast <span class="token operator">=</span> strLength<span class="token operator">-</span>N<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">;</span>
- <span class="token keyword">var</span> addnum <span class="token operator">=</span><span class="token number">8</span><span class="token operator">-</span>mLast<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//最后需要补充的数目</span>
+ <span class="token keyword">var</span> addnum <span class="token operator">=</span><span class="token number">8</span><span class="token operator">-</span>mLast<span class="token punctuation">;</span> 
+ <span class="token comment" spellcheck="true">//输出整行的数据</span>
  <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>N<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token function">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">substring</span><span class="token punctuation">(</span>i<span class="token operator">*</span><span class="token number">8</span><span class="token punctuation">,</span><span class="token number">8</span><span class="token operator">*</span><span class="token punctuation">(</span>i<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
  <span class="token punctuation">}</span>
+ <span class="token comment" spellcheck="true">//输出补充的数据</span>
  <span class="token keyword">if</span><span class="token punctuation">(</span>mLast<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
      <span class="token keyword">var</span> sstr<span class="token operator">=</span><span class="token string">'0'</span><span class="token punctuation">;</span>
      <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>addnum<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
@@ -614,7 +629,33 @@
   <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="5-字符串-进制转换（易）"><a href="#5-字符串-进制转换（易）" class="headerlink" title="5(字符串)进制转换（易）"></a>5(字符串)进制转换（易）</h2><p><strong>题目描述</strong></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> ans <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i <span class="token operator">&lt;</span> line<span class="token punctuation">.</span>length<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        ans <span class="token operator">=</span> ans <span class="token operator">+</span> line<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">+</span><span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">>=</span><span class="token number">8</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token function">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+            ans <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+           
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">8</span> <span class="token operator">&amp;&amp;</span> ans<span class="token punctuation">.</span>length <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">while</span><span class="token punctuation">(</span>ans<span class="token punctuation">.</span>length <span class="token operator">&lt;</span> <span class="token number">8</span><span class="token punctuation">)</span> ans <span class="token operator">+</span><span class="token operator">=</span> <span class="token string">'0'</span>
+        <span class="token function">print</span><span class="token punctuation">(</span>ans<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+       
+<span class="token punctuation">}</span>
+</code></pre>
+<p>最佳：先加8位0，然后只取前面整除的部分</p>
+<pre><code>while(str=readline())&#123;
+    str +=&#39;0000000&#39;
+    const length = Math.floor(str.length/8)
+    for(i=0;i&lt;length;i++)&#123;
+        console.log(str.substr(i*8,8))
+    &#125;
+&#125;
+</code></pre>
+<h2 id="HJ5-字符串-进制转换（易）"><a href="#HJ5-字符串-进制转换（易）" class="headerlink" title="HJ5(字符串)进制转换（易）"></a>HJ5(字符串)进制转换（易）</h2><p><strong>题目描述</strong></p>
 <p>  写出一个程序，接受一个十六进制的数，输出该数值的十进制表示。 </p>
 <p><strong>输入描述:</strong></p>
 <pre><code>输入一个十六进制的数值字符串。注意：一个用例会同时有多组输入数据，请参考帖子https://www.nowcoder.com/discuss/276处理多组输入的问题。
@@ -635,7 +676,7 @@
     <span class="token function">print</span><span class="token punctuation">(</span>output<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<h2 id="6质数因子（难）"><a href="#6质数因子（难）" class="headerlink" title="6质数因子（难）"></a>6<strong>质数因子</strong>（难）</h2><p><strong>题目描述</strong></p>
+<h2 id="HJ6质数因子（难）"><a href="#HJ6质数因子（难）" class="headerlink" title="HJ6质数因子（难）"></a>HJ6<strong>质数因子</strong>（难）</h2><p><strong>题目描述</strong></p>
 <p>  功能:输入一个正整数，按照从小到大的顺序输出它的所有质因子（重复的也要列举）（如180的质因子为2 2 3 3 5 ） </p>
 <p>  最后一个数后面也要有空格  </p>
 <p>输入描述:</p>
@@ -651,6 +692,7 @@
 <pre><code>2 2 3 3 5
 </code></pre>
 <p>解析:</p>
+<p>第一次的思路</p>
 <p> 查找质数的方法，从2开始除,不能被2除，则尝试3，不能被3除，也不能被4除，尝试5。。。 每除一次进行一次循环。从小到大找出所有质数</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
 <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
@@ -664,7 +706,8 @@
 <span class="token punctuation">}</span>
 <span class="token function">print</span><span class="token punctuation">(</span>arr<span class="token punctuation">.</span><span class="token function">join</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
-
+<span class="token comment" spellcheck="true">//3800ms</span>
+<span class="token comment" spellcheck="true">//为了除完2，做了过多的循环判断</span>
 </code></pre>
 <p><strong>优化解法：</strong></p>
 <p>扩展补充：就分解的质数：</p>
@@ -723,8 +766,9 @@
  <span class="token punctuation">}</span>
  <span class="token keyword">return</span> arr<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
+<span class="token comment" spellcheck="true">//1900ms</span>
 </code></pre>
-<h2 id="7-取近似值（易）"><a href="#7-取近似值（易）" class="headerlink" title="7 取近似值（易）"></a>7 取近似值（易）</h2><p>题目描述</p>
+<h2 id="HJ7-取近似值（易）"><a href="#HJ7-取近似值（易）" class="headerlink" title="HJ7 取近似值（易）"></a>HJ7 取近似值（易）</h2><p>题目描述</p>
 <p>  写出一个程序，接受一个正浮点数值，输出该数值的近似整数值。如果小数点后数值大于等于5,向上取整；小于5，则向下取整。 </p>
 <p>输入描述:</p>
 <pre><code>输入一个正浮点数值
@@ -754,7 +798,7 @@
 <li>返回两数中的较大者Math.max(1,2);   Math.min(1,2);  </li>
 <li>随机数（0-1）Math.random();</li>
 </ul>
-<h2 id="8合并表记录-中"><a href="#8合并表记录-中" class="headerlink" title="8合并表记录(中)"></a>8合并表记录(中)</h2><p>题目描述</p>
+<h2 id="HJ8合并表记录-中"><a href="#HJ8合并表记录-中" class="headerlink" title="HJ8合并表记录(中)"></a>HJ8合并表记录(中)</h2><p>题目描述</p>
 <p>  数据表记录包含表索引和数值（int范围的正整数），请对表索引相同的记录进行合并，即将相同索引的数值进行求和运算，输出按照key值升序进行输出。 </p>
 <p>输入描述:</p>
 <pre><code>先输入键值对的个数
@@ -775,7 +819,7 @@
 <span class="token number">1</span> <span class="token number">2</span>
 <span class="token number">3</span> <span class="token number">4</span>
 </code></pre>
-<p> 解析</p>
+<p> 解析: 利用 map 缓存键，后续判断，如果有值组累加结果，如果没有，继续添加新的值</p>
 <pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">while</span><span class="token punctuation">(</span>line<span class="token operator">=</span><span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
  <span class="token keyword">let</span> lines <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">round</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span><span class="token punctuation">;</span>
  <span class="token keyword">let</span> arrs <span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
@@ -783,7 +827,7 @@
  <span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>lines<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
     <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token keyword">if</span><span class="token punctuation">(</span>m<span class="token punctuation">.</span><span class="token function">has</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-        m<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>m<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">parseInt</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ m<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span>m<span class="token punctuation">.</span><span class="token keyword">get</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">+</span><span class="token function">parseInt</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
          m<span class="token punctuation">.</span><span class="token keyword">set</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token function">parseInt</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token punctuation">}</span>
@@ -800,7 +844,39 @@
  <span class="token punctuation">}</span><span class="token punctuation">)</span>
 <span class="token punctuation">}</span>
 </code></pre>
-<p>9</p>
+<p>优解: 利用对象的属性不重复，保存键</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> count<span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>count <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">printAll</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">printAll</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">--</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token keyword">var</span> str <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">" "</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token keyword">if</span><span class="token punctuation">(</span><span class="token operator">!</span>obj<span class="token punctuation">[</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            obj<span class="token punctuation">[</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> str<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token punctuation">{</span>
+            obj<span class="token punctuation">[</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>str<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">parseInt</span><span class="token punctuation">(</span>str<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span>key<span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key<span class="token punctuation">,</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>优解：写法简洁</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">let</span> amount <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> map <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">while</span><span class="token punctuation">(</span>amount<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">let</span> arr <span class="token operator">=</span> <span class="token function">readline</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    map<span class="token punctuation">[</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span>map<span class="token punctuation">[</span>arr<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">||</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">Number</span><span class="token punctuation">(</span>arr<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    amount<span class="token operator">--</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+ 
+<span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">let</span> key <span class="token keyword">in</span> map<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>key <span class="token operator">+</span> <span class="token string">' '</span> <span class="token operator">+</span> map<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>HJ9,提取不重复的数字</p>
 <p>题目描述</p>
 <p>  输入一个int型整数，按照从右向左的阅读顺序，返回一个不含重复数字的新的整数。 </p>
 <p>  保证输入的整数最后一位不是0。</p>
@@ -1274,7 +1350,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">120.2k</span>&nbsp;字
+                class="white-color">169.8k</span>&nbsp;字
             
             
             
