@@ -1,0 +1,1288 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content=".Net Core微服务入门全纪录, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>.Net Core微服务入门全纪录 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">.Net Core微服务入门全纪录</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/abp/">
+                                <span class="chip bg-color">abp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/abp/" class="post-category">
+                                abp
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-03-23
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-03-25
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    8 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/eB4h7iCQqA5R08-nkjH_hw">https://mp.weixin.qq.com/s/eB4h7iCQqA5R08-nkjH_hw</a></p>
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>写这篇博客主要目的是记录一下自己的学习过程，只能是简单入门级别的，因为水平有限就写到哪算哪吧，写的不对之处欢迎指正。代码放在：</p>
+<p><a href="https://github.com/xiajingren/NetCoreMicroserviceDemo">https://github.com/xiajingren/NetCoreMicroserviceDemo</a></p>
+<h1 id="什么是微服务？"><a href="#什么是微服务？" class="headerlink" title="什么是微服务？"></a>什么是微服务？</h1><p>关于微服务的概念解释网上有很多… 个人理解，微服务是一种系统架构模式，它和语言无关，和框架无关，和工具无关，和服务器环境无关… 微服务思想是将传统的单体系统按照业务拆分成多个职责单一、且可独立运行的接口服务。至于服务如何拆分，没有明确的定义。几乎任何后端语言都能做微服务开发。微服务也并不是完美无缺的，微服务架构会带来更多的问题，增加系统的复杂度，引入更多的技术栈…</p>
+<h1 id="创建项目"><a href="#创建项目" class="headerlink" title="创建项目"></a>创建项目</h1><p><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSEXLyzxb0wQawlOtqHiboL2prBxj9o6xQaViaDVWgaSySy0w3NnHm77Zw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">一个客户端，一个产品服务，一个订单服务。3个项目都是asp.net core web应用程序。创建项目的时候记得启用一下Docker支持，或者后面添加也行。</p>
+<p>为产品、订单服务添加一些基础代码，就简单的返回一下 服务名称，当前时间，服务的ip、端口。<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSHyjS2CibgV43lP5mMxticX7kEEibvXewvGhprll7p993EAUOMmI9dHxhQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSo6u6qT92TETncAq3KKSe6Yhl8nRxWWtahSNib6nHpc4tcEADElEPeGg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<h1 id="在Docker中运行服务"><a href="#在Docker中运行服务" class="headerlink" title="在Docker中运行服务"></a>在Docker中运行服务</h1><p>为了方便，我使用Docker来运行服务，不用Docker也行，关于docker的安装及基本使用就不介绍了。</p>
+<ul>
+<li>build镜像：</li>
+</ul>
+<p>在项目根目录打开PowerShell窗口执行：<code>docker build -t productapi -f ./Product.API/Dockerfile .</code><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSgoOyp6bkiaB3CNcEQl15CTN705PD10SAm2s7q3cubRTj5UdeDfB8t2A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSFaH0mHKO6SIPTViblC8sascddQ1NXX1GtKb4BwicCAS1lqohLqY2BwKA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">Successfully代表build成功了。</p>
+<ul>
+<li>运行容器:</li>
+</ul>
+<p>执行：<code>docker run -d -p 9050:80 --name productservice productapi</code><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSpbxFrfy8Y26UAiaIBXbibRZd0zicF5vfz25mMlwNLrJdAoOuCoLiaUT2Sg/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>执行：<code>docker ps</code>查看运行的容器：<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSGOUibySRHobjHD9U4iavIGBkWcVKQ8MedfAaFibud4Qic9URGyNtdnxsnQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<p>没问题，使用浏览器访问一下接口：<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSyB7ttFwicbmU5tWcHRNzMia3VIkFSNa9icRH6kqDFySvibYVUwAfYQH5ew/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">也没问题，其中的ip端口是Docker容器内部的ip端口，所以端口是80，这个无所谓。</p>
+<ul>
+<li>产品服务部署好了，下面部署一下订单服务，也是同样的流程，就把指令简单贴一下吧：</li>
+</ul>
+<p>build镜像：<code>docker build -t orderapi -f ./Order.API/Dockerfile .</code>运行容器：<code>docker run -d -p 9060:80 --name orderservice orderapi</code>浏览器访问一下：<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSia7icGGWJxxUdh6ibLFnQS9nQ4LxibsLE5WEDO8RVuLwibAia4xL5cmHJvaA/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">OK，订单服务也部署完成了。</p>
+<h1 id="客户端调用"><a href="#客户端调用" class="headerlink" title="客户端调用"></a>客户端调用</h1><p>客户端我这里只做了一个web客户端，实际可能是各种业务系统、什么PC端、手机端、小程序。。。这个明白就好，为了简单就不搞那么多了。</p>
+<ul>
+<li>因为客户端需要http请求服务端接口，所以需要一个http请求客户端，我个人比较习惯RestSharp，安利一波：<a href="https://github.com/restsharp/RestSharp![%E5%9B%BE%E7%89%87](https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSZ0kt7NTA38AibKpn5ndZVm0icftosNsHsySvCYTONwclTbrB2oosedGw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1)">https://github.com/restsharp/RestSharp![图片](https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSZ0kt7NTA38AibKpn5ndZVm0icftosNsHsySvCYTONwclTbrB2oosedGw/640?wx_fmt=png&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1&amp;wx_co=1)</a></li>
+<li>添加基础代码：<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSjkbnGhFficV5eUfzBW2LLMfWc2gibRJgoxg6vOZ6QYibyhicgfm6uia370A/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></li>
+</ul>
+<p>IServiceHelper.cs：</p>
+<pre><code>    public interface IServiceHelper
+    &#123;
+        /// &lt;summary&gt;
+        /// 获取产品数据
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        Task&lt;string&gt; GetProduct();
+
+        /// &lt;summary&gt;
+        /// 获取订单数据
+        /// &lt;/summary&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        Task&lt;string&gt; GetOrder();
+    &#125;
+</code></pre>
+<p>ServiceHelper.cs：</p>
+<pre><code>    public class ServiceHelper : IServiceHelper
+    &#123;
+        public async Task&lt;string&gt; GetOrder()
+        &#123;
+            string serviceUrl = &quot;http://localhost:9060&quot;;//订单服务的地址，可以放在配置文件或者数据库等等...
+
+            var Client = new RestClient(serviceUrl);
+            var request = new RestRequest(&quot;/orders&quot;, Method.GET);
+
+            var response = await Client.ExecuteAsync(request);
+            return response.Content;
+        &#125;
+
+        public async Task&lt;string&gt; GetProduct()
+        &#123;
+            string serviceUrl = &quot;http://localhost:9050&quot;;//产品服务的地址，可以放在配置文件或者数据库等等...
+
+            var Client = new RestClient(serviceUrl);
+            var request = new RestRequest(&quot;/products&quot;, Method.GET);
+
+            var response = await Client.ExecuteAsync(request);
+            return response.Content;
+        &#125;
+    &#125;
+</code></pre>
+<p>Startup.cs：</p>
+<pre><code>    public class Startup
+    &#123;
+        public Startup(IConfiguration configuration)
+        &#123;
+            Configuration = configuration;
+        &#125;
+
+        public IConfiguration Configuration &#123; get; &#125;
+
+        // This method gets called by the runtime. Use this method to add services to the container.
+        public void ConfigureServices(IServiceCollection services)
+        &#123;
+            services.AddControllersWithViews();
+            
+            //注入IServiceHelper
+            services.AddSingleton&lt;IServiceHelper, ServiceHelper&gt;();
+        &#125;
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        &#123;
+            if (env.IsDevelopment())
+            &#123;
+                app.UseDeveloperExceptionPage();
+            &#125;
+            else
+            &#123;
+                app.UseExceptionHandler(&quot;/Home/Error&quot;);
+            &#125;
+            app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =&gt;
+            &#123;
+                endpoints.MapControllerRoute(
+                    name: &quot;default&quot;,
+                    pattern: &quot;&#123;controller=Home&#125;/&#123;action=Index&#125;/&#123;id?&#125;&quot;);
+            &#125;);
+        &#125;
+    &#125;
+</code></pre>
+<p>HomeController.cs：</p>
+<pre><code>    public class HomeController : Controller
+    &#123;
+        private readonly ILogger&lt;HomeController&gt; _logger;
+        private readonly IServiceHelper _serviceHelper;
+
+        public HomeController(ILogger&lt;HomeController&gt; logger, IServiceHelper serviceHelper)
+        &#123;
+            _logger = logger;
+            _serviceHelper = serviceHelper;
+        &#125;
+
+        public async Task&lt;IActionResult&gt; Index()
+        &#123;
+            ViewBag.OrderData = await _serviceHelper.GetOrder();
+            ViewBag.ProductData = await _serviceHelper.GetProduct();
+
+            return View();
+        &#125;
+
+        public IActionResult Privacy()
+        &#123;
+            return View();
+        &#125;
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        &#123;
+            return View(new ErrorViewModel &#123; RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier &#125;);
+        &#125;
+    &#125;
+</code></pre>
+<p>Index.cshtml：</p>
+<pre><code>@&#123;
+    ViewData[&quot;Title&quot;] = &quot;Home Page&quot;;
+&#125;
+
+&lt;div class=&quot;text-center&quot;&gt;
+    &lt;h1 class=&quot;display-4&quot;&gt;Welcome&lt;/h1&gt;
+    &lt;p&gt;
+        @ViewBag.OrderData
+    &lt;/p&gt;
+    &lt;p&gt;
+        @ViewBag.ProductData
+    &lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>代码比较简单，这里就不用docker了，直接控制台启动，使用浏览器访问：<img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSNgMOWVtvxJJs8ZANkib46aibWbIk6aKNpNSOlVNJ2r1bwccFXdTea4fQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"></p>
+<ul>
+<li>一切正常。进行到这里，各个服务也独立运行了，客户端也能正常调用了，貌似算是完成一个简易的微服务了。但是，微服务架构最重要的原则就是——“高可用”。以上的做法明显不能满足高可用性，因为任何一个服务挂掉，所有依赖这个服务的业务系统都会受影响。</li>
+</ul>
+<p>停止一下订单服务：<code>docker stop orderservice</code><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSf7ytF6RXy3Wsdn3NS0xJRlKTiaul3rAibR4gN81949t3rDfkOcvZWWFQ/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片"><img src="https://mmbiz.qpic.cn/mmbiz_png/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bScKxfeG8RxKrureyUK7rYkteXm1oLfql0kfjCuhiaAmzIL3aCsUAoURw/640?wx_fmt=png&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1" alt="图片">订单服务停止，导致客户端业务系统无法获取订单数据。要解决这个问题，很容易想到：集群。</p>
+<h1 id="简单的服务集群"><a href="#简单的服务集群" class="headerlink" title="简单的服务集群"></a>简单的服务集群</h1><p>既然单个服务实例有挂掉的风险，那么部署多个服务实例就好了嘛，只要大家不同时全挂就行。</p>
+<ul>
+<li>使用docker运行多个服务实例：</li>
+</ul>
+<pre><code>docker run -d -p 9061:80 --name orderservice1 orderapi
+docker run -d -p 9062:80 --name orderservice2 orderapi
+docker run -d -p 9051:80 --name productservice1 productapi
+docker run -d -p 9052:80 --name productservice2 productapi
+</code></pre>
+<p>现在订单服务和产品服务都增加到3个服务实例。</p>
+<ul>
+<li>那么稍微改造一下客户端代码吧：ServiceHelper.cs：</li>
+</ul>
+<pre><code>public class ServiceHelper : IServiceHelper
+    &#123;
+        public async Task&lt;string&gt; GetOrder()
+        &#123;
+            string[] serviceUrls = &#123; &quot;http://localhost:9060&quot;, &quot;http://localhost:9061&quot;, &quot;http://localhost:9062&quot; &#125;;//订单服务的地址，可以放在配置文件或者数据库等等...
+
+            //每次随机访问一个服务实例
+            var Client = new RestClient(serviceUrls[new Random().Next(0, 3)]);
+            var request = new RestRequest(&quot;/orders&quot;, Method.GET);
+
+            var response = await Client.ExecuteAsync(request);
+            return response.Content;
+        &#125;
+
+        public async Task&lt;string&gt; GetProduct()
+        &#123;
+            string[] serviceUrls = &#123; &quot;http://localhost:9050&quot;, &quot;http://localhost:9051&quot;, &quot;http://localhost:9052&quot; &#125;;//产品服务的地址，可以放在配置文件或者数据库等等...
+
+            //每次随机访问一个服务实例
+            var Client = new RestClient(serviceUrls[new Random().Next(0, 3)]);
+            var request = new RestRequest(&quot;/products&quot;, Method.GET);
+
+            var response = await Client.ExecuteAsync(request);
+            return response.Content;
+        &#125;
+    &#125;
+</code></pre>
+<p>当然拿到这些服务地址可以自己做复杂的负载均衡策略，比如轮询，随机，权重等等 都行，甚至在中间弄个nginx也可以。这些不是重点，所以就简单做一个随机吧，每次请求来了随便访问一个服务实例。</p>
+<ul>
+<li>浏览器测试一下：<img src="https://mmbiz.qpic.cn/mmbiz_gif/cJJ4je5Nk3JUiaKbcHmISWXkSjhHNj8bSavsibWO5NANJuAXwZETkqGbicgxYfgLbjYu5zu3OKexB4aeyLuyonmaw/640?wx_fmt=gif&tp=webp&wxfrom=5&wx_lazy=1" alt="图片">可以看到请求被随机分配了。但是这种做法依然不安全，如果随机访问到的实例刚好挂掉，那么业务系统依然会出问题。简单处理思路是：1.如果某个地址请求失败了，那么换一个地址接着执行。2.如果某个地址的请求连续多次失败了，那么就移除这个地址，下次就不会访问到它了。。。。。。。业务系统实现以上逻辑，基本上风险就很低了，也算是大大增加了系统可用性了。</li>
+<li>然后思考另一个问题：</li>
+</ul>
+<p>实际应用中，上层的业务系统可能非常多，为了保证可用性，每个业务系统都去考虑服务实例挂没挂掉吗？而且实际应用中服务实例的数量或者地址大多是不固定的，例如双十一来了，流量大了，增加了一堆服务实例，这时候每个业务系统再去配置文件里配置一下这些地址吗？双十一过了又去把配置删掉吗？显然是不现实的，服务必须要做到可灵活伸缩。</p>
+<ul>
+<li>这时候就引入一个名词：服务注册与发现</li>
+</ul>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/net-core-wei-fu-wu-ru-men-xiao-hei/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/net-core-wei-fu-wu-ru-men-xiao-hei/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/abp/">
+                                    <span class="chip bg-color">abp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/23/vue/qian-duan-wen-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-23
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            JiangYuesheng
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/03/23/abp/abp-shi-zhan-hui-zong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            abp实践开发问题
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/abp/" class="post-category">
+                                    abp
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/abp/">
+                        <span class="chip bg-color">abp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">230.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

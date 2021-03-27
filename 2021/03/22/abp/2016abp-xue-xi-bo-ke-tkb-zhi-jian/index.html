@@ -390,14 +390,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    38.3k
+                    67.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    143 分
+                    254 分
                 </div>
                 
 
@@ -417,7 +417,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="ABP理论学习之开篇介绍"><a href="#ABP理论学习之开篇介绍" class="headerlink" title="     ABP理论学习之开篇介绍         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPIntro.html">     ABP理论学习之开篇介绍         </a></h1><p><strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPTheory.html">返回总目录</a></strong></p>
+                <p><strong>作者：<a target="_blank" rel="noopener" href="http://farb.cnblogs.com/">tkb至简</a>    来源：<a target="_blank" rel="noopener" href="http://farb.cnblogs.com/">http://farb.cnblogs.com/</a></strong></p>
+<h1 id="ABP理论学习之开篇介绍"><a href="#ABP理论学习之开篇介绍" class="headerlink" title="     ABP理论学习之开篇介绍         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPIntro.html">     ABP理论学习之开篇介绍         </a></h1><p><strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPTheory.html">返回总目录</a></strong></p>
 <hr>
 <p>为了和2016年春节赛跑，完成该系列博客，我牺牲了今天中午的时间来完成该系列的第一篇————开篇介绍。开篇介绍嘛，读过大学教材的同学都知道，这玩意总是那么无聊，跟考试没关系，干脆直接跳过，呵呵，多么美好的大学时光啊！不过，现在想想，开篇介绍确实不怎么重要，它只是告诉我们今后我要开始讲什么了，主要讲什么，大概浏览下重点。<br> 哦了，不扯了，时间不多了，干活！</p>
 <hr>
@@ -698,6 +699,8 @@ Configuration.Modules.MyModule().SampleConfig2 = "test";
 }
 </code></pre>
 <p>这样，在ABP系统中，模块就可以创建集中配置点了，也就是说模块可以集中起来配置了。</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321131332998.png" alt="image-20210321131332998"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321131519767.png" alt="image-20210321131519767"></p>
 <h1 id="ABP理论学习之多租户"><a href="#ABP理论学习之多租户" class="headerlink" title="     ABP理论学习之多租户         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMultiTenancy.html">     ABP理论学习之多租户         </a></h1><h1 id><a href="#" class="headerlink" title="         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMultiTenancy.html">         </a></h1><p><strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPTheory.html">返回总目录</a></strong></p>
 <hr>
 <h2 id="本篇目录-4"><a href="#本篇目录-4" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
@@ -995,7 +998,8 @@ public class MyPersonManager : IPersonManager, ISingletonDependency
 <p>如果你想要直接使用IOC容器（Castle Windor）来解析依赖，那么你可以构造函数注入<strong>IIocManager</strong>并使用IIocManager.IocContainer属性。如果你处于静态上下文或者不能注入IIocManager，那么最后的机会就是，你可以使用单例对象<strong>IocManager.Instance</strong>。但是，这种情况不容易测试。</p>
 <h4 id="其他-2"><a href="#其他-2" class="headerlink" title="其他"></a>其他</h4><h5 id="IShouldInitialize接口"><a href="#IShouldInitialize接口" class="headerlink" title="IShouldInitialize接口"></a>IShouldInitialize接口</h5><p>某些类在第一次使用前就要初始化。IShouldInitialize接口有一个Initialize方法。如果实现了该接口，那么在创建对象之后（使用前）就会自动地调用Initialize方法。当然，为了使该功能有效，你应该注入/解析该对象。</p>
 <h4 id="ASP-NET-MVC和ASP-NET-Web-API集成"><a href="#ASP-NET-MVC和ASP-NET-Web-API集成" class="headerlink" title="ASP.NET MVC和ASP.NET Web API集成"></a>ASP.NET MVC和ASP.NET Web API集成</h4><p>当然，为了解析依赖图中的根对象，我们必须调用依赖注入系统。在ASP.NET MVC应用中，根对象一般是一个<strong>Controller</strong>类。我们也可以在控制器中使用构造函数注入和属性注入模式。当一个请求到达应用时，IOC容器创建了控制器对象，然后所有的依赖递归地解析出来。那么，谁处理的这个呢？这是ABP通过扩展了ASP.NET MVC默认的控制器工厂自动完成的。相似地，对于ASP.Net Web API也是如此。你不必关心创建和释放对象的事情。</p>
-<h4 id="最后提示"><a href="#最后提示" class="headerlink" title="最后提示"></a>最后提示</h4><p>只要你遵循规则并使用上面的结构，ABP就能简化并自动化依赖注入的使用。大多数情况下，这些已经够用了。但是，如果你需要的话，你可以直接使用所有Castle Windsor的能力来执行任何任务（如自定义注册，注入钩子，拦截器等等）</p>
+<h4 id="最后提示"><a href="#最后提示" class="headerlink" title="最后提示"></a>最后提示</h4><p>只要你遵循规则并使用上面的结构，ABP就能简化并自动化依赖注入的使用。大多数情况下，这些已经够用了。但是，如果你需要的话，你可以直接使用所有Castle Windsor的能力来执行任何任务（如自定义注册，注入钩子，拦截器等等）<img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321131043687.png" alt="image-20210321131043687"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321131205896.png" alt="image-20210321131205896"></p>
 <h1 id="ABP理论学习之Abp-Session"><a href="#ABP理论学习之Abp-Session" class="headerlink" title="ABP理论学习之Abp Session"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSession.html">ABP理论学习之Abp Session</a></h1><hr>
 <h2 id="本篇目录-6"><a href="#本篇目录-6" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSession.html#intro">介绍</a></strong></li>
@@ -1032,6 +1036,7 @@ public class MyPersonManager : IPersonManager, ISingletonDependency
 <li><strong>MultiTenancySide</strong>:可能是Host（租主）或者Tenant（租户）。</li>
 </ul>
 <p>UserId和TenantId是<strong>nullable(可空的)**，也存在不可空的</strong>GetUserId()**和 **GetTenantId()**方法。如果你确定当前的用户存在，那么你可以调用GetUserId()。如果当前的用户为null，那么该方法就会抛异常。GetTanantId()也是类似的。</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321114918477.png" alt="image-20210321114918477"></p>
 <h1 id="ABP理论学习之缓存Caching"><a href="#ABP理论学习之缓存Caching" class="headerlink" title="ABP理论学习之缓存Caching"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPCaching.html">ABP理论学习之缓存Caching</a></h1><hr>
 <h2 id="本篇目录-7"><a href="#本篇目录-7" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPCaching.html#intro">介绍</a></strong></li>
@@ -1196,6 +1201,7 @@ public class TaskAppService : ITaskAppService
 </code></pre>
 <p>这是<strong>我们直接依赖log4net的唯一代码行</strong>。而且，只有web项目依赖log4net类库的nuget包。因此，你可以轻松地切换到其他日志类库，而且不需要改变记录日志的代码。</p>
 <h3 id="客户端"><a href="#客户端" class="headerlink" title="客户端###"></a>客户端###</h3><p>ABP为客户端定义了一个javascript日志记录API。默认会将日志记录到浏览器的控制台。记录日志的javascript代码样例如下：</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321130900892.png" alt="image-20210321130900892"></p>
 <h1 id="ABP理论学习之设置管理"><a href="#ABP理论学习之设置管理" class="headerlink" title="ABP理论学习之设置管理"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSettingManagement.html">ABP理论学习之设置管理</a></h1><hr>
 <h2 id="本篇目录-9"><a href="#本篇目录-9" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSettingManagement.html#intro">介绍</a></strong></li>
@@ -1284,6 +1290,7 @@ var value2 = SettingManager.GetSettingValue("SmtpServerAddress");
 <p>也有<strong>getInt</strong>和 <strong>getBoolean</strong> 方法。你可以使用<strong>abp.setting.values</strong>获得所有的值。注意：如果在服务端更改了一个setting，那么如果页面没有更新，setting没有重新加载或者通过代码手动更新的话，那么客户端就不知道该setting是否发生了变化。</p>
 <h3 id="更改设置"><a href="#更改设置" class="headerlink" title="更改设置###"></a>更改设置###</h3><p>ISettingManager为应用程序，租户和用户分别定义了<strong>ChangeSettingForApplicationAsync, ChangeSettingForTenantAsync和ChangeSettingForUserAsync</strong>方法来更改setting。</p>
 <h3 id="关于缓存"><a href="#关于缓存" class="headerlink" title="关于缓存###"></a>关于缓存###</h3><p>Setting Manager(管理者)缓存到了服务端的setting了。因此，我们不应该使用仓储或者数据库更新来直接更改一个setting的值。</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321130753223.png" alt="image-20210321130753223"></p>
 <h1 id="领域层-1"><a href="#领域层-1" class="headerlink" title="领域层"></a>领域层</h1><h1 id="ABP理论学习之实体类"><a href="#ABP理论学习之实体类" class="headerlink" title="ABP理论学习之实体类"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntity.html">ABP理论学习之实体类</a></h1><hr>
 <h2 id="本篇目录-10"><a href="#本篇目录-10" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntity.html#entity">实体类</a></strong></li>
@@ -1573,7 +1580,7 @@ Task<long> LongCountAsync(Expression<Func<TEntity, bool>> predicate);
 <li>对于一个T类型的实体，使用IRepository仓储接口。除非真的需要，否则不要创建自定义的仓储。预定义的仓储方法对于很多情况足够用了。</li>
 <li>如果你正在创建一个自定义的仓储（通过扩展IRepository）： 仓储类应该是无状态的。这意味着，你不应该定义仓储级别的状态对象，而且一个仓储方法调用不应该影响其他的调用。 自定义仓储方法不应该包含业务逻辑或者应用逻辑，而应该只执行数据相关的或者orm特定的任务。 当仓储使用依赖注入时，给其他服务定义更少的或者不要定义依赖。</li>
 </ul>
-<h1 id="ABP理论学习之领域服务"><a href="#ABP理论学习之领域服务" class="headerlink" title="ABP理论学习之领域服务"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPDomainService.html">ABP理论学习之领域服务</a></h1><hr>
+<h1 id="ABP理论学习之领域服务（重点）"><a href="#ABP理论学习之领域服务（重点）" class="headerlink" title="ABP理论学习之领域服务（重点）"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPDomainService.html">ABP理论学习之领域服务（重点）</a></h1><hr>
 <h2 id="本篇目录-12"><a href="#本篇目录-12" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPDomainService.html#intro">介绍</a></strong></li>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPDomainService.html#IDomain">IDomainService接口和DomainService类</a></strong></li>
@@ -1717,7 +1724,7 @@ Task<long> LongCountAsync(Expression<Func<TEntity, bool>> predicate);
 }
 </code></pre>
 <p>现在，不存在将一个任务派给一个人的第二种方法了。我们应该总是要使用AssignToPerson方法，而且不能跳过业务规则了。</p>
-<h1 id="ABP理论学习之工作单元-Unit-of-Work"><a href="#ABP理论学习之工作单元-Unit-of-Work" class="headerlink" title="ABP理论学习之工作单元(Unit of Work)"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPUnitofWork.html">ABP理论学习之工作单元(Unit of Work)</a></h1><hr>
+<h1 id="ABP理论学习之工作单元-Unit-of-Work-（重要）"><a href="#ABP理论学习之工作单元-Unit-of-Work-（重要）" class="headerlink" title="ABP理论学习之工作单元(Unit of Work)（重要）"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPUnitofWork.html">ABP理论学习之工作单元(Unit of Work)（重要）</a></h1><hr>
 <h2 id="本篇目录-13"><a href="#本篇目录-13" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPUnitofWork.html#ways">公共连接和事务管理方法</a></strong></li>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPUnitofWork.html#abpConn">ABP中的连接和事务管理</a></strong><ul>
@@ -1942,6 +1949,552 @@ public SearchPeopleOutput SearchPeople(SearchPeopleInput input)
     _taskRepository.Insert(task);
 }
 </code></pre>
+<h2 id="事务与锁（补充：重要）"><a href="#事务与锁（补充：重要）" class="headerlink" title="事务与锁（补充：重要）"></a>事务与锁（补充：重要）</h2><h3 id="事务的级别"><a href="#事务的级别" class="headerlink" title="事务的级别"></a>事务的级别</h3><p>事务的隔离级别</p>
+<p>事务的四大特性分别是：原子性、一致性、隔离性、持久性</p>
+<p>幻读和不可重复读都是在同一个事务中多次读取了其他事务已经提交的事务的数据导致每次读取的数据不一致，所不同的是不可重复读读取的是同一条数据，而幻读针对的是一批数据整体的统计(比如数据的个数)</p>
+<p>以MYSQL数据库来分析四种隔离级别</p>
+<p>第一种隔离级别：Read uncommitted(读未提交)<br>如果一个事务已经开始写数据，则另外一个事务不允许同时进行写操作，但允许其他事务读此行数据，该隔离级别可以通过“排他写锁”，但是不排斥读线程实现。这样就避免了更新丢失，却可能出现脏读，也就是说事务B读取到了事务A未提交的数据</p>
+<p>解决了更新丢失，但还是可能会出现脏读</p>
+<p>第二种隔离级别：Read committed(读提交)<br>如果是一个读事务(线程)，则允许其他事务读写，如果是写事务将会禁止其他事务访问该行数据，该隔离级别避免了脏读，但是可能出现不可重复读。事务A事先读取了数据，事务B紧接着更新了数据，并提交了事务，而事务A再次读取该数据时，数据已经发生了改变。</p>
+<p>解决了更新丢失和脏读问题</p>
+<p>第三种隔离级别：Repeatable read(可重复读取)<br>可重复读取是指在一个事务内，多次读同一个数据，在这个事务还没结束时，其他事务不能访问该数据(包括了读写)，这样就可以在同一个事务内两次读到的数据是一样的，因此称为是可重复读隔离级别，读取数据的事务将会禁止写事务(但允许读事务)，写事务则禁止任何其他事务(包括了读写)，这样避免了不可重复读和脏读，但是有时可能会出现幻读。(读取数据的事务)可以通过“共享读镜”和“排他写锁”实现。</p>
+<p>解决了更新丢失、脏读、不可重复读、但是还会出现幻读</p>
+<p>第四种隔离级别：Serializable(可序化)<br>提供严格的事务隔离，它要求事务序列化执行，事务只能一个接着一个地执行，但不能并发执行，如果仅仅通过“行级锁”是无法实现序列化的，必须通过其他机制保证新插入的数据不会被执行查询操作的事务访问到。序列化是最高的事务隔离级别，同时代价也是最高的，性能很低，一般很少使用，在该级别下，事务顺序执行，不仅可以避免脏读、不可重复读，还避免了幻读</p>
+<p>解决了更新丢失、脏读、不可重复读、幻读(虚读)<br>————————————————<br>在这里插入图片描述<br>以上四种隔离级别最高的是Serializable级别，最低的是Read uncommitted级别，当然级别越高，执行效率就越低，像Serializeble这样的级别，就是以锁表的方式(类似于Java多线程中的锁)使得其他线程只能在锁外等待，所以平时选用何种隔离级别应该根据实际情况来，在MYSQL数据库中默认的隔离级别是Repeatable read（可重复读）。</p>
+<p>在MYSQL数据库中，支持上面四种隔离级别，默认的为Repeatable read(可重复读)；而在Oracle数据库中，只支持Serializeble(串行化)级别和Read committed(读已提交)这两种级别，其中默认的为Read committed级别</p>
+<p>在MYSQL数据库中查看当前事务的隔离级别</p>
+<p>SELECT @@tx_isolation;</p>
+<pre><code>1
+</code></pre>
+<p>在MYSQL数据库中设置事务的隔离级别：<br>在这里插入图片描述<br>在这里插入图片描述<br>在这里插入图片描述<br>记住：设置数据库的隔离级别一定要是在开启事务之前：</p>
+<p>如果是使用JDBC对数据库的事务设置隔离级别的话，也应该是在调用Connecton对象的setAutoCommit(false)方法之前，调用Connection对象的setTransactionIsolation(level)即可设置当前连接的隔离级别，至于参数level，可以使用Connection对象的字段：<br>在这里插入图片描述<br>在JDBC中设置隔离级别的部分代码：<br>在这里插入图片描述<br>隔离级别的设置只对当前连接有效，对于使用MYSQL命令窗口而言，一个窗口就相当于一个连接，当前窗口设置的隔离级别只对当前窗口中的事务有效，对于JDBC操作数据库来说，一个Connection对象相当与一个连接，而对于Connection对象设置的隔离级别只对该Connection对象有效，与其他连接Connection对象无关<br>————————————————<br>版权声明：本文为CSDN博主「zhouym_」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/zhouym_/article/details/90381606">https://blog.csdn.net/zhouym_/article/details/90381606</a></p>
+<h3 id="什么时候事务会发生锁定事件"><a href="#什么时候事务会发生锁定事件" class="headerlink" title="什么时候事务会发生锁定事件"></a>什么时候事务会发生锁定事件</h3><h4 id="Mysql数据库锁定机制详细介绍"><a href="#Mysql数据库锁定机制详细介绍" class="headerlink" title="Mysql数据库锁定机制详细介绍"></a>Mysql数据库锁定机制详细介绍</h4><p>  更新时间：2014年12月01日 10:58:48  投稿：junjie  </p>
+<p>这篇文章主要介绍了Mysql数据库锁定机制详细介绍,本文用大量内容讲解了Mysql中的锁定机制,例如MySQL锁定机制简介、合理利用锁机制优化MySQL等内容,需要的朋友可以参考下</p>
+<p><strong>前言</strong></p>
+<p>为了保证数据的一致完整性，任何一个数据库都存在锁定机制。锁定机制的优劣直接应想到一个数据库系统的并发处理能力和性能，所以锁定机制的实现也就成为了各种数据库的核心技术之一。本章将对MySQL中两种使用最为频繁的存储引擎MyISAM和Innodb各自的锁定机制进行较为详细的分析。</p>
+<p><strong>MySQL锁定机制简介</strong></p>
+<p>数据库锁定机制简单来说就是数据库为了保证数据的一致性而使各种共享资源在被并发访问访问变得有序所设计的一种规则。对于任何一种数据库来说都需要有相应的锁定机制，所以MySQL自然也不能例外。MySQL数据库由于其自身架构的特点，存在多种数据存储引擎，每种存储引擎所针对的应用场景特点都不太一样，为了满足各自特定应用场景的需求，每种存储引擎的锁定机制都是为各自所面对的特定场景而优化设计，所以各存储引擎的锁定机制也有较大区别。</p>
+<p>总的来说，MySQL各存储引擎使用了三种类型（级别）的锁定机制：行级锁定，页级锁定和表级锁定。下面我们先分析一下MySQL这三种锁定的特点和各自的优劣所在。</p>
+<p><strong>行级锁定（row-level）</strong></p>
+<p>行级锁定最大的特点就是锁定对象的颗粒度很小，也是目前各大数据库管理软件所实现的锁定颗粒度最小的。由于锁定颗粒度很小，所以发生锁定资源争用的概率也最小，能够给予应用程序尽可能大的并发处理能力而提高一些需要高并发应用系统的整体性能。</p>
+<p>虽然能够在并发处理能力上面有较大的优势，但是行级锁定也因此带来了不少弊端。由于锁定资源的颗粒度很小，所以每次获取锁和释放锁需要做的事情也更多，带来的消耗自然也就更大了。此外，行级锁定也最容易发生死锁。</p>
+<p><strong>表级锁定（table-level）</strong></p>
+<p>和行级锁定相反，表级别的锁定是MySQL各存储引擎中最大颗粒度的锁定机制。该锁定机制最大的特点是实现逻辑非常简单，带来的系统负面影响最小。所以获取锁和释放锁的速度很快。由于表级锁一次会将整个表锁定，所以可以很好的避免困扰我们的死锁问题。</p>
+<p>当然，锁定颗粒度大所带来最大的负面影响就是出现锁定资源争用的概率也会最高，致使并大度大打折扣。</p>
+<p><strong>页级锁定（page-level）</strong></p>
+<p>页级锁定是MySQL中比较独特的一种锁定级别，在其他数据库管理软件中也并不是太常见。页级锁定的特点是锁定颗粒度介于行级锁定与表级锁之间，所以获取锁定所需要的资源开销，以及所能提供的并发处理能力也同样是介于上面二者之间。另外，页级锁定和行级锁定一样，会发生死锁。</p>
+<p>在数据库实现资源锁定的过程中，随着锁定资源颗粒度的减小，锁定相同数据量的数据所需要消耗的内存数量是越来越多的，实现算法也会越来越复杂。不过，随着锁定资源颗粒度的减小，应用程序的访问请求遇到锁等待的可能性也会随之降低，系统整体并发度也随之提升。</p>
+<p>在MySQL数据库中，使用表级锁定的主要是MyISAM，Memory，CSV等一些非事务性存储引擎，而使用行级锁定的主要是Innodb存储引擎和NDBCluster存储引擎，页级锁定主要是BerkeleyDB存储引擎的锁定方式。</p>
+<p>MySQL的如此的锁定机制主要是由于其最初的历史所决定的。在最初，MySQL希望设计一种完全独立于各种存储引擎的锁定机制，而且在早期的MySQL数据库中，MySQL的存储引擎（MyISAM和Momery）的设计是建立在“任何表在同一时刻都只允许单个线程对其访问（包括读）”这样的假设之上。但是，随着MySQL的不断完善，系统的不断改进，在MySQL3.23版本开发的时候，MySQL开发人员不得不修正之前的假设。因为他们发现一个线程正在读某个表的时候，另一个线程是可以对该表进行insert操作的，只不过只能INSERT到数据文件的最尾部。这也就是从MySQL从3.23版本开始提供的我们所说的Concurrent Insert。</p>
+<p>当出现Concurrent  Insert之后，MySQL的开发人员不得不修改之前系统中的锁定实现功能，但是仅仅只是增加了对Concurrent  Insert的支持，并没有改动整体架构。可是在不久之后，随着BerkeleyDB存储引擎的引入，之前的锁定机制遇到了更大的挑战。因为BerkeleyDB存储引擎并没有MyISAM和Memory存储引擎同一时刻只允许单一线程访问某一个表的限制，而是将这个单线程访问限制的颗粒度缩小到了单个page，这又一次迫使MySQL开发人员不得不再一次修改锁定机制的实现。</p>
+<p>由于新的存储引擎的引入，导致锁定机制不能满足要求，让MySQL的人意识到已经不可能实现一种完全独立的满足各种存储引擎要求的锁定实现机制。如果因为锁定机制的拙劣实现而导致存储引擎的整体性能的下降，肯定会严重打击存储引擎提供者的积极性，这是MySQL公司非常不愿意看到的，因为这完全不符合MySQL的战略发展思路。所以工程师们不得不放弃了最初的设计初衷，在锁定实现机制中作出修改，允许存储引擎自己改变MySQL通过接口传入的锁定类型而自行决定该怎样锁定数据。</p>
+<p><strong>表级锁定</strong></p>
+<p>MySQL的表级锁定主要分为两种类型，一种是读锁定，另一种是写锁定。在MySQL中，主要通过四个队列来维护这两种锁定：两个存放当前正在锁定中的读和写锁定信息，另外两个存放等待中的读写锁定信息，如下：</p>
+<p>复制代码 代码如下:</p>
+<p> Current read-lock queue (lock-&gt;read)<br> Pending read-lock queue (lock-&gt;read_wait)<br> Current write-lock queue (lock-&gt;write)<br> Pending write-lock queue (lock-&gt;write_wait)</p>
+<p>当前持有读锁的所有线程的相关信息都能够在Currentread-lockqueue中找到，队列中的信息按照获取到锁的时间依序存放。而正在等待锁定资源的信息则存放在Pendingread-lockqueue里面，另外两个存放写锁信息的队列也按照上面相同规则来存放信息。</p>
+<p>虽然对于我们这些使用者来说MySQL展现出来的锁定（表锁定）只有读锁定和写锁定这两种类型，但是在MySQL内部实现中却有多达11种锁定类型，由系统中一个枚举量（thr_lock_type）定义，各值描述如下：</p>
+<table>
+<thead>
+<tr>
+<th>锁定类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>IGNORE</td>
+<td>当发生锁请求的时候内部交互使用，在锁定结构和队列中并不会有任何信息存储</td>
+</tr>
+<tr>
+<td>UNLOCK</td>
+<td>释放锁定请求的交互用所类型</td>
+</tr>
+<tr>
+<td>READ</td>
+<td>普通读锁定</td>
+</tr>
+<tr>
+<td>WRITE</td>
+<td>普通写锁定</td>
+</tr>
+<tr>
+<td>READ_WITH_SHARED_LOCKS</td>
+<td>在Innodb中使用到，由如下方式产生如：SELECT…LOCKINSHAREMODE</td>
+</tr>
+<tr>
+<td>READ_HIGH_PRIORITY</td>
+<td>高优先级读锁定</td>
+</tr>
+<tr>
+<td>READ_NO_INSERT</td>
+<td>不允许ConcurentInsert的锁定</td>
+</tr>
+<tr>
+<td>WRITE_ALLOW_WRITE</td>
+<td>这个类型实际上就是当由存储引擎自行处理锁定的时候，mysqld允许其他的线程再获取读或者写锁定，因为即使资源冲突，存储引擎自己也会知道怎么来处理</td>
+</tr>
+<tr>
+<td>WRITE_ALLOW_READ</td>
+<td>这种锁定发生在对表做DDL（ALTERTABLE…）的时候，MySQL可以允许其他线程获取读锁定，因为MySQL是通过重建整个表然后再RENAME而实现的该功能，所在整个过程原表仍然可以提供读服务</td>
+</tr>
+<tr>
+<td>WRITE_CONCURRENT_INSERT</td>
+<td>正在进行ConcurentInsert时候所使用的锁定方式，该锁定进行的时候，除了READ_NO_INSERT之外的其他任何读锁定请求都不会被阻塞</td>
+</tr>
+<tr>
+<td>WRITE_DELAYED</td>
+<td>在使用INSERTDELAYED时候的锁定类型</td>
+</tr>
+<tr>
+<td>WRITE_LOW_PRIORITY</td>
+<td>显示声明的低级别锁定方式，通过设置LOW_PRIORITY_UPDAT=1而产生</td>
+</tr>
+<tr>
+<td>WRITE_ONLY</td>
+<td>当在操作过程中某个锁定异常中断之后系统内部需要进行CLOSETABLE操作，在这个过程中出现的锁定类型就是WRITE_ONLY</td>
+</tr>
+</tbody></table>
+<p><strong>读锁定</strong></p>
+<p>一个新的客户端请求在申请获取读锁定资源的时候，需要满足两个条件：</p>
+<p>1、请求锁定的资源当前没有被写锁定；<br> 2、写锁定等待队列（Pendingwrite-lockqueue）中没有更高优先级的写锁定等待；</p>
+<p>如果满足了上面两个条件之后，该请求会被立即通过，并将相关的信息存入Currentread-lockqueue中，而如果上面两个条件中任何一个没有满足，都会被迫进入等待队列Pendingread-lockqueue中等待资源的释放。</p>
+<p><strong>写锁定</strong></p>
+<p>当客户端请求写锁定的时候，MySQL首先检查在Currentwrite-lockqueue是否已经有锁定相同资源的信息存在。</p>
+<p>如果Currentwrite-lockqueue没有，则再检查Pendingwrite-lockqueue，如果在Pendingwrite-lockqueue中找到了，自己也需要进入等待队列并暂停自身线程等待锁定资源。反之，如果Pendingwrite-lockqueue为空，则再检测Currentread-lockqueue，如果有锁定存在，则同样需要进入Pendingwrite-lockqueue等待。当然，也可能遇到以下这两种特殊情况：</p>
+<p>\1. 请求锁定的类型为WRITE_DELAYED;<br> \2. 请求锁定的类型为WRITE_CONCURRENT_INSERT或者是TL_WRITE_ALLOW_WRITE，同时Currentreadlock是READ_NO_INSERT的锁定类型。</p>
+<p>当遇到这两种特殊情况的时候，写锁定会立即获得而进入Current write-lock queue 中</p>
+<p>如果刚开始第一次检测就Currentwrite-lockqueue中已经存在了锁定相同资源的写锁定存在，那么就只能进入等待队列等待相应资源锁定的释放了。</p>
+<p>读请求和写等待队列中的写锁请求的优先级规则主要为以下规则决定：</p>
+<p>\1. 除了READ_HIGH_PRIORITY的读锁定之外，Pendingwrite-lockqueue中的WRITE写锁定能够阻塞所有其他的读锁定；<br> \2. READ_HIGH_PRIORITY读锁定的请求能够阻塞所有Pendingwrite-lockqueue中的写锁定；<br> \3. 除了WRITE写锁定之外，Pendingwrite-lockqueue中的其他任何写锁定都比读锁定的优先级低。</p>
+<p>写锁定出现在Currentwrite-lockqueue之后，会阻塞除了以下情况下的所有其他锁定的请求：</p>
+<p>\1. 在某些存储引擎的允许下，可以允许一个WRITE_CONCURRENT_INSERT写锁定请求<br> \2. 写锁定为WRITE_ALLOW_WRITE的时候，允许除了WRITE_ONLY之外的所有读和写锁定请求<br> \3. 写锁定为WRITE_ALLOW_READ的时候，允许除了READ_NO_INSERT之外的所有读锁定请求<br> \4. 写锁定为WRITE_DELAYED的时候，允许除了READ_NO_INSERT之外的所有读锁定请求<br> \5. 写锁定为WRITE_CONCURRENT_INSERT的时候，允许除了READ_NO_INSERT之外的所有读锁定请求</p>
+<p>随着MySQL存储引擎的不断发展，目前MySQL自身提供的锁定机制已经没有办法满足需求了，很多存储引擎都在MySQL所提供的锁定机制之上做了存储引擎自己的扩展和改造。</p>
+<p>MyISAM存储引擎基本上可以说是对MySQL所提供的锁定机制所实现的表级锁定依赖最大的一种存储引擎了，虽然MyISAM存储引擎自己并没有在自身增加其他的锁定机制，但是为了更好的支持相关特性，MySQL在原有锁定机制的基础上为了支持其ConcurrentInsert的特性而进行了相应的实现改造。</p>
+<p>而其他几种支持事务的存储存储引擎，如Innodb，NDBCluster以及BerkeleyDB存储引擎则是让MySQL将锁定的处理直接交给存储引擎自己来处理，在MySQL中仅持有WRITE_ALLOW_WRITE类型的锁定。</p>
+<p>由于MyISAM存储引擎使用的锁定机制完全是由MySQL提供的表级锁定实现，所以下面我们将以MyISAM存储引擎作为示例存储引擎，来实例演示表级锁定的一些基本特性。由于，为了让示例更加直观，我将使用显示给表加锁来演示：RITE_ALLOW_READ 类型的写锁定。</p>
+<table>
+<thead>
+<tr>
+<th>刻</th>
+<th>Session a</th>
+<th>Session b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>行锁定基本演示</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>mysql&gt; set autocommit=0;      Query OK, 0 rows affected (0.00 sec)</td>
+<td>mysql&gt; set autocommit=0;      Query OK, 0 rows affected (0.00 sec)</td>
+</tr>
+<tr>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0      更新，但是不提交</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      被阻塞，等待</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mysql&gt; commit; Query OK, 0 rows affected (0.05 sec) 提交</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      Query OK, 0 rows affected (36.14 sec)      Rows matched: 1 Changed: 0 Warnings: 0      解除阻塞，更新正常进行</td>
+</tr>
+<tr>
+<td></td>
+<td>无索引升级为表锁演示</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘2’ where b = 2000;      Query OK, 1 row affected (0.02 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘3’ where b = 3000;      被阻塞，等待</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>mysql&gt; commit; Query OK, 0 rows affected (0.10 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘3’ where b = 3000;      Query OK, 1 row affected (1 min 3.41 sec)      Rows matched: 1 Changed: 1 Warnings: 0      阻塞解除，完成更新</td>
+</tr>
+<tr>
+<td></td>
+<td>间隙锁带来的插入问题演示</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>mysql&gt; select * from test_innodb_lock;      +——+——+ | a | b |+——+——+      | 1 | b2 |      | 3 | 3 |      | 4 | 4000 |      | 5 | 5000 |      | 6 | 6000 |      | 7 | 7000 |      | 8 | 8000 |      | 9 | 9000 |      | 1 | b1 |      +——+——+      9 rows in set (0.00 sec)      mysql&gt; update test_innodb_lock set b = a * 100 where a &lt; 4 and a &gt; 1;      Query OK, 1 row affected (0.02 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td>mysql&gt; insert into test_innodb_lock values(2,’200’);      被阻塞，等待</td>
+</tr>
+<tr>
+<td>11</td>
+<td>mysql&gt; commit;      Query OK, 0 rows affected (0.02 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td>mysql&gt; insert into test_innodb_lock values(2,’200’);      Query OK, 1 row affected (38.68 sec)      阻塞解除，完成插入</td>
+</tr>
+<tr>
+<td></td>
+<td>使用共同索引不同数据的阻塞示例</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b2’;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b1’; 被阻塞</td>
+</tr>
+<tr>
+<td>15</td>
+<td>mysql&gt; commit;      Query OK, 0 rows affected (0.02 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b1’; Query OK, 1 row affected (42.89 sec)      Rows matched: 1 Changed: 1 Warnings: 0      session 提交事务，阻塞去除，更新完成</td>
+</tr>
+<tr>
+<td></td>
+<td>死锁示例</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>mysql&gt; update t1 set id = 110 where id = 11;      Query OK, 0 rows affected (0.00 sec)      Rows matched: 0 Changed: 0 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td></td>
+<td>mysql&gt; update t2 set id = 210 where id = 21;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+</tr>
+<tr>
+<td>19</td>
+<td>mysql&gt;update t2 set id=2100 where id=21;      等待sessionb释放资源，被阻塞</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td></td>
+<td>mysql&gt;update t1 set id=1100 where id=11;      Query OK,0 rows affected (0.39sec)      Rows matched: 0 Changed: 0 Warnings:0      等待sessiona释放资源，被阻塞</td>
+</tr>
+<tr>
+<td></td>
+<td>两个 session 互相等等待对方的资源释放之后才能释放自己的资源,造成了死锁</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>行级锁定</strong></p>
+<p>行级锁定不是MySQL自己实现的锁定方式，而是由其他存储引擎自己所实现的，如广为大家所知的Innodb存储引擎，以及MySQL的分布式存储引擎NDBCluster等都是实现了行级锁定。</p>
+<p><strong>Innodb 锁定模式及实现机制</strong></p>
+<p>考虑到行级锁定君由各个存储引擎自行实现，而且具体实现也各有差别，而Innodb是目前事务型存储引擎中使用最为广泛的存储引擎，所以这里我们就主要分析一下Innodb的锁定特性。</p>
+<p>总的来说，Innodb的锁定机制和Oracle数据库有不少相似之处。Innodb的行级锁定同样分为两种类型，共享锁和排他锁，而在锁定机制的实现过程中为了让行级锁定和表级锁定共存，Innodb也同样使用了意向锁（表级锁定）的概念，也就有了意向共享锁和意向排他锁这两种。</p>
+<p>当一个事务需要给自己需要的某个资源加锁的时候，如果遇到一个共享锁正锁定着自己需要的资源的时候，自己可以再加一个共享锁，不过不能加排他锁。但是，如果遇到自己需要锁定的资源已经被一个排他锁占有之后，则只能等待该锁定释放资源之后自己才能获取锁定资源并添加自己的锁定。而意向锁的作用就是当一个事务在需要获取资源锁定的时候，如果遇到自己需要的资源已经被排他锁占用的时候，该事务可以需要锁定行的表上面添加一个合适的意向锁。如果自己需要一个共享锁，那么就在表上面添加一个意向共享锁。而如果自己需要的是某行（或者某些行）上面添加一个排他锁的话，则先在表上面添加一个意向排他锁。意向共享锁可以同时并存多个，但是意向排他锁同时只能有一个存在。所以，可以说Innodb的锁定模式实际上可以分为四种：共享锁（S），排他锁（X），意向共享锁（IS）和意向排他锁（IX），我们可以通过以下表格来总结上面这四种所的共存逻辑关系：</p>
+<table>
+<thead>
+<tr>
+<th>共享锁（S）</th>
+<th>排他锁（X）</th>
+<th>意向共享锁（IS）</th>
+<th>意向排他锁（IX）</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>共享锁（S）</td>
+<td>兼容</td>
+<td>冲突</td>
+<td>兼容</td>
+<td>冲突</td>
+</tr>
+<tr>
+<td>排他锁（X）</td>
+<td>冲突</td>
+<td>冲突</td>
+<td>冲突</td>
+<td>冲突</td>
+</tr>
+<tr>
+<td>意向共享锁（IS）</td>
+<td>兼容</td>
+<td>冲突</td>
+<td>兼容</td>
+<td>兼容</td>
+</tr>
+<tr>
+<td>意向排他锁（IX）</td>
+<td>冲突</td>
+<td>冲突</td>
+<td>兼容</td>
+<td>兼容</td>
+</tr>
+</tbody></table>
+<p>虽然Innodb的锁定机制和Oracle有不少相近的地方，但是两者的实现确是截然不同的。总的来说就是Oracle锁定数据是通过需要锁定的某行记录所在的物理block上的事务槽上表级锁定信息，而Innodb的锁定则是通过在指向数据记录的第一个索引键之前和最后一个索引键之后的空域空间上标记锁定信息而实现的。Innodb的这种锁定实现方式被称为“NEXT-KEYlocking”（间隙锁），因为Query执行过程中通过过范围查找的华，他会锁定整个范围内所有的索引键值，即使这个键值并不存在。</p>
+<p>间隙锁有一个比较致命的弱点，就是当锁定一个范围键值之后，即使某些不存在的键值也会被无辜的锁定，而造成在锁定的时候无法插入锁定键值范围内的任何数据。在某些场景下这可能会对性能造成很大的危害。而Innodb给出的解释是为了组织幻读的出现，所以他们选择的间隙锁来实现锁定。</p>
+<p>除了间隙锁给Innodb带来性能的负面影响之外，通过索引实现锁定的方式还存在其他几个较大的性能隐患：</p>
+<p>当Query无法利用索引的时候，Innodb会放弃使用行级别锁定而改用表级别的锁定，造成并发性能的降低；</p>
+<p>当Quuery使用的索引并不包含所有过滤条件的时候，数据检索使用到的索引键所只想的数据可能有部分并不属于该Query的结果集的行列，但是也会被锁定，因为间隙锁锁定的是一个范围，而不是具体的索引键；</p>
+<p>当Query在使用索引定位数据的时候，如果使用的索引键一样但访问的数据行不同的时候（索引只是过滤条件的一部分），一样会被锁定</p>
+<p><strong>Innodb 各事务隔离级别下锁定及死锁</strong></p>
+<p>Innodb实现的在ISO／ANSISQL92规范中所定义的ReadUnCommited，ReadCommited，RepeatableRead和Serializable这四种事务隔离级别。同时，为了保证数据在事务中的一致性，实现了多版本数据访问。</p>
+<p>之前在第一节中我们已经介绍过，行级锁定肯定会带来死锁问题，Innodb也不可能例外。至于死锁的产生过程我们就不在这里详细描述了，在后面的锁定示例中会通过一个实际的例子为大家爱展示死锁的产生过程。这里我们主要介绍一下，在Innodb中当系检测到死锁产生之后是如何来处理的。</p>
+<p>在Innodb的事务管理和锁定机制中，有专门检测死锁的机制，会在系统中产生死锁之后的很短时间内就检测到该死锁的存在。当Innodb检测到系统中产生了死锁之后，Innodb会通过相应的判断来选这产生死锁的两个事务中较小的事务来回滚，而让另外一个较大的事务成功完成。那Innodb是以什么来为标准判定事务的大小的呢？MySQL官方手册中也提到了这个问题，实际上在Innodb发现死锁之后，会计算出两个事务各自插入、更新或者删除的数据量来判定两个事务的大小。也就是说哪个事务所改变的记录条数越多，在死锁中就越不会被回滚掉。但是有一点需要注意的就是，当产生死锁的场景中涉及到不止Innodb存储引擎的时候，Innodb是没办法检测到该死锁的，这时候就只能通过锁定超时限制来解决该死锁了。另外，死锁的产生过程的示例将在本节最后的Innodb锁定示例中演示。</p>
+<p><strong>Innodb 锁定机制示例</strong></p>
+<p>复制代码 代码如下:</p>
+<p> mysql&gt; create table test_innodb_lock (a int(11),b varchar(16)) engine=innodb;<br> Query OK, 0 rows affected (0.02 sec)</p>
+<p>mysql&gt; create index test_innodb_a_ind on test_innodb_lock(a);<br> Query OK, 0 rows affected (0.05 sec)<br> Records: 0 Duplicates: 0 Warnings: 0</p>
+<p>mysql&gt; create index test_innodb_lock_b_ind on test_innodb_lock(b);<br> Query OK, 11 rows affected (0.01 sec)<br> Records: 11 Duplicates: 0 Warnings: 0</p>
+<table>
+<thead>
+<tr>
+<th>时刻</th>
+<th>Session a</th>
+<th>Session b</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>行锁定基本演示</td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>mysql&gt; set autocommit=0;      Query OK, 0 rows affected (0.00 sec)</td>
+<td>mysql&gt; set autocommit=0;      Query OK, 0 rows affected (0.00 sec)</td>
+</tr>
+<tr>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0      更新，但是不提交</td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      被阻塞，等待</td>
+</tr>
+<tr>
+<td>3</td>
+<td>mysql&gt; commit; Query OK, 0 rows affected (0.05 sec) 提交</td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘b1’ where a = 1;      Query OK, 0 rows affected (36.14 sec)      Rows matched: 1 Changed: 0 Warnings: 0      解除阻塞，更新正常进行</td>
+</tr>
+<tr>
+<td></td>
+<td>无索引升级为表锁演示</td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘2’ where b = 2000;      Query OK, 1 row affected (0.02 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘3’ where b = 3000;      被阻塞，等待</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td>mysql&gt; commit; Query OK, 0 rows affected (0.10 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>8</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘3’ where b = 3000;      Query OK, 1 row affected (1 min 3.41 sec)      Rows matched: 1 Changed: 1 Warnings: 0      阻塞解除，完成更新</td>
+</tr>
+<tr>
+<td></td>
+<td>间隙锁带来的插入问题演示</td>
+<td></td>
+</tr>
+<tr>
+<td>9</td>
+<td>mysql&gt; select * from test_innodb_lock;      +——+——+ | a | b |+——+——+      | 1 | b2 |      | 3 | 3 |      | 4 | 4000 |      | 5 | 5000 |      | 6 | 6000 |      | 7 | 7000 |      | 8 | 8000 |      | 9 | 9000 |      | 1 | b1 |      +——+——+      9 rows in set (0.00 sec)      mysql&gt; update test_innodb_lock set b = a * 100 where a &lt; 4 and a &gt; 1;      Query OK, 1 row affected (0.02 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>10</td>
+<td></td>
+<td>mysql&gt; insert into test_innodb_lock values(2,’200’);      被阻塞，等待</td>
+</tr>
+<tr>
+<td>11</td>
+<td>mysql&gt; commit;      Query OK, 0 rows affected (0.02 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>12</td>
+<td></td>
+<td>mysql&gt; insert into test_innodb_lock values(2,’200’);      Query OK, 1 row affected (38.68 sec)      阻塞解除，完成插入</td>
+</tr>
+<tr>
+<td></td>
+<td>使用共同索引不同数据的阻塞示例</td>
+<td></td>
+</tr>
+<tr>
+<td>13</td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b2’;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>14</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b1’; 被阻塞</td>
+</tr>
+<tr>
+<td>15</td>
+<td>mysql&gt; commit;      Query OK, 0 rows affected (0.02 sec)</td>
+<td></td>
+</tr>
+<tr>
+<td>16</td>
+<td></td>
+<td>mysql&gt; update test_innodb_lock set b = ‘bbbbb’ where a = 1 and b = ‘b1’; Query OK, 1 row affected (42.89 sec)      Rows matched: 1 Changed: 1 Warnings: 0      session 提交事务，阻塞去除，更新完成</td>
+</tr>
+<tr>
+<td></td>
+<td>死锁示例</td>
+<td></td>
+</tr>
+<tr>
+<td>17</td>
+<td>mysql&gt; update t1 set id = 110 where id = 11;      Query OK, 0 rows affected (0.00 sec)      Rows matched: 0 Changed: 0 Warnings: 0</td>
+<td></td>
+</tr>
+<tr>
+<td>18</td>
+<td></td>
+<td>mysql&gt; update t2 set id = 210 where id = 21;      Query OK, 1 row affected (0.00 sec)      Rows matched: 1 Changed: 1 Warnings: 0</td>
+</tr>
+<tr>
+<td>19</td>
+<td>mysql&gt;update t2 set id=2100 where id=21;      等待sessionb释放资源，被阻塞</td>
+<td></td>
+</tr>
+<tr>
+<td>20</td>
+<td></td>
+<td>mysql&gt;update t1 set id=1100 where id=11;      Query OK,0 rows affected (0.39sec)      Rows matched: 0 Changed: 0 Warnings:0      等待sessiona释放资源，被阻塞</td>
+</tr>
+<tr>
+<td></td>
+<td>两个 session 互相等等待对方的资源释放之后才能释放自己的资源,造成了死锁</td>
+<td></td>
+</tr>
+</tbody></table>
+<p><strong>合理利用锁机制优化MySQL</strong></p>
+<p><strong>MyISAM 表锁优化建议</strong></p>
+<p>对于MyISAM存储引擎，虽然使用表级锁定在锁定实现的过程中比实现行级锁定或者页级锁所带来的附加成本都要小，锁定本身所消耗的资源也是最少。但是由于锁定的颗粒度比较到，所以造成锁定资源的争用情况也会比其他的锁定级别都要多，从而在较大程度上会降低并发处理能力。</p>
+<p>所以，在优化MyISAM存储引擎锁定问题的时候，最关键的就是如何让其提高并发度。由于锁定级别是不可能改变的了，所以我们首先需要尽可能让锁定的时间变短，然后就是让可能并发进行的操作尽可能的并发。</p>
+<p> <strong>1、缩短锁定时间</strong></p>
+<p>缩短锁定时间，短短几个字，说起来确实听容易的，但实际做起来恐怕就并不那么简单了。如何让锁定时间尽可能的短呢？唯一的办法就是让我们的Query执行时间尽可能的短。</p>
+<p>尽两减少大的复杂Query，将复杂Query分拆成几个小的Query分布进行；</p>
+<p>尽可能的建立足够高效的索引，让数据检索更迅速；</p>
+<p>尽量让MyISAM存储引擎的表只存放必要的信息，控制字段类型；</p>
+<p>利用合适的机会优化MyISAM表数据文件；</p>
+<p><strong>2、分离能并行的操作</strong></p>
+<p>说到MyISAM的表锁，而且是读写互相阻塞的表锁，可能有些人会认为在MyISAM存储引擎的表上就只能是完全的串行化，没办法再并行了。大家不要忘记了，MyISAM的存储引擎还有一个非常有用的特性，那就是ConcurrentInsert（并发插入）的特性。</p>
+<p>MyISAM存储引擎有一个控制是否打开Concurrent Insert功能的参数选项：concurrent_insert，可以设置为0，1或者2。三个值的具体说明如下：</p>
+<p>concurrent_insert=2，无论MyISAM存储引擎的表数据文件的中间部分是否存在因为删除数据而留下的空闲空间，都允许在数据文件尾部进行ConcurrentInsert;</p>
+<p>concurrent_insert=1，当MyISAM存储引擎表数据文件中间不存在空闲空间的时候，可以从文件尾部进行ConcurrentInsert;</p>
+<p>concurrent_insert=0，无论MyISAM存储引擎的表数据文件的中间部分是否存在因为删除数据而留下的空闲空间，都不允许ConcurrentInsert。</p>
+<p><strong>3、合理利用读写优先级</strong></p>
+<p>在本章各种锁定分析一节中我们了解到了MySQL的表级锁定对于读和写是有不同优先级设定的，默认情况下是写优先级要大于读优先级。所以，如果我们可以根据各自系统环境的差异决定读与写的优先级。如果我们的系统是一个以读为主，而且要优先保证查询性能的话，我们可以通过设置系统参数选项low_priority_updates=1，将写的优先级设置为比读的优先级低，即可让告诉MySQL尽量先处理读请求。当然，如果我们的系统需要有限保证数据写入的性能的话，则可以不用设置low_priority_updates参数了。</p>
+<p>这里我们完全可以利用这个特性，将concurrent_insert参数设置为1，甚至如果数据被删除的可能性很小的时候，如果对暂时性的浪费少量空间并不是特别的在乎的话，将concurrent_insert参数设置为2都可以尝试。当然，数据文件中间留有空域空间，在浪费空间的时候，还会造成在查询的时候需要读取更多的数据，所以如果删除量不是很小的话，还是建议将concurrent_insert设置为1更为合适。</p>
+<p><strong>Innodb 行锁优化建议</strong></p>
+<p>Innodb存储引擎由于实现了行级锁定，虽然在锁定机制的实现方面所带来的性能损耗可能比表级锁定会要更高一些，但是在整体并发处理能力方面要远远优于MyISAM的表级锁定的。当系统并发量较高的时候，Innodb的整体性能和MyISAM相比就会有比较明显的优势了。但是，Innodb的行级锁定同样也有其脆弱的一面，当我们使用不当的时候，可能会让Innodb的整体性能表现不仅不能比MyISAM高，甚至可能会更差。</p>
+<p>要想合理利用Innodb的行级锁定，做到扬长避短，我们必须做好以下工作：</p>
+<p>尽可能让所有的数据检索都通过索引来完成，从而避免Innodb因为无法通过索引键加锁而升级为表级锁定；</p>
+<p>合理设计索引，让Innodb在索引键上面加锁的时候尽可能准确，尽可能的缩小锁定范围，避免造成不必要的锁定而影响其他Query的执行；</p>
+<p>尽可能减少基于范围的数据检索过滤条件，避免因为间隙锁带来的负面影响而锁定了不该锁定的记录；</p>
+<p>尽量控制事务的大小，减少锁定的资源量和锁定时间长度；</p>
+<p>在业务环境允许的情况下，尽量使用较低级别的事务隔离，以减少MySQL因为实现事务隔离级别所带来的附加成本；</p>
+<p>由于Innodb的行级锁定和事务性，所以肯定会产生死锁，下面是一些比较常用的减少死锁产生概率</p>
+<p>的的小建议，读者朋友可以根据各自的业务特点针对性的尝试：a)类似业务模块中，尽可能按照相同的访问顺序来访问，防止产生死锁；b)在同一个事务中，尽可能做到一次锁定所需要的所有资源，减少死锁产生概率；c)对于非常容易产生死锁的业务部分，可以尝试使用升级锁定颗粒度，通过表级锁定来减少死锁产生的概率；</p>
+<p>系统锁定争用情况查询对于两种锁定级别，MySQL内部有两组专门的状态变量记录系统内部锁资源争用情况，我们先看看</p>
+<p>MySQL 实现的表级锁定的争用状态变量：</p>
+<p>复制代码 代码如下:</p>
+<p> mysql&gt; show status like ‘table%’;<br> +———————–+——-+ | Variable_name | Value | +———————–+——-+<br> | Table_locks_immediate | 100 |<br> | Table_locks_waited | 0 |<br> +———————–+——-+</p>
+<p>这里有两个状态变量记录MySQL内部表级锁定的情况，两个变量说明如下：</p>
+<p>Table_locks_immediate：产生表级锁定的次数；</p>
+<p>Table_locks_waited：出现表级锁定争用而发生等待的次数；</p>
+<p>两个状态值都是从系统启动后开始记录，没出现一次对应的事件则数量加1。如果这里的Table_locks_waited状态值比较高，那么说明系统中表级锁定争用现象比较严重，就需要进一步分析为什么会有较多的锁定资源争用了。</p>
+<p>对于Innodb所使用的行级锁定，系统中是通过另外一组更为详细的状态变量来记录的，如下：</p>
+<p>复制代码 代码如下:</p>
+<p> mysql&gt;showstatuslike’innodb_row_lock%’;<br> +——————————-+——–+|Variable_name|Value|+——————————-+——–+<br> |Innodb_row_lock_current_waits|0|<br> |Innodb_row_lock_time|490578|<br> |Innodb_row_lock_time_avg|37736|<br> |Innodb_row_lock_time_max|121411|<br> |Innodb_row_lock_waits|13|<br> +——————————-+——–+</p>
+<p>Innodb 的行级锁定状态变量不仅记录了锁定等待次数，还记录了锁定总时长，每次平均时长，以及最大时长，此外还有一个非累积状态量显示了当前正在等待锁定的等待数量。对各个状态量的说明如下：</p>
+<p>Innodb_row_lock_current_waits：当前正在等待锁定的数量；</p>
+<p>Innodb_row_lock_time：从系统启动到现在锁定总时间长度；</p>
+<p>Innodb_row_lock_time_avg：每次等待所花平均时间；</p>
+<p>Innodb_row_lock_time_max：从系统启动到现在等待最常的一次所花的时间；</p>
+<p>Innodb_row_lock_waits：系统启动后到现在总共等待的次数；</p>
+<p>对于这5个状态变量，比较重要的主要是Innodb_row_lock_time_avg（等待平均时长），Innodb_row_lock_waits（等待总次数）以及Innodb_row_lock_time（等待总时长）这三项。尤其是当等待次数很高，而且每次等待时长也不小的时候，我们就需要分析系统中为什么会有如此多的等待，然后根据分析结果着手指定优化计划。</p>
+<p>此外，Innodb出了提供这五个系统状态变量之外，还提供的其他更为丰富的即时状态信息供我们分析使用。可以通过如下方法查看：</p>
+<p><strong>1.通过创建InnodbMonitor表来打开Innodb的monitor功能：</strong></p>
+<p>复制代码 代码如下:</p>
+<p> mysql&gt; create table innodb_monitor(a int) engine=innodb;</p>
+<p>Query OK, 0 rows affected (0.07 sec)</p>
+<p><strong>2.然后通过使用“SHOWINNODBSTATUS”查看细节信息（由于输出内容太多就不在此记录了）；</strong></p>
+<p>可能会有读者朋友问为什么要先创建一个叫innodb_monitor的表呢？因为创建该表实际上就是告诉Innodb我们开始要监控他的细节状态了，然后Innodb就会将比较详细的事务以及锁定信息记录进入MySQL的errorlog中，以便我们后面做进一步分析使用。</p>
+<p><strong>小结</strong></p>
+<p>本章以MySQLServer中的锁定简介开始，分析了当前MySQL中使用最为广泛的锁定方式表级锁定和行级锁定的基本实现机制，并通过MyISAM和Innodb这两大典型的存储引擎作为示例存储引擎所使用的表级锁定和行级锁定做了较为详细的分析和演示。然后，再通过分析两种锁定方式的特性，给出相应的优化建议和策略。最后了解了一下在MySQLServer中如何获得系统当前各种锁定的资源争用状况。希望本章内容能够对各位读者朋友在理解MySQL锁定机制方面有一定的帮助。</p>
+<h4 id="SQLServer之数据库行锁"><a href="#SQLServer之数据库行锁" class="headerlink" title="SQLServer之数据库行锁"></a>SQLServer之数据库行锁</h4><p>行锁使用注意事项</p>
+<p>1、ROWLOCK行级锁确保在用户取得被更新的行，到该行进行更新，这段时间内不被其它用户所修改。因而行级锁即可保证数据的一致性，又能提高数据操作的并发性。</p>
+<p>2、ROWLOCK告诉SQL Server只使用行级锁，ROWLOCK语法可以使用在SELECT,UPDATE和DELETE语句中。</p>
+<p>3、ROWLOCK指定通常采用页锁或表锁时，采用行锁。 在从 SNAPSHOT 隔离级别操作的事务中指定时，除非将 ROWLOCK 与需要锁的其他表提示（例如，UPDLOCK 和 HOLDLOCK）组合，否则不会取得行锁。</p>
+<p>4、UPDLOCK指定采用更新锁并保持到事务完成。UPDLOCK 仅对行级别或页级别的读操作采用更新锁。 如果将 UPDLOCK 与  TABLOCK 组合使用或出于一些其他原因采用表级锁，将采用排他 (X) 锁。指定 UPDLOCK 时，忽略 READCOMMITTED 和  READCOMMITTEDLOCK 隔离级别提示。 例如，如果将会话的隔离级别设置为 SERIALIZABLE 且查询指定 (UPDLOCK,  READCOMMITTED)，则忽略 READCOMMITTED 提示且使用 SERIALIZABLE 隔离级别运行事务。</p>
+<p>5、HOLDLOCK等同于SERIALIZABLE。HOLDLOCK 仅应用于那些为其指定了 HOLDLOCK  的表或视图，并且仅在使用了 HOLDLOCK 的语句定义的事务的持续时间内应用。 HOLDLOCK 不能被用于包含 FOR BROWSE 选项的 SELECT 语句。</p>
+<h5 id="使用T-SQL脚本创建数据库表锁"><a href="#使用T-SQL脚本创建数据库表锁" class="headerlink" title="使用T-SQL脚本创建数据库表锁"></a>使用T-SQL脚本创建数据库表锁</h5><h5 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h5><p>第一步：在当前会话中锁定数据行。</p>
+<p>–声明数据库引用</p>
+<p>use testss;</p>
+<p>go</p>
+<p>–声明数据库行锁</p>
+<p>begin tran tran1</p>
+<p>select * from test1 with(rowlock,updlock) where id=’1’;</p>
+<p>waitfor delay ‘00:00:10’;</p>
+<p>commit tran;</p>
+<p>go</p>
+<p>第二步：开启新会话，进行更新锁定数据行。</p>
+<p>update test1 set sex=’女’ where id=’1’;</p>
+<h5 id="示例结果：事务延迟提交十秒，在事务未提交之前进行更新会发生进程阻塞，更新是失败的，事务提交完成后行锁被释放更新才能成功。"><a href="#示例结果：事务延迟提交十秒，在事务未提交之前进行更新会发生进程阻塞，更新是失败的，事务提交完成后行锁被释放更新才能成功。" class="headerlink" title="示例结果：事务延迟提交十秒，在事务未提交之前进行更新会发生进程阻塞，更新是失败的，事务提交完成后行锁被释放更新才能成功。"></a>示例结果：事务延迟提交十秒，在事务未提交之前进行更新会发生进程阻塞，更新是失败的，事务提交完成后行锁被释放更新才能成功。</h5><p>如何避免锁定的发生</p>
 <h1 id="ABP理论学习之事件总线和领域事件"><a href="#ABP理论学习之事件总线和领域事件" class="headerlink" title="ABP理论学习之事件总线和领域事件"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEventBus.html">ABP理论学习之事件总线和领域事件</a></h1><hr>
 <h2 id="本篇目录-14"><a href="#本篇目录-14" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEventBus.html#eventBus">事件总线</a></strong></li>
@@ -2689,6 +3242,7 @@ public void SomeMethod(SomeMethodInput input)
 </code></pre>
 <p>你也可以使用<strong>abp.auth.grantedPermissions</strong>来获得所有授权的权限或者使用 <strong>abp.auth.allPermissions</strong>来获取所有应用中可用的权限名。</p>
 <p>注意：自ABP 0.7.8版本开始，<strong>将javascript端的abp.auth.hasPermission更名为abp.auth.isGranted。hasPermission已经过时了。在新的项目中不要使用abp.auth.hasPermission</strong>。</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210321205113812.png" alt="image-20210321205113812"></p>
 <h1 id="ABP理论学习之功能管理"><a href="#ABP理论学习之功能管理" class="headerlink" title="ABP理论学习之功能管理"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPFeatures.html">ABP理论学习之功能管理</a></h1><hr>
 <h2 id="本篇目录-20"><a href="#本篇目录-20" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
 <li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPFeatures.html#intro">介绍</a></strong></li>
@@ -3385,7 +3939,1510 @@ public class MyProjectWebApiModule : AbpModule
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span><span class="token namespace">edmx:</span>Edmx</span><span class="token punctuation">></span></span>
 </code></pre>
 <h3 id="样例项目"><a href="#样例项目" class="headerlink" title="样例项目###"></a>样例项目###</h3><p>你可以在Github上获得样例代码，**<a href="https://github.com/aspnetboilerplate/sample-odata">点击查看</a>**</p>
+<h1 id="展现层"><a href="#展现层" class="headerlink" title="展现层"></a>展现层</h1><hr>
+<h2 id="本篇目录-25"><a href="#本篇目录-25" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#intro">介绍</a></strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#base">AbpController基类</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#localization">本地化</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#exceptionHandling">异常处理</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#wrapping">响应结果的包装</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#auditLogging">审计日志</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#authorization">授权</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#uow">工作单元</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPMVCController.html#others">其他</a></strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="介绍-12"><a href="#介绍-12" class="headerlink" title="介绍###"></a>介绍###</h3><p>ABP通过Abp.Web.Mvc nuget包集成了<strong>ASP.NET MVC控制器</strong>。你可以像常规那样创建MVC控制器。依赖注入对于常规的MVC控制器可以正确地工作。</p>
+<p>但是，你应该让你的控制器继承于<strong>AbpController</strong>，该基类控制器提供了很多有用的东西，而且更好地集成到了ABP中。</p>
+<h3 id="AbpController基类"><a href="#AbpController基类" class="headerlink" title="AbpController基类"></a>AbpController基类</h3><p>下面是一个派生自AbpController的简单控制器：</p>
+<pre class=" language-C#"><code class="language-C#">public class HomeController : AbpController
+{
+    public ActionResult Index()
+    {
+        return View();
+    }
+}
+</code></pre>
+<h4 id="本地化-1"><a href="#本地化-1" class="headerlink" title="本地化"></a>本地化</h4><p>AbpController中定义了<strong>L</strong>方法使得本地化更加简单。例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class HomeController : AbpController
+{
+    public HomeController()
+    {
+        LocalizationSourceName = "MySourceName";
+    }
+    
+    public ActionResult Index()
+    {
+        var helloWorldText = L("HelloWorld");
+        
+        return View();
+    }
+}
+</code></pre>
+<p>要使L方法生效，必须设置LocalizationSourceName。你可以在自己的控制器基类中设置而不用在每个控制器中都重复设置。</p>
+<h4 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h4><p>异常都是自动处理的，自动记录日志，而且会给客户端返回一个合适的响应。</p>
+<p>查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPException.html">异常处理</a>**博客获得更多信息。</p>
+<h4 id="响应结果的包装"><a href="#响应结果的包装" class="headerlink" title="响应结果的包装"></a>响应结果的包装</h4><p>如果返回类型是<strong>JsonResult</strong>（或者异步action方法的Task），ABP会默认封装该action方法的响应结果。你可以通过为控制器或者actions使用<strong>WrapResult和DontWrapResult</strong>特性来更改默认的封装（注意：以前有园友经常问到这个）。</p>
+<p>查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#Ajax">ajax</a>**博客获取更多信息。</p>
+<h4 id="审计日志-1"><a href="#审计日志-1" class="headerlink" title="审计日志"></a>审计日志</h4><p>如果你从AbpController派生控制器的话，那么审计日志会自动记录。</p>
+<p>查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPAuditLog.html">审计日志</a>**博客获取更多信息。</p>
+<h4 id="授权-1"><a href="#授权-1" class="headerlink" title="授权"></a>授权</h4><p>你可以为控制器或者action方法使用<strong>AbpMvcAuthorize</strong>特性来阻止未授权的用户使用控制器和action方法。例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class HomeController : AbpController
+{
+    [AbpMvcAuthorize("MyPermissionName")]
+    public ActionResult Index()
+    {
+        return View();
+    }
+}
+</code></pre>
+<p>AbpApiController也定义了检查权限的<strong>IsGranted方法</strong>作为快捷方式。请查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPAuthorization.html">授权</a>**一节获取更多信息。</p>
+<h4 id="工作单元-3"><a href="#工作单元-3" class="headerlink" title="工作单元"></a>工作单元</h4><p>MVC的action方法默认不是工作单元。例如，如果你需要在action方法中打开数据库连接，就需要像下面那样声明<strong>UnitOfWork</strong>特性：</p>
+<pre class=" language-C#"><code class="language-C#">public class HomeController : AbpController
+{
+    private readonly IRepository<User, long> _userRepository;
 
+    public HomeController(IRepository<User, long> userRepository)
+    {
+        _userRepository = userRepository;
+    }
+
+    [UnitOfWork]
+    public virtual ActionResult Users(string filter)
+    {
+        var users = _userRepository
+            .GetAll()
+            .Where(u => u.UserName.StartsWith(filter))
+            .ToList();
+
+        return View(users);
+    }
+}
+</code></pre>
+<p>这里我们声明了<strong>UnitOfWork</strong>特性。因为仓储的 <strong>GetAll()**方法返回了 **IQueryable</strong>，而当它使用 <strong>ToList()**方法（由于IQueryable的延迟执行）时需要一个打开的数据库连接，所以这里需要声明该特性。注意该action方法应该声明为</strong>virtual**（否则拦截无法工作）。</p>
+<p>请查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPUnitofWork.html">工作单元</a>**获取更多。</p>
+<h4 id="其他-5"><a href="#其他-5" class="headerlink" title="其他"></a>其他</h4><p>你还可以使用预注入的 <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPSession.html">AbpSession</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPEventBus.html">EventBus</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ModuleZeroPermissonManagement.html">PermissionManager</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ModuleZeroPermissonManagement.html">PermissionChecker</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPSettingManagement.html#getSetting">SettingManager</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPFeatures.html#manager">FeatureManager</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPFeatures.html#checkFunc">FeatureChecker</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPLocalization.html#text">LocalizationManager</a></strong>, <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPLogging.html">Logger</a></strong>, **<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPUnitofWork.html#uow">CurrentUnitOfWork</a>**等基属性以及更多。</p>
+<p>要了解以上属性，请查阅其他相应博客。</p>
+<h1 id="ABP理论学习之Javascript-API-理论完结篇"><a href="#ABP理论学习之Javascript-API-理论完结篇" class="headerlink" title="ABP理论学习之Javascript API(理论完结篇)"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html">ABP理论学习之Javascript API(理论完结篇)</a></h1><h1 id="-1"><a href="#-1" class="headerlink" title="         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html">         </a></h1><p><strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPTheory.html">返回总目录</a></strong></p>
+<hr>
+<h2 id="本篇目录-26"><a href="#本篇目录-26" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#Ajax">Ajax</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#Notification">Notification</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#Message">Message</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#block">UI block和busy</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#eventBus">事件总线</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#Logging">Logging</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#other">其他工具功能</a></strong></li>
+</ul>
+<hr>
+<blockquote>
+<h4 id="说在前面的话"><a href="#说在前面的话" class="headerlink" title="说在前面的话"></a>说在前面的话</h4><p>不知不觉，我们送走了2015，同时迎来了2016。我相信，每一个人，都会在过去的一年有所失，但我更相信，我们所得到的更多。过去的就过去了，不要再计较了，但要从过去的各种不顺中汲取经验，这样，在全新的2016年里继续留下2015年遗憾的概率才会大大降低！祝大家在新的一年里，代码bug越来越少！</p>
+<p>本来给这个**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPTheory.html">ABP理论学习系列</a>**的预算时间是2016年春节前完成，当时还恐怕完成不了任务，现在没想到在2016年元旦假期就完成了。原本计划两个月的完成的任务，结果用了不到一个月就完成了，我的效率还是蛮高的嘛！不过，这多亏了各位园友的鼓励和支持，才让我有了坚持下去的动力，在此谢谢了！</p>
+<p>ABP理论学习完了，基本上的东西也就懂了！接下来，就需要好好地实战一把了！虽然我写了**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPPracticeContent.html">一步一步使用ABP搭建正式项目教程</a><strong>，但是那完全是让新手能迅速使用ABP搭建的项目跑起来。接下来，我会写一个</strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/category/773197.html">ABP项目进阶教程</a>**系列，教大家使用ABP框架搭建一个完整的例子，实战的同时，讲解一些难点的基本原理，也希望热爱ABP的园友们多多关注。</p>
+<p>先声明一下，这篇文章稍长，希望大家多点耐心。</p>
+</blockquote>
+<hr>
+<p>ABP提供了一些对象和函数集，使得了javascript开发简单且标准化。</p>
+<p>下面，我们一一讲解ABP中的这些javascript API。</p>
+<h2 id="Ajax"><a href="#Ajax" class="headerlink" title="Ajax##"></a>Ajax##</h2><p>使用Ajax调用服务端的服务，并返回服务端响应的内容。因为ABP对于Ajax调用会返回一个标准的响应，因此，建议使用该方法处理标准的返回值。</p>
+<h3 id="Ajax操作的问题"><a href="#Ajax操作的问题" class="headerlink" title="Ajax操作的问题"></a>Ajax操作的问题</h3><p>现代应用程序频繁使用Ajax调用，特别是在SPA中，它几乎是和服务器交互的唯一方式。</p>
+<p>Ajax调用包含了许多重复性的步骤：</p>
+<p>一般来讲，在客户端javascript代码应该提供一个URL，data是否提供是可选的，以及选择一个执行Ajax调用的方法（Post,Get…）。必须等待然后才能处理返回的值。当向服务端发起调用时可能会发生错误（一般是网络错误）。服务端也可能发生错误，服务器可能发送了一个具有错误信息的失败响应。客户端代码应该处理服务端响应的错误，并选择性地通知用户（可能展示一个error对话框）。如果没有错误，且服务器返回了数据，客户端也必须处理。此外，一般它会阻塞一些（或者整个）屏幕区域，并展示一个繁忙的指示标志，直到Ajax操作结束。</p>
+<p>服务端应该接收请求，然后执行服务端的代码，捕获任何异常并返回一个有效的响应给客户端。在发生错误的情况下，它可以有选择地发送一个错误消息给客户端；成功时，它可以返回数据给客户端。</p>
+<h3 id="ABP采用的方式"><a href="#ABP采用的方式" class="headerlink" title="ABP采用的方式"></a>ABP采用的方式</h3><p>ABP通过使用<strong>abp.ajax</strong>函数封装Ajax的调用，自动化了这其中的一些步骤。一个ajax调用的例子如下：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> newPerson <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Dougles Adams'</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">42</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+abp<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    url<span class="token punctuation">:</span> <span class="token string">'/People/SavePerson'</span><span class="token punctuation">,</span>
+    data<span class="token punctuation">:</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>newPerson<span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'created new person with id = '</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>personId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>abp.ajax以一个对象作为接收<strong>选项</strong>。你可以传递任何在jQuery的$.ajax方法中有效的任何参数。这里有一些 <strong>默认</strong>的值：dataType是‘json’，type是‘POST’，contentType是‘application/json’（因此，在发送到服务器之前，我们可以调用JSON.stringify将javascript对象转成JSON字符串）。你可以通过将选项传给abp.ajax重写默认值。</p>
+<p>abp.ajax返回了**<a target="_blank" rel="noopener" href="http://api.jquery.com/deferred.promise/">promise</a><strong>。因此，你可以写done,fail,then等处理函数。上面的例子中，我们向 **PeopleController的SavePerson</strong>的action发送了简单的Ajax请求。在 <strong>done</strong>处理函数中，我们获得了新添加的person的数据库Id，而且展示了一个成功的通知。让我们看一下该Ajax请求的 <strong>MVC控制器</strong>：</p>
+<pre class=" language-C#"><code class="language-C#">public class PeopleController : AbpController
+{
+    [HttpPost]
+    public JsonResult SavePerson(SavePersonModel person)
+    {
+        //TODO:将新的person保存到数据库，并返回该person的Id
+        return Json(new {PersonId = 42});
+    }
+}
+</code></pre>
+<p><strong>SavePersonModel</strong>包含了Name和Age属性。SavePerson标记有 <strong>HttpPost</strong>特性，因为abp.ajax默认的方法是POST。这里通过返回一个匿名的对象简化了方法的实现。</p>
+<p>这个看上去简单明了，但是ABP背后处理了许多重要的事情。让我们深入细节看一下：</p>
+<h3 id="Ajax返回的消息"><a href="#Ajax返回的消息" class="headerlink" title="Ajax返回的消息"></a>Ajax返回的消息</h3><p>虽然我们直接返回了一个具有PersonId=2的对象，但是ABP会使用一个<strong>MVCAjaxResponse</strong>对象封装了它。实际的Ajax响应是像下面那样的：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  <span class="token property">"result"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"personId"</span><span class="token operator">:</span> <span class="token number">42</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"error"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"targetUrl"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"unAuthorizedRequest"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>这里，所有的属性都是camelCase的（因为在javascript中这是惯例），即使在服务端代码中是PascalCased的。下面解释一下所有的字段：</p>
+<ul>
+<li><strong>success</strong>:一个布尔值，表示操作的成功状态。如果是true，abp.ajax会解析该promise，并调用 <strong>done</strong>处理函数。如果是false（如果在方法调用中发生了异常），它会调用 <strong>fail</strong>处理函数并使用abp.message.error函数展示一个 <strong>error</strong>消息。</li>
+<li><strong>result</strong>：控制器的action返回的实际值。如果success是true，而且服务器发送了一个返回值，它才有效。</li>
+<li><strong>error</strong>：如果success是false，那么该字段是一个包含了 <strong>message</strong>和 <strong>detail</strong>字段的对象。</li>
+<li><strong>targetUrl</strong>:这为服务器提供了一种重定向客户端到其他Url的可能性。</li>
+<li><strong>unAuthorizedRequest</strong>:这为服务器提供了通知客户端该操作没有授权或者用户没有认证的可能性。如果该值是true，那么abp.ajax会 <strong>重新加载</strong>当前的页面。</li>
+</ul>
+<p>通过从<strong>AbpController</strong>类中派生就可以将返回值转换成一个封装的Ajax响应。 <strong>abp.ajax</strong>会识别并计算该响应。因此，它们成对工作。如果没有发生错误的话，那么abp.ajax的done处理函数会获得控制器返回的实际值（一个具有personId属性的对象）。</p>
+<p>当从<strong>AbpApiController</strong>类派生时，也会存在相同的机制。</p>
+<h3 id="处理错误"><a href="#处理错误" class="headerlink" title="处理错误"></a>处理错误</h3><p>正如上面描述的，ABP会处理服务器中的所有异常，并返回一个具有错误信息的对象，如下所示：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"targetUrl"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"result"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"An internal error occured during your request!"</span><span class="token punctuation">,</span>
+    <span class="token property">"details"</span><span class="token operator">:</span> <span class="token string">"..."</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"unAuthorizedRequest"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>可以看到，success是false，result是null。abp.ajax处理该对象，而且使用abp.message.error函数展示一个错误信息给用户。如果你的服务端代码抛出了一个<strong>UserFriendlyException</strong>类型的异常，它会直接给用户显示异常信息。否则，它会隐藏实际的错误（将错误写到日志中），并展示一个标准的“服务器内部错误…”信息给用户。所有的这些都是ABP自动处理的。</p>
+<h3 id="动态Web-API-层"><a href="#动态Web-API-层" class="headerlink" title="动态Web API 层"></a>动态Web API 层</h3><p>虽然ABP提供了一种使得调用Ajax很简单的机制，但是在真实世界的应用中，为每个Ajax调用编写javascript函数是很经典的，比如：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//创建一个抽象了Ajax调用的function</span>
+<span class="token keyword">var</span> savePerson <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> abp<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        url<span class="token punctuation">:</span> <span class="token string">'/People/SavePerson'</span><span class="token punctuation">,</span>
+        data<span class="token punctuation">:</span> JSON<span class="token punctuation">.</span><span class="token function">stringify</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//创建一个新的 person</span>
+<span class="token keyword">var</span> newPerson <span class="token operator">=</span> <span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Dougles Adams'</span><span class="token punctuation">,</span>
+    age<span class="token punctuation">:</span> <span class="token number">42</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//保存该person</span>
+<span class="token function">savePerson</span><span class="token punctuation">(</span>newPerson<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">done</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span>data<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'created new person with id = '</span> <span class="token operator">+</span> data<span class="token punctuation">.</span>personId<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>对于每个Ajax调用都写个函数是个好的做法，但是这耗时且乏味。ASP.NET为应用服务层方法提供了自动生成这些类型的函数机制。请阅读**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPDynamicWebAPI.html">《动态Web API层》</a>**</p>
+<h2 id="Notification"><a href="#Notification" class="headerlink" title="Notification##"></a>Notification##</h2><p>展示自动关闭的通知。</p>
+<p>我们喜欢一些事情发生时展示一些精致的自动消失的通知，比如当保存一条记录或者问题发生时。ABP为这个定义了标准的APIs。</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'a message text'</span><span class="token punctuation">,</span> <span class="token string">'optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'a message text'</span><span class="token punctuation">,</span> <span class="token string">'optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'a message text'</span><span class="token punctuation">,</span> <span class="token string">'optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>notify<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'a message text'</span><span class="token punctuation">,</span> <span class="token string">'optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>通知API默认是使用**<a target="_blank" rel="noopener" href="http://codeseven.github.io/toastr/demo.html">toastr</a>**库实现的。要使toastr生效，你应该引用toastr的css和javascript文件，然后再在页面中包含abp.toastr.js作为适配器。一个toastr成功通知如下所示：</p>
+<p><img src="http://i.imgur.com/xjBHBtD.png" alt="img"></p>
+<p>你也可以用你最喜欢的通知库中实现通知。只需要在自定义javascript文件中重写所有的函数，然后把它添加到页面中而不是abp.toastr.js（你可以检查该文件看它是否实现，这个相当简单）中。</p>
+<h2 id="Message"><a href="#Message" class="headerlink" title="Message##"></a>Message##</h2><p>给用户展示消息对话框。</p>
+<p>消息API用于给用户展示消息或者获得用户的确认。</p>
+<p>消息API默认是使用**<a target="_blank" rel="noopener" href="http://tristanedwards.me/sweetalert">sweetalert</a><strong>实现的。要让sweetalert生效，你应该包含它的css和javascript文件，然后再页面中添加 **abp.sweet-alert.js</strong>的引用作为适配器。</p>
+<h4 id="展示消息"><a href="#展示消息" class="headerlink" title="展示消息"></a>展示消息</h4><p>例子如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">'some info message'</span><span class="token punctuation">,</span> <span class="token string">'some optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">success</span><span class="token punctuation">(</span><span class="token string">'some success message'</span><span class="token punctuation">,</span> <span class="token string">'some optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">'some warning message'</span><span class="token punctuation">,</span> <span class="token string">'some optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">'some error message'</span><span class="token punctuation">,</span> <span class="token string">'some optional title'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>一个成功的消息如下所示：</p>
+<p><img src="http://i.imgur.com/gkHdu4k.png" alt="img"></p>
+<h4 id="确认"><a href="#确认" class="headerlink" title="确认"></a>确认</h4><p>例子如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>message<span class="token punctuation">.</span><span class="token function">confirm</span><span class="token punctuation">(</span>
+    <span class="token string">'User admin will be deleted.'</span><span class="token punctuation">,</span>
+    <span class="token string">'Are you sure?'</span><span class="token punctuation">,</span>
+    <span class="token keyword">function</span> <span class="token punctuation">(</span>isConfirmed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>isConfirmed<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token comment" spellcheck="true">//...删除用户</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>这里的第二个参数（title）是可选的，因此，回调函数也可以是第二个参数。</p>
+<p>一个确认消息的例子如下所示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201601/577014-20160111104142897-1109234390.png" alt="img"></p>
+<p>ABP内部使用了Message API。比如，如果Ajax调用失败了，那么它会调用abp.message.error。</p>
+<h2 id="UI-block和Busy-API"><a href="#UI-block和Busy-API" class="headerlink" title="UI block和Busy API##"></a>UI block和Busy API##</h2><p>使用一个区域（一个div，form，整个页面等）阻塞用户的输入。此外，还使得一个区域处于繁忙状态（具有一个繁忙的指示器，如‘loading…’）。</p>
+<h3 id="UI-Block-API"><a href="#UI-Block-API" class="headerlink" title="UI Block API"></a>UI Block API</h3><p>该API使用一个透明的涂层（transparent overlay）来阻塞整个页面或者该页面上的一个元素。这样，用户的点击就无效了。当保存一个表单或者加载一个区域（一个div或者整个页面）时这是很有用的，比如：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//阻塞整个页面</span>
+abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#MyDivElement'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//可以使用jQuery 选择器..</span>
+abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">block</span><span class="token punctuation">(</span><span class="token string">'#MyDivElement'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//..或者直接使用选择器</span>
+abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">unblock</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//解除阻塞整个页面</span>
+abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">unblock</span><span class="token punctuation">(</span><span class="token string">'#MyDivElement'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//解除阻塞特定的元素</span>
+</code></pre>
+<p>UI Block API默认使用jQuery的blockUI插件实现的。要是它生效，你应该包含它的javascript文件，然后在页面中包含<strong>abp.blockUI.js</strong>作为适配器。</p>
+<h3 id="UI-Busy-API"><a href="#UI-Busy-API" class="headerlink" title="UI Busy API"></a>UI Busy API</h3><p>该API用于使得某些页面或者元素处于繁忙状态。比如，你可能想阻塞一个表单，然后当提交表单至服务器时展示一个繁忙的指示器。例子：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">setBusy</span><span class="token punctuation">(</span><span class="token string">'#MyLoginForm'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">clearBusy</span><span class="token punctuation">(</span><span class="token string">'#MyLoginForm'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>样例截图：</p>
+<p><img src="http://i.imgur.com/ZmAirzt.png" alt="img"></p>
+<p>该参数应该是一个选择器（如‘#MyLoginForm’）或者jQuery选择器（如$(‘#MyLoginForm’)）。要使得整个页面处于繁忙状态，你可以传入null（或者’body’）作为选择器。</p>
+<p>setBusy函数第二个参数接收一个promise（约定），当该约定完成时会自动清除繁忙的状态。例子：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>ui<span class="token punctuation">.</span><span class="token function">setBusy</span><span class="token punctuation">(</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'#MyLoginForm'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+    abp<span class="token punctuation">.</span><span class="token function">ajax</span><span class="token punctuation">(</span><span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>    
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>因为abp.ajax返回promise，我们可以直接将它作为promise传入。要学习惯于promise更多的东西，查看jQuery的**<a target="_blank" rel="noopener" href="http://api.jquery.com/category/deferred-object/">Deferred</a>**。</p>
+<p>UI Busy API是使用**<a target="_blank" rel="noopener" href="http://fgnass.github.io/spin.js/">spin.js</a><strong>实现的。要让它生效，应该包含它的javascript文件，然后在页面中包含</strong>abp.spin.js**作为适配器。</p>
+<h2 id="事件总线-1"><a href="#事件总线-1" class="headerlink" title="事件总线"></a>事件总线</h2><p>用于注册和触发客户端的全局事件。</p>
+<h3 id="介绍-13"><a href="#介绍-13" class="headerlink" title="介绍"></a>介绍</h3><p><strong>Pub/sub</strong>事件模型广泛用于客户端，ABP包含了一个简单的<strong>全局事件总线</strong>来 <strong>注册</strong>并 <strong>触发事件</strong>。</p>
+<h4 id="注册事件"><a href="#注册事件" class="headerlink" title="注册事件"></a>注册事件</h4><p>可以使用<strong>abp.event.on</strong>来注册一个全局事件。一个注册的例子：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'itemAddedToBasket'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>item<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>item<span class="token punctuation">.</span>name <span class="token operator">+</span> <span class="token string">' is added to basket!'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>第一个参数是<strong>事件的唯一名称</strong>。第二个是回调函数，当特定事件被触发时，会被调用。</p>
+<p>可以使用<strong>abp.event.off</strong>方法来从一个事件中取消注册。注意：要取消注册，要提供相同的函数。因此，对于上面的例子，你应该将回调函数设置为一个变量，然后在<strong>on和off</strong>方法中使用它。</p>
+<h4 id="触发事件-1"><a href="#触发事件-1" class="headerlink" title="触发事件"></a>触发事件</h4><p><strong>abp.event.trigger</strong>用于触发一个全局事件。触发一个已经注册的事件的代码如下：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">trigger</span><span class="token punctuation">(</span><span class="token string">'itemAddedToBasket'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    id<span class="token punctuation">:</span> <span class="token number">42</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Acme Light MousePad'</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>第一个参数是<strong>该事件的唯一名称</strong>。第二个是（可选的）<strong>事件参数</strong>。你可以添加任何数量的参数，并且在回调方法中获得它们。</p>
+<h2 id="Logging"><a href="#Logging" class="headerlink" title="Logging##"></a>Logging##</h2><p>在客户端记录日志。</p>
+<h3 id="Javascript-Logging-API"><a href="#Javascript-Logging-API" class="headerlink" title="Javascript Logging API"></a>Javascript Logging API</h3><p>当你想要在客户端记录一些简单的日志时，你可以使用console.log(‘…’)API，这你已经知道了。但是这种写法不是所有的浏览器都支持的，而且可能会破坏你的脚本。因此，你应该首先检查console是否可用，此外，你可能想在别的地方记录日志，甚至你想以某种级别记录日志。ABP定义了安全的日志函数：</p>
+<pre><code>abp.log.debug(&#39;...&#39;);
+abp.log.info(&#39;...&#39;);
+abp.log.warn(&#39;...&#39;);
+abp.log.error(&#39;...&#39;);
+abp.log.fatal(&#39;...&#39;);
+</code></pre>
+<p>你可以通过设置<strong>abp.log.level</strong>为abp.log.levels之一来更改日志级别（比如，abp.log.levels.INFO没有记录调试日志）。这些函数默认将日志记录到了浏览器的控制台里了。但如果你需要的话，你也可以重写或者扩展这个行为。</p>
+<h2 id="其他工具功能"><a href="#其他工具功能" class="headerlink" title="其他工具功能##"></a>其他工具功能##</h2><p>ABP提供了一些通用的工具功能。</p>
+<h3 id="abp-utils-createNamespace"><a href="#abp-utils-createNamespace" class="headerlink" title="abp.utils.createNamespace"></a>abp.utils.createNamespace</h3><p>用于立即创建更深的命名空间。假设我们有一个基命名空间‘abp’，然后想要创建或者获得‘abp.utils.strings.formatting’命名空间。不需要下面这样写：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token comment" spellcheck="true">//创建或获得namespace</span>
+abp<span class="token punctuation">.</span>utils <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>strings <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>strings <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>strings<span class="token punctuation">.</span>formatting <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>strings<span class="token punctuation">.</span>formatting <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//给该namespace添加一个function</span>
+abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>strings<span class="token punctuation">.</span>formatting<span class="token punctuation">.</span>format <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>我们可以这样写：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> formatting <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">createNamespace</span><span class="token punctuation">(</span>abp<span class="token punctuation">,</span> <span class="token string">'utils.strings.formatting'</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//给该namespace添加一个function</span>
+formatting<span class="token punctuation">.</span>format <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>这样就简化了安全地创建深入的命名空间了。注意，第一个参数是必须存在的根命名空间。</p>
+<h3 id="abp-utils-formatString"><a href="#abp-utils-formatString" class="headerlink" title="abp.utils.formatString"></a>abp.utils.formatString</h3><p>这个和C#中的string.Format()很相似。用法示例：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> str <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">formatString</span><span class="token punctuation">(</span><span class="token string">'Hello {0}!'</span><span class="token punctuation">,</span> <span class="token string">'World'</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//str = 'Hello World!'</span>
+<span class="token keyword">var</span> str <span class="token operator">=</span> abp<span class="token punctuation">.</span>utils<span class="token punctuation">.</span><span class="token function">formatString</span><span class="token punctuation">(</span><span class="token string">'{0} number is {1}.'</span><span class="token punctuation">,</span> <span class="token string">'Secret'</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//str = 'Secret number is 42'</span>
+</code></pre>
+<h1 id="ABP理论学习之本地化-2016第一篇"><a href="#ABP理论学习之本地化-2016第一篇" class="headerlink" title="ABP理论学习之本地化(2016第一篇)"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html">ABP理论学习之本地化(2016第一篇)</a></h1><hr>
+<h2 id="本篇目录-27"><a href="#本篇目录-27" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html#appLang">应用语言</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html#source">本地化资源</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html#text">获取本地化文本</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html#extend">扩展本地化资源</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPLocalization.html#bestPractice">最佳实践</a></strong></li>
+</ul>
+<h3 id="应用语言"><a href="#应用语言" class="headerlink" title="应用语言###"></a>应用语言###</h3><p>一个应用至少有一种UI语言，许多应用不止有一种语言。ABP为应用提供了一个灵活的本地化系统。</p>
+<p>第一件事情就是声明支持哪些语言。这个是在模块的<strong>PreInitialize</strong>方法中完成的，如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Languages.Add(new LanguageInfo("en", "English", "famfamfam-flag-england", true));
+Configuration.Localization.Languages.Add(new LanguageInfo("tr", "Türkçe", "famfamfam-flag-tr"));
+</code></pre>
+<p>在服务端，可以先注入<strong>ILocalizationManager</strong>,然后使用它。在客户端，可以使用 <strong>abp.localization</strong>Javascript API来获得所有可使用的语言和当前的语言。famfamfam-flag-england (和tr)只是一个Css类而已，你可以根据自己的需要改变它。然后在UI上使用它来展示相关的旗帜（比如各种国旗）。</p>
+<p>ABP模板使用了本地化系统给用户呈现的是一个<strong>切换语言</strong>的下拉列表。你可以创建一个模板项目然后学习一下源代码。</p>
+<h3 id="本地化资源"><a href="#本地化资源" class="headerlink" title="本地化资源###"></a>本地化资源###</h3><p>本地化文本可以存储在不同的资源中。甚至你可以在相同的应用中使用不止一种语言（如果你有不止一个模块，每个模块可以定义一个单独的本地化资源）。应该为本地化资源实现<strong>ILocalizationSource</strong>接口，然后将它注册到ABP的本地化配置中。</p>
+<p>每个本地化资源必须有一个<strong>唯一的资源名</strong>。 <strong>XML文件</strong>和 <strong>资源</strong>文件是预定义的本地化资源类型。</p>
+<h4 id="XML文件"><a href="#XML文件" class="headerlink" title="XML文件"></a>XML文件</h4><p>本地化文本可以存储在XML文件中，XML文件的内容就像下面展示的那样：</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localizationDictionary</span> <span class="token attr-name">culture</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>texts</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TaskSystem<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Task System<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>TaskList<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Task List<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>NewTask<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>New Task<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Xtasks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>{0} tasks<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>CompletedTasks<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Completed tasks<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>EmailWelcomeMessage<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Hi,
+Welcome to Simple Task System! This is a sample
+email content.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>text</span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>texts</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localizationDictionary</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>XML文件必须是<strong>utf-8</strong>编码， <strong>culture=”en”**声明该XML文件包含了英语文本。对于文本节点，</strong>name<strong>特性用于标识一个文本。你可以使用 **value</strong>特性或者 <strong>inner text</strong>(如上面的最后一个)给本地化文本赋值。如下所示，我们为<strong>每种语言</strong>创建了一个单独的XML文件：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231232053042-1808284103.png" alt="img"></p>
+<p>这里，<strong>SimpleTaskSystem</strong>是 <strong>资源名称</strong>，SimpleTaskSystem定义了 <strong>默认的语言</strong>。当请求一个文本时，ABP会从当前语言的XML文件中获取文本（使用Thread.CurrentThread.<strong>CurrentUICulture</strong>找到当前的语言）。如果不存在当前语言的文本，就会从默认语言的XML文件中获得文本。</p>
+<p><strong>注册XML本地化资源</strong></p>
+<p>XML文件可以存储在文件系统中或者可以内嵌在一个程序集中。</p>
+<p>对于<strong>文件系统</strong>存储的XML，我们可以注册一个XML本地化资源，如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Sources.Add(
+    new DictionaryBasedLocalizationSource(
+        "SimpleTaskSystem",
+        new XmlFileLocalizationDictionaryProvider(
+            HttpContext.Current.Server.MapPath("~/Localization/SimpleTaskSystem")
+            )
+        )
+    );
+</code></pre>
+<p>这个是在模块的<strong>PreInitialize</strong>事件中完成的（看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPModuleSystem.html">模块系统</a>**获取更多信息）。ABP会找到所有给定目录的XML文件并注册这些本地化资源。</p>
+<p>对于<strong>内嵌的XML文件</strong>，我们应该将所有的本地化XML文件标记为内嵌的资源（选中xml文件，打开属性窗口，将生成操作的值改为‘内嵌的资源’）。然后像下面那样注册该本地化资源：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Sources.Add(
+    new DictionaryBasedLocalizationSource(
+        "SimpleTaskSystem",
+        new XmlEmbeddedFileLocalizationDictionaryProvider(
+            Assembly.GetExecutingAssembly(),
+            "MyCompany.MyProject.Localization.Sources"
+            )
+        )
+    );
+</code></pre>
+<p><strong>XmlEmbeddedFileLocalizationDictionaryProvider</strong>会获得包含XML文件的程序集（GetExecutingAssembly简单地指向当前的程序集）和XML文件的 <strong>命名空间</strong>（程序集名称+xml文件的文件夹层次）。</p>
+<p>注意：当给内嵌的XML文件起名字时，要加上语言后缀，但是不要使用“.”，比如“MySource.ch.xml”，而要使用短号“-”，比如“MySource-en.xml”。因为当寻找资源时，“.”会造成问题。</p>
+<h4 id="JSON文件"><a href="#JSON文件" class="headerlink" title="JSON文件"></a>JSON文件</h4><p>JSON文件可以用于存储本地化资源的文本。JSON本地化文件的一个简单样例如下所示：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"culture"</span><span class="token operator">:</span> <span class="token string">"en"</span><span class="token punctuation">,</span>
+  <span class="token property">"texts"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"TaskSystem"</span><span class="token operator">:</span> <span class="token string">"Task system"</span><span class="token punctuation">,</span>
+    <span class="token property">"Xtasks"</span><span class="token operator">:</span> <span class="token string">"{0} tasks"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>JSON文件的格式应该是unicode(utf-8)格式。<code>&quot;culture&quot;:&quot;en&quot;</code>表示该Json文件包含了英文文本。如下所示，我们为<strong>每种语言</strong>创建了一个单独的Json文件：</p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/3a2186cf-3d54-4e0c-b70a-98ead158721c.png" alt="图片"></p>
+<p>这里的<strong>MySourceName</strong>是资源名称， MySourceName.json定义了 <strong>默认的语言</strong>，json文件和XML文件很相似。</p>
+<p><strong>注册JSON本地化资源</strong><br> Json文件可以存储在<strong>文件系统</strong>中，也可以 <strong>内嵌</strong>到一个程序集中。<br> 对于文件系统存储JSON，我们可以注册一个Json本地化资源，如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Sources.Add(
+    new DictionaryBasedLocalizationSource(
+        "MySourceName",
+        new JsonFileLocalizationDictionaryProvider(
+            HttpContext.Current.Server.MapPath("~/Localization/MySourceName")
+            )
+        )
+    );
+</code></pre>
+<p>这是在模块的<strong>PerInitialize</strong>事件中完成的。ABP会在给定的目录中寻找所有的Json文件，并注册到本地化资源。</p>
+<p>对于<strong>内嵌的Json文件</strong>，首先我们应该将所有的本地化Json文件标记为 <strong>内嵌的资源</strong>（选中Json文件，然后打开属性窗口，更改生成操作为内嵌的资源即可）。然后我们就可以像下面那样注册本地化资源了：</p>
+<pre class=" language-C#"><code class="language-C#"> Configuration.Localization.Sources.Add(
+    new DictionaryBasedLocalizationSource(
+        "MySourceName",
+        new JsonEmbeddedFileLocalizationDictionaryProvider(
+            Assembly.GetExecutingAssembly(),
+            "MyCompany.MyProject.Localization.Sources"
+            )
+        )
+    );
+</code></pre>
+<p><strong>JsonEmbeddedFileLocalizationDictionaryProvider</strong>需要一个包含Json文件的程序集（GetExecutingAssembly指向当前的程序集）和Json文件的命名空间（命名空间是通过程序集名称+json文件的文件夹层次计算出来的）。</p>
+<p><strong>注意：</strong>当我们给json文件添加了语言后缀时，不要使用“.”标记符号，如“MySource.tr.json”，而要使用分隔符如“<strong>MySource-tr.json</strong>”，因为“.”标记符号在寻找资源时可能会发生问题。</p>
+<h4 id="资源文件"><a href="#资源文件" class="headerlink" title="资源文件"></a>资源文件</h4><p>本地化文本也可以存储在.NET的资源文件中。我们可以为每种语言创建一个资源文件，如下所示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231234452479-171479678.png" alt="img"></p>
+<p><strong>MyTexts.resx</strong>包含了默认的语言文本， MyTexts.tr.resx包含了土耳其语言的文本。当我们打开MyTexts.resx时，我们可以看到所有文本：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231234648354-476448936.png" alt="img"></p>
+<p>在这种情况下，ABP使用了.NET中内置的本地化资源管理者。你应该为该资源配置一个本地化资源：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Sources.Add(
+    new ResourceFileLocalizationSource(
+        "MySource",
+        MyTexts.ResourceManager
+        ));
+</code></pre>
+<p>这里，<strong>MySource</strong>是资源的 <strong>唯一名字</strong>，而且 <strong>MyTexts.ResourceManager</strong>是获取本地化文本的资源管理者的引用。这个是在模块的 <strong>Initialize</strong>事件中完成的。</p>
+<h4 id="自定义资源"><a href="#自定义资源" class="headerlink" title="自定义资源"></a>自定义资源</h4><p>自定义本地化资源实现了在不同的资源中（比如数据库）存储文本。你可以直接实现<strong>ILocalizationSource</strong>接口或者从<strong>DictionaryBasedLocalizationSource</strong>类中派生可以使得实现更容易。</p>
+<h3 id="获取本地化文本"><a href="#获取本地化文本" class="headerlink" title="获取本地化文本###"></a>获取本地化文本###</h3><p>当创建了资源并把它注册到ABP的本地化系统之后，文本就能轻易地本地化了。</p>
+<h4 id="服务端-2"><a href="#服务端-2" class="headerlink" title="服务端"></a>服务端</h4><p>在服务端，我们可以注入<strong>ILocalizationManager</strong>，然后使用它的 <strong>GetString</strong>方法。</p>
+<pre class=" language-C#"><code class="language-C#">var s1 = _localizationManager.GetString("SimpleTaskSystem", "NewTask");
+</code></pre>
+<p>GetString方法会基于<strong>当前线程的UI文化（culture）</strong>获取字符串。如果没有找到，就会返回 <strong>默认语言</strong>对应的字符串。如果任何地方都没有定义该字符串，就会默认返回使用 <strong>“[]”</strong> 包装的 <strong>给定字符串</strong>（而不是抛出异常）。这种行为是可以配置的（你可以在模块的PreInitialize中使用Configuration.Loacalization.ReturnGivenTextIfNotFound属性进行配置）。</p>
+<p>记得不要重复资源的名字(运行时会报错)，你可以首先获得<strong>该资源</strong>，然后从该资源中获得字符串：</p>
+<pre class=" language-C#"><code class="language-C#">var source = _localizationManager.GetSource("SimpleTaskSystem");
+var s1 = source.GetString("NewTask");
+</code></pre>
+<p>这会返回当前语言的文本。GetString方法也有重载方法通过参数获取不同语言和格式的文本。</p>
+<p>如果我们不能注入ILocalizationManager（也许在一个不能到达依赖注入系统的静态上下文中），那么可以简单地使用<strong>LocalizationHelper</strong>静态类。但是尽可能地注入并使用ILocalizationManager，因为LocalizationHelper是静态的而且静态不好测试（对于写单元测试的人来说）。</p>
+<p>如果你需要在**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPApplicationService.html">应用服务</a><strong>、MVC控制器、Razor视图或者其他派生自</strong>AbpServiceBase<strong>的类中本地化，那么可以使用快捷的 **L</strong>方法。</p>
+<p><strong>在MVC控制器中</strong></p>
+<p>一般在MVC控制器和视图中需要本地化文本。这里有一个快捷方式，如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">public class HomeController : SimpleTaskSystemControllerBase
+{
+    public ActionResult Index()
+    {
+        var helloWorldText = L("HelloWorld");
+        return View();
+    }
+}
+</code></pre>
+<p><strong>L</strong>方法用于本地化一个字符串。当然，你必须提供一个资源名，这里的HelloWorld就是从资源中找到的。它是在控制器基类SimpleTaskSystemControllerBase(以ControllerBase为后缀的控制器)中完成的，如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">public abstract class SimpleTaskSystemControllerBase : AbpController
+{
+    protected SimpleTaskSystemControllerBase()
+    {
+        LocalizationSourceName = "SimpleTaskSystem";
+    }
+}
+</code></pre>
+<p>注意L派生自<strong>AbpController</strong>。因此，你可以使用 <strong>L</strong>方法轻松地本地化文本。</p>
+<p><strong>在MVC视图中</strong></p>
+<p>在视图中也可以使用相同的<strong>L</strong>方法：</p>
+<pre class=" language-C#"><code class="language-C#"><div>
+    <form id="NewTaskForm" role="form">
+        <div class="form-group">
+            <label for="TaskDescription">@L("TaskDescription")</label>
+            <textarea id="TaskDescription" data-bind="value: task.description" class="form-control" rows="3" placeholder="@L("EnterDescriptionHere")" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="TaskAssignedPerson">@L("AssignTo")</label>
+            <select id="TaskAssignedPerson" data-bind="options: people, optionsText: 'name', optionsValue: 'id', value: task.assignedPersonId, optionsCaption: '@L("SelectPerson")'" class="form-control"></select>
+        </div>
+        <button data-bind="click: saveTask" type="submit" class="btn btn-primary">@L("CreateTheTask")</button>
+    </form>
+</div>
+</code></pre>
+<p>为了能够这样使用，你应该让你的视图派生自设置了资源名的一个基类：</p>
+<pre class=" language-C#"><code class="language-C#">public abstract class SimpleTaskSystemWebViewPageBase : SimpleTaskSystemWebViewPageBase<dynamic>
+{
+
+}
+
+public abstract class SimpleTaskSystemWebViewPageBase<TModel> : AbpWebViewPage<TModel>
+{
+    protected SimpleTaskSystemWebViewPageBase()
+    {
+        LocalizationSourceName = "SimpleTaskSystem";
+    }
+}
+</code></pre>
+<p>而且要在web.config中设置这个视图基类：</p>
+<pre class=" language-webconfig"><code class="language-webconfig"><pages pageBaseType="SimpleTaskSystem.Web.Views.SimpleTaskSystemWebViewPageBase">
+</code></pre>
+<p>当你从ABP模板创建解决方案时，对于视图和控制器的所有这些都已经准备好了。</p>
+<h4 id="客户端-3"><a href="#客户端-3" class="headerlink" title="客户端"></a>客户端</h4><p>ABP也使得在javascript代码中使用相同的本地化文本成为了可能。首先，你应该将动态的ABP脚本添加到页面中：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/AbpScripts/GetScripts<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>ABP在客户端会自动生成需要的javascript代码来获得本地化的文本。然后，你就可以轻松地使用javascript获得一个本地化的文本，如下所示：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> s1 <span class="token operator">=</span> abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span><span class="token function">localize</span><span class="token punctuation">(</span><span class="token string">'NewTask'</span><span class="token punctuation">,</span> <span class="token string">'SimpleTaskSystem'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>这里，NewTask是文本名，SimpleTaskSystem是资源名。记住不要重复资源名。你也可以先获得资源名，然后获得文本：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> source <span class="token operator">=</span> abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span><span class="token function">getSource</span><span class="token punctuation">(</span><span class="token string">'SimpleTaskSystem'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s1 <span class="token operator">=</span> <span class="token function">source</span><span class="token punctuation">(</span><span class="token string">'NewTask'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>格式化参数</strong></p>
+<p>本地化方法也可以有额外的格式参数，例子：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span><span class="token function">localize</span><span class="token punctuation">(</span><span class="token string">'RoleDeleteWarningMessage'</span><span class="token punctuation">,</span> <span class="token string">'MySource'</span><span class="token punctuation">,</span> <span class="token string">'Admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment" spellcheck="true">//如果使用上面的getSource找到了资源，就使用source作为快捷方式</span>
+<span class="token function">source</span><span class="token punctuation">(</span><span class="token string">'RoleDeleteWarningMessage'</span><span class="token punctuation">,</span> <span class="token string">'Admin'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>如果RoleDeleteWarningMessage = ‘Role {0} will be deleted’， 那么本地化后的文本就是’Role Admin will be deleted’。</p>
+<p><strong>默认的本地化资源</strong><br> 可以设置默认的本地化资源，然后就能够不使用资源名称也可以使用<code>abp.localization.localize</code>方法了。</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span>defaultSourceName <span class="token operator">=</span> <span class="token string">'SimpleTaskSystem'</span><span class="token punctuation">;</span>
+<span class="token keyword">var</span> s1 <span class="token operator">=</span> abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span><span class="token function">localize</span><span class="token punctuation">(</span><span class="token string">'NewTask'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>defaultSourceName是全局的，并且一次只能用于一个资源名称。</p>
+<h3 id="扩展本地化资源"><a href="#扩展本地化资源" class="headerlink" title="扩展本地化资源###"></a>扩展本地化资源###</h3><p>假设我们已经有一个定义了自己本地化资源的模块。我们可能需要更改它的本地化文本，或者添加一些新的文本或者翻译为其他的语言。如何解决这个呢？ABP允许扩展一个本地化资源，当前只对XML文件有效（实际上任何本地化资源都实现了IDictionaryBasedLocalizationSource接口）。</p>
+<p>ABP也定义了一些本地化资源。比如，<strong>Abp.Web</strong>nuget包定义了一个叫做 <strong>AbpWeb</strong>的本地化资源作为内嵌XML文件：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201601/577014-20160101131030401-240846594.png" alt="img"></p>
+<p>默认的（英语）XML文件像下面这个样子（这里只展示一部分文本）：</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localizationDictionary</span> <span class="token attr-name">culture</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>texts</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>InternalServerError<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>An internal error occurred during your request!<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ValidationError<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Your request is not valid!<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+    ...
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>texts</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localizationDictionary</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>要扩展AbpWeb资源，我们可以定义XML文件。假设我们只想更改<strong>InternalServerError</strong>文本，我们就可以像下面那样定义一个XML文件：</p>
+<pre class=" language-xml"><code class="language-xml"><span class="token prolog">&lt;?xml version="1.0" encoding="utf-8" ?></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>localizationDictionary</span> <span class="token attr-name">culture</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>en<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>texts</span><span class="token punctuation">></span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>InternalServerError<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Sorry :( It seems there is a problem. Let us to solve it and please try again later.<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>texts</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>localizationDictionary</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>然后我们在模块的PreInitialize方法中注册它：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Localization.Sources.Extensions.Add(
+    new LocalizationSourceExtensionInfo("AbpWeb",
+        new XmlFileLocalizationDictionaryProvider(
+            HttpContext.Current.Server.MapPath("~/Localization/AbpWebExtensions")
+            )
+        )
+    );
+</code></pre>
+<p>如果我们想创建内嵌的资源XML文件（上面有讲），那么可以使用XmlEmbeddedFileLocalizationDictionaryProvider。ABP使用XML文件合并了基本的本地化资源。我们也可以添加新的语言文件。</p>
+<p><strong>注意：</strong>我们可以使用Json文件来扩展XMl文件，反过来也一样。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论###"></a>结论###</h3><p>ABP提供了使用不同资源进行本地化的功能，也提供了在服务端和客户端代码中使用相同的本地化文本的基础设施。</p>
+<p>XML文件，Json文件和资源文件都有自己的长处和弱势，我们建议使用XML文件或者Json文件代替资源文件。因为：</p>
+<ul>
+<li>XML/JSON文件更容易编辑，扩展或者移植。</li>
+<li>当获取本地化文本时，XML/JSON文件要求string类型的key，而不是像资源文件需要编译时的属性。这个可以被认为是缺点，但是以后更改资源时相对容易一些。甚至我们将本地化不需要更改就可以移动到数据库或者使用了该本地化资源的代码中了（Module-zero已经实现了创建一个<strong>基于数据库和每个租户的</strong>本地化资源，查看《**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ModuleZeroLanguageManagement.html">Module Zero之语言管理</a>**》）。</li>
+</ul>
+<p>此外，如果你使用XML或者Json，建议不要按照name进行排序文本，而要按照创建日期进行排序。这样，当别人要将文本翻译为其他语言时，ta就可以轻松地看到哪一个文本是新添加的。</p>
+<p>通过实现<strong>ILocalizationSource</strong>接口，你也可以创建你自己的本地化资源并集成到ABP中。 <strong>Module-zero</strong>实现了一个 <strong>基于数据库</strong>和 <strong>各租户</strong>的本地化资源。 <strong><a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ModuleZeroLanguageManagement.html">点击查看文档</a></strong></p>
+<h1 id="ABP理论学习之导航-Navigation"><a href="#ABP理论学习之导航-Navigation" class="headerlink" title="ABP理论学习之导航(Navigation)"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNavigation.html">ABP理论学习之导航(Navigation)</a></h1><hr>
+<h2 id="本篇目录-28"><a href="#本篇目录-28" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNavigation.html#create">创建菜单</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNavigation.html#register">注册导航提供者</a></strong></li>
+</ul>
+</li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNavigation.html#show">展示菜单</a></strong></li>
+</ul>
+<p>每一个web应用在页面之间都有一些要导航的菜单。ABP提供了公用的基础设施来创建菜单并将菜单展示给用户。</p>
+<h3 id="创建菜单"><a href="#创建菜单" class="headerlink" title="创建菜单###"></a>创建菜单###</h3><p>一个应用可能由不同的模块组成，每个模块可能有它自己的菜单项。想要定义菜单项，我们需要创建一个派生自<strong>NavigationProvider</strong>的类。</p>
+<p>假设我们有一个如下所示的主菜单：</p>
+<ul>
+<li>Tasks</li>
+<li>Reports</li>
+<li>Administration<ul>
+<li>User Management</li>
+<li>Role Management</li>
+</ul>
+</li>
+</ul>
+<p>这里，Administration菜单项有两个<strong>子菜单项</strong>。创建这么一个菜单的导航提供者类如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">   public class SimpleTaskSystemNavigationProvider : NavigationProvider
+{
+    public override void SetNavigation(INavigationProviderContext context)
+    {
+        context.Manager.MainMenu
+            .AddItem(
+                new MenuItemDefinition(
+                    "Tasks",
+                    new LocalizableString("Tasks", "SimpleTaskSystem"),
+                    url: "/Tasks",
+                    icon: "fa fa-tasks"
+                    )
+            ).AddItem(
+                new MenuItemDefinition(
+                    "Reports",
+                    new LocalizableString("Reports", "SimpleTaskSystem"),
+                    url: "/Reports",
+                    icon: "fa fa-bar-chart"
+                    )
+            ).AddItem(
+                new MenuItemDefinition(
+                    "Administration",
+                    new LocalizableString("Administration", "SimpleTaskSystem"),
+                    icon: "fa fa-cogs"
+                    ).AddItem(
+                        new MenuItemDefinition(
+                            "UserManagement",
+                            new LocalizableString("UserManagement", "SimpleTaskSystem"),
+                            url: "/Administration/Users",
+                            icon: "fa fa-users",
+                            requiredPermissionName: "SimpleTaskSystem.Permissions.UserManagement"
+                            )
+                    ).AddItem(
+                        new MenuItemDefinition(
+                            "RoleManagement",
+                            new LocalizableString("RoleManagement", "SimpleTaskSystem"),
+                            url: "/Administration/Roles",
+                            icon: "fa fa-star",
+                            requiredPermissionName: "SimpleTaskSystem.Permissions.RoleManagement"
+                            )
+                    )
+            );
+    }
+}
+</code></pre>
+<p>一个MenuItemDefinition一般有一个唯一的<strong>name</strong>，一个本地化的<strong>displayName</strong>，一个 <strong>url</strong>和一个 <strong>icon</strong>。而且，</p>
+<ul>
+<li>一个菜单项可能要求一个特定的用户具有展示该菜单的权限。此时可以使用<strong>requiredPermissionName</strong>属性。</li>
+<li>一个菜单项可能依赖于一个功能。此时可以使用<strong>featureDependency</strong>。</li>
+<li>一个菜单项可以定义一个<strong>customData</strong>和 <strong>order</strong>。</li>
+</ul>
+<p>**INavigationProviderContext **具有一个获得已存在菜单项、添加菜单以及菜单项的方法。这样，不同的模块就可以将自己的项添加到菜单上。</p>
+<p>在一个应用中也可能有一个或更多的菜单，<strong>context.Manager.MainMenu</strong>引用了默认的主菜单。使用<strong>context.Manager.Menus</strong>可以创建和添加更多的菜单。</p>
+<h4 id="注册导航提供者"><a href="#注册导航提供者" class="headerlink" title="注册导航提供者"></a>注册导航提供者</h4><p>创建导航提供者之后，我们应该在模块的<strong>PreInitialize</strong>事件里将它注册到ABP的配置中：</p>
+<pre class=" language-C#"><code class="language-C#">Configuration.Navigation.Providers.Add<SimpleTaskSystemNavigationProvider>();
+</code></pre>
+<h3 id="展示菜单"><a href="#展示菜单" class="headerlink" title="展示菜单###"></a>展示菜单###</h3><p>可以注入<strong>IUserNavigationManager</strong>，然后使用它来获得菜单项，再将菜单项展示给用户。这样，我们就可以在服务端创建菜单了。</p>
+<p>ABP在客户端自动生成获得菜单和菜单项的<strong>javascript API</strong>。 <strong>abp.nav</strong>命名空间下的方法和对象就是用于这个目的。比如，可以使用 <strong>abp.nav.menus.Mainmenu</strong>获得应用的主菜单。这样我们就能在客户端创建菜单了。</p>
+<p>ABP模板使用了这个系统来创建菜单并将菜单展示给用户，你可以通过创建一个模板来查看源代码了解更多。</p>
+<h1 id="ABP理论学习之异常处理"><a href="#ABP理论学习之异常处理" class="headerlink" title="ABP理论学习之异常处理"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html">ABP理论学习之异常处理</a></h1><hr>
+<h2 id="本篇目录-29"><a href="#本篇目录-29" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#intro">介绍</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#enable">开启错误处理</a></strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#nonAjax">非Ajax请求</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#show">展示异常信息</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#UserFriendlyException">UserFriendlyException</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#model">Error模型</a></strong></li>
+</ul>
+</li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#Ajax">Ajax请求</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPException.html#event">异常事件</a></strong></li>
+</ul>
+<h3 id="介绍-14"><a href="#介绍-14" class="headerlink" title="介绍###"></a>介绍###</h3><p>在一个web应用中，异常通常是在MVC控制器的action方法和Web API控制器中处理的。当异常发生时，应用程序会通知用户发生的错误，也可能包含该错误产生的原因。</p>
+<p>如果错误发生在一个常规的HTTP请求中，那么就会展示一个错误页面。如果一个错误发生在Ajax请求中，那么服务端会给客户端发送错误信息，然后处理后将错误展示给用户。</p>
+<p>在所有的web应用中处理异常是一个乏味反复的工作。ABP的异常处理是自动化的。你大多数情况下不需要处理任何异常。ABP会处理所有的异常，记录异常信息日志，并返回给客户端合适且格式化的响应，而且也会在客户端处理这些响应并通知用户。</p>
+<h3 id="开启错误处理"><a href="#开启错误处理" class="headerlink" title="开启错误处理###"></a>开启错误处理###</h3><p>要开启错误处理，必须开启<strong>customErrors</strong>模式。</p>
+<pre class=" language-webconfig"><code class="language-webconfig"><customErrors mode="On" />
+</code></pre>
+<p>如果你不想在本机上处理错误，那么你可以将该值设置成“RemoteOnly”。</p>
+<h3 id="非Ajax请求"><a href="#非Ajax请求" class="headerlink" title="非Ajax请求###"></a>非Ajax请求###</h3><p>如果请求是非Ajax的，那么就会显示一个错误页面。</p>
+<h4 id="展示异常信息"><a href="#展示异常信息" class="headerlink" title="展示异常信息"></a>展示异常信息</h4><p>这里有个抛出任意异常的MVC控制器action。</p>
+<pre class=" language-C#"><code class="language-C#">public ActionResult Index()
+{
+    throw new Exception("A sample exception message...");
+}
+</code></pre>
+<p>当然，这个异常信息也可能被在该action中调用的其他方法抛出。ABP会处理这个异常，记录到日志，然后显示<strong>“Error.cshtml”</strong>视图。你也可以<strong>自定义</strong>该错误视图。一个错误视图的例子如下（它是ABP模板中默认的错误视图）：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231212223792-1292368149.png" alt="img"></p>
+<p>ABP会将该异常的细节隐藏给用户，然后展示一个标准的（本地化）错误信息，除非你显示抛出一个<strong>UserFriendlyException</strong>。</p>
+<h4 id="UserFriendlyException"><a href="#UserFriendlyException" class="headerlink" title="UserFriendlyException"></a>UserFriendlyException</h4><p>UserFriendlyException是一个特殊类型的异常，它会直接展示给用户。看下面的例子：</p>
+<pre class=" language-C#"><code class="language-C#">public ActionResult Index()
+{
+    throw new UserFriendlyException("Ooppps! There is a problem!", "You are trying to see a product that is deleted...");
+}
+</code></pre>
+<p>ABP会记录这个错误日志，但是这次不会隐藏异常信息了，如下所示：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231212718573-747775861.png" alt="img"></p>
+<p>因此，如果你想要给用户展示一个特殊的错误信息，只要抛出一个UserFriendlyException（或者派生自它的异常）就行了。</p>
+<h4 id="Error模型"><a href="#Error模型" class="headerlink" title="Error模型"></a>Error模型</h4><p>ABP将一个<strong>ErrorViewModel</strong>对象传给了Error视图：</p>
+<pre class=" language-C#"><code class="language-C#">public class ErrorViewModel
+{
+    public AbpErrorInfo ErrorInfo { get; set; }
+
+    public Exception Exception { get; set; }
+}
+</code></pre>
+<p><strong>ErrorInfo</strong>包含了可以展示给用户的详细信息， <strong>Exception</strong>对象是抛出的异常。如果你想，你也可以检查它，然后展示额外的信息。比如，如果它是一个<strong>AbpValidationException</strong>，那么我们可以展示一个验证错误的信息：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151231213304698-1528714449.png" alt="img"></p>
+<h3 id="Ajax请求"><a href="#Ajax请求" class="headerlink" title="Ajax请求###"></a>Ajax请求###</h3><p>如果请求是Ajax请求，那么ABP会返回一个Json对象给客户端。这对于MVC控制器和Web API控制器都是成立的。下面是返回一个错误对象的例子：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+  <span class="token property">"targetUrl"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"result"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+  <span class="token property">"success"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+  <span class="token property">"error"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"message"</span><span class="token operator">:</span> <span class="token string">"An internal error occured during your request!"</span><span class="token punctuation">,</span>
+    <span class="token property">"details"</span><span class="token operator">:</span> <span class="token string">"..."</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"unAuthorizedRequest"</span><span class="token operator">:</span> <span class="token boolean">false</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p><strong>success:false</strong>表明发送了错误。<br> <strong>error</strong>对象提供了错误 <strong>信息</strong>和 <strong>细节</strong>。</p>
+<p>当你使用ABP的基础设施在客户端发起Ajax请求时，客户端会自动地处理这个Json对象，然后使用message API给用户提示错误信息。</p>
+<h3 id="异常事件"><a href="#异常事件" class="headerlink" title="异常事件###"></a>异常事件###</h3><p>ABP处理任何异常时都会触发<strong>AbpHandledExceptionData</strong>事件，注册该事件后就会收到通知（查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPEventBus.html">事件总线（EventBus）</a>**获取更多信息关于事件总线的信息）。例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyExceptionHandler : IEventHandler<AbpHandledExceptionData>, ITransientDependency
+{
+    public void HandleEvent(AbpHandledExceptionData eventData)
+    {
+        //TODO: 检查 eventData.Exception!
+    }
+}
+</code></pre>
+<p>如果你把这个样例类放到你的应用中（一般放到Web项目中），<strong>HandleEvent</strong>方法就会被ABP处理的所有异常调用。这样，你就可以研究Exception对象的细节了。</p>
+<h1 id="ABP理论学习之内嵌资源文件"><a href="#ABP理论学习之内嵌资源文件" class="headerlink" title="ABP理论学习之内嵌资源文件"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEmbeddedFile.html">ABP理论学习之内嵌资源文件</a></h1><hr>
+<h2 id="本篇目录-30"><a href="#本篇目录-30" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEmbeddedFile.html#intro">介绍</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEmbeddedFile.html#create">创建内嵌文件</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEmbeddedFile.html#expose">暴露内嵌文件</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEmbeddedFile.html#consume">使用内嵌文件</a></strong></li>
+</ul>
+<h3 id="介绍-15"><a href="#介绍-15" class="headerlink" title="介绍###"></a>介绍###</h3><p>在一个web应用中，有供客户端使用的javascript，css，xml等文件。它们一般是作为分离的文件被添加到web项目中并发布。有时，我们需要将这些文件打包到一个程序集（类库项目，一个dll文件）中，作为内嵌资源散布到程序集中。ABP提供了一个基础设施使得这个很容易实现。</p>
+<h3 id="创建内嵌文件"><a href="#创建内嵌文件" class="headerlink" title="创建内嵌文件###"></a>创建内嵌文件###</h3><p>我们首先应该创建一个资源文件并把它标记为<strong>内嵌的资源</strong>。任何程序集都可以包含内嵌的资源文件。假设我们有一个叫做“Abp.Zero.Web.UI.Metronic.dll”程序集，而且它包含了javascript，css，和图片文件：</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151225220358531-512438953.png" alt="img"></p>
+<p>我们想要使这些文件在一个web应用中可用，首先，我们应该将想要暴露的文件标记为<strong>内嵌的资源</strong>。在这里，我选择了 <strong>metronic.js</strong>文件，右键打开属性面板（快捷键是F4）。</p>
+<p><img src="https://images2015.cnblogs.com/blog/577014/201512/577014-20151225222645218-1301105987.png" alt="img"></p>
+<p>选中你想在web应用中使用的所有文件，将<strong>生成操作（build action）</strong>的属性值选为<strong>内嵌的 资源</strong>。</p>
+<h3 id="暴露内嵌文件"><a href="#暴露内嵌文件" class="headerlink" title="暴露内嵌文件###"></a>暴露内嵌文件###</h3><p>ABP使得暴露这些内嵌资源很容易，只需要一行代码：</p>
+<pre><code>WebResourceHelper.ExposeEmbeddedResources(&quot;AbpZero/Metronic&quot;, Assembly.GetExecutingAssembly(), &quot;Abp.Zero.Web.UI.Metronic&quot;);
+</code></pre>
+<p>这行代码一般放在模块的Initialize方法中，下面解释一下这些参数：</p>
+<ul>
+<li>第一个参数为这些文件定义了<strong>根文件夹</strong>，它匹配了根命名空间。</li>
+<li>第二个参数定义了包含这些文件的<strong>程序集</strong>。本例中，我传入了包含这行代码的程序集。但你也可以传入任何包含内嵌资源的程序集。</li>
+<li>最后一个参数定义了这些文件在程序集的根命名空间。它是“默认的命名空间”加上“文件夹名”。默认的命名空间一般和程序集的名字是相同的，但是在程序集的属性中进行更改。这里 ，默认的命名空间是Abp(已经更改了)，因此Metronic文件夹的命名空间是“Abp.Zero.Web.UI.Metronic”。</li>
+</ul>
+<h3 id="使用内嵌文件"><a href="#使用内嵌文件" class="headerlink" title="使用内嵌文件###"></a>使用内嵌文件###</h3><p>可以直接使用内嵌的资源：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>~/AbpZero/Metronic/assets/global/scripts/metronic.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>ABP知道这是一个内嵌的资源，因而可以从之前暴露的dll中获得文件。此外，还可以在razor视图中使用HtmlHelper的扩展方法<strong>IncludeScript</strong>:</p>
+<pre class=" language-razor"><code class="language-razor">@Html.IncludeScript("~/AbpZero/Metronic/assets/global/scripts/metronic.js")
+</code></pre>
+<p>这会产生下面的代码：</p>
+<pre class=" language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/AbpZero/Metronic/assets/global/scripts/metronic.js?v<span class="token punctuation">=</span>635438748506909100<span class="token punctuation">"</span></span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+</code></pre>
+<p>唯一的不同就是参数<strong>v=635438748506909100</strong>。这样做的好处是阻止了浏览器端脚本的<strong>失败缓存</strong>。该值只有当你的dll重新生成（实际上是文件的最后写入时间）的时候才会改变，而且如果该值改变了，浏览器就不会缓存这个文件了。因此，建议使用IncludeScript方式。这对于非嵌入的物理资源也是有效的。对应于css文件，也存在相应的<strong>IncludeStyle</strong>方法。</p>
+<h1 id="后台服务"><a href="#后台服务" class="headerlink" title="后台服务"></a>后台服务</h1><hr>
+<h2 id="本篇目录-31"><a href="#本篇目录-31" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPBackgroundJobsAndWorkers.html#intro">介绍</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPBackgroundJobsAndWorkers.html#jobs">后台工作</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPBackgroundJobsAndWorkers.html#workers">后台工作者</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPBackgroundJobsAndWorkers.html#running">让你的应用程序一直运行</a></strong></li>
+</ul>
+<h3 id="介绍-16"><a href="#介绍-16" class="headerlink" title="介绍"></a>介绍</h3><p>ABP提供了后台工作和后台工作者，它们会在应用程序的<strong>后台线程</strong>中执行一些任务。</p>
+<h3 id="后台工作"><a href="#后台工作" class="headerlink" title="后台工作"></a>后台工作</h3><p>后台工作以队列和持续的方式在后台给一些即将被执行的任务排队。你可能因为某些原因需要后台工作，比如：</p>
+<ul>
+<li>执行<strong>长时间运行的任务</strong>。比如，一个用户按了“report”按钮来启动一个长时间运行的报告工作，点击了这个按钮你不可能让用户一直处于等待状态，所以你应该将这个工作（job）添加到 <strong>队列（queue）</strong>中，然后，当这项工作完成时，通过邮件将报告结果发送给该用户。</li>
+<li>创建<strong>重复尝试（re-trying）和持续的任务</strong>来保证代码将会 <strong>成功执行</strong>。比如，你可以在后台工作中发送邮件以克服 <strong>临时失败</strong>，并 <strong>保证</strong>邮件最终能够发送出去。因此，当发送邮件的时候用户不需要等待。</li>
+</ul>
+<h4 id="创建一个后台工作"><a href="#创建一个后台工作" class="headerlink" title="创建一个后台工作"></a>创建一个后台工作</h4><p>我们可以通过继承<strong>BackgroundJob</strong>类或者直接实现 <strong>IBackgroundJob</strong>接口来创建一个后台工作类。</p>
+<p>下面是一个最简单的后台工作：</p>
+<pre class=" language-C#"><code class="language-C#">public class TestJob : BackgroundJob<int>, ITransientDependency
+{
+    public override void Execute(int number)
+    {
+        Logger.Debug(number.ToString());
+    }
+}
+</code></pre>
+<p>该后台工作定义了一个需要输入参数的<strong>Execute</strong>方法。参数类型是泛型参数类型。</p>
+<p>后台工作必须注册到依赖注入系统中，实现<strong>ITransientDependency</strong>是最简单的方式。</p>
+<p>接下来定义一个更现实的工作，它会在后台队列中发送邮件：</p>
+<pre class=" language-C#"><code class="language-C#">public class SimpleSendEmailJob : BackgroundJob<SimpleSendEmailJobArgs>, ITransientDependency
+{
+    private readonly IRepository<User, long> _userRepository;
+    private readonly IEmailSender _emailSender;
+
+    public SimpleSendEmailJob(IRepository<User, long> userRepository, IEmailSender emailSender)
+    {
+        _userRepository = userRepository;
+        _emailSender = emailSender;
+    }
+
+    public override void Execute(SimpleSendEmailJobArgs args)
+    {
+        var senderUser = _userRepository.Get(args.SenderUserId);
+        var targetUser = _userRepository.Get(args.TargetUserId);
+
+        _emailSender.Send(senderUser.EmailAddress, targetUser.EmailAddress, args.Subject, args.Body);
+    }
+}
+</code></pre>
+<p>我们注入了user仓储（为了获得用户信息）和email发送者（发送邮件的服务），然后简单地发送了该邮件。<strong>SimpleSendEmailJobArgs</strong>是该工作的参数，它定义如下：</p>
+<pre class=" language-C#"><code class="language-C#">[Serializable]
+public class SimpleSendEmailJobArgs
+{
+    public long SenderUserId { get; set; }
+
+    public long TargetUserId { get; set; }
+
+    public string Subject { get; set; }
+
+    public string Body { get; set; }
+}
+</code></pre>
+<p>工作参数应该是<strong>serializable(可序列化)**，因为要将它 **序列化并存储</strong>到数据库中。虽然ABP默认的后台工作管理者使用了JSON序列化（它不需要[Serializable]特性），但是最好定义 **[Serializable]**特性，因为我们将来可能会转换到其他使用二进制序列化的工作管理者。</p>
+<p>记住，<strong>要保持你的参数简单</strong>，不要在参数中包含实体或者其他非可序列化的对象。正如上面的例子演示的那样，我们只存储了实体的 <strong>Id</strong>，然后在该工作的内部从仓储中获得该实体。</p>
+<h4 id="添加新工作到队列"><a href="#添加新工作到队列" class="headerlink" title="添加新工作到队列"></a>添加新工作到队列</h4><p>当定义了一个后台工作后，我们就可以注入并使用<strong>IBackgroundJobManager</strong>来添加一个工作到队列中。看上面定义的TestJob的例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyService
+{
+    private readonly IBackgroundJobManager _backgroundJobManager;
+
+    public MyService(IBackgroundJobManager backgroundJobManager)
+    {
+        _backgroundJobManager = backgroundJobManager;
+    }
+
+    public void Test()
+    {
+        _backgroundJobManager.Enqueue<TestJob, int>(42);
+    }
+}
+</code></pre>
+<p>当入队（Enqueue）时，我们将42作为参数传递。IBackgroundJobManager将会实例化并使用42作为参数执行TestJob。</p>
+<p>让我们看一下如何为上面定义的SimpleSendEmailJob添加一个新的工作：</p>
+<pre class=" language-C#"><code class="language-C#">[AbpAuthorize]
+public class MyEmailAppService : ApplicationService, IMyEmailAppService
+{
+    private readonly IBackgroundJobManager _backgroundJobManager;
+
+    public MyEmailAppService(IBackgroundJobManager backgroundJobManager)
+    {
+        _backgroundJobManager = backgroundJobManager;
+    }
+
+    public async Task SendEmail(SendEmailInput input)
+    {
+            await _backgroundJobManager.EnqueueAsync<SimpleSendEmailJob, SimpleSendEmailJobArgs>(
+            new SimpleSendEmailJobArgs
+            {
+                Subject = input.Subject,
+                Body = input.Body,
+                SenderUserId = AbpSession.GetUserId(),
+                TargetUserId = input.TargetUserId
+            });
+    }
+}
+</code></pre>
+<p>Enqueu (或 EnqueueAsync)方法还有其他的参数，比如 <strong>priority和 delay（优先级和延迟）</strong>。</p>
+<h4 id="默认的后台工作管理者"><a href="#默认的后台工作管理者" class="headerlink" title="默认的后台工作管理者"></a>默认的后台工作管理者</h4><p>IBackgroundJobManager默认是由<strong>BackgroundJobManager</strong>实现的。它可以被其他的后台工作提供者替代（看后面的Hangfire集成）。关于默认的BackgroundJobManager一些信息如下：</p>
+<ul>
+<li>它是一个在单线程中以<strong>FIFO（First In First Out）</strong>工作的简单工作队列，使用 <strong>IBackgroundJobStore</strong>来持久化工作。</li>
+<li>它会<strong>重复尝试</strong>执行工作，直到工作成功执行（不会抛出任何异常）或者超时。默认的超时是一个工作2天。</li>
+<li>当成功执行后，它会从存储（数据库）中<strong>删除</strong>该工作。如果超时了，就会将该工作设置为 <strong>abandoned（废弃的）</strong>，并保留在数据库中。</li>
+<li>在重复尝试一个工作之间会<strong>增加等待时间</strong>。第一次重试时等待1分钟，第二次等待2分钟，第三次等待4分钟等等。</li>
+<li>在固定的时间间隔轮询工作的存储。查询工作时先按优先级排序，再按尝试次数排序。</li>
+</ul>
+<p><strong>后台工作存储</strong><br> 默认的BackgroundJobManager需要一个数据存储来保存、获得工作。如果你没有实现<strong>IBackgroundJobStore</strong>，那么它会使用 <strong>InMemoryBackgroundJobStore</strong>，它不会将工作持久化到数据库中。你可以简单地实现它来存储工作到数据库或者你可以使用module-zero，它已经实现了IBackgroundJobStore。</p>
+<p>如果你正在使用第三方的工作管理者（像Hangfire），那么不需要实现IBackgroundJobStore。</p>
+<h4 id="配置-3"><a href="#配置-3" class="headerlink" title="配置"></a>配置</h4><p>你可以在模块的PreInitialize方法中使用<strong>Configuration.BackgroundJobs</strong>来配置后台工作系统。</p>
+<p><strong>关闭工作执行功能</strong><br> 你可能想关闭应用程序的后台工作执行：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyProjectWebModule : AbpModule
+{
+    public override void PreInitialize()
+    {
+        Configuration.BackgroundJobs.IsJobExecutionEnabled = false;
+    }
+
+    //...
+}
+</code></pre>
+<p>这种情况很罕见，但是想一下，如果你正在对相同的数据库运行多个应用的实例（在web应用中）。在这种情况下，每个应用都会为工作查询相同的数据库并执行它们。这会导致相同工作的多次执行和一些其它问题。要阻止这种情况发生，你有两种选择：</p>
+<ul>
+<li>你可以只为该应用的一个实例开启工作执行。</li>
+<li>你可以为该web应用的所有实例关闭工作执行，然后创建一个会执行后台工作的独立应用（比如一个Windows服务）。</li>
+</ul>
+<h4 id="Hangfire集成"><a href="#Hangfire集成" class="headerlink" title="Hangfire集成"></a>Hangfire集成</h4><p>后台工作管理者设计成了可以被其他的后台工作管理者<strong>取代</strong>。查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPHangfireIntegration.html">Hangfire集成</a>**来替代默认的后台工作管理者。</p>
+<h3 id="后台工作者"><a href="#后台工作者" class="headerlink" title="后台工作者"></a>后台工作者</h3><p>后台工作者不同于后台工作。它们是运行在应用后台的简单<strong>独立线程</strong>。一般来说，它们会定期地执行一些任务。比如：</p>
+<ul>
+<li>后台工作者可以定期运行来<strong>删除旧的日志</strong>。</li>
+<li>后台工作者可以定期运行来<strong>确定不活跃的用户</strong>，并给他们发送邮件以使他们返回你的应用。</li>
+</ul>
+<h4 id="创建后台工作者"><a href="#创建后台工作者" class="headerlink" title="创建后台工作者"></a>创建后台工作者</h4><p>要创建后台工作者，我们应该实现<strong>IBackgroundWorker</strong>接口。除此之外，我们可以基于需求从  <strong>BackgroundWorkerBase</strong>或者 <strong>PeriodicBackgroundWorkerBase</strong>继承。</p>
+<p>假设一个用户在过去30天内没有登录到该应用，那我们想要让Ta的状态为passive。看下面的代码：</p>
+<pre class=" language-C#"><code class="language-C#">public class MakeInactiveUsersPassiveWorker : PeriodicBackgroundWorkerBase, ISingletonDependency
+{
+    private readonly IRepository<User, long> _userRepository;
+
+    public MakeInactiveUsersPassiveWorker(AbpTimer timer, IRepository<User, long> userRepository)
+        : base(timer)
+    {
+        _userRepository = userRepository;
+        Timer.Period = 5000; //5 seconds (good for tests, but normally will be more)
+    }
+
+    [UnitOfWork]
+    protected override void DoWork()
+    {
+        using (CurrentUnitOfWork.DisableFilter(AbpDataFilters.MayHaveTenant))
+        {
+            var oneMonthAgo = Clock.Now.Subtract(TimeSpan.FromDays(30));
+
+            var inactiveUsers = _userRepository.GetAllList(u =>
+                u.IsActive &&
+                ((u.LastLoginTime < oneMonthAgo && u.LastLoginTime != null) || (u.CreationTime < oneMonthAgo && u.LastLoginTime == null))
+                );
+
+            foreach (var inactiveUser in inactiveUsers)
+            {
+                inactiveUser.IsActive = false;
+                Logger.Info(inactiveUser + " made passive since he/she did not login in last 30 days.");
+            }
+
+            CurrentUnitOfWork.SaveChanges();
+        }
+    }
+}
+</code></pre>
+<p>这是现实中的代码，并且在具有module-zero模块的ABP中直接有效。</p>
+<ul>
+<li>如果你从<strong>PeriodicBackgroundWorkerBase</strong> 类继承（如这个例子），那么你应该实现 <strong>DoWork</strong>方法来执行定期运行的代码。</li>
+<li>如果从<strong>BackgroundWorkerBase</strong>继承或直接实现了 <strong>IBackgroundWorker</strong>，那么你要重写或者实现Start, Stop 和 WaitToStop方法。Start和Stop方法应该是 <strong>非阻塞的（non-blocking）</strong>，WaitToStop方法应该等待工作者完成当前重要的工作。</li>
+</ul>
+<h4 id="注册后台工作者"><a href="#注册后台工作者" class="headerlink" title="注册后台工作者"></a>注册后台工作者</h4><p>创建一个后台工作者后，我们应该把它添加到<strong>IBackgroundWorkerManager</strong>，通常放在模块的PostInitialize方法中：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyProjectWebModule : AbpModule
+{
+    //...
+
+    public override void PostInitialize()
+    {
+        var workManager = IocManager.Resolve<IBackgroundWorkerManager>();
+        workManager.Add(IocManager.Resolve<MakeInactiveUsersPassiveWorker>());
+    }
+}
+</code></pre>
+<p>虽然一般我们将工作者添加到PostInitialize方法中，但是没有强制要求。你可以在任何地方注入IBackgroundWorkerManager，在运行时添加工作者。<br> 当应用要关闭时，IBackgroundWorkerManager会停止并释放所有注册的工作者。</p>
+<h4 id="后台工作者生命周期"><a href="#后台工作者生命周期" class="headerlink" title="后台工作者生命周期"></a>后台工作者生命周期</h4><p>后台工作者一般实现为单例的，但是没有严格限制。如果你需要相同工作者类的多个实例，那么可以使它成为transient（每次使用时创建），然后给IBackgroundWorkerManager添加多个实例。在这种情况下，你的工作者很可能会参数化（比如，你有单个LogCleaner类，但是两个LogCleaner工作者实例会监视并清除不同的log文件夹）。</p>
+<h3 id="让你的应用程序一直运行"><a href="#让你的应用程序一直运行" class="headerlink" title="让你的应用程序一直运行"></a>让你的应用程序一直运行</h3><p>只有当你的应用运行时，后台工作和工作者才会工作。如果一个Asp.Net  应用长时间没有执行请求，那么它默认会关闭（shutdown）。如果你想让后台工作一直在web应用中执行（这是默认行为），那么你要确保web应用配置成了总是运行。否则，后台工作只有在应用使用时才会执行。</p>
+<h1 id="实时服务"><a href="#实时服务" class="headerlink" title="实时服务"></a>实时服务</h1><h1 id="ABP理论学习之通知系统"><a href="#ABP理论学习之通知系统" class="headerlink" title="ABP理论学习之通知系统"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html">ABP理论学习之通知系统</a></h1><hr>
+<h2 id="本篇目录-32"><a href="#本篇目录-32" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#intro">介绍</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#subscribe">订阅通知</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#publish">发布通知</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#manager">用户通知管理者</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#realtime">实时通知</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#store">通知存储</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNotificationSystem.html#definition">通知定义</a></strong></li>
+</ul>
+<h3 id="介绍-17"><a href="#介绍-17" class="headerlink" title="介绍"></a>介绍</h3><p>通知（Notification）用于告知用户系统中的特定事件。ABP提供了基于<strong>实时</strong>通知基础设施的发布订阅模型（pub/sub）。</p>
+<h4 id="发送模型"><a href="#发送模型" class="headerlink" title="发送模型"></a>发送模型</h4><p>给用户发送通知有两种方式：</p>
+<ul>
+<li>首先用户订阅特定的通知类型，然后我们发布这种类型的通知，这种类型的通知会传递给所有<strong>已经订阅</strong>的用户。这就是发布订阅（pub/sub）模型。</li>
+<li>直接给目标用户发送通知。</li>
+</ul>
+<h4 id="通知类型"><a href="#通知类型" class="headerlink" title="通知类型"></a>通知类型</h4><p>通知类型也有两种：</p>
+<ul>
+<li><strong>一般通知</strong>：是任意类型的通知。“如果一个用户给我发送了添加好友的请求就通知我”是这种通知类型的一个例子。</li>
+<li><strong>实体通知</strong>：和特定的实体相关联。“如果一个用户在 <strong>这张</strong>图片上评论那么通知我”是基于实体的通知，因为它和特定的实体相关联。用户可能想获得某些图片的通知而不是所有的图片通知。</li>
+</ul>
+<h4 id="通知数据"><a href="#通知数据" class="headerlink" title="通知数据"></a>通知数据</h4><p>一个通知一般都会包括一个<strong>通知数据</strong>。比如，“如果一个用户给我发送了添加好友的请求就通知我”，这个通知可能有两个数据属性：发送者用户名（那哪一个用户发送的这个添加好友的请求）和请求内容（该用户在这个请求中写的东西）。很明显，该通知数据类型紧耦合于通知类型。不同的通知类型有不同的数据类型。</p>
+<ul>
+<li>通知数据是<strong>可选的</strong>。某些通知可能不需要数据。一些预定义的通知数据类型可能对于大多数情况够用了。 <strong>MessageNotificationData</strong>可以用于简单的信息， <strong>LocalizableMessageNotificationData</strong>可以用于本地化的，带参数的通知信息。</li>
+</ul>
+<h4 id="通知安全"><a href="#通知安全" class="headerlink" title="通知安全"></a>通知安全</h4><p>通知的安全性有5个级别，它们定义在NotificationSeverity枚举类中，分别是 Info,Success,Warn,Error和Fatal。默认值是Info。</p>
+<h3 id="订阅通知"><a href="#订阅通知" class="headerlink" title="订阅通知"></a>订阅通知</h3><p><strong>INotificationSubscriptionManager</strong> 提供了订阅通知的API。例如：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyService : ITransientDependency
+{
+    private readonly INotificationSubscriptionManager _notificationSubscriptionManager;
+
+    public MyService(INotificationSubscriptionManager notificationSubscriptionManager)
+    {
+        _notificationSubscriptionManager = notificationSubscriptionManager;
+    }
+
+    //订阅一个一般通知
+    public async Task Subscribe_SentFrendshipRequest(int? tenantId, long userId)
+    {
+        await _notificationSubscriptionManager.SubscribeAsync(tenantId, userId, "SentFrendshipRequest");    
+    }
+
+    //订阅一个实体通知
+    public async Task Subscribe_CommentPhoto(int? tenantId, long userId, Guid photoId)
+    {
+        await _notificationSubscriptionManager.SubscribeAsync(tenantId, userId, "CommentPhoto", new EntityIdentifier(typeof(Photo), photoId));   
+    }
+}
+</code></pre>
+<p>首先，我们注入了<strong>INotificationSubscriptionManager</strong>。第一个方法订阅了一个一般通知。当某人发送了一个添加好友的请求时，用户想得到通知。第二个方法订阅了一个和特定实体（Photo）相关的通知。如果任何人对这个特定的图片进行了评论，那么用户就会收到通知。</p>
+<p>每一个通知应该有<strong>唯一的名字</strong>（比如例子中的SentFrendshipRequest和 CommentPhoto）。</p>
+<p><strong>INotificationSubscriptionManager</strong>还有很多方法来管理通知，比如<strong>UnsubscribeAsync, IsSubscribedAsync, GetSubscriptionsAsync</strong>等方法。</p>
+<h3 id="发布通知"><a href="#发布通知" class="headerlink" title="发布通知"></a>发布通知</h3><p><strong>INotificationPublisher</strong>用于发布通知，例如：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyService : ITransientDependency
+{
+    private readonly INotificationPublisher _notiticationPublisher;
+
+    public MyService(INotificationPublisher notiticationPublisher)
+    {
+        _notiticationPublisher = notiticationPublisher;
+    }
+
+    //给特定的用户发送一个一般通知
+    public async Task Publish_SentFrendshipRequest(string senderUserName, string friendshipMessage, long targetUserId)
+    {
+        await _notiticationPublisher.PublishAsync("SentFrendshipRequest", new SentFrendshipRequestNotificationData(senderUserName, friendshipMessage), userIds: new[] { targetUserId });
+    }
+
+    //给特定的用户发送一个实体通知
+    public async Task Publish_CommentPhoto(string commenterUserName, string comment, Guid photoId, long photoOwnerUserId)
+    {
+        await _notiticationPublisher.PublishAsync("CommentPhoto", new CommentPhotoNotificationData(commenterUserName, comment), new EntityIdentifier(typeof(Photo), photoId), userIds: new[] { photoOwnerUserId });
+    }
+
+    //给具特定严重级别程度的所有订阅用户发送一个一般通知
+    public async Task Publish_LowDisk(int remainingDiskInMb)
+    {
+        //例如 "LowDiskWarningMessage"的英文内容 -> "Attention! Only {remainingDiskInMb} MBs left on the disk!"
+        var data = new LocalizableMessageNotificationData(new LocalizableString("LowDiskWarningMessage", "MyLocalizationSourceName"));
+        data["remainingDiskInMb"] = remainingDiskInMb;
+
+        await _notiticationPublisher.PublishAsync("System.LowDisk", data, severity: NotificationSeverity.Warn);    
+    }
+}
+</code></pre>
+<p>在第一个例子中，我们向单个用户发布了一个通知。<em>SentFrendshipRequestNotificationData</em>应该从 <strong>NotificationData</strong>继承，比如：</p>
+<pre class=" language-C#"><code class="language-C#">[Serializable]
+public class SentFrendshipRequestNotificationData : NotificationData
+{
+    public string SenderUserName { get; set; }
+
+    public string FriendshipMessage { get; set; }
+
+    public SentFrendshipRequestNotificationData(string senderUserName, string friendshipMessage)
+    {
+        SenderUserName = senderUserName;
+        FriendshipMessage = friendshipMessage;
+    }
+}
+</code></pre>
+<p>在第二个例子中，我们向特定的用户发送了一个特定实体的通知。通知数据类CommentPhotoNotificationData一般不需要<strong>serializble</strong>(因为默认使用了JSON序列化)。但是建议把它标记为serializable，因为你可能需要在应用之间移动通知，也可能在未来使用二进制的序列。此外，正如之前声明的那样，通知数据是可选的，而且对于所有的通知可能不是必须的。</p>
+<p>注意：如果我们对特定的用户发布了一个通知，那么他们不需要订阅那些通知。</p>
+<p>在第三个例子中，我们没有定义一个专用的通知数据类。相反，我们直接使用了内置的具有基于字典数据的<strong>LocalizableMessageNotificationData</strong>，并且以 <strong>Warn</strong>发布了通知。<strong>LocalizableMessageNotificationData</strong>可以存储基于字典的任意数据（这对于自定义的通知数据类也是成立的，因为它们也从 <strong>NotificationData类继承</strong>）。在本地化时我们使用了“ <strong>remaingDiskInMb</strong>”作为参数。本地化信息可以包含这些参数（比如例子中的”Attention! Only {remainingDiskInMb} MBs left on the disk!”）</p>
+<h3 id="用户通知管理者"><a href="#用户通知管理者" class="headerlink" title="用户通知管理者"></a>用户通知管理者</h3><p><strong>IUserNotificationManager</strong>用于管理用户的通知，它有 <strong>get,update或delete</strong>用户通知的方法。你可以为你的应用程序准备一个通知列表页面。</p>
+<h3 id="实时通知"><a href="#实时通知" class="headerlink" title="实时通知"></a>实时通知</h3><p>当使用IUserNotificationManager来查询通知时，我们一般想实时地将通知推送到客户端。</p>
+<p>通知系统使用了<strong>IRealTimeNotifier</strong>向用户发送实时通知。这可以使用任何类型的实时通讯系统来实现。ABP在一个单独的包中使用了 <strong>SignalR</strong>来实现。ABP官网的起始模板已经安装了SignalR。</p>
+<p>注意：通知系统在一个后台工作中异步调用<strong>IRealTimeNotifier</strong>。因此，通知发送时可能伴有轻微的延迟。</p>
+<h4 id="客户端-4"><a href="#客户端-4" class="headerlink" title="客户端"></a>客户端</h4><p>当接收到一个实时通知时，ABP会在客户端触发一个<strong>全局的事件（global event）</strong>。你可以像下面那样注册来获取通知：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'abp.notifications.received'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p><strong>abp.notifications.received</strong>事件对于每个接收到的实时通知都会触发。你可以像上面那样注册该事件来获取通知。查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPJavascriptAPI.html#eventBus">javascript事件总线</a>**文档获取更多信息。对于上面的“System.LowDisk”例子，下面是接收到的通知消息的JSON数据：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"userId"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"state"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"notification"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"notificationName"</span><span class="token operator">:</span> <span class="token string">"System.LowDisk"</span><span class="token punctuation">,</span>
+        <span class="token property">"data"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+            <span class="token property">"message"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"sourceName"</span><span class="token operator">:</span> <span class="token string">"MyLocalizationSourceName"</span><span class="token punctuation">,</span>
+                <span class="token property">"name"</span><span class="token operator">:</span> <span class="token string">"LowDiskWarningMessage"</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span>
+            <span class="token property">"type"</span><span class="token operator">:</span> <span class="token string">"Abp.Notifications.LocalizableMessageNotificationData"</span><span class="token punctuation">,</span>
+            <span class="token property">"properties"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+                <span class="token property">"remainingDiskInMb"</span><span class="token operator">:</span> <span class="token string">"42"</span>
+            <span class="token punctuation">}</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token property">"entityType"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+        <span class="token property">"entityTypeName"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+        <span class="token property">"entityId"</span><span class="token operator">:</span> <span class="token null">null</span><span class="token punctuation">,</span>
+        <span class="token property">"severity"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+        <span class="token property">"creationTime"</span><span class="token operator">:</span> <span class="token string">"2016-02-09T17:03:32.13"</span><span class="token punctuation">,</span>
+        <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"0263d581-3d8a-476b-8e16-4f6a6f10a632"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">"id"</span><span class="token operator">:</span> <span class="token string">"4a546baf-bf17-4924-b993-32e420a8d468"</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>在这个对象中，</p>
+<ul>
+<li><p><strong>userId</strong>:当前的用户Id。一般来说不需要这个，因为你知道当前的用户。</p>
+</li>
+<li><p><strong>state</strong>： <strong>UserNotificationState</strong>枚举的值。0：未读，1：已读。</p>
+</li>
+<li><p>notification</p>
+<p>:通知细节。</p>
+<ul>
+<li><strong>notificationName</strong>:通知的唯一名称。（当发布该通知时使用相同的值）</li>
+<li><strong>data</strong>:通知数据。在本例中，我们使用了**LocalizableMessageNotificationData **（正如之前的例子中发布的）。</li>
+<li><strong>message</strong>:本地的信息通知。我们可以使用 <strong>sourceName</strong>和 <strong>name</strong>来本地化UI上的信息。</li>
+<li><strong>type</strong>:通知数据类型。全类型名称，包括命名空间。当处理该通知数据时我们可以检查该类型。</li>
+<li><strong>properties</strong>：基于字典的自定义属性。</li>
+<li><strong>entityType, entityTypeName和entityId</strong>：和通知相关的实体的信息。</li>
+<li><strong>severity</strong>： <strong>NotificationSeverity</strong>枚举的值。0: Info, 1: Success, 2: Warn, 3: Error, 4: Fatal。</li>
+<li><strong>creationTime</strong>:该通知创建的时间。</li>
+<li><strong>id</strong>:通知的Id。</li>
+</ul>
+</li>
+<li><p><strong>id</strong>:用户的通知id。</p>
+</li>
+</ul>
+<p>当然，你不仅可以记录该通知。你还可以使用通知数据将通知信息展示给该用户。例如：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'abp.notifications.received'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Abp.Notifications.LocalizableMessageNotificationData'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> localizedText <span class="token operator">=</span> abp<span class="token punctuation">.</span>localization<span class="token punctuation">.</span><span class="token function">localize</span><span class="token punctuation">(</span>
+            userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+            userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">.</span>sourceName
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        $<span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span>userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>properties<span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>key<span class="token punctuation">,</span> value<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            localizedText <span class="token operator">=</span> localizedText<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token string">'{'</span> <span class="token operator">+</span> key <span class="token operator">+</span> <span class="token string">'}'</span><span class="token punctuation">,</span> value<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'New localized notification: '</span> <span class="token operator">+</span> localizedText<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span> <span class="token keyword">else</span> <span class="token keyword">if</span> <span class="token punctuation">(</span>userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'Abp.Notifications.MessageNotificationData'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">'New simple notification: '</span> <span class="token operator">+</span> userNotification<span class="token punctuation">.</span>notification<span class="token punctuation">.</span>data<span class="token punctuation">.</span>message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>要处理通知数据，我们应该检查该数据类型。这个例子简单地从通知数据中获得信息。对于本地化的信息（LocalizableMessageNotificationData），我们要本地化该信息并替换参数。对于简单的信息（MessageNotificationData），我们直接获得该信息。当然，在一个真实项目中，我们不使用alert函数。我们可以使用<code>abp.notify</code>api来展示漂亮的UI通知。</p>
+<p>如果你要实现这么上面的逻辑，那么有一种更简单且可伸缩的方式。当接收到一个push通知时，你可以只使用一句代码来显示UI通知：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'abp.notifications.received'</span><span class="token punctuation">,</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    abp<span class="token punctuation">.</span>notifications<span class="token punctuation">.</span><span class="token function">showUiNotifyForUserNotification</span><span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>这句代码会展示一个UI通知如下所示（上面System.LowDisk通知的例子）：</p>
+<p><img src="https://dn-coding-net-production-pp.qbox.me/11f2d44b-fa5d-456f-8512-25a714df7c31.png" alt="图片"></p>
+<p>对于内置的通知数据类型（LocalizableMessageNotificationData和 MessageNotificationData）是有效的。如果你有自定义的通知数据类型，那么你应该注册数据格式化器，如下所示：</p>
+<pre class=" language-javascript"><code class="language-javascript">abp<span class="token punctuation">.</span>notifications<span class="token punctuation">.</span>messageFormatters<span class="token punctuation">[</span><span class="token string">'MyProject.MyNotificationDataType'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>userNotification<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">...</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//format and return message here</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre>
+<p>这样，<strong>showUiNotifyForUserNotification</strong>就可以对你的数据类型创建要显示的信息了。如果你只需要格式化信息，那么你可以直接使用 **abp.notifications.getFormattedMessageFromUserNotification(userNotification)**，它内部还是使用了showUiNotifyForUserNotification。</p>
+<p>当接收到一个push通知时，启动模板包含了展示UI通知的代码。</p>
+<h3 id="通知存储"><a href="#通知存储" class="headerlink" title="通知存储"></a>通知存储</h3><p>通知系统使用了<strong>INotificationStore</strong>来持久化通知。为了使通知系统合适地工作，应该实现这个接口。你可以自己实现或者使用module-zero（它已经实现了该接口）。</p>
+<h3 id="通知定义"><a href="#通知定义" class="headerlink" title="通知定义"></a>通知定义</h3><p>在使用之前你不必定义一个通知。你无需定义任何类型的<strong>通知名</strong>就可以使用它们。但是，定义通知名可能会给你带来额外的好处。比如，你以后要研究应用程序中所有的通知，在这种情况下，我们可以给我们的模块定义一个<strong>通知提供器</strong>（notification provider ），如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyAppNotificationProvider : NotificationProvider
+{
+    public override void SetNotifications(INotificationDefinitionContext context)
+    {
+        context.Manager.Add(
+            new NotificationDefinition(
+                "App.NewUserRegistered",
+                displayName: new LocalizableString("NewUserRegisteredNotificationDefinition", "MyLocalizationSourceName"),
+                permissionDependency: new SimplePermissionDependency("App.Pages.UserManagement")
+                )
+            );
+    }
+}
+</code></pre>
+<p><strong>“App.NewUserRegistered”**是该通知的唯一名称。我们定义了一个本地的 **displayName</strong>（然后当在UI上订阅了该通知时，我们可以显示该通知）。最后，我们声明了只有拥有了**”App.Pages.UserManagement”**权限的用户才可以使用该通知。</p>
+<p>也有一些其他的参数，你可以在代码中研究。对于一个通知定义，只有通知名称是<strong>必须</strong>的。</p>
+<p>当定义了这么一个通知提供器之后，我们应该在模块的PreInitialize事件中进行注册，如下所示：</p>
+<pre class=" language-c#"><code class="language-c#">public class AbpZeroTemplateCoreModule : AbpModule
+{
+    public override void PreInitialize()
+    {
+        Configuration.Notifications.Providers.Add<MyAppNotificationProvider>();
+    }
+
+    //...
+}
+</code></pre>
+<p>最后，要获得通知定义，在应用程序中注入并使用<strong>INotificationDefinitionManager</strong>。</p>
+<h1 id="ABP理论学习之SignalR集成"><a href="#ABP理论学习之SignalR集成" class="headerlink" title="ABP理论学习之SignalR集成"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html">ABP理论学习之SignalR集成</a></h1><hr>
+<h2 id="本篇目录-33"><a href="#本篇目录-33" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html#intro">介绍</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html#install">安装</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html#connEstablishment">建立连接</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html#built-in">内置功能</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPSignalRIntegration.html#yourCode">你自己的SignaR代码</a></strong></li>
+</ul>
+<h3 id="介绍-18"><a href="#介绍-18" class="headerlink" title="介绍###"></a>介绍###</h3><p><strong><a target="_blank" rel="noopener" href="https://www.nuget.org/packages/Abp.Web.SignalR">Abp.Web.SignalR</a></strong> 使得在基于ABP的应用程序中使用 <strong>SignalR</strong>相当容易。查看**<a target="_blank" rel="noopener" href="http://www.asp.net/signalr">SignalR文档</a>**获取更多关于SignalR的详细信息。</p>
+<h3 id="安装-1"><a href="#安装-1" class="headerlink" title="安装###"></a>安装###</h3><h4 id="服务端-3"><a href="#服务端-3" class="headerlink" title="服务端"></a>服务端</h4><p>将**<a target="_blank" rel="noopener" href="http://www.nuget.org/packages/Abp.Web.SignalR">Abp.Web.SignalR</a>**nuget包安装到你的项目中（一般是web层），然后给你的模块添加一个依赖：</p>
+<pre class=" language-C#"><code class="language-C#">[DependsOn(typeof(AbpWebSignalRModule))]
+public class YourProjectWebModule : AbpModule
+{
+    //...
+}
+</code></pre>
+<p>然后在你的OWIN Startup类中使用<strong>MapSignalR</strong>方法：</p>
+<pre class=" language-C#"><code class="language-C#">[assembly: OwinStartup(typeof(Startup))]
+namespace MyProject.Web
+{
+    public class Startup
+    {
+        public void Configuration(IAppBuilder app)
+        {
+                app.MapSignalR();
+
+            //...
+        }
+    }
+}
+</code></pre>
+<p>注意：Abp.Web.SignalR只依赖于Microsoft.AspNet.SignalR.Core包。因此，如果你之前没有安装，那么你也需要将**<a target="_blank" rel="noopener" href="https://www.nuget.org/packages/Microsoft.AspNet.SignalR">Microsoft.AspNet.SignalR</a>**安装到你的web项目中。</p>
+<h4 id="客户端-5"><a href="#客户端-5" class="headerlink" title="客户端"></a>客户端</h4><p>在页面上应该添加<strong>abp.signalr.js</strong>脚本。它位于**<a target="_blank" rel="noopener" href="https://www.nuget.org/packages/Abp.Web.Resources">Abp.Web.Resources</a>**包中（在启动模块中已经安装了）。我们应该在signalr总线之后包含它：</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"~/signalr/hubs"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"~/Abp/Framework/scripts/libs/abp.signalr.js"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<p>就这样，SignalR就配置好了，也就集成到了你的项目中。</p>
+<h3 id="建立连接"><a href="#建立连接" class="headerlink" title="建立连接###"></a>建立连接###</h3><p>当页面上包含<strong>abp.signalr.js</strong>时，ABP会 <strong>自动连接</strong> 到服务器（从客户端）。一般来说这很好，但是也可能存在你不想这样的情况。那么你可以在包含 <strong>abp.signalr.js</strong>之前添加下面的代码来关闭自动连接。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+    abp<span class="token punctuation">.</span>signalr <span class="token operator">=</span> abp<span class="token punctuation">.</span>signalr <span class="token operator">||</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    abp<span class="token punctuation">.</span>signalr<span class="token punctuation">.</span>autoConnect <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+</code></pre>
+<p>这样，当你需要连接到服务器时，你可以手动调用**abp.signalr.connect()**函数。</p>
+<p>当客户端连接到服务器时，会触发全局事件“<strong>abp.signalr.connected</strong>”。当该连接成功建立时，你可以注册到该事件以采取相应行动。</p>
+<h3 id="内置功能"><a href="#内置功能" class="headerlink" title="内置功能###"></a>内置功能###</h3><p>你可以在应用程序中使用SignalR的所有功能，此外，<strong>Abp.Web.SignalR</strong>包实现了一些内置的功能。</p>
+<h4 id="通知"><a href="#通知" class="headerlink" title="通知"></a>通知</h4><p><strong>Abp.Web.SignalR</strong>包实现了 <strong>IRealTimeNotifier</strong>来向客户端发送实时通知（查看《**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPNotificationSystem.html">通知系统</a>**》）。因此，你的用户可以获得实时的推送通知。</p>
+<h4 id="在线客户端"><a href="#在线客户端" class="headerlink" title="在线客户端"></a>在线客户端</h4><p>ABP提供了<strong>IOnlineClientManager</strong>来获取关于在线用户的信息（比如，注入IOnlineClientManager然后使用GetByUserIdOrNull, GetAllClients, IsOnline 方法 ）。为了能够正确地工作，IOnlineClientManager需要一个通讯基础设施。<strong>Abp.Web.SignalR</strong>提供了一个这样的基础设施。因此，如果安装了SignalR，那么在应用的任何层都可以注入并使用IOnlineClientManager。</p>
+<h4 id="PascalCase-vs-camelCase"><a href="#PascalCase-vs-camelCase" class="headerlink" title="PascalCase vs. camelCase"></a>PascalCase vs. camelCase</h4><p>Abp.Web.SignalR包在序列化时使用<strong>CamelCasePropertyNamesContractResolver</strong>覆盖了SignalR默认的 <strong>ContractResolver</strong>。因此，我们在服务端的类具有 <strong>PascalCase</strong>属性，而在客户端作为 <strong>camelCase</strong>使用来发送/接收对象（因为在javascript中camelCase是更受人喜欢的命名）。如果你想在某些程序集中忽略这个，那么你可以将那些程序集添加AbpSignalRContractResolver.IgnoredAssemblies 列表中。</p>
+<h3 id="你自己的SignaR代码"><a href="#你自己的SignaR代码" class="headerlink" title="你自己的SignaR代码###"></a>你自己的SignaR代码###</h3><p><strong>Abp.Web.SignalR</strong> 包也简化了你的SignalR代码。假设我们想添加一个集线器（Hub）到应用程序中：</p>
+<pre class=" language-C#"><code class="language-C#">public class MyChatHub : Hub, ITransientDependency
+{
+    public IAbpSession AbpSession { get; set; }
+
+    public ILogger Logger { get; set; }
+
+    public MyChatHub()
+    {
+        AbpSession = NullAbpSession.Instance;
+        Logger = NullLogger.Instance;
+    }
+
+    public void SendMessage(string message)
+    {
+        Clients.All.getMessage(string.Format("User {0}: {1}", AbpSession.UserId, message));
+    }
+
+    public async override Task OnConnected()
+    {
+        await base.OnConnected();
+        Logger.Debug("A client connected to MyChatHub: " + Context.ConnectionId);
+    }
+
+    public async override Task OnDisconnected(bool stopCalled)
+    {
+        await base.OnDisconnected(stopCalled);
+        Logger.Debug("A client disconnected from MyChatHub: " + Context.ConnectionId);
+    }
+}
+</code></pre>
+<p>我们实现了<strong>ITransientDependency</strong>来简化将我们的集线器hub注册到依赖注入系统中（你可以基于你的需求使它是单例的【singleton】）。我们也使用属性注入了session和logger。</p>
+<p><strong>SendMessage</strong>是hub的一个方法，它可以被客户端使用。在这个方法中，我们可以调用所有客户端的 <strong>getMessage</strong>函数。正如你看到的那样，我们可以使用AbpSession来获得当前的用户id(如果用户登录了系统)。为了演示，我们也重写了 <strong>OnConnected 和 OnDisconnected</strong>，实际这里是不需要的。</p>
+<p>这里，客户端的javascript代码使用了我们的集线器hub发送/接收信息。</p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> chatHub <span class="token operator">=</span> $<span class="token punctuation">.</span>connection<span class="token punctuation">.</span>myChatHub<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//获取 hub的引用</span>
+
+chatHub<span class="token punctuation">.</span>client<span class="token punctuation">.</span>getMessage <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>message<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//为即将到来的信息注册</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'received message: '</span> <span class="token operator">+</span> message<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+abp<span class="token punctuation">.</span>event<span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">'abp.signalr.connected'</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">//为连接事件注册</span>
+chatHub<span class="token punctuation">.</span>server<span class="token punctuation">.</span><span class="token function">sendMessage</span><span class="token punctuation">(</span><span class="token string">"Hi everybody, I'm connected to the chat!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//给服务器发送信息</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre>
+<p>然后，无论何时需要向服务器发送信息，我们都可以使用chatHub。这里再提醒一下，想要获取更多关于SignalR的信息，可以点击查看**<a target="_blank" rel="noopener" href="http://www.asp.net/signalr">SinalR文档</a>**。</p>
+<h1 id="基础设施层-1"><a href="#基础设施层-1" class="headerlink" title="基础设施层"></a>基础设施层</h1><h1 id="ABP理论学习之NHibernate集成"><a href="#ABP理论学习之NHibernate集成" class="headerlink" title="ABP理论学习之NHibernate集成"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html">ABP理论学习之NHibernate集成</a></h1><hr>
+<h2 id="本篇目录-34"><a href="#本篇目录-34" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#nuget">Nuget包</a></strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#config">配置</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#mapping">实体映射</a></strong></li>
+</ul>
+</li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#repository">仓储</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#base">仓储基类</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#implement">实现仓储</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#custom">自定义仓储方法</a></strong></li>
+</ul>
+</li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPNHibernate.html#seeAlso">阅读其他</a></strong></li>
+</ul>
+<p>ABP可以使用任何ORM框架工作，并且已经内置了<strong>NHibernate</strong>集成。这篇文章会解释如何在ABP中使用NHibernate。阅读本文的前提是假设你已经熟悉了EF的基本知识。</p>
+<h3 id="Nuget包"><a href="#Nuget包" class="headerlink" title="Nuget包###"></a>Nuget包###</h3><p>在ABP中使用NH作为ORM的Nuget包是<strong>Abp.NHibernate</strong>。你应该将它添加到应用程序中。最好在应用程序中分离的程序集(dll)中实现NHibernate，并让该程序集依赖Abp.NHibernate包。</p>
+<h3 id="配置-4"><a href="#配置-4" class="headerlink" title="配置###"></a>配置###</h3><p>要开始使用NHibernate,应该首先要配置它。配置代码应该写在模块的PreInitialize方法中。</p>
+<pre class=" language-C#"><code class="language-C#">[DependsOn(typeof(AbpNHibernateModule))]
+public class SimpleTaskSystemDataModule : AbpModule
+{
+    public override void PreInitialize()
+    {
+        var connStr = ConfigurationManager.ConnectionStrings["Default"].ConnectionString;
+
+        Configuration.Modules.AbpNHibernate().FluentConfiguration
+            .Database(MsSqlConfiguration.MsSql2008.ConnectionString(connStr))
+            .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetExecutingAssembly()));
+    }
+
+    public override void Initialize()
+    {
+        IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+    }
+}
+</code></pre>
+<p><strong>AbpNHibernate</strong>模块为了使ABP能够使用NHibernate工作提供了基本的功能和适配器。</p>
+<h4 id="实体映射"><a href="#实体映射" class="headerlink" title="实体映射"></a>实体映射</h4><p>在下面的样例配置中，使用了当前程序集中的所有映射类进行了流畅地映射。一个映射类的例子如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">public class TaskMap : EntityMap<Task>
+{
+    public TaskMap()
+        : base("TeTasks")
+    {
+        References(x => x.AssignedUser).Column("AssignedUserId").LazyLoad();
+
+        Map(x => x.Title).Not.Nullable();
+        Map(x => x.Description).Nullable();
+        Map(x => x.Priority).CustomType<TaskPriority>().Not.Nullable();
+        Map(x => x.Privacy).CustomType<TaskPrivacy>().Not.Nullable();
+        Map(x => x.State).CustomType<TaskState>().Not.Nullable();
+    }
+}
+</code></pre>
+<p><strong>EntityMap</strong>是ABP继承了 <strong>ClassMap</strong>的一个类，它会自动映射 <strong>Id</strong>属性并在构造函数中获得<strong>表名</strong>。因此，我们可以从它派生并使用 **<a target="_blank" rel="noopener" href="http://www.fluentnhibernate.org/">FluentNHibernate</a>**映射其他的属性。当然，你可以直接从ClassMap派生，可以使用FluentNHibernate的所有API，也可以使用NHinernate其他的映射技术（比如映射XML文件）。</p>
+<h3 id="仓储"><a href="#仓储" class="headerlink" title="仓储###"></a>仓储###</h3><p>你可以使用仓储的默认实现而不用在项目中创建仓储类。或者可以创建派生自NhRepositoryBase的仓储类。</p>
+<h4 id="仓储基类"><a href="#仓储基类" class="headerlink" title="仓储基类"></a>仓储基类</h4><p>虽然可以从ABP的NhRepositoryBase中派生仓储类，但是最佳实践是创建自己的继承了NhRepositoryBase的基类。这样，我们就可以轻松地将一些公用的方法添加到仓储中了。例子如下：</p>
+<pre class=" language-C#"><code class="language-C#">//所有仓储的基类
+public abstract class MyRepositoryBase<TEntity, TPrimaryKey> : NhRepositoryBase<TEntity, TPrimaryKey>
+    where TEntity : class, IEntity<TPrimaryKey>
+{
+    protected MyRepositoryBase(ISessionProvider sessionProvider)
+        : base(sessionProvider)
+    {
+    }
+
+    //为所有的仓储添加一些公共的方法
+}
+
+//Id为整数的实体的快捷方式
+public abstract class MyRepositoryBase<TEntity> : MyRepositoryBase<TEntity, int>
+    where TEntity : class, IEntity<int>
+{
+    protected MyRepositoryBase(ISessionProvider sessionProvider)
+        : base(sessionProvider)
+    {
+    }
+
+    //不要在这里添加任何方法，在上面的方法中添加（因为该方法继承了上面的方法）
+}
+
+public class TaskRepository : MyRepositoryBase<Task>, ITaskRepository
+{
+    public TaskRepository(ISessionProvider sessionProvider)
+        : base(sessionProvider)
+    {
+    }
+
+    //这里添加一些task仓储特有的方法
+}
+</code></pre>
+<h4 id="默认实现"><a href="#默认实现" class="headerlink" title="默认实现"></a>默认实现</h4><p>你不需要为实体类创建仓储，只需要使用预定义的仓储方法。例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class PersonAppService : IPersonAppService
+{
+    private readonly IRepository<Person> _personRepository;
+
+    public PersonAppService(IRepository<Person> personRepository)
+    {
+        _personRepository = personRepository;
+    }
+
+    public void CreatePerson(CreatePersonInput input)
+    {        
+        person = new Person { Name = input.Name, EmailAddress = input.EmailAddress };
+        
+        _personRepository.Insert(person);
+    }
+}
+</code></pre>
+<p>PersonAppService通过构造函数注入了<strong>IRepository</strong>并使用仓储中的<strong>Insert</strong>方法。使用这种方法，你可以轻松地注入 <strong>IRepository</strong>(或者IRepository&lt;TEntity,TPrimaryKey&gt;)，然后使用预定义的方法。所有预定义的方法列表，请查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPRepository.html">仓储文档</a>**。</p>
+<h4 id="自定义仓储方法"><a href="#自定义仓储方法" class="headerlink" title="自定义仓储方法"></a>自定义仓储方法</h4><p>如果你想添加一些自定义的方法，那么首先应该给它添加仓储接口（这是最佳实践），然后在仓储类中实现。ABP提供了一个基类<strong>NhRepositoryBase</strong>来轻松地实现仓储。要实现仓储接口，只需要从仓储基类中派生仓储就可以了。</p>
+<p>假设我们有一个Task（任务）实体，该任务可以派给一个Person（人）实体，而且Task实体有这么几种状态，包括new,assigned,completed等等。我们可能需要写一个自定义方法来根据一些条件和AssignedPerson来获取任务的列表。看下面的代码：</p>
+<pre class=" language-C#"><code class="language-C#">public interface ITaskRepository : IRepository<Task, long>
+{
+    List<Task> GetAllWithPeople(int? assignedPersonId, TaskState? state);
+}
+
+public class TaskRepository : NhRepositoryBase<Task, long>, ITaskRepository
+{
+    public TaskRepository(ISessionProvider sessionProvider)
+        : base(sessionProvider)
+    {
+    }
+
+    public List<Task> GetAllWithPeople(int? assignedPersonId, TaskState? state)
+    {
+        var query = GetAll();
+
+        if (assignedPersonId.HasValue)
+        {
+            query = query.Where(task => task.AssignedPerson.Id == assignedPersonId.Value);
+        }
+
+        if (state.HasValue)
+        {
+            query = query.Where(task => task.State == state);
+        }
+
+        return query
+            .OrderByDescending(task => task.CreationTime)
+            .Fetch(task => task.AssignedPerson)
+            .ToList();
+    }
+}
+</code></pre>
+<p>GetAll()方法返回了<strong>IQueryable</strong>，然后使用给定的参数添加了一些 <strong>Where</strong>过滤。最后使用 **ToList()**获得Tasks的列表。</p>
+<p>你也可以在仓储方法中使用<strong>Session</strong>对象来调用NHibernate的全部API。</p>
+<p>仓储应该在它的构造函数中获得一个ISessionProvider。这样的话，我们就可以在单元测试中轻松地注入一个伪造的session提供者了。在运行时，ABP会自动地注入正确的session提供者。</p>
+<h1 id="ABP理论学习之EntityFramework集成"><a href="#ABP理论学习之EntityFramework集成" class="headerlink" title="ABP理论学习之EntityFramework集成"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html">ABP理论学习之EntityFramework集成</a></h1><hr>
+<h2 id="本篇目录-35"><a href="#本篇目录-35" class="headerlink" title="本篇目录"></a>本篇目录</h2><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#nuget">Nuget包</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#DbContext">创建DbContext</a></strong></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#repository">仓储</a><ul>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#base">仓储基类</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#implement">实现仓储</a></strong></li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#custom">自定义仓储方法</a></strong></li>
+</ul>
+</li>
+<li><strong><a target="_blank" rel="noopener" href="https://www.cnblogs.com/farb/p/ABPEntityFramework.html#seeAlso">阅读其他</a></strong></li>
+</ul>
+<p>ABP可以使用任何ORM框架工作，并且已经内置了<strong>EntityFramework</strong>集成。这篇文章会解释如何在ABP中使用EntityFramework。阅读本文的前提是假设你已经熟悉了EF的基本知识。</p>
+<h3 id="Nuget包-1"><a href="#Nuget包-1" class="headerlink" title="Nuget包###"></a>Nuget包###</h3><p>在ABP中使用EF作为ORM的Nuget包是<strong>Abp.EntityFramework</strong>。你应该将它添加到应用程序中。最好在应用程序中分离的程序集(dll)中实现EntityFramework，并让该程序集依赖Abp.EntityFramework包。</p>
+<h3 id="创建DbContext"><a href="#创建DbContext" class="headerlink" title="创建DbContext###"></a>创建DbContext###</h3><p>要使用EF工作，你应该为应用程序定义一个<strong>DbContext</strong>。定义DbContext的一个例子如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">public class SimpleTaskSystemDbContext : AbpDbContext
+{
+    public virtual IDbSet<Person> People { get; set; }
+    public virtual IDbSet<Task> Tasks { get; set; }
+
+    public SimpleTaskSystemDbContext()
+        : base("MyConnectionStringName")
+    {
+        
+    }
+
+    protected override void OnModelCreating(DbModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        modelBuilder.Entity<Person>().ToTable("StsPeople");
+        modelBuilder.Entity<Task>().ToTable("StsTasks").HasOptional(t => t.AssignedPerson);
+    }
+}
+</code></pre>
+<p>除了派生自<strong>AbpDbContext</strong>而不是DbContext之外，它还是一个常规的DbContext。AbpDbContext的构造函数有很多重载。你可以使用你需要的那个。</p>
+<p>EntityFramework可以以一种惯例的方式将类映射到数据库中对应的表。除非你要做一些自定义的东西，否则你不需要做任何配置。在这个例子中，我们将实体映射到不同的表，默认地，Task实体会映射到<strong>Tasks</strong>表。但是我们将它改成了<strong>StsTasks</strong>表，这里没有用数据注解特性配置，我更喜欢使用流畅的配置。你也可以选择你喜欢的方式。</p>
+<h3 id="仓储-1"><a href="#仓储-1" class="headerlink" title="仓储###"></a>仓储###</h3><p>ABP提供了一个基类<strong>EfRepositoryBase</strong>可以轻松地实现仓储。为了实习IRepository接口，只需要从这个类中派生仓储就可以了。但是最好创建你自己的继承了EfRepositoryBase的基类。这样，你就可以给仓储轻松地添加一些共享的方法了。</p>
+<h4 id="仓储基类-1"><a href="#仓储基类-1" class="headerlink" title="仓储基类"></a>仓储基类</h4><p>一个简单任务系统（SimpleTaskSystem）应用的所有仓储的基类例子如下所示：</p>
+<pre class=" language-C#"><code class="language-C#">//所有仓储的基类
+public class SimpleTaskSystemRepositoryBase<TEntity, TPrimaryKey> : EfRepositoryBase<SimpleTaskSystemDbContext, TEntity, TPrimaryKey>
+    where TEntity : class, IEntity<TPrimaryKey>
+{
+    public SimpleTaskSystemRepositoryBase(IDbContextProvider<SimpleTaskSystemDbContext> dbContextProvider)
+        : base(dbContextProvider)
+    {
+    }
+
+    //为所有的仓储添加一些公共的方法
+}
+
+//Id为整数的实体的快捷方式
+public class SimpleTaskSystemRepositoryBase<TEntity> : SimpleTaskSystemRepositoryBase<TEntity, int>
+    where TEntity : class, IEntity<int>
+{
+    public SimpleTaskSystemRepositoryBase(IDbContextProvider<SimpleTaskSystemDbContext> dbContextProvider)
+        : base(dbContextProvider)
+    {
+    }
+
+    //不要在这里添加任何方法，在上面的方法中添加（因为该方法继承了上面的方法）
+}
+</code></pre>
+<p>注意我们是从EfRepositoryBase&lt;SimpleTaskSystemDbContext, TEntity, TPrimaryKey&gt;继承的。这就声明了ABP在仓储中使用的数据上下文是SimpleTaskSystemDbContext。</p>
+<h4 id="默认实现仓储"><a href="#默认实现仓储" class="headerlink" title="默认实现仓储"></a>默认实现仓储</h4><p>你不需要为实体类创建仓储，只需要使用预定义的仓储方法。例子：</p>
+<pre class=" language-C#"><code class="language-C#">public class PersonAppService : IPersonAppService
+{
+    private readonly IRepository<Person> _personRepository;
+
+    public PersonAppService(IRepository<Person> personRepository)
+    {
+        _personRepository = personRepository;
+    }
+
+    public void CreatePerson(CreatePersonInput input)
+    {        
+        person = new Person { Name = input.Name, EmailAddress = input.EmailAddress };
+        
+        _personRepository.Insert(person);
+    }
+}
+</code></pre>
+<p>PersonAppService通过构造函数注入了<strong>IRepository</strong>并使用仓储中的<strong>Insert</strong>方法。使用这种方法，你可以轻松地注入 <strong>IRepository</strong>(或者IRepository&lt;TEntity,TPrimaryKey&gt;)，然后使用预定义的方法。所有预定义的方法列表，请查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPRepository.html">仓储文档</a>**。</p>
+<h4 id="自定义仓储方法-1"><a href="#自定义仓储方法-1" class="headerlink" title="自定义仓储方法"></a>自定义仓储方法</h4><p>要实现一个自定义的仓储，只需要从上面创建的仓储基类中派生就可以了。</p>
+<p>假设我们有一个Task（任务）实体，该任务可以派给一个Person（人）实体，而且Task实体有这么几种状态，包括new,assigned,completed等等。我们可能需要写一个自定义方法来根据一些条件和AssignedPerson来获取任务的列表。看下面的代码：</p>
+<pre class=" language-C#"><code class="language-C#">public interface ITaskRepository : IRepository<Task, long>
+{
+    List<Task> GetAllWithPeople(int? assignedPersonId, TaskState? state);
+}
+
+public class TaskRepository : SimpleTaskSystemRepositoryBase<Task, long>, ITaskRepository
+{
+    public TaskRepository(IDbContextProvider<SimpleTaskSystemDbContext> dbContextProvider)
+        : base(dbContextProvider)
+    {
+    }
+
+    public List<Task> GetAllWithPeople(int? assignedPersonId, TaskState? state)
+    {
+        var query = GetAll();
+
+        if (assignedPersonId.HasValue)
+        {
+            query = query.Where(task => task.AssignedPerson.Id == assignedPersonId.Value);
+        }
+
+        if (state.HasValue)
+        {
+            query = query.Where(task => task.State == state);
+        }
+
+        return query
+            .OrderByDescending(task => task.CreationTime)
+            .Include(task => task.AssignedPerson)
+            .ToList();
+    }
+}
+</code></pre>
+<p>我们首先定义了一个<strong>ITaskRepository</strong>接口，然后实现了它。GetAll()方法返回了<strong>IQueryable</strong>，然后使用给定的参数添加了一些 <strong>Where</strong>过滤。最后使用 **ToList()**获得Tasks的列表。</p>
+<p>你也可以在仓储方法中使用<strong>Context</strong>对象到达DbContext,然后可以直接使用EF基础设施了。</p>
+<p>仓储应该获得一个IDbContextProvider。这样的话，我们就可以在单元测试中轻松地注入一个伪造的DbContext提供者了。在运行时，ABP会自动地注入正确的DbContext提供者。</p>
+<h3 id="阅读其他"><a href="#阅读其他" class="headerlink" title="阅读其他###"></a>阅读其他###</h3><p>你也可以查看**<a target="_blank" rel="noopener" href="http://www.cnblogs.com/farb/p/ABPRepository.html">仓储文档</a>**获取更多关于仓储的知识。</p>
+<h1 id="发布"><a href="#发布" class="headerlink" title="发布"></a>发布</h1>
                 
             </div>
             <hr/>
@@ -3411,7 +5468,7 @@ public class MyProjectWebApiModule : AbpModule
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/abp-bo-ke-shou-ji-00/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/abp-bo-ke-shou-ji-00/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/2016abp-xue-xi-bo-ke-tkb-zhi-jian/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/2016abp-xue-xi-bo-ke-tkb-zhi-jian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -3622,48 +5679,50 @@ public class MyProjectWebApiModule : AbpModule
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/22/abp/abp-bo-ke-shou-ji-00/">
+                <a href="/2021/03/22/kaikeba/suan-fa-lian-biao/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="abp学习博客（2016收录）">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="数据结构和算法--堆栈">
                         
-                        <span class="card-title">abp学习博客（2016收录）</span>
+                        <span class="card-title">数据结构和算法--堆栈</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            ABP理论学习
+                            数据结构和算法
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-22
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/abp/" class="post-category">
-                                    abp
+                            <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/" class="post-category">
+                                    数据结构和算法
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/abp/">
-                        <span class="chip bg-color">abp</span>
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">数据结构和算法</span>
+                    </a>
+                    
+                    <a href="/tags/leetcode/">
+                        <span class="chip bg-color">leetcode</span>
                     </a>
                     
                 </div>
@@ -3823,7 +5882,7 @@ public class MyProjectWebApiModule : AbpModule
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">169.8k</span>&nbsp;字
+                class="white-color">230.2k</span>&nbsp;字
             
             
             
