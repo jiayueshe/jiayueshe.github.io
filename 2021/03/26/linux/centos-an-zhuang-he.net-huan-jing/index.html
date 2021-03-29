@@ -390,14 +390,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    12.2k
+                    12.7k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    51 分
+                    53 分
                 </div>
                 
 
@@ -713,40 +713,32 @@ passwd                     x86_64                    0.80-2.el8                 
 Installing dependencies:
 libuser                    x86_64                    0.62-23.el8                       BaseOS                    417 k
 </code></pre>
-<p>​<br>    Transaction Summary<br>    ========================================================================================================================<br>    Install  2 Packages</p>
-<p>​<br>    Total download size: 531 k<br>    Installed size: 2.4 M<br>    Is this ok [y/N]: y<br>    Downloading Packages:<br>    (1/2): passwd-0.80-2.el8.x86_64.rpm                                                     197 kB/s | 114 kB     00:00<br>    (2/2): libuser-0.62-23.el8.x86_64.rpm                                                   667 kB/s | 417 kB     00:00<br>    ————————————————————————————————————————<br>    Total                                                                                   422 kB/s | 531 kB     00:01<br>    Running transaction check<br>    Transaction check succeeded.<br>    Running transaction test<br>    Transaction test succeeded.<br>    Running transaction<br>      Preparing        :                                                                                                1/1<br>      Installing       : libuser-0.62-23.el8.x86_64                                                                     1/2<br>      Running scriptlet: libuser-0.62-23.el8.x86_64                                                                     1/2<br>      Installing       : passwd-0.80-2.el8.x86_64                                                                       2/2<br>      Running scriptlet: passwd-0.80-2.el8.x86_64                                                                       2/2<br>      Verifying        : libuser-0.62-23.el8.x86_64                                                                     1/2<br>      Verifying        : passwd-0.80-2.el8.x86_64                                                                       2/2</p>
-<p>​<br>    Installed:<br>      passwd-0.80-2.el8.x86_64                                  libuser-0.62-23.el8.x86_64</p>
-<p>​<br>    Complete!</p>
-<pre><code>//设置root账户的密码
-[root@192eee0845e0 ~]# passwd root
-Changing password for user root.
-New password:
-BAD PASSWORD: The password is shorter than 8 characters
-Retype new password:
-passwd: all authentication tokens updated successfully.
-</code></pre>
+<p>​<br>​    Transaction Summary<br>​    ========================================================================================================================<br>​    Install  2 Packages</p>
+<p>​<br>​    Total download size: 531 k<br>​    Installed size: 2.4 M<br>​    Is this ok [y/N]: y<br>​    Downloading Packages:<br>​    (1/2): passwd-0.80-2.el8.x86_64.rpm                                                     197 kB/s | 114 kB     00:00<br>​    (2/2): libuser-0.62-23.el8.x86_64.rpm                                                   667 kB/s | 417 kB     00:00<br>​    ————————————————————————————————————————<br>​    Total                                                                                   422 kB/s | 531 kB     00:01<br>​    Running transaction check<br>​    Transaction check succeeded.<br>​    Running transaction test<br>​    Transaction test succeeded.<br>​    Running transaction<br>​      Preparing        :                                                                                                1/1<br>​      Installing       : libuser-0.62-23.el8.x86_64                                                                     1/2<br>​      Running scriptlet: libuser-0.62-23.el8.x86_64                                                                     1/2<br>​      Installing       : passwd-0.80-2.el8.x86_64                                                                       2/2<br>​      Running scriptlet: passwd-0.80-2.el8.x86_64                                                                       2/2<br>​      Verifying        : libuser-0.62-23.el8.x86_64                                                                     1/2<br>​      Verifying        : passwd-0.80-2.el8.x86_64                                                                       2/2</p>
+<p>​<br>​    Installed:<br>​      passwd-0.80-2.el8.x86_64                                  libuser-0.62-23.el8.x86_64</p>
+<p>​<br>​    Complete!<br>​<br>    //设置root账户的密码<br>    [root@192eee0845e0 ~]# passwd root<br>    Changing password for user root.<br>    New password:<br>    BAD PASSWORD: The password is shorter than 8 characters<br>    Retype new password:<br>    passwd: all authentication tokens updated successfully.</p>
 <p>由于宿主机是本机，win10,首先查看本机IP:</p>
 <pre><code>C:\Windows\system32&gt;ipconfig
 Windows IP 配置
 </code></pre>
-<p>​<br>​<br>​<br>    以太网适配器 以太网 3:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    以太网适配器 以太网:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    以太网适配器 Npcap Loopback Adapter:</p>
-<p>​<br>       连接特定的 DNS 后缀 . . . . . . . :<br>       本地链接 IPv6 地址. . . . . . . . : fe80::e9fc:f717:45d1:bf5e%68<br>       自动配置 IPv4 地址  . . . . . . . : 169.254.191.94<br>       子网掩码  . . . . . . . . . . . . : 255.255.0.0<br>       默认网关. . . . . . . . . . . . . :</p>
-<p>​<br>    无线局域网适配器 WLAN:</p>
-<p>​<br>       连接特定的 DNS 后缀 . . . . . . . :<br>       本地链接 IPv6 地址. . . . . . . . : fe80::f4de:d9e8:2db9:751a%5<br>       IPv4 地址 . . . . . . . . . . . . : 192.168.1.100<br>       子网掩码  . . . . . . . . . . . . : 255.255.255.0<br>       默认网关. . . . . . . . . . . . . : 192.168.1.1</p>
-<p>​<br>    以太网适配器 蓝牙网络连接:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    无线局域网适配器 本地连接* 1:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    无线局域网适配器 本地连接* 10:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    无线局域网适配器 本地连接* 11:</p>
-<p>​<br>       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>       连接特定的 DNS 后缀 . . . . . . . :</p>
-<p>​<br>    以太网适配器 vEthernet (Default Switch):</p>
-<p>​<br>       连接特定的 DNS 后缀 . . . . . . . :<br>       本地链接 IPv6 地址. . . . . . . . : fe80::147a:7e74:eac4:3b0d%49<br>       IPv4 地址 . . . . . . . . . . . . : 172.17.91.177<br>       子网掩码  . . . . . . . . . . . . : 255.255.255.240<br>       默认网关. . . . . . . . . . . . . :</p>
+<p>​<br>​<br>​<br>​    以太网适配器 以太网 3:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    以太网适配器 以太网:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    以太网适配器 Npcap Loopback Adapter:</p>
+<p>​<br>​       连接特定的 DNS 后缀 . . . . . . . :<br>​       本地链接 IPv6 地址. . . . . . . . : fe80::e9fc:f717:45d1:bf5e%68<br>​       自动配置 IPv4 地址  . . . . . . . : 169.254.191.94<br>​       子网掩码  . . . . . . . . . . . . : 255.255.0.0<br>​       默认网关. . . . . . . . . . . . . :</p>
+<p>​<br>​    无线局域网适配器 WLAN:</p>
+<p>​<br>​       连接特定的 DNS 后缀 . . . . . . . :<br>​       本地链接 IPv6 地址. . . . . . . . : fe80::f4de:d9e8:2db9:751a%5<br>​       IPv4 地址 . . . . . . . . . . . . : 192.168.1.100<br>​       子网掩码  . . . . . . . . . . . . : 255.255.255.0<br>​       默认网关. . . . . . . . . . . . . : 192.168.1.1</p>
+<p>​<br>​    以太网适配器 蓝牙网络连接:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    无线局域网适配器 本地连接* 1:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    无线局域网适配器 本地连接* 10:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    无线局域网适配器 本地连接* 11:</p>
+<p>​<br>​       媒体状态  . . . . . . . . . . . . : 媒体已断开连接<br>​       连接特定的 DNS 后缀 . . . . . . . :</p>
+<p>​<br>​    以太网适配器 vEthernet (Default Switch):</p>
+<p>​<br>​       连接特定的 DNS 后缀 . . . . . . . :<br>​       本地链接 IPv6 地址. . . . . . . . : fe80::147a:7e74:eac4:3b0d%49<br>​       IPv4 地址 . . . . . . . . . . . . : 172.17.91.177<br>​       子网掩码  . . . . . . . . . . . . : 255.255.255.240<br>​       默认网关. . . . . . . . . . . . . :</p>
 <p>得到了连接的必备条件以后，就可以使用Xshell，由于我是使用docker,因此，端口处需要填写映射端口，我的映射端口是5022</p>
 <p>点击连接，就搞定了</p>
 <p>这个期间，遇到的问题如下</p>
@@ -772,30 +764,13 @@ Package                       Architecture             Version                  
 Installing:
 initscripts                   x86_64                   10.00.4-1.el8                    BaseOS                   338 k
 </code></pre>
-<p>​<br>    Transaction Summary<br>    ========================================================================================================================<br>    Install  1 Package</p>
-<p>​<br>    Total download size: 338 k<br>    Installed size: 1.0 M<br>    Downloading Packages:<br>    initscripts-10.00.4-1.el8.x86_64.rpm                                                    127 kB/s | 338 kB     00:02<br>    ————————————————————————————————————————<br>    Total                                                                                   106 kB/s | 338 kB     00:03<br>    Running transaction check<br>    Transaction check succeeded.<br>    Running transaction test<br>    Transaction test succeeded.<br>    Running transaction<br>      Preparing        :                                                                                                1/1<br>      Installing       : initscripts-10.00.4-1.el8.x86_64                                                               1/1<br>      Running scriptlet: initscripts-10.00.4-1.el8.x86_64                                                               1/1<br>      Verifying        : initscripts-10.00.4-1.el8.x86_64                                                               1/1</p>
-<p>​<br>    Installed:<br>      initscripts-10.00.4-1.el8.x86_64</p>
-<p>​<br>    Complete!<br>    [root@192eee0845e0 /]# service sshd start          //旧的centos版本使用这个<br>    Redirecting to /bin/systemctl start sshd.service<br>    [root@192eee0845e0 /]# systemctl start sshd.service  //centos7及以上，现在都使用systemctl<br>    [root@192eee0845e0 /]#                               //表示开启成功</p>
-<pre><code>2. 安装net-tools
-[root@192eee0845e0 /]# netstat -an | grep 22
-bash: netstat: command not found
-[root@192eee0845e0 /]# yum install net-tools
-Last metadata expiration check: 0:46:26 ago on Tue 03 Mar 2020 08:32:11 AM UTC.
-Dependencies resolved.
-========================================================================================================================
-Package                   Architecture           Version                                  Repository              Size
-========================================================================================================================
-Installing:
-net-tools                 x86_64                 2.0-0.51.20160912git.el8                 BaseOS                 323 k
-</code></pre>
-<p>​<br>    Transaction Summary<br>    ========================================================================================================================<br>    Install  1 Package</p>
-<p>​<br>    Total download size: 323 k<br>    Installed size: 1.0 M<br>    Is this ok [y/N]: y<br>    Downloading Packages:<br>    net-tools-2.0-0.51.20160912git.el8.x86_64.rpm                                           657 kB/s | 323 kB     00:00<br>    ————————————————————————————————————————<br>    Total                                                                                   307 kB/s | 323 kB     00:01<br>    Running transaction check<br>    Transaction check succeeded.<br>    Running transaction test<br>    Transaction test succeeded.<br>    Running transaction<br>      Preparing        :                                                                                                1/1<br>      Installing       : net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1<br>      Running scriptlet: net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1<br>      Verifying        : net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1</p>
-<p>​<br>    Installed:<br>      net-tools-2.0-0.51.20160912git.el8.x86_64</p>
-<pre><code>验证一下：
-[root@192eee0845e0 /]# netstat -an | grep 22
-unix  2      [ ]         DGRAM                    137227
-unix  3      [ ]         DGRAM                    133622 
-</code></pre>
+<p>​<br>​    Transaction Summary<br>​    ========================================================================================================================<br>​    Install  1 Package</p>
+<p>​<br>​    Total download size: 338 k<br>​    Installed size: 1.0 M<br>​    Downloading Packages:<br>​    initscripts-10.00.4-1.el8.x86_64.rpm                                                    127 kB/s | 338 kB     00:02<br>​    ————————————————————————————————————————<br>​    Total                                                                                   106 kB/s | 338 kB     00:03<br>​    Running transaction check<br>​    Transaction check succeeded.<br>​    Running transaction test<br>​    Transaction test succeeded.<br>​    Running transaction<br>​      Preparing        :                                                                                                1/1<br>​      Installing       : initscripts-10.00.4-1.el8.x86_64                                                               1/1<br>​      Running scriptlet: initscripts-10.00.4-1.el8.x86_64                                                               1/1<br>​      Verifying        : initscripts-10.00.4-1.el8.x86_64                                                               1/1</p>
+<p>​<br>​    Installed:<br>​      initscripts-10.00.4-1.el8.x86_64</p>
+<p>​<br>​    Complete!<br>​    [root@192eee0845e0 /]# service sshd start          //旧的centos版本使用这个<br>​    Redirecting to /bin/systemctl start sshd.service<br>​    [root@192eee0845e0 /]# systemctl start sshd.service  //centos7及以上，现在都使用systemctl<br>​    [root@192eee0845e0 /]#                               //表示开启成功<br>​<br>    2. 安装net-tools<br>    [root@192eee0845e0 /]# netstat -an | grep 22<br>    bash: netstat: command not found<br>    [root@192eee0845e0 /]# yum install net-tools<br>    Last metadata expiration check: 0:46:26 ago on Tue 03 Mar 2020 08:32:11 AM UTC.<br>    Dependencies resolved.<br>    ========================================================================================================================<br>    Package                   Architecture           Version                                  Repository              Size<br>    ========================================================================================================================<br>    Installing:<br>    net-tools                 x86_64                 2.0-0.51.20160912git.el8                 BaseOS                 323 k</p>
+<p>​<br>​    Transaction Summary<br>​    ========================================================================================================================<br>​    Install  1 Package</p>
+<p>​<br>​    Total download size: 323 k<br>​    Installed size: 1.0 M<br>​    Is this ok [y/N]: y<br>​    Downloading Packages:<br>​    net-tools-2.0-0.51.20160912git.el8.x86_64.rpm                                           657 kB/s | 323 kB     00:00<br>​    ————————————————————————————————————————<br>​    Total                                                                                   307 kB/s | 323 kB     00:01<br>​    Running transaction check<br>​    Transaction check succeeded.<br>​    Running transaction test<br>​    Transaction test succeeded.<br>​    Running transaction<br>​      Preparing        :                                                                                                1/1<br>​      Installing       : net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1<br>​      Running scriptlet: net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1<br>​      Verifying        : net-tools-2.0-0.51.20160912git.el8.x86_64                                                      1/1</p>
+<p>​<br>​    Installed:<br>​      net-tools-2.0-0.51.20160912git.el8.x86_64<br>​<br>    验证一下：<br>    [root@192eee0845e0 /]# netstat -an | grep 22<br>    unix  2      [ ]         DGRAM                    137227<br>    unix  3      [ ]         DGRAM                    133622 </p>
 <h2 id="Centos启用NetworkManager管理你的无线网络"><a href="#Centos启用NetworkManager管理你的无线网络" class="headerlink" title="Centos启用NetworkManager管理你的无线网络"></a>Centos启用NetworkManager管理你的无线网络</h2><p>Swilder 2020-06-04 11:40:27 715 收藏 3<br>文章标签： linux<br>版权</p>
 <p>NetworkManager是一个在你系统上运行的服务，它容许你简便地设置你的网络连接，尤其是当你需要设置一个无线网络的连接。很不幸地，NetworkManager 缺省是被停用的，因此我们必须启用它。</p>
 <p>启用 NetworkManager 服务</p>
@@ -850,9 +825,11 @@ Linux 版本2.6.32-504.12.2.el6.x86_64 6位
 </code></pre>
 <p>  （二）查看系统是32位或者64位的方法</p>
 <ol>
-<li><p>getconf LONG_BIT or getconf WORD_BIT<br>输入：getconf LONG_BIT<br>返回结果：64<br>输入：getconf WORD_BIT<br>返回结果：32<br>分析：32位的系统中int类型和long类型一般都是4字节，64位的系统中int类型还是4字节的，但是long已变成了8字节inux系统中可用”getconf WORD_BIT”和”getconf        LONG_BIT”获得word和long的位数。64位系统中应该分别得到32和64。<br>所以该系统为64为Linux系统。</p>
+<li><p>getconf LONG_BIT or getconf WORD_BIT</p>
+<p>输入：getconf LONG_BIT<br>返回结果：64<br>输入：getconf WORD_BIT<br>返回结果：32<br>分析：32位的系统中int类型和long类型一般都是4字节，64位的系统中int类型还是4字节的，但是long已变成了8字节inux系统中可用”getconf WORD_BIT”和”getconf        LONG_BIT”获得word和long的位数。64位系统中应该分别得到32和64。<br>所以该系统为64为Linux系统。</p>
 </li>
-<li><p>file /bin/ls<br>/bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped</p>
+<li><p>file /bin/ls</p>
+<p>/bin/ls: ELF 64-bit LSB executable, x86-64, version 1 (SYSV), dynamically linked (uses shared libs), for GNU/Linux 2.6.18, stripped</p>
 <p>可以看到 ELF 64-bit LSB 所以该系统为64位<br>————————————————</p>
 </li>
 </ol>
@@ -1421,7 +1398,7 @@ Linux 版本2.6.32-504.12.2.el6.x86_64 6位
 <p>打开命令行，输出以下命令，注册Microsoft需要的依赖环境;：</p>
 <pre><code>sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
 </code></pre>
-<p>​<br>    sudo sh -c ‘echo -e “[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=<a target="_blank" rel="noopener" href="https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/nenabled=1/ngpgcheck=1/ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot;&gt;/etc/yum.repos.d/dotnetdev.repo&#39;">https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot;&gt;/etc/yum.repos.d/dotnetdev.repo&#39;</a></p>
+<p>​<br>​    sudo sh -c ‘echo -e “[packages-microsoft-com-prod]\nname=packages-microsoft-com-prod \nbaseurl=<a target="_blank" rel="noopener" href="https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod/nenabled=1/ngpgcheck=1/ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot;&gt;/etc/yum.repos.d/dotnetdev.repo&#39;">https://packages.microsoft.com/yumrepos/microsoft-rhel7.3-prod\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot;&gt;/etc/yum.repos.d/dotnetdev.repo&#39;</a></p>
 <p>2.2 安装.NET SDK</p>
 <p>①更新可用的安装包：sudo yum update</p>
 <p>②安装.NET需要的组件，libunwind和libicu库：sudo yum install libunwind libicu</p>
@@ -1541,6 +1518,53 @@ WantedBy=multi-user.target
 <p>systemctl enable supervisord.service</p>
 <p>systemctl daemon-reload</p>
 <p>③重启，测试是否可以开机自启</p>
+<h1 id="net5正式版-在CentOS-8-x-下尝试安装-Net-5-的运行时"><a href="#net5正式版-在CentOS-8-x-下尝试安装-Net-5-的运行时" class="headerlink" title=".net5正式版_在CentOS 8.x 下尝试安装.Net 5 的运行时"></a>.net5正式版_在CentOS 8.x 下尝试安装.Net 5 的运行时</h1><h3 id="1、背景"><a href="#1、背景" class="headerlink" title="1、背景"></a><strong>1、背景</strong></h3><p>看着不管是群里还是公众号里这几天最热闹就是.Net 5.0 正式版的发布、C#9。</p>
+<p>当然要开发.net 5.0 的项目就需要把VisualStudio升级的v16.8.0版本了。升级后自带着安装了.Net 5.0 SDK 和它相应的运行时。</p>
+<p><strong>有哪些改进</strong>：这并不是我们今天的重点，具体请查看官方文档：<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-au/aspnet/core/release-notes/aspnetcore-5.0?view=aspnetcore-5.0">https://docs.microsoft.com/en-au/aspnet/core/release-notes/aspnetcore-5.0?view=aspnetcore-5.0</a></p>
+<h3 id="2、安装"><a href="#2、安装" class="headerlink" title="2、安装"></a><strong>2、安装</strong></h3><p>在CentOS 8.x 上 安装 .net 5 的运行时才是我们的重点，</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/3a6ec76c85972671b59c2e14817dbcce.png" alt="3a6ec76c85972671b59c2e14817dbcce.png"> </p>
+<p>为何这么说呢，本以为很简单的一件事，动手尝试后才发现有坑，那本文的重点就是记录踩过的坑。</p>
+<h3 id="2-1、首次安装"><a href="#2-1、首次安装" class="headerlink" title="2.1、首次安装"></a><strong>2.1、首次安装</strong></h3><p>很规矩的去官网，看着官网(<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-au/dotnet/core/install/linux-centos)%E4%B8%80%E6%AD%A5%E4%B8%80%E6%AD%A5%E8%BF%9B%E8%A1%8C%E5%AE%89%E8%A3%85%E3%80%82">https://docs.microsoft.com/en-au/dotnet/core/install/linux-centos)一步一步进行安装。</a></p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/77df04c6f4b83ccb73fca03d9d55b15b.png" alt="77df04c6f4b83ccb73fca03d9d55b15b.png"> </p>
+<p>实际操作：</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/123fd06fc9b4e2cb618b6e0996a0d2b0.png" alt="123fd06fc9b4e2cb618b6e0996a0d2b0.png"> </p>
+<p>我的天</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/705d3a1f829706f93d6d227a9dd6044c.png" alt="705d3a1f829706f93d6d227a9dd6044c.png"> </p>
+<p>，开玩笑吧(也许是对我的折磨)</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/a0f861ef87be2c714befcb908bca423e.png" alt="a0f861ef87be2c714befcb908bca423e.png"> </p>
+<p>，一顿折腾，最终也还是无济于事</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/5ff5d6983a254b24d7174e4969e1d5a4.png" alt="5ff5d6983a254b24d7174e4969e1d5a4.png"> </p>
+<p>。</p>
+<h3 id="2-2、最终安装"><a href="#2-2、最终安装" class="headerlink" title="2.2、最终安装"></a><strong>2.2、最终安装</strong></h3><p>严重怀疑是不是我安装的就不是8.x版本，验证一把</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/bd0e74aebd29620b2ccb1cd97ebf550c.png" alt="bd0e74aebd29620b2ccb1cd97ebf550c.png"> </p>
+<p>这就奇怪了。</p>
+<p>不管在“度娘”还是在“谷爹”最终还是失败。最终还是乖乖的再次仔细的读它的官网(<a target="_blank" rel="noopener" href="https://docs.microsoft.com/en-au/dotnet/core/install/linux-centos">https://docs.microsoft.com/en-au/dotnet/core/install/linux-centos</a>)</p>
+<p>看到下图的时候，灵光一闪</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/75cbb705704bf25d4b6404f1b43796b9.png" alt="75cbb705704bf25d4b6404f1b43796b9.png"> </p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/4fb8dacecb347d4f058cd984f707e53e.png" alt="4fb8dacecb347d4f058cd984f707e53e.png"> </p>
+<p>既然在CentOS 7 上需要，那是不是需要在CentOS8上也需要呢？试试呗</p>
+<p>于是我将它的7改成了8</p>
+<p>1</p>
+<p>sudo rpm -Uvh <a target="_blank" rel="noopener" href="https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm">https://packages.microsoft.com/config/centos/8/packages-microsoft-prod.rpm</a></p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/3420df953b4ba31f7c4897066c0dd136.png" alt="3420df953b4ba31f7c4897066c0dd136.png"> </p>
+<p>按下Enter键，本以为又是报错呢</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/c8f8ecadf07272db55a0188697f6e3fe.png" alt="c8f8ecadf07272db55a0188697f6e3fe.png"> </p>
+<p>。</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/1d0c72d38c071de9e671ad85d4a9f4f0.png" alt="1d0c72d38c071de9e671ad85d4a9f4f0.png"> </p>
+<p>既然成功了，打铁还需趁热。再次执行</p>
+<p>1</p>
+<p>sudo dnf install aspnetcore-runtime-5.0</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/5a0c845767ee9ab6a634707bf6b00445.png" alt="5a0c845767ee9ab6a634707bf6b00445.png"> </p>
+<p>果然成功了</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/53a9d016bba1e0c1f312a9e385134df8.png" alt="53a9d016bba1e0c1f312a9e385134df8.png"> </p>
+<p>。</p>
+<p>那就一路y 呗</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/6cd0aba7f486709590547487f40f079c.png" alt="6cd0aba7f486709590547487f40f079c.png"> </p>
+<p>Complete！我的天，成功了。</p>
+<p>验证一把呗</p>
+<p>  <img src="https://img-blog.csdnimg.cn/img_convert/3446d70a383d6deb32baf8204955b467.png" alt="3446d70a383d6deb32baf8204955b467.png"> </p>
+<p>成功！</p>
+<h3 id="3、总结"><a href="#3、总结" class="headerlink" title="3、总结"></a><strong>3、总结</strong></h3><p>在CentOS 8.x 下 安装运行时 就记录于此，有帮助到各位的点个</p>
 
                 
             </div>
@@ -1567,7 +1591,7 @@ WantedBy=multi-user.target
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang-he.net-huan-jing/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang-he.net-huan-jing/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1778,12 +1802,11 @@ WantedBy=multi-user.target
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/03/26/linux/centos-an-zhuang/">
+                <a href="/2021/03/27/linux/centos-an-zhuang-abp/">
                     <div class="card-image">
                         
                         
@@ -1799,9 +1822,9 @@ WantedBy=multi-user.target
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-26
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -1814,7 +1837,6 @@ WantedBy=multi-user.target
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -1975,7 +1997,7 @@ WantedBy=multi-user.target
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">230.2k</span>&nbsp;字
+                class="white-color">234.7k</span>&nbsp;字
             
             
             
