@@ -383,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-28
+                    2021-04-03
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.1k
+                    5.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    17 分
+                    25 分
                 </div>
                 
 
@@ -519,7 +519,7 @@
 <p><img src="https://img-blog.csdnimg.cn/20181102161749276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmdtb3VfcmVu,size_16,color_FFFFFF,t_70" alt="img"></p>
 <p>如果无法访问, 请查看firewall 是否开放80端口：</p>
 <p><strong>firewall-cmd –zone= public –add-port= 3306 /tcp –permanent</strong>  //开放80端口</p>
-<p><strong>systemctl restart firewalld.service</strong>               //重启防火墙</p>
+<p>systemctl restart firewalld.service             //重启防火墙</p>
 <h3 id="5-2-修改Nginx的配置文件"><a href="#5-2-修改Nginx的配置文件" class="headerlink" title="5.2**修改Nginx的配置文件**"></a><strong>5.2**</strong>修改Nginx的配置文件**</h3><p>首先，把Nginx的默认配置文件 /etc/nginx/nginx.conf里 80 端口转发配置 server 节点用 # 符注释掉。使用命令vi 或将 nginx.conf 文件下载(使用xftp或其他ftp工具都行)到本地修改完成后在上传(建议);</p>
 <p><strong>vi /etc/nginx/nginx.conf</strong>    //打开文件编辑模式, 输入i 进行编辑 完成后 按ESC键输入:wq 回车 退出编辑模式</p>
 <p><img src="https://img-blog.csdnimg.cn/20181102161749249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmdtb3VfcmVu,size_16,color_FFFFFF,t_70" alt="img"></p>
@@ -543,6 +543,8 @@
 <p>将创建好的自定义配置文件上传到 /etc/nginx/conf.d目录下 ，最后执行命令 重启Nginx: <strong>nginx –s reload</strong></p>
 <h3 id="5-3-将Nginx添加到SELinux白名单"><a href="#5-3-将Nginx添加到SELinux白名单" class="headerlink" title="5.3**将Nginx添加到SELinux白名单**"></a><strong>5.3**</strong>将Nginx添加到SELinux白名单**</h3><p>①查看SELinux状态是否为Enforcing(SELinux默认状态为Disabled), 必须保证SELinux的状态为Enforcing否则添加白名单会失败;</p>
 <p><a target="_blank" rel="noopener" href="https://www.linuxidc.com/Linux/2016-11/137723.htm%EF%BC%88%E4%BF%AE%E6%94%B9SELinux%E7%9A%84%E7%8A%B6%E6%80%81%EF%BC%89">https://www.linuxidc.com/Linux/2016-11/137723.htm（修改SELinux的状态）</a></p>
+<pre><code>setenforce 0
+</code></pre>
 <p>使用如下命令: <strong>getenforce</strong></p>
 <p>如果查询出的值为Enforcing, 执行下一步操作：添加Nginx到SELinux白名单</p>
 <p>②使用如下命令, 将Nginx添加至SELinux白名单，依次执行以下命令</p>
@@ -570,8 +572,8 @@
 <h2 id="6-配置守护进程Supervisor-让我们的程序能365天24小时不间断运行"><a href="#6-配置守护进程Supervisor-让我们的程序能365天24小时不间断运行" class="headerlink" title="6.**配置守护进程Supervisor, 让我们的程序能365天24小时不间断运行**"></a><strong>6.**</strong>配置守护进程Supervisor, 让我们的程序能365天24小时不间断运行**</h2><p>通过上面的操作, 我们已经能正常将.NET Core程序发布到CentOS下来, 但是发布过程中我们也发现了问题, 就是.NET Core不能自动的运行, 一旦我们的命令行工具关掉, 发布的程序就不能访问了;</p>
 <p>是不是能安装一个类似于Windows Service一样的服务, 能实时监控程序状态，异常退出时能自动重启。经过各种百度我找到了Supervisor。</p>
 <p>Supervisor 是用Python开发的Linux/Unix系统下的一个进程管理工具。它可以使进程(类似Windows Service)脱离终端，变为后台守护进程（daemon）。能实时监控进程状态，异常退出时能自动重启。详细文档请查看官网。</p>
-<h3 id="6-1-安装Supervisor"><a href="#6-1-安装Supervisor" class="headerlink" title="6.1**安装Supervisor**"></a><strong>6.1**</strong>安装Supervisor**</h3><p><strong>yum install python-setuptools</strong></p>
-<p><strong>easy_install supervisor</strong></p>
+<h3 id="6-1-安装Supervisor"><a href="#6-1-安装Supervisor" class="headerlink" title="6.1**安装Supervisor**"></a><strong>6.1**</strong>安装Supervisor**</h3><p>yum install python-setuptools</p>
+<p>easy_install supervisor</p>
 <h3 id="6-2-配置Supervisor"><a href="#6-2-配置Supervisor" class="headerlink" title="6.2**配置Supervisor**"></a><strong>6.2**</strong>配置Supervisor**</h3><p>①运行supervisord 服务的时候，需要指定 Supervisor 配置文件，所以，先通过如下命令创建目录，以便让 supervisor 成功加载默认配置：</p>
 <p><strong>mkdir /etc/supervisor</strong></p>
 <p>②目录创建成功后, 通过 echo_supervisord_conf 程序（用来生成初始配置文件,文件名可以自定义）来初始化一个配置文件：</p>
@@ -836,7 +838,6 @@ RestartSec=42s
 
 [Install]
 WantedBy=multi-user.target
-复制代码
 </code></pre>
 <p>使配置生效</p>
 <blockquote>
@@ -936,6 +937,158 @@ loglevel=info
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34856247/article/details/86741533">https://blog.csdn.net/qq_34856247/article/details/86741533</a></p>
 </blockquote>
+<p>[转]Nginx报错：nginx: [error] invalid PID number ““ in “/run/nginx.pid“ 解决方法</p>
+<p><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/reprint.png" alt="img"></p>
+<p>​                    <a target="_blank" rel="noopener" href="https://blog.csdn.net/lxyoucan">lxyoucan</a>                    2020-09-08 15:32:00                    <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes.png" alt="img">                    1895                                            <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect.png" alt="img">                                                收藏                                                    3                                                                </p>
+<p>​                            分类专栏：                                <a target="_blank" rel="noopener" href="https://blog.csdn.net/lxyoucan/category_10352180.html">运维</a>                    </p>
+<p>​                    版权                </p>
+<p>服务器重启之后，执行 nginx -t 是OK的，然而在执行 nginx -s reload 的时候报错</p>
+<p>nginx: [error] invalid PID number “” in “/run/nginx.pid”</p>
+<p><strong>解决方法：</strong></p>
+<p>需要先执行</p>
+<p>nginx -c /etc/nginx/nginx.conf</p>
+<p>nginx.conf文件的路径可以从nginx -t的返回中找到。</p>
+<p>nginx -s reload</p>
+<h1 id="解决unix-tmp-supervisor-sock-no-such-file的问题"><a href="#解决unix-tmp-supervisor-sock-no-such-file的问题" class="headerlink" title="解决unix:///tmp/supervisor.sock no such file的问题"></a>解决unix:///tmp/supervisor.sock no such file的问题</h1><p>Horizon_LGMH 2018-02-24 19:11:47 71719 收藏 10<br>分类专栏： supervisord 文章标签： supervisord linux<br>版权</p>
+<p>1、打开配置文件</p>
+<p>vim /etc/supervisord.conf</p>
+<p>这里把所有的/tmp路径改掉，/tmp/supervisor.sock 改成 /var/run/supervisor.sock，/tmp/supervisord.log 改成 /var/log/supervisor.log，/tmp/supervisord.pid 改成 /var/run/supervisor.pid 要不容易被linux自动清掉</p>
+<p>2、修改权限</p>
+<pre><code>sudo chmod 777 /run
+sudo chmod 777 /var/log
+</code></pre>
+<p>如果没改，启动报错 IOError: [Errno 13] Permission denied: ‘/var/log/supervisord.log’</p>
+<p>3、创建supervisor.sock</p>
+<p>sudo touch /var/run/supervisor.sock<br>sudo chmod 777 /var/run/supervisor.sock</p>
+<p>4、启动supervisord，注意stop之前的实例或杀死进程</p>
+<p>supervisord<br>————————————————</p>
+<h1 id="supervisor常用命令"><a href="#supervisor常用命令" class="headerlink" title="supervisor常用命令"></a>supervisor常用命令</h1><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/bc1ede72af0d"><img src="https://upload.jianshu.io/users/upload_avatars/4415919/015afb25-0482-49a8-bb9c-5f3e8410e8cc?imageMogr2/auto-orient/strip%7CimageView2/1/w/96/h/96" alt="img"></a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/u/bc1ede72af0d">离知</a></p>
+<p>0.3522018.01.05 13:51:02字数 408阅读 38,288</p>
+<h5 id="查看任务状态"><a href="#查看任务状态" class="headerlink" title="查看任务状态"></a>查看任务状态</h5><pre class=" language-go"><code class="language-go"># supervisorctl status
+SmartCoin                        RUNNING   pid <span class="token number">13203</span><span class="token punctuation">,</span> uptime <span class="token number">0</span><span class="token punctuation">:</span><span class="token number">04</span><span class="token punctuation">:</span><span class="token number">05</span>
+coin                             RUNNING   pid <span class="token number">30744</span><span class="token punctuation">,</span> uptime <span class="token number">17</span> days<span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">:</span><span class="token number">45</span><span class="token punctuation">:</span><span class="token number">18</span>
+deepwellserver                   RUNNING   pid <span class="token number">30257</span><span class="token punctuation">,</span> uptime <span class="token number">30</span> days<span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">:</span><span class="token number">13</span><span class="token punctuation">:</span><span class="token number">01</span>
+jingtumassetapi                  RUNNING   pid <span class="token number">14536</span><span class="token punctuation">,</span> uptime <span class="token number">45</span> days<span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">:</span><span class="token number">08</span>
+moac                             RUNNING   pid <span class="token number">20015</span><span class="token punctuation">,</span> uptime <span class="token number">15</span> days<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">:</span><span class="token number">15</span><span class="token punctuation">:</span><span class="token number">11</span>
+<span class="token builtin">new</span>                              RUNNING   pid <span class="token number">10041</span><span class="token punctuation">,</span> uptime <span class="token number">43</span> days<span class="token punctuation">,</span> <span class="token number">22</span><span class="token punctuation">:</span><span class="token number">41</span><span class="token punctuation">:</span><span class="token number">56</span>
+nginx                            RUNNING   pid <span class="token number">18752</span><span class="token punctuation">,</span> uptime <span class="token number">22</span><span class="token punctuation">:</span><span class="token number">59</span><span class="token punctuation">:</span><span class="token number">40</span>
+redis                            RUNNING   pid <span class="token number">14542</span><span class="token punctuation">,</span> uptime <span class="token number">45</span> days<span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">:</span><span class="token number">08</span>
+sonyflakeserver                  FATAL     can<span class="token string">'t find command '</span><span class="token keyword">go</span>'
+sparkportal                      RUNNING   pid <span class="token number">26073</span><span class="token punctuation">,</span> uptime <span class="token number">1</span> day<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">:</span><span class="token number">17</span>
+sparkportal2                     RUNNING   pid <span class="token number">25732</span><span class="token punctuation">,</span> uptime <span class="token number">1</span> day<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">:</span><span class="token number">21</span>
+sparkportal3                     RUNNING   pid <span class="token number">25834</span><span class="token punctuation">,</span> uptime <span class="token number">1</span> day<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">:</span><span class="token number">20</span>
+sparkportal4                     RUNNING   pid <span class="token number">25974</span><span class="token punctuation">,</span> uptime <span class="token number">1</span> day<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">:</span><span class="token number">18</span>
+sparkuser                        RUNNING   pid <span class="token number">26957</span><span class="token punctuation">,</span> uptime <span class="token number">9</span> days<span class="token punctuation">,</span> <span class="token number">23</span><span class="token punctuation">:</span><span class="token number">07</span><span class="token punctuation">:</span><span class="token number">21</span>
+sparkwallet                      RUNNING   pid <span class="token number">29045</span><span class="token punctuation">,</span> uptime <span class="token number">5</span> days<span class="token punctuation">,</span> <span class="token number">15</span><span class="token punctuation">:</span><span class="token number">11</span><span class="token punctuation">:</span><span class="token number">58</span>
+summaryservice                   RUNNING   pid <span class="token number">14535</span><span class="token punctuation">,</span> uptime <span class="token number">45</span> days<span class="token punctuation">,</span> <span class="token number">19</span><span class="token punctuation">:</span><span class="token number">18</span><span class="token punctuation">:</span><span class="token number">08</span>
+</code></pre>
+<p>第一列是服务名；第二列是运行状态，RUNNING表示运行中，FATAL 表示运行失败，STARTING表示正在启动,STOPED表示任务已停止；　第三/四列是进程号,最后是任务已经运行的时间。</p>
+<p>查看单个任务状态: <code>supervisorctl status　服务名</code></p>
+<pre class=" language-css"><code class="language-css"># supervisorctl status sparkportal
+sparkportal                      RUNNING   pid <span class="token number">26073</span>, uptime <span class="token number">1</span> day, <span class="token property">23</span><span class="token punctuation">:</span><span class="token property">12</span><span class="token punctuation">:</span><span class="token number">10</span>
+</code></pre>
+<h5 id="启动-停止-重启任务"><a href="#启动-停止-重启任务" class="headerlink" title="启动/停止/重启任务"></a>启动/停止/重启任务</h5><ol>
+<li>启动任务<br> <code>supervisorctl start 服务名</code></li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># supervisorctl stop sparkportal</span>
+sparkportal: stopped
+<span class="token comment" spellcheck="true">#supervisorctl status sparkportal</span>
+sparkportal                      STOPPED   Jan 05 01:59 PM
+</code></pre>
+<ol>
+<li>停止任务<br> <code>supervisorctl stop 服务名</code></li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># supervisorctl start sparkportal</span>
+sparkportal: started
+<span class="token comment" spellcheck="true"># supervisorctl status sparkportal</span>
+sparkportal                      RUNNING   pid 32207, <span class="token function">uptime</span> 0:00:05
+</code></pre>
+<ol>
+<li>重启任务<br> <code>supervisorctl restart 服务名</code></li>
+</ol>
+<pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># supervisorctl restart sparkportal</span>
+sparkportal: stopped
+sparkportal: started
+<span class="token comment" spellcheck="true"># supervisorctl status sparkportal</span>
+sparkportal                      RUNNING   pid 4952, <span class="token function">uptime</span> 0:00:03
+</code></pre>
+<h5 id="新增任务"><a href="#新增任务" class="headerlink" title="新增任务"></a>新增任务</h5><ol>
+<li>任务模板</li>
+</ol>
+<pre class=" language-csharp"><code class="language-csharp"><span class="token punctuation">[</span>program<span class="token punctuation">:</span><span class="token operator">&lt;</span>服务名<span class="token operator">></span><span class="token punctuation">]</span>
+command<span class="token operator">=</span><span class="token operator">&lt;</span>启动命令<span class="token operator">></span>
+process_name<span class="token operator">=</span><span class="token operator">%</span><span class="token punctuation">(</span>program_name<span class="token punctuation">)</span>s <span class="token punctuation">;</span> process_name <span class="token function">expr</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token operator">%</span><span class="token punctuation">(</span>program_name<span class="token punctuation">)</span>s<span class="token punctuation">)</span>
+numprocs<span class="token operator">=</span><span class="token number">1</span>                    <span class="token punctuation">;</span> number of processes copies to <span class="token function">start</span> <span class="token punctuation">(</span>def <span class="token number">1</span><span class="token punctuation">)</span>
+directory<span class="token operator">=</span><span class="token operator">&lt;</span>运行目录<span class="token operator">></span>                <span class="token punctuation">;</span> directory to cwd to before <span class="token function">exec</span> <span class="token punctuation">(</span>def no cwd<span class="token punctuation">)</span>
+<span class="token punctuation">;</span>umask<span class="token operator">=</span><span class="token number">022</span>                     <span class="token punctuation">;</span> umask <span class="token keyword">for</span> <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> None<span class="token punctuation">)</span>
+<span class="token punctuation">;</span>priority<span class="token operator">=</span><span class="token number">999</span>                  <span class="token punctuation">;</span> the relative start <span class="token function">priority</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">999</span><span class="token punctuation">)</span>
+autostart<span class="token operator">=</span><span class="token keyword">true</span>                <span class="token punctuation">;</span> start at supervisord <span class="token function">start</span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">)</span>
+autorestart<span class="token operator">=</span>unexpected        <span class="token punctuation">;</span> whether<span class="token operator">/</span>when to <span class="token function">restart</span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">:</span> unexpected<span class="token punctuation">)</span>
+startsecs<span class="token operator">=</span><span class="token number">1</span>                   <span class="token punctuation">;</span> number of secs prog must stay <span class="token function">running</span> <span class="token punctuation">(</span>def<span class="token punctuation">.</span> <span class="token number">1</span><span class="token punctuation">)</span>
+startretries<span class="token operator">=</span><span class="token number">3</span>                <span class="token punctuation">;</span> max # of serial start <span class="token function">failures</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">3</span><span class="token punctuation">)</span>
+exitcodes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span>                 <span class="token punctuation">;</span> <span class="token string">'expected'</span> exit codes <span class="token keyword">for</span> <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+stopsignal<span class="token operator">=</span>QUIT               <span class="token punctuation">;</span> signal used to kill <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> TERM<span class="token punctuation">)</span>
+stopwaitsecs<span class="token operator">=</span><span class="token number">10</span>               <span class="token punctuation">;</span> max num secs to wait b4 <span class="token function">SIGKILL</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stopasgroup<span class="token operator">=</span><span class="token keyword">false</span>             <span class="token punctuation">;</span> send stop signal to the UNIX process <span class="token keyword">group</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+killasgroup<span class="token operator">=</span><span class="token keyword">false</span>             <span class="token punctuation">;</span> SIGKILL the UNIX process <span class="token keyword">group</span> <span class="token punctuation">(</span>def <span class="token keyword">false</span><span class="token punctuation">)</span>
+<span class="token punctuation">;</span>user<span class="token operator">=</span>skywell                  <span class="token punctuation">;</span> setuid to <span class="token keyword">this</span> UNIX account to run the program
+<span class="token punctuation">;</span>redirect_stderr<span class="token operator">=</span><span class="token keyword">true</span>          <span class="token punctuation">;</span> redirect proc stderr to <span class="token function">stdout</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+stdout_logfile<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span><span class="token operator">&lt;</span>服务名<span class="token operator">></span><span class="token punctuation">.</span>log        <span class="token punctuation">;</span> stdout log path<span class="token punctuation">,</span> NONE <span class="token keyword">for</span> none<span class="token punctuation">;</span> <span class="token keyword">default</span> AUTO
+stdout_logfile_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> max # logfile bytes b4 <span class="token function">rotation</span> <span class="token punctuation">(</span><span class="token keyword">default</span> 50MB<span class="token punctuation">)</span>
+stdout_logfile_backups<span class="token operator">=</span><span class="token number">1</span>     <span class="token punctuation">;</span> # of stdout logfile <span class="token function">backups</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stdout_capture_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> number of bytes <span class="token keyword">in</span> <span class="token string">'capturemode'</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">)</span>
+stdout_events_enabled<span class="token operator">=</span><span class="token keyword">false</span>   <span class="token punctuation">;</span> emit events on stdout <span class="token function">writes</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+stderr_logfile<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span><span class="token operator">&lt;</span>服务名<span class="token operator">></span><span class="token punctuation">.</span>err        <span class="token punctuation">;</span> stderr log path<span class="token punctuation">,</span> NONE <span class="token keyword">for</span> none<span class="token punctuation">;</span> <span class="token keyword">default</span> AUTO
+stderr_logfile_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> max # logfile bytes b4 <span class="token function">rotation</span> <span class="token punctuation">(</span><span class="token keyword">default</span> 50MB<span class="token punctuation">)</span>
+stderr_logfile_backups<span class="token operator">=</span><span class="token number">10</span>     <span class="token punctuation">;</span> # of stderr logfile <span class="token function">backups</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stderr_capture_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> number of bytes <span class="token keyword">in</span> <span class="token string">'capturemode'</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">)</span>
+stderr_events_enabled<span class="token operator">=</span><span class="token keyword">false</span>   <span class="token punctuation">;</span> emit events on stderr <span class="token function">writes</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+environment<span class="token operator">=</span>A<span class="token operator">=</span><span class="token string">"1"</span><span class="token punctuation">,</span>B<span class="token operator">=</span><span class="token string">"2"</span><span class="token punctuation">,</span>HOME<span class="token operator">=</span><span class="token string">"/home/skywell"</span>       <span class="token punctuation">;</span> process environment <span class="token function">additions</span> <span class="token punctuation">(</span>def no adds<span class="token punctuation">)</span>
+serverurl<span class="token operator">=</span>AUTO                <span class="token punctuation">;</span> <span class="token keyword">override</span> serverurl <span class="token function">computation</span> <span class="token punctuation">(</span>childutils<span class="token punctuation">)</span>
+</code></pre>
+<p>首先添加任务描述文件，在/etc/supervisor目录下新建文件sparkportal.conf，　将上面任务模板内容复制进文件sparkportal.conf中,将&lt;服务名&gt;替换为任务名sparkportal，将&lt;启动命令&gt;替换为<code>node www.js</code>，将&lt;运行目录&gt;替换为程序所在目录<code>/usr/local/sparkportal/bin</code>。</p>
+<p>sparkportal的配置文件为</p>
+<pre class=" language-csharp"><code class="language-csharp"><span class="token punctuation">[</span>program<span class="token punctuation">:</span>sparkportal<span class="token punctuation">]</span>
+command<span class="token operator">=</span>node www<span class="token punctuation">.</span>js
+process_name<span class="token operator">=</span><span class="token operator">%</span><span class="token punctuation">(</span>program_name<span class="token punctuation">)</span>s <span class="token punctuation">;</span> process_name <span class="token function">expr</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token operator">%</span><span class="token punctuation">(</span>program_name<span class="token punctuation">)</span>s<span class="token punctuation">)</span>
+numprocs<span class="token operator">=</span><span class="token number">1</span>                    <span class="token punctuation">;</span> number of processes copies to <span class="token function">start</span> <span class="token punctuation">(</span>def <span class="token number">1</span><span class="token punctuation">)</span>
+directory<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>local<span class="token operator">/</span>sparkportal<span class="token operator">/</span>bin                <span class="token punctuation">;</span> directory to cwd to before <span class="token function">exec</span> <span class="token punctuation">(</span>def no cwd<span class="token punctuation">)</span>
+<span class="token punctuation">;</span>umask<span class="token operator">=</span><span class="token number">022</span>                     <span class="token punctuation">;</span> umask <span class="token keyword">for</span> <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> None<span class="token punctuation">)</span>
+<span class="token punctuation">;</span>priority<span class="token operator">=</span><span class="token number">999</span>                  <span class="token punctuation">;</span> the relative start <span class="token function">priority</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">999</span><span class="token punctuation">)</span>
+autostart<span class="token operator">=</span><span class="token keyword">true</span>                <span class="token punctuation">;</span> start at supervisord <span class="token function">start</span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">:</span> <span class="token keyword">true</span><span class="token punctuation">)</span>
+autorestart<span class="token operator">=</span>unexpected        <span class="token punctuation">;</span> whether<span class="token operator">/</span>when to <span class="token function">restart</span> <span class="token punctuation">(</span><span class="token keyword">default</span><span class="token punctuation">:</span> unexpected<span class="token punctuation">)</span>
+startsecs<span class="token operator">=</span><span class="token number">1</span>                   <span class="token punctuation">;</span> number of secs prog must stay <span class="token function">running</span> <span class="token punctuation">(</span>def<span class="token punctuation">.</span> <span class="token number">1</span><span class="token punctuation">)</span>
+startretries<span class="token operator">=</span><span class="token number">3</span>                <span class="token punctuation">;</span> max # of serial start <span class="token function">failures</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">3</span><span class="token punctuation">)</span>
+exitcodes<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span>                 <span class="token punctuation">;</span> <span class="token string">'expected'</span> exit codes <span class="token keyword">for</span> <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">)</span>
+stopsignal<span class="token operator">=</span>QUIT               <span class="token punctuation">;</span> signal used to kill <span class="token function">process</span> <span class="token punctuation">(</span><span class="token keyword">default</span> TERM<span class="token punctuation">)</span>
+stopwaitsecs<span class="token operator">=</span><span class="token number">10</span>               <span class="token punctuation">;</span> max num secs to wait b4 <span class="token function">SIGKILL</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stopasgroup<span class="token operator">=</span><span class="token keyword">false</span>             <span class="token punctuation">;</span> send stop signal to the UNIX process <span class="token keyword">group</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+killasgroup<span class="token operator">=</span><span class="token keyword">false</span>             <span class="token punctuation">;</span> SIGKILL the UNIX process <span class="token keyword">group</span> <span class="token punctuation">(</span>def <span class="token keyword">false</span><span class="token punctuation">)</span>
+<span class="token punctuation">;</span>user<span class="token operator">=</span>skywell                  <span class="token punctuation">;</span> setuid to <span class="token keyword">this</span> UNIX account to run the program
+<span class="token punctuation">;</span>redirect_stderr<span class="token operator">=</span><span class="token keyword">true</span>          <span class="token punctuation">;</span> redirect proc stderr to <span class="token function">stdout</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+stdout_logfile<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>sparkportal<span class="token punctuation">.</span>log        <span class="token punctuation">;</span> stdout log path<span class="token punctuation">,</span> NONE <span class="token keyword">for</span> none<span class="token punctuation">;</span> <span class="token keyword">default</span> AUTO
+stdout_logfile_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> max # logfile bytes b4 <span class="token function">rotation</span> <span class="token punctuation">(</span><span class="token keyword">default</span> 50MB<span class="token punctuation">)</span>
+stdout_logfile_backups<span class="token operator">=</span><span class="token number">1</span>     <span class="token punctuation">;</span> # of stdout logfile <span class="token function">backups</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stdout_capture_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> number of bytes <span class="token keyword">in</span> <span class="token string">'capturemode'</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">)</span>
+stdout_events_enabled<span class="token operator">=</span><span class="token keyword">false</span>   <span class="token punctuation">;</span> emit events on stdout <span class="token function">writes</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+stderr_logfile<span class="token operator">=</span><span class="token operator">/</span><span class="token keyword">var</span><span class="token operator">/</span>log<span class="token operator">/</span>sparkportal<span class="token punctuation">.</span>err        <span class="token punctuation">;</span> stderr log path<span class="token punctuation">,</span> NONE <span class="token keyword">for</span> none<span class="token punctuation">;</span> <span class="token keyword">default</span> AUTO
+stderr_logfile_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> max # logfile bytes b4 <span class="token function">rotation</span> <span class="token punctuation">(</span><span class="token keyword">default</span> 50MB<span class="token punctuation">)</span>
+stderr_logfile_backups<span class="token operator">=</span><span class="token number">10</span>     <span class="token punctuation">;</span> # of stderr logfile <span class="token function">backups</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">10</span><span class="token punctuation">)</span>
+stderr_capture_maxbytes<span class="token operator">=</span>1MB   <span class="token punctuation">;</span> number of bytes <span class="token keyword">in</span> <span class="token string">'capturemode'</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token number">0</span><span class="token punctuation">)</span>
+stderr_events_enabled<span class="token operator">=</span><span class="token keyword">false</span>   <span class="token punctuation">;</span> emit events on stderr <span class="token function">writes</span> <span class="token punctuation">(</span><span class="token keyword">default</span> <span class="token keyword">false</span><span class="token punctuation">)</span>
+environment<span class="token operator">=</span>A<span class="token operator">=</span><span class="token string">"1"</span><span class="token punctuation">,</span>B<span class="token operator">=</span><span class="token string">"2"</span><span class="token punctuation">,</span>HOME<span class="token operator">=</span><span class="token string">"/home/skywell"</span>       <span class="token punctuation">;</span> process environment <span class="token function">additions</span> <span class="token punctuation">(</span>def no adds<span class="token punctuation">)</span>
+serverurl<span class="token operator">=</span>AUTO                <span class="token punctuation">;</span> <span class="token keyword">override</span> serverurl <span class="token function">computation</span> <span class="token punctuation">(</span>childutils<span class="token punctuation">)</span>
+</code></pre>
+<ol>
+<li>增加任务<br> <code>supervisorctl update</code></li>
+</ol>
+<pre class=" language-csharp"><code class="language-csharp"><span class="token preprocessor property"># supervisorctl update</span>
+sparkportal<span class="token punctuation">:</span> added process <span class="token keyword">group</span>
+</code></pre>
+<p>该命令会将sparkportal.conf所描述的任务启动并纳入管理。然后运用查看任务命令即可查看新增任务的运行状态，如若运行失败，可查看/usr/log目录下的相关日志分析原因。</p>
+<h5 id="设置环境变量"><a href="#设置环境变量" class="headerlink" title="设置环境变量"></a>设置环境变量</h5><p>在配置文件找到environment所在行，若没有没有最下面增加environment=变量名=”变量值”即可，如果多个环境变量用逗号分隔，例如<code>environment=变量名1=&quot;变量值１&quot;,变量名2=&quot;变量值2&quot;</code>。</p>
+<p>将nodejs运行环境设置为生产环境，增加如下代码：<br> <code>environment=NODE_ENV=production</code></p>
 
                 
             </div>
@@ -1173,12 +1326,60 @@ loglevel=info
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/03/30/abp/abp-xiang-mu-shi-zhan/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="abp+mysql+三方登录项目实战">
+                        
+                        <span class="card-title">abp+mysql+三方登录项目实战</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            abp+mysql+三方登录项目实战
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-30
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/abp/" class="post-category">
+                                    abp
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/abp/">
+                        <span class="chip bg-color">abp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/27/linux/centos-an-zhuang-abp/">
+                <a href="/2021/03/27/linux/ecs-ying-yong-bu-shu/">
                     <div class="card-image">
                         
                         
@@ -1196,56 +1397,6 @@ loglevel=info
                     <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2021-03-27
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/linux/" class="post-category">
-                                    linux
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/centos/">
-                        <span class="chip bg-color">centos</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2021/03/26/linux/centos-an-zhuang-he.net-huan-jing/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="centos安装使用教程">
-                        
-                        <span class="card-title">centos安装使用教程</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            centos安装使用教程
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-26
                             </span>
                         <span class="publish-author">
                             
@@ -1370,7 +1521,7 @@ loglevel=info
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">234.7k</span>&nbsp;字
+                class="white-color">240.6k</span>&nbsp;字
             
             
             
