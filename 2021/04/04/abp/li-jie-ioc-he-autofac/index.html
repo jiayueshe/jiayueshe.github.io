@@ -1,0 +1,1653 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="理解IOC和autoFac, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>理解IOC和autoFac | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">理解IOC和autoFac</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/abp/">
+                                <span class="chip bg-color">abp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/abp/" class="post-category">
+                                abp
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-04
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-04
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.1k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    30 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="IOC基础理解篇内容"><a href="#IOC基础理解篇内容" class="headerlink" title="IOC基础理解篇内容"></a>IOC基础理解篇内容</h1><h2 id="IoC容器Autofac-1-–-什么是IoC以及理解为什么要使用Ioc"><a href="#IoC容器Autofac-1-–-什么是IoC以及理解为什么要使用Ioc" class="headerlink" title="     IoC容器Autofac(1) – 什么是IoC以及理解为什么要使用Ioc         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/archive/2013/03/17/2965201.html">     IoC容器Autofac(1) – 什么是IoC以及理解为什么要使用Ioc         </a></h2><p>2013-03-17 23:14 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/">JustRun</a> 阅读(17239) 评论(20) <a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?postid=2965201">编辑</a> <a href="javascript:void(0)">收藏</a></p>
+<blockquote>
+<p>阅读目录:</p>
+<p>一. 一个没有使用IoC的例子</p>
+<p>二. 当需求发生变动时，非IoC遭遇到的困境</p>
+<p>三. 使用IoC彻底解决问题</p>
+<p>四. 总结</p>
+</blockquote>
+<h3 id="一、一个没有使用IoC的例子"><a href="#一、一个没有使用IoC的例子" class="headerlink" title="一、一个没有使用IoC的例子"></a>一、一个没有使用IoC的例子</h3><p>IoC的全称是Inversion of Control，中文叫控制反转。要理解控制反转，可以看看非控制反转的一个例子。</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>public class MPGMovieLister
+   &#123;
+       public Movie[] GetMPG()
+       &#123;
+           var finder = new ListMovieFinder();
+           var allMovies = finder.FindAll();
+
+           return allMovies.Where(m =&gt; m.Name.EndsWith(&quot;.MPG&quot;)).ToArray();
+       &#125;
+   &#125;
+
+ 
+
+public class ListMovieFinder
+   &#123;
+       public List&lt;Movie&gt; FindAll()
+       &#123;
+           return new List&lt;Movie&gt;
+                      &#123;
+                          new Movie
+                              &#123;
+                                  Name = &quot;Die Hard.wmv&quot;
+                              &#125;,
+                          new Movie
+                              &#123;
+                                  Name = &quot;My Name is John.MPG&quot;
+                              &#125;
+                      &#125;;
+       &#125;
+   &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p> 上面的例子中，类MPGMovieLister的作用是列出所有的mpg类型的电影，其中调用了类ListMovieFinder类的方法FindAll()来获取所有的电影。</p>
+<p>这段代码看起来还不错，已经符合当前的需求了。</p>
+<h3 id="二、当需求发生变动时，非IoC遭遇到的困境"><a href="#二、当需求发生变动时，非IoC遭遇到的困境" class="headerlink" title="二、当需求发生变动时，非IoC遭遇到的困境"></a>二、当需求发生变动时，非IoC遭遇到的困境</h3><p>假如，这个时候，movie的列表获取不是直接创建一个list获取，而要求从某个文本文件读取，或者是数据库获取，又或者从web service中获取，我们怎么办？</p>
+<p>第一步，再实现一个类, 比如FileMovieFinder，来实现从文本文件中读取Movie列表，再把MPGMovieLister中的这行代码，</p>
+<p>   var finder = new ListMovieFinder();<br>替换成</p>
+<p>  var finder = new FileMovieFinder();<br>那么这行代码就又能够符合要求了。</p>
+<p>新的MPGMovieLister代码是这个样子:</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>   public class MPGMovieLister
+   &#123;
+       public Movie[] GetMPG()
+      &#123;
+            var finder = new FileMovieFinder();
+           var allMovies = finder.FindAll();
+           return allMovies.Where(m =&gt; m.Name.EndsWith(&quot;.MPG&quot;)).ToArray();
+       &#125;
+   &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p> 如果底层–获取数据的方式不确定，或者经常更改，MPGMovieLister的代码岂不是要频繁改动? </p>
+<h3 id="三、使用IoC彻底解决问题"><a href="#三、使用IoC彻底解决问题" class="headerlink" title="三、使用IoC彻底解决问题:"></a>三、使用IoC彻底解决问题:</h3><p>MPGMovieLister的功能都是依赖着具体的类，ListMovieFinder，FileMovieFinder。当需求发生变化的时候，就会导致MPGMovieLister的代码也要做相应的改动。</p>
+<p>也就是说，MPGMovieLister直接依赖于ListMovieFinder和FileMovieFinder了。</p>
+<p>跳出来看，MPGMovieLister的功能只是负责从列表中找出MPG的movie, 至于movie从什么地方来的，不是MPGMovieLister的职责，它也不需要关心。</p>
+<p>而解耦合的方法就是”依赖于抽象，而不是依赖于具体”.</p>
+<p>(这个例子非常类似于我们的做开发时候的持久层(数据层)和业务逻辑层，其实业务逻辑层也不关心数据是如何提供的，所以业务逻辑层也应当与持久层解耦合。)</p>
+<p>实际解决之后的代码：</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>public class MPGMovieLister
+   &#123;
+       public Movie[] GetMPG()
+      &#123;
+            var finder = MovieFinderFactory.GetFinder();
+           var allMovies = finder.FindAll();
+           return allMovies.Where(m =&gt; m.Name.EndsWith(&quot;.MPG&quot;)).ToArray();
+       &#125;
+   &#125;
+ 
+
+public class MovieFinderFactory
+&#123;
+     public static IMovieFinder GetFinder()
+     &#123;
+         return new FileMovieFinder();
+     &#125;
+&#125; 
+
+public interface IMovieFinder
+&#123;
+    List&lt;Movie&gt; FindAll()
+&#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p> 这里MPGMovieLister就依赖于IMovieFinder接口(依赖抽象),  实际运行时候的实例化由MovieFinderFactory来提供。这样，不同的Movie数据源只需要一个实现IMovieFinder  的类就可以了，不会对MPGMovieLister产生任何影响。</p>
+<p> 到这里，实际上已经完成了IoC, 控制权最初取决于MPGMovieLister中是如何实例化MovieFinder 的，现在它已经交出控制权，交由外部来提供具体实例对象了。</p>
+<p>这里的MovieFinderFactory就已经是一个简陋的IoC容器功能了。</p>
+<h3 id="四、总结"><a href="#四、总结" class="headerlink" title="四、总结"></a>四、总结</h3><p>IoC这种解决依赖的方法是面向对象方法的使用。现实世界中，这种方法无处不在。</p>
+<p>比如，汽车不会强依赖于某个品牌的轮胎，任何公司生产的轮胎，只要符合汽车的接口，就可以装在这个汽车上使用。</p>
+<p>还有电脑的USB接口，只要符合USB标准的外设，就都能够接上电脑使用。</p>
+<p>解除依赖不仅让代码结构看起来更加合理，其带来的另一个好处是，各个部分可以单独的做单元测试，使得单元测试能够更加容易的进行。这个对于一些复杂度高的项目，对于保证项目的稳定性和可用性非常有意义。</p>
+<p>真正的IoC容器比上面的MovieFinderFactory自然要好用和适用的多。下一篇文章将会介绍一个非常棒的IoC框架Autofac.</p>
+<h2 id="IoC容器Autofac-2-一个简单示例-附demo源码"><a href="#IoC容器Autofac-2-一个简单示例-附demo源码" class="headerlink" title="     IoC容器Autofac(2) - 一个简单示例(附demo源码)         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/archive/2013/03/19/2968538.html">     IoC容器Autofac(2) - 一个简单示例(附demo源码)         </a></h2><p>2013-03-19 18:20 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/">JustRun</a> 阅读(16112) 评论(21) <a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?postid=2968538">编辑</a> <a href="javascript:void(0)">收藏</a></p>
+<p>上篇文章中(<a target="_blank" rel="noopener" href="http://www.cnblogs.com/JustRun1983/archive/2013/03/17/2965201.html">IoC容器Autofac(1) – 什么是IoC以及理解为什么要使用Ioc</a>)，我们用自己的方式实现了一个简陋的工厂类来实现IoC.</p>
+<p>这里我们尝试使用Auotfac来替换我们的工厂类MovieFinderFactory.</p>
+<p>(Autofac的名字应当取的是非常贴切的，它本质上其实就是一个产出对象的自动工厂)</p>
+<blockquote>
+<p>阅读目录:</p>
+<p>一. 使用自定义工厂类实现IoC的例子</p>
+<p>二. 改造代码,去除MovieFinderFactory</p>
+<p>三. 应用Autofac替代工厂类</p>
+<p>四. 当需求发生变动, Autofac如何应对?</p>
+<p>五. Autofac对程序架构的影响</p>
+<p>六. 总结</p>
+</blockquote>
+<h3 id="一、使用自定义工厂类实现IoC的例子"><a href="#一、使用自定义工厂类实现IoC的例子" class="headerlink" title="一、使用自定义工厂类实现IoC的例子"></a>一、使用自定义工厂类实现IoC的例子</h3><p>我们回顾一下之前的代码：</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>//这个类的作用是筛选出MPG类型的电影
+public class MPGMovieLister:IMovieFinder
+&#123;
+  public Movie[] GetMPG()
+  &#123;
+       var finder = MovieFinderFactory.GetFinder();//这里调用工厂类获取具体的实例，得到一个电影列表
+       var allMovies = finder.FindAll();
+       return allMovies.Where(m =&gt; m.Name.EndsWith(&quot;.MPG&quot;)).ToArray();
+   &#125;
+&#125;
+ 
+
+public class MovieFinderFactory
+&#123;
+     public static IMovieFinder GetFinder()
+     &#123;
+         return new ListMovieFinder();
+     &#125;
+&#125; 
+
+public class ListMovieFinder :IMovieFinder
+&#123;
+   public List&lt;Movie&gt; FindAll()
+   &#123;
+       return new List&lt;Movie&gt;
+                  &#123;
+                      new Movie
+                          &#123;
+                              Name = &quot;Die Hard.wmv&quot;
+                          &#125;,
+                      new Movie
+                      &#123;
+                          Name = &quot;My Name is John.MPG&quot;
+                      &#125;
+                 &#125;;
+   &#125;
+&#125;
+
+public interface IMovieFinder &#123; List&lt;Movie&gt; FindAll() &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>这里MPGMovieLister已经不和具体的MovieFinder耦合了，而是依赖于MovieFinderFactory工厂类提供的IMovieFinder接口的具体实现来取Movie数据。</p>
+<p>所以工厂类只要返回不同的实现IMovieFinder的实例，就能够让MovieLister从列表，文本，数据库，web service …… 中获取数据。</p>
+<h3 id="二、改造代码-去除MovieFinderFactory"><a href="#二、改造代码-去除MovieFinderFactory" class="headerlink" title="二、改造代码,去除MovieFinderFactory"></a>二、改造代码,去除MovieFinderFactory</h3><p>在应用Autofac替换MovieFinderFactory之前，我们先从代码中去掉MovieFinderFactory, 改动之后的代码是这样：</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>public class MPGMovieLister
+&#123;
+    private readonly IMovieFinder _movieFinder;
+    //增加了构造函数，参数是IMovieFinder对象
+    public MPGMovieLister(IMovieFinder movieFinder)
+    &#123;
+         _movieFinder = movieFinder;
+    &#125;
+
+    public Movie[] GetMPG()
+    &#123;
+     var allMovies = _movieFinder.FindAll();
+     return allMovies.Where(m =&gt; m.Name.EndsWith(&quot;.MPG&quot;)).ToArray();
+    &#125;
+&#125;
+
+public interface IMovieFinder
+&#123;
+    List&lt;Movie&gt; FindAll()
+&#125; 
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>我们去掉了工厂类MovieFinderFactory， 改造了MPGMovieLister， 添加了一个构造函数， 构造函数要求使用MPGMovieLister时，需要提供一个IMovieFinder的实例。</p>
+<h3 id="三、应用Autofac替代工厂类"><a href="#三、应用Autofac替代工厂类" class="headerlink" title="三、应用Autofac替代工厂类"></a>三、应用Autofac替代工厂类</h3><p>应用Autofac改造上面的代码。</p>
+<p><strong>第一步: 从Nuget中添加Autofac引用</strong></p>
+<p><img src="https://images0.cnblogs.com/blog/14408/201303/19165839-c34084ddbcf5489b90d02cc1d2bf5dcc.png" alt="img"></p>
+<p><strong>第二步:</strong></p>
+<p>*** 创建一个ContainerBuilder对象(ContainerBuilder从字面的意思就是用来创建Container(容器)的，而Conainter就是我们从中取各种我们需要对象的地方)**</p>
+<p>*** 注册我们后面将从容器中取出对象的类型。**</p>
+<p>代码是这样：</p>
+<pre><code>var builder = new ContainerBuilder();//
+
+builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces();//注册ListMovieFinder类型，这里的AsImplementedInterfaces表示以接口的形式注册
+builder.RegisterType&lt;MPGMovieLister&gt;();//注册MPGMovieLister类型
+</code></pre>
+<p>*** 创建容器**</p>
+<pre><code>_container = builder.Build();
+</code></pre>
+<p><strong>第三步: 在程序中使用 _container容器：</strong></p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>var lister = _container.Resolve&lt;MPGMovieLister&gt;();
+
+foreach (var movie in lister.GetMPG())
+&#123;
+     Console.WriteLine(movie.Name);
+&#125; 
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p><strong>理解一下Autofac为我们在背后做了什么：</strong></p>
+<p>首先，我们注册了类型ListMovieFinder和MPGMovieLister，这样容器就能够知道如何创建这两种类型的实例了。(类其实是创建对象的模板，当我们把模板注册给Autofac, 它就会遵循这个模板为我们提供实例)</p>
+<p>后面的代码中，我们调用Resolve方法，取出一个MPGMovieLister的实例。</p>
+<pre><code>_container.Resolve&lt;MPGMovieLister&gt;();
+</code></pre>
+<p>这里还有一个需要解释的，对于MPGMovieLister类型，我们为Autofac提供了类型, 但是当Autofac创建MPGMovieLister的实例, 调用它的构造函数的时候，却遇到了问题：</p>
+<p>它的构造函数需要提供一个IMovieFinder的实例作为参数的, 聪明的Autofac要在自己的容器里找找，看看没有有办法提供一个IMovieFinder的实例。</p>
+<p>这个时候Autofac会发现我们注册过ListMovieFinder， 并且通过AsImplementedInterfaces()方法，指明了就是为接口IMovieFinder提供实例的。</p>
+<p>所以Autofac会创建一个ListMovieFinder的实例，作为创建MPGMovieLister时，提供给构造函数的参数。</p>
+<pre><code>builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces();
+</code></pre>
+<h3 id="四、当需求发生变动-Autofac如何应对"><a href="#四、当需求发生变动-Autofac如何应对" class="headerlink" title="四、当需求发生变动, Autofac如何应对?"></a>四、当需求发生变动, Autofac如何应对?</h3><p>上面的例子中，我们的类ListMovieFinder实现了IMovieFinder接口， 实际运行中，是由它来提供数据。</p>
+<p>假如这个时候，我们要从数据库中获取数据，怎么办?</p>
+<p>非常简单，创建一个类DBMovieFinder继承IMovieFinder接口， 然后注册给Autofac就可以了。 这样程序就非常容易的切换到从数据库中取数据了。</p>
+<p>注册相关改动的代码是这样的:</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>var builder = new ContainerBuilder();
+builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces();
+
+//这里注册了DBMovieFinder， 这个类继承IMovieFinder接口。因为它也使用了AsImplementedInterfaces，它会覆盖ListMovieFinder的注册。
+builder.RegisterType&lt;DBMovieFinder&gt;().AsImplementedInterfaces(); builder.RegisterType&lt;MPGMovieLister&gt;(); 
+_container = builder.Build();
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<h3 id="五、Autofac对程序架构的影响"><a href="#五、Autofac对程序架构的影响" class="headerlink" title="五、Autofac对程序架构的影响"></a>五、Autofac对程序架构的影响</h3><p>常见的程序架构大概是: UI层， 业务逻辑层， 持久层(数据层)。</p>
+<p>我们可以使用Autofac作为不同层之间的中间人，让UI层依赖于业务逻辑层的抽象接口，业务逻辑层依赖于持久层的接口，而实际运行过程中的实例都由Auotfac来提供。</p>
+<p>这样我们就能够解除不同层之间的依赖，将所有的注册类型的操作在一个核心函数或者核心类中实现，那么只要修改这个函数或者类，就能够非常方便的让它们之间的依赖关系发生变化。</p>
+<p>比如， 在一个大的项目中，持久层和业务逻辑层是并行开发的，而且是不同团队开发，这个时候业务逻辑开发团队的人在没有持久层代码的情况下，如何开始呢？</p>
+<p>我们只要定义好持久层的接口， 业务逻辑团队再写一些Stub类(桩类)来实现这些接口，让这些Stub类来替换真正的持久层，所要做的就只是简单的把这些Stub类型注册到Autofac中就可以了。同时做业务逻辑层的单元测试也非常容易了。</p>
+<p>拿上面的例子来说，就是这个样子：</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>var builder = new ContainerBuilder();
+if(IsLive)//如果是正式环境中，使用DBMovieFinder, 从数据库中获取数据
+&#123;
+    builder.RegisterType&lt;DBMovieFinder&gt;().AsImplementedInterfaces();
+&#125;
+else//在开发环境中，先用Stub类ListMovieFinder替代
+&#123;
+    builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces();
+&#125;
+builder.RegisterType&lt;MPGMovieLister&gt;(); 
+_container = builder.Build();
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>同样的，UI层和业务逻辑层也可以运用同样的思路。</p>
+<h3 id="六、-总结"><a href="#六、-总结" class="headerlink" title="六、 总结"></a>六、 总结</h3><p>从上面的例子可以看出，使用IoC对于复杂的项目来说，非常有意义，能够为我们搭建一个好的开发层次。</p>
+<p>同时，在使用过程中，还能够发现Autofac有以下优点：</p>
+<p>\1. 可以使用C#代码来完成注册配置，非常方便而且便于调试。(使用xml配置，往往容易出现格式不对，或者其它问题，非常难于调试和排错)</p>
+<p>\2. 非常聪明，能够自动装配(发现构造函数需要的必须参数的时候，会自己想办法解决)</p>
+<h2 id="IoC容器Autofac-3-理解Autofac原理，我实现的部分Autofac功能-附源码"><a href="#IoC容器Autofac-3-理解Autofac原理，我实现的部分Autofac功能-附源码" class="headerlink" title="     IoC容器Autofac(3) - 理解Autofac原理，我实现的部分Autofac功能(附源码)         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/archive/2013/03/24/2978597.html">     IoC容器Autofac(3) - 理解Autofac原理，我实现的部分Autofac功能(附源码)         </a></h2><p>2013-03-24 16:25 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/">JustRun</a> 阅读(13865) 评论(8) <a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?postid=2978597">编辑</a> <a href="javascript:void(0)">收藏</a></p>
+<p>上篇文章中，举了一个Autofac的简单例子，园友eflay反应:</p>
+<p><em>“虽然对autofac架构原理还是完全不懂，不过基本是明白ioc的用途了，会从已注册的类中找出符合接口的类来调用构造函数进行构造”</em></p>
+<p>所以这篇文章，还是针对上次的例子，不引用Autofac，完全使用自己写的FakeAutofac, 也让Demo运行起来.</p>
+<p>由于本篇文章和以前文章关联度很高，源代码也是从以前的演化过来的。没有看过以前文章的园友，麻烦移步这里， 下载第二篇的源代码，思考一下如何实现例子中Autofac使用到的功能。</p>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/JustRun1983/admin/IoC%E5%AE%B9%E5%99%A8Autofac(1">IoC容器Autofac(1) – 什么是IoC以及理解为什么要使用Ioc</a> – 什么是IoC以及理解为什么要使用Ioc)</p>
+<p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/JustRun1983/archive/2013/03/19/2968538.html">IoC容器Autofac(2) - 一个简单示例(附demo源码)</a></p>
+<p>这里是本文相关的源代码 <a target="_blank" rel="noopener" href="http://files.cnblogs.com/JustRun1983/AutofacDemo(1).zip"><strong>AutofacDem0(1).zip</strong></a>， 源代码主要涉及的知识有反射，泛型，委托。</p>
+<p>这篇文章本人没有把握能够把所有的东西都讲的非常浅显易懂， 不过好在有源代码， 代码量不大，加有很多注释，大家可以对比理解一下。</p>
+<p>如果对源代码有任何建议和问题，可以留言或者写在评论里，我尽量回复和解答。</p>
+<blockquote>
+<p>阅读目录:</p>
+<p>一. 开始前的分析</p>
+<p>二. 实现过程中遇到的一些难点</p>
+<p>三. 总结</p>
+</blockquote>
+<h3 id="一、开始前的分析"><a href="#一、开始前的分析" class="headerlink" title="一、开始前的分析"></a>一、开始前的分析</h3><p><strong>我们主要使用到了Autofac中的类和方法:</strong></p>
+<p><strong>类ContainerBuilder中的方法:</strong></p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>RegisterType&lt;T&gt;()//注册类型T
+
+AsImplementedInterfaces()//表示注册的类型，以接口的方式注册
+
+Build()//创建一个容器
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p><strong>接口IContainer的方法：</strong></p>
+<pre><code>Resolve&lt;T&gt;()//从容器中取出一个T类型的实例
+</code></pre>
+<p>这里是类图:</p>
+<p><img src="https://images0.cnblogs.com/blog/14408/201303/24154844-16b0945df40b45ca84e41fca37b73881.png" alt="img"></p>
+<h3 id="二、实现过程中遇到的一些难点"><a href="#二、实现过程中遇到的一些难点" class="headerlink" title="二、实现过程中遇到的一些难点"></a>二、实现过程中遇到的一些难点</h3><p>注册类型可以使用集合类来保存，当需要某种类型的实例的时候，可以使用反射调用构造函数直接构造该类型的实例。</p>
+<p>这样看起来还蛮简单的，但是还有一些难点， 大家在看源代码的过程中，可以带着这些问题看看是如何解决这些问题的。</p>
+<p><strong>1. 如何实现AsImplementedInterfaces()方法?</strong></p>
+<p>这个方法的作用是，指定注册类型以接口形式存在， 比如，</p>
+<p>当我运行了下面代码后</p>
+<pre><code>builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces(); //以类ListMovieFinder的接口IMovieFinder注册
+</code></pre>
+<p>那么我使用 Resolve<IMovieFinder>()要获取一个接口实例的时候，会返回一个ListMovieFinder的实例</IMovieFinder></p>
+<p><strong>2. 如何实现对同一个类型的注册，后面的覆盖前面的注册， 如源代码中:</strong></p>
+<pre><code>builder.RegisterType&lt;ListMovieFinder&gt;().AsImplementedInterfaces();
+builder.RegisterType&lt;DBMovieFinder&gt;().AsImplementedInterfaces();
+</code></pre>
+<p> 后面的DBMovieFinder会覆盖掉ListMovieFinder的注册</p>
+<p>这样，当我调用 Resolve<IMovieFinder>()要获取一个接口实例的时候，会返回一个DBMovieFinder的实例</IMovieFinder></p>
+<p><strong>3.当用反射调用构造函数的时候，如果构造函数中有参数，这些参数也由Autofac构造。</strong></p>
+<p>比如，当我们Resolve<MPGMovieLister>()想获取MPGMovieLister实例的时候， MPGMovieLister的构造函数需要一个IMovieFinder类型的参数，如何这个参数也由Autofac创建?</MPGMovieLister></p>
+<h3 id="三、总结"><a href="#三、总结" class="headerlink" title="三、总结"></a>三、总结</h3><p>源代码只是模仿Autofac的一部分功能，只能算是Autofac现有功能中的九牛一毛了。</p>
+<p>直接使用别人写好的框架，自然是最简单不过的。 但是通过自己动手写源代码模仿Autofac的实现，自己学到更多，同时写非常感谢那些做开源框架和产品的开发者。</p>
+<p>感谢园友eflay， 因为这个，我才有了这个想法，期间几次想放弃写这篇文章，但是”知其然还要知其所以然”的想法又让我坚持了下去。</p>
+<h3 id="IoC容器Autofac-4-Autofact-Asp-net-MVC-EF-Code-First-附源码"><a href="#IoC容器Autofac-4-Autofact-Asp-net-MVC-EF-Code-First-附源码" class="headerlink" title="     IoC容器Autofac(4) - Autofact + Asp.net MVC + EF Code First(附源码)         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/archive/2013/03/28/2981645.html">     IoC容器Autofac(4) - Autofact + Asp.net MVC + EF Code First(附源码)         </a></h3><p>2013-03-28 08:00 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/JustRun1983/">JustRun</a> 阅读(14388) 评论(19) <a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?postid=2981645">编辑</a> <a href="javascript:void(0)">收藏</a></p>
+<p>本篇文章，讲解如何使用Auotfac, Asp.net MVC和EF Code First，搭建一个松散的架构。 例子代码主要完成的功能是:</p>
+<p>列出数据库中Student表中的所有学生信息。</p>
+<blockquote>
+<p>阅读目录:</p>
+<p>一、 使用Entity Framework Code First， 写代码创建Student表</p>
+<p>二、使用Migrations, 生成数据库和初始化数据</p>
+<p>三、创建Controller方法和View</p>
+<p>四、正式项目开发中的困境</p>
+<p>五、解耦合，脱离数据层</p>
+<p>六、实例化，可恶的实例化</p>
+<p>七、使用Autofac依赖注入</p>
+<p>八、总结</p>
+</blockquote>
+<h3 id="一、使用Entity-Framework-Code-First，-写代码创建Student表"><a href="#一、使用Entity-Framework-Code-First，-写代码创建Student表" class="headerlink" title="一、使用Entity Framework Code First， 写代码创建Student表"></a>一、使用Entity Framework Code First， 写代码创建Student表</h3><p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code> public class SchoolContext : DbContext
+    &#123;
+        public SchoolContext()
+            : base(&quot;DefaultConnection&quot;)
+        &#123;
+        &#125;
+
+        public DbSet&lt;Student&gt; Students &#123; get; set; &#125;
+    &#125;
+
+    [Table(&quot;Student&quot;)]
+    public class Student
+    &#123;
+        [Key]
+        public int Id &#123; get; set; &#125;
+        public string Name &#123; get; set; &#125;
+        public int Age &#123; get; set; &#125;
+    &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<h3 id="二、使用Migrations-生成数据库和初始化数据"><a href="#二、使用Migrations-生成数据库和初始化数据" class="headerlink" title="二、使用Migrations, 生成数据库和初始化数据"></a>二、使用Migrations, 生成数据库和初始化数据</h3><p>打开”package manager console”</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<p>运行Migration, 生成数据库更新代码</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<p>会在项目中生成Migrations文件夹，以及2个代码文件。</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<p>修改代码， 在Seed方法中，添加程序的初始化数据， 添加3条记录</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code> protected override void Seed(SchoolContext context)
+ &#123;
+     //  This method will be called after migrating to the latest version.
+     //  You can use the DbSet&lt;T&gt;.AddOrUpdate() helper extension method 
+    //  to avoid creating duplicate seed data. E.g.
+    //
+      context.Students.AddOrUpdate(
+          s =&gt; s.Id,
+          new Student &#123;Name = &quot;Andrew Peters&quot;, Age = 18&#125;,
+          new Student &#123;Name = &quot;Brice Lambson&quot;, Age = 29&#125;,
+          new Student &#123;Name = &quot;Rowan Miller&quot;, Age = 56&#125;
+      );
+ &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>执行”Update-Database”命令，生成和代码匹配的数据库</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<p>下图是生成的数据库结果:</p>
+<p><img src="data:image/png;base64,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" alt="img"></p>
+<h3 id="三、创建Controller方法和View"><a href="#三、创建Controller方法和View" class="headerlink" title="三、创建Controller方法和View"></a>三、创建Controller方法和View</h3><p>controller代码非常简单，如下:</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code> public class HomeController : Controller
+    &#123;
+        public ActionResult Index()
+        &#123;
+            var studentRepository = new StudentRepository();
+            var students = studentRepository.GetStudents();//调用数据层方法，获取数据
+            return View(students);
+        &#125;
+    &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>最后，运行起来的效果:</p>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQIAAAC2CAIAAAC9ARTQAAAVlElEQVR4nO2dfYgUZ57HH2iGIbRsHEFbNjrureQ8spGWbfGC8SDZMzaciyJCZMXCo3UzhOXMnZfZ3MqGCXcStmKmw6LhvLs4eNGg2Rgye27jJuyKjMYQZSLJdPTaGDJ4zm3PwDjLOczi0PDcH9X19K+el+qqnp6aGvv7+Ut76uWpp57P81b1/IpxAFoeNtcJAGDugQYAQAMAoAEAHBoAwKEBABwaAMChAQAcGgDAoQEAHBoAwKEBADygBvcnR47bLz6+4tttjDHGEu0Llq94vOvl1y5f+/o+r5w6sL23vzTbCdVRyjCZjNU7FykJzmguvVRJtYcgmVmZHvmnrevbGFvyZ+t/+/lIBOl+sKmvwY1Lp1Ym2xLtHX9nvzNyd5JzPnl3bODsW2sf6Qh152aJkesfPtqemD8acM55ZXryd30vJ72lf2n62WvDYwGPcKZnh9hx0codd2Y1uS1AHQ1GPj/b2Z5gLNFz4or0p8r06Cvb1/lrMDX++dannx9tTlJNeOrXudNgNJfOhqkM5Gah58Rg8J17LdoQZmZSCRXs3BzWYjHBX4PxfU+uYIwx9tjg+JT658r0yN61nWYNpg7veWppOtcKGpzLdyXCFUdZg1BlsVmtweiX5zrbE9DAT4PRLwvujXr41Ce3tduMf31+heEWXuvvTTLWChq4bWZ0GjRlbFCvFmsh/DQo9feKm5RateWL8j3dVlMHt69R83F48IPO9gRrAQ0m7lzdsDgZvnMyIw1mTmV64pC1YU5OHUP8NPjm/LGHyH1qSy57/d2B+8pmgyd6pHy8cemdTnfY+mBrMHpzYN1iMdadNxrQcR004P4aTI1/toZMwjh0PLL6l+9emJyuGHa6f76vp0PZS2Q3bWEccnaBe1senwI9cv3yi7s2L0y2McYWdCx7wX7vXgANnL2WdCxgjCXaF6zbaA1c93QkCnZOTVVleuLMkQOrFi9kjLUlF27ren1kklYClaELJ1cm27RX6lyULw1qoGaUpF9leuK0/cJ33GRv3nVg6M7ElRM9e90kTdwZ2r1+pTbZs19nxRT/IXLlrL1XW6IXdHz31b5zE4oMb7+0VW9A7U5Xbn36Hr3/osSMDQ+s9pv6rPz26ItOxZtcvOHqnYnK9MRp+yebrO5n/TS4/5sj/5BkjLHkoTNXK7xy9cwh57+vnBggqa/894X/XERS9exPX92+epmU/kef3j/u7vDx8Z/rDfBelJnGW4PJu7d2efataSC6+xusQxPTlcm7w0e7d7aRJP3x9serDeoyaGBCaj0lOh5Ze/rCkNou0Ok8Xc56HnuREuNXrw8VDrudj8TB05+JBB7bt4kmybtXTeM12w+6U11i+mvRqU+GTaliLLFl35tjk3+68u6rpGf40LHz39BUeZuR6DpFpvNeeusl53pfe/+6lAnUTDL5EfrUDyT1H59VpidO9uw213xtu3tOSWPnWdDgzo6VorL2zN7eK18xtSH0ZpNiwU8d2Ob8+BebXvqjIVWda7tGdb/vPzpAryRuGoicTy5O/2ZQSD6+/+lHoYEPQd8pGrk+sPOvVhs6PImu/Dm6cdM1oIP1h5dv887dGvc6tu8ZkYrCl7VUkDL03YHbQgRTqky/S4eKlwaMMcbafuiOZ7766Ojz0MBMqFfrKsNDF7QyJNrXfEZq6KZrQO+6ckDTXvR3kwaJw4Wv6qVqPmkgOkWCtuSyN96/LHVcoYGE/3ODN0gpqTFy/XLX5rVSdtNeR9M18D2gaS/Ni3cq5BWGB0GDyvTI85pZoMSTO/55lMxnQAOJOo/Pntl3zPDHyrXCv6ZIp5yWj/hpYHwKHiBVMdHgmx+Rt7N8zluZnvi3/dvVsdwGq1cM4aCBRB0NHup4+ivjIwI+eOYXosve1fuh+L3pGpBePku0r/e2UKa9bm9b/rD4XRraai83zhp89dHR72/pEf3OeuetDF04TV8BZozRaS5oIFH/ZYrdB39t9IB/80yHI4Knuq2ngaeABtFg8EQPuWt0XOuz11TPlsfE7yue3DfO/YmzBlMHt69Zv+dw3fO+sedHV9x3XtQpPlFVQQOJ+hok2jvPGl/eqmpAphc5r6+BpwSIu3uvPPiXHbU5eqqB9Dx735Hz4k8+e312+iAZwCT+/s3fe32uFPI//7A2dI6vBsOfnFrkPbXPTNGmfcfoZTovODo5IEZ60EAi0Kt1ifbOt3WPya6c6Ekw1pZcWfB6IibmGWOJ9tWX70yMDV/dle1y3weu9Fq1R3KLVm67NXl/4s61LatStFhIj8/O5bsStWN2fjA4zHlleOh36xZ/q50YsjS969bdSXen0a61neSQyR/3vDV8d5JzPjH29aE9f/OcfZZcVCMaeJupRScv3Zq8e6t7685P//f/6uX8H6zvLaHXa1pvIF7doxv4Tpg6z8vl60ou3nTL7d9OjQ8+Rvbf9tOTf5qe/K8j3b9459N6yX4wCfqGKWOJtZu7Bq7ddN4mmhj7+q2eHycZS63KXr4pV/fOW+zMQ7K3/5rYwH0z2cPK9Vt/QErGw8s3X68VaM75vTf2/ECZq02+cuL93cqyRlFY75W/kOxykZ76yS9TLE3vGp68z2svX1T58+w/jpE3i6bGh55aLC0jS+z12KVBu/rs+1t+Nuy53srYyM3j9ovLqu8+1Opy5WWKh/7l5MdOmtx2uO2HXa8P353k/P75vpeTjCXaU//+0Rfk4FOH9zwl5Ujn2r0j5nHgg02dCdOdB96emK5M3h358Ff/8bdb/vrbixdWC1Fy4RMbdxw/e8n0jt3ozcvbnljVxhhjbaue2PzBpRvSBiPXB9wNEkseeezAkTMT039Q1ul65vs5vz/w7i+f+N53nL2Wrdrw3qUbnI/uXbty+YrHdz733GtvHv/95Wv/MzJG01SZnjjX95q7l5Ny68LQMN1GfbWOMcZYxjb8TvsQ98o3Xti6YUF7grHEslXrDiuT9FLG1F2LbKCaFbpX6xhzO5+9VvbXn98eHrr0s64dyzoWMMYWdCxx3q5TUnLvPfsFd5tl1v7Do63qAEdkCgA4NACAQwMAODQAgEMDADg0AIBDAwA4NACAQwMAODQAgEMDADg0AIBDAwA4NACAQwMAODQAgEMDADg0AIBDAwA4NACAQwMAODQAgEMDADg0AIBDAwA4NACAQwMAODQAgEMDADg0AID7aPABaA02btwYZYGLJ34aRJkOMFdAAw4NADTgQTTYOAOacpAWJIJ8o6eYzQI2PwikQcNHR143RgT5hltDgQZxBBpEDDSII9AgYqBBHIEGEQMN4gg0iJigGtAvB6fSuT79B4NZvr9kOki5WEjpNiNHThWK5eZf4jzEt4yWc+mU+P757Jyi5QjVGpQy5AP0zn9pgc5bGUeSsvkgrgyeL2xzXsqSvYBPGS3159VPlDf3FC1IaA1IuZc14G7VLlTRatBt2xmvLZyXLCs/swt5oPApo3krY1mW2vA28RQtSJM1cJpsUVcZNCg4VRptWKABxVRGy8VCOp0r81KGsczMcgwaUJqugdM1qvbyTRpwt91wd6calDK1sUZVp1J/nrFUoVjMpVOi3+X0wbzdA0dC5nVs/mEqowU7l6vlntwvcvtL8lCNjMpqoy9oQGm+BrR8+2jgbTdqGuStjFvPVYci5O6mCsWyuKn5/pJ3vFjOpdPubdanbb5gKKOljFv0nUygqju/OJdcsHOixLsNCOdVT4wNdSszZ62BOEIqnSsrnSJR1p077bYGahEv59IpRxu1Lpxht2EO0ZbRUn+eXFE5l07R8RUt4lQJt82UmwhoQJmbsYHY2h0k2FKnKJXOlUlNH1CD1IMy3aTL/Fp/j0CnmKXsqt6CvJXR9g+hAWVOZooK6i5uPSd1csJpMPNpxJigzbe0LLk0f82l3qPzI+lk1jlFK9NMDZz2l2Z6EA1oUab/pt3fIBoo/YSSPW9HyUq+lXPplGEYphkDUKRRRKm/z9RfbWWa+xRZfgwsHYT0U+XHZ6JTJE6USmezcjcgVSheFIfI2X2in0BH1YZTzCe8+VYil1wTm3b6c3bBe+3V20RGxm6muPkMDSh4pyiONJBvajNbLhb6zHNluDUUaBBHwueb+qJRudvq9pkwwK2hQIM40lhr4O1B1nlPEbeGAg3iCF60jhhoEEegQcRAgzgCDSKmvgYBAp/50ZSDtCAR5JtzCmjAEa4LQAMODQA04IhaF08iyDd0iigYIseRCPINt4YCDeIINIgYaBBHoEHEQIM4Ag0iBhrEEWgQMWE1kJfA+uOT1+ViIdV4mLpZXHGvrmmOPpyeKd/yVkZdR0FWaIRYgwoNKKFXn4XKbp+8VpeqBaaajNkMPCGvBY3YBF2+ibXIHg1opJaCnWvKrWlBQneKmpTXpQzLWLq6LRizHX/F8/q+8w6zv7EFu7uJnpjyTV1vTZcal4uFVOD8hAaUudHACTvldD8aKs2RakCCZRi2nlEHT0MoDWhQs+CtKzSgzIkGIq4WXVBfRRugjvzJ6Q71Cw2c7W27m2xcW5Wb7y+R/2ZKJMyJiPbFNCHu/FoDqS8urdLWJYC7V9rtnC7fXxIhjS9qYhSE0MAbzyYbvGKABpQ50IBWWjS2AldCjNCwU7TG7bNzzu9i+4wnzBGNWpUSvoliTS/BsGBXHRvUAsKJ44gOiRI4Q0pA0XVPbCMqAjnIik++cb0GYt1ZuOYIGlDmQIO8lRH9GTUIoSkWCw07RfXwbu+pmx1E0E+RbOpewbZ1NagcG0vEWpVDwLFMyZsGQwKkdk/TDNbNN27QIG9lXdNCmAANKFFroCyZpX0Jzo0aGD+toGqgLV6kZShZVt6tyMu23adLuOlTGqWMrqhJGugSIJd70u5pBrXBNaCn08b3NQENKFFrQDsVDlI5NmggFSM/DQzJq5ZsJ16VU54uGkOY+GigGZpLGugSoK/+DR89Ca6BlE4azLgO0IASWoO8lWlYA8OMnueRnKlTRANli46HOzygNbQn9j/t+hfsXCqd7a5W/6UMY+l0zlB3Gjst0mCmz7bLpKnps+2yPgFqpyhLxg9BNVDrezpThAnThmnk8Zl3tOcHPYg2wqZ0TGfCx92GBqgrcBKnLWfbGe8QmR6T9ruosXREwc3BPb1PkTWlioaLk8YMyvcEajGJq4dz40x2W1ntl+DMme8ZrqgxM02pNQENKHinKI7gnaKIgQZxBBpEDDSII9AgYqBBHIEGEQMN4gg0iBhoEEegQcQgal1MiSDfnFNAA45wXQAacGgAoAFH1Lp4EkG+oVNEwRA5jkSQb7g1FGgQR6BBxECDOAINIgYaxBFoEDHQII5Ag4hpcL1BwOAo3oOoC3nrH0q7+jY4Ugi6psZ00a+mbwq6zK+tN5BOKhYhhYp9Bg0owTWoLZiiC8H8UfNaWqPoHGqWCpNLnfXvDVFVOjIN8lbWWVfkiK2LshHuMqEBJagGzhJe949Bc7yuBmGDojaEaWHxDImuNZCiyJB1sJ4QAaGihkEDSoNjA9MKxroHUVesa8PTNpV5r4GEyEOl3IdIEjSgNKZBOZdONaVTJDXxagg6bSdKWnfrH+zEXwPtwmV35Xu15+OEclGi6Dllrk8JxVVdHJyzC3nLEukhK4Y9W6bSuaKbBpHIunWQs6W0uhoaNEwjGpSLhXSwboxWA9MQWQ1B52xMSyeNjigixtHtTcFRDIWj9idRpCTT3FSlRJA57zL8WlQ8sb2THhpFgjaeeSvj7CXEIEEgq9v7ltFaVDx6Xq6xwg9oQGlEAzFcq0vA1oAGo5ViXniLvtrxlcPL6UJm1O8UkeioIgCMGgGSe6tbT9UriqB6CT5dFxrths6J+WR+wc55C7o0/4axQSM0Eq4r+LRjkLEB7Rf5aGAY/wXpntXvFGWsvBITKZwGUmQxOrOpXFRtgiGsBqX+vI/PAQds3PcUrUk4DfxvQ5CDNKyBIWJckOGvZptyNY603MmZWWvgSbkYIShxWmvpCaVBuVjImkt52Acs0IASQgMpfH6QD1vU1UCKxqzVgPawyZ0ud1vdZdeifC00nRqaV53eFf2rWlGmxwmugQi/JU5BawoxlhXjAe4tr8E1kMZjpf68ErELEa0bJ6gG6tA2yGR/kKfI3oGBp4OrzgvpIsZ50qYLkKpBJF4c0Pn2jpSwi2QeyfmogvcsJeUXXurPp9NpNYvU2HJ0iHzRe+3KQxv1KpyD0LmscEADCt4piiN4pyhioEEcgQYRAw3iCDSIGGgQR6BBxECDOAINIgYaxBFoEDGIWhdTIsg35xTQgCNcF4AGHBoAaMARtS6eRJBv6BRRMESOIxHkG24NBRrEEWgQMdAgjkCDiIEGcQQaRAw0iCPQIGLmPGrdrIZmqQ9Zb6B9ZV+kuboEgi509C4h0i6OaxBDGa1loLrYwxs6oOFTtCjBNagFRKCLs/xR85oWHXfp2Ryb4JMMKTSG+U/VAjqrGpiX+zmrn7H6rHGCalAu0jzWBomofxBuiDvU1NCioSkXC5ZlpTQRfkoZlrHM69yjbQ1Klj4ZDYb9gwaUBuMU+awN9z9IPDXotgtq8Dxn7bVPuIcoNRALTXVxfMO1A6ZTtDKhNQgeq0t7EFp0nO6sNlAFveU0jBcJMpcpeVf00x1pbCxtWDjpirr18SPSTlAtooEnyIWvBuo4ylnOb5MgXyHyTSQ15ckxJxRAtxo5ry7QgBJOA23sRB98ajXtQWh0Bhq4xRseQiqLtlic7hQ4Ed7CJywcxQ3W4ol8IVo8okE1AFEADWrjKDflFzMzyzeaXinSXjqdFcN3DJEbo5FOUfBo7D6tgRRYhXOuBhQi8Uvon2hvuGzbfWra6MSONgIKRWhAgx/mrYz4R9jWQI3ikXNjIjUlwGipP68NYaY0aI2fotVoPJTvDDXgmljWckGh9Tf1x4mVku8v0YjnovWghSOUBkKwIun4NaaBbjjRNA1Ev1SJERYidjc0oDQe2L0ZEa1pxCuuTnoos6upQrHcZ9tlt3SK4Fy0QMxAg6pL6XSahtxqQAPd1E0zWwPaMOoCSM70FK3GnES0rpVFacznjfMu3dRyLp3KWlYfGQDk3B4R7c/QyZOAGmS9BZ1uRo8gBcDzXospoJ34SEezNKARrT1x/gz6NXCKliP4125q8zCN5rXnKbIac04EP1S3IVt6ip0kibNX1rLkINdKWDhxTDWYnKhr6acPGEsVikVxioyV984WyOHrlM8maOLbBc437s062WSRklBPD6ABBe8UxRG8UxQx0CCOQIOIgQZxBBpEDDSII9AgYqBBHIEGEQMN4gg0iBhErYspEeSbcwpowBGuC0ADDg0ANOA+GgSLfQYeBKIscPHEqAEArQM0AAAaAAANAODQAAAODQDg0AAADg0A4NAAAA4NAOCc/z8vpzpWwiIIpwAAAABJRU5ErkJggg==" alt="img"></p>
+<h3 id="四、正式项目开发中的困境"><a href="#四、正式项目开发中的困境" class="headerlink" title="四、正式项目开发中的困境"></a>四、正式项目开发中的困境</h3><p>假设一个在一个真实的项目环境里面，你和甲一起开发整个项目， 其中甲负责EF数据访问部分，你负责MVC逻辑和显示部分。</p>
+<p>在真实项目中当然远远不止Student一个表，可能有上百个，还有很多的存储过程。</p>
+<p>你在开发的过程中，常常运行遇到数据层的bug，不断抛出异常，导致你的开发无法顺利进行下去。你常常需要停下来，调试到数据层，找到bug原因，然后告诉甲赶快改好，你还等着开发页面上的一个ajax特效。</p>
+<p>随着不断的出现的数据层bug, 眼看项目结束日期越来越近，你已经焦头烂额，但是却还有很多功能没有完成，老板也开始怀疑你的能力……….</p>
+<h3 id="五、解耦合，脱离数据层"><a href="#五、解耦合，脱离数据层" class="headerlink" title="五、解耦合，脱离数据层"></a>五、解耦合，脱离数据层</h3><p>你对甲已经忍无可忍了，你的命运为什么要掌握在甲的手中，要想办法摆脱甲。</p>
+<p>好吧，我要依赖在抽象的接口上，而不是直接依赖甲开发的数据层。</p>
+<p>首先我们可以创建一个接口:</p>
+<pre><code> public interface IStudentRepository
+ &#123;
+    IEnumerable&lt;Student&gt; GetStudents();
+ &#125;
+</code></pre>
+<p>然后, 创建一个集成这个接口的类，这个类并不访问数据库，但是提供我们开发页面所需的数据。</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>  public class StubStudentRepository:IStudentRepository
+  &#123;
+        public IEnumerable&lt;Student&gt; GetStudents()
+        &#123;
+            return new[]
+                       &#123;
+                           new Student &#123;Id = 1, Name = &quot;Sam&quot;, Age = 14&#125;
+                       &#125;;
+        &#125;
+  &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>好了，一切都准备好了， 开始改造我们的Controller代码</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>  public class HomeController : Controller
+    &#123;
+        public ActionResult Index()
+        &#123;
+            IStudentRepository studentRepository = new StubStudentRepository();
+            //IStudentRepository studentRepository = new StudentRepository();//注释掉访问数据层的代码，用Stub类代替
+            var students = studentRepository.GetStudents();
+            
+            return View(students);
+        &#125;
+    &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>由于，我们写的Stub类，不访问数据库，而且不需要有复杂的逻辑，只是提供我们Controller代码运行所需要的基本数据就可以了。这样你的开发就依赖在你自己写的更加可靠的Stub类上了。</p>
+<p>最后，你叫来甲，对他说:哥们， 我为我们之间的依赖，创建好了接口，你以后的数据访问代码，都从这个接口继承吧。</p>
+<p>从此，这个项目开发变成了另外一种样子，你再也不抱怨甲总是写不稳定的代码了（因为你不依赖他了），你总是能通过写一些Stub类，返回不同的值，来测试你的界面代码。</p>
+<h3 id="六、实例化，可恶的实例化"><a href="#六、实例化，可恶的实例化" class="headerlink" title="六、实例化，可恶的实例化"></a>六、实例化，可恶的实例化</h3><p>在Controller的代码中，我们有下面2行代码，如果是发布的情况下，我们使用下面一行，开发过程中，使用上面一行。</p>
+<p>但是，这个项目代码太多了，难道到发布的时候，要我一个个找出来，都换成真实的甲的数据库访问层的类的实例吗?</p>
+<pre><code>
+ IStudentRepository studentRepository = new StubStudentRepository();
+ //IStudentRepository studentRepository = new StudentRepository();//注释掉访问数据层的代码，用Stub类代替
+</code></pre>
+<h3 id="七、使用Autofac依赖注入"><a href="#七、使用Autofac依赖注入" class="headerlink" title="七、使用Autofac依赖注入"></a>七、使用Autofac依赖注入</h3><p> 这个时候，就是Autofac大显身手的时候了，</p>
+<p>首先，我们改造Controller代码：</p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>   public class HomeController : Controller
+    &#123;
+        private readonly IStudentRepository _studentRepository;
+        //由构造函数来提供Controller的依赖IStudentRepository
+        public HomeController(IStudentRepository studentRepository)
+        &#123;
+            _studentRepository = studentRepository;
+        &#125;
+
+        public ActionResult Index()
+        &#123;
+            var students = _studentRepository.GetStudents();
+            
+            return View(students);
+        &#125;
+    &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>然后, 修改Global.asax, </p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code>public class MvcApplication : System.Web.HttpApplication
+&#123;
+        protected void Application_Start()
+        &#123;
+            //Autofac初始化过程
+            var builder = new ContainerBuilder();
+            builder.RegisterControllers(typeof(MvcApplication).Assembly);//注册所有的Controller
+            //开发环境下，使用Stub类
+            builder.RegisterAssemblyTypes(typeof (MvcApplication).Assembly).Where(
+                t =&gt; t.Name.EndsWith(&quot;Repository&quot;) &amp;&amp; t.Name.StartsWith(&quot;Stub&quot;)).AsImplementedInterfaces();
+            //发布环境下，使用真实的数据访问层
+            //builder.RegisterAssemblyTypes(typeof(MvcApplication).Assembly).Where(
+            //   t =&gt; t.Name.EndsWith(&quot;Repository&quot;)).AsImplementedInterfaces();
+
+            var container = builder.Build();
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
+
+            //其它的初始化过程
+            ........
+        &#125;
+&#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>当我们使用下面这行代码的时候，所有的controller就都是使用Stub类的实例</p>
+<pre><code>//开发环境下，使用Stub类
+builder.RegisterAssemblyTypes(typeof (MvcApplication).Assembly).Where(
+             t =&gt; t.Name.EndsWith(&quot;Repository&quot;) &amp;&amp; t.Name.StartsWith(&quot;Stub&quot;)).AsImplementedInterfaces();
+</code></pre>
+<p>当我们使用下面代码的时候，所有的controller就都用的是实际的数据访问类实例。</p>
+<pre><code>//发布环境下，使用真实的数据访问层
+builder.RegisterAssemblyTypes(typeof(MvcApplication).Assembly).Where(t =&gt; t.Name.EndsWith(&quot;Repository&quot;)).AsImplementedInterfaces();
+</code></pre>
+<h1 id="AutoFac使用"><a href="#AutoFac使用" class="headerlink" title="AutoFac使用"></a>AutoFac使用</h1><h2 id="AutoFac使用方法总结-Part-I"><a href="#AutoFac使用方法总结-Part-I" class="headerlink" title="AutoFac使用方法总结:Part I"></a>AutoFac使用方法总结:Part I</h2><p>​                Apr 6th, 2012                 | <a target="_blank" rel="noopener" href="http://niuyi.github.io/blog/2012/04/06/autofac-by-unit-test/#disqus_thread">Comments</a>              </p>
+<p>AutoFac是.net平台下的IOC容器产品，它可以管理类之间的复杂的依赖关系。在使用方面主要是register和resolve两类操作。 这篇文章用单元测试的形式列举了AutoFac的常用使用方法：</p>
+<h3 id="注册部分"><a href="#注册部分" class="headerlink" title="注册部分"></a>注册部分</h3><p>使用RegisterType进行注册</p>
+<pre><code>  [Fact]    public void can_resolve_myclass()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyClass&gt;();         IContainer container = builder.Build();        var myClass = container.Resolve&lt;MyClass&gt;();        Assert.NotNull(myClass);    &#125; 
+</code></pre>
+<p>注册为接口</p>
+<pre><code>  [Fact]    public void register_as_interface()    &#123;        var builder = new ContainerBuilder();        builder.Register(c =&gt; new MyClass()).As&lt;MyInterface&gt;();         IContainer container = builder.Build();        Assert.NotNull(container.Resolve&lt;MyInterface&gt;());        Assert.Throws(typeof (ComponentNotRegisteredException), () =&gt; container.Resolve&lt;MyClass&gt;());    &#125; 
+</code></pre>
+<p>使用lambda表达式进行注册</p>
+<pre><code>  [Fact]    public void can_register_with_lambda()    &#123;        var builder = new ContainerBuilder();        builder.Register(c =&gt; new MyClass());         IContainer container = builder.Build();        var myClass = container.Resolve&lt;MyClass&gt;();        Assert.NotNull(myClass);    &#125; 
+</code></pre>
+<p>带构造参数的注册</p>
+<pre><code>  [Fact]    public void register_with_parameter()    &#123;        var builder = new ContainerBuilder();        builder.Register(c =&gt; new MyParameter());        builder.Register(c =&gt; new MyClass(c.Resolve&lt;MyParameter&gt;()));        IContainer container = builder.Build();        Assert.NotNull(container.Resolve&lt;MyClass&gt;());    &#125;   
+</code></pre>
+<p>带属性赋值的注册</p>
+<pre><code>  [Fact]    public void register_with_property()    &#123;        var builder = new ContainerBuilder();        builder.Register(c =&gt; new MyProperty());        builder.Register(            c =&gt; new MyClass()                     &#123;                         Property = c.Resolve&lt;MyProperty&gt;()                     &#125;);        IContainer container = builder.Build();        var myClass = container.Resolve&lt;MyClass&gt;();        Assert.NotNull(myClass);        Assert.NotNull(myClass.Property);    &#125;       
+</code></pre>
+<p>Autofac分离了类的创建和使用，这样可以根据输入参数（NamedParameter）动态的选择实现类。</p>
+<pre><code>  [Fact]    public void select_an_implementer_based_on_parameter_value()    &#123;        var builder = new ContainerBuilder();        builder.Register&lt;IRepository&gt;((c, p) =&gt;                             &#123;                                 var type = p.Named&lt;string&gt;(&quot;type&quot;);                                 if (type == &quot;test&quot;)                                 &#123;                                     return new TestRepository();                                 &#125;                                 else                                 &#123;                                     return new DbRepository();                                 &#125;                             &#125;).As&lt;IRepository&gt;();         IContainer container = builder.Build();        var repository = container.Resolve&lt;IRepository&gt;(new NamedParameter(&quot;type&quot;, &quot;test&quot;));        Assert.Equal(typeof(TestRepository),repository.GetType());    &#125; 
+</code></pre>
+<p>AufoFac也可以用一个实例来注册，比如用在单例模式情况下：</p>
+<pre><code>  [Fact]    public void register_with_instance()    &#123;        var builder = new ContainerBuilder();        builder.RegisterInstance(MyInstance.Instance).ExternallyOwned();        IContainer container = builder.Build();        var myInstance1 = container.Resolve&lt;MyInstance&gt;();        var myInstance2 = container.Resolve&lt;MyInstance&gt;();        Assert.Equal(myInstance1,myInstance2);    &#125; 
+</code></pre>
+<p>注册open generic类型</p>
+<pre><code>  [Fact]    public void register_open_generic()    &#123;        var builder = new ContainerBuilder();        builder.RegisterGeneric(typeof (MyList&lt;&gt;));        IContainer container = builder.Build();        var myIntList = container.Resolve&lt;MyList&lt;int&gt;&gt;();        Assert.NotNull(myIntList);        var myStringList = container.Resolve&lt;MyList&lt;string&gt;&gt;();        Assert.NotNull(myStringList);    &#125; 
+</code></pre>
+<p>对于同一个接口，后面注册的实现会覆盖之前的实现</p>
+<pre><code>  [Fact]    public void register_order()    &#123;        var containerBuilder = new ContainerBuilder();        containerBuilder.RegisterType&lt;DbRepository&gt;().As&lt;IRepository&gt;();        containerBuilder.RegisterType&lt;TestRepository&gt;().As&lt;IRepository&gt;();         IContainer container = containerBuilder.Build();        var repository = container.Resolve&lt;IRepository&gt;();        Assert.Equal(typeof(TestRepository), repository.GetType());    &#125; 
+</code></pre>
+<p>如果不想覆盖的话，可以用PreserveExistingDefaults，这样会保留原来注册的实现。</p>
+<pre><code>  [Fact]    public void register_order_defaults()    &#123;        var containerBuilder = new ContainerBuilder();        containerBuilder.RegisterType&lt;DbRepository&gt;().As&lt;IRepository&gt;();        containerBuilder.RegisterType&lt;TestRepository&gt;().As&lt;IRepository&gt;().PreserveExistingDefaults();         IContainer container = containerBuilder.Build();        var repository = container.Resolve&lt;IRepository&gt;();        Assert.Equal(typeof (DbRepository), repository.GetType());    &#125; 
+</code></pre>
+<p>可以用Name来区分不同的实现，代替As方法</p>
+<pre><code>  [Fact]    public void register_with_name()    &#123;        var containerBuilder = new ContainerBuilder();        containerBuilder.RegisterType&lt;DbRepository&gt;().Named&lt;IRepository&gt;(&quot;DB&quot;);        containerBuilder.RegisterType&lt;TestRepository&gt;().Named&lt;IRepository&gt;(&quot;Test&quot;);         IContainer container = containerBuilder.Build();        var dbRepository = container.ResolveNamed&lt;IRepository&gt;(&quot;DB&quot;);        var testRepository = container.ResolveNamed&lt;IRepository&gt;(&quot;Test&quot;);        Assert.Equal(typeof(DbRepository), dbRepository.GetType());        Assert.Equal(typeof(TestRepository), testRepository.GetType());    &#125; 
+</code></pre>
+<p>如果一个类有多个构造函数的话，可以在注册时候选择不同的构造函数</p>
+<pre><code>  [Fact]    public void choose_constructors()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyParameter&gt;();        builder.RegisterType&lt;MyClass&gt;().UsingConstructor(typeof (MyParameter));        IContainer container = builder.Build();        var myClass = container.Resolve&lt;MyClass&gt;();        Assert.NotNull(myClass);    &#125; 
+</code></pre>
+<p>AutoFac可以注册一个Assemble下所有的类，当然，也可以根据类型进行筛选</p>
+<pre><code>  [Fact]    public void register_assembly()    &#123;        var builder = new ContainerBuilder();        builder.RegisterAssemblyTypes(Assembly.GetExecutingAssembly()).            Where(t =&gt; t.Name.EndsWith(&quot;Repository&quot;)).            AsImplementedInterfaces();         IContainer container = builder.Build();        var repository = container.Resolve&lt;IRepository&gt;();        Assert.NotNull(repository);    &#125; 
+</code></pre>
+<p>​         Posted by Niu Yi               Apr 6th, 2012             <a target="_blank" rel="noopener" href="http://niuyi.github.io/blog/categories/c-/">c#</a>        </p>
+<h2 id="AutoFac使用方法总结-Part-II"><a href="#AutoFac使用方法总结-Part-II" class="headerlink" title="AutoFac使用方法总结:Part II"></a>AutoFac使用方法总结:Part II</h2><p>​                Apr 6th, 2012                 | <a target="_blank" rel="noopener" href="http://niuyi.github.io/blog/2012/04/06/autofac-by-unit-test-2/#disqus_thread">Comments</a>              </p>
+<h3 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h3><p>AutoFac支持三种事件：OnActivating，OnActivated，OnRelease。OnActivating在注册组件使用之前会被调用，此时可以替换实现类或者进行一些其他的初始化工作，OnActivated在实例化之后会被调用，OnRelease在组件释放之后会被调用。</p>
+<pre><code>   public class MyEvent : IDisposable  &#123;      public MyEvent(string input)      &#123;          Console.WriteLine(input);      &#125;       public MyEvent()      &#123;          Console.WriteLine(&quot;Init&quot;);      &#125;       public void Dispose()      &#123;          Console.WriteLine(&quot;Dispose&quot;);      &#125;  &#125; 
+</code></pre>
+<pre><code>   public void test_event()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyEvent&gt;().            OnActivating(e =&gt; e.ReplaceInstance(new MyEvent(&quot;input&quot;))).            OnActivated(e =&gt; Console.WriteLine(&quot;OnActivated&quot;)).            OnRelease(e =&gt; Console.WriteLine(&quot;OnRelease&quot;));         using (IContainer container = builder.Build())        &#123;            using (var myEvent = container.Resolve&lt;MyEvent&gt;())            &#123;            &#125;        &#125;    &#125; 
+</code></pre>
+<p>此时的输出为：</p>
+<pre><code>Init input OnActivated Dispose OnRelease 
+</code></pre>
+<p>利用事件可以在构造对象之后调用对象的方法：</p>
+<pre><code>  [Fact]    public void call_method_when_init()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyClassWithMethod&gt;().OnActivating(e =&gt; e.Instance.Add(5));        IContainer container = builder.Build();        Assert.Equal(5, container.Resolve&lt;MyClassWithMethod&gt;().Index);    &#125;  public class MyClassWithMethod  &#123;      public int Index &#123; get; set; &#125;      public void Add(int value)      &#123;          Index = Index + value;      &#125;  &#125; 
+</code></pre>
+<h3 id="循环依赖"><a href="#循环依赖" class="headerlink" title="循环依赖"></a>循环依赖</h3><p>循环依赖是个比较头疼的问题，在AutoFac中很多循环依赖的场景不被支持：</p>
+<pre><code>   public class ClassA  &#123;      private readonly ClassB b;       public ClassA(ClassB b)      &#123;          this.b = b;      &#125;  &#125;   public class ClassB  &#123;      public ClassA A &#123; get; set; &#125;        &#125;  [Fact]    public void circular_dependencies_exception()    &#123;        var builder = new ContainerBuilder();        builder.Register(c =&gt; new ClassB()&#123;A = c.Resolve&lt;ClassA&gt;()&#125;);        builder.Register(c =&gt; new ClassA(c.Resolve&lt;ClassB&gt;()));        IContainer container = builder.Build();        Assert.Throws(typeof(DependencyResolutionException), ()=&gt;container.Resolve&lt;ClassA&gt;());    &#125; 
+</code></pre>
+<p>可以部分的解决这种循环依赖的问题，前提是ClassA和ClassB的生命周期不能都是InstancePerDependency</p>
+<pre><code>  [Fact]    public void circular_dependencies_ok()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;ClassB&gt;().            PropertiesAutowired(PropertyWiringFlags.AllowCircularDependencies).SingleInstance();        builder.Register(c =&gt; new ClassA(c.Resolve&lt;ClassB&gt;()));        IContainer container = builder.Build();        Assert.NotNull(container.Resolve&lt;ClassA&gt;());        Assert.NotNull(container.Resolve&lt;ClassB&gt;());        Assert.NotNull(container.Resolve&lt;ClassB&gt;().A);    &#125; 
+</code></pre>
+<h2 id="AutoFac使用方法总结-Part-III"><a href="#AutoFac使用方法总结-Part-III" class="headerlink" title="AutoFac使用方法总结:Part III"></a>AutoFac使用方法总结:Part III</h2><h3 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h3><p>AutoFac中的生命周期概念非常重要，AutoFac也提供了强大的生命周期管理的能力。</p>
+<p>AutoFac定义了三种生命周期：</p>
+<pre><code>Per Dependency
+Single Instance
+Per Lifetime Scope
+</code></pre>
+<p>Per Dependency为默认的生命周期，也被称为’transient’或’factory’，其实就是每次请求都创建一个新的对象</p>
+<pre><code>  [Fact]    public void per_dependency()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyClass&gt;().InstancePerDependency();        IContainer container = builder.Build();        var myClass1 = container.Resolve&lt;MyClass&gt;();        var myClass2 = container.Resolve&lt;MyClass&gt;();        Assert.NotEqual(myClass1,myClass2);    &#125; 
+</code></pre>
+<p>Single Instance也很好理解，就是每次都用同一个对象</p>
+<pre><code>  [Fact]    public void single_instance()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyClass&gt;().SingleInstance();              IContainer container = builder.Build();        var myClass1 = container.Resolve&lt;MyClass&gt;();        var myClass2 = container.Resolve&lt;MyClass&gt;();              Assert.Equal(myClass1,myClass2);    &#125; 
+</code></pre>
+<p>Per Lifetime Scope，同一个Lifetime生成的对象是同一个实例</p>
+<pre><code>  [Fact]    public void per_lifetime_scope()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;MyClass&gt;().InstancePerLifetimeScope();              IContainer container = builder.Build();        var myClass1 = container.Resolve&lt;MyClass&gt;();        var myClass2 = container.Resolve&lt;MyClass&gt;();              ILifetimeScope inner = container.BeginLifetimeScope();        var myClass3 = inner.Resolve&lt;MyClass&gt;();        var myClass4 = inner.Resolve&lt;MyClass&gt;();              Assert.Equal(myClass1,myClass2);        Assert.NotEqual(myClass2,myClass3);        Assert.Equal(myClass3,myClass4);    &#125; 
+</code></pre>
+<pre><code>   [Fact]    public void life_time_and_dispose()    &#123;        var builder = new ContainerBuilder();        builder.RegisterType&lt;Disposable&gt;();         using (IContainer container = builder.Build())        &#123;            var outInstance = container.Resolve&lt;Disposable&gt;(new NamedParameter(&quot;name&quot;, &quot;out&quot;));             using(var inner = container.BeginLifetimeScope())            &#123;                var inInstance = container.Resolve&lt;Disposable&gt;(new NamedParameter(&quot;name&quot;, &quot;in&quot;));            &#125;//inInstance dispose here        &#125;//out dispose here    &#125; 
+</code></pre>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/abp/li-jie-ioc-he-autofac/">https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/abp/li-jie-ioc-he-autofac/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/abp/">
+                                    <span class="chip bg-color">abp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/04/mysql/mysql-shi-yong-ji-qiao-hui-zong/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql使用技巧汇总">
+                        
+                        <span class="card-title">mysql使用技巧汇总</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            mysql使用技巧汇总
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mysql/" class="post-category">
+                                    mysql
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/03/abp/abp-ddd-jia-gou-she-ji/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="abp.vnext+ddd架构实战">
+                        
+                        <span class="card-title">abp.vnext+ddd架构实战</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            abp.vnext+ddd架构实战
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/abp/" class="post-category">
+                                    abp
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/abp/">
+                        <span class="chip bg-color">abp</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">260.6k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

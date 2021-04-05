@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-04-03T13:53:02.535Z</updated>
+  <updated>2021-04-05T09:34:34.210Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -17,24 +17,118 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>mangodb应用场景</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mangodb/mangdb-ying-yong-chang-jing/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mangodb/mangdb-ying-yong-chang-jing/</id>
+    <published>2021-04-05T10:25:00.000Z</published>
+    <updated>2021-04-05T09:34:34.210Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;传统数据库应对大数据量的使用方案&quot;&gt;&lt;a href=&quot;#传统数据库应对大数据量的使用方案&quot; class=&quot;headerlink&quot; title=&quot;传统数据库应对大数据量的使用方案&quot;&gt;&lt;/a&gt;传统数据库应对大数据量的使用方案&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="mangodb" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mangodb/"/>
+    
+    
+    <category term="mangodb" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mangodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sql优化总结</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/sql-you-hua/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/sql-you-hua/</id>
+    <published>2021-04-05T04:25:00.000Z</published>
+    <updated>2021-04-05T09:36:06.996Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;SQL优化总结&quot;&gt;&lt;a href=&quot;#SQL优化总结&quot; class=&quot;headerlink&quot; title=&quot;     SQL优化总结         &quot;&gt;&lt;/a&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="sql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/sql/"/>
+    
+    
+    <category term="sql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/sql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql使用技巧汇总</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/mysql/mysql-shi-yong-ji-qiao-hui-zong/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/mysql/mysql-shi-yong-ji-qiao-hui-zong/</id>
+    <published>2021-04-04T15:35:00.000Z</published>
+    <updated>2021-04-05T09:35:36.667Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mysql-数据优化&quot;&gt;&lt;a href=&quot;#mysql-数据优化&quot; class=&quot;headerlink&quot; title=&quot;mysql 数据优化&quot;&gt;&lt;/a&gt;mysql 数据优化&lt;/h1&gt;&lt;h2 id=&quot;数据库设计使用规范&quot;&gt;&lt;a href=&quot;#数据库设计使用规范&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>理解IOC和autoFac</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/abp/li-jie-ioc-he-autofac/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/04/abp/li-jie-ioc-he-autofac/</id>
+    <published>2021-04-04T10:25:00.000Z</published>
+    <updated>2021-04-04T05:59:46.435Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;IOC基础理解篇内容&quot;&gt;&lt;a href=&quot;#IOC基础理解篇内容&quot; class=&quot;headerlink&quot; title=&quot;IOC基础理解篇内容&quot;&gt;&lt;/a&gt;IOC基础理解篇内容&lt;/h1&gt;&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
+    
+    
+    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
+    
+  </entry>
+  
+  <entry>
     <title>abp.vnext+ddd架构实战</title>
     <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/03/abp/abp-ddd-jia-gou-she-ji/"/>
     <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/03/abp/abp-ddd-jia-gou-she-ji/</id>
     <published>2021-04-03T14:25:00.000Z</published>
-    <updated>2021-04-03T13:53:02.535Z</updated>
+    <updated>2021-04-04T13:18:50.020Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;领域层  专注于业务相关的对象和模型&lt;/p&gt;
-&lt;p&gt;应用层，解决不同用户之间调用领域模型&lt;/p&gt;
-&lt;p&gt;展现层&lt;/p&gt;
-&lt;p&gt;基础设施层&lt;/p&gt;
-&lt;p&gt;vnext &lt;/p&gt;
-&lt;p&gt;Domain 实体&lt;/p&gt;
-&lt;p&gt;Domain.shared </summary>
+    <summary type="html">&lt;h1 id=&quot;DDD&quot;&gt;&lt;a href=&quot;#DDD&quot; class=&quot;headerlink&quot; title=&quot;DDD&quot;&gt;&lt;/a&gt;DDD&lt;/h1&gt;&lt;p&gt;领域层 </summary>
         
       
     
@@ -91,11 +185,36 @@
   </entry>
   
   <entry>
-    <title>mysql使用技巧汇总</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-shi-yong-ji-qiao-hui-zong/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-shi-yong-ji-qiao-hui-zong/</id>
+    <title>数据库设计，查询规范</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-biao-she-ji-gui-fan/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-biao-she-ji-gui-fan/</id>
+    <published>2021-03-31T15:45:00.000Z</published>
+    <updated>2021-04-04T15:12:03.677Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;阿里巴巴MYSQL数据库设计，查询规范&quot;&gt;&lt;a href=&quot;#阿里巴巴MYSQL数据库设计，查询规范&quot; class=&quot;headerlink&quot; title=&quot;阿里巴巴MYSQL数据库设计，查询规范&quot;&gt;&lt;/a&gt;阿里巴巴MYSQL数据库设计，查询规范&lt;/h1&gt;&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql大量数据插入</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-da-shu-ju-cha-ru/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-da-shu-ju-cha-ru/</id>
     <published>2021-03-31T04:25:00.000Z</published>
-    <updated>2021-04-02T03:27:06.791Z</updated>
+    <updated>2021-04-05T09:35:28.869Z</updated>
     
     
       
@@ -109,10 +228,10 @@
     
     
     
-    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/blog/"/>
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
     
     
-    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/blog/"/>
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
     
   </entry>
   
@@ -145,17 +264,18 @@
   
   <entry>
     <title>centos安装使用教程</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/</id>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/</id>
     <published>2021-03-27T10:25:00.000Z</published>
-    <updated>2021-04-03T02:43:56.979Z</updated>
+    <updated>2021-04-03T02:40:59.560Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;h1 id=&quot;ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot;&gt;&lt;a href=&quot;#ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;ABP框架+.net</summary>
+    <summary type="html">&lt;p&gt;服务器信息CenterOS 8.1 64位&lt;/p&gt;
+&lt;h1 id=&quot;服务器-net-运行环境安装&quot;&gt;&lt;a href=&quot;#服务器-net-运行环境安装&quot; class=&quot;headerlink&quot; title=&quot;服务器.net 运行环境安装&quot;&gt;&lt;/a&gt;服务器.net</summary>
         
       
     
@@ -170,18 +290,17 @@
   
   <entry>
     <title>centos安装使用教程</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/</id>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/</id>
     <published>2021-03-27T10:25:00.000Z</published>
-    <updated>2021-04-03T02:40:59.560Z</updated>
+    <updated>2021-04-03T02:43:56.979Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;服务器信息CenterOS 8.1 64位&lt;/p&gt;
-&lt;h1 id=&quot;服务器-net-运行环境安装&quot;&gt;&lt;a href=&quot;#服务器-net-运行环境安装&quot; class=&quot;headerlink&quot; title=&quot;服务器.net 运行环境安装&quot;&gt;&lt;/a&gt;服务器.net</summary>
+    <summary type="html">&lt;h1 id=&quot;ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot;&gt;&lt;a href=&quot;#ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;ABP框架+.net</summary>
         
       
     
@@ -387,136 +506,6 @@
     
     
     <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构和算法--堆栈</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/kaikeba/suan-fa-lian-biao/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/kaikeba/suan-fa-lian-biao/</id>
-    <published>2021-03-22T14:00:00.000Z</published>
-    <updated>2021-03-22T12:13:43.155Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;数据结构和算法–堆栈&quot;&gt;&lt;a href=&quot;#数据结构和算法–堆栈&quot; class=&quot;headerlink&quot; title=&quot;数据结构和算法–堆栈&quot;&gt;&lt;/a&gt;数据结构和算法–堆栈&lt;/h1&gt;&lt;p&gt;[145] 二叉树的后序遍历&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;var</summary>
-        
-      
-    
-    
-    
-    <category term="数据结构和算法" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构和算法" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="leetcode" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>abp学习博客（2016收录）</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/2016abp-xue-xi-bo-ke-tkb-zhi-jian/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/22/abp/2016abp-xue-xi-bo-ke-tkb-zhi-jian/</id>
-    <published>2021-03-22T01:25:00.000Z</published>
-    <updated>2021-03-21T12:51:16.263Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;strong&gt;作者：&lt;a href=&quot;http://farb.cnblogs.com/&quot;&gt;tkb至简&lt;/a&gt;    来源：&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>低代码平台——可视化表单</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/20/kaikeba/biao-dan-she-ji-qi/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/20/kaikeba/biao-dan-she-ji-qi/</id>
-    <published>2021-03-20T12:00:00.000Z</published>
-    <updated>2021-03-20T16:10:23.737Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;低代码平台——可视化表单（Avue）&quot;&gt;&lt;a href=&quot;#低代码平台——可视化表单（Avue）&quot; class=&quot;headerlink&quot; title=&quot;低代码平台——可视化表单（Avue）&quot;&gt;&lt;/a&gt;低代码平台——可视化表单（Avue）&lt;/h1&gt;&lt;h2</summary>
-        
-      
-    
-    
-    
-    <category term="可视化" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
-    
-    <category term="低代码平台" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E4%BD%8E%E4%BB%A3%E7%A0%81%E5%B9%B3%E5%8F%B0/"/>
-    
-    <category term="可视化表单" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%8F%AF%E8%A7%86%E5%8C%96%E8%A1%A8%E5%8D%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>程序员的数学课</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/18/la-gou/math/cheng-xu-yuan-de-shu-xue-ke/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/18/la-gou/math/cheng-xu-yuan-de-shu-xue-ke/</id>
-    <published>2021-03-18T13:25:00.000Z</published>
-    <updated>2021-03-18T16:09:05.968Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;程序员的数学课-拉勾笔记&quot;&gt;&lt;a href=&quot;#程序员的数学课-拉勾笔记&quot; class=&quot;headerlink&quot; title=&quot;程序员的数学课(拉勾笔记)&quot;&gt;&lt;/a&gt;程序员的数学课(拉勾笔记)&lt;/h1&gt;&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="blog" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/blog/"/>
-    
-    
-    <category term="数学" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>前端工程化实战</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/18/ziliao/qianduan/qian-duan-gong-cheng-hua-shi-zhan/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/18/ziliao/qianduan/qian-duan-gong-cheng-hua-shi-zhan/</id>
-    <published>2021-03-18T13:25:00.000Z</published>
-    <updated>2021-03-16T16:34:48.890Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;前端工程化&quot;&gt;&lt;a href=&quot;#前端工程化&quot; class=&quot;headerlink&quot; title=&quot;前端工程化&quot;&gt;&lt;/a&gt;前端工程化&lt;/h1&gt;&lt;h2 id=&quot;前端工程化概念&quot;&gt;&lt;a href=&quot;#前端工程化概念&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="前端工程化实战" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96%E5%AE%9E%E6%88%98/"/>
-    
-    
-    <category term="前端工程化" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E5%8C%96/"/>
     
   </entry>
   

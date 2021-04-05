@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="mysql使用技巧汇总, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="keywords" content="sql优化总结, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
     <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>mysql使用技巧汇总 | IT 学习 资源</title>
+    <title>sql优化总结 | IT 学习 资源</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -324,12 +324,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">mysql使用技巧汇总</h1>
+                    <h1 class="description center-align post-title">sql优化总结</h1>
                 </div>
             </div>
         </div>
@@ -351,8 +351,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/blog/">
-                                <span class="chip bg-color">blog</span>
+                            <a href="/tags/sql/">
+                                <span class="chip bg-color">sql</span>
                             </a>
                         
                     </div>
@@ -363,8 +363,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/blog/" class="post-category">
-                                blog
+                            <a href="/categories/sql/" class="post-category">
+                                sql
                             </a>
                         
                     </div>
@@ -376,28 +376,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-31
+                    2021-04-05
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-02
+                    2021-04-05
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    974
+                    6.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    24 分
                 </div>
                 
 
@@ -417,18 +417,112 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>mysql&gt; select version();</p>
-<p>把Excel表格通过MySql Workbench导入数据库表中的使用总结</p>
-<p>今天接到一个任务，把excel表中的数据导入到mysql数据库中，通过半个多小时的鼓捣，基本上摸清了里面的门道。<br>首先，准备所要导入的ecxel文件，需要把excel另存为*.csv类型的文件，然后通过notepad转换编码格式为utf-8类型，注意要把表头删去，否则会出问题。<br>这里写图片描述<br>其次，导入所转换的文件：<br>在workbench中有两种方式导入excel表：<br>（1）这里写图片描述<br>点击箭头所指的按钮，选择.csv文件（把excel另存为子类型的文件），确定即可完成导入；不过这种方法有一个缺陷，它导入时是按照表中的字段顺序导入，所有excel字段需要与表中的字段顺序完全一直，如果没有则在excel中插入空列即可；<br>（2）第二种方式较为复杂，但是可以实现手动对应：<br>选择需要导入数据的表单击右键，如图所示：<br>这里写图片描述<br>选择要已准备的导入文件 这里写图片描述</p>
-<p>–&gt;next<br>这里写图片描述</p>
-<p>–&gt;next<br>这里写图片描述<br>注意：点击红圈标记的按钮，弹出选项（Opinions），在行间隔处选择CR LF（windows系统”/r/n”）； 编码格式utf-8； 列表部分根据需要选择对应字段；然后点击下一步，直到执行完成，即可完成数据导入；</p>
-<p>导入时，主键一列比较特殊，需要保证唯一性，若需要生成指定长度的随机字符串，可参照一下方式：</p>
-<p>用VBA代码实现：<br>‘按alt+f11进入VBE编辑窗口，然后在工程窗口插入一个模块<br>‘把下面的代码复制进去–保存，再次按alt+f11返回excel窗口<br>‘这时，按alt+f8打开宏窗口，运行randnum宏，如果你选中的是<br>‘一个单元格，就会产生32位 ABCDEF跟0123456789 的随机组合字符串<br>‘（代码亲测，希望对你有用）</p>
-<p>Sub randnum()<br>Dim j, p As Integer, tem, x(16) As String<br>x(1) = “0”<br>x(2) = “1”<br>x(3) = “2”<br>x(4) = “3”<br>x(5) = “4”<br>x(6) = “5”<br>x(7) = “6”<br>x(8) = “7”<br>x(9) = “8”<br>x(10) = “9”<br>x(11) = “A”<br>x(12) = “B”<br>x(13) = “C”<br>x(14) = “D”<br>x(15) = “E”<br>x(16) = “F”<br>For j = 1 To 32<br>Randomize<br>p = Int(16 * Rnd) + 1<br>tem = tem &amp; x(p)<br>Next j<br>If Selection.Count = 1 Then<br>Selection.Value = tem<br>End If<br>End Sub</p>
-<p>Rnd 函数返回小于 1 但大于或等于 0 的值；‘&amp;’表示连接字符串，要注意前后加个空格，不能像公式那样前后紧贴在一起，否则有的时候会报错。</p>
-<p>其他excel表中字符串处理函数可参照这一篇文章 ：<a target="_blank" rel="noopener" href="http://www.360doc.com/content/13/0107/15/83610_258773240.shtml">http://www.360doc.com/content/13/0107/15/83610_258773240.shtml</a></p>
-<p>补充：<br>业务需求尝试着导入上万条数据，以上两种方式就特别慢，然后用命令行的方式导入，如下，把.cvs转换为.txt即可：（windows下“\r\n”）<br>Load Data InFile ‘D:/import.txt’ Into Table “ ####”lines terminated by ‘\r\n’;<br>然后报错：<br>Error Code: 1290. The MySQL server is running with the –secure-file-priv option so it cannot execute this statement<br>在网上查了一些资料发现如下解决方式：<br>1.进入mysql查看secure_file_prive的值<br>$mysql -u root -p<br>mysql&gt;SHOW VARIABLES LIKE “secure_file_priv”;<br>secure_file_prive=null – 限制mysqld 不允许导入导出<br>secure_file_priv=/tmp/ – 限制mysqld的导入导出只能发生在/tmp/目录下<br>secure_file_priv=’ ’ – 不对mysqld 的导入 导出做限制</p>
-<p>2、在目录C:\ProgramData\MySQL\MySQL Server 5.7下找到my.ini文件，然后修改 secure_file_prive为’ ‘,或者把导入文件放入指定的文件夹，即可完成导入；<br>————————————————<br>版权声明：本文为CSDN博主「huangyaa729」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/huangyaa729/article/details/77854660">https://blog.csdn.net/huangyaa729/article/details/77854660</a></p>
+                <h1 id="SQL优化总结"><a href="#SQL优化总结" class="headerlink" title="     SQL优化总结         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/study-everyday/p/6433900.html">     SQL优化总结         </a></h1><p> SQL是每个Java程序员必回的一项技能,  对于项目中的各种复杂业务, 你是否能写出高效率, 简洁的SQL对于项目的运行效率和稳定性是有非常大的作用的. 通过个人的理解和网上的资料总结了一下常见的SQL优化知识:</p>
+<p><strong>（1） 选择最有效率的表名顺序(只在基于规则的优化器中有效)：</strong></p>
+<p>ORACLE 的解析器按照从右到左的顺序处理FROM子句中的表名，FROM子句中写在最后的表(基础表 driving  table)将被最先处理，在FROM子句中包含多个表的情况下,你必须选择记录条数最少的表作为基础表。如果有3个以上的表连接查询,  那就需要选择交叉表(intersection table)作为基础表, 交叉表是指那个被其他表所引用的表.</p>
+<p>**（2） WHERE子句中的连接顺序．：<br>**ORACLE采用自下而上的顺序解析WHERE子句,根据这个原理,表之间的连接必须写在其他WHERE条件之前, 那些可以过滤掉最大数量记录的条件必须写在WHERE子句的末尾.</p>
+<p>*<em>（3） SELECT子句中避免使用 ‘ \</em> ‘：<br>*<em>ORACLE在解析的过程中, 会将’</em>‘ 依次转换成所有的列名, 这个工作是通过查询数据字典完成的, 这意味着将耗费更多的时间</p>
+<p><strong>（4） 减少访问数据库的次数：</strong><br>ORACLE在内部执行了许多工作: 解析SQL语句, 估算索引的利用率, 绑定变量 , 读数据块等；</p>
+<p><strong>（5） 在SQL*Plus , SQL*Forms和Pro*C中重新设置ARRAYSIZE参数</strong>, 可以增加每次数据库访问的检索数据量 ,建议值为200</p>
+<p>**（6） 使用DECODE函数来减少处理时间：<br>**使用DECODE函数可以避免重复扫描相同记录或重复连接相同的表.</p>
+<p><strong>（7） 整合简单,无关联的数据库访问：</strong><br>如果你有几个简单的数据库查询语句,你可以把它们整合到一个查询中(即使它们之间没有关系)</p>
+<p><strong>（8） 删除重复记录：</strong><br>最高效的删除重复记录方法 ( 因为使用了ROWID)例子： </p>
+<pre><code>1 DELETE FROM EMP E WHERE E.ROWID &gt; (SELECT MIN(X.ROWID) 2 FROM EMP X WHERE X.EMP_NO = E.EMP_NO);
+</code></pre>
+<p><strong>（9） 用TRUNCATE替代DELETE：</strong></p>
+<p>当删除表中的记录时,在通常情况下, 回滚段(rollback segments ) 用来存放可以被恢复的信息.  如果你没有COMMIT事务,ORACLE会将数据恢复到删除之前的状态(准确地说是恢复到执行删除命令之前的状况) 而当运用TRUNCATE时,  回滚段不再存放任何可被恢复的信息.当命令运行后,数据不能被恢复.因此很少的资源被调用,执行时间也会很短. (译者按:  TRUNCATE只在删除全表适用,TRUNCATE是DDL不是DML)</p>
+<p><strong>（10） 尽量多使用COMMIT：</strong><br> 只要有可能,在程序中尽量多使用COMMIT, 这样程序的性能得到提高,需求也会因为COMMIT所释放的资源而减少:<br>COMMIT所释放的资源:<br>   a. 回滚段上用于恢复数据的信息.<br>   b. 被程序语句获得的锁<br>   c. redo log buffer 中的空间<br>   d. ORACLE为管理上述3种资源中的内部花费</p>
+<p><strong>（11） 用Where子句替换HAVING子句：</strong></p>
+<p> 避免使用HAVING子句, HAVING 只会在检索出所有记录之后才对结果集进行过滤. 这个处理需要排序,总计等操作.  如果能通过WHERE子句限制记录的数目,那就能减少这方面的开销.  (非oracle中)on、where、having这三个都可以加条件的子句中，on是最先执行，where次之，having最后，因为on是先把不符合条件的记录过滤后才进行统计，它就可以减少中间运算要处理的数据，按理说应该速度是最快的，where也应该比having快点的，因为它过滤数据后才进行sum，在两个表联接时才用on的，所以在一个表的时候，就剩下where跟having比较了。在这单表查询统计的情况下，如果要过滤的条件没有涉及到要计算字段，那它们的结果是一样的，只是where可以使用rushmore技术，而having就不能，在速度上后者要慢如果要涉及到计算的字段，就表示在没计算之前，这个字段的值是不确定的，根据上篇写的工作流程，where的作用时间是在计算之前就完成的，而having就是在计算后才起作用的，所以在这种情况下，两者的结果会不同。在多表联接查询时，on比where更早起作用。系统首先根据各个表之间的联接条件，把多个表合成一个临时表后，再由where进行过滤，然后再计算，计算完后再由having进行过滤。由此可见，要想过滤条件起到正确的作用，首先要明白这个条件应该在什么时候起作用，然后再决定放在那里</p>
+<p><strong>（12） 减少对表的查询：</strong></p>
+<p>在含有子查询的SQL语句中,要特别注意减少对表的查询.例子： </p>
+<pre><code>1 SELECT TAB_NAME FROM TABLES WHERE (TAB_NAME,DB_VER) = ( SELECT2 TAB_NAME,DB_VER FROM TAB_COLUMNS WHERE VERSION = 604)
+</code></pre>
+<p><strong>（13） 通过内部函数提高SQL效率.：</strong><br>复杂的SQL往往牺牲了执行效率. 能够掌握上面的运用函数解决问题的方法在实际工作中是非常有意义的</p>
+<p><strong>（14） 使用表的别名(Alias)：</strong></p>
+<p>当在SQL语句中连接多个表时, 请使用表的别名并把别名前缀于每个Column上.这样一来,就可以减少解析的时间并减少那些由Column歧义引起的语法错误.</p>
+<p><strong>（15） 用EXISTS替代IN、用NOT EXISTS替代NOT IN：</strong></p>
+<p> 在许多基于基础表的查询中,为了满足一个条件,往往需要对另一个表进行联接.在这种情况下, 使用EXISTS(或NOT  EXISTS)通常将提高查询的效率. 在子查询中,NOT IN子句将执行一个内部的排序和合并. 无论在哪种情况下,NOT IN都是最低效的  (因为它对子查询中的表执行了一个全表遍历). 为了避免使用NOT IN ,我们可以把它改写成外连接(Outer Joins)或NOT  EXISTS.<br>例子：</p>
+<pre><code>1 （高效）SELECT * FROM EMP (基础表) WHERE EMPNO &gt; 0 AND EXISTS (SELECT ‘X&#39; FROM DEPT WHERE DEPT.DEPTNO = EMP.DEPTNO AND LOC = ‘MELB&#39;) 2 (低效)SELECT * FROM EMP (基础表) WHERE EMPNO &gt; 0 AND DEPTNO IN(SELECT DEPTNO FROM DEPT WHERE LOC = ‘MELB&#39;)
+</code></pre>
+<p><strong>（16） 识别’低效执行’的SQL语句：</strong><br>虽然目前各种关于SQL优化的图形化工具层出不穷,但是写出自己的SQL工具来解决问题始终是一个最好的方法：</p>
+<pre><code>1 SELECT EXECUTIONS , DISK_READS, BUFFER_GETS, 2 ROUND((BUFFER_GETS-DISK_READS)/BUFFER_GETS,2) Hit_radio, 3 ROUND(DISK_READS/EXECUTIONS,2) Reads_per_run, 4 SQL_TEXT 5 FROM V$SQLAREA 6 WHERE EXECUTIONS&gt;0 7 AND BUFFER_GETS &gt; 0 8 AND (BUFFER_GETS-DISK_READS)/BUFFER_GETS &lt; 0.8 9 ORDER BY 4 DESC;
+</code></pre>
+<p><strong>（17） 用索引提高效率：</strong></p>
+<p>索引是表的一个概念部分,用来提高检索数据的效率，ORACLE使用了一个复杂的自平衡B-tree结构.  通常,通过索引查询数据比全表扫描要快. 当ORACLE找出执行查询和Update语句的最佳路径时, ORACLE优化器将使用索引.  同样在联结多个表时使用索引也可以提高效率. 另一个使用索引的好处是,它提供了主键(primary key)的唯一性验证.。那些LONG或LONG RAW数据类型, 你可以索引几乎所有的列. 通常, 在大型表中使用索引特别有效. 当然,你也会发现, 在扫描小表时,使用索引同样能提高效率.  虽然使用索引能得到查询效率的提高,但是我们也必须注意到它的代价. 索引需要空间来存储,也需要定期维护, 每当有记录在表中增减或索引列被修改时,  索引本身也会被修改. 这意味着每条记录的INSERT , DELETE , UPDATE将为此多付出4 , 5 次的磁盘I/O .  因为索引需要额外的存储空间和处理,那些不必要的索引反而会使查询反应时间变慢.。定期的重构索引是有必要的.：<br>ALTER INDEX <INDEXNAME> REBUILD <TABLESPACENAME></TABLESPACENAME></INDEXNAME></p>
+<p><strong>（18） 用EXISTS替换DISTINCT：</strong><br>当提交一个包含一对多表信息(比如部门表和雇员表)的查询时,避免在SELECT子句中使用DISTINCT. 一般可以考虑用EXIST替换, EXISTS 使查询更为迅速,因为RDBMS核心模块将在子查询的条件一旦满足后,立刻返回结果. 例子：</p>
+<pre><code>1 (低效): 2 SELECT DISTINCT DEPT_NO,DEPT_NAME FROM DEPT D , EMP E 3 WHERE D.DEPT_NO = E.DEPT_NO 4 (高效): 5 SELECT DEPT_NO,DEPT_NAME FROM DEPT D WHERE EXISTS ( SELECT ‘X&#39; 6 FROM EMP E WHERE E.DEPT_NO = D.DEPT_NO);
+1 （19） sql语句用大写的；因为oracle总是先解析sql语句，把小写的字母转换成大写的再执行 2 （20） 在java代码中尽量少用连接符“＋”连接字符串！ 3 （21） 避免在索引列上使用NOT 通常，　 4 我们要避免在索引列上使用NOT, NOT会产生在和在索引列上使用函数相同的影响. 当ORACLE”遇到”NOT,他就会停止使用索引转而执行全表扫描. 5 （22） 避免在索引列上使用计算． 6 WHERE子句中，如果索引列是函数的一部分．优化器将不使用索引而使用全表扫描． 7 举例:
+1 低效： 2 SELECT … FROM DEPT WHERE SAL * 12 &gt; 25000; 3 高效: 4 SELECT … FROM DEPT WHERE SAL &gt; 25000/12;
+</code></pre>
+<p><strong>（23） 用&gt;=替代&gt;</strong></p>
+<pre><code>1 高效: 2 SELECT * FROM EMP WHERE DEPTNO &gt;=4 3 低效: 4 SELECT * FROM EMP WHERE DEPTNO &gt;3
+</code></pre>
+<p>两者的区别在于, 前者DBMS将直接跳到第一个DEPT等于4的记录而后者将首先定位到DEPTNO=3的记录并且向前扫描到第一个DEPT大于3的记录.</p>
+<p><strong>（24） 用UNION替换OR (适用于索引列)</strong><br>通常情况下,  用UNION替换WHERE子句中的OR将会起到较好的效果. 对索引列使用OR将造成全表扫描. 注意, 以上规则只针对多个索引列有效.  如果有column没有被索引, 查询效率可能会因为你没有选择OR而降低. 在下面的例子中, LOC_ID 和REGION上都建有索引.</p>
+<pre><code> 1 高效:  2 SELECT LOC_ID , LOC_DESC , REGION  3 FROM LOCATION  4 WHERE LOC_ID = 10  5 UNION 6 SELECT LOC_ID , LOC_DESC , REGION  7 FROM LOCATION  8 WHERE REGION = “MELBOURNE”  9 低效: 10 SELECT LOC_ID , LOC_DESC , REGION 11 FROM LOCATION 12 WHERE LOC_ID = 10 OR REGION = “MELBOURNE”
+</code></pre>
+<p>如果你坚持要用OR, 那就需要返回记录最少的索引列写在最前面.</p>
+<p><strong>（25） 用IN来替换OR</strong><br>这是一条简单易记的规则，但是实际的执行效果还须检验，在ORACLE8i下，两者的执行路径似乎是相同的．　</p>
+<pre><code>1 低效: 2 SELECT…. FROM LOCATION WHERE LOC_ID = 10 OR LOC_ID = 20 OR LOC_ID = 30 3 高效 4 SELECT… FROM LOCATION WHERE LOC_IN IN (10,20,30);
+</code></pre>
+<p><strong>（26） 避免在索引列上使用IS NULL和IS NOT NULL</strong><br>避免在索引中使用任何可以为空的列，ORACLE将无法使用该索引．对于单列索引，如果列包含空值，索引中将不存在此记录. 对于复合索引，如果每个列都为空，索引中同样不存在此记录.　如果至少有一个列不为空，则记录存在于索引中．举例:  如果唯一性索引建立在表的A列和B列上, 并且表中存在一条记录的A,B值为(123,null) ,  ORACLE将不接受下一条具有相同A,B值（123,null）的记录(插入).  然而如果所有的索引列都为空，ORACLE将认为整个键值为空而空不等于空. 因此你可以插入1000 条具有相同键值的记录,当然它们都是空!  因为空值不存在于索引列中,所以WHERE子句中对索引列进行空值比较将使ORACLE停用该索引. </p>
+<pre><code>1 低效: (索引失效) 2 SELECT … FROM DEPARTMENT WHERE DEPT_CODE IS NOT NULL; 3 高效: (索引有效) 4 SELECT … FROM DEPARTMENT WHERE DEPT_CODE &gt;=0;
+</code></pre>
+<p><strong>（27） 总是使用索引的第一个列：</strong></p>
+<p>如果索引是建立在多个列上, 只有在它的第一个列(leading column)被where子句引用时,优化器才会选择使用该索引. 这也是一条简单而重要的规则，当仅引用索引的第二个列时,优化器使用了全表扫描而忽略了索引</p>
+<p><strong>28） 用UNION-ALL 替换UNION ( 如果有可能的话)：</strong></p>
+<p>当SQL 语句需要UNION两个查询结果集合时,这两个结果集合会以UNION-ALL的方式被合并, 然后在输出最终结果前进行排序.  如果用UNION ALL替代UNION, 这样排序就不是必要了. 效率就会因此得到提高. 需要注意的是，UNION ALL  将重复输出两个结果集合中相同记录. 因此各位还是要从业务需求分析使用UNION ALL的可行性. UNION  将对结果集合排序,这个操作会使用到SORT_AREA_SIZE这块内存. 对于这块内存的优化也是相当重要的.  下面的SQL可以用来查询排序的消耗量</p>
+<pre><code> 1 低效：  2 SELECT ACCT_NUM, BALANCE_AMT  3 FROM DEBIT_TRANSACTIONS  4 WHERE TRAN_DATE = &#39;31-DEC-95&#39; 5 UNION 6 SELECT ACCT_NUM, BALANCE_AMT  7 FROM DEBIT_TRANSACTIONS  8 WHERE TRAN_DATE = &#39;31-DEC-95&#39; 9 高效: 10 SELECT ACCT_NUM, BALANCE_AMT 11 FROM DEBIT_TRANSACTIONS 12 WHERE TRAN_DATE = &#39;31-DEC-95&#39;13 UNION ALL14 SELECT ACCT_NUM, BALANCE_AMT 15 FROM DEBIT_TRANSACTIONS 16 WHERE TRAN_DATE = &#39;31-DEC-95&#39;
+</code></pre>
+<p><strong>（29） 用WHERE替代ORDER BY：</strong><br>ORDER BY 子句只在两种严格的条件下使用索引.<br>ORDER BY中所有的列必须包含在相同的索引中并保持在索引中的排列顺序.<br>ORDER BY中所有的列必须定义为非空.<br>WHERE子句使用的索引和ORDER BY子句中所使用的索引不能并列.<br>例如:<br>表DEPT包含以下列:<br>DEPT_CODE PK NOT NULL<br>DEPT_DESC NOT NULL<br>DEPT_TYPE NULL </p>
+<pre><code>1 低效: (索引不被使用) 2 SELECT DEPT_CODE FROM DEPT ORDER BY DEPT_TYPE 3 高效: (使用索引) 4 SELECT DEPT_CODE FROM DEPT WHERE DEPT_TYPE &gt; 0
+</code></pre>
+<p><strong>（30） 避免改变索引列的类型.:</strong></p>
+<p>当比较不同数据类型的数据时, ORACLE自动对列进行简单的类型转换.<br>假设 EMPNO是一个数值类型的索引列.<br>SELECT … FROM EMP WHERE EMPNO = ‘123’<br>实际上,经过ORACLE类型转换, 语句转化为:<br>SELECT … FROM EMP WHERE EMPNO = TO_NUMBER(‘123’)<br>幸运的是,类型转换没有发生在索引列上,索引的用途没有被改变.<br>现在,假设EMP_TYPE是一个字符类型的索引列.<br>SELECT … FROM EMP WHERE EMP_TYPE = 123<br>这个语句被ORACLE转换为:<br>SELECT … FROM EMP WHERETO_NUMBER(EMP_TYPE)=123<br>因为内部发生的类型转换, 这个索引将不会被用到! 为了避免ORACLE对你的SQL进行隐式的类型转换, 最好把类型转换用显式表现出来. 注意当字符和数值比较时, ORACLE会优先转换数值类型到字符类型</p>
+<p><strong>（31） 需要当心的WHERE子句:</strong></p>
+<p>某些SELECT 语句中的WHERE子句不使用索引. 这里有一些例子.<br>在下面的例子里, (1)‘!=’ 将不使用索引. 记住,  索引只能告诉你什么存在于表中, 而不能告诉你什么不存在于表中. (2) ‘||’是字符连接函数. 就象其他函数那样, 停用了索引. (3)  ‘+’是数学函数. 就象其他数学函数那样, 停用了索引. (4)相同的索引列不能互相比较,这将会启用全表扫描.</p>
+<p><strong>（32） a. 如果检索数据量超过30%的表中记录数.使用索引将没有显著的效率提高.</strong></p>
+<p>b. 在特定情况下, 使用索引也许会比全表扫描慢, 但这是同一个数量级上的区别. 而通常情况下,使用索引比全表扫描要块几倍乃至几千倍!</p>
+<p><strong>（33） 避免使用耗费资源的操作:</strong></p>
+<p>带有DISTINCT,UNION,MINUS,INTERSECT,ORDER BY的SQL语句会启动SQL引擎<br>执行耗费资源的排序(SORT)功能. DISTINCT需要一次排序操作, 而其他的至少需要执行两次排序. 通常, 带有UNION, MINUS ,  INTERSECT的SQL语句都可以用其他方式重写. 如果你的数据库的SORT_AREA_SIZE调配得好, 使用UNION , MINUS,  INTERSECT也是可以考虑的, 毕竟它们的可读性很强</p>
+<p><strong>（34） 优化GROUP BY:</strong></p>
+<p>提高GROUP BY 语句的效率, 可以通过将不需要的记录在GROUP BY 之前过滤掉.下面两个查询返回相同结果但第二个明显就快了许多. </p>
+<pre><code> 1 低效:  2 SELECT JOB , AVG(SAL)  3 FROM EMP  4 GROUP by JOB  5 HAVING JOB = ‘PRESIDENT&#39;  6 OR JOB = ‘MANAGER&#39; 7 高效:  8 SELECT JOB , AVG(SAL)  9 FROM EMP 10 WHERE JOB = ‘PRESIDENT&#39; 11 OR JOB = ‘MANAGER&#39;12 GROUP by JOB
+</code></pre>
+<p><strong>SQL避免索引失效:</strong></p>
+<p>Oracle  索引的目标是避免全表扫描，提高查询效率，但有些时候却适得其反。例如一张表中有上百万条数据，对某个字段加了索引，但是查询时性能并没有什么提高，这可能是 oracle 索引失效造成的。oracle  索引有一些限制条件，如果你违反了这些索引限制条件，那么即使你已经加了索引，oracle还是会执行一次全表扫描，查询的性能不会比不加索引有所提高， 反而可能由于数据库维护索引的系统开销造成性能更差。</p>
+<p><strong>1</strong>. <strong>对查询进行优化，应尽量避免全表扫描，首先应考虑在 where 及 order by 涉及的列上建立索引。</strong>  </p>
+<p><strong>2. 应尽量避免在 where 子句中对字段进行 null 值判断，否则将导致引擎放弃使用索引而进行全表扫描，</strong>如：<br>select id from t where num is null<br>可以在num上设置默认值0，确保表中num列没有null值，然后这样查询：<br>select id from t where num=0 </p>
+<p><strong>3. 应尽量避免在 where 子句中使用!=或&lt;&gt;操作符，否则将引擎放弃使用索引而进行全表扫描。</strong> </p>
+<p><strong>4.应尽量避免在 where 子句中使用 or 来连接条件，否则将导致引擎放弃使用索引而进行全表扫描</strong>，如：<br>select id from t where num=10 or num=20<br>可以这样查询：<br>select id from t where num=10<br>union all<br>select id from t where num=20 </p>
+<p><strong>5.in 和 not in 也要慎用，否则会导致全表扫描</strong>，如：<br>select id from t where num in(1,2,3)<br>对于连续的数值，能用 between 就不要用 in 了：<br>select id from t where num between 1 and 3 </p>
+<p><strong>6.下面模糊查询也将导致全表扫描</strong>：<br>select id from t where name like ‘%abc%’<br>若要提高效率，可以考虑全文检索。 </p>
+<p><strong>7.如果在 where 子句中使用参数，也会导致全表扫描</strong>。因为SQL只有在运行时才会解析局部变量，但优化程序不能将访问计划的选择推迟到运行时；它必须在编译时进行选择。然而，如果在编译时建立访问计划，变量的值还是未知的，因而无法作为索引选择的输入项。如下面语句将进行全表扫描：<br>select id from t where num=@num<br>可以改为强制查询使用索引：<br>select id from t with(index(索引名)) where num=@num </p>
+<p><strong>8.应尽量避免在 where 子句中对字段进行表达式操作，这将导致引擎放弃使用索引而进行全表扫描</strong>。如：<br>select id from t where num/2=100<br>应改为:<br>select id from t where num=100*2 </p>
+<p><strong>9.应尽量避免在where子句中对字段进行函数操作，这将导致引擎放弃使用索引而进行全表扫描。</strong>如：<br>select id from t where substring(name,1,3)=’abc’–name以abc开头的id<br>select id from t where datediff(day,createdate,’2005-11-30’)=0–‘2005-11-30’生成的id<br>应改为:<br>select id from t where name like ‘abc%’<br>select id from t where createdate&gt;=’2005-11-30’ and createdate&lt;’2005-12-1’ </p>
+<p><strong>10.不要在 where 子句中的“=”左边进行函数、算术运算或其他表达式运算，否则系统将可能无法正确使用索引。</strong> </p>
+<p><strong>11.在使用索引字段作为条件时，如果该索引是复合索引，那么必须使用到该索引中的第一个字段作为条件时才能保证系统使用该索引，否则该索引将不会被使用，并且应尽可能的让字段顺序与索引顺序相一致。</strong> </p>
+<p><strong>12.不要写一些没有意义的查询，如需要生成一个空表结构：</strong><br>select col1,col2 into #t from t where 1=0<br>这类代码不会返回任何结果集，但是会消耗系统资源的，应改成这样：<br>create table #t(…) </p>
+<p><strong>13.很多时候用 exists 代替 in 是一个好的选择：</strong><br>select num from a where num in(select num from b)<br>用下面的语句替换：<br>select num from a where exists(select 1 from b where num=a.num) </p>
+<p>14.并不是所有索引对查询都有效，SQL是根据表中数据来进行查询优化的，当索引列有大量数据重复时，SQL查询可能不会去利用索引，如一表中有字段sex，male、female几乎各一半，那么即使在sex上建了索引也对查询效率起不了作用。 </p>
+<p><strong>15.索引并不是越多越好，索引固然可以提高相应的 select 的效率，但同时也降低了 insert 及 update 的效率，因为 insert 或 update 时有可能会重建索引，所以怎样建索引需要慎重考虑，视具体情况而定。</strong>一个表的索引数最好不要超过6个，若太多则应考虑一些不常使用到的列上建的索引是否有 必要。 </p>
+<p>16.应尽可能的避免更新 clustered 索引数据列，因为 clustered  索引数据列的顺序就是表记录的物理存储顺序，一旦该列值改变将导致整个表记录的顺序的调整，会耗费相当大的资源。若应用系统需要频繁更新  clustered 索引数据列，那么需要考虑是否应将该索引建为 clustered 索引。 </p>
+<p><strong>17.尽量使用数字型字段，若只含数值信息的字段尽量不要设计为字符型，这会降低查询和连接的性能，并会增加存储开销。</strong>这是因为引擎在处理查询和连接时会逐个比较字符串中每一个字符，而对于数字型而言只需要比较一次就够了。 </p>
+<p><strong>18.尽可能的使用 varchar/nvarchar 代替 char/nchar ，因为首先变长字段存储空间小，可以节省存储空间，其次对于查询来说，在一个相对较小的字段内搜索效率显然要高些。</strong> </p>
+<p><strong>19.任何地方都不要使用 select * from t ，用具体的字段列表代替“*”，不要返回用不到的任何字段。</strong> </p>
+<p><strong>20.尽量使用表变量来代替临时表。如果表变量包含大量数据，请注意索引非常有限（只有主键索引）。</strong> </p>
+<p><strong>21.避免频繁创建和删除临时表，以减少系统表资源的消耗。</strong> </p>
+<p>22.临时表并不是不可使用，适当地使用它们可以使某些例程更有效，例如，当需要重复引用大型表或常用表中的某个数据集时。但是，对于一次性事件，最好使用导出表。 </p>
+<p><strong>23.在新建临时表时，如果一次性插入数据量很大，那么可以使用 select into 代替 create table，避免造成大量 log ，以提高速度；如果数据量不大，为了缓和系统表的资源，应先create table，然后insert。</strong> </p>
+<p><strong>24.如果使用到了临时表，在存储过程的最后务必将所有的临时表显式删除，先 truncate table ，然后 drop table ，这样可以避免系统表的较长时间锁定。</strong> </p>
+<p><strong>25.尽量避免使用游标，因为游标的效率较差，如果游标操作的数据超过1万行，那么就应该考虑改写。</strong> </p>
+<p>26.使用基于游标的方法或临时表方法之前，应先寻找基于集的解决方案来解决问题，基于集的方法通常更有效。 </p>
+<p>27.与临时表一样，游标并不是不可使用。对小型数据集使用 FAST_FORWARD  游标通常要优于其他逐行处理方法，尤其是在必须引用几个表才能获得所需的数据时。在结果集中包括“合计”的例程通常要比使用游标执行的速度快。如果开发时 间允许，基于游标的方法和基于集的方法都可以尝试一下，看哪一种方法的效果更好。 </p>
+<p>28.在所有的存储过程和触发器的开始处设置 SET NOCOUNT ON ，在结束时设置 SET NOCOUNT OFF 。无需在执行存储过程和触发器的每个语句后向客户端发送 DONE_IN_PROC 消息。 </p>
+<p><strong>29.尽量避免大事务操作，提高系统并发能力。</strong> </p>
+<p><strong>30.尽量避免向客户端返回大数据量，若数据量过大，应该考虑相应需求是否合理。</strong></p>
+<p><strong>31.隐式转换导致索引失效.这一点应当引起重视</strong>.也是开发中经常会犯的错误. 由于表的字段tu_mdn定义为varchar2(20),<br>但在查询时把该字段作为number类型以where条件传给<a target="_blank" rel="noopener" href="http://lib.csdn.net/base/oracle">Oracle</a>,这样会导致索引失效.<br>错误的例子：select * from test where tu_mdn=13333333333;<br>正确的例子：select * from test where tu_mdn=’13333333333’; </p>
 
                 
             </div>
@@ -455,7 +549,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-shi-yong-ji-qiao-hui-zong/">https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-shi-yong-ji-qiao-hui-zong/</a>
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/sql-you-hua/">https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/sql-you-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -493,8 +587,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/blog/">
-                                    <span class="chip bg-color">blog</span>
+                                <a href="/tags/sql/">
+                                    <span class="chip bg-color">sql</span>
                                 </a>
                             
                         </div>
@@ -670,32 +764,44 @@
             <div class="article-badge left-badge text-color">
                 <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/02/linux/https-http/">
+                <a href="/2021/04/05/mangodb/mangdb-ying-yong-chang-jing/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="mangodb应用场景">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">mangodb应用场景</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            mangodb应用场景
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-02
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
                         </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            JiangYuesheng
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mangodb/" class="post-category">
+                                    mangodb
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mangodb/">
+                        <span class="chip bg-color">mangodb</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -707,31 +813,31 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/30/abp/abp-xiang-mu-shi-zhan/">
+                <a href="/2021/04/04/mysql/mysql-shi-yong-ji-qiao-hui-zong/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="abp+mysql+三方登录项目实战">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="mysql使用技巧汇总">
                         
-                        <span class="card-title">abp+mysql+三方登录项目实战</span>
+                        <span class="card-title">mysql使用技巧汇总</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            abp+mysql+三方登录项目实战
+                            mysql使用技巧汇总
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-30
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/abp/" class="post-category">
-                                    abp
+                            <a href="/categories/mysql/" class="post-category">
+                                    mysql
                                 </a>
                             
                             
@@ -741,8 +847,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/abp/">
-                        <span class="chip bg-color">abp</span>
+                    <a href="/tags/mysql/">
+                        <span class="chip bg-color">mysql</span>
                     </a>
                     
                 </div>
@@ -849,7 +955,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">240.6k</span>&nbsp;字
+                class="white-color">260.6k</span>&nbsp;字
             
             
             

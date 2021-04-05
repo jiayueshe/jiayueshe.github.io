@@ -383,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    69
+                    983
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -417,7 +417,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>领域层  专注于业务相关的对象和模型</p>
+                <h1 id="DDD"><a href="#DDD" class="headerlink" title="DDD"></a>DDD</h1><p>领域层  专注于业务相关的对象和模型</p>
 <p>应用层，解决不同用户之间调用领域模型</p>
 <p>展现层</p>
 <p>基础设施层</p>
@@ -427,6 +427,214 @@
 <p>Application 应用层</p>
 <p>Application.Contracts 应用层接口</p>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403215128302.png" alt="image-20210403215128302"></p>
+<h1 id="微服务"><a href="#微服务" class="headerlink" title="微服务"></a>微服务</h1><p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403222950839.png" alt="image-20210403222950839"></p>
+<p>基础–业务拆分</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403224022447.png" alt="image-20210403224022447"></p>
+<p>读写影响 + 高并发</p>
+<p>应用和数据库分离   解决磁盘io影响</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403231326833.png" alt="image-20210403231326833"></p>
+<p>高并发 解决数据库性能  缓存</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403224605903.png" alt="image-20210403224605903"></p>
+<p>nginx 反向代理  实现负载均衡  </p>
+<p>并发量角度</p>
+<p>数据角度</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403231728297.png" alt="image-20210403231728297"></p>
+<p>读写分离  数据量不一致</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403232320400.png" alt="image-20210403232320400"></p>
+<p>mysql 一个表 2000万</p>
+<p>如果表数据过多，性能下降</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403232509632.png" alt="image-20210403232509632"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403232600292.png" alt="image-20210403232600292"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403232716110.png" alt="image-20210403232716110"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403232845403.png" alt="image-20210403232845403"></p>
+<p>大数据问题</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403233117683.png" alt="image-20210403233117683"></p>
+<p>SOA架构</p>
+<p>业务拆分</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403233533730.png" alt="image-20210403233533730"></p>
+<p>微服务，抽离通用服务</p>
+<p>并发量</p>
+<p>数据量</p>
+<p>业务量</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210403233716261.png" alt="image-20210403233716261"></p>
+<p>12：云原生</p>
+<p>13：serviceMash 服务网关  中台</p>
+<p>14: servicelass  </p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404101156199.png" alt="image-20210404101156199"></p>
+<p>Ocelot 网关  微服务  负载均衡</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404104212418.png" alt="image-20210404104212418"></p>
+<p>日志记录  </p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404104334585.png" alt="image-20210404104334585"></p>
+<h1 id="AOP"><a href="#AOP" class="headerlink" title="AOP"></a>AOP</h1><p>Autofac  支持AOP，属性注入</p>
+<p>条件：</p>
+<p>​    工厂模式</p>
+<p>​    反射</p>
+<p>​    集合</p>
+<p>​    递归算法</p>
+<p>​    特性</p>
+<p>IOC</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404105655266.png" alt="image-20210404105655266"></p>
+<p>IOC </p>
+<p>1.加载项目中所有类型，反射的集合</p>
+<p>2.使用反射从程序集获取对象类型</p>
+<p>3.创建对象 ，对象属性赋值，存储对象</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404110016993.png" alt="image-20210404110016993"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404110737649.png" alt="image-20210404110737649"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404111603435.png" alt="image-20210404111603435"></p>
+<h2 id="递归函数，抽象通用逻辑，遍历属性赋值"><a href="#递归函数，抽象通用逻辑，遍历属性赋值" class="headerlink" title="递归函数，抽象通用逻辑，遍历属性赋值"></a>递归函数，抽象通用逻辑，遍历属性赋值</h2><p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404113020565.png" alt="image-20210404113020565"></p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404113336905.png" alt="image-20210404113336905"></p>
+<h2 id="交叉引用，递归性能差，性能优化，空间换时间"><a href="#交叉引用，递归性能差，性能优化，空间换时间" class="headerlink" title="交叉引用，递归性能差，性能优化，空间换时间"></a>交叉引用，递归性能差，性能优化，空间换时间</h2><p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210404175254475.png" alt="image-20210404175254475"></p>
+<p>优化：通过构造函数初始化所以对象，占用过多内存和事件</p>
+<pre><code>  public class DefaultIOCFactory
+    &#123;
+        /// &lt;summary&gt;
+        /// 容器
+        /// &lt;/summary&gt;
+        private Dictionary&lt;string, object&gt; IocContainer = new Dictionary&lt;string, object&gt;();
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        private Dictionary&lt;string, Type&gt; IocTypeContainer = new Dictionary&lt;string, Type&gt;();
+        public DefaultIOCFactory()
+        &#123;
+            //1.加载项目中的所有类型（反射集合）
+            Assembly assembly = Assembly.Load(&quot;LOC&quot;);
+            //2.使用反射从程序集中获取对象类型
+            Type[] types = assembly.GetTypes();
+
+            //2.1先将types存储起来
+            foreach(var type in types)
+            &#123;
+                IOCService iOCService = type.GetCustomAttribute&lt;IOCService&gt;();
+                if (iOCService != null)
+                &#123;
+                    IocTypeContainer.Add(type.Name, type);
+                &#125;
+            &#125;
+        &#125;
+        /// &lt;summary&gt;
+        /// 1.抽取通用逻辑
+        /// 2.通用代码逻辑里抽取通用参数
+        /// n2的时间复杂度  空间换时间
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;type&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Object Create(Type type)
+        &#123;
+            if (IocContainer.ContainsKey(type.Name)) return IocContainer[type.Name];
+
+            Object _object = Activator.CreateInstance(type);
+            PropertyInfo[] propertyInfos = type.GetProperties();
+            foreach(var property in propertyInfos) &#123;
+                Type type1 = IocTypeContainer[property.DeclaringType.Name];
+                object _objectvalue = Create(type1);
+                property.SetValue(_object, _objectvalue);
+            &#125;
+            return _object;
+         &#125;
+        /// &lt;summary&gt;
+        /// 使用对象的时候创建对象
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;typeName&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public object GetObject(string typeName)
+        &#123;
+            Type type = IocTypeContainer[typeName];
+            //创建对象
+            object _object = Create(type);
+            //存储对象
+            IocContainer.Add(type.Name, _object);
+            return _object;
+        &#125;
+
+    &#125;
+</code></pre>
+<p>使用特性，注入和使用</p>
+<pre><code>  [AttributeUsage(AttributeTargets.Class)]
+    public class IOCService:Attribute
+    &#123;
+        public IOCService()
+        &#123;
+            Console.WriteLine(&quot; ..IOCService..&quot;);
+        &#125;
+    &#125;
+</code></pre>
+<pre><code>  [IOCService]
+    public  class Student
+    &#123;
+        [IOCInject]
+        public Teacher teacher &#123; get; set; &#125;
+        public void Study()
+        &#123;
+            teacher.Classes();
+            Console.WriteLine(&quot;学生开始学习&quot;);
+        &#125;
+    &#125;
+</code></pre>
+<pre><code> public class DefaultIOCFactory
+    &#123;
+        /// &lt;summary&gt;
+        /// 容器
+        /// &lt;/summary&gt;
+        private Dictionary&lt;string, object&gt; IocContainer = new Dictionary&lt;string, object&gt;();
+        /// &lt;summary&gt;
+        /// 
+        /// &lt;/summary&gt;
+        private Dictionary&lt;string, Type&gt; IocTypeContainer = new Dictionary&lt;string, Type&gt;();
+        public DefaultIOCFactory()
+        &#123;
+            //1.加载项目中的所有类型（反射集合）
+            Assembly assembly = Assembly.Load(&quot;LOC&quot;);
+            //2.使用反射从程序集中获取对象类型
+            Type[] types = assembly.GetTypes();
+
+            //2.1先将types存储起来
+            foreach(var type in types)
+            &#123;
+                IOCService iOCService = type.GetCustomAttribute&lt;IOCService&gt;();
+                if (iOCService != null)
+                &#123;
+                    IocTypeContainer.Add(type.Name, type);
+                &#125;
+            &#125;
+        &#125;
+        /// &lt;summary&gt;
+        /// 1.抽取通用逻辑
+        /// 2.通用代码逻辑里抽取通用参数
+        /// n2的时间复杂度  空间换时间
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;type&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public Object Create(Type type)
+        &#123;
+            if (IocContainer.ContainsKey(type.Name)) return IocContainer[type.Name];
+
+            Object _object = Activator.CreateInstance(type);
+            PropertyInfo[] propertyInfos = type.GetProperties();
+            foreach(var property in propertyInfos) &#123;
+                Type type1 = IocTypeContainer[property.PropertyType.Name];
+                object _objectvalue = Create(type1);
+                property.SetValue(_object, _objectvalue);
+            &#125;
+            return _object;
+         &#125;
+        /// &lt;summary&gt;
+        /// 使用对象的时候创建对象
+        /// &lt;/summary&gt;
+        /// &lt;param name=&quot;typeName&quot;&gt;&lt;/param&gt;
+        /// &lt;returns&gt;&lt;/returns&gt;
+        public object GetObject(string typeName)
+        &#123;
+            Type type = IocTypeContainer[typeName];
+            //创建对象
+            object _object = Create(type);
+            //存储对象
+            IocContainer.Add(type.Name, _object);
+            return _object;
+        &#125;
+
+    &#125;
+</code></pre>
 
                 
             </div>
@@ -664,30 +872,29 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/04/03/abp/abp-ddd-jia-gou-she-ji/">
+                <a href="/2021/04/04/abp/li-jie-ioc-he-autofac/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="abp.vnext+ddd架构实战">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="理解IOC和autoFac">
                         
-                        <span class="card-title">abp.vnext+ddd架构实战</span>
+                        <span class="card-title">理解IOC和autoFac</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            abp.vnext+ddd架构实战
+                            理解IOC和autoFac
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-03
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-04
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -700,7 +907,6 @@
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
@@ -849,7 +1055,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">240.6k</span>&nbsp;字
+                class="white-color">260.6k</span>&nbsp;字
             
             
             
