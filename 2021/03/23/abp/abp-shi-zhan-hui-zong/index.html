@@ -383,21 +383,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-25
+                    2021-04-11
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    722
+                    1.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    6 分
                 </div>
                 
 
@@ -521,6 +521,82 @@ install-package pomelo.entityframeworkcore.mysql
 </ol>
 <p>增加了两个缓存<br>————————————————</p>
 <p>一开始一直运行不起来，原来是dev里的配置<img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210325232514849.png" alt="image-20210325232514849"></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/"> 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/stulzq/"> 首页</a></li>
+<li><a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?opt=1"> 新随笔</a></li>
+<li></li>
+<li></li>
+<li><a target="_blank" rel="noopener" href="https://i.cnblogs.com/"> 管理</a></li>
+</ul>
+<p>​            随笔 - 228  文章 - 0  评论 - 2251  阅读 -  246万         </p>
+<h1 id="ABP从入门到精通（4）：使用基于JWT标准的Token访问WebApi"><a href="#ABP从入门到精通（4）：使用基于JWT标准的Token访问WebApi" class="headerlink" title="     ABP从入门到精通（4）：使用基于JWT标准的Token访问WebApi         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/stulzq/p/7417548.html">     ABP从入门到精通（4）：使用基于JWT标准的Token访问WebApi         </a></h1><p>项目：asp.net zero 4.2.0 .net core（1.1） 版本</p>
+<p>我们做项目的时候可能会遇到需要提供api给app调用，ABP动态生成的WebApi提供了方便的基于JWT标准的Token访问方式供我们访问API，不用在代码上做任何改动，很方便有木有！</p>
+<h2 id="一-什么是JWT"><a href="#一-什么是JWT" class="headerlink" title="一.什么是JWT"></a>一.什么是JWT</h2><p>Json web token (JWT), 是为了在网络应用环境间传递声明而执行的一种基于JSON的开放标准（(RFC  7519).该token被设计为紧凑且安全的，特别适用于分布式站点的单点登录（SSO）场景。JWT的声明一般被用来在身份提供者和服务提供者间传递被认证的用户身份信息，以便于从资源服务器获取资源，也可以增加一些额外的其它业务逻辑所必须的声明信息，该token也可直接被用于认证，也可被加密。</p>
+<p>这里就不详细介绍JWT了，JWT的详细介绍可以查看简书的这篇文章，写得非常详细：<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/576dbf44b2ae">http://www.jianshu.com/p/576dbf44b2ae</a></p>
+<h2 id="二-ABP的WebApi访问控制"><a href="#二-ABP的WebApi访问控制" class="headerlink" title="二.ABP的WebApi访问控制"></a>二.ABP的WebApi访问控制</h2><p>asp.net zero core是通过IdentityServer4来实现的认证、授权，关于IdentityServer4介绍可以查看我前面的博文 <a target="_blank" rel="noopener" href="http://www.cnblogs.com/stulzq/p/7376606.html">ASP.NET Core身份认证服务框架IdentityServer4-整体介绍</a></p>
+<p>下面我简单画了一张图来表示流程，其中API访问认证就是有IdentityServer4来实现的，主要有两种认证方式，一种是通过Cookie主要用于通过浏览器访问，一种是通过Token访问，主要用于APP、或者其他服务访问。</p>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823115504918-1303084882.png" alt="img"></p>
+<h2 id="三-申请Token"><a href="#三-申请Token" class="headerlink" title="三.申请Token"></a>三.申请Token</h2><p><a target="_blank" rel="noopener" href="http://localhost:4999/">http://localhost:4999</a> 项目地址</p>
+<p>ABP已经为我们实现好了Token获取和验证。</p>
+<p>需要注意的是配置ServerRootAddress，如下图</p>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823143943136-1608929056.png" alt="img"></p>
+<p>1.首先运行webapi项目（<a target="_blank" rel="noopener" href="http://www.cnblogs.com/stulzq/p/7237153.html">asp.net zero core项目说明</a>）</p>
+<p>访问地址 <a target="_blank" rel="noopener" href="http://localhost:4999/api/TokenAuth/Authenticate">http://localhost:4999/api/TokenAuth/Authenticate</a> 申请Token，提交参数：用户名、密码</p>
+<pre><code>&#123;
+    &quot;userNameOrEmailAddress&quot;:&quot;admin&quot;,
+    &quot;password&quot;:&quot;123456&quot;
+&#125;
+</code></pre>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823135509371-2107067812.png" alt="img"></p>
+<p>返回结果：</p>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823135621136-645377193.png" alt="img"></p>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<pre><code> 1 &#123;
+ 2     &quot;result&quot;: &#123;
+ 3         &quot;accessToken&quot;: &quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwibmFtZSI6ImFkbWluIiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJhMGU5M2Q0Yi01ZDk3LTFiZDktMTRkYS0zOWUwOTk4ODVhOTgiLCJyb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwianRpIjoiODJkOTQ3M2EtMGE0Yy00MWZhLWI4ZDMtMzUzODJkMjJkOGFmIiwiaWF0IjoxNTAzNDY4NjM2LCJuYmYiOjE1MDM0Njg2MzYsImV4cCI6MTUwMzU1NTAzNiwiaXNzIjoiQWJwWmVyb1RlbXBsYXRlIiwiYXVkIjoiQWJwWmVyb1RlbXBsYXRlIn0.DnqpCFB2hjeYtEKd-RnJe4i4DmZVfo7EVnTXjrE18oY&quot;,
+ 4         &quot;encryptedAccessToken&quot;: &quot;wNYmO41/48SHNstaLVXxHCCre29BZQl1NhC6NM3R3rwZiL572M4gBaHf6sHsTGZfcntBdt0YdGxxOmZDW4iy5jqe38W4yYK8C/ZyrckjUp2HPGDmagvdis58EyNMpU3nSRtiAxQDeAI9GbjKTvJK8UALab3hu556RViMrW+sbfD6HYigjq8CLQVBA5R83I4MwVGFWK2UXTBm3s7vfMr3TB15clrtMORUi6LxUCXaN4osbXSmoPSqtypvEfD/jDFAiXbqJaeIO/bwImWsbtZdFngCPgn5qtJ0OMb6XEFCs8YoBsZk4eA5dUqw/aji2wGLFEp9jNiDyiJ32IRLd8/Jc6J2zqd/zq2V7T53Yd3wVN9EvzZQ433LHWxEIVdaZT4LZQdkSbnXLbGNsQ2NHDpCmfTlr020TknJiC7EvrhsIam9qluWnUJ1XQbHhV+QKpLGWKmDAYC6V83wmmZVe0nEy19Kyerds65dsF2TZDXLOfibnqAQ8l+hnxFG5g33bjuia3mV2QyaAJ0YjPORgNyeJRlJAruT22Pls9ydIwDJJGGIQ5WLP0LkFYgH15qsL0bnNSUxcjChQ8gyva+MkVJ6GS+SLEumyCa5gLA6PrSGkrnTd7ssDQskbvv/B2E4UbI2Mol/yLwmtmy4rIRVhZikz9HbuqZjuNyGbKhhLnb/ZOo=&quot;,
+ 5         &quot;expireInSeconds&quot;: 86400,
+ 6         &quot;shouldResetPassword&quot;: false,
+ 7         &quot;passwordResetCode&quot;: null,
+ 8         &quot;userId&quot;: 0,
+ 9         &quot;requiresTwoFactorVerification&quot;: false,
+10         &quot;twoFactorAuthProviders&quot;: null,
+11         &quot;twoFactorRememberClientToken&quot;: null,
+12         &quot;returnUrl&quot;: null
+13     &#125;,
+14     &quot;targetUrl&quot;: null,
+15     &quot;success&quot;: true,
+16     &quot;error&quot;: null,
+17     &quot;unAuthorizedRequest&quot;: false,
+18     &quot;__abp&quot;: true
+19 &#125;
+</code></pre>
+<p><a href="javascript:void(0);"><img src="https://common.cnblogs.com/images/copycode.gif" alt="复制代码"></a></p>
+<p>其中 accessToken 就是我们申请的token。</p>
+<h2 id="四-使用Token访问api"><a href="#四-使用Token访问api" class="headerlink" title="四.使用Token访问api"></a>四.使用Token访问api</h2><p>在请求头中加入 Authorization， 值为’Bearer ‘ + token 中间有个空格，请注意</p>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823140646730-452314601.png" alt="img"></p>
+<pre><code>Authorization:Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIyIiwibmFtZSI6ImFkbWluIiwiQXNwTmV0LklkZW50aXR5LlNlY3VyaXR5U3RhbXAiOiJhMGU5M2Q0Yi01ZDk3LTFiZDktMTRkYS0zOWUwOTk4ODVhOTgiLCJyb2xlIjoiQWRtaW4iLCJodHRwOi8vd3d3LmFzcG5ldGJvaWxlcnBsYXRlLmNvbS9pZGVudGl0eS9jbGFpbXMvdGVuYW50SWQiOiIxIiwianRpIjoiZWYzOGMzZDgtNzBkNC00YjkzLWFmNDAtMDYwZGJkNmI1YjEzIiwiaWF0IjoxNTAzNDY3NzUzLCJuYmYiOjE1MDM0Njc3NTMsImV4cCI6MTUwMzU1NDE1MywiaXNzIjoiQWJwWmVyb1RlbXBsYXRlIiwiYXVkIjoiQWJwWmVyb1RlbXBsYXRlIn0.yXV9BBWb2dxN_o8WFPWH8GrPjP2gn0FavhyCOMf3Gaw
+</code></pre>
+<p>返回结果：</p>
+<p><img src="https://images2017.cnblogs.com/blog/668104/201708/668104-20170823140742418-1956932597.png" alt="img"></p>
+<p>调用成功！</p>
+<pre><code>&quot;Facebook&quot;: &#123;
+        &quot;IsEnabled&quot;: &quot;true&quot;,
+        &quot;AppId&quot;: &quot;&quot;,
+        &quot;AppSecret&quot;: &quot;&quot;
+      &#125;,
+      &quot;Google&quot;: &#123;
+        &quot;IsEnabled&quot;: &quot;true&quot;,
+        &quot;ClientId&quot;: &quot;&quot;,
+        &quot;ClientSecret&quot;: &quot;&quot;
+     &#125;,
+     &quot;Wechat&quot;: &#123;
+       &quot;IsEnabled&quot;: &quot;true&quot;,
+       &quot;AppId&quot;: &quot;xxxx&quot;,
+       &quot;Secret&quot;: &quot;xxx&quot;
+     &#125;,
+</code></pre>
 
                 
             </div>
@@ -957,7 +1033,7 @@ install-package pomelo.entityframeworkcore.mysql
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">260.6k</span>&nbsp;字
+                class="white-color">286.2k</span>&nbsp;字
             
             
             

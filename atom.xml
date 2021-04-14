@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-04-05T09:34:34.210Z</updated>
+  <updated>2021-04-14T15:28:34.838Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -15,6 +15,246 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/abp/abp-yuan-ma-fen-xi/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/abp/abp-yuan-ma-fen-xi/</id>
+    <published>2021-04-14T15:28:21.359Z</published>
+    <updated>2021-04-14T15:28:34.838Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Abp-源码分析-一、Abp-框架启动流程分析&quot;&gt;&lt;a href=&quot;#Abp-源码分析-一、Abp-框架启动流程分析&quot; class=&quot;headerlink&quot; title=&quot;[     Abp 源码分析]一、Abp 框架启动流程分析         &quot;&gt;&lt;/a&gt;[</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>缓存 MemoryCache 和 Redis</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/memecache-he-redis/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/memecache-he-redis/</id>
+    <published>2021-04-14T15:25:00.000Z</published>
+    <updated>2021-04-14T14:44:44.878Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【无私分享：ASP-NET-CORE-项目实战（第十一章）】Asp-net-Core-缓存-MemoryCache-和-Redis&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Redis" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/Redis/"/>
+    
+    
+    <category term="Redis" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mycat实现</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/mycat-xue-xi-shi-yong/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/mycat-xue-xi-shi-yong/</id>
+    <published>2021-04-14T14:25:00.000Z</published>
+    <updated>2021-04-14T14:40:26.300Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;【无私分享：ASP-NET-CORE-项目实战（第十三章）】Asp-net-Core-使用MyCat分布式数据库，实现读写分离&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="mycat" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mycat/"/>
+    
+    
+    <category term="mycat" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mycat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在.Net中跑RocketMQ_入门篇</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/rabbitmq-ru-men/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/rabbitmq-ru-men/</id>
+    <published>2021-04-14T13:25:00.000Z</published>
+    <updated>2021-04-14T14:10:24.230Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;在.Net中跑RocketMQ_入门篇（上）&lt;/p&gt;
+&lt;p&gt;置顶 木子iiiii 2018-07-12 22:52:36  5789  收藏 2&lt;br&gt;分类专栏：</summary>
+        
+      
+    
+    
+    
+    <category term="RabbitMQ" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/RabbitMQ/"/>
+    
+    
+    <category term="RabbitMQ" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>.Net中使用 RocketMQ队列</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/rabbitmq-a-li-yun/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/rabbitmq-a-li-yun/</id>
+    <published>2021-04-14T13:25:00.000Z</published>
+    <updated>2021-04-14T14:09:11.506Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;Net中使用-RocketMQ队列&quot;&gt;&lt;a href=&quot;#Net中使用-RocketMQ队列&quot; class=&quot;headerlink&quot; title=&quot;.Net中使用 RocketMQ队列&quot;&gt;&lt;/a&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="RabbitMQ" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/RabbitMQ/"/>
+    
+    
+    <category term="RabbitMQ" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/RabbitMQ/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ABP-缓存</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/12/abp/2021abp-huan-cun/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/12/abp/2021abp-huan-cun/</id>
+    <published>2021-04-12T14:25:00.000Z</published>
+    <updated>2021-04-12T15:11:50.498Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ABP-缓存&quot;&gt;&lt;a href=&quot;#ABP-缓存&quot; class=&quot;headerlink&quot; title=&quot;ABP-缓存&quot;&gt;&lt;/a&gt;ABP-缓存&lt;/h1&gt;&lt;h2 id=&quot;前言：什么是缓存&quot;&gt;&lt;a href=&quot;#前言：什么是缓存&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
+    
+    
+    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>PLC上位机开发</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/09/wpf/shang-wei-ji-kai-fa-jiao-cheng/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/09/wpf/shang-wei-ji-kai-fa-jiao-cheng/</id>
+    <published>2021-04-09T15:25:00.000Z</published>
+    <updated>2021-04-09T16:12:03.279Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;上位机软件介绍以及C-开发基础&quot;&gt;&lt;a href=&quot;#上位机软件介绍以及C-开发基础&quot; class=&quot;headerlink&quot; title=&quot;上位机软件介绍以及C#开发基础&quot;&gt;&lt;/a&gt;上位机软件介绍以及C#开发基础&lt;/h1&gt;&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="工业4.0" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E5%B7%A5%E4%B8%9A4-0/"/>
+    
+    
+    <category term="工业4.0" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%B7%A5%E4%B8%9A4-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/09/wpf/wpf-ru-men/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/09/wpf/wpf-ru-men/</id>
+    <published>2021-04-09T14:17:44.417Z</published>
+    <updated>2021-04-09T15:12:22.969Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Grid 面板使用 – 类似表格&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/08/gong-ju/java/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/08/gong-ju/java/</id>
+    <published>2021-04-08T15:25:13.737Z</published>
+    <updated>2021-04-08T15:25:22.565Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;idea 编译工程报错之 java: 程序包io.swagger.annotations不存在&lt;br&gt;jiaozw3 2020-12-01 19:37:25 1751 收藏 8&lt;br&gt;分类专栏： idea开发工具 文章标签： gradle maven intellij</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>MySQL高级部分理论知识细讲</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/06/mysql/mysql-li-lun-zhi-shi/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/06/mysql/mysql-li-lun-zhi-shi/</id>
+    <published>2021-04-06T12:25:00.000Z</published>
+    <updated>2021-04-07T01:01:39.974Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;MySQL高级部分理论知识细讲&lt;br&gt;全栈小刘 2020-11-06 08:57:20 136 收藏 3&lt;br&gt;版权&lt;br&gt;Spring Cloud Alibaba&lt;br&gt;带你从玩转SpringCloud Alibaba入门到精通，持续更新中!</summary>
+        
+      
+    
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
+    
+    
+    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>mangodb应用场景</title>
@@ -38,6 +278,31 @@
     
     
     <category term="mangodb" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mangodb/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql核心优化</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/mysql-he-xin-you-hua/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/05/mysql/mysql-he-xin-you-hua/</id>
+    <published>2021-04-05T09:25:00.000Z</published>
+    <updated>2021-04-05T14:19:02.583Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;mysql核心优化&quot;&gt;&lt;a href=&quot;#mysql核心优化&quot; class=&quot;headerlink&quot; title=&quot;mysql核心优化&quot;&gt;&lt;/a&gt;mysql核心优化&lt;/h1&gt;&lt;p&gt;InonoDB 5.7 事务</summary>
+        
+      
+    
+    
+    
+    <category term="sql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/sql/"/>
+    
+    
+    <category term="sql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/sql/"/>
     
   </entry>
   
@@ -232,280 +497,6 @@
     
     
     <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>abp+mysql+三方登录项目实战</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/30/abp/abp-xiang-mu-shi-zhan/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/30/abp/abp-xiang-mu-shi-zhan/</id>
-    <published>2021-03-30T14:25:00.000Z</published>
-    <updated>2021-03-29T15:24:06.950Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;领域层，搭建公共实体基类&lt;/p&gt;
-&lt;p&gt;BaseEntity公共实体属性：Remarks，Status，CreationTime，CreatorUserId，TenantId，LastModificationTime，LastModifierUserId&lt;/p&gt;
-&lt;p&gt;Ba</summary>
-        
-      
-    
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos安装使用教程</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/ecs-ying-yong-bu-shu/</id>
-    <published>2021-03-27T10:25:00.000Z</published>
-    <updated>2021-04-03T02:40:59.560Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;服务器信息CenterOS 8.1 64位&lt;/p&gt;
-&lt;h1 id=&quot;服务器-net-运行环境安装&quot;&gt;&lt;a href=&quot;#服务器-net-运行环境安装&quot; class=&quot;headerlink&quot; title=&quot;服务器.net 运行环境安装&quot;&gt;&lt;/a&gt;服务器.net</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/linux/"/>
-    
-    
-    <category term="centos" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos安装使用教程</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/27/linux/centos-an-zhuang-abp/</id>
-    <published>2021-03-27T10:25:00.000Z</published>
-    <updated>2021-04-03T02:43:56.979Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot;&gt;&lt;a href=&quot;#ABP框架-net-core3-1搭建的项目访问MySQL数据库&quot; class=&quot;headerlink&quot; title=&quot;ABP框架+.net</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/linux/"/>
-    
-    
-    <category term="centos" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>centos安装使用教程</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang-he.net-huan-jing/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/26/linux/centos-an-zhuang-he.net-huan-jing/</id>
-    <published>2021-03-26T15:25:00.000Z</published>
-    <updated>2021-03-27T08:04:32.926Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;VMware安装Centos7超详细过程（图文）&quot;&gt;&lt;a href=&quot;#VMware安装Centos7超详细过程（图文）&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="linux" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/linux/"/>
-    
-    
-    <category term="centos" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/centos/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初识ABP vNext</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/25/abp/2020abp-bo-ke-xue-xi-dotnet-kua-ping-tai/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/25/abp/2020abp-bo-ke-xue-xi-dotnet-kua-ping-tai/</id>
-    <published>2021-03-25T14:25:00.000Z</published>
-    <updated>2021-03-25T14:51:20.958Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;初识ABP-vNext（1）：开篇计划-amp-基础知识&quot;&gt;&lt;a href=&quot;#初识ABP-vNext（1）：开篇计划-amp-基础知识&quot; class=&quot;headerlink&quot; title=&quot;初识ABP</summary>
-        
-      
-    
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>数据结构和算法--前端1</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/25/kaikeba/men-tu-web1/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/25/kaikeba/men-tu-web1/</id>
-    <published>2021-03-25T14:00:00.000Z</published>
-    <updated>2021-03-25T13:44:53.906Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;数据结构和算法–前端1&quot;&gt;&lt;a href=&quot;#数据结构和算法–前端1&quot; class=&quot;headerlink&quot; title=&quot;数据结构和算法–前端1&quot;&gt;&lt;/a&gt;数据结构和算法–前端1&lt;/h1&gt;&lt;p&gt;react 和vue</summary>
-        
-      
-    
-    
-    
-    <category term="数据结构和算法" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    
-    <category term="数据结构和算法" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E5%92%8C%E7%AE%97%E6%B3%95/"/>
-    
-    <category term="leetcode" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/leetcode/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>表变量与临时表的优缺点？</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/24/niuke/sql/sql-you-hua-jian-yi/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/24/niuke/sql/sql-you-hua-jian-yi/</id>
-    <published>2021-03-24T03:25:00.000Z</published>
-    <updated>2021-03-24T02:53:08.353Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;表变量与临时表的优缺点？&quot;&gt;&lt;a href=&quot;#表变量与临时表的优缺点？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    <category term="SQL" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/SQL/"/>
-    
-    
-    <category term="SQL 性能优化" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/SQL-%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/24/vue/vue-ji-suan-shu-xing-he-watch/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/24/vue/vue-ji-suan-shu-xing-he-watch/</id>
-    <published>2021-03-24T02:54:37.831Z</published>
-    <updated>2021-03-24T03:13:32.483Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;vue计算属性和watch的区别有哪些？&quot;&gt;&lt;a href=&quot;#vue计算属性和watch的区别有哪些？&quot; class=&quot;headerlink&quot;</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/vue/qian-duan-wen-ti/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/vue/qian-duan-wen-ti/</id>
-    <published>2021-03-23T15:42:19.466Z</published>
-    <updated>2021-03-23T16:11:07.899Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;ueditor修改涂鸦窗口大小&lt;/p&gt;
-&lt;p&gt;smile_girl_ha 2017-02-06 18:02:42  1241  收藏&lt;br&gt;分类专栏： web前端 ueditor 文章标签：</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>.Net Core微服务入门全纪录</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/net-core-wei-fu-wu-ru-men-xiao-hei/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/net-core-wei-fu-wu-ru-men-xiao-hei/</id>
-    <published>2021-03-23T15:25:00.000Z</published>
-    <updated>2021-03-25T13:33:28.516Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;&lt;a href=&quot;https://mp.weixin.qq.com/s/eB4h7iCQqA5R08-nkjH_hw&quot;&gt;https://mp.weixin.qq.com/s/eB4h7iCQqA5R08-nkjH_hw&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;前言&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/abp-shi-zhan-hui-zong/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/23/abp/abp-shi-zhan-hui-zong/</id>
-    <published>2021-03-23T14:25:00.000Z</published>
-    <updated>2021-03-25T15:25:30.224Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h2 id=&quot;ABP-使用-DontWrapResult-注解去掉接口返回的“-abp”&quot;&gt;&lt;a href=&quot;#ABP-使用-DontWrapResult-注解去掉接口返回的“-abp”&quot; class=&quot;headerlink&quot; title=&quot;ABP</summary>
-        
-      
-    
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/abp/"/>
-    
-    
-    <category term="abp" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/abp/"/>
     
   </entry>
   

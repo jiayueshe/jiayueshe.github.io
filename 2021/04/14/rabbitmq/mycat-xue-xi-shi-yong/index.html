@@ -1,0 +1,1266 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="mycat实现, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>mycat实现 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">mycat实现</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mycat/">
+                                <span class="chip bg-color">mycat</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/mycat/" class="post-category">
+                                mycat
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-14
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-14
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    14 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="【无私分享：ASP-NET-CORE-项目实战（第十三章）】Asp-net-Core-使用MyCat分布式数据库，实现读写分离"><a href="#【无私分享：ASP-NET-CORE-项目实战（第十三章）】Asp-net-Core-使用MyCat分布式数据库，实现读写分离" class="headerlink" title="【无私分享：ASP.NET CORE 项目实战（第十三章）】Asp.net Core 使用MyCat分布式数据库，实现读写分离"></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/yuangang/p/5830716.html">【无私分享：ASP.NET CORE 项目实战（第十三章）】Asp.net Core 使用MyCat分布式数据库，实现读写分离</a></h1><h1 id="目录索引"><a href="#目录索引" class="headerlink" title="目录索引"></a>目录索引</h1><p><a target="_blank" rel="noopener" href="http://www.cnblogs.com/yuangang/p/5694064.html">【无私分享：ASP.NET CORE 项目实战】目录索引</a></p>
+<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>　　</p>
+<p>　　MyCat2.0版本很快就发布了，关于MyCat的动态和一些问题，大家可以加一下MyCat的官方QQ群：106088787。我们今天主要介绍一下，在我们的Asp.net Core中如何使用Mycat，这源于一个大神（Amamiya Yuuko）的分享，但是，这中间还是有少许的 坑 ：</p>
+<p>　　首先，因为大神是比较忙的，而且主要分享关键技术，所以有些地方很简略，而往往这些简略的地方容易造成新手的困惑。</p>
+<p>　　其次，在尝试了N次失败后，我发现大神的代理程序是有问题的，具体是什么问题，我们待会详细解释，经过修改之后的代理程序，可以正常运行。</p>
+<p>　　因此，我觉得很有必要写这篇文章，一步一步搭建、测试、运行。</p>
+<h1 id="什么是MyCat"><a href="#什么是MyCat" class="headerlink" title="什么是MyCat?"></a>什么是MyCat?</h1><p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901172556215-1957559218.png" alt="img"></p>
+<p>　　</p>
+<p>　　从定义和分类来看，它是一个开源的分布式数据库系统，是一个实现了MySQL协议的服务器，前端用户可以把它看作是一个数据库代理，用MySQL客户端工具和命令行访问，而其后端可以用MySQL原生协议与多个MySQL服务器通信，也可以用JDBC协议与大多数主流数据库服务器通信，其核心功能是分表分库，即将一个大表水平分割为N个小表，存储在后端MySQL服务器里或者其他数据库里。</p>
+<p>　　MyCat发展到目前的版本，已经不是一个单纯的MySQL代理了，它的后端可以支持MySQL、SQL Server、Oracle、DB2、PostgreSQL等主流数据库，也支持MongoDB这种新型NoSQL方式的存储，未来还会支持更多类型的存储。而在最终用户看来，无论是那种存储方式，在MyCat里，都是一个传统的数据库表，支持标准的SQL语句进行数据的操作，这样一来，对前端业务系统来说，可以大幅降低开发难度，提升开发速度。</p>
+<p>　　此外，开发者可以根据不同的需求将表分配不同的数据节点，比如Table A存放在关系型数据库中（如MySQL），而Table B可能更适合NoSQL（如MongoDB），在MyCAT中开发者只需要简单配置，即可让MyCAT完成这一系列操作的路由。</p>
+<p> 　关于更多MyCat，大家可以参照官网：<a target="_blank" rel="noopener" href="http://www.mycat.org.cn/">http://www.mycat.org.cn/</a></p>
+<h1 id="MyCat的优势"><a href="#MyCat的优势" class="headerlink" title="MyCat的优势"></a>MyCat的优势</h1><p>　　</p>
+<ul>
+<li>基于阿里巴巴的开源项目Cobar，具备良好的稳定性、可靠性、优良的结构和优良的性能，拥有许多的项目案例。站在巨人的肩膀上，MyCAT将走的更远。</li>
+<li></li>
+<li>广泛借鉴最好的开源项目和创新的理念，让这些融入MyCAT的基因，使MyCAT成为领先其他电商等类似的开源项目，甚至超过了一些企业级应用。</li>
+<li></li>
+<li>MyCAT技术团队的参与者都经历过至少五多年的项目经验，团队中包括一些高级软件工程师、架构师、DBA。由精英们组成的MyCAT技术团队将确保产品质量。</li>
+<li></li>
+<li>MyCAT是完全独立的社区，不依附于任何企业，遵循着完全开放、免费、开源的原则。它不像一些开源项目，重要的功能封闭在其商业产品，并使开源项目像一个装饰。</li>
+<li></li>
+<li>支持超过60种的数据库作为数据节点，如MySQL、SQL Server、Oracle、MongoDB、DB2等</li>
+</ul>
+<h1 id="MyCat与ADO-NET"><a href="#MyCat与ADO-NET" class="headerlink" title="MyCat与ADO.NET"></a>MyCat与ADO.NET</h1><p>　　由于MyCAT与MySQL协议有些许差异，开发者可能不能够直接使用Oracle官方提供的Mysql.Data（ADO层）来与MyCAT直接连接，因此有大神专门为.NET开发者设计了针对MyCAT优化过的ADO层驱动，即 Pomelo.Data.MyCat，开发者通过使用MyCatConnection、MyCatCommand类可以实现对MyCAT的连接与查询。</p>
+<h1 id="MyCat-与-Entity-Framework-Core"><a href="#MyCat-与-Entity-Framework-Core" class="headerlink" title="MyCat 与 Entity Framework Core"></a>MyCat 与 Entity Framework Core</h1><p>　　由于MyCAT的协议与MySQL有所差异，导致了无论是Java平台下的Hibernate还是.NET下的Entity Framework都无法使用MySQL的provider直接来操作MyCAT。这点在EF中的Migrations以及Code First上表现的尤为明显，此外开发者不仅需要手动建库，还需要配置分片规则等，操作繁琐。</p>
+<p>因此我们使用第三方专门为MyCAT量身打造的Entity Framework Core Provider，即 Pomelo.EntityFrameworkCore.MyCat。</p>
+<h1 id="安装Java8"><a href="#安装Java8" class="headerlink" title="安装Java8"></a>安装Java8</h1><p>　　MyCat 需要 java cdk的支持，安装方法网上很多很详细，这里我们就不罗列了。</p>
+<h1 id="下载MyCat-Server"><a href="#下载MyCat-Server" class="headerlink" title="下载MyCat Server"></a>下载MyCat Server</h1><p>　　废话不多说，我们来开始我们的MyCat之旅：</p>
+<p>　　我们演示使用的服务器是：CentOS7 当然，Windows 也是支持的，我们以 CentOS为例。</p>
+<p>　　首先，我们在服务器安装 MySQL ，这里我安装的是 MySQL 5.7，关于 MySQL的安装，我们这里就不演示了，没有装过的朋友，网上有大片的详细安装步骤。值得注意的是，安装完MySQL之后，我们需要编辑 my.cnf 文件，将MySQL的默认编码设置为 UTF8 。 </p>
+<p>　　我们下载<a href="https://github.com/MyCATApache/Mycat-download"> MyCat Server </a>：我是通过 wget XXXXXXXX；大家也可以直接下载下来，然后通过 FTP 传到服务器上。</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901174337621-1398974964.png" alt="img"></p>
+<p>　　因为我们是Linux，所以我选择 linux.tar.gz，使用 Windows的朋友可以选择 win.tar.gz</p>
+<p>　　</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901174505105-868231046.png" alt="img"></p>
+<p>　　[root@bogon ~]# wget <a href="https://github.com/MyCATApache/Mycat-download/blob/master/1.5-RELEASE/Mycat-server-1.5.1-RELEASE-20160816173057-linux.tar.gz">https://github.com/MyCATApache/Mycat-download/blob/master/1.5-RELEASE/Mycat-server-1.5.1-RELEASE-20160816173057-linux.tar.gz</a></p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901174949183-1106288614.png" alt="img"></p>
+<p> 　解压 MyCat Server 压缩包：[root@bogon ~]# tar -xzvf Mycat-server-1.5.1-RELEASE-20160816173057-linux.tar.gz</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901175322886-401765267.png" alt="img"></p>
+<p>　　将文件移动至 /usr/local/mycat 目录下：[root@bogon ~]# mv mycat /usr/local/mycat</p>
+<p> 　</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901175656808-1725517642.png" alt="img"></p>
+<p>　　这样，我们的 MyCat Server，就完成了，我们来运行一下：</p>
+<p>　　打开mycat/bin目录，运行 ./mycat start ，通过 ./mycat status 查看 mycat的运行情况</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160901180110433-1573182494.png" alt="img"></p>
+<p>　　</p>
+<p>　　启动：./mycat start   重新启动：./mycat restart  停止：./mycat stop  状态：./mycat status</p>
+<h1 id="下载-运行代理程序"><a href="#下载-运行代理程序" class="headerlink" title="下载 运行代理程序"></a>下载 运行代理程序</h1><p>　　我们使用的代理程序是由 Amamiya Yuuko 写的 <a href="https://github.com/PomeloFoundation/Entity-Framework-Core-MyCat-Proxy/releases">Pomelo.EntityFrameworkCore.MyCat.Proxy</a></p>
+<p>　　</p>
+<p>　　这个代理程序是由问题的，我们前面说过了，我们先来尝试一下，对于出现的问题和解决方式，我们再讲解。</p>
+<p>　　我们先<a href="https://github.com/PomeloFoundation/Entity-Framework-Core-MyCat-Proxy/releases">下载这个代理程序</a>，下在方法跟上面 MyCat Server 一样，可以使用多种方式，大家可以直接下载到本地，解压完成后，把解压的文件通过FTP上传至proxy目录，我这里还是使用 wget</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902142930996-66100190.png" alt="img"></p>
+<p>　　</p>
+<p>　　[root@bogon ~]# wget <a href="https://github.com/PomeloFoundation/Entity-Framework-Core-MyCat-Proxy/releases/download/1.0.0-alpha2/MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip">https://github.com/PomeloFoundation/Entity-Framework-Core-MyCat-Proxy/releases/download/1.0.0-alpha2/MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip</a></p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902143106558-367726692.png" alt="img"></p>
+<p>　　创建一个目录 proxy ，将压缩包移动到此目录下：</p>
+<p>　　[root@bogon ~]# mkdir proxy</p>
+<p>　　[root@bogon ~]# mv MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip proxy/MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip</p>
+<p>　　进入 proxy ,并解压 MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip 压缩包：</p>
+<p>　　[root@bogon ~]# cd proxy</p>
+<p>   [root@bogon proxy]# unzip MyCat-Entity-Framework-Core-Proxy.1.0.0-alpha2-netcore100.zip</p>
+<p> 　编辑 config.json 文件，修改 MyCatRoot为”/usr/local/mycat”：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902081954340-2109092001.png" alt="img"></p>
+<h1 id="安装-NET-Core-SDK-for-CentOS"><a href="#安装-NET-Core-SDK-for-CentOS" class="headerlink" title="安装.NET Core SDK for CentOS"></a>安装.NET Core SDK for CentOS</h1><p>　　详见：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/yuangang/p/5787122.html">【（第十章）】发布项目到 Linux 上运行 Core 项目</a></p>
+<h1 id><a href="#" class="headerlink" title></a></h1><h1 id="运行代理程序"><a href="#运行代理程序" class="headerlink" title="运行代理程序"></a>运行代理程序</h1><p>　　</p>
+<p>　　我们来运行一下代理程序：[root@bogon proxy]# dotnet Pomelo.EntityFrameworkCore.MyCat.Proxy.dll</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902082806652-2041161342.png" alt="img"></p>
+<p>　　我们先不管在程序中是怎么实现MyCat的，这个后面我们再讲，我们先来测试一下这个代理程序，不先解决这个代理的问题，到后面都很难知道到底是程序出错还是服务器的问题还是代理的问题：</p>
+<p>　　我在VS2015的控制台里执行：Add-Migration  MySQL_Init（也可以使用命令：dotnet ef Migrations add  MySQL_Init）</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902101122699-1414704236.png" alt="img"></p>
+<p>　　出错了。。。这个错误是操作超时了，这极有可能是连接不上MyCat服务器，这个问题曾困扰了我一段时间，后来突然发现忽略了一个重要的东西，防火墙。。。</p>
+<p>　　我们的代理使用的是7066端口，我们来开启一下防火墙端口，并重启防火墙：</p>
+<p>　　[root@bogon ~]# firewall-cmd –zone=public –add-port=7066/tcp –permanent</p>
+<p>　　 [root@bogon ~]# systemctl restart firewalld</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902135850043-2014884173.png" alt="img"></p>
+<p> 　我们再来执行 Add-Migration  MySQL_Init ：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902140058433-1495043388.png" alt="img"></p>
+<p>　　创建数据库： Update-Database -Verbose （dotnet ef database update）</p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902140315215-521582859.png" alt="img"></p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902140355293-1939758230.png" alt="img"></p>
+<p>　　创建成功，看似没有什么问题。</p>
+<p>   我们来插入几条数据看下：出错了 Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.</p>
+<p> 　超时，服务器没有响应。这是怎么回事呢，我们通过 Navicat 来连接一下 MyCat（同样服务器防火墙要开启 8066 端口，默认MyCat 是8066 端口，方法同上）：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902142823605-662649756.png" alt="img"></p>
+<p>　　首先，我们来检查一下我们的MyCat状态： 　</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902143832465-808409910.png" alt="img"></p>
+<p>　　MyCat Server 关闭了。。。我们重启：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902143925152-1226676862.png" alt="img"></p>
+<p>　　</p>
+<p>　　重启之后，总是自动关闭。这是什么原因？我们看下日志（/usr/local/mycat/logs/wrapper.log）：</p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902144148277-743798578.png" alt="img"></p>
+<p>　　这下看清楚了，是因为rule columns 有多个 values值，这个是什么东西呢，这是就是配置MyCat 规则的拆分的列的名称。</p>
+<p>　　我们来看下代理生成的rule（/usr/local/mycat/conf/rule.xml）:</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902144407371-948174192.png" alt="img"></p>
+<p> 　也就是说：MyCat 这个拆分规则 只支持单个，但是我们的代理生成了多个，导致 MyCat Server 错误。</p>
+<p>　　我这里修改一下，改成<columns>ID，MyCat 启动就没有问题了，但是问题来了，我这里有四个实体类，其中有三个的主键都是ID，但是有一个的主键是UserID，那么只根据ID拆分显然是不合理的。</columns></p>
+<p>　　我们来看下 schema （/usr/local/mycat/conf/schema.xml）： </p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902144856855-273021351.png" alt="img"></p>
+<p>　　大家注意 table 标签的 rule 属性，都是 db_wkmvc_rule 跟 rule.xml 的 tableRule 标签的 name 属性是对应的。也就是说，这个表，按照 rule=””的规则，根据columns的值（列名，这里是主键也就是ID或UserID）拆分数据。</p>
+<p>　　如何解决？</p>
+<p>　　我想到的方案就是，每个表一个单独的规则，每个规则的columns值就是当前这个表的主键。</p>
+<p>　　我们来看下代理程序的源码：</p>
+<p>　　根据方法名称，我们可以看出这两个方法应该就是修改 rule.xml 和 schema.xml</p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902145513996-1921406658.png" alt="img"></p>
+<p> 　我们来看下GenerateRuleXml() ：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902145633402-669694961.png" alt="img"></p>
+<p>　　这一段就是生成xml内容的，为什么我们的 rule.xml 中的 columns 会生成 诸如：ID,ID,ID,UserID 呢？我们可以很清楚的看出 <columns>{ string.Join(“,”, s.Keys.First()) }</columns></p>
+<p>　　在 foreach 循环 schema.xml 中 table 标签的时候，把他们的 Key （primaryKey） 通过 string.join 组合起来了，并且只生成了一个 tableRule </p>
+<p>　　那么，按照我们的方案，应该是每个表（在 schema.xml 中体现就是 一个 table 标签），单独生成一个 规则。</p>
+<p>　　</p>
+<p>　　修改起来也很简单：</p>
+<p>　　我们把循环中的 ruleXml=”” 改为 rulexml+=””，然后把 <columns>{ string.Join(“,”, s.Keys.First()) }</columns> 改为当前表的 primaryKey ：<columns>{ s.Keys.First() }</columns></p>
+<p>　　</p>
+<p>　　这是修改后的完整的 public void GenerateRuleXml(List<MyCatTable> Schema, List<MyCatDataNode> DataNodes, string database, bool IsUnder16)</MyCatDataNode></MyCatTable></p>
+<p>　　public void GenerateRuleXml(List<MyCatTable> Schema, List<MyCatDataNode> DataNodes, string database, bool IsUnder16)<br>　　{<br>　　　　foreach(var s in Schema)<br>　　　　{<br>　　　　　　if (s.Keys.Count() != 1)<br>　　　　　　　　　　　　　　continue;</MyCatDataNode></MyCatTable></p>
+<p>　　　　　　string ruleXml = “”;<br>　　　　　　string funcXml = “”;<br>　　　　　　if (IsUnder16)<br>　　　　　　{<br>　　　　　　　　ruleXml += $@”<br>　　　　　　　　　　　　　　&lt;tableRule name=””{ database }_{ s.TableName }_rule””&gt;<br>　　　　　　　　　　　　　　<rule><br>　　　　　　　　　　　　　　<columns>{ s.Keys.First() }</columns><br>　　　　　　　　　　　　　　<algorithm>{ database }_{ s.TableName }_func</algorithm><br>　　　　　　　　　　　　　　</rule><br>　　　　　　　　　　　　　　<br>　　　　　　　　　　　　　　“;</p>
+<p>　　　　　　　　funcXml += $@”<br>　　　　　　　　　　　　　　&lt;function name=””{ database }_{ s.TableName }_func”” class=””org.opencloudb.route.function.PartitionByMod””&gt;<br>　　　　　　　　　　　　　　&lt;property name=””count””&gt;{ s.DataNodes.Count() }<br>　　　　　　　　　　　　　　<br>　　　　　　　　　　　　　　“;<br>　　　　　　}<br>　　　　　　else // 1.6+<br>　　　　　　{</p>
+<p>　　　　　　　　ruleXml += $@”<br>　　　　　　　　　　　　　　&lt;tableRule name=””{ database }_{ s.TableName }_rule””&gt;<br>　　　　　　　　　　　　　　<rule><br>　　　　　　　　　　　　　　<columns>{ s.Keys.First() }</columns><br>　　　　　　　　　　　　　　<algorithm>{ database }_{ s.TableName }_func</algorithm><br>　　　　　　　　　　　　　　</rule><br>　　　　　　　　　　　　　　<br>　　　　　　　　　　　　　　“;</p>
+<p>　　　　　　　　funcXml += $@”<br>　　　　　　　　　　　　　　&lt;function name=””{ database }_{ s.TableName }_func”” class=””io.mycat.route.function.PartitionByMod””&gt;<br>　　　　　　　　　　　　　　&lt;property name=””count””&gt;{ s.DataNodes.Count() }<br>　　　　　　　　　　　　　　<br>　　　　　　　　　　　　　　“;</p>
+<p>　　　　　　}</p>
+<p>　　　　　　using (var reader = XmlReader.Create(Path.Combine(MyCatRoot, “conf”, “rule.xml”), new XmlReaderSettings { DtdProcessing = DtdProcessing.Ignore }))<br>　　　　　　{<br>　　　　　　　　var xml = new XmlDocument();<br>　　　　　　　　xml.Load(reader);<br>　　　　　　　　var mycatRule = xml.ChildNodes.Cast<XmlNode>().Single(x =&gt; x.Name == “mycat:rule”);<br>　　　　　　　　foreach (var x in mycatRule.ChildNodes.Cast<XmlNode>().Where(x =&gt; (x.Name == “tableRule” &amp;&amp; x.Attributes[“name”].Value == $”{ database }_{ s.TableName }<em>rule”) || (x.Name == “function” &amp;&amp; 　　　　　　　　x.Attributes[“name”].Value == $”{ database }</em>{ s.TableName }_func”)).ToList())<br>　　　　　　　　mycatRule.RemoveChild(x);<br>　　　　　　　　mycatRule.InnerXml = ruleXml + mycatRule.InnerXml;<br>　　　　　　　　mycatRule.InnerXml += funcXml;<br>　　　　　　　　reader.Dispose();<br>　　　　　　　　File.WriteAllText(Path.Combine(MyCatRoot, “conf”, “rule.xml”), PatchXml(“rule”, xml.OuterXml));<br>　　　　　　}<br>　　　　}<br>　　}</XmlNode></XmlNode></p>
+<p>　　我们重新编译生成，发布出来上传至服务器，替换掉我们之前的代理程序。然后重新运行一下，我们再来看下 rule.xml 和 schema.xml：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902151443324-1491862057.png" alt="img"></p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902151032933-130416869.png" alt="img"></p>
+<p> 　是不是按照我们的预期，我们看下MyCat Server的状态：</p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902151642418-1479274028.png" alt="img"></p>
+<p>　　MyCat 连接也没问题了</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902151941121-1315935931.png" alt="img"></p>
+<p> 　（后记：关于这个代理的问题，已经提交给作者了，这个代理程序我测试有一段时间了，当时还是alpha1版本，写文章的时候，我看到 alpha2版本貌似改进了，但是源码没有修改。）</p>
+<h1 id="如何在Asp-net-Core中使用-Mycat"><a href="#如何在Asp-net-Core中使用-Mycat" class="headerlink" title="如何在Asp.net Core中使用 Mycat"></a>如何在Asp.net Core中使用 Mycat</h1><p>　　分两部分，第一部分就是最简洁的应用，第二部分是我在项目中的应用，大家自行参考。</p>
+<p> 　第一部分，最简洁的应用（作者 Demo）:</p>
+<p>　　</p>
+<p> 　首先，我们新建一个控制台程序</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902153031918-338005906.png" alt="img"></p>
+<p>　　并将 <code>Pomelo.EntityFrameworkCore.MyCat </code>添加至 project.json 中（Nuget：Install-Package Pomelo.EntityFrameworkCore.MyCat -Pre）</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902153216011-689787405.png" alt="img"></p>
+<p>　　创建一个Blog模型：　　</p>
+<p>　　public class Blog<br>　　{<br>　　　　public long Id { get; set; }</p>
+<p>　　　　public string Title { get; set; }</p>
+<p>　　　　public string Content { get; set; }</p>
+<p>　　　　public DateTime Time { get; set; }</p>
+<p>　　}</p>
+<p>　　</p>
+<p>　　创建DbContext类，并重写DbContext中的OnConfiguring方法，配置数据节点以及MyCAT服务器信息</p>
+<p>　　public class SampleContext : DbContext<br>　　{<br>　　　　public DbSet<Blog> Blogs { get; set; }</Blog></p>
+<p>　　　　protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)<br>　　　　{<br>　　　　　　base.OnConfiguring(optionsBuilder);</p>
+<p>　　　　　　optionsBuilder.UseMyCat(“server=IP;port=8066;uid=test;pwd=test;database=blogs”)<br>　　　　　　　　　　　　   .UseDataNode(“IP”, “blogs_1”, “用户名”, “密码”)</p>
+<p>　　　　　　　　　　　　　 .UseDataNode(“IP”, “blogs_2”, “用户名”, “密码”)</p>
+<p>　　　　　　　　　　　　　 .UseDataNode(“IP”, “blogs_3”, “用户名”, “密码”);<br>　　　　}<br>　　}</p>
+<p>　　</p>
+<h2 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h2><h2 id="UseMyCat（）中的-Server-是-MyCat-服务器的地址-Uid-和-Pwd-是-MyCat-的-用户名和密码，不要和数据的混了。"><a href="#UseMyCat（）中的-Server-是-MyCat-服务器的地址-Uid-和-Pwd-是-MyCat-的-用户名和密码，不要和数据的混了。" class="headerlink" title=".UseMyCat（）中的 Server 是 MyCat 服务器的地址 Uid 和 Pwd 是 MyCat 的 用户名和密码，不要和数据的混了。"></a>.UseMyCat（）中的 Server 是 MyCat 服务器的地址 Uid 和 Pwd 是 MyCat 的 用户名和密码，不要和数据的混了。</h2><h2 id="UseDataNode（）中的-Server-是节点数据库的地址-Uid-和-Pwd-是节点数据库的-用户名和密码。"><a href="#UseDataNode（）中的-Server-是节点数据库的地址-Uid-和-Pwd-是节点数据库的-用户名和密码。" class="headerlink" title=".UseDataNode（）中的 Server 是节点数据库的地址 Uid 和 Pwd 是节点数据库的 用户名和密码。"></a>.UseDataNode（）中的 Server 是节点数据库的地址 Uid 和 Pwd 是节点数据库的 用户名和密码。</h2><h2 id="如何查看-MyCat-的用户名和密码："><a href="#如何查看-MyCat-的用户名和密码：" class="headerlink" title="如何查看 MyCat 的用户名和密码："></a>如何查看 MyCat 的用户名和密码：</h2><p>　　　　打开mycat目录下的 conf 目录（我们这里是：/usr/local/mycat/conf）</p>
+<p>　　　  查看 server.xml 文件：</p>
+<p>　　　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902154353824-805854633.png" alt="img"></p>
+<p>　　　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902154544090-480891666.png" alt="img"></p>
+<p>　　上面插入一段，一般使用mycat的应该都知道这些文件分别是干什么的，我们这里啰嗦一下。</p>
+<p>　　我把整个的 Program.cs 内容给大家展示一下：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902155133683-1774654254.png" alt="img"></p>
+<p>　　然后，就不多说了，你可以使用控制台命令 Add-Migration 和 Update-database 也可以使用命令 dotnet ef migrations add 和 dotnet ef database update 执行迁移和其它操作了。</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902155143090-1746667205.png" alt="img"></p>
+<p>　　第二部分，我在项目中的应用:</p>
+<p>　　</p>
+<p>　　首先，在配置文件（siteconfig.json）中添加一个是否使用 MyCat 的配置：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902155456824-554571216.png" alt="img"></p>
+<p>　　然后，同样在配置文件（siteconfig.json）中添加数据库节点配置：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902155608730-1492901916.png" alt="img"></p>
+<p>　　在 <a target="_blank" rel="noopener" href="http://www.cnblogs.com/yuangang/p/5828545.html">【（第十二章）】添加对SqlServer、MySql、Oracle的支持</a> 中，我们有个数据库选择类 DataBaseProvider.cs </p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902160008136-183661835.png" alt="img"></p>
+<p>　　这里面已经写了一个 _isUseMyCat 和 GetMyCatConnect（），是否使用 MyCat 这个 跟 数据库选择一样，我们从配置文件中读取这个配置返回即可：</p>
+<p>　　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902160208871-1817010933.png" alt="img"></p>
+<p>　　我们来重写一下 GetMyCatConnect 返回 MyCat 和 节点数据库连接的 DbContextOptionsBuilder：</p>
+<p>　　</p>
+<p>　　public DbContextOptionsBuilder GetMyCatConnect(string connectionStr, DbContextOptionsBuilder _options)<br>　　{<br>　　　　_options.UseMyCat(connectionStr);</p>
+<p>　　　　List<MyCatDatabaseHost> hosts = new Services.ConfigServices.AppConfigurtaionServices().GetListAppSettings<MyCatDatabaseHost>(“MyCatDatabaseHost”);</MyCatDatabaseHost></MyCatDatabaseHost></p>
+<p>　　　　foreach(var host in hosts)<br>　　　　{<br>　　　　　　_options.UseDataNode(host.Host, host.Database, host.Username, host.Password, host.Port);<br>　　　　}</p>
+<p>　　　　return _options;<br>　　}</p>
+<p>　　对于读取配置的方法，我们在 <a target="_blank" rel="noopener" href="http://www.cnblogs.com/yuangang/p/5828545.html">【（第十二章）】添加对SqlServer、MySql、Oracle的支持</a> 中已经完整的贴出。</p>
+<p>　　修改一下 Startup.cs ：</p>
+<p>　　</p>
+<p> 　<img src="https://images2015.cnblogs.com/blog/771789/201609/771789-20160902160613402-986455834.png" alt="img"></p>
+<p>　　这样，我们就实现了对 MyCat的支持和切换，当然，在实际项目中，我们可能不需要这些，使用什么，是否有必要使用 MyCat 这些可能是早就定好的，因为我这个是测试学习的项目，所以罗列了各种东西。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">JiangYuesheng</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/mycat-xue-xi-shi-yong/">https://github.com/jiayueshe/jiayueshe.github.io/2021/04/14/rabbitmq/mycat-xue-xi-shi-yong/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">JiangYuesheng</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/mycat/">
+                                    <span class="chip bg-color">mycat</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/14/rabbitmq/memecache-he-redis/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="缓存 MemoryCache 和 Redis">
+                        
+                        <span class="card-title">缓存 MemoryCache 和 Redis</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            缓存 MemoryCache 和 Redis
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Redis/" class="post-category">
+                                    Redis
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Redis/">
+                        <span class="chip bg-color">Redis</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/14/rabbitmq/rabbitmq-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="在.Net中跑RocketMQ_入门篇">
+                        
+                        <span class="card-title">在.Net中跑RocketMQ_入门篇</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            .Net中使用 RocketMQ队列
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-14
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/RabbitMQ/" class="post-category">
+                                    RabbitMQ
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/RabbitMQ/">
+                        <span class="chip bg-color">RabbitMQ</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">286.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

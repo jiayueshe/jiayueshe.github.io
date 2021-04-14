@@ -1,0 +1,1515 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="ABP-缓存, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>ABP-缓存 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">ABP-缓存</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/abp/">
+                                <span class="chip bg-color">abp</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/abp/" class="post-category">
+                                abp
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-12
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5.7k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    22 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="ABP-缓存"><a href="#ABP-缓存" class="headerlink" title="ABP-缓存"></a>ABP-缓存</h1><h2 id="前言：什么是缓存"><a href="#前言：什么是缓存" class="headerlink" title="前言：什么是缓存"></a>前言：什么是缓存</h2><p>缓存就是数据交换的缓冲区（称作Cache），当某一方法要读取数据时，会首先从缓存中查找需要的数据，如果找到了则直接执行，找不到的话则从数据库中找。由于缓存的运行速度比数据库查找速度快得多，故缓存的作用就是帮助系统更快地运行。</p>
+<p>图解原理</p>
+<p>下面就让我们看看ABP是怎么实现缓存机制的吧</p>
+<p>我们实现缓存主要包括4个部分：</p>
+<pre><code>ICache-&gt;CacheBase-&gt;AbpMemoryCache：对缓存的抽象以及实现；
+ITypedCache：缓存的泛型实现；
+ICacheManager-&gt;CacheManagerBase-&gt;AbpMemoryCacheManager：缓存管理类的抽象和实现，代码中可以通过注入ICacheManager来获取缓存；
+ICachingConfiguration-&gt;CachingConfiguration：用来配置使用哪种缓存。
+</code></pre>
+<h2 id="一-使用ICacheMananger实现缓存"><a href="#一-使用ICacheMananger实现缓存" class="headerlink" title="一. 使用ICacheMananger实现缓存"></a>一. 使用ICacheMananger实现缓存</h2><p>1.1:使用</p>
+<p>如果使用ICacheMananger缓存，我们只需要通过依赖注入把缓存声明就可以了</p>
+<pre><code> private readonly IRepository&lt;Person, int&gt; _entityRepository; //声明Person存储仓
+        private readonly ICacheManager _cacheManager;//依赖注入缓存
+        public PersonCacheApplicationService(IRepository&lt;Person, int&gt; entityRopository
+            , ICacheManager cacheManager)
+        &#123;
+ 
+            _cacheManager = cacheManager;//依赖注入缓存
+            _entityRepository = entityRopository;
+ 
+        &#125;
+</code></pre>
+<p>//在接口中使用</p>
+<pre><code>    public async Task&lt;List&lt;Person&gt;&gt; GetAll()
+        &#123;
+ 
+           // var entity = await _entityRepository.GetAllListAsync();
+            var entityCache = await _cacheManager.GetCache(&quot;PeopelCache&quot;) //缓存的唯一表示名
+                .Get(&quot;Peopel&quot;, () =&gt; _entityRepository.GetAllListAsync());
+            return entityCache;
+        &#125;
+</code></pre>
+<p>然后我们怎么监控缓存的使用情况呢？</p>
+<p>我们在缓存点加个小断点，监视窗口输入 _cacheManager.GetCache(“PeopelCache”)，就可以查看到它的缓存信息了</p>
+<p>我们可以看到缓存的时间是1个小时（默认的），变化时间是空，名字是PeopelCache<br>1.2我们了解到，它还有个ITypedCache泛型版本</p>
+<p>把代码改为这样便可</p>
+<pre><code>  var entityCache =  _cacheManager.GetCache(&quot;ControllerCache&quot;)
+                                    .AsTyped&lt;string,List&lt;Person&gt;&gt;()
+                                   .Get(&quot;AllUsers&quot;, () =&gt;  _entityRepository.GetAllList());
+</code></pre>
+<p>1.3了解一下ICache对象。</p>
+<p>ICacheManager.GetCache方法返回了一个ICache对象的。</p>
+<p>而我们上面用到的是ICache对象的Get方法。ICache接口还有其它方法，例如：GetOrDefault，Set（设置缓存），Remove（移除缓存）和Clear（清除缓存）。当然也有这些方法的异步(async)版本。<br>1.4Configuration设置缓存时间</p>
+<p>缓存的过期时间默认是60分钟。它是变化的。如果你在60分钟内没有使用该缓存，该缓存会被自动的移除。如果你想改变所有的缓存或者指定的缓存来的默认过期时间，你可以这样做，实现如下：</p>
+<p>在web.Core层 找到  项目名WebCoreModule  下的 PreInitialize()方法 加入</p>
+<pre><code>   //配置所有Cache的默认过期时间为2小时
+            Configuration.Caching.ConfigureAll(
+                cache =&gt;
+                &#123;
+                    cache.DefaultAbsoluteExpireTime = TimeSpan.FromHours(2);
+                &#125;);
+            配置指定的Cache过期时间为1天
+            Configuration.Caching.Configure(
+                &quot;PeopelCache&quot;, cache =&gt;
+                &#123;
+                    cache.DefaultAbsoluteExpireTime = TimeSpan.FromDays(1);
+                &#125;);
+</code></pre>
+<p>我们可以看到PeopelCache 这个缓存 过期时间改为了一天，变化时间改为了2个小时了</p>
+<p>这些配置将会在首次创建缓存的时候生效。配置不仅仅局限于DefaultSlidingExpireTime，你可以利用ICache接口中的属性获取方法来自由的配置并且初始化它们。</p>
+<p>可以手动清除缓存</p>
+<pre><code>//清除指点缓存
+ _cacheManager.GetCache(&quot;BasBloodTransfusionReactionCache&quot;).Remove(&quot;BasBloodTransfusionReaction&quot;);
+ 
+//清除全部缓存
+_cacheManager.Dispose(); //清除缓存
+</code></pre>
+<p>还有很多缓存操作可以了借鉴。自行尝试</p>
+<h2 id="二-使用IEntityCache对实体进行缓存"><a href="#二-使用IEntityCache对实体进行缓存" class="headerlink" title="二.使用IEntityCache对实体进行缓存"></a>二.使用IEntityCache对实体进行缓存</h2><p>为什么又要学使用IEntityCache缓存呢？</p>
+<p>我们可以看到，使用ICacheMananger缓存是有过期时间的，在网上看到一个很好的例子：受到了一个时间的限制我们缓存的用户列表，它是一个实时会变化的集合，而这个实时是不定时的，可能1mins之内就有新用户注册，也有可能几天没有用户注册，这个时候就不好设置缓存过期（刷新）时间。</p>
+<p>当我们需要通过ID获取实体数据而又不想经常去数据库查询时，我们就可以使用IEntityCache。</p>
+<p>换句话说，IEntityCache支持按实体Id进行动态缓存。</p>
+<p>而IEntityCache缓存是，不需要设置缓存过期时间，当数据变化的时候就能自动重新缓存。</p>
+<p>可以看到这是我们的实体</p>
+<pre><code>  [Table(&quot;Person&quot;)]
+    public class Person : FullAuditedEntity
+    &#123;
+        public string Name &#123; get; set; &#125;
+        public int Sex &#123; get; set; &#125;
+    &#125;
+</code></pre>
+<p>并且，假设我们通过该实体的Id，需要频繁调用取得Person实体的Name。首先，我们应该创建一个类来存储 cache items：</p>
+<pre><code> [AutoMapFrom(typeof(Person))]
+  public  class PersonCacheItem
+    &#123;
+         public string Name &#123; get; set; &#125;
+    &#125;
+</code></pre>
+<p>我们 不应该直接存储实体到缓存中 因为缓存的时候需要序列化缓存对象而实体可能不能被序列化(尤其是实体的导航属性)。这就是为什么我们定义了一个简单的像DTO的类来存储数据到缓存中。我们添加了 AutoMapFrom 特性，这是因为我们想使用 AutoMapper 来自动的转换 Person 实体为 PersonCacheItem 对象。如果我们不使用 AutoMapper，那么我们应该重写 EntityCache 类的 MapToCacheItem 方法手动转换/映射它。</p>
+<p>定义一个接口为缓存类的接口：</p>
+<pre><code>public interface IPersonCache : IEntityCache&lt;PersonCacheItem&gt;
+&#123;
+ 
+&#125;
+</code></pre>
+<p>最后，我们就可以创建缓存类来缓存Person实体：</p>
+<p>ITransientDependency：所有实现此接口的类都自动注册到依赖项</p>
+<p>IPersonCache：缓存类接口</p>
+<p>EntityCache&lt;A，B&gt;：把A的数据缓存到B中</p>
+<pre><code>public class PersonCache : EntityCache&lt;Person, PersonCacheItem&gt;, IPersonCache, ITransientDependency
+&#123;
+    public PersonCache(ICacheManager cacheManager, IRepository&lt;Person&gt; repository)
+        : base(cacheManager, repository)
+    &#123;
+ 
+    &#125;
+&#125;
+</code></pre>
+<p>在接口处使用了</p>
+<pre><code>  public class PersonCacheApplicationService : AbpDemoAppServiceBase
+    &#123;
+        private readonly IPersonCache _personCache;
+        public PersonCacheApplicationService(IRepository&lt;Person, int&gt; entityRopository
+           )
+        &#123;   _personCache = personCache;  &#125;
+//如果查询为空，会报错，最好加个错误判断
+   public string GetPersonNameById(int id)
+    &#123;
+            try
+            &#123;
+                return _personCache[id].Name; //alternative: _personCache.Get(id).Name;
+            &#125;
+            catch &#123;
+                return &quot;值为空&quot;;  &#125;
+   &#125;&#125;
+</code></pre>
+<p>我们整个的思路是</p>
+<pre><code>在首次调用的时候我们通过仓储从数据库中取得实体。那么随后的调用都是从缓存中取得。
+
+如果实体被更新或者删除，它会自动的无效实体。因此，它会在下次调用的时候重新从数据库中检索数据。
+
+使用 IObjectMapper 接口来映射实体到缓存项。IObjectMapper 接口在 AutoMapper 中被实现。
+
+使用缓存类缓存Name
+</code></pre>
+<h2 id="三-Redis-Cache-集成"><a href="#三-Redis-Cache-集成" class="headerlink" title="三.Redis Cache 集成"></a>三.Redis Cache 集成</h2><p>如果们不集成Redis Cache,上面的缓存操作是缓存在系统内存的。</p>
+<p>然而我们想要集成RedisCahe 只需要在添加一个安装包，一个依赖,一段代码和就完成了</p>
+<p>当然了，首先我们得装一个Redis（我就不展开了）：<a target="_blank" rel="noopener" href="https://blog.csdn.net/wangwengrui40/article/details/86599702">https://blog.csdn.net/wangwengrui40/article/details/86599702</a></p>
+<p>一个安装包：下载Abp.RedisCache Nuget包安装。</p>
+<p>一个依赖：在：web.Core层 找到  项目名WebCoreModule 的 DependsOn特性上添加对AbpRedisCacheModule的依赖，</p>
+<p>一段代码：同样在web.Core层 找到  项目名WebCoreModule  下的 PreInitialize()方法 加入，就可以使用本地的Redis了。</p>
+<pre><code> //配置使用Redis缓存
+            Configuration.Caching.UseRedis();
+</code></pre>
+<p>如果我们想陪着外网的Redis，那么只需要改下链接字符串 </p>
+<p>password：Redis密码</p>
+<p>connectTimeout：连接超时时间，这里设置的是1000毫秒</p>
+<p>connectRetry：重试连接次数</p>
+<p>syncTimeout：同步操作默认超时时间</p>
+<p>DatabaseId：选中的数据库</p>
+<pre><code>            Configuration.Caching.UseRedis(
+                options =&gt;
+                       &#123;//服务器地址
+options.ConnectionString = &quot;192.168.1.181:6379,Password = 123456，connectTimeout=1000,connectRetry=1,syncTimeout=1000&quot;;
+                           options.DatabaseId = Convert.ToInt32(_appConfiguration.GetConnectionString(&quot;RedisCacheDatabaseId&quot;));
+                       &#125;);
+</code></pre>
+<p>如果出现以下错误，那就是，Redis服务还没开启 ，或没按照</p>
+<p>如果想启动的时候，不受连接错误的影响怎么办</p>
+<p>ABP的连接错误我还没很好的办法铺抓</p>
+<p>那只能用别的方法测试下，连接是否正常</p>
+<p>安装ServiceStack.Redis;包 用 ServiceStack.Redis;连接下看缓存服务器是否可用</p>
+<pre><code>        public static PooledRedisClientManager CreateManager(string Connection)
+             &#123;
+            //ConfigurationManager.ConnectionStrings[&quot;RedisSlaveServerIP&quot;]
+            var ConnectionString = Connection;
+            // 读取 Redis 主机 IP 配置信息
+            string[] redisMasterHosts = ConnectionString.Split(&#39;,&#39;);
+ 
+            // 如果 Redis 服务器是主从配置，那么还需要读取 Redis Slave 机的 IP 配置信息
+            string[] redisSlaveHosts = ConnectionString.Split(&#39;,&#39;);
+ 
+            PooledRedisClientManager Manager = null;
+                 if (Manager == null)
+                 &#123;
+                     Manager = new PooledRedisClientManager(redisMasterHosts, redisSlaveHosts, new RedisClientManagerConfig()
+                     &#123;
+                         MaxWritePoolSize = 5,
+                         MaxReadPoolSize = 5,
+                         AutoStart = true
+                     &#125;, 0, 50, 5);
+                 &#125;
+            Manager.GetClient();
+            Manager.Dispose();
+                 return Manager;
+             &#125;
+</code></pre>
+<p>题外话：</p>
+<p>翻了下ABP框架的源码，发现</p>
+<p>模板自带的Role、User 等自带了一个 RoleManager的实体缓存接口。实现方式与IEntityCache缓存一样</p>
+<p>我们来感受一下他的代码</p>
+<p>参考文章：<a target="_blank" rel="noopener" href="http://www.cnblogs.com/sheng-jie/p/6508241.html">http://www.cnblogs.com/sheng-jie/p/6508241.html</a></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/"> 博客园</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sheng-jie/"> 首页</a></li>
+<li><a target="_blank" rel="noopener" href="https://i.cnblogs.com/EditPosts.aspx?opt=1"> 新随笔</a></li>
+<li><a target="_blank" rel="noopener" href="https://msg.cnblogs.com/send/%E3%80%8C%E5%9C%A3%E6%9D%B0%E3%80%8D"> 联系</a></li>
+<li><a href="javascript:void(0)"> 订阅</a></li>
+<li><a target="_blank" rel="noopener" href="https://i.cnblogs.com/"> 管理</a></li>
+</ul>
+<h1 id="ABP入门系列（13）——Redis缓存用起来"><a href="#ABP入门系列（13）——Redis缓存用起来" class="headerlink" title="     ABP入门系列（13）——Redis缓存用起来         "></a><a target="_blank" rel="noopener" href="https://www.cnblogs.com/sheng-jie/p/6508241.html">     ABP入门系列（13）——Redis缓存用起来         </a></h1><p><strong><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/a6e9ace79345">ABP入门系列目录——学习Abp框架之实操演练</a><br> <a href="https://github.com/yanshengjie/LearningMpaAbp">源码路径：Github-LearningMpaAbp</a></strong></p>
+<hr>
+<h1 id="1-引言"><a href="#1-引言" class="headerlink" title="1. 引言"></a>1. 引言</h1><p>创建任务时我们需要指定分配给谁，Demo中我们使用一个下拉列表用来显示当前系统的所有用户，以供用户选择。我们每创建一个任务时都要去数据库取一次用户列表，然后绑定到用户下拉列表显示。如果就单单对一个demo来说，这样实现也无可厚非，但是在正式项目中，显然是不合理的，浪费程序性能，有待优化。<br> 说到优化，你肯定立马就想到了使用缓存。是的，缓存是提高程序性能的高效方式之一。<br> 这一节我们就针对这一案例来看一看Abp中如何使用缓存来提高程序性能。</p>
+<h1 id="2-Abp的缓存机制"><a href="#2-Abp的缓存机制" class="headerlink" title="2. Abp的缓存机制"></a>2. Abp的缓存机制</h1><p>在直接使用缓存之前，我们还是来简单梳理下Abp的缓存机制。<br> Abp之所以能成为一个优秀的DDD框架，我想跟作者详细的文档有很大关系，<br> 作者已经在ABP官方文档介绍了如何使用<a target="_blank" rel="noopener" href="http://aspnetboilerplate.com/Pages/Documents/Caching">Caching</a>，英文水平好的就直接看官方的吧。</p>
+<p>Abp对缓存进行抽象定义了<code>ICache</code>接口，位于<code>Abp.Runtime.Caching</code>命名空间。<br> 并对<code>ICache</code>提供了默认的实现<code>AbpMemoryCache</code>，<code>AbpMemoryCache</code>是基于<a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/library/system.runtime.caching.memorycache(v=vs.110).aspx?f=255&MSPPError=-2147217396">MemoryCache</a>的一种实现方式。<code>MemoryCache</code>是微软的一套缓存机制，定义在<code>System.Runtime.Caching</code>命名空间，顾名思义 ，在内存中进行高速缓存。我们通过类型依赖图来看下Abp对Cache的实现：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-8c12fe68db3369b4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Abp.Runtime.Caching 类型依赖图"></p>
+<p>从图中可以看出主要包括四个部分：</p>
+<ul>
+<li>ICache-&gt;CacheBase-&gt;AbpMemoryCache：对缓存的抽象以及实现；</li>
+<li>ITypedCache：缓存的泛型实现；</li>
+<li>ICacheManager-&gt;CacheManagerBase-&gt;AbpMemoryCacheManager：缓存管理类的抽象和实现，代码中可以通过注入ICacheManager来获取缓存；</li>
+<li>ICachingConfiguration-&gt;CachingConfiguration：用来配置使用哪种缓存。</li>
+</ul>
+<h1 id="3-Abp缓存实操演练"><a href="#3-Abp缓存实操演练" class="headerlink" title="3. Abp缓存实操演练"></a>3. Abp缓存实操演练</h1><h2 id="3-1-定位优化点"><a href="#3-1-定位优化点" class="headerlink" title="3.1. 定位优化点"></a>3.1. 定位优化点</h2><p>定位到我们的<code>TasksController</code>，其中有两种创建Task的Action，代码如下：</p>
+<pre><code>public PartialViewResult RemoteCreate() &#123;
+    var userList = _userAppService.GetUsers();
+    ViewBag.AssignedPersonId = new SelectList(userList.Items, &quot;Id&quot;, &quot;Name&quot;);
+    return PartialView(&quot;_CreateTaskPartial&quot;);
+&#125;
+
+[ChildActionOnly] 
+public PartialViewResult Create() &#123;
+    var userList = _userAppService.GetUsers();
+    ViewBag.AssignedPersonId = new SelectList(userList.Items, &quot;Id&quot;, &quot;Name&quot;);
+    return PartialView(&quot;_CreateTask&quot;);
+&#125;
+</code></pre>
+<p>可以看到两个方法都需要调用<code>_userAppService.GetUsers();</code>来获取用户列表。<br> 现在我们来使用缓存技术对其优化。首先我们应该想到了Asp.net mvc自带的一套缓存机制，OutputCache。</p>
+<h2 id="3-2-使用-OutputCache-进行缓存"><a href="#3-2-使用-OutputCache-进行缓存" class="headerlink" title="3.2. 使用[OutputCache]进行缓存"></a>3.2. 使用[OutputCache]进行缓存</h2><p>如果对OutputCache不了解，可以参考我的这篇文章<a target="_blank" rel="noopener" href="http://www.jianshu.com/p/2ebfcc4bf897">Asp.net mvc 知多少（九）</a>。</p>
+<p>我们可以简单在Action上添加[OutputCache]特性即可。</p>
+<pre><code>[OutputCache(Duration = 1200, VaryByParam = &quot;none&quot;)]
+[ChildActionOnly] 
+public PartialViewResult Create() &#123;
+    var userList = _userAppService.GetUsers();
+    ViewBag.AssignedPersonId = new SelectList(userList.Items, &quot;Id&quot;, &quot;Name&quot;);
+    return PartialView(&quot;_CreateTask&quot;);
+&#125;
+</code></pre>
+<p><code>[OutputCache(Duration = 1200, VaryByParam = &quot;none&quot;)]</code>这句代码的意思是该action只缓存1200s。1200s后，ASP.NET MVC会重新执行action并再次缓存。因为是在[ChildActionOnly]中使用[OutputCache]，所以该缓存属于Donut Hole caching。<br> 在该方法内部打个断点，测试只有第一次调用会进入方法内部，之后1200s内都不会再进入该方法，1200s后会再次进入，说明缓存成功！</p>
+<h2 id="3-3-使用ICacheManager进行缓存"><a href="#3-3-使用ICacheManager进行缓存" class="headerlink" title="3.3. 使用ICacheManager进行缓存"></a>3.3. 使用ICacheManager进行缓存</h2><p>按照上面对Abp缓存机制的梳理，我们可以在需要使用缓存的地方注入<code>ICacheManager</code>来进行缓存管理。<br> 现在我们就在TasksController中注入<code>ICacheManager</code>。<br> 申明私有变量，并在构造函数中注入，代码如下：</p>
+<pre><code>private readonly ITaskAppService _taskAppService;
+private readonly IUserAppService _userAppService;
+private readonly ICacheManager _cacheManager;
+
+public TasksController(ITaskAppService taskAppService, IUserAppService userAppService, ICacheManager _cacheManager) &#123;
+    _taskAppService = taskAppService;
+    _userAppService = userAppService;
+    _cacheManager = cacheManager;
+&#125;
+</code></pre>
+<p>下面修改<code>RemoteCreate</code>action如下：</p>
+<pre><code>public PartialViewResult RemoteCreate()
+&#123;   
+    var userList = _cacheManager.GetCache(&quot;ControllerCache&quot;).Get(&quot;AllUsers&quot;, 
+                          () =&gt; _userAppService.GetUsers()) as ListResultDto&lt;UserListDto&gt;;
+    ViewBag.AssignedPersonId = new SelectList(userList.Items, &quot;Id&quot;, &quot;Name&quot;);
+    return PartialView(&quot;_CreateTaskPartial&quot;);
+&#125;
+</code></pre>
+<p>分析代码发现我们在通过上面代码中获取的缓存是需要进行类型转换的。原来<code>_cacheManager.GetCache</code>返回的是<code>ICache</code>类型，而<code>ICache</code>定义<code>key-value</code>对应的是<code>string-object</code>类型，所以自然从缓存获取完数据后要进行类型转换了（<em>注：最新Abp版本为<code>ICache</code>提供了扩展方法，不再需要显示进行类型转换</em>）。那有没有泛型版本？聪明如你，作者对<code>ICache</code>进行包装封装了个<code>ITypedCache</code>以实现类型安全。代码种进行了5种实现，可以一探究竟：</p>
+<pre><code>public PartialViewResult RemoteCreate()
+&#123;
+    //1.1 注释该段代码，使用下面缓存的方式
+    //var userList = _userAppService.GetUsers();
+
+    //1.2 同步调用异步解决方案（最新Abp创建的模板项目已经去掉该同步方法，所以可以通过下面这种方式获取用户列表）
+    //var userList = AsyncHelper.RunSync(() =&gt; _userAppService.GetUsersAsync());
+
+    //1.3 缓存版本
+    var userList = _cacheManager.GetCache(&quot;ControllerCache&quot;).Get(&quot;AllUsers&quot;, () =&gt; _userAppService.GetUsers());
+
+    //1.4 转换为泛型版本
+    //var userList = _cacheManager.GetCache(&quot;ControllerCache&quot;).AsTyped&lt;string, ListResultDto&lt;UserListDto&gt;&gt;().Get(&quot;AllUsers&quot;, () =&gt; _userAppService.GetUsers());
+
+    //1.5 泛型缓存版本
+    //var userList = _cacheManager.GetCache&lt;string, ListResultDto&lt;UserListDto&gt;&gt;(&quot;ControllerCache&quot;).Get(&quot;AllUsers&quot;, () =&gt; _userAppService.GetUsers());
+
+    ViewBag.AssignedPersonId = new SelectList(userList.Items, &quot;Id&quot;, &quot;Name&quot;);
+    return PartialView(&quot;_CreateTaskPartial&quot;);
+&#125;
+</code></pre>
+<p>经测试，用户列表正确缓存。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-c2c168f740efa747.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>与[OutputCache]相比，我们很自然就会问Abp提供的缓存怎么没有配置缓存过期时间，你想到的框架肯定也想到了，Abp的默认缓存过期时间是60mins，我们可以通过在使用缓存项目的Module（模块）中自定义缓存时间。<br> 因为我们是在Web项目中使用的Cache，所以定位到<code>XxxWebModule.cs</code>，在<code>PreInitialize</code>方法中进行缓存配置。</p>
+<pre><code>//配置所有Cache的默认过期时间为2小时
+Configuration.Caching.ConfigureAll(cache =&gt;
+&#123;
+    cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+&#125;);
+
+//配置指定的Cache过期时间为10分钟
+Configuration.Caching.Configure(&quot;ControllerCache&quot;, cache =&gt;
+&#123;
+    cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(10);
+&#125;);
+</code></pre>
+<h2 id="3-4-使用IEntityCache对实体进行缓存"><a href="#3-4-使用IEntityCache对实体进行缓存" class="headerlink" title="3.4. 使用IEntityCache对实体进行缓存"></a>3.4. 使用IEntityCache对实体进行缓存</h2><h3 id="3-4-1-缓存方式的思考"><a href="#3-4-1-缓存方式的思考" class="headerlink" title="3.4.1. 缓存方式的思考"></a>3.4.1. 缓存方式的思考</h3><p>上面的两种缓存方式，我们一般用于存储自定义缓存，但有一个局限性，受到具体缓存过期时间的限制。<br> 思考一下，我们缓存的用户列表，它是一个实时会变化的集合，而这个实时是不定时的，可能1mins之内就有新用户注册，也有可能几天没有用户注册（比如我们这个Demo），这个时候就不好设置缓存过期（刷新）时间。<br> 但由于我们是Demo性质只是为了演示用法，所以我们设定缓存过期时间为10mins也无可厚非。</p>
+<p>那有没有一种缓存机制，不需要设置缓存过期时间，当数据变化的时候就能自动重新缓存呢？<br> 答案是肯定的，Abp为我们提供了<code>IEntityCache</code>，实体缓存机制。<br> 当我们需要通过ID获取实体数据而又不想经常去数据库查询时，我们就可以使用<code>IEntityCache</code>。<br> <strong>换句话说，<code>IEntityCache</code>支持按实体Id进行动态缓存。</strong></p>
+<h3 id="3-4-2-IEntityCache缓存原理"><a href="#3-4-2-IEntityCache缓存原理" class="headerlink" title="3.4.2. IEntityCache缓存原理"></a>3.4.2. IEntityCache缓存原理</h3><p>在演示具体操作之前，我们先来讲解下<code>IEntityCache</code>的缓存原理：</p>
+<ul>
+<li>首先它第一次从数据库中获取实体，然后后续调用将会从缓存获取。</li>
+<li>当实体更新或删除时它自动将缓存的实体置为无效状态，因此它将会再下一次请求中从数据库中重新获取。</li>
+<li>它使用缓存的类的完整类名作为缓存名称，可以通过为构造函数传参来修改缓存名称。</li>
+<li>它是线程安全的。</li>
+<li>它使用IObjectMapper将实体映射到缓存项。 IObjectMapper由AutoMapper模块实现。所以，如果你使用它，你需要AutoMapper模块。您可以覆盖MapToCacheItem方法以手动将实体映射到缓存项。</li>
+</ul>
+<h3 id="3-4-3-IEntityCache上手实战"><a href="#3-4-3-IEntityCache上手实战" class="headerlink" title="3.4.3. IEntityCache上手实战"></a>3.4.3. IEntityCache上手实战</h3><p>既然是缓存实体，基于我们这个demo，我们就拿Task实体玩一下吧。<br> 在这里我们先要复习下什么是DTO，重申下DDD为什么引入DTO。<br> Data Transfer Objects（DTO）用来在应用层和展现层之间传输数据。</p>
+<p>DTO的必要性：</p>
+<ol>
+<li>领域层的抽象</li>
+<li>数据隐藏</li>
+<li>序列化和延迟加载问题</li>
+</ol>
+<p>那这个DTO跟要讲的实体缓存有什么关系呢？<br> 不绕弯子了，就是说实体缓存不应直接对Entity进行缓存，以避免缓存时序列化了不该序列化的对象和实体。<br> 那具体怎么操作呢？我们就直接上Demo吧。<br> 我们定义一个<code>TaskCacheItem</code>，用来缓存Title、Description、State。并定义映射规则<code>[AutoMapFrom(typeof(Task))]</code>。</p>
+<pre><code>namespace LearningMpaAbp.Tasks.Dtos
+&#123;
+    [AutoMapFrom(typeof(Task))]
+    public class TaskCacheItem
+    &#123;
+        public string Title &#123; get; set; &#125;
+
+        public string Description &#123; get; set; &#125;
+
+        public TaskState State &#123; get; set; &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>下面我们定义一个针对<code>TaskCacheItem</code>的缓存接口。</p>
+<pre><code>namespace LearningMpaAbp.Tasks
+&#123;
+    public interface ITaskCache:IEntityCache&lt;TaskCacheItem&gt;
+    &#123;
+    &#125;
+&#125;
+</code></pre>
+<p>实现<code>ITaskCache</code>缓存接口：</p>
+<pre><code>namespace LearningMpaAbp.Tasks
+&#123;
+    public class TaskCache : EntityCache&lt;Task, TaskCacheItem&gt;, ITaskCache, ISingletonDependency
+    &#123;
+        public TaskCache(ICacheManager cacheManager, IRepository&lt;Task, int&gt; repository, string cacheName = null) 
+            : base(cacheManager, repository, cacheName)
+        &#123;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<p>现在，当我们需要根据TaskId获取Title、Description、State，我们就可以通过在需要的类中注入注入<code>ITaskCache</code>，来从缓存中获取。<br> 下面我们在<code>ITaskAppService</code>中添加一个接口<code>TaskCacheItem GetTaskFromCacheById(int taskId);</code>。<br> 然后在<code>TaskAppService</code>中实现它，申明变量并在构造函数注入<code>ITaskCache</code>，实现定义的接口：</p>
+<pre><code>private readonly ITaskCache _taskCache;
+
+/// &lt;summary&gt;
+///     In constructor, we can get needed classes/interfaces.
+///     They are sent here by dependency injection system automatically.
+/// &lt;/summary&gt;
+public TaskAppService(IRepository&lt;Task&gt; taskRepository, IRepository&lt;User, long&gt; userRepository,
+    ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion, INotificationPublisher notificationPublisher, ITaskCache taskCache)
+&#123;
+    _taskRepository = taskRepository;
+    _userRepository = userRepository;
+    _smtpEmialSenderConfig = smtpEmialSenderConfigtion;
+    _notificationPublisher = notificationPublisher;
+    _taskCache = taskCache;
+&#125;
+
+public TaskCacheItem GetTaskFromCacheById(int taskId)
+&#123;
+    return _taskCache[taskId];
+&#125;
+</code></pre>
+<p>测试如下，直接在即时窗口调用方法，发现只有一条Sql查询生成，说明实体缓存成功。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-20782a096c90f6a8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="即时窗口和跟踪Sql输出"></p>
+<p>可能读到这里，你可能会问，说好的『Redis缓存用起来』，你讲了半天，跟Redis没有半毛钱关系啊。</p>
+<p>Redis这么厉害的技能，当然要压轴出场啊，下面Redis开讲。</p>
+<h1 id="4-Redis是什么玩意"><a href="#4-Redis是什么玩意" class="headerlink" title="4. Redis是什么玩意"></a>4. Redis是什么玩意</h1><blockquote>
+<p>Redis  是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件。它支持多种类型的数据结构，如字符串（strings）、散列（hashes）、列表（lists）、集合（sets）、有序集合（sorted sets）与范围查询、bitmaps、hyperloglogs和地理空间（geospatial）索引半径查询。</p>
+</blockquote>
+<p>官方的解释就是这么拗口，对于初识Redis，我们可以简单把它理解为基于内存的速度非常快性能非常棒的Key-Value数据库。</p>
+<p>有一点需要说明，Redis官方仅支持Linux系统不支持Windows系统。<br> 但是呢，微软大法好啊，微软开源技术团队（Microsoft Open Tech group）开发和维护了一个Win64 的版本，我们可以在<a href="https://github.com/MSOpenTech/redis%E4%B8%8A%E4%B8%8B%E8%BD%BDWin64%E7%89%88%E6%9C%AC%E6%9D%A5%E7%8E%A9%E4%B8%80%E7%8E%A9%E3%80%82">https://github.com/MSOpenTech/redis上下载Win64版本来玩一玩。</a></p>
+<p>想了解更多，请参考<a target="_blank" rel="noopener" href="http://www.redis.cn/">中文官方文档</a>或<a target="_blank" rel="noopener" href="http://www.redis.cn/">英文官方文档</a>。</p>
+<h1 id="5-动手试玩Redis"><a href="#5-动手试玩Redis" class="headerlink" title="5. 动手试玩Redis"></a>5. 动手试玩Redis</h1><h2 id="5-1-安装Redis"><a href="#5-1-安装Redis" class="headerlink" title="5.1. 安装Redis"></a>5.1. 安装Redis</h2><p>打开微软开源技术团队维护的Redis Github<a href="https://github.com/MSOpenTech/redis">链接</a>，找到Releases目录，下载最新版本的msi安装即可。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-7d6f1f1fa5dc9261.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>下载后，一直下一步安装即可。</p>
+<h2 id="5-2-简单试玩"><a href="#5-2-简单试玩" class="headerlink" title="5.2. 简单试玩"></a>5.2. 简单试玩</h2><p>找到安装目录，打开cmd并进入到安装目录，输入<code>redis-server  redis.windows.conf</code>，即可启动Redis 服务。Redis服务默认启动在<code>6379</code>端口。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-934288df82b55940.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="启动Redis Server"></p>
+<p>再启动一个cmd窗口，执行<code>redis-cli.exe</code>即可开一个Redis客户端。<br> 执行<code>set</code>命令进行缓存设置；<br> 执行<code>get</code>命令进行缓存读取；<br> 执行<code>subscribe</code>命令进行频道监听；<br> 执行<code>publish</code>命令向指定频道发布消息；<br> 具体步骤详参下图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-307608eae28b5f16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="简单试玩"></p>
+<h1 id="6-ABP上试玩Redis缓存"><a href="#6-ABP上试玩Redis缓存" class="headerlink" title="6. ABP上试玩Redis缓存"></a>6. ABP上试玩Redis缓存</h1><p>跟着我的步伐，对Redis也算有了基本的认识，咱们下面就进入今天的压轴主题，介绍Abp下如何使用redis进行缓存。<br> 首先我们要知道为什么要用Redis进行缓存。<br> 默认的缓存管理是在内存中（in-memory）进行缓存。当你有不止一个并发web服务器需要运行同一个应用程序，默认的缓存管理就不满足你的需求。你可能需要一个分布式/中央缓存服务器来进行缓存管理，这时Redis就可以粉墨登场了。</p>
+<h2 id="6-1-Abp集成Redis"><a href="#6-1-Abp集成Redis" class="headerlink" title="6.1. Abp集成Redis"></a>6.1. Abp集成Redis</h2><p>首先打开Web层，下载Abp.RedisCache Nuget包安装。<br> 修改<code>XxxWebModule.cs</code>，在DependsOn特性上添加对<code>AbpRedisCacheModule</code>的依赖，并在模块的<code>PreInitialize</code>方法中调用<code>UseRedis</code>扩展方法，代码如下：</p>
+<pre><code>[DependsOn(
+        typeof(LearningMpaAbpDataModule),
+        typeof(LearningMpaAbpApplicationModule),
+        typeof(LearningMpaAbpWebApiModule),
+        typeof(AbpWebSignalRModule),
+        //typeof(AbpHangfireModule), - ENABLE TO USE HANGFIRE INSTEAD OF DEFAULT JOB MANAGER
+        typeof(AbpWebMvcModule),
+        typeof(AbpRedisCacheModule))]
+    public class LearningMpaAbpWebModule : AbpModule
+    &#123;
+        public override void PreInitialize()
+        &#123;
+            //省略其他配置代码
+
+            //配置使用Redis缓存
+            Configuration.Caching.UseRedis();
+
+            //配置所有Cache的默认过期时间为2小时
+            Configuration.Caching.ConfigureAll(cache =&gt;
+            &#123;
+                cache.DefaultSlidingExpireTime = TimeSpan.FromHours(2);
+            &#125;);
+
+            //配置指定的Cache过期时间为10分钟
+            Configuration.Caching.Configure(&quot;ControllerCache&quot;, cache =&gt;
+            &#123;
+                cache.DefaultSlidingExpireTime = TimeSpan.FromMinutes(10);
+            &#125;);            
+        &#125;
+  ....
+&#125;
+</code></pre>
+<p>最后一步在Web.Config文件的【connectionStrings】节点为<code>Abp.Redis.Cache</code>添加连接字符串，如下：</p>
+<pre><code>  &lt;connectionStrings&gt;
+    &lt;add name=&quot;Default&quot; connectionString=&quot;Server=.\sqlexpress; Database=LearningMpaAbp; Trusted_Connection=True;&quot; providerName=&quot;System.Data.SqlClient&quot; /&gt;
+    &lt;add name=&quot;Abp.Redis.Cache&quot; connectionString=&quot;localhost&quot;/&gt;
+  &lt;/connectionStrings&gt;
+</code></pre>
+<p>启动Redis Server后，F5运行web项目，断点调试，发现已经成功应用Redis缓存。<br> 若未启动Redis Server，会报Error：<code>It was not possible to connect to the  redis server(s); to create a disconnected multiplexer, disable  AbortOnConnectFail. SocketFailure on PING</code></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/2799767-1be5681e65af5b60.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="img"></p>
+<p>这样我们就用<code>Redis</code>代替了默认的<code>MemoryCache</code>缓存方案,而不需要改动其它代码,Abp就是这么简单、灵活、松藕合！</p>
+<h1 id="7-总结"><a href="#7-总结" class="headerlink" title="7. 总结"></a>7. 总结</h1><p>这篇文章中主要梳理了Abp中如何进行缓存管理，并简要介绍了Abp中的缓存机制，并与Asp.net mvc自带的[Outputcache]缓存进行简要对比，并进行了缓存管理实战演练。最后对Redis进行了简要介绍，并介绍了如何切换Redis缓存。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/12/abp/2021abp-huan-cun/">https://github.com/jiayueshe/jiayueshe.github.io/2021/04/12/abp/2021abp-huan-cun/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/abp/">
+                                    <span class="chip bg-color">abp</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/14/rabbitmq/rabbitmq-a-li-yun/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt=".Net中使用 RocketMQ队列">
+                        
+                        <span class="card-title">.Net中使用 RocketMQ队列</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            .Net中使用 RocketMQ队列
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-14
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/RabbitMQ/" class="post-category">
+                                    RabbitMQ
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/RabbitMQ/">
+                        <span class="chip bg-color">RabbitMQ</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/09/wpf/shang-wei-ji-kai-fa-jiao-cheng/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="PLC上位机开发">
+                        
+                        <span class="card-title">PLC上位机开发</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            PLC上位机开发
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E4%B8%9A4-0/" class="post-category">
+                                    工业4.0
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B7%A5%E4%B8%9A4-0/">
+                        <span class="chip bg-color">工业4.0</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">286.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

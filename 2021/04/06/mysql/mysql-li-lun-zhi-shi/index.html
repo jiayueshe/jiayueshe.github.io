@@ -1,0 +1,1346 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="MySQL高级部分理论知识细讲, IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta name="description" content="IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>MySQL高级部分理论知识细讲 | IT 学习 资源</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><link rel="alternate" href="/atom.xml" title="IT 学习 资源" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">IT 学习 资源</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">IT 学习 资源</div>
+        <div class="logo-desc">
+            
+            IT 学习 资源站 C# CAD .net core EF Javascript Flutter TypeScript 数据结构 算法 网络 测试 产品
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/jiayueshe/jiayueshe.github.io" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">MySQL高级部分理论知识细讲</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="container content">
+
+    
+    <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/mysql/" class="post-category">
+                                mysql
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-04-06
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-04-07
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    5k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    18 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>MySQL高级部分理论知识细讲<br>全栈小刘 2020-11-06 08:57:20 136 收藏 3<br>版权<br>Spring Cloud Alibaba<br>带你从玩转SpringCloud Alibaba入门到精通，持续更新中! 。<br>全栈小刘<br>¥19.90<br>文章目录<br>一、数据库分区、分表、分库、分片</p>
+<pre><code>YesOk ,大家好 ，我是小刘，许久不见，甚是想念 ，小刘今天来带大家学习 分库分表的基础知识
+</code></pre>
+<p>生成结果<br>1.1 单机数据库的瓶颈</p>
+<p>生成结果</p>
+<pre><code>单个表数据量越大，读写锁，插入操作重新建立索引效率越低。
+单个库数据量太大（一个库数据量到1T - 2T就是极限）
+单个数据库服务器压力过大
+读写速度遇到瓶颈（并发量几百）
+</code></pre>
+<p>1.2 分区</p>
+<p>数据库分区是一种物理数据库的设计技术，它的目的是为了在特定的 SQL操作中减少数据读写的总量以缩减响应时间。</p>
+<p>分区并不是生成新的数据库表，而是将表的数据均匀分摊到不同的硬盘，系统或不同服务器存储介子中，实际上还是一张表。另外，分区可以做到将表的数据分摊到不同的地方，提高数据检索的效率，降低数据库频繁 IO压力值，分区的优点如下：</p>
+<pre><code>相对于单个文件系统或硬盘，分区可以存储更多的数据。
+数据管理比较方便，如要清理或废弃某年的数据，就可以直接删除该日期的分区数据即可。
+精准定位分区查询数据，不需要全表扫描查询，大大提高检索效率。
+可跨多个分区磁盘查询，来提高查询的吞吐量。
+在涉及聚合函数时，很容易进行数据的合并。
+</code></pre>
+<p>1.2.1 什么时候考虑使用分区？</p>
+<pre><code>一张表的查询速度已经慢到影响使用的时候。
+sql经过优化
+数据量大
+表中的数据是分段的
+对数据的操作往往只涉及一部分数据，而不是所有的数据
+</code></pre>
+<p>1.2.2 水平分区</p>
+<p>这种形式分区是对表的行进行分区，通过这种的方式不同分组里面的物理列分割的数据集得以组合，从而进行个体分体或集体分割。所有在表中定义的列在每个数据集中都能找到，所以表的特性得以保持。</p>
+<p>举例：一个包含十年发票记录的表可以被分区为10个不同的分区，每个分区包含的是其中一年的记录。<br>1.2.3 垂直分区</p>
+<p>这种分区方式一般来说是通过对表的垂直划分来减少目标表的宽度，使某些特定的列被划分到特定的分区，每个分区都包含了其中的列所对应的行。</p>
+<p>举例：一个包含了大 text和 blob列的表，这些 text和 blod列又不经常被访问，这时候就要把这些不经常使用的 text和 blob了划分到另一个分区，在保证它们数据关联性的同时还能提高访问速度。<br>1.2.4 分区实现的方式</p>
+<p>mysql5开始支持分区功能</p>
+<p>创建表：</p>
+<p>create table sales(<br>    id int auto increment,<br>    amount double not null,<br>    order_day datetime not null,<br>    primary key(id,order_day)<br>) engine=Innodb</p>
+<pre><code>1
+2
+3
+4
+5
+</code></pre>
+<p>设置分区：</p>
+<p>partition by range(year(order_day))(<br>    partition p_2010 values less than (2000),<br>    partition p_2011 values less than (2011),<br>    partition p_2012 values less than (2012),<br>    partition p_2012 values less than maxvalue<br>);</p>
+<pre><code>1
+2
+3
+4
+5
+</code></pre>
+<p>1.3 分表<br>1.3.1 什么时候考虑分表？</p>
+<p>生成结果</p>
+<pre><code>一张表的查询速度已经慢到影响使用的时候
+sql经过优化
+数据量大
+当频繁插入或者联合查询时，速度变慢
+</code></pre>
+<p>1.3.2 分表解决的问题</p>
+<p>分表后，单表的并发能力提高了，磁盘的 IO性能也提供了，写操作效率也提高了。</p>
+<pre><code>查询一次的时间短了
+数据分布在不同的文件，磁盘 I/O性能提高
+读写锁影响的数据量变小
+插入数据库需要重新建立索引的数据减少
+</code></pre>
+<p>1.3.3 分表实现方式</p>
+<p>要业务系统配合迁移升级，工作量较大</p>
+<p>常用分区分表的规则策略</p>
+<pre><code>Range（范围）
+Hash（哈希）
+按照时间拆分
+Hash之后按照分表个数取模
+在认证库中保存数据库配置，就是建立一个 DB，这个 DB单独保存 user_id到 DB的映射关系
+</code></pre>
+<p>1.4 分库<br>1.4.1 什么时候考虑分库？</p>
+<pre><code>单台 DB的存储空间不够
+随着查询量的增加单台数据库服务器已经没办法支撑
+</code></pre>
+<p>1.4.2 分库解决的问题</p>
+<p>其主要目的是为突破单节点数据库服务器的 I/O 能力限制，解决数据库扩展性问题。<br>1.4.3 分库实现的方式</p>
+<p>垂直拆分</p>
+<p>把系统中不存在关联关系或者需要 join的表可以放在不同的数据库不同的服务器中。 按照业务垂直拆分。比如：可以按照业务分为资金、会员、订单三个数据库。</p>
+<p>需要解决的问题：跨数据库的事务、 join查询等问题。</p>
+<p>水平拆分</p>
+<p>例如，大部分的站点。数据都是和用户有关，那么可以根据用户，将数据按照用户水平拆分。</p>
+<p>按照规则拆分，一般水平库是在垂直分库之后的。比如每天处理的订单数量是海量的，可以按照一定的规则水平划分。</p>
+<p>需要解决的问题：数据路由、组装。</p>
+<p>读写分离</p>
+<p>对于时效性不高的数据，可以通过读写分离缓解数据库压力。</p>
+<p>需要解决的问题：在业务上区分哪些业务是允许一定时间延迟的，以及数据同步问题。<br>1.5 分区、分表、分库的对比</p>
+<p>分区就是把一张表的数据分成N个区块，在逻辑上看最终只是一个表，但底层是由N个物理区块组成的。分表就是把一张表按一定的规则分解成N个具有独立存储空间的实体表。系统读写时需要根据定义好的规则得到对应的字表名，然后操作它。分库一旦分表，一个数据库中的表会越来越多</p>
+<p>优先级：垂直分库–&gt;水平分库–&gt;读写分离<br>1.6 拆分后面临的新问题</p>
+<pre><code>事务的支持，分库分表，就变成了分布式事务
+join时跨库，跨表的问题
+分库分表，读写分离使用了分布式，分布式为了保证强一致性，必然带来延迟，导致性能降低，系统的负责度降低。
+</code></pre>
+<p>解决方案：</p>
+<p>对于不同的方式之间没有严格的界限，特点不同，侧重点不同。需要根据实际情况，结合每种方式的特点来进行处理。选用第三方的数据库中间件（ Atlas， Mycat， TDDL， DRDS），同时业务系统需要配合数据存储的升级。</p>
+<p>总结：优先考虑分区。当分区不能满足需求时，开始考虑分表，合理的分表对效率的提升会优于分区。<br>1.7 京东评论案例</p>
+<p>现状</p>
+<pre><code>商品的评论数量：数十亿条
+每天的服务调用：数十亿次
+每年成倍增长
+</code></pre>
+<p>整体的数据存储：基础数据存储，文本存储</p>
+<p>基础数据存储</p>
+<p>MySQL：只存储非文本的基础信息。包括：评论状态，用户，时间等基础数据。以及图片，标签，点赞等附加信息。数据组织形式（不同的数据又可选择不同的库表拆分方案）：</p>
+<pre><code>评论基础数据按用户 ID进行拆库并拆表
+图片及标签处于同一数据库下，根据商品编号分别进行拆表
+其它的扩展信息数据，因数据量不大、访问量不高，处理于同一库下且不做分表即可
+</code></pre>
+<p>文本存储</p>
+<p>文本存储（评论的内容）使用了 mongodb、 hbase</p>
+<pre><code>选择 nosql而非 mysql&amp;#x3002;
+减轻了 mysql存储压力，释放 msyql，庞大的存储也有了可靠的保障。
+nosql的高性能读写大大提升了系统的吞吐量并降低了延迟。
+</code></pre>
+<p>1.8 数据分片</p>
+<p>在分布式存储系统中，数据需要分散在多台设备上，数据分片（ Sharding）就是用来确定数据在多台存储设备上分布的技术，数据分片要达到三个目的：</p>
+<pre><code>分布均匀，即每台设备上的数据量要尽可能相近
+负载均衡，即每台设备上的请求量要尽可能相近
+扩缩容时产生的数据迁移尽可能少
+</code></pre>
+<p>数据分片方法</p>
+<pre><code>划分号段
+取模
+检索表
+一致性哈希算法（ Consistent Hashing）是在1997年由 MIT提出的一种分布式哈希 (DHT)实现算法，设计目标是为了解决因特网的热点(Hot Spot)问题。一致性哈希的算法简单而巧妙，很容易做到数据均分布，其单调性也保证了扩缩容的数据迁移是比较少的。
+</code></pre>
+<p>虚拟服务器</p>
+<p>为了让系统有更好的扩展性，这里提出存储层 VServer（虚拟服务器）的概念，一个 VServer是一个逻辑上的存储服务器，是分布式存储系统的一个存储单元，一台物理设备上可以部署多个 VServer，一个 VServer支持一个写进程和多个读进程。</p>
+<p>通过 VServer的方式，会有下面一些好处：</p>
+<pre><code>提高单机性能。为了不引入复杂的锁机制，采用了单写进程的设计，如果单机只有一个写进程，写并发能力会受到限制，通过 VServer方式把单机上的存储资源（内存、硬盘）划分为多个存储单元，这样就支持多个写进程同时工作，大大提升单机写并发能力。
+部署扩展性更好。 VServer的方式在部署上非常灵活，可以根据单机的资源情况来确定 VServer的数量，针对不同的机型配置不同的 VServer数量，这样不同的机型都能充分利用机器上的资源，即使在一个系统中使用多种机型，也能做到机器的负载比较均衡。
+</code></pre>
+<p>二、事务的ACID和隔离级别</p>
+<pre><code>原子性(Atomic)：事务中各项操作，要么全做要么全不做，任何一项操作失败都会导致整个事务的失败
+一致性(Consistent)：事务结束后系统的状态是一致的
+隔离性(Isolated):并发操作的事务彼此看不到对方的中间状态
+持久性(Durable)：事务完成后所做的改动都会被持久化
+</code></pre>
+<p>数据库事务并发导致的问题</p>
+<pre><code>脏读： 事务 A读到了事务 B未提交的数据
+可重复读：事务 A查询得到一行记录 row1，事务B提交修改后，事务 A第二次查询得到 row1,但列内容发生了改变，侧重于次数
+幻读：事务 A第一次查询得到一行记录 row1,事务 B提交修改后，事务 A第二次查询得到两行记录 row1和 row2,侧重于 insert
+</code></pre>
+<p>MySQL数据库给我们提供的4中隔离级别</p>
+<pre><code>串行化(Serializable)：事务A多次从一张表中读取到相同的行，禁止其他事务对这张表进行CRUD操作
+不可重复读(Repeatable read)：事务A可以读取到相同的值，禁止其他事务对字段进行更改
+读已提交(Read committed)：事务A只能读取已提交的数据
+读未提交：(Read uncomitted): 事务A可以读取到未提交的数据
+</code></pre>
+<p>脏读可重复读幻读串行化√√√不可重复读√√×读已提交√××读未提交×××</p>
+<p>Oracle提供3种隔离级别</p>
+<p>读已提交，串行化，只读模式：只读事务只能看到事务执行前就已经提交的数据，且事务中不能执行 insert、 update及 delete语句。<br>三、MySQL锁机制<br>3.1 锁的分类</p>
+<pre><code>从对数据操作的类型（读/写）分
+    读锁（共享锁）：针对同一份数据，多个读操作可以同时进行而不会互相影响。
+    写锁（排它锁）：当前写操作没有完成前，它会阻断其他写锁和读锁。
+*对数据操作的粒度分
+</code></pre>
+<p>为了尽可能数据库的并发度，每次锁定的数据范围越小越好，理论上每次只锁定当前操作的数据的方案会得到最大的并发度，但是管理锁是很耗资源的事情（涉及获取，检查，释放锁等操作），因此数据库系统需要在高并发响应和系统性能两方面进行平衡，这样就产生了”锁粒度（ Lock granularity）”的概率。</p>
+<p>一种提高共享资源并发性的方式是让锁定对象更有选择性。尽量只锁定需要修改的部分数据，而不是所有的资源。更理想的方式是，只对会修改的数据片进行精确的锁定。任何时候，在给定的资源上，锁定的数据量越少，则系统的并发度越高，只要相互之间不发生冲突即可。</p>
+<pre><code>表锁
+*行锁
+</code></pre>
+<p>3.2 表锁</p>
+<p>特点：偏向 MyISAM存储引擎，开销小，加锁快；无死锁；锁定粒度大，发生锁冲突的概率最高，并发度最低。</p>
+<p>案例1【加读锁】:</p>
+<p>[session1]</p>
+<p>lock table user read;</p>
+<pre><code>这里只能执行查询当前表，不能查询其他表，插入或更新当前表都会提示错误
+</code></pre>
+<p>unlock tables;</p>
+<p>[session2]</p>
+<p>在session1锁定表后，session2能查询或更新未锁定的表，能查询锁定表，插入或者更新锁定表会一直等待锁被释放。</p>
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre>
+<p>案例1【加写锁】:</p>
+<p>[session1]</p>
+<p>lock tables user write;</p>
+<pre><code>这里可以对锁定表做查询、更新、插入操作
+</code></pre>
+<p>unlock tables;</p>
+<p>[session2]</p>
+<p>在session1锁定表后，查询、更新、插入操作均需要等到锁被释放。</p>
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre>
+<p>结论：</p>
+<pre><code>对 MyISAM表的读操作（加读锁），不会阻塞其他进程对同一表的读请求，但会堵塞同一表的写请求。只要当读锁释放后，才会执行其他进程的写操作。
+对 MyISAM表的写操作（加写锁），会阻塞其他进程的对同一表的读和写操作，只有当写锁释放后，才会执行其它进程的读写操作。
+</code></pre>
+<p>查看哪些表被加锁： show open tables;</p>
+<p>分析表锁定: show status like ‘table%’;</p>
+<p>Table_locks_immediate：产生表级锁定的次数，表示可以立即获取锁的查询次数，每立即获取锁值加1 ；<br>Table_locks_waited：出现表级锁定争用而发生等待的次数(不能立即获取锁的次数，每等待一次锁值加1)，此值高则说明存在着较严重的表级锁争用情况；</p>
+<p>Myisam的读写锁调度是读优先，这也是myisam不适合做写为主表的引擎。因为写锁后，其他线程不能做任何操作，大量的更新会使查询很难得到锁，从而造成永远阻塞<br>3.3 行锁</p>
+<p>特点：</p>
+<pre><code>偏向 InnoDB存储引擎，开销大，加锁慢；锁定粒度最小，发生锁冲突的概率最低，并发度也最高。
+InnoDB和 MyISAM的最大不同有两点：一是支持事务;二是采用了行级锁。
+</code></pre>
+<p>案例【加行锁】</p>
+<p>[session1]</p>
+<p>set autocommit=0;</p>
+<pre><code>这里可以对锁定表做更新操作
+</code></pre>
+<p>commit;</p>
+<p>[session2]</p>
+<p>在session2锁定表后不commit时，这里对锁定表进行update操作，会等待锁释放。</p>
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre>
+<p>无索引行锁升级为表锁</p>
+<p>当某个索引列没有正常使用，如赋错误的类型的值，会导致行锁变表锁。</p>
+<p>间隙锁危害</p>
+<p>间隙锁：当我们用范围条件而不是相等条件检索数据，并请求共享或拍他锁时， InnoDB会给符合条件的已有数据记录的索引项加锁；对于键值在条件范围内但不存在的记录，叫做”间隙（ GAP）”， InnoDB也会对这个”间隙”进行加锁，这种锁机制就是所谓的间隙锁（ Next-Key）。</p>
+<p>危害：当锁定一个范围键值之后，即使某些不存在的键值也会被无辜的锁定，而造成在锁定的时候无法插入锁定键值范围内的任何数据，在某些场景下这可能会对性能造成很大的危害。</p>
+<p>【面试题】 如何锁定一行</p>
+<p>select * from user for update;</p>
+<p>结论：</p>
+<p>Innodb存储引擎由于实现了行级锁定，虽然在锁定机制的实现方面所带来的的性能损耗可能比表级锁定会要更高一些，但是整体并发处理能力方面要远远优于 MyISAM的表级锁定。当系统并发量较高的时候， InnoDB的整体性能和 MyISAM相比就有比较明显的优势了。</p>
+<p>但是 Innodb的行级锁定同样也有脆弱的一面，当我们使用不当的时候，可能会让 Innodb的整体性能表现不仅不能比 MyISAM高，甚至可能会更差。</p>
+<p>分析行锁定：</p>
+<p>通过检查 InnoDB_row_lock状态变量来分析系统上的行锁的争夺情况</p>
+<p>命令： mysql&gt; show status like ‘innodb_row_lock%’;<br>Innodb_row_lock_current_waits：当前正在等待锁定的数量；<br>Innodb_row_lock_time：从系统启动到现在锁定总时间长度；<br>Innodb_row_lock_time_avg：每次等待所花平均时间；<br>Innodb_row_lock_time_max：从系统启动到现在等待最常的一次所花的时间；<br>Innodb_row_lock_waits：系统启动后到现在总共等待的次数；</p>
+<p>优化建议</p>
+<pre><code>尽可能让所有数据检索都通过索引来完成，避免无索引行锁升级为表锁。
+合理设计索引，尽量缩小锁的范围
+尽可能较少检索条件，避免间隙锁
+尽量控制事务大小，减少锁定资源量和时间长度
+尽可能低级别事务隔离
+</code></pre>
+<p>3.4 页锁</p>
+<p>开销和加锁时间界于表锁和行锁之间；会出现死锁；锁定粒度界于表锁和行锁之间，并发度一般。<br>四、MySQL实战问题<br>4.1 重复数据问题</p>
+<p>select p1.Email from person p1 where p1.Email in (select p2.Email from person p2 where p1.Id!=p2.Id);</p>
+<p>[优]SELECT email FROM <code>person</code> group by email HAVING count(email)&gt;1;</p>
+<p>[拓展]删除重复数据<br>[思路]根据重复数据进行分组,然后查出最小的id,删除其他之外的id行,这里得创建一个临时表,<br>在mysql中,不能在一条Sql语句中,即查询这些数据,同时修改这些数据<br>DELETE from person  where id not in( select temp.id from (SELECT min(id) id FROM person group by email)as temp);<br>注意：这里在mysql5.7以上版本会报错,因为不支持select那些group by和聚合函数之外的字段</p>
+<pre><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+</code></pre>
+<p>4.2 索引创建和查看</p>
+<p>创建： create index idx_a_b on table(col_a,col_b);</p>
+<p>查看： show index from table;<br>4.3 where 1=1和where 1=0的意义</p>
+<p>where 1=1用于拼接多条件语句时，这样就不用管条件是否存在，拼 where还是拼 and。</p>
+<p>where1=0不返回数据，仅返回结构，用于快熟建表。<br>————————————————<br>版权声明：本文为CSDN博主「全栈小刘」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_42897427/article/details/109524713">https://blog.csdn.net/qq_42897427/article/details/109524713</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">蒋岳生</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/06/mysql/mysql-li-lun-zhi-shi/">https://github.com/jiayueshe/jiayueshe.github.io/2021/04/06/mysql/mysql-li-lun-zhi-shi/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">蒋岳生</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2021/04/08/gong-ju/java/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-08
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            JiangYuesheng
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/05/mangodb/mangdb-ying-yong-chang-jing/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="mangodb应用场景">
+                        
+                        <span class="card-title">mangodb应用场景</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            mangodb应用场景
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-05
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mangodb/" class="post-category">
+                                    mangodb
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mangodb/">
+                        <span class="chip bg-color">mangodb</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2019-2021</span>
+            
+            <span id="year">2019</span>
+            <a href="/about" target="_blank">JiangYuesheng</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">286.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/jiayueshe/jiayueshe.github.io" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+    
+
+        
+            <a href="mailto:732767079@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+                <i class="fas fa-envelope-open"></i>
+            </a>
+            
+
+                <!-- 
+
+ -->
+
+                
+                    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=732767079" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 732767079" data-position="top" data-delay="50">
+                        <i class="fab fa-qq"></i>
+                    </a>
+                    
+                        <!-- 
+
+
+ -->
+
+                        
+                            <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+                                <i class="fas fa-rss"></i>
+                            </a>
+                            </div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+    
+    <script type="text/javascript" size="150" alpha='0.6'
+        zIndex="-1" src="/libs/background/ribbon.min.js" async="async"></script>
+    
+
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
