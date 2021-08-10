@@ -383,7 +383,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-03
+                    2021-04-26
                 </div>
                 
 
@@ -506,7 +506,7 @@
 <p>将发布的文件夹传输到服务器你想放的位置</p>
 <h2 id="5-安装配置Nginx进行反向代理"><a href="#5-安装配置Nginx进行反向代理" class="headerlink" title="5. 安装配置Nginx进行反向代理"></a><strong>5.</strong> <strong>安装配置Nginx进行反向代理</strong></h2><h3 id="5-1-安装Nginx"><a href="#5-1-安装Nginx" class="headerlink" title="5.1**安装Nginx**"></a><strong>5.1**</strong>安装Nginx**</h3><p>①使用如下命令安装CentOS的 EPEL仓库：<strong>yum install epel-release</strong></p>
 <p>②使用如下命令安装Nginx：<strong>yum install nginx</strong></p>
-<p>③Nginx安装完成后, 系统并不会启动Nginx, 使用如下命令启动Nginx: <strong>systemctl start nginx</strong></p>
+<p>③Nginx安装完成后, 系统并不会启动Nginx, 使用如下命令启动Nginx: systemctl start nginx</p>
 <p>④使用如下命令设置系统启动后, 默认启动Nginx: <strong>systemctl enable nginx</strong></p>
 <p>⑤查看firewall 状态, 并启动防火墙：</p>
 <p><strong>systemctl status firewalld</strong> //查看防火墙状态</p>
@@ -518,8 +518,9 @@
 <p>⑦在浏览器地址栏输入你服务器的IP地址, 如果出现下图表示Nginx安装配置成功;</p>
 <p><img src="https://img-blog.csdnimg.cn/20181102161749276.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmdtb3VfcmVu,size_16,color_FFFFFF,t_70" alt="img"></p>
 <p>如果无法访问, 请查看firewall 是否开放80端口：</p>
-<p><strong>firewall-cmd –zone= public –add-port= 3306 /tcp –permanent</strong>  //开放80端口</p>
+<p>firewall-cmd –zone= public –add-port= 3306 /tcp –permanent  //开放80端口</p>
 <p>systemctl restart firewalld.service             //重启防火墙</p>
+<p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210426215148467.png" alt="image-20210426215148467"></p>
 <h3 id="5-2-修改Nginx的配置文件"><a href="#5-2-修改Nginx的配置文件" class="headerlink" title="5.2**修改Nginx的配置文件**"></a><strong>5.2**</strong>修改Nginx的配置文件**</h3><p>首先，把Nginx的默认配置文件 /etc/nginx/nginx.conf里 80 端口转发配置 server 节点用 # 符注释掉。使用命令vi 或将 nginx.conf 文件下载(使用xftp或其他ftp工具都行)到本地修改完成后在上传(建议);</p>
 <p><strong>vi /etc/nginx/nginx.conf</strong>    //打开文件编辑模式, 输入i 进行编辑 完成后 按ESC键输入:wq 回车 退出编辑模式</p>
 <p><img src="https://img-blog.csdnimg.cn/20181102161749249.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3Rhbmdtb3VfcmVu,size_16,color_FFFFFF,t_70" alt="img"></p>
@@ -609,7 +610,7 @@
 <h3 id="6-4-启动-Supervisor-服务"><a href="#6-4-启动-Supervisor-服务" class="headerlink" title="6.4 启动 Supervisor 服务"></a><strong>6.4</strong> <strong>启动 Supervisor 服务</strong></h3><p><strong>supervisord -c /etc/supervisor/supervisord.conf</strong></p>
 <p>这个时候, 我们已经不需要使用dotnet命令运行程序, 同样可以访问我们部署的.NET Core程序了</p>
 <h3 id="6-5-配置Supervisor开机启动"><a href="#6-5-配置Supervisor开机启动" class="headerlink" title="6.5**配置Supervisor开机启动**"></a><strong>6.5**</strong>配置Supervisor开机启动**</h3><p>①进入/usr/lib/systemd/system/目录，并创建supervisord.service文件(或者在本地写好了再通过ftp工具传输到指定目录下)</p>
-<p><strong>vi /usr/lib/systemd/system/supervisord.service</strong></p>
+<p>vi /usr/lib/systemd/system/supervisord.service</p>
 <pre><code> 
 </code></pre>
 <ol>
@@ -629,8 +630,8 @@
 <li><code>WantedBy=multi-user.target</code></li>
 </ol>
 <p>②设置开机启动</p>
-<p><strong>systemctl enable supervisord.service</strong></p>
-<p><strong>systemctl daemon-reload</strong></p>
+<p>systemctl enable supervisord.service</p>
+<p>systemctl daemon-reload</p>
 <p>③重启，测试是否可以开机自启</p>
 <h1 id="yum-安装supervisor"><a href="#yum-安装supervisor" class="headerlink" title="yum 安装supervisor"></a>yum 安装<strong>supervisor</strong></h1><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><pre><code>yum install epel-release
 yum install -y supervisor12
@@ -1521,7 +1522,7 @@ sparkportal<span class="token punctuation">:</span> added process <span class="t
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">286.2k</span>&nbsp;字
+                class="white-color">288.1k</span>&nbsp;字
             
             
             

@@ -6,7 +6,7 @@
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/atom.xml" rel="self"/>
   
   <link href="https://github.com/jiayueshe/jiayueshe.github.io/"/>
-  <updated>2021-04-14T15:28:34.838Z</updated>
+  <updated>2021-08-09T12:11:54.623Z</updated>
   <id>https://github.com/jiayueshe/jiayueshe.github.io/</id>
   
   <author>
@@ -15,6 +15,78 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-chan-pin-chuang-yi/sheng-dian-xiang-mu-guan-li-xi-tong/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-chan-pin-chuang-yi/sheng-dian-xiang-mu-guan-li-xi-tong/</id>
+    <published>2021-08-08T12:40:16.336Z</published>
+    <updated>2021-08-09T12:11:54.623Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;title: 项目管理小程序产品创意&lt;br&gt;categories: blog&lt;br&gt;tags:blog&lt;br&gt;date: 2021-08-08 20:25:00&lt;br&gt;author: 蒋岳生&lt;br&gt;top: false&lt;br&gt;cover:</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>2021下半年年学习计划</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-xue-xi-ji-hua/2021/2021-xia-ban-nian-xue-xi-ji-hua/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-xue-xi-ji-hua/2021/2021-xia-ban-nian-xue-xi-ji-hua/</id>
+    <published>2021-08-08T01:25:00.000Z</published>
+    <updated>2021-08-09T12:12:38.321Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;制定学习计划记忆阶段学习总结&lt;/p&gt;
+&lt;h1 id=&quot;c-（10版通读一遍）&quot;&gt;&lt;a href=&quot;#c-（10版通读一遍）&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习计划" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+    
+    
+    <category term="学习计划" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%AE%A1%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>面试资料</title>
+    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-mian-shi-zi-liao/mian-shi-zi-liao/"/>
+    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/08/08/ge-ren-mian-shi-zi-liao/mian-shi-zi-liao/</id>
+    <published>2021-08-08T01:25:00.000Z</published>
+    <updated>2021-08-09T14:27:09.723Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;面试题&quot;&gt;&lt;a href=&quot;#面试题&quot; class=&quot;headerlink&quot; title=&quot;面试题&quot;&gt;&lt;/a&gt;面试题&lt;/h1&gt;&lt;h2 id=&quot;浙江银行&quot;&gt;&lt;a href=&quot;#浙江银行&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="面试资料" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/"/>
+    
+    
+    <category term="面试资料" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/%E9%9D%A2%E8%AF%95%E8%B5%84%E6%96%99/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
@@ -424,79 +496,6 @@
     
     
     
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/04/02/linux/https-http/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/04/02/linux/https-http/</id>
-    <published>2021-04-02T15:21:45.227Z</published>
-    <updated>2021-04-02T16:17:10.621Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;​                  &lt;a href=&quot;https://www.codeprj.com/blog/9ef54d1.html&quot;&gt;一个Https网站发送Http的 ajax请求的解决方法&lt;/a&gt;               &lt;/p&gt;
-&lt;p&gt;​         </summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库设计，查询规范</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-biao-she-ji-gui-fan/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-biao-she-ji-gui-fan/</id>
-    <published>2021-03-31T15:45:00.000Z</published>
-    <updated>2021-04-04T15:12:03.677Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;阿里巴巴MYSQL数据库设计，查询规范&quot;&gt;&lt;a href=&quot;#阿里巴巴MYSQL数据库设计，查询规范&quot; class=&quot;headerlink&quot; title=&quot;阿里巴巴MYSQL数据库设计，查询规范&quot;&gt;&lt;/a&gt;阿里巴巴MYSQL数据库设计，查询规范&lt;/h1&gt;&lt;h1</summary>
-        
-      
-    
-    
-    
-    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
-    
-    
-    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>mysql大量数据插入</title>
-    <link href="https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-da-shu-ju-cha-ru/"/>
-    <id>https://github.com/jiayueshe/jiayueshe.github.io/2021/03/31/mysql/mysql-da-shu-ju-cha-ru/</id>
-    <published>2021-03-31T04:25:00.000Z</published>
-    <updated>2021-04-05T09:35:28.869Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;mysql&amp;gt; select version();&lt;/p&gt;
-&lt;p&gt;把Excel表格通过MySql</summary>
-        
-      
-    
-    
-    
-    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/categories/mysql/"/>
-    
-    
-    <category term="mysql" scheme="https://github.com/jiayueshe/jiayueshe.github.io/tags/mysql/"/>
     
   </entry>
   
