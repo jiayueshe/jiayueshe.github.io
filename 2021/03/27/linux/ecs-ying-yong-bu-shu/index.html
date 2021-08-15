@@ -383,7 +383,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-04-29
+                    2021-08-11
                 </div>
                 
 
@@ -412,6 +412,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
 
         
 
@@ -431,11 +434,9 @@
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401205517587.png" alt="image-20210401205517587"></p>
 <h1 id="程序发布和运行"><a href="#程序发布和运行" class="headerlink" title="程序发布和运行"></a>程序发布和运行</h1><p>vs2019打开项目，选择发布</p>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401212327725.png" alt="image-20210401212327725"></p>
-<p>发布文件夹压缩后上传服务器 /root/</p>
+<p>发布文件夹压缩后上传服务器 /usr/local/netcore</p>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401212639834.png" alt="image-20210401212639834"></p>
 <p>服务器上解压文件 </p>
-<p>cd /root/</p>
-<p>unzip meisheng.zip -d dotnetPublish</p>
 <p>cd /usr/local/netcore</p>
 <p>unzip meisheng.zip</p>
 <p>AZURE 版本</p>
@@ -446,10 +447,9 @@
 <p>配置端口</p>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401222817027.png" alt="image-20210401222817027"></p>
 <p>运行项目</p>
-<p>–cd dotnetPublish/meisheng</p>
-<p>cd /usr/local/netcore</p>
-<p>cd /home/Maximroot/meisheng</p>
-<p>dotnet EcoTrac.MaximGroup.Web.Host.dll  </p>
+<p>cd /usr/local/netcore/meisheng     阿里云</p>
+<p>cd /home/Maximroot/meisheng   Azure</p>
+<p>dotnet EcoTrac.MaximGroup.Web.Host.dll    （临时运行）</p>
 <h1 id="NGINX"><a href="#NGINX" class="headerlink" title="NGINX"></a>NGINX</h1><p>①使用如下命令安装CentOS的 EPEL仓库：yum install epel-release</p>
 <p>国际版： sudo yum install epel-release</p>
 <p>②使用如下命令安装Nginx：yum install nginx</p>
@@ -467,32 +467,16 @@
 <p>sudo firewall-cmd –reload</p>
 <p>vi /etc/nginx/nginx.conf</p>
 <p>其他补充nginx</p>
-<pre><code>1. 首先利用配置文件启动nginx。
-命令: nginx -c /usr/local/nginx/conf/nginx.conf
+<pre class="line-numbers language-none"><code class="language-none">1. 首先利用配置文件启动nginx。
+命令: nginx -c &#x2F;usr&#x2F;local&#x2F;nginx&#x2F;conf&#x2F;nginx.conf
 重启服务： service nginx restart
 2. 快速停止或关闭Nginx：nginx -s stop
 3. 正常停止或关闭Nginx：nginx -s quit
 4. 配置文件修改重装载命令：nginx -s reload
-</code></pre>
-<h1 id="防火墙配置"><a href="#防火墙配置" class="headerlink" title="防火墙配置"></a>防火墙配置</h1><p>开放端口，保持和程序设置相同</p>
-<p>firewall-cmd –zone=public –add-port=21021/tcp –permanent</p>
-<h3 id="五-Unit-iptables-service-could-not-be-found-防火墙问题-。"><a href="#五-Unit-iptables-service-could-not-be-found-防火墙问题-。" class="headerlink" title="五.Unit iptables.service could not be found.(防火墙问题)。"></a>五.Unit <strong>iptables.service</strong> could not be found.(防火墙问题)。</h3><p>解决方案：</p>
-<pre><code>安装iptables-services
-</code></pre>
-<p>yum install iptables-services</p>
-<p>在这里插入图片描述</p>
-<ol start="2">
-<li>启动iptables</li>
-</ol>
-<p>sudo systemctl enable iptables<br>sudo systemctl start iptables</p>
-<p>在这里插入图片描述<br>现在执行查看防火墙状态，停止，启动就行了</p>
-<p>查看防火墙状态：</p>
-<p>service iptables status</p>
-<p>关闭防火墙:</p>
-<p>sudo service iptables stop</p>
-<p>打开防火墙:</p>
-<p>service iptables start </p>
-<h1 id="守护进程配置"><a href="#守护进程配置" class="headerlink" title="守护进程配置"></a>守护进程配置</h1><p>sudo yum install epel-release<br>sudo yum install -y c</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h1 id="守护进程配置（Azure）"><a href="#守护进程配置（Azure）" class="headerlink" title="守护进程配置（Azure）"></a>守护进程配置（Azure）</h1><p>sudo yum install epel-release<br>sudo yum install -y c</p>
 <p>在etc下创建目录，并赋权限</p>
 <blockquote>
 <p>sudo mkdir -m 700 -p /etc/supervisor</p>
@@ -508,13 +492,12 @@
 <p>sudo  vim /home/Maximroot/supervisord/supervisord.conf</p>
 </blockquote>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401214310065.png" alt="image-20210401214310065">在文件末尾添加，注意首尾需无空格，需顶格</p>
-<pre><code>[include]
-files=/etc/supervisor/conf.d/*.conf
+<pre class="line-numbers language-none"><code class="language-none">[include]
+files&#x3D;&#x2F;etc&#x2F;supervisor&#x2F;conf.d&#x2F;*.conf
 复制代码
 
 
-files=/home/Maximroot/supervisord/conf.d/*.conf
-</code></pre>
+files&#x3D;&#x2F;home&#x2F;Maximroot&#x2F;supervisord&#x2F;conf.d&#x2F;*.conf<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>在目录“/etc/supervisor”下创建dotnet core 进程配置文件存放目录“conf.d”</p>
 <blockquote>
 <p>mkdir -m 700 /etc/supervisor/conf.d</p>
@@ -525,67 +508,66 @@ files=/home/Maximroot/supervisord/conf.d/*.conf
 <p>vim /etc/supervisor/conf.d/MyDotNetName.conf</p>
 <p>sudo vim /home/Maximroot/supervisord/conf.d/MyDotNetName.conf</p>
 </blockquote>
-<pre><code>[program:MyDotNetName]
-command=dotnet EcoTrac.MaximGroup.Web.Host.dll ;
-directory=/usr/meisheng/meisheng/ ;
-stderr_logfile=/var/log/MyDotNetName.error.log ;
-stdout_logfile=/var/log/MyDotNetName.stdout.log ;
-environment=ASPNETCORE_ENVIRONMENT=Production ;
-user=root ;
-stopsignal=INT ;
-autostart=true ;
-autorestart=true ;
-startsecs=3 ;
+<pre class="line-numbers language-none"><code class="language-none">[program:MyDotNetName]
+command&#x3D;dotnet EcoTrac.MaximGroup.Web.Host.dll ;
+directory&#x3D;&#x2F;usr&#x2F;meisheng&#x2F;meisheng&#x2F; ;
+stderr_logfile&#x3D;&#x2F;var&#x2F;log&#x2F;MyDotNetName.error.log ;
+stdout_logfile&#x3D;&#x2F;var&#x2F;log&#x2F;MyDotNetName.stdout.log ;
+environment&#x3D;ASPNETCORE_ENVIRONMENT&#x3D;Production ;
+user&#x3D;root ;
+stopsignal&#x3D;INT ;
+autostart&#x3D;true ;
+autorestart&#x3D;true ;
+startsecs&#x3D;3 ;
 
 [program:MyDotNetName]
-command=dotnet EcoTrac.MaximGroup.Web.Host.dll ;
-directory=/home/Maximroot/meisheng/ ;
-stderr_logfile=/var/log/MyDotNetName.error.log ;
-stdout_logfile=/var/log/MyDotNetName.stdout.log ;
-environment=ASPNETCORE_ENVIRONMENT=Production ;
-user=Maximroot ;
-stopsignal=INT ;
-autostart=true ;
-autorestart=true ;
-startsecs=3 ;
-</code></pre>
+command&#x3D;dotnet EcoTrac.MaximGroup.Web.Host.dll ;
+directory&#x3D;&#x2F;home&#x2F;Maximroot&#x2F;meisheng&#x2F; ;
+stderr_logfile&#x3D;&#x2F;var&#x2F;log&#x2F;MyDotNetName.error.log ;
+stdout_logfile&#x3D;&#x2F;var&#x2F;log&#x2F;MyDotNetName.stdout.log ;
+environment&#x3D;ASPNETCORE_ENVIRONMENT&#x3D;Production ;
+user&#x3D;Maximroot ;
+stopsignal&#x3D;INT ;
+autostart&#x3D;true ;
+autorestart&#x3D;true ;
+startsecs&#x3D;3 ;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><img src="/jiayueshe/jiayueshe.github/Users\Jiang\AppData\Roaming\Typora\typora-user-images\image-20210401214811664.png" alt="image-20210401214811664"></p>
 <p>创建supervisor 自启动服务</p>
 <blockquote>
 <p>vim /etc/systemd/system/supervisor.service</p>
 </blockquote>
 <p>贴入配置</p>
-<pre><code>[Unit]
-Description=supervisor
+<pre class="line-numbers language-none"><code class="language-none">[Unit]
+Description&#x3D;supervisor
 
 [Service]
-Type=forking
-ExecStart=/usr/bin/supervisord -c /etc/supervisor/supervisord.conf
-ExecStop=/usr/bin/supervisorctl shutdown
-ExecReload=/usr/bin/supervisorctl reload
-KillMode=process
-Restart=on-failure
-RestartSec=42s
+Type&#x3D;forking
+ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisord -c &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf
+ExecStop&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisorctl shutdown
+ExecReload&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisorctl reload
+KillMode&#x3D;process
+Restart&#x3D;on-failure
+RestartSec&#x3D;42s
 
 [Install]
-WantedBy=multi-user.target
+WantedBy&#x3D;multi-user.target
 
 
 [Unit]
-Description=supervisor
+Description&#x3D;supervisor
 
 [Service]
-Type=forking
-ExecStart=/usr/bin/supervisord -c /home/Maximroot/supervisord/supervisord.conf
-ExecStop=/usr/bin/supervisorctl shutdown
-ExecReload=/usr/bin/supervisorctl reload
-KillMode=process
-Restart=on-failure
-RestartSec=42s
+Type&#x3D;forking
+ExecStart&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisord -c &#x2F;home&#x2F;Maximroot&#x2F;supervisord&#x2F;supervisord.conf
+ExecStop&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisorctl shutdown
+ExecReload&#x3D;&#x2F;usr&#x2F;bin&#x2F;supervisorctl reload
+KillMode&#x3D;process
+Restart&#x3D;on-failure
+RestartSec&#x3D;42s
 
 [Install]
-WantedBy=multi-user.target
-</code></pre>
+WantedBy&#x3D;multi-user.target
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>使配置生效</p>
 <blockquote>
 <p>sudo systemctl daemon-reload</p>
@@ -602,19 +584,24 @@ WantedBy=multi-user.target
 <p>验证dotnet进程是否启动</p>
 <p>2-ch  kill  文件替换kill进程重启</p>
 <p>使用命令“ps -ef | grep dotnet”查看dotnet 是否运行</p>
-<pre><code>[root@machine ~]# ps -ef | grep dotnet
+<pre class="line-numbers language-none"><code class="language-none">[root@machine ~]# ps -ef | grep dotnet
 root      2281  2280  0 15:27 ?        00:00:00 dotnet MyDotNetName.dll
-root      2302  2217  0 15:30 pts/0    00:00:00 grep --color=auto dotnet
+root      2302  2217  0 15:30 pts&#x2F;0    00:00:00 grep --color&#x3D;auto dotnet
  
-复制代码
-</code></pre>
+复制代码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>最终可以通过<a target="_blank" rel="noopener" href="http://ip/">http://ip</a> 访问到部署的服务</p>
 <p>实际部署问题需要</p>
 <p>vim /etc/supervisord.conf</p>
-<pre><code>[include]
-files = /etc/supervisor/supervisord.conf
-</code></pre>
-<p>一期服务器<br>先利用/usr/local/nginx/sbin/nginx -t测试配置文件修改是否正常<br>/usr/local/nginx/sbin/nginx -s reload重新加载</p>
+<pre class="line-numbers language-none"><code class="language-none">[include]
+files &#x3D; &#x2F;etc&#x2F;supervisor&#x2F;supervisord.conf
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+
+
+
+
+
+<p>一期服务器 nginx 配置重启<br>先利用/usr/local/nginx/sbin/nginx -t测试配置文件修改是否正常<br>/usr/local/nginx/sbin/nginx -s reload重新加载</p>
 <p>nginx 更改配置文件后需要重启生效。<br>　　1、更改配置重启nginx：　　<br>　　kill -HUP 主进程号或进程号文件路径<br>　　或者使用<br>　　cd /usr/local/nginx/sbin<br>　　./nginx -s reload<br>　　2、判断配置文件是否正确：　　<br>　　nginx -t -c /usr/local/nginx/conf/nginx.conf<br>　　或者<br>　　cd /usr/local/nginx/sbin<br>　　./nginx -t</p>
 <p>更新之后出错</p>
 <p>systemctl restart supervisord</p>
